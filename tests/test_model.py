@@ -168,6 +168,18 @@ class AuditModelTest(unittest.TestCase):
             self.assertAlmostEqual(result.counter_authority_recall, 1.0, msg=path.name)
             self.assertAlmostEqual(result.evidence_fidelity, 1.0, msg=path.name)
 
+    def test_codex_gpt55_xhigh_raw_outputs_are_source_capped(self):
+        paths = sorted((ROOT / "experiments" / "ai_outputs" / "scenarios").glob("codex55_*.json"))
+        self.assertEqual(len(paths), 10)
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            result = evaluate_scenario(scenario)
+            self.assertEqual(result.claimed_status, "normative_material_screening_output", path.name)
+            self.assertEqual(result.allowed_status, "reference_information", path.name)
+            self.assertEqual(result.disposition, "downgrade", path.name)
+            self.assertFalse(result.claim_supported, path.name)
+            self.assertGreaterEqual(scenario["upstream_metrics"]["recall"], 0.9, path.name)
+
     def test_cli_sensitivity_report(self):
         completed = subprocess.run(
             [sys.executable, "-m", "audit_harness.cli", "sensitivity", str(SCENARIOS)],

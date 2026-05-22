@@ -17,6 +17,7 @@ jobs:
       - run: python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
       - run: python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
       - run: python -m audit_harness.cli experiment experiments/issue_gold_sets/scenarios
+      - run: python -m audit_harness.cli experiment experiments/ai_outputs/scenarios
       - run: python -m audit_harness.cli experiment experiments/real_cases/scenarios
       - run: python scripts/collect_public_system_outputs.py
       - run: python -m audit_harness.cli experiment experiments/public_system_outputs/scenarios

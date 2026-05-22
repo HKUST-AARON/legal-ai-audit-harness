@@ -145,6 +145,16 @@ The current gold sets cover:
 
 The sensitivity command varies the normative-screening threshold from 8 to 11 and reports the resulting status distribution. This is intended to show whether status allocation depends on a single arbitrary threshold.
 
+## Raw Model Output Pilot
+
+The repository includes a ten-output Codex `gpt-5.5` / `xhigh` pilot:
+
+```bash
+python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
+```
+
+Raw outputs are stored in `experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md`. The pilot asks whether fluent model answers with strong authority and counter-material coverage can claim `normative_material_screening_output` status without source-bound evidence. The current result is deliberately strict: all ten outputs are downgraded to `reference_information` because their citations are marked `needs_verification`.
+
 ## Public System Output Pilot
 
 The repository includes a public legal system output pilot:
@@ -164,6 +174,7 @@ examples/scenarios/     runnable audit scenarios
 examples/jurisdiction_profiles/  legal-system parameter profiles
 experiments/stress_tests/results/  committed stress-test and sensitivity outputs
 experiments/issue_gold_sets/       curated issue packets and gold-set outputs
+experiments/ai_outputs/            raw Codex model-output pilot and scored scenarios
 experiments/real_cases/            public metadata snapshots, manifests and outputs
 experiments/public_system_outputs/ ordered public output snapshots and pilot outputs
 tests/                  unit tests

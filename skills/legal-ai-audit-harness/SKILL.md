@@ -5,6 +5,13 @@ description: Use when evaluating legal AI outputs above any search, retrieval, g
 
 # Legal AI Audit Harness
 
+This skill has two functions:
+
+1. **Output capture and scenario construction.** Convert a legal AI, RAG, search, database, agent, or human-review output into a provider-agnostic scenario JSON. This includes the issue, upstream output text or visible result list, source links, authority sets, counter-materials, review gate, and evidence packet.
+2. **Procedural-status scoring.** Run the repository harness to score the scenario and decide whether the output remains `reference_information`, qualifies as `professional_support_output`, qualifies as `normative_material_screening_output`, becomes a `decision_support_reason`, or must be downgraded/withdrawn.
+
+Use the skill as the operating layer and the repository CLI as the scoring engine. The skill should not pretend to evaluate hidden model internals. It evaluates the legal output and its audit artefacts.
+
 Use this skill to evaluate legal AI outputs with the verifiability-based audit model:
 
 ```text
@@ -22,24 +29,50 @@ Score each dimension from `0` to `2`:
 
 ## Workflow
 
-1. Identify the claimed procedural status:
+1. Identify the upstream output to audit:
+   - captured LLM answer;
+   - RAG answer with citations;
+   - case-recommendation list;
+   - public legal-search/listing output;
+   - manually reviewed legal-material packet.
+2. Record the issue, jurisdiction, source collection, visible output units, cited authorities, source locators, counter-materials and review/adoption posture.
+3. Identify the claimed procedural status:
    - `reference_information`
    - `professional_support_output`
    - `normative_material_screening_output`
    - `decision_support_reason`
    - `no_external_legal_effect`
-2. Select or define the jurisdiction profile before scoring `H` and `K`.
-3. Prepare a scenario JSON file with scores, evidence, authority sets, upstream metrics, optional `evidence_packet`, and optional `review_gate`.
-4. Run the harness from the repository root:
+4. Select or define the jurisdiction profile before scoring `H` and `K`.
+5. Prepare a scenario JSON file with scores, evidence, authority sets, upstream metrics, optional `upstream_output`, optional `evidence_packet`, and optional `review_gate`.
+6. Run the harness from the repository root:
 
 ```bash
 python -m audit_harness.cli score examples/scenarios/court_authority_report.json
 python -m audit_harness.cli run examples/scenarios --out reports/sample_report.md --json-out reports/sample_report.json
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
+python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
 ```
 
-5. Treat strong upstream performance as insufficient if the output fails source reconstruction, source tagging, counter-material presentation, contestability, review gating, or adoption logging.
-6. For paper or review work, report the harness as a status-allocation instrument, not as a legal merits evaluator.
+7. Treat strong upstream performance as insufficient if the output fails source reconstruction, source tagging, counter-material presentation, contestability, review gating, or adoption logging.
+8. For paper or review work, report the harness as a status-allocation instrument, not as a legal merits evaluator.
+
+## First-10 Output Audit Protocol
+
+When the user asks for a real experiment, start with ten outputs rather than claiming full empirical validation:
+
+1. Choose 2--3 issue-defined legal questions with known high-authority and counter-material sets.
+2. Capture or generate one upstream output at a time. Save raw prompts, output text, provider label if available, timestamp, source links and any visible citations.
+3. Convert each output into one scenario under `experiments/ai_outputs/scenarios/`.
+4. Score each scenario immediately with `python -m audit_harness.cli score <scenario>`.
+5. Fix only schema/scoring defects that prevent faithful auditing. Do not massage the output to obtain a better status.
+6. After ten outputs, run:
+
+```bash
+python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
+python -m unittest discover -s tests
+```
+
+Report both halves separately: (a) what upstream outputs were captured, and (b) what procedural status the harness assigned.
 
 ## Status Rules
 

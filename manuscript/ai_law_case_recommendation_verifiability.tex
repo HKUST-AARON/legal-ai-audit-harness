@@ -30,7 +30,7 @@ An Audit Framework for Case Recommendation}
 \maketitle
 
 \begin{abstract}
-Legal AI case recommendation can alter legal reasoning by controlling which authorities become visible, ranked, cited and contestable. Such outputs are no longer ordinary retrieval, because they structure the materials available for argument; yet they are not legal reasons or legal sources. This article names that missing middle category a \textit{normative material screening output} and argues that its procedural status should depend on auditability rather than model sophistication, autonomy or aggregate accuracy. The article formalizes procedural qualification through output effect, system role and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and validates it across synthetic stress scenarios, public metadata packets, public-system output snapshots and issue-defined authority sets. The resulting rule is simple: a legal AI output may enter procedure only when its legal-material chain can be reconstructed, contested and attributed; otherwise it remains professional support or reference information, however fluent or accurate it appears.
+Legal AI case recommendation can alter legal reasoning by controlling which authorities become visible, ranked, cited and contestable. Such outputs are no longer ordinary retrieval, because they structure the materials available for argument; yet they are not legal reasons or legal sources. This article names that missing middle category a \textit{normative material screening output} and argues that its procedural status should depend on auditability rather than model sophistication, autonomy or aggregate accuracy. The article formalizes procedural qualification through output effect, system role and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and validates it across synthetic stress scenarios, public metadata packets, public-system snapshots, raw model outputs and issue-defined authority sets. The resulting rule is simple: a legal AI output may enter procedure only when its legal-material chain can be reconstructed, contested and attributed; otherwise it remains professional support or reference information, however fluent or accurate it appears.
 \end{abstract}
 
 \noindent\textbf{Keywords:} legal information retrieval; case recommendation; legal AI auditing; contestability; output evidence packets; normative material screening
@@ -48,7 +48,7 @@ The paper therefore asks three operational questions:
 \begin{enumerate}[label=RQ\arabic*:]
 \item How should AI-generated legal outputs be classified according to their procedural effects?
 \item What verifiability and contestability requirements are needed for each output class?
-\item How can these requirements be operationalized across synthetic, public-output and issue-defined validation settings?
+\item How can these requirements be operationalized across synthetic, public-output, raw-model and issue-defined validation settings?
 \end{enumerate}
 
 The resulting framework has two dimensions. The output-effect dimension classifies what the output does in the legal process. The system-role dimension classifies how the system enters that process. The two dimensions are then linked to verifiability, contestability and accountability requirements. The model is intentionally output-first: it asks when a legal AI output may move from internal reference to procedural material, and when it must be downgraded or withdrawn.
@@ -387,7 +387,7 @@ The total score is 10, and all dimensions score at least 1. The output may quali
 
 To test whether the framework is operational rather than merely classificatory, the rules above were implemented in a lightweight command-line audit harness. The implementation uses local JSON scenario files as the unit of evidence and produces both Markdown and JSON run artefacts. An anonymized companion repository should supply the harness, scenario files, run artefacts and replication commands.
 
-The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, scores $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner computes the allowed status, counter-authority recall, authority coverage, invalid-authority rate, evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. A separate sensitivity command varies the normative and decision thresholds and reports status-distribution changes. The validation layers test protocol behavior and auditability rather than legal merits in the large.
+The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, scores $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner computes the allowed status, counter-authority recall, authority coverage, invalid-authority rate, evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. A separate sensitivity command varies the normative and decision thresholds and reports status-distribution changes. The validation layers test protocol behavior, model-output auditability and status allocation rather than legal merits in the large.
 
 \begin{table}[htbp]
 \centering
@@ -457,6 +457,28 @@ Mainland China & Supreme People's Court typical-cases stream, top 10 & 9 & Profe
 \end{table}
 
 All six public-output scenarios passed their expected outcomes. The mean audit score was 8.67; evidence fidelity and source-tag coverage were 1.00 in every scenario. The results support the framework's central distinction. A real public system output may be reconstructable, source-tagged and professionally useful, yet still fail to qualify as normative material screening because it does not define an issue-specific ranking task, counter-material set or party-facing contestation pathway. Public output visibility is therefore a necessary audit input, not a substitute for procedural qualification.
+
+\subsection{Raw model-output pilot}
+
+The harness was also run on ten raw legal-authority recommendations generated by a single upstream model configuration, Codex GPT-5.5 with extra-high reasoning. The prompts covered three issue families also used in the gold sets: U.S. agency deference after \textit{Loper Bright}, English mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access rights. The model was not allowed to browse or use tools. The point was therefore not to benchmark legal correctness against a commercial research system, but to ask whether fluent model text with strong authority coverage can itself claim normative screening status.
+
+It cannot. All ten raw outputs identified the expected high-authority and limiting materials in the issue families, producing mean upstream recall of 1.00 and counter-authority recall of 1.00. Yet every claimed normative-screening output was downgraded to reference information because the citations were marked as requiring verification rather than bound to official sources, corpus manifests, pinpoint locators and a contestation pathway. The result is the paper's central rule in executable form: authority coverage is not procedural status.
+
+\begin{table}[htbp]
+\centering
+\caption{Raw model-output pilot}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}p{1.2cm}p{2.1cm}p{2.0cm}Y}
+\toprule
+Issue family & Outputs & Mean score & Upstream recall & Allowed status \\
+\midrule
+U.S. agency deference after \textit{Loper Bright} & 3 & 9 & 1.00 & Reference information \\
+English mesothelioma causation after \textit{Fairchild} & 3 & 9 & 1.00 & Reference information \\
+EU GDPR Article 15 access rights & 4 & 9 & 1.00 & Reference information \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 To test normative material screening with real issue-defined authority sets, the harness includes three manually curated gold sets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access-right interpretation. Each gold set defines high-authority materials, limiting or counter-materials, invalidated treatments, source tags and output-to-source links at the level of individual output units. All three passed their expected outcomes with audit scores of 11, authority coverage of 1.00, counter-authority recall of 1.00, evidence fidelity of 1.00 and source-tag coverage of 1.00. They qualified as normative material screening, not as decision-support reasons, because no authorized decision-maker adopted them as reasoned outcomes.
 
