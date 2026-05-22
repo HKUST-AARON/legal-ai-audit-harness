@@ -1,0 +1,19 @@
+{
+  "id": "civil_law",
+  "authority_hierarchy": [
+    "constitutional norm",
+    "code provision",
+    "special statute",
+    "regulation",
+    "high-court decision",
+    "lower-court decision",
+    "doctrinal commentary"
+  ],
+  "counter_material_types": [
+    "competing statutory interpretation",
+    "systematic interpretation conflict",
+    "teleological limitation",
+    "contrary doctrinal view",
+    "later legislative amendment"
+  ]
+}

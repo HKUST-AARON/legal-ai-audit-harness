@@ -1,0 +1,16 @@
+{
+  "id": "common_law",
+  "authority_hierarchy": [
+    "binding precedent",
+    "persuasive precedent",
+    "statute",
+    "secondary authority",
+    "overruled or superseded authority"
+  ],
+  "counter_material_types": [
+    "distinguishing precedent",
+    "contrary line of authority",
+    "limiting subsequent treatment",
+    "overruled or superseded authority"
+  ]
+}

@@ -2,6 +2,7 @@ import json
 import subprocess
 import sys
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 from audit_harness.model import evaluate_scenario
@@ -36,10 +37,35 @@ class AuditModelTest(unittest.TestCase):
         self.assertAlmostEqual(result.counter_authority_recall, 1.0)
 
     def test_withdrawal_blocks_external_effect(self):
-        result = evaluate_scenario(load("unverifiable_rag_output.json"))
+        result = evaluate_scenario(load("unverifiable_legal_output.json"))
         self.assertEqual(result.allowed_status, "no_external_legal_effect")
         self.assertEqual(result.disposition, "withdrawal")
         self.assertFalse(result.claim_supported)
+
+    def test_missing_source_tags_downgrade_external_status(self):
+        scenario = deepcopy(load("grounded_output_summary.json"))
+        for link in scenario["evidence_packet"]["output_links"]:
+            link.pop("source_tag", None)
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertAlmostEqual(result.source_tag_coverage, 0.0)
+
+    def test_review_gate_blocks_unreviewed_external_reliance(self):
+        scenario = deepcopy(load("decision_support_ready.json"))
+        scenario["review_gate"]["review_status"] = "pending"
+        scenario["review_gate"]["reliance_gate"] = "authorized_adoption"
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+
+    def test_unauthorized_irreversible_action_is_withdrawn(self):
+        scenario = deepcopy(load("odr_authorized_review.json"))
+        scenario["review_gate"]["irreversible_action"] = True
+        scenario["review_gate"]["human_authorization"] = False
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "no_external_legal_effect")
+        self.assertEqual(result.disposition, "withdrawal")
 
     def test_suspension_downgrades_to_reference(self):
         result = evaluate_scenario(load("suspended_authority_omission.json"))
@@ -57,7 +83,29 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         self.assertIn("court-authority-report", completed.stdout)
-        self.assertIn("unverifiable-rag-output", completed.stdout)
+        self.assertIn("unverifiable-legal-output", completed.stdout)
+
+    def test_experiment_reports_high_recall_blocked_cases(self):
+        completed = subprocess.run(
+            [sys.executable, "-m", "audit_harness.cli", "experiment", str(SCENARIOS)],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("High-upstream-performance but procedurally blocked scenarios", completed.stdout)
+        self.assertIn("civil-law-statutory-interpretation", completed.stdout)
+        self.assertIn("high-coverage-uncontestable-output", completed.stdout)
+
+    def test_real_case_fixture_shape(self):
+        real_scenarios = ROOT / "experiments" / "real_cases" / "scenarios"
+        for path in sorted(real_scenarios.glob("*.json")):
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            units = scenario.get("evidence_packet", {}).get("output_units", [])
+            self.assertEqual(len(units), 20, path.name)
+            result = evaluate_scenario(scenario)
+            self.assertEqual(result.allowed_status, "normative_material_screening_output", path.name)
 
 
 if __name__ == "__main__":

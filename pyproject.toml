@@ -1,7 +1,7 @@
 [project]
 name = "legal-ai-audit-harness"
 version = "0.1.0"
-description = "A lightweight audit harness for scoring legal AI case-recommendation outputs."
+description = "A lightweight audit harness for scoring legal AI output evidence packets."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

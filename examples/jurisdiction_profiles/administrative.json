@@ -1,0 +1,18 @@
+{
+  "id": "administrative",
+  "authority_hierarchy": [
+    "statute",
+    "binding regulation",
+    "agency rule",
+    "official guidance",
+    "adjudicative decision",
+    "non-binding policy document"
+  ],
+  "counter_material_types": [
+    "conflicting agency interpretation",
+    "withdrawn guidance",
+    "higher-level statutory constraint",
+    "contrary adjudicative decision",
+    "procedural due-process limitation"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "odr",
+  "authority_hierarchy": [
+    "platform rule",
+    "consumer protection statute",
+    "terms of service",
+    "regulatory guidance",
+    "past platform decision"
+  ],
+  "counter_material_types": [
+    "consumer protection override",
+    "conflicting platform rule",
+    "exception policy",
+    "appeal decision",
+    "human-review override"
+  ]
+}

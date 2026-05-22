@@ -14,3 +14,4 @@ jobs:
           python-version: "3.12"
       - run: python -m unittest discover -s tests
       - run: python -m audit_harness.cli run examples/scenarios
+      - run: python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json

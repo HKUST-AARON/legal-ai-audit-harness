@@ -1,0 +1,108 @@
+{
+  "id": "high-coverage-uncontestable-output",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Legal output with strong upstream coverage but missing output-evidence mapping and party contestability.",
+  "scores": {
+    "S": {
+      "score": 1,
+      "evidence": "The output cites real authorities, but locators and corpus version are incomplete."
+    },
+    "Q": {
+      "score": 1,
+      "evidence": "The input issue is retained, but upstream run and evidence-packet versions are missing."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The output labels broad status categories."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The presented authorities are logged, but omitted-material checks are missing."
+    },
+    "T": {
+      "score": 0,
+      "evidence": "Affected parties cannot inspect locators or challenge the output evidence packet."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "Output and user action are logged."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ],
+    "retrieved_high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ],
+    "counter_or_limiting": [
+      "limiting-precedent-c"
+    ],
+    "retrieved_counter_or_limiting": [
+      "limiting-precedent-c"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "binding-precedent-a",
+      "statute-b",
+      "limiting-precedent-c"
+    ]
+  },
+  "evidence_packet": {
+    "output_links": [
+      {
+        "source_id": "binding-precedent-a",
+        "locator": "",
+        "supports_claim": true,
+        "source_tag": "tool_verified"
+      },
+      {
+        "source_id": "statute-b",
+        "locator": "section 2",
+        "supports_claim": true,
+        "source_tag": "tool_verified"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-1",
+        "source_ids": [
+          "binding-precedent-a"
+        ],
+        "locators": []
+      },
+      {
+        "id": "unit-2",
+        "source_ids": [
+          "statute-b"
+        ],
+        "locators": [
+          "section 2"
+        ]
+      }
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 0.92,
+    "recall": 0.93,
+    "f1": 0.92
+  },
+  "failure_flags": [
+    "contestation_failure"
+  ],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  }
+}

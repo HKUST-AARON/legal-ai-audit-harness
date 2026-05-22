@@ -1,0 +1,18 @@
+{
+  "id": "arbitral",
+  "authority_hierarchy": [
+    "contract text",
+    "chosen law",
+    "mandatory law",
+    "institutional rules",
+    "prior awards",
+    "trade usage"
+  ],
+  "counter_material_types": [
+    "contrary award",
+    "mandatory-law limitation",
+    "distinguishing contract clause",
+    "procedural fairness objection",
+    "public policy exception"
+  ]
+}

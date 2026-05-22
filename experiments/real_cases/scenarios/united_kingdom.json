@@ -1,0 +1,380 @@
+{
+  "id": "real-cases-united_kingdom",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each sampled item has a public source URL, citation or docket field, and source collection label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The source endpoint, timestamp, sampling seed and candidate pool are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "Court or authority labels are preserved in the manifest and evidence packet."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The scenario records sample ordering and source set membership, but does not claim issue-specific counter-material recall."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect and challenge the manifest and source links; party-facing workflow is outside this source-integrity test."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible scenario, manifest and report for audit review."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [],
+    "retrieved_high_authority": [],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "united-kingdom-2026-ewca-civ-497",
+      "united-kingdom-2026-ewca-civ-500",
+      "united-kingdom-2026-ewca-civ-512",
+      "united-kingdom-2026-ewca-civ-551",
+      "united-kingdom-2026-ewca-civ-575",
+      "united-kingdom-2026-ewca-civ-580",
+      "united-kingdom-2026-ewcop-21-t2",
+      "united-kingdom-2026-ewhc-1029-ch",
+      "united-kingdom-2026-ewhc-1070-admin",
+      "united-kingdom-2026-ewhc-1103-comm",
+      "united-kingdom-2026-ewhc-1113-ch",
+      "united-kingdom-2026-ewhc-1166-admin",
+      "united-kingdom-2026-ewhc-1196-comm",
+      "united-kingdom-2026-ewhc-1220-kb",
+      "united-kingdom-2026-ewhc-1228-ch",
+      "united-kingdom-2026-ewhc-909-comm",
+      "united-kingdom-2026-ewhc-963-kb",
+      "united-kingdom-2026-ewhc-999-pat",
+      "united-kingdom-2026-ukftt-615-tc",
+      "united-kingdom-2026-ukftt-696-tc"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/real_cases/manifests/united_kingdom.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-497"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 497 | d-e7f478b9-ad21-471c-bc10-0af87f54ca57 | 2026-04-27 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/497"
+        ]
+      },
+      {
+        "id": "unit-02",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-500"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 500 | d-c1dc2eb6-2043-42a1-9641-e9c7ae64f512 | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/500"
+        ]
+      },
+      {
+        "id": "unit-03",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-512"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 512 | d-33d1f5cf-b1d8-4437-8602-a9ae61baf7e5 | 2026-04-29 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/512"
+        ]
+      },
+      {
+        "id": "unit-04",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-551"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 551 | d-22df4ba7-a155-400f-a348-3a7dd3a34428 | 2026-05-08 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/551"
+        ]
+      },
+      {
+        "id": "unit-05",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-575"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 575 | d-f4221d6f-18ae-4508-bf61-621c40ede1e1 | 2026-05-13 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/575"
+        ]
+      },
+      {
+        "id": "unit-06",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-580"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 580 | d-e24aa440-5f78-4f31-9a1a-40cfe3fc7602 | 2026-05-12 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/580"
+        ]
+      },
+      {
+        "id": "unit-07",
+        "source_ids": [
+          "united-kingdom-2026-ewcop-21-t2"
+        ],
+        "locators": [
+          "[2026] EWCOP 21 (T2) | d-bbaf80b0-6af8-44d0-9256-70f38efcf560 | 2026-05-14 | https://caselaw.nationalarchives.gov.uk/ewcop/t2/2026/21"
+        ]
+      },
+      {
+        "id": "unit-08",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1029-ch"
+        ],
+        "locators": [
+          "[2026] EWHC 1029 (Ch) | d-edfa5593-71db-498a-82f8-7ab75d7917e1 | 2026-05-01 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1029"
+        ]
+      },
+      {
+        "id": "unit-09",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1070-admin"
+        ],
+        "locators": [
+          "[2026] EWHC 1070 (Admin) | d-c2c4e4b6-0fed-4c66-8101-ea50e42dcc9b | 2026-05-11 | https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/1070"
+        ]
+      },
+      {
+        "id": "unit-10",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1103-comm"
+        ],
+        "locators": [
+          "[2026] EWHC 1103 (Comm) | d-3f04ba44-85aa-4020-9057-4c568309c2fd | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1103"
+        ]
+      },
+      {
+        "id": "unit-11",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1113-ch"
+        ],
+        "locators": [
+          "[2026] EWHC 1113 (Ch) | d-ded20f70-510f-47c0-a8f5-43c0b5fb617e | 2026-05-15 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1113"
+        ]
+      },
+      {
+        "id": "unit-12",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1166-admin"
+        ],
+        "locators": [
+          "[2026] EWHC 1166 (Admin) | d-a467e38d-5fa9-4caa-96ef-bce6927a17d6 | 2026-05-15 | https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/1166"
+        ]
+      },
+      {
+        "id": "unit-13",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1196-comm"
+        ],
+        "locators": [
+          "[2026] EWHC 1196 (Comm) | d-178dece9-bceb-41ec-835c-cd2bbacc7ceb | 2026-05-20 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1196"
+        ]
+      },
+      {
+        "id": "unit-14",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1220-kb"
+        ],
+        "locators": [
+          "[2026] EWHC 1220 (KB) | d-1c7fa37b-c153-4c4d-9682-f1f73d4acda9 | 2026-05-21 | https://caselaw.nationalarchives.gov.uk/ewhc/kb/2026/1220"
+        ]
+      },
+      {
+        "id": "unit-15",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1228-ch"
+        ],
+        "locators": [
+          "[2026] EWHC 1228 (Ch) | d-a9abd8cf-931c-4dc4-ac09-b6a7ffe803f4 | 2026-05-21 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1228"
+        ]
+      },
+      {
+        "id": "unit-16",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-909-comm"
+        ],
+        "locators": [
+          "[2026] EWHC 909 (Comm) | d-e3afa15d-6df0-4a55-963c-90e12e4ba74d | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/909"
+        ]
+      },
+      {
+        "id": "unit-17",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-963-kb"
+        ],
+        "locators": [
+          "[2026] EWHC 963 (KB) | d-923d04ee-f9a1-4019-ad48-ec80e40fc79d | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewhc/kb/2026/963"
+        ]
+      },
+      {
+        "id": "unit-18",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-999-pat"
+        ],
+        "locators": [
+          "[2026] EWHC 999 (Pat) | d-45475f26-4f92-42c1-929e-4b1dc858a56b | 2026-05-01 | https://caselaw.nationalarchives.gov.uk/ewhc/pat/2026/999"
+        ]
+      },
+      {
+        "id": "unit-19",
+        "source_ids": [
+          "united-kingdom-2026-ukftt-615-tc"
+        ],
+        "locators": [
+          "[2026] UKFTT 615 (TC) | d-0e46b9b0-ba0e-4a1d-8b36-5f0117cf2503 | 2026-04-21 | https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/615"
+        ]
+      },
+      {
+        "id": "unit-20",
+        "source_ids": [
+          "united-kingdom-2026-ukftt-696-tc"
+        ],
+        "locators": [
+          "[2026] UKFTT 696 (TC) | d-138f279b-ac30-4e12-89c6-f829f8ca41d0 | 2026-05-12 | https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/696"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "source_id": "united-kingdom-2026-ewca-civ-497",
+        "locator": "[2026] EWCA Civ 497 | d-e7f478b9-ad21-471c-bc10-0af87f54ca57 | 2026-04-27 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/497",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewca-civ-500",
+        "locator": "[2026] EWCA Civ 500 | d-c1dc2eb6-2043-42a1-9641-e9c7ae64f512 | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/500",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewca-civ-512",
+        "locator": "[2026] EWCA Civ 512 | d-33d1f5cf-b1d8-4437-8602-a9ae61baf7e5 | 2026-04-29 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/512",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewca-civ-551",
+        "locator": "[2026] EWCA Civ 551 | d-22df4ba7-a155-400f-a348-3a7dd3a34428 | 2026-05-08 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/551",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewca-civ-575",
+        "locator": "[2026] EWCA Civ 575 | d-f4221d6f-18ae-4508-bf61-621c40ede1e1 | 2026-05-13 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/575",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewca-civ-580",
+        "locator": "[2026] EWCA Civ 580 | d-e24aa440-5f78-4f31-9a1a-40cfe3fc7602 | 2026-05-12 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/580",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewcop-21-t2",
+        "locator": "[2026] EWCOP 21 (T2) | d-bbaf80b0-6af8-44d0-9256-70f38efcf560 | 2026-05-14 | https://caselaw.nationalarchives.gov.uk/ewcop/t2/2026/21",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1029-ch",
+        "locator": "[2026] EWHC 1029 (Ch) | d-edfa5593-71db-498a-82f8-7ab75d7917e1 | 2026-05-01 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1029",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1070-admin",
+        "locator": "[2026] EWHC 1070 (Admin) | d-c2c4e4b6-0fed-4c66-8101-ea50e42dcc9b | 2026-05-11 | https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/1070",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1103-comm",
+        "locator": "[2026] EWHC 1103 (Comm) | d-3f04ba44-85aa-4020-9057-4c568309c2fd | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1103",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1113-ch",
+        "locator": "[2026] EWHC 1113 (Ch) | d-ded20f70-510f-47c0-a8f5-43c0b5fb617e | 2026-05-15 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1113",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1166-admin",
+        "locator": "[2026] EWHC 1166 (Admin) | d-a467e38d-5fa9-4caa-96ef-bce6927a17d6 | 2026-05-15 | https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/1166",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1196-comm",
+        "locator": "[2026] EWHC 1196 (Comm) | d-178dece9-bceb-41ec-835c-cd2bbacc7ceb | 2026-05-20 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1196",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1220-kb",
+        "locator": "[2026] EWHC 1220 (KB) | d-1c7fa37b-c153-4c4d-9682-f1f73d4acda9 | 2026-05-21 | https://caselaw.nationalarchives.gov.uk/ewhc/kb/2026/1220",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-1228-ch",
+        "locator": "[2026] EWHC 1228 (Ch) | d-a9abd8cf-931c-4dc4-ac09-b6a7ffe803f4 | 2026-05-21 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1228",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-909-comm",
+        "locator": "[2026] EWHC 909 (Comm) | d-e3afa15d-6df0-4a55-963c-90e12e4ba74d | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/909",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-963-kb",
+        "locator": "[2026] EWHC 963 (KB) | d-923d04ee-f9a1-4019-ad48-ec80e40fc79d | 2026-04-24 | https://caselaw.nationalarchives.gov.uk/ewhc/kb/2026/963",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ewhc-999-pat",
+        "locator": "[2026] EWHC 999 (Pat) | d-45475f26-4f92-42c1-929e-4b1dc858a56b | 2026-05-01 | https://caselaw.nationalarchives.gov.uk/ewhc/pat/2026/999",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ukftt-615-tc",
+        "locator": "[2026] UKFTT 615 (TC) | d-0e46b9b0-ba0e-4a1d-8b36-5f0117cf2503 | 2026-04-21 | https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/615",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-kingdom-2026-ukftt-696-tc",
+        "locator": "[2026] UKFTT 696 (TC) | d-138f279b-ac30-4e12-89c6-f829f8ca41d0 | 2026-05-12 | https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/696",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "normative_material_screening_output",
+  "expected_disposition": "none"
+}

@@ -5,6 +5,7 @@ import json
 import sys
 from dataclasses import asdict
 from pathlib import Path
+from statistics import mean
 
 from .model import AuditResult, evaluate_scenario
 
@@ -22,6 +23,11 @@ def main(argv: list[str] | None = None) -> int:
     run_parser.add_argument("--out", type=Path)
     run_parser.add_argument("--json-out", type=Path)
 
+    experiment_parser = subparsers.add_parser("experiment", help="run scenarios and summarize audit/retrieval relationships")
+    experiment_parser.add_argument("path", type=Path)
+    experiment_parser.add_argument("--out", type=Path)
+    experiment_parser.add_argument("--json-out", type=Path)
+
     args = parser.parse_args(argv)
     if args.command == "score":
         result = evaluate_scenario(_read_json(args.scenario))
@@ -31,15 +37,17 @@ def main(argv: list[str] | None = None) -> int:
             print(_format_result(result))
         return 0 if result.expected_passed else 1
 
-    results = [evaluate_scenario(_read_json(path)) for path in _scenario_paths(args.path)]
-    report = _format_report(results)
+    scenarios = [_read_json(path) for path in _scenario_paths(args.path)]
+    results = [evaluate_scenario(scenario) for scenario in scenarios]
+    report = _format_experiment(scenarios, results) if args.command == "experiment" else _format_report(results)
     print(report)
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
         args.out.write_text(report, encoding="utf-8")
     if args.json_out:
         args.json_out.parent.mkdir(parents=True, exist_ok=True)
-        args.json_out.write_text(json.dumps([asdict(r) for r in results], indent=2, sort_keys=True), encoding="utf-8")
+        payload = _experiment_payload(scenarios, results) if args.command == "experiment" else [asdict(r) for r in results]
+        args.json_out.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
     return 0 if all(result.expected_passed for result in results) else 1
 
 
@@ -67,6 +75,11 @@ def _format_result(result: AuditResult) -> str:
             f"scores: {result.scores}",
             f"missing_gates: {missing}",
             f"counter_authority_recall: {car}",
+            f"authority_coverage: {_metric(result.authority_coverage)}",
+            f"invalid_authority_rate: {_metric(result.invalid_authority_rate)}",
+            f"evidence_fidelity: {_metric(result.evidence_fidelity)}",
+            f"evidence_coverage: {_metric(result.evidence_coverage)}",
+            f"source_tag_coverage: {_metric(result.source_tag_coverage)}",
             f"disposition: {result.disposition}",
             f"expected_passed: {result.expected_passed}",
         ]
@@ -99,6 +112,100 @@ def _format_report(results: list[AuditResult]) -> str:
             + " |"
         )
     return "\n".join(lines)
+
+
+def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str:
+    rows = _experiment_rows(scenarios, results)
+    blocked_despite_recall = [row for row in rows if row["upstream_recall"] is not None and row["upstream_recall"] >= 0.8 and row["allowed_status"] in {"reference_information", "no_external_legal_effect"}]
+    allowed_by_status = {}
+    for row in rows:
+        allowed_by_status[row["allowed_status"]] = allowed_by_status.get(row["allowed_status"], 0) + 1
+    lines = [
+        "# Legal AI Audit Harness Experiment",
+        "",
+        f"Scenarios: {len(rows)}",
+        f"Expected outcomes passed: {sum(row['expected_passed'] for row in rows)}/{len(rows)}",
+        f"Mean audit score: {_metric(mean(row['total_score'] for row in rows))}",
+        f"Mean upstream recall: {_metric(_mean_optional(row['upstream_recall'] for row in rows))}",
+        f"High-upstream-performance but procedurally blocked scenarios: {len(blocked_despite_recall)}",
+        "",
+        "## Allowed Status Distribution",
+        "",
+        "| Status | Count |",
+        "| --- | ---: |",
+    ]
+    for status, count in sorted(allowed_by_status.items()):
+        lines.append(f"| {status} | {count} |")
+    lines.extend(
+        [
+            "",
+            "## Scenario Results",
+            "",
+            "| Scenario | Profile | Claimed | Allowed | Score | Upstream recall | CAR | Authority coverage | Evidence fidelity | Source tags | Disposition |",
+            "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+        ]
+    )
+    for row in rows:
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    row["scenario_id"],
+                    row["jurisdiction_profile"],
+                    row["claimed_status"],
+                    row["allowed_status"],
+                    str(row["total_score"]),
+                    _metric(row["upstream_recall"]),
+                    _metric(row["counter_authority_recall"]),
+                    _metric(row["authority_coverage"]),
+                    _metric(row["evidence_fidelity"]),
+                    _metric(row["source_tag_coverage"]),
+                    row["disposition"],
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines)
+
+
+def _experiment_payload(scenarios: list[dict], results: list[AuditResult]) -> dict:
+    rows = _experiment_rows(scenarios, results)
+    return {
+        "summary": {
+            "scenario_count": len(rows),
+            "expected_passed": sum(row["expected_passed"] for row in rows),
+            "mean_audit_score": mean(row["total_score"] for row in rows),
+            "mean_upstream_recall": _mean_optional(row["upstream_recall"] for row in rows),
+            "high_upstream_but_blocked": len([row for row in rows if row["upstream_recall"] is not None and row["upstream_recall"] >= 0.8 and row["allowed_status"] in {"reference_information", "no_external_legal_effect"}]),
+        },
+        "results": rows,
+    }
+
+
+def _experiment_rows(scenarios: list[dict], results: list[AuditResult]) -> list[dict]:
+    rows = []
+    for scenario, result in zip(scenarios, results):
+        row = asdict(result)
+        metrics = scenario.get("upstream_metrics", {})
+        row["jurisdiction_profile"] = scenario.get("jurisdiction_profile", "unspecified")
+        row["upstream_precision"] = metrics.get("precision")
+        row["upstream_recall"] = metrics.get("recall")
+        row["upstream_f1"] = metrics.get("f1")
+        rows.append(row)
+    return rows
+
+
+def _mean_optional(values) -> float | None:
+    present = [value for value in values if value is not None]
+    if not present:
+        return None
+    return mean(present)
+
+
+def _metric(value: float | None) -> str:
+    if value is None:
+        return "n/a"
+    return f"{value:.2f}"
 
 
 if __name__ == "__main__":

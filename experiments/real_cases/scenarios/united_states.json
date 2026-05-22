@@ -1,0 +1,422 @@
+{
+  "id": "real-cases-united_states",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each sampled item has a public source URL, citation or docket field, and source collection label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The source endpoint, timestamp, sampling seed and candidate pool are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Court or authority labels are preserved in the manifest and evidence packet."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The scenario records sample ordering and source set membership, but does not claim issue-specific counter-material recall."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect and challenge the manifest and source links; party-facing workflow is outside this source-integrity test."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible scenario, manifest and report for audit review."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "united-states-598-u-s-319",
+      "united-states-598-u-s-432",
+      "united-states-598-u-s-631",
+      "united-states-599-u-s-255",
+      "united-states-599-u-s-670",
+      "united-states-601-u-s-124",
+      "united-states-601-u-s-187",
+      "united-states-602-u-s-268",
+      "united-states-602-u-s-821",
+      "united-states-603-u-s-1",
+      "united-states-603-u-s-799",
+      "united-states-604-u-s-22",
+      "united-states-605-u-s-335",
+      "united-states-606-u-s-226",
+      "united-states-606-u-s-656",
+      "united-states-607-u-s-11",
+      "united-states-607-u-s-163",
+      "united-states-607-u-s-421",
+      "united-states-607-u-s-7",
+      "united-states-608-1"
+    ],
+    "retrieved_high_authority": [
+      "united-states-598-u-s-319",
+      "united-states-598-u-s-432",
+      "united-states-598-u-s-631",
+      "united-states-599-u-s-255",
+      "united-states-599-u-s-670",
+      "united-states-601-u-s-124",
+      "united-states-601-u-s-187",
+      "united-states-602-u-s-268",
+      "united-states-602-u-s-821",
+      "united-states-603-u-s-1",
+      "united-states-603-u-s-799",
+      "united-states-604-u-s-22",
+      "united-states-605-u-s-335",
+      "united-states-606-u-s-226",
+      "united-states-606-u-s-656",
+      "united-states-607-u-s-11",
+      "united-states-607-u-s-163",
+      "united-states-607-u-s-421",
+      "united-states-607-u-s-7",
+      "united-states-608-1"
+    ],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "united-states-598-u-s-319",
+      "united-states-598-u-s-432",
+      "united-states-598-u-s-631",
+      "united-states-599-u-s-255",
+      "united-states-599-u-s-670",
+      "united-states-601-u-s-124",
+      "united-states-601-u-s-187",
+      "united-states-602-u-s-268",
+      "united-states-602-u-s-821",
+      "united-states-603-u-s-1",
+      "united-states-603-u-s-799",
+      "united-states-604-u-s-22",
+      "united-states-605-u-s-335",
+      "united-states-606-u-s-226",
+      "united-states-606-u-s-656",
+      "united-states-607-u-s-11",
+      "united-states-607-u-s-163",
+      "united-states-607-u-s-421",
+      "united-states-607-u-s-7",
+      "united-states-608-1"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/real_cases/manifests/united_states.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "source_ids": [
+          "united-states-598-u-s-319"
+        ],
+        "locators": [
+          "598 U.S. 319 | 21-1158 | 2023-05-11 | https://www.supremecourt.gov/opinions/22pdf/598us2r16_4gdj.pdf"
+        ]
+      },
+      {
+        "id": "unit-02",
+        "source_ids": [
+          "united-states-598-u-s-432"
+        ],
+        "locators": [
+          "598 U.S. 432 | 21-1599 | 2023-05-18 | https://www.supremecourt.gov/opinions/22pdf/598us2r20_b07d.pdf"
+        ]
+      },
+      {
+        "id": "unit-03",
+        "source_ids": [
+          "united-states-598-u-s-631"
+        ],
+        "locators": [
+          "598 U.S. 631 | 22-166 | 2023-05-25 | https://www.supremecourt.gov/opinions/22pdf/598us2r27_aplc.pdf"
+        ]
+      },
+      {
+        "id": "unit-04",
+        "source_ids": [
+          "united-states-599-u-s-255"
+        ],
+        "locators": [
+          "599 U.S. 255 | 21-376 | 2023-06-15 | https://www.supremecourt.gov/opinions/22pdf/599us1r38_khmp.pdf"
+        ]
+      },
+      {
+        "id": "unit-05",
+        "source_ids": [
+          "united-states-599-u-s-670"
+        ],
+        "locators": [
+          "599 U.S. 670 | 22-58 | 2023-06-23 | https://www.supremecourt.gov/opinions/22pdf/599us1r47_8m58.pdf"
+        ]
+      },
+      {
+        "id": "unit-06",
+        "source_ids": [
+          "united-states-601-u-s-124"
+        ],
+        "locators": [
+          "601 U.S. 124 | 22-340 | 2024-03-15 | https://www.supremecourt.gov/opinions/23pdf/601us1r07_19m1.pdf"
+        ]
+      },
+      {
+        "id": "unit-07",
+        "source_ids": [
+          "united-states-601-u-s-187"
+        ],
+        "locators": [
+          "601 U.S. 187 | 22-611 | 2024-03-15 | https://www.supremecourt.gov/opinions/23pdf/601us1r08_a8cf.pdf"
+        ]
+      },
+      {
+        "id": "unit-08",
+        "source_ids": [
+          "united-states-602-u-s-268"
+        ],
+        "locators": [
+          "602 U.S. 268 | 22-1079 | 2024-06-06 | https://www.supremecourt.gov/opinions/23pdf/602us1r32_2q24.pdf"
+        ]
+      },
+      {
+        "id": "unit-09",
+        "source_ids": [
+          "united-states-602-u-s-821"
+        ],
+        "locators": [
+          "602 U.S. 821 | 23-370 | 2024-06-21 | https://www.supremecourt.gov/opinions/23pdf/602us1r45_h31i.pdf"
+        ]
+      },
+      {
+        "id": "unit-10",
+        "source_ids": [
+          "united-states-603-u-s-1"
+        ],
+        "locators": [
+          "603 U.S. 1 | 23-108 | 2024-06-26 | https://www.supremecourt.gov/opinions/23pdf/603us1r48_g3ci.pdf"
+        ]
+      },
+      {
+        "id": "unit-11",
+        "source_ids": [
+          "united-states-603-u-s-799"
+        ],
+        "locators": [
+          "603 U.S. 799 | 22-1008 | 2024-07-01 | https://www.supremecourt.gov/opinions/23pdf/603us1r59_4fci.pdf"
+        ]
+      },
+      {
+        "id": "unit-12",
+        "source_ids": [
+          "united-states-604-u-s-22"
+        ],
+        "locators": [
+          "604 U.S. 22 | 23-677 | 2025-01-15 | https://www.supremecourt.gov/opinions/24pdf/604us1r05_db8e.pdf"
+        ]
+      },
+      {
+        "id": "unit-13",
+        "source_ids": [
+          "united-states-605-u-s-335"
+        ],
+        "locators": [
+          "605 U.S. 335 | 24-249 | 2025-06-12 | https://www.supremecourt.gov/opinions/24pdf/605us2r41_bp7c.pdf"
+        ]
+      },
+      {
+        "id": "unit-14",
+        "source_ids": [
+          "united-states-606-u-s-226"
+        ],
+        "locators": [
+          "606 U.S. 226 | 23-1187 | 2025-06-20 | https://www.supremecourt.gov/opinions/24pdf/606us1r57_n6io.pdf"
+        ]
+      },
+      {
+        "id": "unit-15",
+        "source_ids": [
+          "united-states-606-u-s-656"
+        ],
+        "locators": [
+          "606 U.S. 656 | 24-354 | 2025-06-27 | https://www.supremecourt.gov/opinions/24pdf/606us2r64_8nj9.pdf"
+        ]
+      },
+      {
+        "id": "unit-16",
+        "source_ids": [
+          "united-states-607-u-s-11"
+        ],
+        "locators": [
+          "607 U.S. 11 | 25-180 | 2025-12-08 | https://www.supremecourt.gov/opinions/25pdf/607us1r03_1o23.pdf"
+        ]
+      },
+      {
+        "id": "unit-17",
+        "source_ids": [
+          "united-states-607-u-s-163"
+        ],
+        "locators": [
+          "607 U.S. 163 | 24-482 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf"
+        ]
+      },
+      {
+        "id": "unit-18",
+        "source_ids": [
+          "united-states-607-u-s-421"
+        ],
+        "locators": [
+          "607 U.S. 421 | 24-724 | 2026-02-24 | https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf"
+        ]
+      },
+      {
+        "id": "unit-19",
+        "source_ids": [
+          "united-states-607-u-s-7"
+        ],
+        "locators": [
+          "607 U.S. 7 | 25-52 | 2025-11-24 | https://www.supremecourt.gov/opinions/25pdf/607us1r02_5426.pdf"
+        ]
+      },
+      {
+        "id": "unit-20",
+        "source_ids": [
+          "united-states-608-1"
+        ],
+        "locators": [
+          "608/1 | 24-872 | 2026-05-21 | https://www.supremecourt.gov/opinions/25pdf/24-872_ec8f.pdf"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "source_id": "united-states-598-u-s-319",
+        "locator": "598 U.S. 319 | 21-1158 | 2023-05-11 | https://www.supremecourt.gov/opinions/22pdf/598us2r16_4gdj.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-598-u-s-432",
+        "locator": "598 U.S. 432 | 21-1599 | 2023-05-18 | https://www.supremecourt.gov/opinions/22pdf/598us2r20_b07d.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-598-u-s-631",
+        "locator": "598 U.S. 631 | 22-166 | 2023-05-25 | https://www.supremecourt.gov/opinions/22pdf/598us2r27_aplc.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-599-u-s-255",
+        "locator": "599 U.S. 255 | 21-376 | 2023-06-15 | https://www.supremecourt.gov/opinions/22pdf/599us1r38_khmp.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-599-u-s-670",
+        "locator": "599 U.S. 670 | 22-58 | 2023-06-23 | https://www.supremecourt.gov/opinions/22pdf/599us1r47_8m58.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-601-u-s-124",
+        "locator": "601 U.S. 124 | 22-340 | 2024-03-15 | https://www.supremecourt.gov/opinions/23pdf/601us1r07_19m1.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-601-u-s-187",
+        "locator": "601 U.S. 187 | 22-611 | 2024-03-15 | https://www.supremecourt.gov/opinions/23pdf/601us1r08_a8cf.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-602-u-s-268",
+        "locator": "602 U.S. 268 | 22-1079 | 2024-06-06 | https://www.supremecourt.gov/opinions/23pdf/602us1r32_2q24.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-602-u-s-821",
+        "locator": "602 U.S. 821 | 23-370 | 2024-06-21 | https://www.supremecourt.gov/opinions/23pdf/602us1r45_h31i.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-603-u-s-1",
+        "locator": "603 U.S. 1 | 23-108 | 2024-06-26 | https://www.supremecourt.gov/opinions/23pdf/603us1r48_g3ci.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-603-u-s-799",
+        "locator": "603 U.S. 799 | 22-1008 | 2024-07-01 | https://www.supremecourt.gov/opinions/23pdf/603us1r59_4fci.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-604-u-s-22",
+        "locator": "604 U.S. 22 | 23-677 | 2025-01-15 | https://www.supremecourt.gov/opinions/24pdf/604us1r05_db8e.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-605-u-s-335",
+        "locator": "605 U.S. 335 | 24-249 | 2025-06-12 | https://www.supremecourt.gov/opinions/24pdf/605us2r41_bp7c.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-606-u-s-226",
+        "locator": "606 U.S. 226 | 23-1187 | 2025-06-20 | https://www.supremecourt.gov/opinions/24pdf/606us1r57_n6io.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-606-u-s-656",
+        "locator": "606 U.S. 656 | 24-354 | 2025-06-27 | https://www.supremecourt.gov/opinions/24pdf/606us2r64_8nj9.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-607-u-s-11",
+        "locator": "607 U.S. 11 | 25-180 | 2025-12-08 | https://www.supremecourt.gov/opinions/25pdf/607us1r03_1o23.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-607-u-s-163",
+        "locator": "607 U.S. 163 | 24-482 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-607-u-s-421",
+        "locator": "607 U.S. 421 | 24-724 | 2026-02-24 | https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-607-u-s-7",
+        "locator": "607 U.S. 7 | 25-52 | 2025-11-24 | https://www.supremecourt.gov/opinions/25pdf/607us1r02_5426.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "source_id": "united-states-608-1",
+        "locator": "608/1 | 24-872 | 2026-05-21 | https://www.supremecourt.gov/opinions/25pdf/24-872_ec8f.pdf",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "normative_material_screening_output",
+  "expected_disposition": "none"
+}
