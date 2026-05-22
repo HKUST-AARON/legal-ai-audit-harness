@@ -63,7 +63,7 @@ AI-based case recommendation is the core case because it sits at the boundary be
 
 Legal information retrieval is not ordinary information retrieval with legal vocabulary added. Legal documents are not merely descriptions of an external domain. Statutes, precedents, administrative rules and court decisions may themselves constitute or structure the legal domain. Early legal retrieval work already treated retrieval in law as a domain in which text matching, legal concepts, citation practices and professional use are tightly connected \citep{turtle1995,rissland1995}. Van Opijnen and Santos later made the point explicit: legal information retrieval must account for legal hierarchy, temporality, authority, citations and domain relevance rather than reduce relevance to algorithmic similarity \citep{vanopijnen2017}. This insight matters for AI-based case recommendation because the practical significance of a retrieved case depends on its legal status, date, jurisdiction, procedural posture, subsequent treatment and relation to the issue being argued.
 
-Case-based reasoning research reaches the same conclusion from the perspective of legal reasoning. Legal reasoning with cases is not simple analogy by textual overlap. It involves selecting legally relevant similarities and differences, constructing theories of the case, and evaluating factors, values and precedential relations \citep{ashley1992,benchcapon2003}. Formal argumentation work likewise treats legal support, attack, defeat and acceptability as structured relations rather than as scalar similarity scores \citep{dung1995,prakken2015}. A retrieval system that returns cases on the basis of semantic closeness may assist this process, but it may also distort it if the user treats computational similarity as legal relevance. The problem is not only hallucination or false citation. It is the procedural effect of making some authorities salient and others invisible.
+Case-based reasoning research reaches the same conclusion from the perspective of legal reasoning. Legal reasoning with cases is not simple analogy by textual overlap. It involves selecting legally relevant similarities and differences, constructing theories of the case, and evaluating factors, values and precedential relations \citep{ashley1992,benchcapon2003}. Formal argumentation work likewise treats legal support, attack, defeat, burden of proof and acceptability as structured relations rather than as scalar similarity scores \citep{dung1995,gordon2007,prakken2015}. A retrieval system that returns cases on the basis of semantic closeness may assist this process, but it may also distort it if the user treats computational similarity as legal relevance. The problem is not only hallucination or false citation. It is the procedural effect of making some authorities salient and others invisible.
 
 \subsection{Benchmarks and legal retrieval models}
 
@@ -334,7 +334,7 @@ This requirement is particularly important for generated legal outputs. A ranked
 
 The audit layer proposed here sits above any particular search, retrieval, database, generation, agent or manual review architecture. The framework therefore does not inspect upstream implementation details. It requires an \textit{output evidence packet}: a provider-agnostic record that connects the legal propositions or recommended materials in an output to source identifiers, versions, locators and review status.
 
-A minimally reviewable evidence packet should record the issue presented to the system, source collection identifier, source version, output identifier, output units, source identifiers linked to each unit, paragraph or section locators, source-attribution tag, authority labels, counter-material links, human review gate, human adoption record and objection record. The upstream system may be a keyword search engine, legal database, generated-output workflow, agent workflow or manual review process. The audit question is the same: can the legal-output chain be reconstructed, source-tagged, reviewed and contested?
+A minimally reviewable evidence packet should record the issue presented to the system, source collection identifier, source version, output identifier, output units, source identifiers linked to each unit, paragraph or section locators, source-attribution tag, authority labels, counter-material links, human review gate, human adoption record and objection record. This requirement is related to model and dataset documentation work, but the unit of documentation is a procedurally relevant legal output rather than a model card or dataset sheet \citep{gebru2021,mitchell2019}. The upstream system may be a keyword search engine, legal database, generated-output workflow, agent workflow or manual review process. The audit question is the same: can the legal-output chain be reconstructed, source-tagged, reviewed and contested?
 
 Two simple metrics make this requirement operational. \textit{Evidence fidelity} is the proportion of output-source links that support the output unit to which they are attached:
 
@@ -561,11 +561,17 @@ Dahl M, Magesh V, Suzgun M, Ho DE (2024) Large legal fictions: Profiling legal h
 \bibitem[Dung(1995)]{dung1995}
 Dung PM (1995) On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games. \textit{Artificial Intelligence} 77(2):321--357. \url{https://doi.org/10.1016/0004-3702(94)00041-X}
 
+\bibitem[Gebru et~al.(2021)]{gebru2021}
+Gebru T, Morgenstern J, Vecchione B, Vaughan JW, Wallach H, Daum\'{e} H III, Crawford K (2021) Datasheets for datasets. \textit{Communications of the ACM} 64(12):86--92. \url{https://doi.org/10.1145/3458723}
+
 \bibitem[Goebel et~al.(2024)]{goebel2024}
 Goebel R, Kano Y, Kim MY, Rabelo J, Satoh K, Yoshioka M (2024) Overview and discussion of the Competition on Legal Information, Extraction/Entailment (COLIEE) 2023. \textit{Review of Socionetwork Strategies} 18:27--47. \url{https://doi.org/10.1007/s12626-023-00152-0}
 
+\bibitem[Gordon et~al.(2007)]{gordon2007}
+Gordon TF, Prakken H, Walton D (2007) The Carneades model of argument and burden of proof. \textit{Artificial Intelligence} 171(10--15):875--896. \url{https://doi.org/10.1016/j.artint.2007.04.010}
+
 \bibitem[Guha et~al.(2023)]{guha2023}
-Guha N, Nyarko J, Ho DE, Re C, Chilton A, Narayana A, Chohlas-Wood A, Peters A, Waldon B et al (2023) LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models. In: \textit{Advances in Neural Information Processing Systems 36}. \url{https://arxiv.org/abs/2308.11462}
+Guha N, Nyarko J, Ho DE, Re C, Chilton A, Narayana A, Chohlas-Wood A, Peters A, Waldon B et al (2023) LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models. In: \textit{Advances in Neural Information Processing Systems 36}. \url{https://papers.nips.cc/paper_files/paper/2023/hash/89e44582fd28ddfea1ea4dcb0ebbf4b0-Abstract-Datasets_and_Benchmarks.html}
 
 \bibitem[Hou et~al.(2025)]{hou2025}
 Hou AB, Weller O, Qin G, Yang E, Lawrie D, Holzenberger N, Blair-Stanek A, Van Durme B (2025) CLERC: A dataset for U.S. legal case retrieval and retrieval-augmented analysis generation. In: \textit{Findings of the Association for Computational Linguistics: NAACL 2025}. ACL, pp 7913--7928. \url{https://doi.org/10.18653/v1/2025.findings-naacl.441}
@@ -575,6 +581,9 @@ Kroll JA, Huey J, Barocas S, Felten EW, Reidenberg JR, Robinson DG, Yu H (2017) 
 
 \bibitem[Magesh et~al.(2025)]{magesh2025}
 Magesh V, Surani F, Dahl M, Suzgun M, Manning CD, Ho DE (2025) Hallucination-free? Assessing the reliability of leading AI legal research tools. \textit{Journal of Empirical Legal Studies} 22(2):216--242. \url{https://doi.org/10.1111/jels.12413}
+
+\bibitem[Mitchell et~al.(2019)]{mitchell2019}
+Mitchell M, Wu S, Zaldivar A, Barnes P, Vasserman L, Hutchinson B, Spitzer E, Raji ID et al (2019) Model cards for model reporting. In: \textit{Proceedings of the Conference on Fairness, Accountability, and Transparency}. ACM, pp 220--229. \url{https://doi.org/10.1145/3287560.3287596}
 
 \bibitem[Mökander(2023)]{mokander2023}
 Mökander J (2023) Auditing of AI: Legal, ethical and technical approaches. \textit{Digital Society} 2:49. \url{https://doi.org/10.1007/s44206-023-00074-y}
