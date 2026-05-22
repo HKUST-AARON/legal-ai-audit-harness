@@ -38,6 +38,26 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.total_score, 12)
         self.assertAlmostEqual(result.counter_authority_recall, 1.0)
 
+    def test_decision_support_requires_normative_gate_and_total_threshold(self):
+        scenario = deepcopy(load("decision_support_ready.json"))
+        for dimension in ("S", "Q", "H", "K"):
+            scenario["scores"][dimension]["score"] = 1
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.total_score, 8)
+        self.assertEqual(result.allowed_status, "professional_support_output")
+        self.assertIn("total_score>=9", result.missing_gates)
+
+    def test_decision_support_requires_authorized_adoption_gate(self):
+        scenario = deepcopy(load("decision_support_ready.json"))
+        scenario["review_gate"]["reliance_gate"] = "attorney_review"
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+
+        scenario = deepcopy(load("decision_support_ready.json"))
+        scenario["review_gate"]["human_authorization"] = False
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+
     def test_withdrawal_blocks_external_effect(self):
         result = evaluate_scenario(load("unverifiable_legal_output.json"))
         self.assertEqual(result.allowed_status, "no_external_legal_effect")
@@ -125,12 +145,27 @@ class AuditModelTest(unittest.TestCase):
             evaluate_scenario(scenario)
 
     def test_issue_gold_set_qualifies_as_normative_screening(self):
-        path = ROOT / "experiments" / "issue_gold_sets" / "scenarios" / "us_agency_deference_after_loper_bright.json"
-        scenario = json.loads(path.read_text(encoding="utf-8"))
-        result = evaluate_scenario(scenario)
-        self.assertEqual(result.allowed_status, "normative_material_screening_output")
-        self.assertAlmostEqual(result.authority_coverage, 1.0)
-        self.assertAlmostEqual(result.counter_authority_recall, 1.0)
+        paths = sorted((ROOT / "experiments" / "issue_gold_sets" / "scenarios").glob("*.json"))
+        self.assertGreaterEqual(len(paths), 3)
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            result = evaluate_scenario(scenario)
+            self.assertEqual(result.allowed_status, "normative_material_screening_output", path.name)
+            self.assertAlmostEqual(result.authority_coverage, 1.0, msg=path.name)
+            self.assertAlmostEqual(result.counter_authority_recall, 1.0, msg=path.name)
+            self.assertAlmostEqual(result.evidence_fidelity, 1.0, msg=path.name)
+
+    def test_cli_sensitivity_report(self):
+        completed = subprocess.run(
+            [sys.executable, "-m", "audit_harness.cli", "sensitivity", str(SCENARIOS)],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Normative threshold", completed.stdout)
+        self.assertIn("Decision threshold", completed.stdout)
 
     def test_real_case_collector_supports_external_output_directory(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -80,12 +80,19 @@ class AuditResult:
     expected_passed: bool
 
 
-def evaluate_scenario(scenario: dict[str, Any]) -> AuditResult:
+@dataclass(frozen=True)
+class StatusPolicy:
+    normative_threshold: int = 9
+    decision_threshold: int = 10
+
+
+def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = None) -> AuditResult:
+    policy = policy or StatusPolicy()
     _validate_scenario(scenario)
     scores = _parse_scores(scenario.get("scores", {}))
     total = sum(scores.values())
     missing_gates: list[str] = []
-    allowed = _allowed_status(scores, total, missing_gates)
+    allowed = _allowed_status(scenario, scores, total, missing_gates, policy)
     metrics = _scenario_metrics(scenario)
     disposition = _disposition(_derived_failure_flags(scenario, metrics))
 
@@ -151,15 +158,21 @@ def _parse_scores(raw_scores: dict[str, Any]) -> dict[str, int]:
     return scores
 
 
-def _allowed_status(scores: dict[str, int], total: int, missing_gates: list[str]) -> str:
-    if scores["S"] >= 1 and scores["Q"] >= 1 and scores["H"] >= 1 and scores["K"] >= 1 and scores["T"] == 2 and scores["L"] == 2:
+def _allowed_status(scenario: dict[str, Any], scores: dict[str, int], total: int, missing_gates: list[str], policy: StatusPolicy) -> str:
+    if (
+        all(scores[d] >= 1 for d in DIMENSIONS)
+        and total >= policy.decision_threshold
+        and scores["T"] == 2
+        and scores["L"] == 2
+        and _adoption_gate_satisfied(scenario)
+    ):
         return Status.DECISION_SUPPORT_REASON.value
 
-    if all(scores[d] >= 1 for d in DIMENSIONS) and total >= 9:
+    if all(scores[d] >= 1 for d in DIMENSIONS) and total >= policy.normative_threshold:
         return Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value
 
     if scores["S"] >= 1 and scores["Q"] >= 1 and scores["L"] >= 1:
-        missing_gates.extend(_normative_missing_gates(scores, total))
+        missing_gates.extend(_normative_missing_gates(scores, total, policy))
         return Status.PROFESSIONAL_SUPPORT_OUTPUT.value
 
     if scores["S"] >= 1 and scores["Q"] >= 1:
@@ -173,10 +186,20 @@ def _allowed_status(scores: dict[str, int], total: int, missing_gates: list[str]
     return Status.NO_EXTERNAL_LEGAL_EFFECT.value
 
 
-def _normative_missing_gates(scores: dict[str, int], total: int) -> list[str]:
+def _adoption_gate_satisfied(scenario: dict[str, Any]) -> bool:
+    gate = scenario.get("review_gate", {})
+    return (
+        gate.get("review_status") == "completed"
+        and gate.get("reliance_gate") == "authorized_adoption"
+        and gate.get("human_authorization") is True
+        and bool(gate.get("jurisdiction_assumptions"))
+    )
+
+
+def _normative_missing_gates(scores: dict[str, int], total: int, policy: StatusPolicy) -> list[str]:
     missing = [dimension for dimension in DIMENSIONS if scores[dimension] < 1]
-    if total < 9:
-        missing.append("total_score>=9")
+    if total < policy.normative_threshold:
+        missing.append(f"total_score>={policy.normative_threshold}")
     return missing
 
 
@@ -204,17 +227,38 @@ def _set_recall(known_raw: Any, retrieved_raw: Any) -> float | None:
 def _invalid_authority_rate(authority_sets: dict[str, Any]) -> float | None:
     retrieved = set(authority_sets.get("retrieved", []))
     invalid = set(authority_sets.get("invalid_or_superseded", []))
-    if not retrieved:
+    retrieved_treatments = set(authority_sets.get("retrieved_invalid_treatments", []))
+    invalid_treatments = set(authority_sets.get("invalid_treatments", []))
+    denominator = len(retrieved) + len(retrieved_treatments)
+    if denominator == 0:
         return None
-    return len(retrieved & invalid) / len(retrieved)
+    invalid_hits = len(retrieved & invalid) + len(retrieved_treatments & invalid_treatments)
+    return invalid_hits / denominator
 
 
 def _evidence_fidelity(evidence_packet: dict[str, Any]) -> float | None:
     links = evidence_packet.get("output_links", [])
     if not links:
         return None
-    faithful = [link for link in links if link.get("supports_claim") is True and link.get("locator")]
+    units = {unit.get("id"): unit for unit in evidence_packet.get("output_units", [])}
+    faithful = [
+        link
+        for link in links
+        if link.get("supports_claim") is True
+        and link.get("locator")
+        and _link_matches_unit(link, units)
+    ]
     return len(faithful) / len(links)
+
+
+def _link_matches_unit(link: dict[str, Any], units: dict[str, dict[str, Any]]) -> bool:
+    unit_id = link.get("unit_id")
+    if not unit_id:
+        return True
+    unit = units.get(unit_id)
+    if not unit:
+        return False
+    return link.get("source_id") in set(unit.get("source_ids", [])) and link.get("locator") in set(unit.get("locators", []))
 
 
 def _evidence_coverage(evidence_packet: dict[str, Any]) -> float | None:

@@ -302,12 +302,13 @@ def build_scenario(slug: str, sample: list[dict]) -> dict:
             ],
             "output_links": [
                 {
+                    "unit_id": f"unit-{index + 1:02d}",
                     "source_id": item["id"],
                     "locator": locator(item),
                     "supports_claim": True,
                     "source_tag": "public_metadata",
                 }
-                for item in sample
+                for index, item in enumerate(sample)
             ],
         },
         "review_gate": {

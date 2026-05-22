@@ -19,6 +19,9 @@ This repository implements the paper's evaluation framework as a runnable audit 
 | Source-attribution tiering | `evidence_packet.output_links[*].source_tag` |
 | Human review and reliance gates | `review_gate` |
 | Downgrade and withdrawal | `failure_flags` |
+| Gate function `g_0` | `evaluate_scenario(..., StatusPolicy(...))` and `_allowed_status` |
+| Failure cap operator | `_derived_failure_flags`, `_disposition` and disposition caps in `evaluate_scenario` |
+| Threshold sensitivity | `python -m audit_harness.cli sensitivity ...` |
 
 The harness is not a legal merits evaluator. It does not decide whether a legal answer is correct. It decides the highest procedural status that an output may claim given the audit artefacts available.
 

@@ -38,6 +38,7 @@
   "evidence_packet": {
     "output_links": [
       {
+        "unit_id": "unit-1",
         "source_id": "unknown-case",
         "locator": "",
         "supports_claim": false,

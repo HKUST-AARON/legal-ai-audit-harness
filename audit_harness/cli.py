@@ -7,7 +7,7 @@ from dataclasses import asdict
 from pathlib import Path
 from statistics import mean
 
-from .model import AuditResult, evaluate_scenario
+from .model import AuditResult, StatusPolicy, evaluate_scenario
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -28,6 +28,12 @@ def main(argv: list[str] | None = None) -> int:
     experiment_parser.add_argument("--out", type=Path)
     experiment_parser.add_argument("--json-out", type=Path)
 
+    sensitivity_parser = subparsers.add_parser("sensitivity", help="run threshold sensitivity analysis over scenarios")
+    sensitivity_parser.add_argument("path", type=Path)
+    sensitivity_parser.add_argument("--thresholds", nargs="+", type=int, default=[8, 9, 10, 11])
+    sensitivity_parser.add_argument("--out", type=Path)
+    sensitivity_parser.add_argument("--json-out", type=Path)
+
     args = parser.parse_args(argv)
     if args.command == "score":
         result = evaluate_scenario(_read_json(args.scenario))
@@ -37,7 +43,20 @@ def main(argv: list[str] | None = None) -> int:
             print(_format_result(result))
         return 0 if result.expected_passed else 1
 
-    scenarios = [_read_json(path) for path in _scenario_paths(args.path)]
+    paths = _scenario_paths(args.path)
+    scenarios = [_read_json(path) for path in paths]
+    if args.command == "sensitivity":
+        payload = _sensitivity_payload(args.path, scenarios, args.thresholds)
+        report = _format_sensitivity(payload)
+        print(report)
+        if args.out:
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(report, encoding="utf-8")
+        if args.json_out:
+            args.json_out.parent.mkdir(parents=True, exist_ok=True)
+            args.json_out.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
+        return 0
+
     results = [evaluate_scenario(scenario) for scenario in scenarios]
     report = _format_experiment(scenarios, results) if args.command == "experiment" else _format_report(results)
     print(report)
@@ -46,7 +65,7 @@ def main(argv: list[str] | None = None) -> int:
         args.out.write_text(report, encoding="utf-8")
     if args.json_out:
         args.json_out.parent.mkdir(parents=True, exist_ok=True)
-        payload = _experiment_payload(scenarios, results) if args.command == "experiment" else [asdict(r) for r in results]
+        payload = _experiment_payload(args.path, scenarios, results) if args.command == "experiment" else [asdict(r) for r in results]
         args.json_out.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
     return 0 if all(result.expected_passed for result in results) else 1
 
@@ -168,9 +187,11 @@ def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str
     return "\n".join(lines)
 
 
-def _experiment_payload(scenarios: list[dict], results: list[AuditResult]) -> dict:
+def _experiment_payload(path: Path, scenarios: list[dict], results: list[AuditResult]) -> dict:
     rows = _experiment_rows(scenarios, results)
     return {
+        "command_class": "experiment",
+        "scenario_path": str(path),
         "summary": {
             "scenario_count": len(rows),
             "expected_passed": sum(row["expected_passed"] for row in rows),
@@ -180,6 +201,50 @@ def _experiment_payload(scenarios: list[dict], results: list[AuditResult]) -> di
         },
         "results": rows,
     }
+
+
+def _sensitivity_payload(path: Path, scenarios: list[dict], thresholds: list[int]) -> dict:
+    runs = []
+    for threshold in thresholds:
+        policy = StatusPolicy(normative_threshold=threshold, decision_threshold=max(10, threshold + 1))
+        results = [evaluate_scenario(scenario, policy=policy) for scenario in scenarios]
+        distribution: dict[str, int] = {}
+        for result in results:
+            distribution[result.allowed_status] = distribution.get(result.allowed_status, 0) + 1
+        runs.append(
+            {
+                "normative_threshold": threshold,
+                "decision_threshold": policy.decision_threshold,
+                "status_distribution": distribution,
+                "results": [asdict(result) for result in results],
+            }
+        )
+    return {
+        "command_class": "sensitivity",
+        "scenario_path": str(path),
+        "scenario_count": len(scenarios),
+        "runs": runs,
+    }
+
+
+def _format_sensitivity(payload: dict) -> str:
+    statuses = sorted({status for run in payload["runs"] for status in run["status_distribution"]})
+    lines = [
+        "# Legal AI Audit Harness Sensitivity Analysis",
+        "",
+        f"Scenarios: {payload['scenario_count']}",
+        "",
+        "| Normative threshold | Decision threshold | " + " | ".join(statuses) + " |",
+        "| ---: | ---: | " + " | ".join("---:" for _ in statuses) + " |",
+    ]
+    for run in payload["runs"]:
+        counts = [str(run["status_distribution"].get(status, 0)) for status in statuses]
+        lines.append(
+            f"| {run['normative_threshold']} | {run['decision_threshold']} | "
+            + " | ".join(counts)
+            + " |"
+        )
+    return "\n".join(lines)
 
 
 def _experiment_rows(scenarios: list[dict], results: list[AuditResult]) -> list[dict]:

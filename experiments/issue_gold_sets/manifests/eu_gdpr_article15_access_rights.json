@@ -1,0 +1,52 @@
+{
+  "id": "eu-gdpr-article15-access-rights-manifest",
+  "jurisdiction": "european_union",
+  "issue": "Which authorities should be visible when screening EU materials on the GDPR Article 15 right of access to recipients and copies of personal data?",
+  "created_at": "2026-05-23T00:00:00Z",
+  "curation": {
+    "method": "manual issue-defined gold set from EUR-Lex and Court of Justice public sources",
+    "curator_notes": "This set validates civil-law and EU-law authority-role handling for audit protocol purposes. It is not legal advice and is not a merits answer for any live matter."
+  },
+  "records": [
+    {
+      "id": "gdpr-art-15",
+      "title": "Regulation (EU) 2016/679 Article 15",
+      "citation": "GDPR Article 15",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "authority_level": "governing_regulation",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "cjeu-c-154-21-osterreichische-post",
+      "title": "RW v Österreichische Post AG",
+      "citation": "Case C-154/21",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62021CJ0154",
+      "authority_level": "court_of_justice_judgment",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "cjeu-c-487-21-crif",
+      "title": "Österreichische Datenschutzbehörde and CRIF",
+      "citation": "Case C-487/21",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62021CJ0487",
+      "authority_level": "court_of_justice_judgment",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "gdpr-art-12-5",
+      "title": "Regulation (EU) 2016/679 Article 12(5)",
+      "citation": "GDPR Article 12(5)",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "authority_level": "governing_regulation_limitation",
+      "issue_role": "limiting_material"
+    },
+    {
+      "id": "gdpr-art-15-4",
+      "title": "Regulation (EU) 2016/679 Article 15(4)",
+      "citation": "GDPR Article 15(4)",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "authority_level": "governing_regulation_limitation",
+      "issue_role": "limiting_material"
+    }
+  ]
+}

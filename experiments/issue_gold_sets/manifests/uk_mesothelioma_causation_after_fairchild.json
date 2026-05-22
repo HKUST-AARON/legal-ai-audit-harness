@@ -1,0 +1,44 @@
+{
+  "id": "uk-mesothelioma-causation-after-fairchild-manifest",
+  "jurisdiction": "united_kingdom",
+  "issue": "Which authorities should be visible when screening English-law materials on causation and liability in mesothelioma exposure cases after Fairchild, Barker, the Compensation Act 2006 and Sienkiewicz?",
+  "created_at": "2026-05-23T00:00:00Z",
+  "curation": {
+    "method": "manual issue-defined gold set from public House of Lords, UK Supreme Court and legislation sources",
+    "curator_notes": "This set validates authority-role and limiting-treatment handling for audit protocol purposes. It is not legal advice and is not a merits answer for any live matter."
+  },
+  "records": [
+    {
+      "id": "fairchild-2002-ukhl-22",
+      "title": "Fairchild v Glenhaven Funeral Services Ltd",
+      "citation": "[2002] UKHL 22",
+      "source_url": "https://publications.parliament.uk/pa/ld200102/ldjudgmt/jd020620/fchild-1.htm",
+      "authority_level": "house_of_lords_precedent",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "barker-2006-ukhl-20",
+      "title": "Barker v Corus (UK) plc",
+      "citation": "[2006] UKHL 20",
+      "source_url": "https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060503/barker.pdf",
+      "authority_level": "house_of_lords_subsequent_limiting_precedent",
+      "issue_role": "limiting_material"
+    },
+    {
+      "id": "compensation-act-2006-s3",
+      "title": "Compensation Act 2006 section 3",
+      "citation": "Compensation Act 2006, s. 3",
+      "source_url": "https://www.legislation.gov.uk/ukpga/2006/29/section/3",
+      "authority_level": "governing_statute",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "sienkiewicz-2011-uksc-10",
+      "title": "Sienkiewicz v Greif (UK) Ltd",
+      "citation": "[2011] UKSC 10",
+      "source_url": "https://www.supremecourt.uk/cases/uksc-2009-0219",
+      "authority_level": "uk_supreme_court_precedent",
+      "issue_role": "high_authority"
+    }
+  ]
+}

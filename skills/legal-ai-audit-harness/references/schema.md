@@ -22,6 +22,8 @@ Minimum scenario shape:
     "counter_or_limiting": ["source-b"],
     "retrieved_counter_or_limiting": [],
     "invalid_or_superseded": [],
+    "invalid_treatments": [],
+    "retrieved_invalid_treatments": [],
     "retrieved": ["source-a"]
   },
   "upstream_metrics": {
@@ -31,7 +33,7 @@ Minimum scenario shape:
   },
   "evidence_packet": {
     "output_links": [
-      { "source_id": "source-a", "locator": "para 3", "supports_claim": true, "source_tag": "tool_verified" }
+      { "unit_id": "unit-1", "source_id": "source-a", "locator": "para 3", "supports_claim": true, "source_tag": "tool_verified" }
     ],
     "output_units": [
       { "id": "unit-1", "source_ids": ["source-a"], "locators": ["para 3"] }

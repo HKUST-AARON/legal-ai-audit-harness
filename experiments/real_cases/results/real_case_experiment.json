@@ -1,4 +1,5 @@
 {
+  "command_class": "experiment",
   "results": [
     {
       "allowed_status": "professional_support_output",
@@ -195,6 +196,7 @@
       "upstream_recall": null
     }
   ],
+  "scenario_path": "/Users/aaron/Downloads/\u6cd5\u5f8b\u79bb\u6563/legal-ai-audit-harness/experiments/real_cases/scenarios",
   "summary": {
     "expected_passed": 6,
     "high_upstream_but_blocked": 0,

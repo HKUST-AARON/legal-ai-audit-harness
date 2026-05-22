@@ -48,9 +48,11 @@
       "skidmore-323-us-134",
       "kisor-588-us-558"
     ],
-    "invalid_or_superseded": [
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
       "chevron-as-current-mandatory-deference-rule"
     ],
+    "retrieved_invalid_treatments": [],
     "retrieved": [
       "loper-bright-603-us-369",
       "chevron-467-us-837",
@@ -74,7 +76,7 @@
           "loper-bright-603-us-369"
         ],
         "locators": [
-          "603 U.S. 369; syllabus and majority opinion"
+          "603 U.S. 369"
         ]
       },
       {
@@ -85,7 +87,8 @@
           "chevron-467-us-837"
         ],
         "locators": [
-          "Loper Bright, 603 U.S. 369; Chevron, 467 U.S. 837"
+          "603 U.S. 369",
+          "467 U.S. 837"
         ]
       },
       {
@@ -96,7 +99,8 @@
           "loper-bright-603-us-369"
         ],
         "locators": [
-          "Skidmore, 323 U.S. 134; Loper Bright discussion of Skidmore"
+          "323 U.S. 134",
+          "603 U.S. 369"
         ]
       },
       {
@@ -122,30 +126,35 @@
     ],
     "output_links": [
       {
+        "unit_id": "unit-1",
         "source_id": "loper-bright-603-us-369",
         "locator": "603 U.S. 369",
         "supports_claim": true,
         "source_tag": "official_source"
       },
       {
+        "unit_id": "unit-2",
         "source_id": "chevron-467-us-837",
         "locator": "467 U.S. 837",
         "supports_claim": true,
         "source_tag": "official_source"
       },
       {
+        "unit_id": "unit-3",
         "source_id": "skidmore-323-us-134",
         "locator": "323 U.S. 134",
         "supports_claim": true,
         "source_tag": "tool_verified"
       },
       {
+        "unit_id": "unit-4",
         "source_id": "apa-5-usc-706",
         "locator": "5 U.S.C. 706",
         "supports_claim": true,
         "source_tag": "official_source"
       },
       {
+        "unit_id": "unit-5",
         "source_id": "kisor-588-us-558",
         "locator": "588 U.S. 558",
         "supports_claim": true,

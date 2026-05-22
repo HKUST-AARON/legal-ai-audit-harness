@@ -34,6 +34,7 @@ The repository follows a local-first CLI and artifact-log pattern: each run is r
 python -m audit_harness.cli score examples/scenarios/court_authority_report.json
 python -m audit_harness.cli run examples/scenarios --out reports/sample_report.md --json-out reports/sample_report.json
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
+python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
 python -m unittest discover -s tests
 ```
 
@@ -74,7 +75,7 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
   "upstream_metrics": { "precision": 0.88, "recall": 0.83, "f1": 0.85 },
   "evidence_packet": {
     "output_links": [
-      { "source_id": "binding-precedent-a", "locator": "para 3", "supports_claim": true, "source_tag": "tool_verified" }
+      { "unit_id": "unit-1", "source_id": "binding-precedent-a", "locator": "para 3", "supports_claim": true, "source_tag": "tool_verified" }
     ],
     "output_units": [
       { "id": "unit-1", "source_ids": ["binding-precedent-a"], "locators": ["para 3"] }
@@ -101,7 +102,7 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
 | `reference_information` | `S >= 1` and `Q >= 1` |
 | `professional_support_output` | `S, Q, L >= 1` |
 | `normative_material_screening_output` | all six dimensions `>= 1` and total score `>= 9` |
-| `decision_support_reason` | `S, Q, H, K >= 1` and `T = L = 2` |
+| `decision_support_reason` | all normative-screening gates, total score `>= 10`, `T = L = 2`, completed review, `authorized_adoption`, human authorization, and recorded jurisdiction assumptions |
 | `no_external_legal_effect` | missing gates or withdrawal-level failures |
 
 Failure flags can downgrade or withdraw an output from external procedural use.
@@ -129,13 +130,19 @@ python -m audit_harness.cli experiment experiments/real_cases/scenarios --out ex
 
 By default the script uses the committed public metadata snapshots for deterministic reruns. Pass `--refresh` to download fresh snapshots. The experiment samples 20 records per jurisdiction with a fixed seed, writes source manifests, and runs the harness over the generated output evidence packets. It tests whether evidence packets can be reconstructed and audited; it does not evaluate legal merits, ranking quality or any upstream system architecture. For that reason these metadata-only packets are capped at `professional_support_output`, not `normative_material_screening_output`.
 
-The repository also includes one issue-defined gold-set experiment:
+The repository also includes three issue-defined gold-set experiments:
 
 ```bash
 python -m audit_harness.cli experiment experiments/issue_gold_sets/scenarios --out experiments/issue_gold_sets/results/issue_gold_set_experiment.md --json-out experiments/issue_gold_sets/results/issue_gold_set_experiment.json
 ```
 
-The current gold set covers U.S. agency statutory interpretation after `Loper Bright`, with manually curated high-authority, limiting and invalidated-authority treatment for `Loper Bright`, `Chevron`, `Skidmore`, APA `5 U.S.C. 706` and `Kisor`.
+The current gold sets cover:
+
+- U.S. agency statutory interpretation after `Loper Bright`, with manually curated high-authority, limiting and invalidated-treatment labels for `Loper Bright`, `Chevron`, `Skidmore`, APA `5 U.S.C. 706` and `Kisor`;
+- English-law mesothelioma causation after `Fairchild`, `Barker`, the Compensation Act 2006 and `Sienkiewicz`;
+- EU GDPR Article 15 access-right materials on recipients and copies of personal data, including CJEU decisions C-154/21 and C-487/21 plus regulation-based limitations.
+
+The sensitivity command varies the normative-screening threshold from 8 to 11 and reports the resulting status distribution. This is intended to show whether status allocation depends on a single arbitrary threshold.
 
 ## Repository Layout
 
@@ -143,6 +150,9 @@ The current gold set covers U.S. agency statutory interpretation after `Loper Br
 audit_harness/          scoring model and CLI
 examples/scenarios/     runnable audit scenarios
 examples/jurisdiction_profiles/  legal-system parameter profiles
+experiments/stress_tests/results/  committed stress-test and sensitivity outputs
+experiments/issue_gold_sets/       curated issue packets and gold-set outputs
+experiments/real_cases/            public metadata snapshots, manifests and outputs
 tests/                  unit tests
 docs/paper_mapping.md   mapping from the paper framework to code
 .github/workflows/      CI test harness

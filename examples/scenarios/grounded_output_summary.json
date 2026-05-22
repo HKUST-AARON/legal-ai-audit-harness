@@ -53,12 +53,14 @@
   "evidence_packet": {
     "output_links": [
       {
+        "unit_id": "unit-1",
         "source_id": "binding-precedent-a",
         "locator": "para 12-15",
         "supports_claim": true,
         "source_tag": "tool_verified"
       },
       {
+        "unit_id": "unit-2",
         "source_id": "limiting-precedent-b",
         "locator": "para 8-10",
         "supports_claim": true,

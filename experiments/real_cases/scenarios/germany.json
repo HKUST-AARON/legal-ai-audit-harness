@@ -244,120 +244,140 @@
     ],
     "output_links": [
       {
+        "unit_id": "unit-01",
         "source_id": "germany-11-cs-26-505",
         "locator": "11 CS 26.505 | 11 CS 26.505 | 2026-05-12 | https://de.openlegaldata.io/api/cases/521133/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-02",
         "source_id": "germany-206-strr-105-26",
         "locator": "206 StRR 105/26 | 206 StRR 105/26 | 2026-05-07 | https://de.openlegaldata.io/api/cases/521122/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-03",
         "source_id": "germany-24-m-25-1121",
         "locator": "24 M 25.1121 | 24 M 25.1121 | 2026-05-11 | https://de.openlegaldata.io/api/cases/521135/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-04",
         "source_id": "germany-34-wx-40-26-e",
         "locator": "34 Wx 40/26 e | 34 Wx 40/26 e | 2026-05-07 | https://de.openlegaldata.io/api/cases/521121/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-05",
         "source_id": "germany-7-w-607-26-e",
         "locator": "7 W 607/26 e | 7 W 607/26 e | 2026-05-12 | https://de.openlegaldata.io/api/cases/521072/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-06",
         "source_id": "germany-ecli-de-ovgnrw-2026-0427-1a3195-25a-00",
         "locator": "ECLI:DE:OVGNRW:2026:0427.1A3195.25A.00 | 1 A 3195/25.A | 2026-04-27 | https://de.openlegaldata.io/api/cases/520809/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-07",
         "source_id": "germany-ecli-de-ovgnrw-2026-0427-7b135-26ne-00",
         "locator": "ECLI:DE:OVGNRW:2026:0427.7B135.26NE.00 | 7 B 135/26.NE | 2026-04-27 | https://de.openlegaldata.io/api/cases/520807/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-08",
         "source_id": "germany-ecli-de-ovgnrw-2026-0428-13a3462-25-00",
         "locator": "ECLI:DE:OVGNRW:2026:0428.13A3462.25.00 | 13 A 3462/25 | 2026-04-28 | https://de.openlegaldata.io/api/cases/520801/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-09",
         "source_id": "germany-ecli-de-ovgnrw-2026-0511-14a2225-22-00",
         "locator": "ECLI:DE:OVGNRW:2026:0511.14A2225.22.00 | 14 A 2225/22 | 2026-05-11 | https://de.openlegaldata.io/api/cases/521138/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-10",
         "source_id": "germany-ecli-de-ovgnrw-2026-0512-10a450-24-00",
         "locator": "ECLI:DE:OVGNRW:2026:0512.10A450.24.00 | 10 A 450/24 | 2026-05-12 | https://de.openlegaldata.io/api/cases/521137/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-11",
         "source_id": "germany-ecli-de-vgk-2026-0430-22l968-26a-00",
         "locator": "ECLI:DE:VGK:2026:0430.22L968.26A.00 | 22 L 968/26.A | 2026-04-30 | https://de.openlegaldata.io/api/cases/520775/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-12",
         "source_id": "germany-ecli-eu-c-2026-356",
         "locator": "ECLI:EU:C:2026:356 | C-356/26 | 2026-04-30 | https://de.openlegaldata.io/api/cases/520781/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-13",
         "source_id": "germany-ecli-eu-c-2026-363",
         "locator": "ECLI:EU:C:2026:363 | C-363/26 | 2026-04-30 | https://de.openlegaldata.io/api/cases/520785/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-14",
         "source_id": "germany-ecli-eu-c-2026-364",
         "locator": "ECLI:EU:C:2026:364 | C-364/26 | 2026-04-30 | https://de.openlegaldata.io/api/cases/520787/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-15",
         "source_id": "germany-ecli-eu-c-2026-368",
         "locator": "ECLI:EU:C:2026:368 | C-368/26 | 2026-04-30 | https://de.openlegaldata.io/api/cases/520777/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-16",
         "source_id": "germany-ecli-eu-c-2026-376",
         "locator": "ECLI:EU:C:2026:376 | C-376/26 | 2026-05-07 | https://de.openlegaldata.io/api/cases/521115/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-17",
         "source_id": "germany-ecli-eu-c-2026-381",
         "locator": "ECLI:EU:C:2026:381 | C-381/26 | 2026-05-07 | https://de.openlegaldata.io/api/cases/521113/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-18",
         "source_id": "germany-ecli-eu-c-2026-382",
         "locator": "ECLI:EU:C:2026:382 | C-382/26 | 2026-05-07 | https://de.openlegaldata.io/api/cases/521114/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-19",
         "source_id": "germany-ecli-eu-c-2026-396",
         "locator": "ECLI:EU:C:2026:396 | C-396/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521085/",
         "supports_claim": true,
         "source_tag": "public_metadata"
       },
       {
+        "unit_id": "unit-20",
         "source_id": "germany-ecli-eu-c-2026-401",
         "locator": "ECLI:EU:C:2026:401 | C-401/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521081/",
         "supports_claim": true,
