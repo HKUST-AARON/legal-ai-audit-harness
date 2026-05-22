@@ -53,6 +53,6 @@ Minimum scenario shape:
 
 Use deterministic IDs. Keep source text excerpts short and prefer links, paragraph IDs, neutral citations, and hashes over long copyrighted text. `evidence_packet` is provider-agnostic and can be produced by any upstream search, database, generation, agent, or manual review process.
 
-`source_tag` should state how a reviewer should treat the source link, for example `tool_verified`, `public_metadata`, `user_provided`, `settled`, `needs_verification`, or `pinpoint_needs_verification`. Missing tags downgrade external procedural claims.
+`source_tag` should state how a reviewer should treat the source link, for example `tool_verified`, `official_source`, `public_metadata`, `user_provided`, `user_provided_verified`, `settled`, `needs_verification`, or `pinpoint_needs_verification`. Missing tags downgrade external procedural claims. For `normative_material_screening_output`, tags such as `needs_verification`, `pinpoint_needs_verification`, `public_metadata`, or unverified `user_provided` are not enough; they show the source is visible but not procedurally verified.
 
 `review_gate` records attorney-review and reliance posture. Use `reliance_gate` values such as `internal_only`, `attorney_review`, `not_for_merits_reliance`, `external_reliance`, `filing`, `sending`, `execution`, or `authorized_adoption`. Irreversible action without `human_authorization: true` is withdrawn from external legal effect.

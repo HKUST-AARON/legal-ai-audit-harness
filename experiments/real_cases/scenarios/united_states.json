@@ -1,6 +1,6 @@
 {
   "id": "real-cases-united_states",
-  "claimed_status": "normative_material_screening_output",
+  "claimed_status": "professional_support_output",
   "jurisdiction_profile": "common_law",
   "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
   "scores": {
@@ -17,8 +17,8 @@
       "evidence": "Court or authority labels are preserved in the manifest and evidence packet."
     },
     "K": {
-      "score": 1,
-      "evidence": "The scenario records sample ordering and source set membership, but does not claim issue-specific counter-material recall."
+      "score": 0,
+      "evidence": "This metadata validation does not define an issue-specific ranking task or counter-material gold set."
     },
     "T": {
       "score": 1,
@@ -417,6 +417,6 @@
     "irreversible_action": false,
     "human_authorization": false
   },
-  "expected_allowed_status": "normative_material_screening_output",
+  "expected_allowed_status": "professional_support_output",
   "expected_disposition": "none"
 }

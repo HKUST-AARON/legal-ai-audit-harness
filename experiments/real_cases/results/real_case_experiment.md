@@ -2,7 +2,7 @@
 
 Scenarios: 6
 Expected outcomes passed: 6/6
-Mean audit score: 9.67
+Mean audit score: 8.67
 Mean upstream recall: n/a
 High-upstream-performance but procedurally blocked scenarios: 0
 
@@ -10,15 +10,15 @@ High-upstream-performance but procedurally blocked scenarios: 0
 
 | Status | Count |
 | --- | ---: |
-| normative_material_screening_output | 6 |
+| professional_support_output | 6 |
 
 ## Scenario Results
 
 | Scenario | Profile | Claimed | Allowed | Score | Upstream recall | CAR | Authority coverage | Evidence fidelity | Source tags | Disposition |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| real-cases-canada | common_law | normative_material_screening_output | normative_material_screening_output | 10 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
-| real-cases-germany | civil_law | normative_material_screening_output | normative_material_screening_output | 9 | n/a | n/a | n/a | 1.00 | 1.00 | none |
-| real-cases-hong_kong | common_law | normative_material_screening_output | normative_material_screening_output | 10 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
-| real-cases-mainland_china | civil_law | normative_material_screening_output | normative_material_screening_output | 10 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
-| real-cases-united_kingdom | common_law | normative_material_screening_output | normative_material_screening_output | 9 | n/a | n/a | n/a | 1.00 | 1.00 | none |
-| real-cases-united_states | common_law | normative_material_screening_output | normative_material_screening_output | 10 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
+| real-cases-canada | common_law | professional_support_output | professional_support_output | 9 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
+| real-cases-germany | civil_law | professional_support_output | professional_support_output | 8 | n/a | n/a | n/a | 1.00 | 1.00 | none |
+| real-cases-hong_kong | common_law | professional_support_output | professional_support_output | 9 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
+| real-cases-mainland_china | civil_law | professional_support_output | professional_support_output | 9 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |
+| real-cases-united_kingdom | common_law | professional_support_output | professional_support_output | 8 | n/a | n/a | n/a | 1.00 | 1.00 | none |
+| real-cases-united_states | common_law | professional_support_output | professional_support_output | 9 | n/a | n/a | 1.00 | 1.00 | 1.00 | none |

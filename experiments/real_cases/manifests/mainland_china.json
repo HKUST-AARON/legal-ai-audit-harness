@@ -1,6 +1,6 @@
 {
   "jurisdiction": "mainland_china",
-  "created_at": "2026-05-22T17:27:20.605676+00:00",
+  "created_at": "2026-05-23T00:00:00Z",
   "sampling": {
     "method": "random.sample over normalized public case metadata candidates",
     "seed": 20260524,

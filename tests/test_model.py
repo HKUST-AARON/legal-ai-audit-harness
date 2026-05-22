@@ -1,6 +1,8 @@
 import json
+import shutil
 import subprocess
 import sys
+import tempfile
 import unittest
 from copy import deepcopy
 from pathlib import Path
@@ -50,6 +52,15 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.allowed_status, "reference_information")
         self.assertEqual(result.disposition, "downgrade")
         self.assertAlmostEqual(result.source_tag_coverage, 0.0)
+
+    def test_unverified_source_tags_downgrade_normative_status(self):
+        scenario = deepcopy(load("grounded_output_summary.json"))
+        for link in scenario["evidence_packet"]["output_links"]:
+            link["source_tag"] = "needs_verification"
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertAlmostEqual(result.source_tag_coverage, 1.0)
 
     def test_review_gate_blocks_unreviewed_external_reliance(self):
         scenario = deepcopy(load("decision_support_ready.json"))
@@ -105,7 +116,33 @@ class AuditModelTest(unittest.TestCase):
             units = scenario.get("evidence_packet", {}).get("output_units", [])
             self.assertEqual(len(units), 20, path.name)
             result = evaluate_scenario(scenario)
-            self.assertEqual(result.allowed_status, "normative_material_screening_output", path.name)
+            self.assertEqual(result.allowed_status, "professional_support_output", path.name)
+
+    def test_schema_rejects_missing_scores(self):
+        scenario = deepcopy(load("grounded_output_summary.json"))
+        scenario["scores"].pop("K")
+        with self.assertRaises(ValueError):
+            evaluate_scenario(scenario)
+
+    def test_issue_gold_set_qualifies_as_normative_screening(self):
+        path = ROOT / "experiments" / "issue_gold_sets" / "scenarios" / "us_agency_deference_after_loper_bright.json"
+        scenario = json.loads(path.read_text(encoding="utf-8"))
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+        self.assertAlmostEqual(result.authority_coverage, 1.0)
+        self.assertAlmostEqual(result.counter_authority_recall, 1.0)
+
+    def test_real_case_collector_supports_external_output_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            shutil.copytree(ROOT / "experiments" / "real_cases" / "downloads", Path(directory) / "downloads")
+            completed = subprocess.run(
+                [sys.executable, "scripts/collect_real_cases.py", "--out", directory],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
 
 
 if __name__ == "__main__":

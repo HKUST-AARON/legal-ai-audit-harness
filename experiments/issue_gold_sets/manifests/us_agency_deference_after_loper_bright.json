@@ -1,0 +1,52 @@
+{
+  "id": "us-agency-deference-after-loper-bright-manifest",
+  "jurisdiction": "united_states",
+  "issue": "Which authorities should be visible when evaluating U.S. federal agency interpretations of statutes after Loper Bright?",
+  "created_at": "2026-05-23T00:00:00Z",
+  "curation": {
+    "method": "manual issue-defined gold set from public Supreme Court and statutory sources",
+    "curator_notes": "This set is for audit-protocol validation only. It does not provide legal advice and is not a merits answer for any live matter."
+  },
+  "records": [
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369 (2024)",
+      "source_url": "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf",
+      "authority_level": "current_controlling_supreme_court_precedent",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "chevron-467-us-837",
+      "title": "Chevron U.S.A. Inc. v. Natural Resources Defense Council",
+      "citation": "467 U.S. 837 (1984)",
+      "source_url": "https://www.govinfo.gov/app/details/USREPORTS-467/USREPORTS-467-837",
+      "authority_level": "overruled_supreme_court_precedent_for_mandatory_deference",
+      "issue_role": "invalidated_treatment"
+    },
+    {
+      "id": "skidmore-323-us-134",
+      "title": "Skidmore v. Swift & Co.",
+      "citation": "323 U.S. 134 (1944)",
+      "source_url": "https://www.law.cornell.edu/supremecourt/text/323/134",
+      "authority_level": "persuasive_respect_standard",
+      "issue_role": "limiting_material"
+    },
+    {
+      "id": "apa-5-usc-706",
+      "title": "Administrative Procedure Act judicial review provision",
+      "citation": "5 U.S.C. 706",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section706",
+      "authority_level": "governing_statute",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "kisor-588-us-558",
+      "title": "Kisor v. Wilkie",
+      "citation": "588 U.S. 558 (2019)",
+      "source_url": "https://www.supremecourt.gov/opinions/18pdf/18-15_9p6b.pdf",
+      "authority_level": "related_limiting_precedent_on_agency_deference",
+      "issue_role": "limiting_material"
+    }
+  ]
+}

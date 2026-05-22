@@ -9,7 +9,6 @@ import subprocess
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
 from pathlib import Path
 from shutil import which
 from urllib.parse import urljoin
@@ -25,6 +24,7 @@ def main() -> int:
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--seed", type=int, default=SEED)
     parser.add_argument("--sample-size", type=int, default=20)
+    parser.add_argument("--refresh", action="store_true", help="download fresh source snapshots instead of using committed snapshots when present")
     args = parser.parse_args()
 
     out = args.out
@@ -48,7 +48,7 @@ def main() -> int:
     manifest_paths = []
     summaries = []
     for offset, (slug, collector) in enumerate(collectors):
-        candidates = collector(downloads)
+        candidates = collector(downloads, args.refresh)
         sample = sample_records(candidates, args.sample_size, args.seed + offset)
         manifest = build_manifest(slug, candidates, sample, args.seed + offset)
         scenario = build_scenario(slug, sample)
@@ -64,8 +64,8 @@ def main() -> int:
                 "jurisdiction": slug,
                 "candidate_count": len(candidates),
                 "sample_size": len(sample),
-                "manifest": str(manifest_path.relative_to(BASE)),
-                "scenario": str(scenario_path.relative_to(BASE)),
+                "manifest": display_path(manifest_path),
+                "scenario": display_path(scenario_path),
             }
         )
 
@@ -74,9 +74,9 @@ def main() -> int:
     return 0
 
 
-def collect_hong_kong(downloads: Path) -> list[dict]:
+def collect_hong_kong(downloads: Path, refresh: bool) -> list[dict]:
     url = "https://www.hklii.org/api/getcasefiles?caseDb=hkcfa&lang=EN"
-    raw = fetch(url, downloads / "hong_kong_hklii_hkcfa.json")
+    raw = fetch(url, downloads / "hong_kong_hklii_hkcfa.json", refresh)
     payload = json.loads(raw)
     records = []
     for item in payload.get("judgments", []):
@@ -98,15 +98,15 @@ def collect_hong_kong(downloads: Path) -> list[dict]:
     return dedupe(records)
 
 
-def collect_mainland_china(downloads: Path) -> list[dict]:
+def collect_mainland_china(downloads: Path, refresh: bool) -> list[dict]:
     base = "https://english.court.gov.cn/"
     records = []
     for page in range(1, 11):
         name = "typicalcases.html" if page == 1 else f"typicalcases_{page}.html"
         url = urljoin(base, name)
         raw_path = downloads / f"mainland_china_typicalcases_{page}.html"
-        raw = fetch(url, raw_path)
-        snapshot_with_scrapling(url, raw_path.with_suffix(".md"))
+        raw = fetch(url, raw_path, refresh)
+        snapshot_with_scrapling(url, raw_path.with_suffix(".md"), refresh)
         for date, href, title in re.findall(
             r"<h6>\s*([0-9]{4}-[0-9]{2}-[0-9]{2})\s*</h6>\s*<h4>\s*<a href=\"([^\"]+)\">(.*?)</a>",
             raw,
@@ -128,12 +128,12 @@ def collect_mainland_china(downloads: Path) -> list[dict]:
     return dedupe(records)
 
 
-def collect_united_states(downloads: Path) -> list[dict]:
+def collect_united_states(downloads: Path, refresh: bool) -> list[dict]:
     base = "https://www.supremecourt.gov"
     records = []
     for term in ("25", "24", "23", "22"):
         url = f"{base}/opinions/slipopinion/{term}"
-        raw = fetch(url, downloads / f"united_states_scotus_term_{term}.html")
+        raw = fetch(url, downloads / f"united_states_scotus_term_{term}.html", refresh)
         for row in re.findall(r"<tr>(.*?)</tr>", raw, flags=re.S):
             cells = re.findall(r"<td[^>]*>(.*?)</td>", row, flags=re.S)
             if len(cells) < 6 or "href" not in cells[3]:
@@ -158,11 +158,11 @@ def collect_united_states(downloads: Path) -> list[dict]:
     return dedupe(records)
 
 
-def collect_united_kingdom(downloads: Path) -> list[dict]:
+def collect_united_kingdom(downloads: Path, refresh: bool) -> list[dict]:
     records = []
     for page in range(1, 4):
         url = f"https://caselaw.nationalarchives.gov.uk/atom.xml?query=contract&page={page}"
-        raw = fetch(url, downloads / f"united_kingdom_tna_contract_page_{page}.xml")
+        raw = fetch(url, downloads / f"united_kingdom_tna_contract_page_{page}.xml", refresh)
         root = ET.fromstring(raw)
         ns = {"atom": "http://www.w3.org/2005/Atom", "tna": "https://caselaw.nationalarchives.gov.uk"}
         for entry in root.findall("atom:entry", ns):
@@ -184,9 +184,9 @@ def collect_united_kingdom(downloads: Path) -> list[dict]:
     return dedupe(records)
 
 
-def collect_germany(downloads: Path) -> list[dict]:
+def collect_germany(downloads: Path, refresh: bool) -> list[dict]:
     url = "https://de.openlegaldata.io/api/cases/?format=json&page_size=100"
-    raw = fetch(url, downloads / "germany_openlegaldata_cases.json")
+    raw = fetch(url, downloads / "germany_openlegaldata_cases.json", refresh)
     payload = json.loads(raw)
     records = []
     for item in payload.get("results", []):
@@ -207,9 +207,9 @@ def collect_germany(downloads: Path) -> list[dict]:
     return dedupe(records)
 
 
-def collect_canada(downloads: Path) -> list[dict]:
+def collect_canada(downloads: Path, refresh: bool) -> list[dict]:
     url = "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/json/rss.do"
-    raw = fetch(url, downloads / "canada_scc_json_feed.json")
+    raw = fetch(url, downloads / "canada_scc_json_feed.json", refresh)
     payload = json.loads(raw)
     records = []
     for item in payload.get("items", []):
@@ -229,7 +229,7 @@ def collect_canada(downloads: Path) -> list[dict]:
     if len(records) >= 20:
         return dedupe(records)
 
-    raw = fetch("https://decisions.scc-csc.ca/scc-csc/scc-csc/en/nav_date.do?iframe=true", downloads / "canada_scc_nav_date.html")
+    raw = fetch("https://decisions.scc-csc.ca/scc-csc/scc-csc/en/nav_date.do?iframe=true", downloads / "canada_scc_nav_date.html", refresh)
     for block in re.findall(r'<span class="title">(.*?)<div class="documents">', raw, flags=re.S):
         href = re.search(r'href="([^"]+)">([^<]+)</a>', block)
         citation = re.search(r'<span class="citation">([^<]+)</span>', block)
@@ -254,7 +254,7 @@ def collect_canada(downloads: Path) -> list[dict]:
 def build_manifest(slug: str, candidates: list[dict], sample: list[dict], seed: int) -> dict:
     return {
         "jurisdiction": slug,
-        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_at": "2026-05-23T00:00:00Z",
         "sampling": {
             "method": "random.sample over normalized public case metadata candidates",
             "seed": seed,
@@ -271,14 +271,14 @@ def build_scenario(slug: str, sample: list[dict]) -> dict:
     source_ids = [item["id"] for item in sample]
     return {
         "id": f"real-cases-{slug}",
-        "claimed_status": "normative_material_screening_output",
+        "claimed_status": "professional_support_output",
         "jurisdiction_profile": profile_for(slug),
         "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
         "scores": {
             "S": {"score": 2, "evidence": "Each sampled item has a public source URL, citation or docket field, and source collection label."},
             "Q": {"score": 2, "evidence": "The source endpoint, timestamp, sampling seed and candidate pool are recorded."},
             "H": {"score": 2 if high_authority else 1, "evidence": "Court or authority labels are preserved in the manifest and evidence packet."},
-            "K": {"score": 1, "evidence": "The scenario records sample ordering and source set membership, but does not claim issue-specific counter-material recall."},
+            "K": {"score": 0, "evidence": "This metadata validation does not define an issue-specific ranking task or counter-material gold set."},
             "T": {"score": 1, "evidence": "A reviewer can inspect and challenge the manifest and source links; party-facing workflow is outside this source-integrity test."},
             "L": {"score": 2, "evidence": "The harness writes a reproducible scenario, manifest and report for audit review."},
         },
@@ -318,12 +318,14 @@ def build_scenario(slug: str, sample: list[dict]) -> dict:
             "irreversible_action": False,
             "human_authorization": False,
         },
-        "expected_allowed_status": "normative_material_screening_output",
+        "expected_allowed_status": "professional_support_output",
         "expected_disposition": "none",
     }
 
 
-def fetch(url: str, path: Path) -> str:
+def fetch(url: str, path: Path, refresh: bool) -> str:
+    if path.exists() and not refresh:
+        return path.read_text(encoding="utf-8", errors="replace")
     request = urllib.request.Request(url, headers={"User-Agent": "legal-ai-audit-harness/0.1"})
     with urllib.request.urlopen(request, timeout=40) as response:
         raw = response.read()
@@ -331,7 +333,9 @@ def fetch(url: str, path: Path) -> str:
     return raw.decode("utf-8", errors="replace")
 
 
-def snapshot_with_scrapling(url: str, path: Path) -> None:
+def snapshot_with_scrapling(url: str, path: Path, refresh: bool) -> None:
+    if path.exists() and not refresh:
+        return
     scrapling = which("scrapling")
     if not scrapling:
         return
@@ -383,6 +387,13 @@ def dedupe(records: list[dict]) -> list[dict]:
 def clean(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value or "")
     return re.sub(r"\s+", " ", html.unescape(value)).strip()
+
+
+def display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(BASE))
+    except ValueError:
+        return str(path)
 
 
 def text(node) -> str:
@@ -446,7 +457,7 @@ def write_summary(path: Path, summaries: list[dict], seed: int, sample_size: int
         f"Seed: `{seed}`",
         f"Sample size per jurisdiction: `{sample_size}`",
         "",
-        "This experiment tests whether a provider-agnostic legal-output evidence packet can be constructed from public case metadata. It does not evaluate legal merits, doctrinal correctness, or any upstream retrieval/generation architecture.",
+        "This public metadata evidence-packet validation tests whether a provider-agnostic legal-output evidence packet can be constructed from committed public case metadata snapshots. It does not evaluate legal merits, doctrinal correctness, ranking quality, or any upstream retrieval/generation architecture. Metadata-only packets are capped at professional-support status because they do not define issue-specific counter-material gold sets.",
         "",
         "| Jurisdiction | Candidate records | Sampled records | Manifest | Scenario |",
         "| --- | ---: | ---: | --- | --- |",

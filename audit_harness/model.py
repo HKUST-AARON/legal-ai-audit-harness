@@ -6,6 +6,18 @@ from typing import Any
 
 
 DIMENSIONS = ("S", "Q", "H", "K", "T", "L")
+SOURCE_TAGS = {
+    "tool_verified",
+    "official_source",
+    "public_metadata",
+    "user_provided",
+    "user_provided_verified",
+    "settled",
+    "needs_verification",
+    "pinpoint_needs_verification",
+    "web_search_verify",
+}
+PROCEDURAL_SOURCE_TAGS = {"tool_verified", "official_source", "user_provided_verified", "settled"}
 
 
 class Status(str, Enum):
@@ -69,6 +81,7 @@ class AuditResult:
 
 
 def evaluate_scenario(scenario: dict[str, Any]) -> AuditResult:
+    _validate_scenario(scenario)
     scores = _parse_scores(scenario.get("scores", {}))
     total = sum(scores.values())
     missing_gates: list[str] = []
@@ -112,6 +125,19 @@ def evaluate_scenario(scenario: dict[str, Any]) -> AuditResult:
         expected_disposition=expected_disposition,
         expected_passed=expected_passed,
     )
+
+
+def _validate_scenario(scenario: dict[str, Any]) -> None:
+    if not isinstance(scenario.get("id"), str) or not scenario["id"]:
+        raise ValueError("Scenario must include a non-empty string id")
+    if scenario.get("claimed_status") not in STATUS_RANK:
+        raise ValueError(f"Unknown claimed_status: {scenario.get('claimed_status')}")
+    scores = scenario.get("scores")
+    if not isinstance(scores, dict) or any(dimension not in scores for dimension in DIMENSIONS):
+        raise ValueError(f"Scenario scores must include {', '.join(DIMENSIONS)}")
+    unknown_flags = set(scenario.get("failure_flags", [])) - set(FLAG_DISPOSITIONS)
+    if unknown_flags:
+        raise ValueError(f"Unknown failure_flags: {', '.join(sorted(unknown_flags))}")
 
 
 def _parse_scores(raw_scores: dict[str, Any]) -> dict[str, int]:
@@ -203,7 +229,7 @@ def _source_tag_coverage(evidence_packet: dict[str, Any]) -> float | None:
     links = evidence_packet.get("output_links", [])
     if not links:
         return None
-    tagged = [link for link in links if link.get("source_tag")]
+    tagged = [link for link in links if link.get("source_tag") in SOURCE_TAGS]
     return len(tagged) / len(links)
 
 
@@ -224,6 +250,8 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
             flags.append("summary_distortion")
         if claimed_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and metrics["source_tag_coverage"] is not None and metrics["source_tag_coverage"] < 1:
             flags.append("source_attribution_gap")
+        if claimed_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and _has_nonprocedural_source_tags(scenario["evidence_packet"]):
+            flags.append("source_attribution_gap")
     flags.extend(_review_gate_flags(scenario, claimed_rank))
     return flags
 
@@ -243,6 +271,11 @@ def _review_gate_flags(scenario: dict[str, Any], claimed_rank: int) -> list[str]
     if review_required and review_incomplete and (protected_reliance or claimed_rank >= STATUS_RANK[Status.DECISION_SUPPORT_REASON.value]):
         flags.append("review_gate_failure")
     return flags
+
+
+def _has_nonprocedural_source_tags(evidence_packet: dict[str, Any]) -> bool:
+    links = evidence_packet.get("output_links", [])
+    return any(link.get("source_tag") not in PROCEDURAL_SOURCE_TAGS for link in links)
 
 
 def _disposition(flags: list[str]) -> str:

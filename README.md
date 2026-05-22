@@ -127,7 +127,15 @@ python scripts/collect_real_cases.py
 python -m audit_harness.cli experiment experiments/real_cases/scenarios --out experiments/real_cases/results/real_case_experiment.md --json-out experiments/real_cases/results/real_case_experiment.json
 ```
 
-The script downloads public metadata snapshots, samples 20 records per jurisdiction with a fixed seed, writes source manifests, and runs the harness over the generated output evidence packets. It tests whether evidence packets can be reconstructed and audited; it does not evaluate legal merits or any upstream system architecture.
+By default the script uses the committed public metadata snapshots for deterministic reruns. Pass `--refresh` to download fresh snapshots. The experiment samples 20 records per jurisdiction with a fixed seed, writes source manifests, and runs the harness over the generated output evidence packets. It tests whether evidence packets can be reconstructed and audited; it does not evaluate legal merits, ranking quality or any upstream system architecture. For that reason these metadata-only packets are capped at `professional_support_output`, not `normative_material_screening_output`.
+
+The repository also includes one issue-defined gold-set experiment:
+
+```bash
+python -m audit_harness.cli experiment experiments/issue_gold_sets/scenarios --out experiments/issue_gold_sets/results/issue_gold_set_experiment.md --json-out experiments/issue_gold_sets/results/issue_gold_set_experiment.json
+```
+
+The current gold set covers U.S. agency statutory interpretation after `Loper Bright`, with manually curated high-authority, limiting and invalidated-authority treatment for `Loper Bright`, `Chevron`, `Skidmore`, APA `5 U.S.C. 706` and `Kisor`.
 
 ## Repository Layout
 
