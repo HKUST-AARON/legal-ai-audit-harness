@@ -1,0 +1,44 @@
+{
+  "id": "decision-support-ready",
+  "claimed_status": "decision_support_reason",
+  "deployment_context": "Authority recommendation adopted into an institutional decision after reasoned human review.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source links, corpus manifest, inclusion rules, update date and document versions are recorded."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Query, filters, issue labels, prompt, retrieval index, model and interface version are reconstructable."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Jurisdiction, court level, legal force, validity, later treatment and relation to governing norms are recorded."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Ranking factors, top-k set, omitted-material checks and counter-authority recall are reviewable."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "Affected parties can inspect, challenge, supplement and obtain a recorded response."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The adoption log records adopted and rejected items, reasons, timestamp and responsible reviewer."
+    }
+  },
+  "counter_authority": {
+    "known": [
+      "limiting-authority-a",
+      "contrary-authority-b"
+    ],
+    "retrieved": [
+      "limiting-authority-a",
+      "contrary-authority-b"
+    ]
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "decision_support_reason",
+  "expected_disposition": "none"
+}

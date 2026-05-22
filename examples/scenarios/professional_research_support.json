@@ -1,0 +1,40 @@
+{
+  "id": "professional-research-support",
+  "claimed_status": "professional_support_output",
+  "deployment_context": "Legal research assistant used inside a law firm to prepare a client memorandum.",
+  "scores": {
+    "S": {
+      "score": 1,
+      "evidence": "Individual source links are available, but corpus scope is incomplete."
+    },
+    "Q": {
+      "score": 1,
+      "evidence": "The user query and date are retained, but model and index versions are incomplete."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The output marks broad legal status categories."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "Ranking criteria and counter-material treatment are not reviewable."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A supervising professional can review and challenge the output."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The output and user action are logged."
+    }
+  },
+  "counter_authority": {
+    "known": [
+      "contrary-authority-a"
+    ],
+    "retrieved": []
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "professional_support_output",
+  "expected_disposition": "none"
+}

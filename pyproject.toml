@@ -1,0 +1,16 @@
+[project]
+name = "legal-ai-audit-harness"
+version = "0.1.0"
+description = "A lightweight audit harness for scoring legal AI case-recommendation outputs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = []
+dependencies = []
+
+[project.scripts]
+legal-ai-audit = "audit_harness.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

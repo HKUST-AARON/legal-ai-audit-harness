@@ -1,0 +1,42 @@
+{
+  "id": "unverifiable-rag-output",
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Generated legal answer that summarizes alleged authorities without reconstructable retrieval evidence.",
+  "scores": {
+    "S": {
+      "score": 0,
+      "evidence": "Sources and corpus cannot be reconstructed."
+    },
+    "Q": {
+      "score": 0,
+      "evidence": "The query, prompt, filters and model version are unavailable."
+    },
+    "H": {
+      "score": 0,
+      "evidence": "The output does not distinguish legal authority status."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "Ranking and counter-material handling are opaque."
+    },
+    "T": {
+      "score": 0,
+      "evidence": "Affected persons cannot inspect or challenge the material set."
+    },
+    "L": {
+      "score": 0,
+      "evidence": "No adoption path or responsible actor is recorded."
+    }
+  },
+  "counter_authority": {
+    "known": [
+      "contrary-authority-a"
+    ],
+    "retrieved": []
+  },
+  "failure_flags": [
+    "summary_distortion"
+  ],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "suspended-authority-omission",
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Case recommendation output that otherwise has logs but repeatedly omits a known high-authority material.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Corpus and sources are recorded."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Query and version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority hierarchy is labelled."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "Ranking is partly reviewable, but a high-authority omission is observed."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "Reviewers can inspect and challenge the output."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "Adoption actions are logged."
+    }
+  },
+  "counter_authority": {
+    "known": [
+      "high-authority-material-a",
+      "limiting-authority-b"
+    ],
+    "retrieved": [
+      "limiting-authority-b"
+    ]
+  },
+  "failure_flags": [
+    "authority_omission"
+  ],
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

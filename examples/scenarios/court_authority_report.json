@@ -1,0 +1,43 @@
+{
+  "id": "court-authority-report",
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Court-facing authority report for a disputed legal issue.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "The output links each recommended authority to its source and records corpus boundaries, source database, jurisdiction, institution level and update date."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, filters, issue labels, prompt, retrieval index and interface version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The output separates binding, precedential, persuasive, superseded, overruled and wrong-jurisdiction materials."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The output explains broad ranking factors and retrieves some limiting materials, but the omitted-material check is incomplete."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "Parties or reviewers can inspect the result list, submit additional authorities and challenge summary characterizations."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The system logs output ID, user, query, recommended materials and adoption action, but reasons are not structured."
+    }
+  },
+  "counter_authority": {
+    "known": [
+      "limiting-authority-a",
+      "contrary-authority-b"
+    ],
+    "retrieved": [
+      "limiting-authority-a"
+    ]
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "normative_material_screening_output",
+  "expected_disposition": "none"
+}
