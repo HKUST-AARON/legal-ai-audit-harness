@@ -70,6 +70,11 @@
       "canada-2026-scc-14"
     ]
   },
+  "upstream_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
   "evidence_packet": {
     "source_collection": "experiments/public_system_outputs/manifests/canada.json",
     "output_units": [

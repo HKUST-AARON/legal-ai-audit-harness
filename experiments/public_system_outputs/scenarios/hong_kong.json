@@ -70,6 +70,11 @@
       "hong-kong-2026-hkcfa-9"
     ]
   },
+  "upstream_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
   "evidence_packet": {
     "source_collection": "experiments/public_system_outputs/manifests/hong_kong.json",
     "output_units": [

@@ -70,6 +70,11 @@
       "mainland-china-guiding-case-no-232"
     ]
   },
+  "upstream_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
   "evidence_packet": {
     "source_collection": "experiments/public_system_outputs/manifests/mainland_china.json",
     "output_units": [

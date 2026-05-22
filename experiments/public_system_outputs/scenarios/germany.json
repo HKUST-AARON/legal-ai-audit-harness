@@ -48,6 +48,11 @@
       "germany-ecli-eu-c-2026-400"
     ]
   },
+  "upstream_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
   "evidence_packet": {
     "source_collection": "experiments/public_system_outputs/manifests/germany.json",
     "output_units": [

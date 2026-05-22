@@ -23,6 +23,20 @@ from collect_real_cases import (
 
 DEFAULT_OUT = BASE / "experiments" / "public_system_outputs"
 SOURCE_DOWNLOADS = BASE / "experiments" / "real_cases" / "downloads"
+REQUIRED_SNAPSHOTS = [
+    "canada_scc_json_feed.json",
+    "germany_openlegaldata_cases.json",
+    "hong_kong_hklii_hkcfa.json",
+    "united_kingdom_tna_contract_page_1.xml",
+    "united_kingdom_tna_contract_page_2.xml",
+    "united_kingdom_tna_contract_page_3.xml",
+    "united_states_scotus_term_22.html",
+    "united_states_scotus_term_23.html",
+    "united_states_scotus_term_24.html",
+    "united_states_scotus_term_25.html",
+    *[f"mainland_china_typicalcases_{index}.html" for index in range(1, 11)],
+    *[f"mainland_china_typicalcases_{index}.md" for index in range(1, 11)],
+]
 
 
 COLLECTORS = [
@@ -72,6 +86,7 @@ def main() -> int:
 
     if not args.refresh:
         seed_committed_snapshots(downloads)
+        require_committed_snapshots(downloads)
 
     summaries = []
     for slug, collector in COLLECTORS:
@@ -108,6 +123,16 @@ def seed_committed_snapshots(downloads: Path) -> None:
         target = downloads / source.name
         if not target.exists():
             shutil.copy2(source, target)
+
+
+def require_committed_snapshots(downloads: Path) -> None:
+    missing = [name for name in REQUIRED_SNAPSHOTS if not (downloads / name).exists()]
+    if missing:
+        raise RuntimeError(
+            "Missing committed public-system snapshots: "
+            + ", ".join(missing)
+            + ". Run with --refresh to download fresh snapshots."
+        )
 
 
 def build_manifest(slug: str, records: list[dict], output: list[dict], top_k: int) -> dict:
@@ -148,6 +173,11 @@ def build_scenario(slug: str, output: list[dict]) -> dict:
             "retrieved_counter_or_limiting": [],
             "invalid_or_superseded": [],
             "retrieved": source_ids,
+        },
+        "upstream_metrics": {
+            "precision": None,
+            "recall": None,
+            "f1": None,
         },
         "evidence_packet": {
             "source_collection": f"experiments/public_system_outputs/manifests/{slug}.json",

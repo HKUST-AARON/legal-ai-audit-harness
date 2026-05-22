@@ -48,6 +48,11 @@
       "united-kingdom-2026-ewhc-1243-ch"
     ]
   },
+  "upstream_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
   "evidence_packet": {
     "source_collection": "experiments/public_system_outputs/manifests/united_kingdom.json",
     "output_units": [
