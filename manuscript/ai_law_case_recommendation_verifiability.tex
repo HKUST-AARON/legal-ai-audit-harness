@@ -19,8 +19,8 @@
 \setlist[enumerate]{itemsep=0.25em,topsep=0.35em,leftmargin=2.0em}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
-\title{From Legal Retrieval to Normative Material Screening:\\
-A Provider-Agnostic Audit Framework for Legal AI Outputs}
+\title{Procedural Verifiability for Legal AI Outputs:\\
+An Audit Framework for Case Recommendation}
 
 \author{}
 
@@ -30,7 +30,7 @@ A Provider-Agnostic Audit Framework for Legal AI Outputs}
 \maketitle
 
 \begin{abstract}
-Legal AI systems increasingly shape which authorities become visible, ranked and usable in legal reasoning. Existing evaluations emphasize retrieval accuracy, model sophistication, explainability or human oversight, but those criteria do not determine the procedural status of an AI-generated legal output. This article develops and implements a provider-agnostic, verifiability-based audit framework for legal AI outputs. It defines ``normative material screening outputs'' as outputs that filter, rank or summarize legal authorities without themselves becoming legal sources or decision reasons. The framework classifies such outputs along two dimensions, output effect and system role, and converts source, corpus, ordering, counter-material, contestability, source-attribution and adoption requirements into observable audit indicators. It then operationalizes the framework in an executable harness using output evidence packets, review gates, ten stress-test scenarios, a six-jurisdiction public metadata validation over 120 case records, three issue-defined gold sets and a threshold-sensitivity analysis. The implementation validates the internal consistency and operational usability of the protocol; it does not claim to evaluate the real-world performance of deployed legal AI systems. The central claim is that a legal AI output may acquire procedural status only when the legal-material chain behind it can be reconstructed, contested and attributed to responsible human or institutional actors.
+Legal AI systems increasingly shape which authorities become visible, ranked and usable in legal reasoning. Existing evaluations emphasize retrieval accuracy, model sophistication, explainability or human oversight, but those criteria do not determine the procedural status of an AI-generated legal output. This article proposes and implements a provider-agnostic audit framework for procedural verifiability. It defines ``normative material screening outputs'' as outputs that filter, rank or summarize legal authorities without themselves becoming legal sources or decision reasons. The framework classifies such outputs along two dimensions, output effect and system role, and converts source, corpus, ordering, counter-material, contestability, source-attribution and adoption requirements into observable audit indicators. It then operationalizes the framework in an executable harness using output evidence packets, review gates, ten stress-test scenarios, a six-jurisdiction public metadata validation over 120 case records, a public-system output pilot over 60 visible records, three issue-defined gold sets and threshold-sensitivity analysis. The public-output pilot shows that real upstream legal output lists can be reconstructed and source-tagged, but normally remain professional support unless issue-specific counter-material and contestability evidence is available. The central claim is that a legal AI output may acquire procedural status only when the legal-material chain behind it can be reconstructed, contested and attributed to responsible human or institutional actors.
 \end{abstract}
 
 \noindent\textbf{Keywords:} legal information retrieval; case recommendation; legal AI auditing; contestability; output evidence packets; normative material screening
@@ -48,12 +48,12 @@ The article addresses three research questions:
 \begin{enumerate}[label=RQ\arabic*:]
 \item How should AI-generated legal outputs be classified according to their procedural effects?
 \item What verifiability and contestability requirements are needed for each output class?
-\item How can these requirements be converted into an executable audit protocol and evaluated across case recommendation, generated-output, public metadata and issue-defined gold-set scenarios?
+\item How can these requirements be operationalized and evaluated across case recommendation, generated-output, public metadata, public-output and issue-defined scenarios?
 \end{enumerate}
 
 The resulting framework has two dimensions. The output-effect dimension classifies what the output does in the legal process. The system-role dimension classifies how the system enters that process. The two dimensions are then linked to a set of verifiability, contestability and accountability requirements. The framework is deliberately modest. It does not attempt to solve every question of AI liability, replace doctrinal rules of evidence, or define a universal legality score. It offers a decision protocol for a narrower but practically important question: under what conditions may a legal AI output move from internal reference to procedural material, and when must it be downgraded?
 
-This article makes three contributions. First, it introduces the concept of a normative material screening output to capture the intermediate procedural role of AI-generated authority lists, ranked case sets and legal-material summaries. Second, it provides a two-dimensional procedural-status model that separates output effect from system role and ties both to verifiability, contestability and audit responsibility. Third, it converts the model into an executable audit protocol with observable indicators, status thresholds, downgrade rules, output evidence packets, sensitivity analysis and reproducible validation over synthetic stress scenarios, 120 public metadata records and three manually curated issue gold sets.
+This article makes three contributions. First, it introduces the concept of a normative material screening output to capture the intermediate procedural role of AI-generated authority lists, ranked case sets and legal-material summaries. Second, it provides a two-dimensional procedural-status model that separates output effect from system role and ties both to verifiability, contestability and audit responsibility. Third, it converts the model into an executable audit protocol with observable indicators, status thresholds, downgrade rules, output evidence packets, sensitivity analysis, synthetic stress scenarios, public metadata records, public-system output snapshots and manually curated issue gold sets.
 
 AI-based case recommendation is the core case because it sits at the boundary between legal information retrieval and legal reasoning. Case recommendation systems are central to case-based reasoning and legal information retrieval, both long-standing areas of AI and Law research \citep{ashley1992,rissland1995,vanopijnen2017}. They are also procedurally sensitive. In common-law precedent search, civil-law court-decision databases, administrative adjudication systems, arbitral award repositories and ODR platforms, ranking and omission can affect the legal materials available for argument. The worked application below is therefore framed as a jurisdiction-neutral audit scenario: each legal system supplies its own authority hierarchy, but the verifiability problem is shared.
 
@@ -407,7 +407,7 @@ Withdrawal & Source, corpus, ranking or adoption chain cannot be reconstructed, 
 \end{tabularx}
 \end{table}
 
-\section{Worked Case-Recommendation Audit}
+\section{Illustrative Worked Case-Recommendation Audit}
 
 The framework can be applied without tying the article to any single jurisdiction. Consider a deployed case recommendation system that receives the following issue query: whether compensation may be reduced because the claimant's pre-existing vulnerability contributed to the extent of harm. In a common-law implementation, the relevant corpus may consist of binding precedents, persuasive authorities, subsequent treatment records and secondary references. In a civil-law or administrative setting, the corpus may instead consist of statutes, high-court decisions, selected lower-court decisions, administrative decisions and official annotations. The audit problem is the same: the output must make the legal-material chain visible enough for review.
 
@@ -437,22 +437,11 @@ The total score is 10, and all dimensions score at least 1. Under Table 3, this 
 
 The same example also shows the downgrade logic. If the system fails to retrieve a known high-authority material in $G_q$, $S$ or $K$ should be scored 0 for this use case because the authority chain is incomplete. The output then cannot qualify as normative material screening. If the system retrieves the material but fails to label its authority level or subsequent treatment, $H$ should be scored 0 or 1 depending on whether the status can be reconstructed elsewhere, and the output should be downgraded until authority hierarchy is restored. If the system generates a summary that reverses the legal effect of a controlling or high-authority material, the error is not a ranking imperfection but a summary distortion that triggers suspension from external use for that issue class.
 
-Under the proposed framework, an AI case recommendation system used in this setting should therefore satisfy at least six requirements:
+The example condenses the minimum design rule. A case recommendation system that claims procedural use should disclose the source collection, record issue labels and run state, distinguish authority levels and subsequent treatment, display contrary or limiting materials, log human adoption or rejection, and permit contestation of omissions, ranking choices and summary characterizations. Jurisdiction-specific authority rules are parameters of the audit, not the subject of the framework.
 
-\begin{enumerate}
-\item disclose the source collection, including court or institution level, jurisdiction, document type and update date;
-\item record the issue labels, filters, source-collection version and upstream run identifier;
-\item distinguish binding, precedential, persuasive, superseded and lower-level materials;
-\item display contrary and limiting cases, not only confirming cases;
-\item record whether and how the responsible human adopted, distinguished or rejected recommended materials;
-\item permit parties or reviewers to contest omissions, ranking choices and summary characterizations when the output shapes reasoning.
-\end{enumerate}
+\section{Implementation and Evaluation}
 
-The general point is that AI-based legal retrieval systems should be evaluated by the procedural effect of their output. When they structure authority visibility, they require an evaluation framework that goes beyond search accuracy. Jurisdiction-specific authority rules are parameters of the audit, not the subject of the framework.
-
-\section{Executable Harness and Scenario-Based Evaluation}
-
-To test whether the framework is operational rather than merely classificatory, the rules above were implemented in a lightweight command-line audit harness. The implementation uses local JSON scenario files as the unit of evidence and produces both Markdown and JSON run artefacts. For double-anonymous review, the repository should be supplied through an anonymized companion link; the code consists of a scoring module, a command-line runner, jurisdiction profiles, provider-agnostic evidence-packet fields, ten stress-test scenario files, a six-jurisdiction public metadata validation, three issue-defined gold sets, threshold-sensitivity reports and continuous-integration tests.
+To test whether the framework is operational rather than merely classificatory, the rules above were implemented in a lightweight command-line audit harness. The implementation uses local JSON scenario files as the unit of evidence and produces both Markdown and JSON run artefacts. For double-anonymous review, the repository should be supplied through an anonymized companion link; the code consists of a scoring module, a command-line runner, jurisdiction profiles, provider-agnostic evidence-packet fields, ten stress-test scenario files, a six-jurisdiction public metadata validation, a public legal-system output pilot, three issue-defined gold sets, threshold-sensitivity reports and continuous-integration tests.
 
 The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, scores $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner computes the allowed status, counter-authority recall, authority coverage, invalid-authority rate, evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. A separate sensitivity command varies the normative and decision thresholds and reports status-distribution changes. The design follows a local-first reproducibility pattern: inputs are explicit scenario files, outputs are run artefacts, and tests rerun the whole suite without external model calls.
 
@@ -477,7 +466,7 @@ Authorized ODR review & ODR & Decision-support reason & 12 & 0.91 & Permitted on
 
 Across ten stress-test scenarios, expected outcomes passed in all ten. The mean audit score was 8.30 and mean upstream recall was 0.84. Three scenarios had upstream recall above 0.80 but were procedurally blocked or downgraded. This is the intended behavior of the framework: upstream performance and procedural qualification are related but not interchangeable. A high-recall system may still be unfit for external legal use when it omits a high-authority material, suppresses a relevant limiting material, recommends invalid authority, lacks output-source evidence or prevents affected persons from contesting the output.
 
-The harness was also run on a public metadata evidence-packet validation. Committed public case metadata snapshots were used from six jurisdictions: Hong Kong Court of Final Appeal records, Mainland Chinese typical or guiding case pages, United States Supreme Court slip-opinion pages, the United Kingdom Find Case Law Atom feed, the German OpenLegalData case API and the Supreme Court of Canada JSON feed. The experiment used a fixed seed and sampled 20 records per jurisdiction from candidate pools ranging from 99 to 199 records. For each sampled record, the harness generated an output evidence packet with source identifier, source collection, citation or docket, date, court label and URL. This validation tests reconstructability and cross-jurisdictional source mapping; it does not test doctrinal correctness, issue-specific ranking or counter-material recall.
+The harness was also run on a public metadata evidence-packet validation. Committed public case metadata snapshots were used from six jurisdictions, including apex-court feeds, national case-law feeds and public legal-data APIs. The experiment used a fixed seed and sampled 20 records per jurisdiction from candidate pools ranging from 99 to 199 records. For each sampled record, the harness generated an output evidence packet with source identifier, source collection, citation or docket, date, court label and URL. This validation tests reconstructability and cross-jurisdictional source mapping; it does not test doctrinal correctness, issue-specific ranking or counter-material recall.
 
 \begin{table}[htbp]
 \centering
@@ -488,17 +477,42 @@ The harness was also run on a public metadata evidence-packet validation. Commit
 \toprule
 Jurisdiction & Candidate source & Pool N & Sample N & Allowed status \\
 \midrule
-Hong Kong & Court of Final Appeal metadata & 100 & 20 & Professional support \\
-Mainland China & Typical and guiding case pages & 99 & 20 & Professional support \\
 United States & Supreme Court slip opinions & 199 & 20 & Professional support \\
 United Kingdom & Find Case Law Atom feed & 150 & 20 & Professional support \\
 Germany & OpenLegalData case API & 100 & 20 & Professional support \\
 Canada & Supreme Court JSON feed & 100 & 20 & Professional support \\
+Hong Kong & Court of Final Appeal metadata & 100 & 20 & Professional support \\
+Mainland China & Typical and guiding case pages & 99 & 20 & Professional support \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 All six metadata scenarios passed their expected outcomes. The mean audit score was 8.67 and source-tag coverage was complete in all six scenarios. They were classified as professional support outputs, not normative material screening outputs, because the packets intentionally lack issue-specific ranking and counter-material gold sets. The generated review gate is marked as source-integrity-only and not for merits reliance. That result is important: complete public metadata and evidence links can establish source reconstructability, but they do not by themselves authorize procedural screening status.
+
+\subsection{Public legal-system output pilot}
+
+The harness was then applied to ordered outputs from public legal retrieval or listing systems. This pilot differs from the metadata validation: the unit is not a random source-pool sample but the top ten records visible in a public output stream. The purpose is narrow. It tests whether real upstream legal outputs can be frozen, source-tagged, reconstructed and procedurally classified by the audit layer. It does not evaluate RAG behavior, LLM behavior, legal merits, doctrinal correctness, issue-specific ranking quality or the internal design of the public systems.
+
+\begin{table}[htbp]
+\centering
+\caption{Public legal-system output pilot}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{2.5cm}p{4.0cm}p{1.3cm}Y}
+\toprule
+Output stream & Visible output records & Score & Allowed status \\
+\midrule
+United States & Supreme Court slip-opinion stream, top 10 & 9 & Professional support \\
+United Kingdom & Find Case Law Atom stream, top 10 & 8 & Professional support \\
+Germany & OpenLegalData case API stream, top 10 & 8 & Professional support \\
+Canada & Supreme Court JSON stream, top 10 & 9 & Professional support \\
+Hong Kong & Court of Final Appeal API stream, top 10 & 9 & Professional support \\
+Mainland China & Supreme People's Court typical-cases stream, top 10 & 9 & Professional support \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All six public-output scenarios passed their expected outcomes. The mean audit score was 8.67; evidence fidelity and source-tag coverage were 1.00 in every scenario. The results support the framework's central distinction. A real public system output may be reconstructable, source-tagged and professionally useful, yet still fail to qualify as normative material screening because it does not define an issue-specific ranking task, counter-material set or party-facing contestation pathway. Public output visibility is therefore a necessary audit input, not a substitute for procedural qualification.
 
 To test normative material screening with real issue-defined authority sets, the harness includes three manually curated gold sets. They were selected to avoid making any single jurisdiction the article's center of gravity: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access-right interpretation. Each gold set defines high-authority materials, limiting or counter-materials, invalidated treatments, source tags and output-to-source links at the level of individual output units. All three passed their expected outcomes with audit scores of 11, authority coverage of 1.00, counter-authority recall of 1.00, evidence fidelity of 1.00 and source-tag coverage of 1.00. They qualified as normative material screening, not as decision-support reasons, because no authorized decision-maker adopted them as reasoned outcomes.
 
@@ -522,7 +536,7 @@ EU GDPR Article 15 access rights & Civil law/EU & H=3; C=2; invalid=2 treatments
 
 The framework has three implications for legal AI evaluation. First, evaluation should not end at model performance. A legal AI system may meet technical retrieval benchmarks while failing procedural qualification because the output cannot be reconstructed, source-tagged or contested. Second, human oversight is not a magic condition. Oversight must leave review status, reasons, rejection records and adoption trails. A human signature without verifiable review should not upgrade an output's status. Third, accountability should follow control. Developers, deployers, professional users and institutional adopters control different risks and should carry corresponding explanation duties.
 
-The framework also has limitations. It is a formal audit protocol with executable scenario-based validation, not a field deployment study or a new retrieval benchmark. Its purpose is to define the audit artefacts and status rules that a deployed or experimental system should satisfy before its outputs receive procedural status. The stress-test suite is deliberately small and designed to validate the decision protocol. The six-jurisdiction metadata validation tests source-packet reconstructability rather than legal merits. The three issue-defined gold sets demonstrate protocol behavior across different authority structures, but they are still curated validation cases rather than a broad empirical benchmark. The framework also does not prescribe a single global rule for all legal systems. The legal force of cases differs across jurisdictions, and each jurisdiction must map authority hierarchy, disclosure duties and contestation rights onto its own procedure. Finally, the framework focuses on output qualification rather than all dimensions of AI governance. Privacy, cybersecurity, procurement, labor effects and competition questions remain important but separate.
+The framework also has limitations. It is a formal audit protocol with executable scenario-based validation, not a field deployment study or a new retrieval benchmark. Its purpose is to define the audit artefacts and status rules that a deployed or experimental system should satisfy before its outputs receive procedural status. The stress-test suite is deliberately small and designed to validate the decision protocol. The six-jurisdiction metadata validation and public-system output pilot test source reconstructability and status allocation rather than legal merits. The three issue-defined gold sets demonstrate protocol behavior across different authority structures, but they are still curated validation cases rather than a broad empirical benchmark. The framework also does not prescribe a single global rule for all legal systems. The legal force of cases differs across jurisdictions, and each jurisdiction must map authority hierarchy, disclosure duties and contestation rights onto its own procedure. Finally, the framework focuses on output qualification rather than all dimensions of AI governance. Privacy, cybersecurity, procurement, labor effects and competition questions remain important but separate.
 
 These limitations define the next research step. The protocol can be applied to deployed case recommendation systems and larger legal-output benchmarks. Such an extension would score corpus verifiability, counter-material presentation, ranking traceability, adoption logging and contestation support, and then compare those scores with retrieval metrics and user behavior. That empirical extension would test whether legal AI systems are not only accurate, but legally usable.
 
@@ -536,7 +550,7 @@ The contribution is not another general claim that AI cannot be a judge or a leg
 
 \section*{Statements for Review}
 
-This anonymized manuscript does not report human-subject research. During double-anonymous review, the scenario files and executable harness should be supplied through an anonymized companion repository. The companion artifact should include the scoring module, command-line runner, scenario schema, ten stress scenarios, six public metadata packets, three issue-defined gold sets, threshold-sensitivity reports, expected JSON/Markdown outputs, CI logs and replication commands. Identity, competing-interest, funding and AI-assistance declarations should be supplied through the journal workflow.
+This anonymized manuscript does not report human-subject research. During double-anonymous review, the scenario files and executable harness should be supplied through an anonymized companion repository. The companion artifact should include the scoring module, command-line runner, scenario schema, ten stress scenarios, six public metadata packets, six public-system output scenarios, three issue-defined gold sets, threshold-sensitivity reports, expected JSON/Markdown outputs, CI logs and replication commands. Identity, competing-interest, funding and AI-assistance declarations should be supplied through the journal workflow.
 
 \begin{thebibliography}{99}
 

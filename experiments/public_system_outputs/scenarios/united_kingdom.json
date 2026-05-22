@@ -1,0 +1,250 @@
+{
+  "id": "public-system-output-united_kingdom",
+  "claimed_status": "professional_support_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Provider-agnostic audit of the top ten records exposed by a public legal retrieval or listing system output.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each visible output item has a public source URL, source-system label, citation or docket field, and source identifier."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The output stream, committed snapshot and top-k ordering are recorded in the manifest."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "Court, institution or authority-level labels are preserved for each visible item."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "The public output exposes ordering but does not define an issue-specific ranking task or counter-material gold set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect the public output items and source links; party-facing contestation is outside this pilot."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible public-output manifest, scenario and result artifact."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [],
+    "retrieved_high_authority": [],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "united-kingdom-2026-ewca-civ-654",
+      "united-kingdom-2026-ewhc-1236-comm",
+      "united-kingdom-2026-ewca-civ-641",
+      "united-kingdom-2026-eat-74",
+      "united-kingdom-2026-ewca-civ-658",
+      "united-kingdom-2026-ewhc-1216-ch",
+      "united-kingdom-2026-ukftt-763-grc",
+      "united-kingdom-2026-ukftt-775-tc",
+      "united-kingdom-2026-ewhc-1254-ch",
+      "united-kingdom-2026-ewhc-1243-ch"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_system_outputs/manifests/united_kingdom.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public system output rank 1 makes this legal material visible: The Winros Partnership v Global Energy Horizons Corporation",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-654"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 654 | d-1a51879a-3458-4a54-ae17-960dfae23c0f | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/654"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public system output rank 2 makes this legal material visible: Verum Plus AG (in liquidation) & Ors v Petroineos Trading Limited",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1236-comm"
+        ],
+        "locators": [
+          "[2026] EWHC 1236 (Comm) | d-f5bb8c1e-90c3-4188-b8d8-c31539cedca2 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1236"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public system output rank 3 makes this legal material visible: Tonzip Maritime (Singapore) PTE Ltd v 2 Rivers PTE Ltd",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-641"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 641 | d-51381bb4-1ae4-445f-86b8-f3bc1b27b93c | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/641"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public system output rank 4 makes this legal material visible: DHL Services Limited v Pawel Ignatowicz",
+        "source_ids": [
+          "united-kingdom-2026-eat-74"
+        ],
+        "locators": [
+          "[2026] EAT 74 | d-e1929028-0d11-40e4-a9b5-d97bce09279c | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/eat/2026/74"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public system output rank 5 makes this legal material visible: JSC Commercial Bank Privatbank v Igor Valeryevich Kolomosiky & Anor",
+        "source_ids": [
+          "united-kingdom-2026-ewca-civ-658"
+        ],
+        "locators": [
+          "[2026] EWCA Civ 658 | d-573cc2f9-6cb1-4879-8664-93a9a38c5154 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/658"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public system output rank 6 makes this legal material visible: Aviator LLC & Ors v Stribe Oü & Ors",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1216-ch"
+        ],
+        "locators": [
+          "[2026] EWHC 1216 (Ch) | d-fd91f4b7-203c-43f5-841f-1f2251e68ea6 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1216"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public system output rank 7 makes this legal material visible: The Cabinet Office v The Information Commissioner & Anor",
+        "source_ids": [
+          "united-kingdom-2026-ukftt-763-grc"
+        ],
+        "locators": [
+          "[2026] UKFTT 763 (GRC) | d-e09ae739-f6d8-484a-a428-2fedc84e3d75 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/763"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public system output rank 8 makes this legal material visible: Athena Luxe Limited v The Commissioners for HMRC",
+        "source_ids": [
+          "united-kingdom-2026-ukftt-775-tc"
+        ],
+        "locators": [
+          "[2026] UKFTT 775 (TC) | d-ff19654e-eb65-48a5-93b1-3bd59471fb64 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/775"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public system output rank 9 makes this legal material visible: James Isilay v AVP Capital A FCPI & Ors",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1254-ch"
+        ],
+        "locators": [
+          "[2026] EWHC 1254 (Ch) | d-24a26f0f-aaf3-47c9-9b65-eb48f833f695 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1254"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public system output rank 10 makes this legal material visible: Fay of London Limited v Axis Speciality Europe SE",
+        "source_ids": [
+          "united-kingdom-2026-ewhc-1243-ch"
+        ],
+        "locators": [
+          "[2026] EWHC 1243 (Ch) | d-61b9ad17-b194-4c4e-8f64-39883a70dad8 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1243"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "united-kingdom-2026-ewca-civ-654",
+        "locator": "[2026] EWCA Civ 654 | d-1a51879a-3458-4a54-ae17-960dfae23c0f | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/654",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "united-kingdom-2026-ewhc-1236-comm",
+        "locator": "[2026] EWHC 1236 (Comm) | d-f5bb8c1e-90c3-4188-b8d8-c31539cedca2 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1236",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "united-kingdom-2026-ewca-civ-641",
+        "locator": "[2026] EWCA Civ 641 | d-51381bb4-1ae4-445f-86b8-f3bc1b27b93c | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/641",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "united-kingdom-2026-eat-74",
+        "locator": "[2026] EAT 74 | d-e1929028-0d11-40e4-a9b5-d97bce09279c | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/eat/2026/74",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "united-kingdom-2026-ewca-civ-658",
+        "locator": "[2026] EWCA Civ 658 | d-573cc2f9-6cb1-4879-8664-93a9a38c5154 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/658",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "united-kingdom-2026-ewhc-1216-ch",
+        "locator": "[2026] EWHC 1216 (Ch) | d-fd91f4b7-203c-43f5-841f-1f2251e68ea6 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1216",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "united-kingdom-2026-ukftt-763-grc",
+        "locator": "[2026] UKFTT 763 (GRC) | d-e09ae739-f6d8-484a-a428-2fedc84e3d75 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/763",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "united-kingdom-2026-ukftt-775-tc",
+        "locator": "[2026] UKFTT 775 (TC) | d-ff19654e-eb65-48a5-93b1-3bd59471fb64 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/775",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "united-kingdom-2026-ewhc-1254-ch",
+        "locator": "[2026] EWHC 1254 (Ch) | d-24a26f0f-aaf3-47c9-9b65-eb48f833f695 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1254",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "united-kingdom-2026-ewhc-1243-ch",
+        "locator": "[2026] EWHC 1243 (Ch) | d-61b9ad17-b194-4c4e-8f64-39883a70dad8 | 2026-05-22 | https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1243",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "professional_support_output",
+  "expected_disposition": "none"
+}

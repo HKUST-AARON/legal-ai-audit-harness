@@ -18,7 +18,7 @@
       "missing_gates": [
         "K"
       ],
-      "scenario_id": "real-cases-canada",
+      "scenario_id": "public-system-output-canada",
       "scores": {
         "H": 2,
         "K": 0,
@@ -51,7 +51,7 @@
         "K",
         "total_score>=9"
       ],
-      "scenario_id": "real-cases-germany",
+      "scenario_id": "public-system-output-germany",
       "scores": {
         "H": 1,
         "K": 0,
@@ -83,7 +83,7 @@
       "missing_gates": [
         "K"
       ],
-      "scenario_id": "real-cases-hong_kong",
+      "scenario_id": "public-system-output-hong_kong",
       "scores": {
         "H": 2,
         "K": 0,
@@ -115,7 +115,7 @@
       "missing_gates": [
         "K"
       ],
-      "scenario_id": "real-cases-mainland_china",
+      "scenario_id": "public-system-output-mainland_china",
       "scores": {
         "H": 2,
         "K": 0,
@@ -148,7 +148,7 @@
         "K",
         "total_score>=9"
       ],
-      "scenario_id": "real-cases-united_kingdom",
+      "scenario_id": "public-system-output-united_kingdom",
       "scores": {
         "H": 1,
         "K": 0,
@@ -180,7 +180,7 @@
       "missing_gates": [
         "K"
       ],
-      "scenario_id": "real-cases-united_states",
+      "scenario_id": "public-system-output-united_states",
       "scores": {
         "H": 2,
         "K": 0,
@@ -196,7 +196,7 @@
       "upstream_recall": null
     }
   ],
-  "scenario_path": "experiments/real_cases/scenarios",
+  "scenario_path": "experiments/public_system_outputs/scenarios",
   "summary": {
     "expected_passed": 6,
     "high_upstream_but_blocked": 0,

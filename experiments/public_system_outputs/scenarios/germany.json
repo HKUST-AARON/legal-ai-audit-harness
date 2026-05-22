@@ -1,0 +1,250 @@
+{
+  "id": "public-system-output-germany",
+  "claimed_status": "professional_support_output",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Provider-agnostic audit of the top ten records exposed by a public legal retrieval or listing system output.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each visible output item has a public source URL, source-system label, citation or docket field, and source identifier."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The output stream, committed snapshot and top-k ordering are recorded in the manifest."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "Court, institution or authority-level labels are preserved for each visible item."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "The public output exposes ordering but does not define an issue-specific ranking task or counter-material gold set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect the public output items and source links; party-facing contestation is outside this pilot."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible public-output manifest, scenario and result artifact."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [],
+    "retrieved_high_authority": [],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "germany-ecli-de-ovgnrw-2026-0515-4b46-26-00",
+      "germany-ecli-eu-c-2026-399",
+      "germany-ecli-eu-c-2026-402",
+      "germany-ecli-eu-c-2026-401",
+      "germany-ecli-eu-c-2026-405",
+      "germany-ecli-eu-c-2026-398",
+      "germany-ecli-eu-c-2026-404",
+      "germany-ecli-eu-c-2026-396",
+      "germany-ecli-eu-c-2026-397",
+      "germany-ecli-eu-c-2026-400"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_system_outputs/manifests/germany.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public system output rank 1 makes this legal material visible: Oberverwaltungsgericht Nordrhein-Westfalen 4 B 46/26",
+        "source_ids": [
+          "germany-ecli-de-ovgnrw-2026-0515-4b46-26-00"
+        ],
+        "locators": [
+          "ECLI:DE:OVGNRW:2026:0515.4B46.26.00 | 4 B 46/26 | 2026-05-15 | https://de.openlegaldata.io/api/cases/521147/"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public system output rank 2 makes this legal material visible: Europäischer Gerichtshof C-399/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-399"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:399 | C-399/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521079/"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public system output rank 3 makes this legal material visible: Europäischer Gerichtshof C-402/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-402"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:402 | C-402/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521080/"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public system output rank 4 makes this legal material visible: Europäischer Gerichtshof C-401/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-401"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:401 | C-401/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521081/"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public system output rank 5 makes this legal material visible: Europäischer Gerichtshof C-405/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-405"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:405 | C-405/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521082/"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public system output rank 6 makes this legal material visible: Europäischer Gerichtshof C-398/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-398"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:398 | C-398/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521083/"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public system output rank 7 makes this legal material visible: Europäischer Gerichtshof C-404/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-404"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:404 | C-404/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521084/"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public system output rank 8 makes this legal material visible: Europäischer Gerichtshof C-396/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-396"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:396 | C-396/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521085/"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public system output rank 9 makes this legal material visible: Europäischer Gerichtshof C-397/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-397"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:397 | C-397/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521086/"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public system output rank 10 makes this legal material visible: Europäischer Gerichtshof C-400/26",
+        "source_ids": [
+          "germany-ecli-eu-c-2026-400"
+        ],
+        "locators": [
+          "ECLI:EU:C:2026:400 | C-400/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521087/"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "germany-ecli-de-ovgnrw-2026-0515-4b46-26-00",
+        "locator": "ECLI:DE:OVGNRW:2026:0515.4B46.26.00 | 4 B 46/26 | 2026-05-15 | https://de.openlegaldata.io/api/cases/521147/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "germany-ecli-eu-c-2026-399",
+        "locator": "ECLI:EU:C:2026:399 | C-399/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521079/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "germany-ecli-eu-c-2026-402",
+        "locator": "ECLI:EU:C:2026:402 | C-402/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521080/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "germany-ecli-eu-c-2026-401",
+        "locator": "ECLI:EU:C:2026:401 | C-401/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521081/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "germany-ecli-eu-c-2026-405",
+        "locator": "ECLI:EU:C:2026:405 | C-405/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521082/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "germany-ecli-eu-c-2026-398",
+        "locator": "ECLI:EU:C:2026:398 | C-398/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521083/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "germany-ecli-eu-c-2026-404",
+        "locator": "ECLI:EU:C:2026:404 | C-404/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521084/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "germany-ecli-eu-c-2026-396",
+        "locator": "ECLI:EU:C:2026:396 | C-396/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521085/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "germany-ecli-eu-c-2026-397",
+        "locator": "ECLI:EU:C:2026:397 | C-397/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521086/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "germany-ecli-eu-c-2026-400",
+        "locator": "ECLI:EU:C:2026:400 | C-400/26 | 2026-05-13 | https://de.openlegaldata.io/api/cases/521087/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "professional_support_output",
+  "expected_disposition": "none"
+}

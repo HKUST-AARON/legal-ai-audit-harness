@@ -35,6 +35,7 @@ python -m audit_harness.cli score examples/scenarios/court_authority_report.json
 python -m audit_harness.cli run examples/scenarios --out reports/sample_report.md --json-out reports/sample_report.json
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
+python scripts/collect_public_system_outputs.py
 python -m unittest discover -s tests
 ```
 
@@ -144,6 +145,17 @@ The current gold sets cover:
 
 The sensitivity command varies the normative-screening threshold from 8 to 11 and reports the resulting status distribution. This is intended to show whether status allocation depends on a single arbitrary threshold.
 
+## Public System Output Pilot
+
+The repository includes a public legal system output pilot:
+
+```bash
+python scripts/collect_public_system_outputs.py
+python -m audit_harness.cli experiment experiments/public_system_outputs/scenarios --out experiments/public_system_outputs/results/public_system_output_experiment.md --json-out experiments/public_system_outputs/results/public_system_output_experiment.json
+```
+
+This pilot freezes the ordered top 10 records exposed by each of six public legal retrieval or listing systems and converts those visible outputs into provider-agnostic evidence packets. It tests whether real public system outputs can be reconstructed, source-tagged and status-qualified by the harness. It does not evaluate legal merits, doctrinal correctness, issue-specific ranking quality, RAG behavior or any upstream model architecture. The current public-output scenarios are capped at `professional_support_output` because they lack issue-defined counter-material gold sets and party-facing contestation pathways.
+
 ## Repository Layout
 
 ```text
@@ -153,6 +165,7 @@ examples/jurisdiction_profiles/  legal-system parameter profiles
 experiments/stress_tests/results/  committed stress-test and sensitivity outputs
 experiments/issue_gold_sets/       curated issue packets and gold-set outputs
 experiments/real_cases/            public metadata snapshots, manifests and outputs
+experiments/public_system_outputs/ ordered public output snapshots and pilot outputs
 tests/                  unit tests
 docs/paper_mapping.md   mapping from the paper framework to code
 .github/workflows/      CI test harness

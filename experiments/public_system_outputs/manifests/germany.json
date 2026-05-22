@@ -1,0 +1,133 @@
+{
+  "jurisdiction": "germany",
+  "created_at": "2026-05-23T00:00:00Z",
+  "experiment": "public_legal_system_output_pilot",
+  "source_output": {
+    "label": "OpenLegalData German case API output stream",
+    "method": "top-k ordered records as exposed by the committed public system output snapshot",
+    "top_k": 10,
+    "candidate_count": 100
+  },
+  "records": [
+    {
+      "id": "germany-ecli-de-ovgnrw-2026-0515-4b46-26-00",
+      "title": "Oberverwaltungsgericht Nordrhein-Westfalen 4 B 46/26",
+      "court": "Oberverwaltungsgericht Nordrhein-Westfalen",
+      "date": "2026-05-15",
+      "citation": "ECLI:DE:OVGNRW:2026:0515.4B46.26.00",
+      "docket": "4 B 46/26",
+      "url": "https://de.openlegaldata.io/api/cases/521147/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "Verwaltungsgerichtsbarkeit",
+      "output_rank": 1
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-399",
+      "title": "Europäischer Gerichtshof C-399/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:399",
+      "docket": "C-399/26",
+      "url": "https://de.openlegaldata.io/api/cases/521079/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 2
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-402",
+      "title": "Europäischer Gerichtshof C-402/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:402",
+      "docket": "C-402/26",
+      "url": "https://de.openlegaldata.io/api/cases/521080/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 3
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-401",
+      "title": "Europäischer Gerichtshof C-401/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:401",
+      "docket": "C-401/26",
+      "url": "https://de.openlegaldata.io/api/cases/521081/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 4
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-405",
+      "title": "Europäischer Gerichtshof C-405/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:405",
+      "docket": "C-405/26",
+      "url": "https://de.openlegaldata.io/api/cases/521082/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 5
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-398",
+      "title": "Europäischer Gerichtshof C-398/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:398",
+      "docket": "C-398/26",
+      "url": "https://de.openlegaldata.io/api/cases/521083/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 6
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-404",
+      "title": "Europäischer Gerichtshof C-404/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:404",
+      "docket": "C-404/26",
+      "url": "https://de.openlegaldata.io/api/cases/521084/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 7
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-396",
+      "title": "Europäischer Gerichtshof C-396/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:396",
+      "docket": "C-396/26",
+      "url": "https://de.openlegaldata.io/api/cases/521085/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 8
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-397",
+      "title": "Europäischer Gerichtshof C-397/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:397",
+      "docket": "C-397/26",
+      "url": "https://de.openlegaldata.io/api/cases/521086/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 9
+    },
+    {
+      "id": "germany-ecli-eu-c-2026-400",
+      "title": "Europäischer Gerichtshof C-400/26",
+      "court": "Europäischer Gerichtshof",
+      "date": "2026-05-13",
+      "citation": "ECLI:EU:C:2026:400",
+      "docket": "C-400/26",
+      "url": "https://de.openlegaldata.io/api/cases/521087/",
+      "source": "OpenLegalData German case API",
+      "authority_level": "court_decision",
+      "output_rank": 10
+    }
+  ]
+}

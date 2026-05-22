@@ -1,0 +1,272 @@
+{
+  "id": "public-system-output-mainland_china",
+  "claimed_status": "professional_support_output",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Provider-agnostic audit of the top ten records exposed by a public legal retrieval or listing system output.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each visible output item has a public source URL, source-system label, citation or docket field, and source identifier."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The output stream, committed snapshot and top-k ordering are recorded in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Court, institution or authority-level labels are preserved for each visible item."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "The public output exposes ordering but does not define an issue-specific ranking task or counter-material gold set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect the public output items and source links; party-facing contestation is outside this pilot."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible public-output manifest, scenario and result artifact."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "mainland-china-cases-of-judicial-protection-for-intellectual-property-rights-in-seed-industry-by-the-people-s-courts-of-",
+      "mainland-china-case-of-yi-redacted-s-illegal-introduction-of-invasive-alien-species-judicial-determination-of-the-crime-",
+      "mainland-china-guiding-case-no-257",
+      "mainland-china-guiding-case-no-215",
+      "mainland-china-guiding-case-no-214",
+      "mainland-china-guiding-case-no-177",
+      "mainland-china-guiding-case-no-236",
+      "mainland-china-guiding-case-no-235",
+      "mainland-china-guiding-case-no-233",
+      "mainland-china-guiding-case-no-232"
+    ],
+    "retrieved_high_authority": [
+      "mainland-china-cases-of-judicial-protection-for-intellectual-property-rights-in-seed-industry-by-the-people-s-courts-of-",
+      "mainland-china-case-of-yi-redacted-s-illegal-introduction-of-invasive-alien-species-judicial-determination-of-the-crime-",
+      "mainland-china-guiding-case-no-257",
+      "mainland-china-guiding-case-no-215",
+      "mainland-china-guiding-case-no-214",
+      "mainland-china-guiding-case-no-177",
+      "mainland-china-guiding-case-no-236",
+      "mainland-china-guiding-case-no-235",
+      "mainland-china-guiding-case-no-233",
+      "mainland-china-guiding-case-no-232"
+    ],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "mainland-china-cases-of-judicial-protection-for-intellectual-property-rights-in-seed-industry-by-the-people-s-courts-of-",
+      "mainland-china-case-of-yi-redacted-s-illegal-introduction-of-invasive-alien-species-judicial-determination-of-the-crime-",
+      "mainland-china-guiding-case-no-257",
+      "mainland-china-guiding-case-no-215",
+      "mainland-china-guiding-case-no-214",
+      "mainland-china-guiding-case-no-177",
+      "mainland-china-guiding-case-no-236",
+      "mainland-china-guiding-case-no-235",
+      "mainland-china-guiding-case-no-233",
+      "mainland-china-guiding-case-no-232"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_system_outputs/manifests/mainland_china.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public system output rank 1 makes this legal material visible: Cases of Judicial Protection for Intellectual Property Rights in Seed Industry by the People's Courts of the People’s Republic of China (First Batch)",
+        "source_ids": [
+          "mainland-china-cases-of-judicial-protection-for-intellectual-property-rights-in-seed-industry-by-the-people-s-courts-of-"
+        ],
+        "locators": [
+          "2026-03-20 | https://english.court.gov.cn/pdf/CasesofJudicialProtectionforIntellectualPropertyRightsinSeedIndustry.pdf"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public system output rank 2 makes this legal material visible: Case of Yi [redacted]’s Illegal Introduction of Invasive Alien Species: Judicial Determination of the Crime of Illegal Introduction of Invasive Alien Species",
+        "source_ids": [
+          "mainland-china-case-of-yi-redacted-s-illegal-introduction-of-invasive-alien-species-judicial-determination-of-the-crime-"
+        ],
+        "locators": [
+          "2026-02-13 | https://english.court.gov.cn/2026-02/13/c_1170642.htm"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public system output rank 3 makes this legal material visible: Guiding Case No. 257: Beijing Changping District [redacted] Environmental Research Institute v. [redacted]River Basin Hydropower Development Co., Ltd. (Case of Civil Public Interest Litigation for Ecological Damage)",
+        "source_ids": [
+          "mainland-china-guiding-case-no-257"
+        ],
+        "locators": [
+          "Guiding Case No. 257 | 2026-02-12 | https://english.court.gov.cn/2026-02/12/c_1160778.htm"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public system output rank 4 makes this legal material visible: Guiding Case No. 215: Supplementary Civil Public Interest Litigation in Criminal Proceedings On Environmental Pollution by Kunming Min [Redacted] Paper Co., Ltd. et al.",
+        "source_ids": [
+          "mainland-china-guiding-case-no-215"
+        ],
+        "locators": [
+          "Guiding Case No. 215 | 2026-02-12 | https://english.court.gov.cn/2026-02/12/c_1160776.htm"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public system output rank 5 makes this legal material visible: Guiding Case No. 214: Case of Bankruptcy Liquidation to Bankruptcy Reorganization for Shanghai [Redacted] Port Industrial Co., Ltd.",
+        "source_ids": [
+          "mainland-china-guiding-case-no-214"
+        ],
+        "locators": [
+          "Guiding Case No. 214 | 2026-02-11 | https://english.court.gov.cn/2026-02/11/c_1160497.htm"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public system output rank 6 makes this legal material visible: Guiding Case No. 177: Hainan Lingao Yinghai Shipping Co., Ltd. v. Sansha Fishery Administration Detachment（Case of Administrative Penalty）",
+        "source_ids": [
+          "mainland-china-guiding-case-no-177"
+        ],
+        "locators": [
+          "Guiding Case No. 177 | 2026-02-11 | https://english.court.gov.cn/2026-02/11/c_1160493.htm"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public system output rank 7 makes this legal material visible: Guiding Case No. 236 Huan[REDACTED] Ship Leasing Co., Ltd. v. Tian[REDACTED] Fortune Co., Ltd. (Allision Liability Dispute - Panamanian/Liberian Vessels)",
+        "source_ids": [
+          "mainland-china-guiding-case-no-236"
+        ],
+        "locators": [
+          "Guiding Case No. 236 | 2026-02-10 | https://english.court.gov.cn/2026-02/10/c_1160180.htm"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public system output rank 8 makes this legal material visible: Guiding Case No. 235 In re S Shipping Co., Ltd.（Recognition of UK Commercial Court Judgments)",
+        "source_ids": [
+          "mainland-china-guiding-case-no-235"
+        ],
+        "locators": [
+          "Guiding Case No. 235 | 2026-02-10 | https://english.court.gov.cn/2026-02/10/c_1160177.htm"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public system output rank 9 makes this legal material visible: Guiding Case No. 233 Changzhou Hong [REDACTED] Petrochemical Warehousing Co. Ltd. et al. v. Ningbo Tian [REDACTED] Shipping Co. Ltd. (Limitation Fund Priority Dispute - Allision Damage)",
+        "source_ids": [
+          "mainland-china-guiding-case-no-233"
+        ],
+        "locators": [
+          "Guiding Case No. 233 | 2026-02-09 | https://english.court.gov.cn/2026-02/09/c_1160004.htm"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public system output rank 10 makes this legal material visible: Guiding Case No. 232 [REDACTED] Animal Husbandry Co. Ltd. v. Pa[REDACTED] Maritime Inc. (Cargo Damage Dispute under Voyage Charter)",
+        "source_ids": [
+          "mainland-china-guiding-case-no-232"
+        ],
+        "locators": [
+          "Guiding Case No. 232 | 2026-02-09 | https://english.court.gov.cn/2026-02/09/c_1159990.htm"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "mainland-china-cases-of-judicial-protection-for-intellectual-property-rights-in-seed-industry-by-the-people-s-courts-of-",
+        "locator": "2026-03-20 | https://english.court.gov.cn/pdf/CasesofJudicialProtectionforIntellectualPropertyRightsinSeedIndustry.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "mainland-china-case-of-yi-redacted-s-illegal-introduction-of-invasive-alien-species-judicial-determination-of-the-crime-",
+        "locator": "2026-02-13 | https://english.court.gov.cn/2026-02/13/c_1170642.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "mainland-china-guiding-case-no-257",
+        "locator": "Guiding Case No. 257 | 2026-02-12 | https://english.court.gov.cn/2026-02/12/c_1160778.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "mainland-china-guiding-case-no-215",
+        "locator": "Guiding Case No. 215 | 2026-02-12 | https://english.court.gov.cn/2026-02/12/c_1160776.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "mainland-china-guiding-case-no-214",
+        "locator": "Guiding Case No. 214 | 2026-02-11 | https://english.court.gov.cn/2026-02/11/c_1160497.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "mainland-china-guiding-case-no-177",
+        "locator": "Guiding Case No. 177 | 2026-02-11 | https://english.court.gov.cn/2026-02/11/c_1160493.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "mainland-china-guiding-case-no-236",
+        "locator": "Guiding Case No. 236 | 2026-02-10 | https://english.court.gov.cn/2026-02/10/c_1160180.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "mainland-china-guiding-case-no-235",
+        "locator": "Guiding Case No. 235 | 2026-02-10 | https://english.court.gov.cn/2026-02/10/c_1160177.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "mainland-china-guiding-case-no-233",
+        "locator": "Guiding Case No. 233 | 2026-02-09 | https://english.court.gov.cn/2026-02/09/c_1160004.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "mainland-china-guiding-case-no-232",
+        "locator": "Guiding Case No. 232 | 2026-02-09 | https://english.court.gov.cn/2026-02/09/c_1159990.htm",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "professional_support_output",
+  "expected_disposition": "none"
+}

@@ -1,0 +1,272 @@
+{
+  "id": "public-system-output-canada",
+  "claimed_status": "professional_support_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Provider-agnostic audit of the top ten records exposed by a public legal retrieval or listing system output.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each visible output item has a public source URL, source-system label, citation or docket field, and source identifier."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The output stream, committed snapshot and top-k ordering are recorded in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Court, institution or authority-level labels are preserved for each visible item."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "The public output exposes ordering but does not define an issue-specific ranking task or counter-material gold set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect the public output items and source links; party-facing contestation is outside this pilot."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible public-output manifest, scenario and result artifact."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "canada-2026-scc-18",
+      "canada-2022-scc-43",
+      "canada-41786",
+      "canada-1993-2-scr-159",
+      "canada-2026-scc-16",
+      "canada-1990-2-scr-467",
+      "canada-2026-scc-15",
+      "canada-1972-scr-769",
+      "canada-2026-scc-13",
+      "canada-2026-scc-14"
+    ],
+    "retrieved_high_authority": [
+      "canada-2026-scc-18",
+      "canada-2022-scc-43",
+      "canada-41786",
+      "canada-1993-2-scr-159",
+      "canada-2026-scc-16",
+      "canada-1990-2-scr-467",
+      "canada-2026-scc-15",
+      "canada-1972-scr-769",
+      "canada-2026-scc-13",
+      "canada-2026-scc-14"
+    ],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "canada-2026-scc-18",
+      "canada-2022-scc-43",
+      "canada-41786",
+      "canada-1993-2-scr-159",
+      "canada-2026-scc-16",
+      "canada-1990-2-scr-467",
+      "canada-2026-scc-15",
+      "canada-1972-scr-769",
+      "canada-2026-scc-13",
+      "canada-2026-scc-14"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_system_outputs/manifests/canada.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public system output rank 1 makes this legal material visible: R. v. Saddleback",
+        "source_ids": [
+          "canada-2026-scc-18"
+        ],
+        "locators": [
+          "2026 SCC 18 | 41567 | 2026-05-22 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21519/index.do"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public system output rank 2 makes this legal material visible: Nova Chemicals Corp. v. Dow Chemical Co.",
+        "source_ids": [
+          "canada-2022-scc-43"
+        ],
+        "locators": [
+          "2022 SCC 43 | 39439 | 2022-11-18 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19554/index.do"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public system output rank 3 makes this legal material visible: R. v. Burke-Whittaker",
+        "source_ids": [
+          "canada-41786"
+        ],
+        "locators": [
+          "41786 | 2026-05-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21506/index.do"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public system output rank 4 makes this legal material visible: Hall v. Hebert",
+        "source_ids": [
+          "canada-1993-2-scr-159"
+        ],
+        "locators": [
+          "[1993] 2 SCR 159 | 22399 | 1993-04-29 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1000/index.do"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public system output rank 5 makes this legal material visible: Ahluwalia v. Ahluwalia",
+        "source_ids": [
+          "canada-2026-scc-16"
+        ],
+        "locators": [
+          "2026 SCC 16 | 41061 | 2026-05-15 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21505/index.do"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public system output rank 6 makes this legal material visible: Bishop v. Stevens",
+        "source_ids": [
+          "canada-1990-2-scr-467"
+        ],
+        "locators": [
+          "[1990] 2 SCR 467 | 20695 | 1990-08-16 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/640/index.do"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public system output rank 7 makes this legal material visible: Patrick Street Holdings Ltd. v. 11368 NL Inc.",
+        "source_ids": [
+          "canada-2026-scc-15"
+        ],
+        "locators": [
+          "2026 SCC 15 | 41296 | 2026-05-08 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21492/index.do"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public system output rank 8 makes this legal material visible: J. Nunes Diamonds Ltd. v. Dominion Electric Protection Company",
+        "source_ids": [
+          "canada-1972-scr-769"
+        ],
+        "locators": [
+          "[1972] SCR 769 | 1972-03-30 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/6226/index.do"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public system output rank 9 makes this legal material visible: Quebec (Attorney General) v. Lalande",
+        "source_ids": [
+          "canada-2026-scc-13"
+        ],
+        "locators": [
+          "2026 SCC 13 | 42152 | 2026-05-01 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21476/index.do"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public system output rank 10 makes this legal material visible: Alford v. Canada (Attorney General)",
+        "source_ids": [
+          "canada-2026-scc-14"
+        ],
+        "locators": [
+          "2026 SCC 14 | 41336 | 2026-05-01 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21484/index.do"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "canada-2026-scc-18",
+        "locator": "2026 SCC 18 | 41567 | 2026-05-22 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21519/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "canada-2022-scc-43",
+        "locator": "2022 SCC 43 | 39439 | 2022-11-18 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19554/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "canada-41786",
+        "locator": "41786 | 2026-05-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21506/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "canada-1993-2-scr-159",
+        "locator": "[1993] 2 SCR 159 | 22399 | 1993-04-29 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1000/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "canada-2026-scc-16",
+        "locator": "2026 SCC 16 | 41061 | 2026-05-15 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21505/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "canada-1990-2-scr-467",
+        "locator": "[1990] 2 SCR 467 | 20695 | 1990-08-16 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/640/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "canada-2026-scc-15",
+        "locator": "2026 SCC 15 | 41296 | 2026-05-08 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21492/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "canada-1972-scr-769",
+        "locator": "[1972] SCR 769 | 1972-03-30 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/6226/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "canada-2026-scc-13",
+        "locator": "2026 SCC 13 | 42152 | 2026-05-01 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21476/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "canada-2026-scc-14",
+        "locator": "2026 SCC 14 | 41336 | 2026-05-01 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21484/index.do",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "professional_support_output",
+  "expected_disposition": "none"
+}

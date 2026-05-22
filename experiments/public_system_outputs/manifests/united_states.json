@@ -1,0 +1,133 @@
+{
+  "jurisdiction": "united_states",
+  "created_at": "2026-05-23T00:00:00Z",
+  "experiment": "public_legal_system_output_pilot",
+  "source_output": {
+    "label": "Supreme Court of the United States slip-opinion output stream",
+    "method": "top-k ordered records as exposed by the committed public system output snapshot",
+    "top_k": 10,
+    "candidate_count": 199
+  },
+  "records": [
+    {
+      "id": "united-states-608-1",
+      "title": "Hamm v. Smith",
+      "court": "Supreme Court of the United States",
+      "date": "2026-05-21",
+      "citation": "608/1",
+      "docket": "24-872",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/24-872_ec8f.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 1
+    },
+    {
+      "id": "united-states-607-2",
+      "title": "Chiles v. Salazar",
+      "court": "Supreme Court of the United States",
+      "date": "2026-03-31",
+      "citation": "607/2",
+      "docket": "24-539",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/24-539new_hfci.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 2
+    },
+    {
+      "id": "united-states-607-u-s-421",
+      "title": "Hain Celestial Group, Inc. v. Palmquist",
+      "court": "Supreme Court of the United States",
+      "date": "2026-02-24",
+      "citation": "607 U.S. 421",
+      "docket": "24-724",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 3
+    },
+    {
+      "id": "united-states-607-u-s-213",
+      "title": "Klein v. Martin",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-26",
+      "citation": "607 U.S. 213",
+      "docket": "25-51",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r11_7l48.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 4
+    },
+    {
+      "id": "united-states-607-u-s-187",
+      "title": "Berk v. Choy",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-20",
+      "citation": "607 U.S. 187",
+      "docket": "24-440",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r10_5hek.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 5
+    },
+    {
+      "id": "united-states-607-u-s-163",
+      "title": "Ellingburg v. United States",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-20",
+      "citation": "607 U.S. 163",
+      "docket": "24-482",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 6
+    },
+    {
+      "id": "united-states-607-u-s-155",
+      "title": "Coney Island Auto Parts Unlimited, Inc. v. Burton",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-20",
+      "citation": "607 U.S. 155",
+      "docket": "24-808",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r08_f2q3.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 7
+    },
+    {
+      "id": "united-states-607-u-s-128",
+      "title": "Barrett v. United States",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-14",
+      "citation": "607 U.S. 128",
+      "docket": "24-5774",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r07_7647.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 8
+    },
+    {
+      "id": "united-states-607-u-s-107",
+      "title": "Case v. Montana",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-14",
+      "citation": "607 U.S. 107",
+      "docket": "24-624",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r06_19m1.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 9
+    },
+    {
+      "id": "united-states-607-u-s-71",
+      "title": "Bost v. Illinois Bd. of Elections",
+      "court": "Supreme Court of the United States",
+      "date": "2026-01-14",
+      "citation": "607 U.S. 71",
+      "docket": "24-568",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r05_e2q3.pdf",
+      "source": "Supreme Court of the United States slip opinions",
+      "authority_level": "apex_court",
+      "output_rank": 10
+    }
+  ]
+}

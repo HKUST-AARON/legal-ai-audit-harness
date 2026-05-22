@@ -1,0 +1,272 @@
+{
+  "id": "public-system-output-united_states",
+  "claimed_status": "professional_support_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Provider-agnostic audit of the top ten records exposed by a public legal retrieval or listing system output.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Each visible output item has a public source URL, source-system label, citation or docket field, and source identifier."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The output stream, committed snapshot and top-k ordering are recorded in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Court, institution or authority-level labels are preserved for each visible item."
+    },
+    "K": {
+      "score": 0,
+      "evidence": "The public output exposes ordering but does not define an issue-specific ranking task or counter-material gold set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "A reviewer can inspect the public output items and source links; party-facing contestation is outside this pilot."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The harness writes a reproducible public-output manifest, scenario and result artifact."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "united-states-608-1",
+      "united-states-607-2",
+      "united-states-607-u-s-421",
+      "united-states-607-u-s-213",
+      "united-states-607-u-s-187",
+      "united-states-607-u-s-163",
+      "united-states-607-u-s-155",
+      "united-states-607-u-s-128",
+      "united-states-607-u-s-107",
+      "united-states-607-u-s-71"
+    ],
+    "retrieved_high_authority": [
+      "united-states-608-1",
+      "united-states-607-2",
+      "united-states-607-u-s-421",
+      "united-states-607-u-s-213",
+      "united-states-607-u-s-187",
+      "united-states-607-u-s-163",
+      "united-states-607-u-s-155",
+      "united-states-607-u-s-128",
+      "united-states-607-u-s-107",
+      "united-states-607-u-s-71"
+    ],
+    "counter_or_limiting": [],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "united-states-608-1",
+      "united-states-607-2",
+      "united-states-607-u-s-421",
+      "united-states-607-u-s-213",
+      "united-states-607-u-s-187",
+      "united-states-607-u-s-163",
+      "united-states-607-u-s-155",
+      "united-states-607-u-s-128",
+      "united-states-607-u-s-107",
+      "united-states-607-u-s-71"
+    ]
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_system_outputs/manifests/united_states.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public system output rank 1 makes this legal material visible: Hamm v. Smith",
+        "source_ids": [
+          "united-states-608-1"
+        ],
+        "locators": [
+          "608/1 | 24-872 | 2026-05-21 | https://www.supremecourt.gov/opinions/25pdf/24-872_ec8f.pdf"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public system output rank 2 makes this legal material visible: Chiles v. Salazar",
+        "source_ids": [
+          "united-states-607-2"
+        ],
+        "locators": [
+          "607/2 | 24-539 | 2026-03-31 | https://www.supremecourt.gov/opinions/25pdf/24-539new_hfci.pdf"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public system output rank 3 makes this legal material visible: Hain Celestial Group, Inc. v. Palmquist",
+        "source_ids": [
+          "united-states-607-u-s-421"
+        ],
+        "locators": [
+          "607 U.S. 421 | 24-724 | 2026-02-24 | https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public system output rank 4 makes this legal material visible: Klein v. Martin",
+        "source_ids": [
+          "united-states-607-u-s-213"
+        ],
+        "locators": [
+          "607 U.S. 213 | 25-51 | 2026-01-26 | https://www.supremecourt.gov/opinions/25pdf/607us1r11_7l48.pdf"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public system output rank 5 makes this legal material visible: Berk v. Choy",
+        "source_ids": [
+          "united-states-607-u-s-187"
+        ],
+        "locators": [
+          "607 U.S. 187 | 24-440 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r10_5hek.pdf"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public system output rank 6 makes this legal material visible: Ellingburg v. United States",
+        "source_ids": [
+          "united-states-607-u-s-163"
+        ],
+        "locators": [
+          "607 U.S. 163 | 24-482 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public system output rank 7 makes this legal material visible: Coney Island Auto Parts Unlimited, Inc. v. Burton",
+        "source_ids": [
+          "united-states-607-u-s-155"
+        ],
+        "locators": [
+          "607 U.S. 155 | 24-808 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r08_f2q3.pdf"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public system output rank 8 makes this legal material visible: Barrett v. United States",
+        "source_ids": [
+          "united-states-607-u-s-128"
+        ],
+        "locators": [
+          "607 U.S. 128 | 24-5774 | 2026-01-14 | https://www.supremecourt.gov/opinions/25pdf/607us1r07_7647.pdf"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public system output rank 9 makes this legal material visible: Case v. Montana",
+        "source_ids": [
+          "united-states-607-u-s-107"
+        ],
+        "locators": [
+          "607 U.S. 107 | 24-624 | 2026-01-14 | https://www.supremecourt.gov/opinions/25pdf/607us1r06_19m1.pdf"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public system output rank 10 makes this legal material visible: Bost v. Illinois Bd. of Elections",
+        "source_ids": [
+          "united-states-607-u-s-71"
+        ],
+        "locators": [
+          "607 U.S. 71 | 24-568 | 2026-01-14 | https://www.supremecourt.gov/opinions/25pdf/607us1r05_e2q3.pdf"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "united-states-608-1",
+        "locator": "608/1 | 24-872 | 2026-05-21 | https://www.supremecourt.gov/opinions/25pdf/24-872_ec8f.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "united-states-607-2",
+        "locator": "607/2 | 24-539 | 2026-03-31 | https://www.supremecourt.gov/opinions/25pdf/24-539new_hfci.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "united-states-607-u-s-421",
+        "locator": "607 U.S. 421 | 24-724 | 2026-02-24 | https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "united-states-607-u-s-213",
+        "locator": "607 U.S. 213 | 25-51 | 2026-01-26 | https://www.supremecourt.gov/opinions/25pdf/607us1r11_7l48.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "united-states-607-u-s-187",
+        "locator": "607 U.S. 187 | 24-440 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r10_5hek.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "united-states-607-u-s-163",
+        "locator": "607 U.S. 163 | 24-482 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "united-states-607-u-s-155",
+        "locator": "607 U.S. 155 | 24-808 | 2026-01-20 | https://www.supremecourt.gov/opinions/25pdf/607us1r08_f2q3.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "united-states-607-u-s-128",
+        "locator": "607 U.S. 128 | 24-5774 | 2026-01-14 | https://www.supremecourt.gov/opinions/25pdf/607us1r07_7647.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "united-states-607-u-s-107",
+        "locator": "607 U.S. 107 | 24-624 | 2026-01-14 | https://www.supremecourt.gov/opinions/25pdf/607us1r06_19m1.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "united-states-607-u-s-71",
+        "locator": "607 U.S. 71 | 24-568 | 2026-01-14 | https://www.supremecourt.gov/opinions/25pdf/607us1r05_e2q3.pdf",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "source_integrity_only",
+    "reliance_gate": "not_for_merits_reliance",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "professional_support_output",
+  "expected_disposition": "none"
+}

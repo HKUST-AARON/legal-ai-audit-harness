@@ -138,6 +138,19 @@ class AuditModelTest(unittest.TestCase):
             result = evaluate_scenario(scenario)
             self.assertEqual(result.allowed_status, "professional_support_output", path.name)
 
+    def test_public_system_output_fixture_shape(self):
+        scenarios = ROOT / "experiments" / "public_system_outputs" / "scenarios"
+        paths = sorted(scenarios.glob("*.json"))
+        self.assertEqual(len(paths), 6)
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            units = scenario.get("evidence_packet", {}).get("output_units", [])
+            self.assertEqual(len(units), 10, path.name)
+            result = evaluate_scenario(scenario)
+            self.assertEqual(result.allowed_status, "professional_support_output", path.name)
+            self.assertAlmostEqual(result.evidence_fidelity, 1.0, msg=path.name)
+            self.assertAlmostEqual(result.source_tag_coverage, 1.0, msg=path.name)
+
     def test_schema_rejects_missing_scores(self):
         scenario = deepcopy(load("grounded_output_summary.json"))
         scenario["scores"].pop("K")
@@ -172,6 +185,18 @@ class AuditModelTest(unittest.TestCase):
             shutil.copytree(ROOT / "experiments" / "real_cases" / "downloads", Path(directory) / "downloads")
             completed = subprocess.run(
                 [sys.executable, "scripts/collect_real_cases.py", "--out", directory],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+
+    def test_public_system_output_collector_supports_external_output_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            shutil.copytree(ROOT / "experiments" / "public_system_outputs" / "downloads", Path(directory) / "downloads")
+            completed = subprocess.run(
+                [sys.executable, "scripts/collect_public_system_outputs.py", "--out", directory],
                 cwd=ROOT,
                 check=False,
                 capture_output=True,

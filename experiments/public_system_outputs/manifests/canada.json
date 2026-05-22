@@ -1,0 +1,133 @@
+{
+  "jurisdiction": "canada",
+  "created_at": "2026-05-23T00:00:00Z",
+  "experiment": "public_legal_system_output_pilot",
+  "source_output": {
+    "label": "Supreme Court of Canada JSON output stream",
+    "method": "top-k ordered records as exposed by the committed public system output snapshot",
+    "top_k": 10,
+    "candidate_count": 100
+  },
+  "records": [
+    {
+      "id": "canada-2026-scc-18",
+      "title": "R. v. Saddleback",
+      "court": "Supreme Court of Canada",
+      "date": "2026-05-22",
+      "citation": "2026 SCC 18",
+      "docket": "41567",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21519/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 1
+    },
+    {
+      "id": "canada-2022-scc-43",
+      "title": "Nova Chemicals Corp. v. Dow Chemical Co.",
+      "court": "Supreme Court of Canada",
+      "date": "2022-11-18",
+      "citation": "2022 SCC 43",
+      "docket": "39439",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19554/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 2
+    },
+    {
+      "id": "canada-41786",
+      "title": "R. v. Burke-Whittaker",
+      "court": "Supreme Court of Canada",
+      "date": "2026-05-19",
+      "citation": "",
+      "docket": "41786",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21506/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 3
+    },
+    {
+      "id": "canada-1993-2-scr-159",
+      "title": "Hall v. Hebert",
+      "court": "Supreme Court of Canada",
+      "date": "1993-04-29",
+      "citation": "[1993] 2 SCR 159",
+      "docket": "22399",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1000/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 4
+    },
+    {
+      "id": "canada-2026-scc-16",
+      "title": "Ahluwalia v. Ahluwalia",
+      "court": "Supreme Court of Canada",
+      "date": "2026-05-15",
+      "citation": "2026 SCC 16",
+      "docket": "41061",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21505/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 5
+    },
+    {
+      "id": "canada-1990-2-scr-467",
+      "title": "Bishop v. Stevens",
+      "court": "Supreme Court of Canada",
+      "date": "1990-08-16",
+      "citation": "[1990] 2 SCR 467",
+      "docket": "20695",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/640/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 6
+    },
+    {
+      "id": "canada-2026-scc-15",
+      "title": "Patrick Street Holdings Ltd. v. 11368 NL Inc.",
+      "court": "Supreme Court of Canada",
+      "date": "2026-05-08",
+      "citation": "2026 SCC 15",
+      "docket": "41296",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21492/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 7
+    },
+    {
+      "id": "canada-1972-scr-769",
+      "title": "J. Nunes Diamonds Ltd. v. Dominion Electric Protection Company",
+      "court": "Supreme Court of Canada",
+      "date": "1972-03-30",
+      "citation": "[1972] SCR 769",
+      "docket": "",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/6226/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 8
+    },
+    {
+      "id": "canada-2026-scc-13",
+      "title": "Quebec (Attorney General) v. Lalande",
+      "court": "Supreme Court of Canada",
+      "date": "2026-05-01",
+      "citation": "2026 SCC 13",
+      "docket": "42152",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21476/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 9
+    },
+    {
+      "id": "canada-2026-scc-14",
+      "title": "Alford v. Canada (Attorney General)",
+      "court": "Supreme Court of Canada",
+      "date": "2026-05-01",
+      "citation": "2026 SCC 14",
+      "docket": "41336",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21484/index.do",
+      "source": "Supreme Court of Canada JSON feed",
+      "authority_level": "apex_court",
+      "output_rank": 10
+    }
+  ]
+}

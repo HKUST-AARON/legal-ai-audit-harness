@@ -1,0 +1,133 @@
+{
+  "jurisdiction": "hong_kong",
+  "created_at": "2026-05-23T00:00:00Z",
+  "experiment": "public_legal_system_output_pilot",
+  "source_output": {
+    "label": "HKLII Court of Final Appeal API output stream",
+    "method": "top-k ordered records as exposed by the committed public system output snapshot",
+    "top_k": 10,
+    "candidate_count": 100
+  },
+  "records": [
+    {
+      "id": "hong-kong-2026-hkcfa-18",
+      "title": "LEONG MA LI V. HIGH FASHION NEW MEDIA CORPORATION LIMITED (SUING ON BEHALF OF ITSELF AND ALSO IN ITS CAPACITY AS THE SOLE SHAREHOLDER OF LONGFORD INFORMATION AND TECHNOLOGY CO., LIMITED) (上海梁富信息科技有限公司)",
+      "court": "Court of Final Appeal",
+      "date": "2026-04-21",
+      "citation": "[2026] HKCFA 18",
+      "docket": "FACV6/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/18",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 1
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-17",
+      "title": "TO SZE ON, THE PERSONAL REPRESENTATIVE OF THE ESTATE OF TO CHEONG LAM, DECEASED (APPELLANT) V. YIM TIN FOOK, SINCE DECEASED (YIM LOK MAN WINNE, APPOINTED BY ORDER DATED 10 MAY 2024 TO REPRESENT THE ESTATE OF YIM TIN FOOK, DECEASED) AND OTHERS",
+      "court": "Court of Final Appeal",
+      "date": "2026-04-17",
+      "citation": "[2026] HKCFA 17",
+      "docket": "FACV1/2026",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/17",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 2
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-14",
+      "title": "MAI, JIEPING TRADING AS FAI TAT RMB EXCHANGE V. WONG, CHI HUNG",
+      "court": "Court of Final Appeal",
+      "date": "2026-04-15",
+      "citation": "[2026] HKCFA 14",
+      "docket": "FACV5/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/14",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 3
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-15",
+      "title": "HKSAR V. MODIC ENTERTAINMENT (HK) COMPANY LIMITED 澳滌娛樂(香港)有限公司",
+      "court": "Court of Final Appeal",
+      "date": "2026-04-15",
+      "citation": "[2026] HKCFA 15",
+      "docket": "FAMC32/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/15",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 4
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-16",
+      "title": "HKSAR V. NG TZE KIN (吳子健)",
+      "court": "Court of Final Appeal",
+      "date": "2026-04-15",
+      "citation": "[2026] HKCFA 16",
+      "docket": "FAMC48/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/16",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 5
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-13",
+      "title": "HKSAR V. F.S.L.",
+      "court": "Court of Final Appeal",
+      "date": "2026-04-14",
+      "citation": "[2026] HKCFA 13",
+      "docket": "FACC5/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/13",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 6
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-12",
+      "title": "DR LEUNG KA LAU V. THE MEDICAL COUNCIL OF HONG KONG",
+      "court": "Court of Final Appeal",
+      "date": "2026-03-26",
+      "citation": "[2026] HKCFA 12",
+      "docket": "FAMV109/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/12",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 7
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-11",
+      "title": "HKSAR V. WONG, CHUN LOK (黃俊樂)",
+      "court": "Court of Final Appeal",
+      "date": "2026-03-24",
+      "citation": "[2026] HKCFA 11",
+      "docket": "FAMC21/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/11",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 8
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-10",
+      "title": "SAMANTHA JANE BRADLEY V. SIR ELLY KADOORIE & SONS LIMITED (FOR AND ON BEHALF OF ITSELF, ITS CURRENT AND FORMER OFFICERS, EMPLOYEES AND AGENTS, INCLUDING ITS LEGAL REPRESENTATIVES, MESSRS SIMMONS & SIMMONS)",
+      "court": "Court of Final Appeal",
+      "date": "2026-02-26",
+      "citation": "[2026] HKCFA 10",
+      "docket": "FACV3/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/10",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 9
+    },
+    {
+      "id": "hong-kong-2026-hkcfa-9",
+      "title": "EXCELLENCE RAISE OVERSEAS LIMITED, JOLLY ADMIRE LIMITED, HIGH EXPRESS HOLDINGS LIMITED V. ANZ COMMODITY TRADING PTY LTD",
+      "court": "Court of Final Appeal",
+      "date": "2026-02-13",
+      "citation": "[2026] HKCFA 9",
+      "docket": "FAMV174/2025",
+      "url": "https://www.hklii.org/en/cases/hkcfa/2026/9",
+      "source": "HKLII Court of Final Appeal API",
+      "authority_level": "apex_court",
+      "output_rank": 10
+    }
+  ]
+}

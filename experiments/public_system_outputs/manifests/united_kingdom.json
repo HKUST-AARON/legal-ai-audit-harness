@@ -1,0 +1,133 @@
+{
+  "jurisdiction": "united_kingdom",
+  "created_at": "2026-05-23T00:00:00Z",
+  "experiment": "public_legal_system_output_pilot",
+  "source_output": {
+    "label": "The National Archives Find Case Law Atom output stream",
+    "method": "top-k ordered records as exposed by the committed public system output snapshot",
+    "top_k": 10,
+    "candidate_count": 150
+  },
+  "records": [
+    {
+      "id": "united-kingdom-2026-ewca-civ-654",
+      "title": "The Winros Partnership v Global Energy Horizons Corporation",
+      "court": "Court of Appeal (Civil Division)",
+      "date": "2026-05-22",
+      "citation": "[2026] EWCA Civ 654",
+      "docket": "d-1a51879a-3458-4a54-ae17-960dfae23c0f",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/654",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "appellate_court",
+      "output_rank": 1
+    },
+    {
+      "id": "united-kingdom-2026-ewhc-1236-comm",
+      "title": "Verum Plus AG (in liquidation) & Ors v Petroineos Trading Limited",
+      "court": "High Court (Commercial Court)",
+      "date": "2026-05-22",
+      "citation": "[2026] EWHC 1236 (Comm)",
+      "docket": "d-f5bb8c1e-90c3-4188-b8d8-c31539cedca2",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/1236",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 2
+    },
+    {
+      "id": "united-kingdom-2026-ewca-civ-641",
+      "title": "Tonzip Maritime (Singapore) PTE Ltd v 2 Rivers PTE Ltd",
+      "court": "Court of Appeal (Civil Division)",
+      "date": "2026-05-22",
+      "citation": "[2026] EWCA Civ 641",
+      "docket": "d-51381bb4-1ae4-445f-86b8-f3bc1b27b93c",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/641",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "appellate_court",
+      "output_rank": 3
+    },
+    {
+      "id": "united-kingdom-2026-eat-74",
+      "title": "DHL Services Limited v Pawel Ignatowicz",
+      "court": "Employment Appeal Tribunal",
+      "date": "2026-05-22",
+      "citation": "[2026] EAT 74",
+      "docket": "d-e1929028-0d11-40e4-a9b5-d97bce09279c",
+      "url": "https://caselaw.nationalarchives.gov.uk/eat/2026/74",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 4
+    },
+    {
+      "id": "united-kingdom-2026-ewca-civ-658",
+      "title": "JSC Commercial Bank Privatbank v Igor Valeryevich Kolomosiky & Anor",
+      "court": "Court of Appeal (Civil Division)",
+      "date": "2026-05-22",
+      "citation": "[2026] EWCA Civ 658",
+      "docket": "d-573cc2f9-6cb1-4879-8664-93a9a38c5154",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/658",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "appellate_court",
+      "output_rank": 5
+    },
+    {
+      "id": "united-kingdom-2026-ewhc-1216-ch",
+      "title": "Aviator LLC & Ors v Stribe Oü & Ors",
+      "court": "High Court (Intellectual Property List)",
+      "date": "2026-05-22",
+      "citation": "[2026] EWHC 1216 (Ch)",
+      "docket": "d-fd91f4b7-203c-43f5-841f-1f2251e68ea6",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1216",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 6
+    },
+    {
+      "id": "united-kingdom-2026-ukftt-763-grc",
+      "title": "The Cabinet Office v The Information Commissioner & Anor",
+      "court": "First-tier Tribunal (General Regulatory Chamber) – Information Rights",
+      "date": "2026-05-22",
+      "citation": "[2026] UKFTT 763 (GRC)",
+      "docket": "d-e09ae739-f6d8-484a-a428-2fedc84e3d75",
+      "url": "https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/763",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 7
+    },
+    {
+      "id": "united-kingdom-2026-ukftt-775-tc",
+      "title": "Athena Luxe Limited v The Commissioners for HMRC",
+      "court": "First-tier Tribunal (Tax Chamber)",
+      "date": "2026-05-22",
+      "citation": "[2026] UKFTT 775 (TC)",
+      "docket": "d-ff19654e-eb65-48a5-93b1-3bd59471fb64",
+      "url": "https://caselaw.nationalarchives.gov.uk/ukftt/tc/2026/775",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 8
+    },
+    {
+      "id": "united-kingdom-2026-ewhc-1254-ch",
+      "title": "James Isilay v AVP Capital A FCPI & Ors",
+      "court": "High Court (Insolvency and Companies List)",
+      "date": "2026-05-22",
+      "citation": "[2026] EWHC 1254 (Ch)",
+      "docket": "d-24a26f0f-aaf3-47c9-9b65-eb48f833f695",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1254",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 9
+    },
+    {
+      "id": "united-kingdom-2026-ewhc-1243-ch",
+      "title": "Fay of London Limited v Axis Speciality Europe SE",
+      "court": "Chancery Appeals",
+      "date": "2026-05-22",
+      "citation": "[2026] EWHC 1243 (Ch)",
+      "docket": "d-61b9ad17-b194-4c4e-8f64-39883a70dad8",
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2026/1243",
+      "source": "The National Archives Find Case Law Atom feed",
+      "authority_level": "court_decision",
+      "output_rank": 10
+    }
+  ]
+}
