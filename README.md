@@ -46,6 +46,7 @@ python scripts/run_gate_ablation_analysis.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
 python scripts/run_full_validation.py
+python scripts/verify_claim_consistency.py
 python -m unittest discover -s tests
 ```
 
@@ -171,6 +172,8 @@ Current coverage:
 | Full-threshold sensitivity | 1150 | Re-evaluates all 230 scenario packets under normative thresholds 8-12. |
 
 The current full validation report covers 230 scenario files containing 609 embedded records/items, 30 public source-text anchor checks, 50 raw model-output transcript locator checks, 51,643 formal invariant checks, 185 metric-separation evaluations and 288 gate-ablation evaluations, plus strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the endpoint-matched public retrieval benchmark, source-supported model-output repair layer, model-output evidence ladder, public source-text anchor layer, transcript-anchor layer, formal-invariant layer, metric-separation layer, gate-ablation layer, adversarial repair layer, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, source-support interventions, external source anchors, negative controls, upstream metric thresholds, procedural-gate removal, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and reports both inter-coder and base-coder agreement.
+
+After running the full matrix, `python scripts/verify_claim_consistency.py` checks that the manuscript, README, artifact guide, skill and generated reports still state the same headline counts as `full_validation_report.json`.
 
 ## Jurisdiction Profiles
 

@@ -1,0 +1,158 @@
+{
+  "check_count": 30,
+  "checks": [
+    {
+      "expected": "- 18 validation suites",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 230 scenario files",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 609 embedded records or output items",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 54,875 total evaluation rows",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 51,643/51,643 formal invariant checks passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 185 metric-separation evaluations",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 288/288 gate-ablation evaluations passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 230/230 scenario-regression expectations passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 30/30 public source-text anchors verified",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 50/50 raw model-output transcript locators verified",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "The expected manuscript build is 33 pages",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "230 scenario files containing 609 embedded records/items",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "51,643 formal invariant checks",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "185 metric-separation evaluations and 288 gate-ablation evaluations",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Metric separation analysis | 185 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Qualified-output gate ablations | 288 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_gate_ablation_analysis.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "Qualified-output gate ablations",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "gate-ablation layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "288/288 gate-ablation evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_gate_ablation_analysis.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "230 scenario packets with 609 embedded records or outputs",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "51,643 formal invariant checks, 185 metric-separation evaluations and 288 gate-ablation evaluations",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Across all 46 qualified packets",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "288/288 counterfactual downgrades",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Qualified-output gate ablations & 288 ablations & 288/288",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Validation suites: 18",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Scenario files: 230",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Gate ablation evaluations: 288/288 passed over 46 qualified packets",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    }
+  ],
+  "failed_count": 0,
+  "failures": [],
+  "passed_count": 30
+}

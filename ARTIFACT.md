@@ -18,6 +18,7 @@ python -m pip install -e .
 
 ```bash
 python scripts/run_full_validation.py
+python scripts/verify_claim_consistency.py
 ```
 
 Expected aggregate output:

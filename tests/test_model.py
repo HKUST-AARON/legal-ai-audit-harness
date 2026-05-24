@@ -228,6 +228,24 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["passed_count"], 288)
         self.assertFalse(payload["failures"])
 
+    def test_claim_consistency_verification_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/verify_claim_consistency.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Claim Consistency Verification", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "claim_consistency" / "results" / "claim_consistency_verification.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["passed_count"], payload["check_count"])
+        self.assertFalse(payload["failures"])
+
     def test_real_case_fixture_shape(self):
         real_scenarios = ROOT / "experiments" / "real_cases" / "scenarios"
         for path in sorted(real_scenarios.glob("*.json")):
