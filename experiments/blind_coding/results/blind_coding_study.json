@@ -1,8 +1,8 @@
 {
   "base_status_agreement": {
     "coder_a": {
-      "exact_status_agreement": 0.94375,
-      "match_count": 151,
+      "exact_status_agreement": 0.9608695652173913,
+      "match_count": 221,
       "mismatch_count": 9,
       "mismatches": [
         "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -15,11 +15,11 @@
         "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
         "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
       ],
-      "weighted_status_agreement": 0.9734375
+      "weighted_status_agreement": 0.9815217391304348
     },
     "coder_b": {
-      "exact_status_agreement": 0.93125,
-      "match_count": 149,
+      "exact_status_agreement": 0.9521739130434783,
+      "match_count": 219,
       "mismatch_count": 11,
       "mismatches": [
         "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -34,7 +34,7 @@
         "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
         "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
       ],
-      "weighted_status_agreement": 0.9640625
+      "weighted_status_agreement": 0.975
     }
   },
   "coder_count": 2,
@@ -43,14 +43,14 @@
     "coder_b"
   ],
   "mean_total_score": {
-    "coder_a": 8.7625,
-    "coder_b": 8.78125
+    "coder_a": 9.31304347826087,
+    "coder_b": 9.326086956521738
   },
-  "packet_count": 160,
+  "packet_count": 230,
   "pairwise_dimensions": [
     {
       "dimension_agreement": {
-        "H": 0.96875,
+        "H": 0.9782608695652174,
         "K": 1.0,
         "L": 1.0,
         "Q": 1.0,
@@ -63,10 +63,10 @@
   ],
   "pairwise_status": [
     {
-      "exact_status_agreement": 0.9875,
+      "exact_status_agreement": 0.991304347826087,
       "left": "coder_a",
       "right": "coder_b",
-      "weighted_status_agreement": 0.990625
+      "weighted_status_agreement": 0.9934782608695653
     }
   ],
   "rows": [
@@ -993,6 +993,2686 @@
       ],
       "base_allowed_status": "normative_material_screening_output",
       "packet_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-01--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-eu-01--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-02--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-eu-02--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-03--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-eu-03--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-04--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-eu-04--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-01--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-uk-01--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-02--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-uk-02--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-03--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-uk-03--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-01--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-us-01--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-02--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-us-02--unauthorized-external-action"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "decision_support_reason",
+      "packet_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-03--raw-unverified"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "T"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 0
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "professional_support_output",
+      "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-counter"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "L"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 0,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-logging"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "system_role:unaccountable_external_disposition->max:no_external_legal_effect"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 12
+        }
+      ],
+      "base_allowed_status": "no_external_legal_effect",
+      "packet_id": "evidence-ladder-codex55-us-03--unauthorized-external-action"
     },
     {
       "annotations": [

@@ -373,6 +373,916 @@
       "notes": "Authority coverage is complete, but every source tag needs verification."
     },
     {
+      "packet_id": "evidence-ladder-codex55-eu-01--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-01--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-01--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-01--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-02--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-03--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-eu-04--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-01--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-02--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-uk-03--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-01--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-02--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--authorized-decision-support",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--contestable-screening",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound, contestable and logged output qualifies as normative material screening."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--raw-unverified",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Unverified model output keeps nonprocedural source tags and pending review."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 0,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks a contestation channel."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-counter",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source links validate, but one issue-defined counter or limiting authority is omitted."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-logging",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Source-bound output lacks audit logging."
+    },
+    {
+      "packet_id": "evidence-ladder-codex55-us-03--unauthorized-external-action",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [],
+      "notes": "The same source-bound output is coupled to irreversible external action without human authorization."
+    },
+    {
       "packet_id": "germany-right-to-be-forgotten-review",
       "scores": {
         "S": 2,

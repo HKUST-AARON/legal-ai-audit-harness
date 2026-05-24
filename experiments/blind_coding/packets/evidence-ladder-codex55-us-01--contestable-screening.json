@@ -1,0 +1,200 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "chevron-as-current-mandatory-deference-rule"
+    ],
+    "retrieved": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134",
+      "chevron-467-us-837",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation for U.S. agency deference after Loper Bright. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "Loper Bright",
+        "source_id": "loper-bright-603-us-369",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-1",
+        "validated_source_support": [
+          {
+            "locator": "603 U.S. 369 (2024)",
+            "matched_terms": [
+              "loper bright",
+              "overruled chevron",
+              "statutory interpretation"
+            ],
+            "support_id": "loper-bright-603-us-369-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "loper bright",
+          "overruled chevron",
+          "statutory interpretation"
+        ]
+      },
+      {
+        "locator": "5 U.S.C. 706",
+        "source_id": "apa-5-usc-706",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-2",
+        "validated_source_support": [
+          {
+            "locator": "5 U.S.C. 706",
+            "matched_terms": [
+              "section 706"
+            ],
+            "support_id": "apa-5-usc-706-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "section 706"
+        ]
+      },
+      {
+        "locator": "323 U.S. 134",
+        "source_id": "skidmore-323-us-134",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-3",
+        "validated_source_support": [
+          {
+            "locator": "323 U.S. 134 (1944)",
+            "matched_terms": [
+              "skidmore",
+              "persuasive",
+              "respect"
+            ],
+            "support_id": "skidmore-323-us-134-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "persuasive",
+          "respect",
+          "skidmore"
+        ]
+      },
+      {
+        "locator": "Kisor v. Wilkie",
+        "source_id": "kisor-588-us-558",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-4",
+        "validated_source_support": [
+          {
+            "locator": "588 U.S. 558 (2019)",
+            "matched_terms": [
+              "kisor",
+              "agency regulations",
+              "regulations"
+            ],
+            "support_id": "kisor-588-us-558-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "agency regulations",
+          "kisor",
+          "regulations"
+        ]
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Loper Bright overruled Chevron deference for agency statutory interpretation.",
+        "id": "unit-1",
+        "locators": [
+          "Loper Bright"
+        ],
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "APA section 706 requires independent judicial judgment.",
+        "id": "unit-2",
+        "locators": [
+          "5 U.S.C. 706"
+        ],
+        "source_ids": [
+          "apa-5-usc-706"
+        ]
+      },
+      {
+        "claim": "Skidmore remains relevant as persuasive respect.",
+        "id": "unit-3",
+        "locators": [
+          "323 U.S. 134"
+        ],
+        "source_ids": [
+          "skidmore-323-us-134"
+        ]
+      },
+      {
+        "claim": "Kisor remains separate for interpretations of agency regulations.",
+        "id": "unit-4",
+        "locators": [
+          "Kisor v. Wilkie"
+        ],
+        "source_ids": [
+          "kisor-588-us-558"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "evidence-ladder-codex55-us-01--contestable-screening",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "united_states_federal_administrative_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": 0.97,
+    "precision": 0.95,
+    "recall": 1.0
+  },
+  "upstream_output": {
+    "capture_mode": "no_browse_no_tools",
+    "model": "gpt-5.5",
+    "provider": "codex",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-us-01",
+    "reasoning_effort": "xhigh"
+  }
+}

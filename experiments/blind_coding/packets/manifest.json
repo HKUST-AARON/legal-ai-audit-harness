@@ -210,6 +210,356 @@
     "packet_path": "experiments/blind_coding/packets/source-bound-codex55-us-03.json"
   },
   {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-01--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-01--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-01--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-01--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-02--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-02--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-02--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-02--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-02--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-02--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-03--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-03--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-03--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-03--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-03--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-03--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-04--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-04--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-04--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-eu-04--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-eu-04--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-04--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-uk-01--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-01--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-01--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-01--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-uk-01--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-01--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-uk-02--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-02--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-02--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-02--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-uk-02--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-02--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-uk-03--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-03--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-03--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-uk-03--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-uk-03--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-uk-03--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-us-01--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-01--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-01--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-01--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-us-01--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-01--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-us-02--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-02--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-02--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-us-02--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-02--unauthorized-external-action.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-us-03--authorized-decision-support",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--authorized-decision-support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-03--contestable-screening",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--contestable-screening.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-03--raw-unverified",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--raw-unverified.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-counter",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--source-bound-no-counter.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "evidence-ladder-codex55-us-03--source-bound-no-logging",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--source-bound-no-logging.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "evidence-ladder-codex55-us-03--unauthorized-external-action",
+    "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-us-03--unauthorized-external-action.json"
+  },
+  {
     "claimed_status": "normative_material_screening_output",
     "packet_id": "source-bound-codex55-eu-01--contradictory-claim",
     "packet_path": "experiments/blind_coding/packets/source-bound-codex55-eu-01--contradictory-claim.json"

@@ -1,15 +1,15 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 158,
-    "scenario_count": 160,
-    "weighted_status_agreement_base_lenient": 1.0,
-    "weighted_status_agreement_base_strict": 0.9925320886814469
+    "all_policy_status_stable": 218,
+    "scenario_count": 230,
+    "weighted_status_agreement_base_lenient": 0.9815246204514418,
+    "weighted_status_agreement_base_strict": 0.9961178158494388
   },
   "blind_coding": {
     "base_status_agreement": {
       "coder_a": {
-        "exact_status_agreement": 0.94375,
-        "match_count": 151,
+        "exact_status_agreement": 0.9608695652173913,
+        "match_count": 221,
         "mismatch_count": 9,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -22,11 +22,11 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "weighted_status_agreement": 0.9734375
+        "weighted_status_agreement": 0.9815217391304348
       },
       "coder_b": {
-        "exact_status_agreement": 0.93125,
-        "match_count": 149,
+        "exact_status_agreement": 0.9521739130434783,
+        "match_count": 219,
         "mismatch_count": 11,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -41,35 +41,36 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "weighted_status_agreement": 0.9640625
+        "weighted_status_agreement": 0.975
       }
     },
     "coder_count": 2,
-    "packet_count": 160,
+    "packet_count": 230,
     "pairwise_status": [
       {
-        "exact_status_agreement": 0.9875,
+        "exact_status_agreement": 0.991304347826087,
         "left": "coder_a",
         "right": "coder_b",
-        "weighted_status_agreement": 0.990625
+        "weighted_status_agreement": 0.9934782608695653
       }
     ],
     "status_disagreement_count": 2
   },
-  "blind_coding_evaluations": 320,
+  "blind_coding_evaluations": 460,
   "blocked_reason_distribution": {
     "authority_omission": 5,
     "contestation_failure": 1,
-    "counter_material_suppression": 17,
+    "counter_material_suppression": 27,
     "invalid_authority": 1,
-    "source_attribution_gap": 75,
-    "summary_distortion": 21
+    "source_attribution_gap": 95,
+    "summary_distortion": 21,
+    "unauthorized_action": 10
   },
-  "expected_passed": 160,
-  "expected_total": 160,
-  "high_upstream_but_blocked": 88,
-  "recoded_evaluations": 320,
-  "scenario_files": 160,
+  "expected_passed": 230,
+  "expected_total": 230,
+  "high_upstream_but_blocked": 128,
+  "recoded_evaluations": 460,
+  "scenario_files": 230,
   "source_text_anchor_evaluations": 30,
   "source_text_verification": {
     "record_count": 30,
@@ -78,7 +79,7 @@
     "support_items_verified": 30,
     "verified_ratio": 1.0
   },
-  "suite_count": 13,
+  "suite_count": 14,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -210,6 +211,30 @@
     {
       "blocked_reason_distribution": {
         "counter_material_suppression": 10,
+        "source_attribution_gap": 20,
+        "unauthorized_action": 10
+      },
+      "evidence_class": "controlled model-output intervention",
+      "expected_passed": 70,
+      "finding": "Tests the same model outputs across raw, source-bound, counter-material, contestability, logging, authorized-adoption and unauthorized-action conditions.",
+      "high_upstream_but_blocked": 40,
+      "id": "model_output_evidence_ladder",
+      "label": "Model-output evidence ladder",
+      "mean_audit_score": 10.571428571428571,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 70,
+      "status_distribution": {
+        "decision_support_reason": 10,
+        "no_external_legal_effect": 10,
+        "normative_material_screening_output": 10,
+        "professional_support_output": 10,
+        "reference_information": 30
+      },
+      "validation_units": "70 evidence-ladder model-output variants"
+    },
+    {
+      "blocked_reason_distribution": {
+        "counter_material_suppression": 10,
         "source_attribution_gap": 60,
         "summary_distortion": 20
       },
@@ -289,13 +314,13 @@
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "158/160 stable across all policies",
-      "scenario_count": 160,
+      "rule_pass": "218/230 stable across all policies",
+      "scenario_count": 230,
       "status_distribution": {
-        "base_vs_lenient_weighted_agreement": 1.0,
-        "base_vs_strict_weighted_agreement": 0.99
+        "base_vs_lenient_weighted_agreement": 0.98,
+        "base_vs_strict_weighted_agreement": 1.0
       },
-      "validation_units": "320 strict/lenient recoded evaluations"
+      "validation_units": "460 strict/lenient recoded evaluations"
     },
     {
       "evidence_class": "codebook reproducibility",
@@ -305,14 +330,14 @@
       "label": "Score-blinded dual coding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.99 coder agreement; 0.93 min base agreement",
-      "scenario_count": 160,
+      "rule_pass": "0.99 coder agreement; 0.95 min base agreement",
+      "scenario_count": 230,
       "status_distribution": {
         "coder_weighted_status_agreement": 0.99,
-        "min_base_weighted_status_agreement": 0.96,
+        "min_base_weighted_status_agreement": 0.97,
         "status_disagreements": 2
       },
-      "validation_units": "160 packets x 2 coding passes"
+      "validation_units": "230 packets x 2 coding passes"
     }
   ],
   "threshold_sensitivity": {
@@ -327,11 +352,11 @@
         "normative_threshold": 8,
         "promotions_from_default": 0,
         "status_distribution": {
-          "decision_support_reason": 2,
-          "no_external_legal_effect": 22,
-          "normative_material_screening_output": 24,
-          "professional_support_output": 13,
-          "reference_information": 99
+          "decision_support_reason": 12,
+          "no_external_legal_effect": 32,
+          "normative_material_screening_output": 34,
+          "professional_support_output": 23,
+          "reference_information": 129
         },
         "status_flips_from_default": 0
       },
@@ -341,11 +366,11 @@
         "normative_threshold": 9,
         "promotions_from_default": 0,
         "status_distribution": {
-          "decision_support_reason": 2,
-          "no_external_legal_effect": 22,
-          "normative_material_screening_output": 24,
-          "professional_support_output": 13,
-          "reference_information": 99
+          "decision_support_reason": 12,
+          "no_external_legal_effect": 32,
+          "normative_material_screening_output": 34,
+          "professional_support_output": 23,
+          "reference_information": 129
         },
         "status_flips_from_default": 0
       },
@@ -355,11 +380,11 @@
         "normative_threshold": 10,
         "promotions_from_default": 0,
         "status_distribution": {
-          "decision_support_reason": 2,
-          "no_external_legal_effect": 22,
-          "normative_material_screening_output": 24,
-          "professional_support_output": 13,
-          "reference_information": 99
+          "decision_support_reason": 12,
+          "no_external_legal_effect": 32,
+          "normative_material_screening_output": 34,
+          "professional_support_output": 23,
+          "reference_information": 129
         },
         "status_flips_from_default": 0
       },
@@ -369,36 +394,37 @@
         "normative_threshold": 11,
         "promotions_from_default": 0,
         "status_distribution": {
-          "decision_support_reason": 2,
-          "no_external_legal_effect": 22,
-          "normative_material_screening_output": 22,
-          "professional_support_output": 15,
-          "reference_information": 99
+          "decision_support_reason": 12,
+          "no_external_legal_effect": 32,
+          "normative_material_screening_output": 32,
+          "professional_support_output": 25,
+          "reference_information": 129
         },
         "status_flips_from_default": 2
       },
       {
         "decision_threshold": 13,
-        "demotions_from_default": 21,
+        "demotions_from_default": 41,
         "normative_threshold": 12,
         "promotions_from_default": 0,
         "status_distribution": {
-          "no_external_legal_effect": 22,
-          "normative_material_screening_output": 7,
-          "professional_support_output": 32,
-          "reference_information": 99
+          "no_external_legal_effect": 32,
+          "normative_material_screening_output": 17,
+          "professional_support_output": 52,
+          "reference_information": 129
         },
-        "status_flips_from_default": 21
+        "status_flips_from_default": 41
       }
     ],
-    "scenario_count": 160
+    "scenario_count": 230
   },
-  "threshold_sensitivity_evaluations": 800,
-  "total_evaluation_rows": 2009,
+  "threshold_sensitivity_evaluations": 1150,
+  "total_evaluation_rows": 2709,
   "validation_units": {
     "adversarial_model_outputs": 60,
-    "annotation_recodings": 320,
-    "blind_coding_packets": 160,
+    "annotation_recodings": 460,
+    "blind_coding_packets": 230,
+    "evidence_ladder_model_outputs": 70,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
@@ -410,7 +436,7 @@
     "source_text_anchor_checks": 30,
     "source_text_anchor_verified": 30,
     "stress_scenarios": 10,
-    "threshold_sensitivity_evaluations": 800,
-    "total": 539
+    "threshold_sensitivity_evaluations": 1150,
+    "total": 609
   }
 }

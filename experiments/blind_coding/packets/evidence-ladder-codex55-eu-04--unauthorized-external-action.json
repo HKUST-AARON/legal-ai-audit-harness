@@ -1,0 +1,253 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "article-15-4-as-blanket-refusal-ground",
+      "recipient-categories-only-as-default-under-article-15-1-c"
+    ],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif",
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "decision_support_reason",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation distinguishing GDPR Articles 15(1)(c), 15(3), and 15(4). Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "Article 15(1)(c)",
+        "source_id": "gdpr-art-15",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-1",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15",
+            "matched_terms": [
+              "article 15",
+              "recipients"
+            ],
+            "support_id": "gdpr-art-15-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15",
+          "recipients"
+        ]
+      },
+      {
+        "locator": "C-154/21",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-1",
+        "validated_source_support": [
+          {
+            "locator": "Case C-154/21",
+            "matched_terms": [
+              "c-154/21",
+              "recipients"
+            ],
+            "support_id": "cjeu-c-154-21-osterreichische-post-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "c-154/21",
+          "recipients"
+        ]
+      },
+      {
+        "locator": "Article 15(3)",
+        "source_id": "gdpr-art-15",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-2",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15",
+            "matched_terms": [
+              "article 15",
+              "personal data"
+            ],
+            "support_id": "gdpr-art-15-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15",
+          "personal data"
+        ]
+      },
+      {
+        "locator": "C-487/21",
+        "source_id": "cjeu-c-487-21-crif",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-2",
+        "validated_source_support": [
+          {
+            "locator": "Case C-487/21",
+            "matched_terms": [
+              "c-487/21",
+              "faithful",
+              "intelligible",
+              "personal data"
+            ],
+            "support_id": "cjeu-c-487-21-crif-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "c-487/21",
+          "faithful",
+          "intelligible",
+          "personal data"
+        ]
+      },
+      {
+        "locator": "Article 15(4)",
+        "source_id": "gdpr-art-15-4",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-3",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15(4)",
+            "matched_terms": [
+              "article 15(4)",
+              "blanket"
+            ],
+            "support_id": "gdpr-art-15-4-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15(4)",
+          "blanket"
+        ]
+      },
+      {
+        "locator": "Article 12(5)",
+        "source_id": "gdpr-art-12-5",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-4",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 12(5)",
+            "matched_terms": [
+              "article 12(5)",
+              "abusive",
+              "disproportionate"
+            ],
+            "support_id": "gdpr-art-12-5-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "abusive",
+          "article 12(5)",
+          "disproportionate"
+        ]
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Article 15(1)(c) concerns specific recipients and C-154/21.",
+        "id": "unit-1",
+        "locators": [
+          "Article 15(1)(c)",
+          "C-154/21"
+        ],
+        "source_ids": [
+          "gdpr-art-15",
+          "cjeu-c-154-21-osterreichische-post"
+        ]
+      },
+      {
+        "claim": "Article 15(3) concerns faithful and intelligible copies of personal data and C-487/21.",
+        "id": "unit-2",
+        "locators": [
+          "Article 15(3)",
+          "C-487/21"
+        ],
+        "source_ids": [
+          "gdpr-art-15",
+          "cjeu-c-487-21-crif"
+        ]
+      },
+      {
+        "claim": "Article 15(4) limits the copy right but is not a blanket defence.",
+        "id": "unit-3",
+        "locators": [
+          "Article 15(4)"
+        ],
+        "source_ids": [
+          "gdpr-art-15-4"
+        ]
+      },
+      {
+        "claim": "Article 12(5) governs abusive or disproportionate requests.",
+        "id": "unit-4",
+        "locators": [
+          "Article 12(5)"
+        ],
+        "source_ids": [
+          "gdpr-art-12-5"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "evidence-ladder-codex55-eu-04--unauthorized-external-action",
+  "review_gate": {
+    "adoption_reasons_recorded": true,
+    "attorney_review_required": true,
+    "contestation_recorded": true,
+    "human_authorization": false,
+    "irreversible_action": true,
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law"
+    ],
+    "reliance_gate": "authorized_adoption",
+    "review_status": "completed"
+  },
+  "system_role": "unaccountable_external_disposition",
+  "upstream_metrics": {
+    "f1": 0.97,
+    "precision": 0.95,
+    "recall": 1.0
+  },
+  "upstream_output": {
+    "capture_mode": "no_browse_no_tools",
+    "model": "gpt-5.5",
+    "provider": "codex",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-04",
+    "reasoning_effort": "xhigh"
+  }
+}

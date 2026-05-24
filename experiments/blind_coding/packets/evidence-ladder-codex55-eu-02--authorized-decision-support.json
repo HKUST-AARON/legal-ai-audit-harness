@@ -1,0 +1,228 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-487-21-crif",
+      "cjeu-c-307-22-ft"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "summary-table-always-sufficient-under-article-15-3"
+    ],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-487-21-crif",
+      "cjeu-c-307-22-ft",
+      "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-12-5",
+      "gdpr-art-15-4",
+      "edpb-guidelines-01-2022"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-487-21-crif",
+      "cjeu-c-307-22-ft"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "decision_support_reason",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15(3) copy of personal data. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "Article 15(3)",
+        "source_id": "gdpr-art-15",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-1",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15",
+            "matched_terms": [
+              "article 15",
+              "personal data"
+            ],
+            "support_id": "gdpr-art-15-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15",
+          "personal data"
+        ]
+      },
+      {
+        "locator": "C-487/21",
+        "source_id": "cjeu-c-487-21-crif",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-2",
+        "validated_source_support": [
+          {
+            "locator": "Case C-487/21",
+            "matched_terms": [
+              "c-487/21",
+              "faithful",
+              "intelligible",
+              "copy",
+              "personal data"
+            ],
+            "support_id": "cjeu-c-487-21-crif-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "c-487/21",
+          "copy",
+          "faithful",
+          "intelligible",
+          "personal data"
+        ]
+      },
+      {
+        "locator": "C-307/22",
+        "source_id": "cjeu-c-307-22-ft",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-3",
+        "validated_source_support": [
+          {
+            "locator": "Case C-307/22",
+            "matched_terms": [
+              "c-307/22",
+              "first free copy",
+              "medical-record"
+            ],
+            "support_id": "cjeu-c-307-22-ft-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "c-307/22",
+          "first free copy",
+          "medical-record"
+        ]
+      },
+      {
+        "locator": "Article 15(4)",
+        "source_id": "gdpr-art-15-4",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-4",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15(4)",
+            "matched_terms": [
+              "article 15(4)"
+            ],
+            "support_id": "gdpr-art-15-4-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15(4)"
+        ]
+      },
+      {
+        "locator": "Article 12(5)",
+        "source_id": "gdpr-art-12-5",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-4",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 12(5)",
+            "matched_terms": [
+              "article 12(5)"
+            ],
+            "support_id": "gdpr-art-12-5-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 12(5)"
+        ]
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "GDPR Article 15(3) concerns a copy of personal data.",
+        "id": "unit-1",
+        "locators": [
+          "Article 15(3)"
+        ],
+        "source_ids": [
+          "gdpr-art-15"
+        ]
+      },
+      {
+        "claim": "C-487/21 CRIF defines copy as faithful and intelligible reproduction of personal data.",
+        "id": "unit-2",
+        "locators": [
+          "C-487/21"
+        ],
+        "source_ids": [
+          "cjeu-c-487-21-crif"
+        ]
+      },
+      {
+        "claim": "C-307/22 FT concerns the first free copy and medical-record personal data.",
+        "id": "unit-3",
+        "locators": [
+          "C-307/22"
+        ],
+        "source_ids": [
+          "cjeu-c-307-22-ft"
+        ]
+      },
+      {
+        "claim": "Article 15(4) and Article 12(5) limit the access response.",
+        "id": "unit-4",
+        "locators": [
+          "Article 15(4)",
+          "Article 12(5)"
+        ],
+        "source_ids": [
+          "gdpr-art-15-4",
+          "gdpr-art-12-5"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "evidence-ladder-codex55-eu-02--authorized-decision-support",
+  "review_gate": {
+    "adoption_reasons_recorded": true,
+    "attorney_review_required": true,
+    "contestation_recorded": true,
+    "human_authorization": true,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law"
+    ],
+    "reliance_gate": "authorized_adoption",
+    "review_status": "completed"
+  },
+  "system_role": "authorized_decision_support_tool",
+  "upstream_metrics": {
+    "f1": 0.96,
+    "precision": 0.93,
+    "recall": 1.0
+  },
+  "upstream_output": {
+    "capture_mode": "no_browse_no_tools",
+    "model": "gpt-5.5",
+    "provider": "codex",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-02",
+    "reasoning_effort": "xhigh"
+  }
+}

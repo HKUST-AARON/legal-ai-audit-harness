@@ -353,6 +353,49 @@ class AuditModelTest(unittest.TestCase):
             },
         )
 
+    def test_model_output_evidence_ladder_statuses(self):
+        subprocess.run(
+            [sys.executable, "scripts/build_model_output_evidence_ladder.py"],
+            cwd=ROOT,
+            check=True,
+        )
+        paths = sorted((ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios").glob("*.json"))
+        self.assertEqual(len(paths), 70)
+        statuses = {}
+        dispositions = {}
+        steps = {}
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            result = evaluate_scenario(scenario)
+            self.assertTrue(result.expected_passed, path.name)
+            statuses[result.allowed_status] = statuses.get(result.allowed_status, 0) + 1
+            dispositions[result.disposition] = dispositions.get(result.disposition, 0) + 1
+            step = scenario["evidence_ladder_step"]["step"]
+            steps[step] = steps.get(step, 0) + 1
+        self.assertEqual(
+            statuses,
+            {
+                "decision_support_reason": 10,
+                "no_external_legal_effect": 10,
+                "normative_material_screening_output": 10,
+                "professional_support_output": 10,
+                "reference_information": 30,
+            },
+        )
+        self.assertEqual(dispositions, {"downgrade": 10, "none": 40, "suspension": 10, "withdrawal": 10})
+        self.assertEqual(
+            steps,
+            {
+                "authorized-decision-support": 10,
+                "contestable-screening": 10,
+                "raw-unverified": 10,
+                "source-bound-no-contestability": 10,
+                "source-bound-no-counter": 10,
+                "source-bound-no-logging": 10,
+                "unauthorized-external-action": 10,
+            },
+        )
+
     def test_issue_specific_public_outputs_shape(self):
         paths = sorted((ROOT / "experiments" / "issue_public_outputs" / "scenarios").glob("*.json"))
         self.assertEqual(len(paths), 3)
@@ -402,32 +445,33 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 13)
-        self.assertEqual(report["scenario_files"], 160)
-        self.assertEqual(report["validation_units"]["total"], 539)
+        self.assertEqual(report["suite_count"], 14)
+        self.assertEqual(report["scenario_files"], 230)
+        self.assertEqual(report["validation_units"]["total"], 609)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
         self.assertEqual(report["validation_units"]["source_bound_model_outputs"], 10)
+        self.assertEqual(report["validation_units"]["evidence_ladder_model_outputs"], 70)
         self.assertEqual(report["validation_units"]["adversarial_model_outputs"], 60)
         self.assertEqual(report["validation_units"]["issue_public_records"], 19)
         self.assertEqual(report["validation_units"]["issue_gold_sets"], 5)
         self.assertEqual(report["validation_units"]["issue_ablations"], 20)
-        self.assertEqual(report["validation_units"]["annotation_recodings"], 320)
-        self.assertEqual(report["blind_coding_evaluations"], 320)
-        self.assertEqual(report["validation_units"]["blind_coding_packets"], 160)
-        self.assertEqual(report["threshold_sensitivity_evaluations"], 800)
-        self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 800)
+        self.assertEqual(report["validation_units"]["annotation_recodings"], 460)
+        self.assertEqual(report["blind_coding_evaluations"], 460)
+        self.assertEqual(report["validation_units"]["blind_coding_packets"], 230)
+        self.assertEqual(report["threshold_sensitivity_evaluations"], 1150)
+        self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 1150)
         self.assertEqual(report["source_text_anchor_evaluations"], 30)
         self.assertEqual(report["validation_units"]["source_text_anchor_checks"], 30)
         self.assertEqual(report["validation_units"]["source_text_anchor_verified"], 30)
-        self.assertEqual(report["total_evaluation_rows"], 2009)
-        self.assertEqual(report["expected_passed"], 160)
-        self.assertEqual(report["expected_total"], 160)
-        self.assertEqual(report["annotation_robustness"]["scenario_count"], 160)
-        self.assertEqual(report["blind_coding"]["packet_count"], 160)
+        self.assertEqual(report["total_evaluation_rows"], 2709)
+        self.assertEqual(report["expected_passed"], 230)
+        self.assertEqual(report["expected_total"], 230)
+        self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
+        self.assertEqual(report["blind_coding"]["packet_count"], 230)
         self.assertIn("base_status_agreement", report["blind_coding"])
-        self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 160)
+        self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 230)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
-        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 75)
+        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 95)
         self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 21)
         self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
@@ -458,14 +502,19 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "annotation_robustness" / "results" / "annotation_robustness.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["scenario_count"], 160)
-        self.assertEqual(report["recoded_evaluations"], 320)
+        self.assertEqual(report["scenario_count"], 230)
+        self.assertEqual(report["recoded_evaluations"], 460)
         self.assertGreaterEqual(report["weighted_status_agreement_base_strict"], 0.9)
-        self.assertGreaterEqual(report["all_policy_status_stable"], 140)
+        self.assertGreaterEqual(report["all_policy_status_stable"], 210)
 
     def test_blind_coding_study_report_shape(self):
         subprocess.run(
             [sys.executable, "scripts/build_model_output_adversarial.py"],
+            cwd=ROOT,
+            check=True,
+        )
+        subprocess.run(
+            [sys.executable, "scripts/build_model_output_evidence_ladder.py"],
             cwd=ROOT,
             check=True,
         )
@@ -483,7 +532,7 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "blind_coding" / "results" / "blind_coding_study.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["packet_count"], 160)
+        self.assertEqual(report["packet_count"], 230)
         self.assertEqual(report["coder_count"], 2)
         self.assertGreaterEqual(report["pairwise_status"][0]["exact_status_agreement"], 0.9)
         base_agreements = report["base_status_agreement"].values()

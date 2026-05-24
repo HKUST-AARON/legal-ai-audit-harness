@@ -1,10 +1,10 @@
 {
-  "all_policy_status_stable": 158,
-  "lenient_status_stable": 160,
-  "mean_score_delta_lenient": 1.11875,
-  "mean_score_delta_strict": 0.875,
+  "all_policy_status_stable": 218,
+  "lenient_status_stable": 220,
+  "mean_score_delta_lenient": 0.8652173913043478,
+  "mean_score_delta_strict": 0.782608695652174,
   "policy_count": 3,
-  "recoded_evaluations": 320,
+  "recoded_evaluations": 460,
   "rows": [
     {
       "base": {
@@ -1660,6 +1660,1616 @@
         "claim_supported": true,
         "disposition": "none",
         "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-01--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-02--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-03--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-eu-04--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-01--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-02--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-uk-03--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-us-01--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-us-02--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--raw-unverified",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--raw-unverified.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-counter",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-counter.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-logging",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-logging.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
+      },
+      "scenario_id": "evidence-ladder-codex55-us-03--unauthorized-external-action",
+      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--unauthorized-external-action.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 12
       }
     },
     {
@@ -3687,8 +5297,8 @@
       }
     }
   ],
-  "scenario_count": 160,
-  "strict_status_stable": 158,
-  "weighted_status_agreement_base_lenient": 1.0,
-  "weighted_status_agreement_base_strict": 0.9925320886814469
+  "scenario_count": 230,
+  "strict_status_stable": 228,
+  "weighted_status_agreement_base_lenient": 0.9815246204514418,
+  "weighted_status_agreement_base_strict": 0.9961178158494388
 }

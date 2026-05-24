@@ -84,6 +84,16 @@ SUITES = [
         "finding": "Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.",
     },
     {
+        "id": "model_output_evidence_ladder",
+        "label": "Model-output evidence ladder",
+        "path": ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios",
+        "out": ROOT / "experiments" / "model_output_evidence_ladder" / "results" / "model_output_evidence_ladder_experiment.md",
+        "json_out": ROOT / "experiments" / "model_output_evidence_ladder" / "results" / "model_output_evidence_ladder_experiment.json",
+        "unit_label": "evidence-ladder model-output variants",
+        "evidence_class": "controlled model-output intervention",
+        "finding": "Tests the same model outputs across raw, source-bound, counter-material, contestability, logging, authorized-adoption and unauthorized-action conditions.",
+    },
+    {
         "id": "model_output_adversarial",
         "label": "Adversarial source-support repairs",
         "path": ROOT / "experiments" / "model_output_adversarial" / "scenarios",
@@ -123,6 +133,7 @@ def main() -> int:
     _run([sys.executable, "scripts/collect_issue_public_outputs.py"])
     _run([sys.executable, "scripts/collect_public_retrieval_benchmark.py"])
     _run([sys.executable, "scripts/build_model_output_repairs.py"])
+    _run([sys.executable, "scripts/build_model_output_evidence_ladder.py"])
     _run([sys.executable, "scripts/build_model_output_adversarial.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
@@ -284,6 +295,7 @@ def _validation_units() -> dict[str, int]:
         "public_retrieval_records": _output_unit_count(ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios"),
         "raw_model_outputs": _scenario_count(ROOT / "experiments" / "ai_outputs" / "scenarios"),
         "source_bound_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_repairs" / "scenarios"),
+        "evidence_ladder_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios"),
         "adversarial_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_adversarial" / "scenarios"),
         "issue_public_records": _output_unit_count(ROOT / "experiments" / "issue_public_outputs" / "scenarios"),
         "issue_gold_sets": _scenario_count(ROOT / "experiments" / "issue_gold_sets" / "scenarios"),
@@ -371,6 +383,7 @@ def _suite_validation_units(suite: dict) -> str:
         "stress scenarios",
         "raw model outputs",
         "source-supported model-output variants",
+        "evidence-ladder model-output variants",
         "adversarial source-support variants",
         "curated issue packets",
         "issue-packet ablations",
@@ -452,6 +465,7 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['public_retrieval_records']} public retrieval records, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
         f"{payload['validation_units']['source_bound_model_outputs']} source-supported model-output variants, "
+        f"{payload['validation_units']['evidence_ladder_model_outputs']} evidence-ladder model-output variants, "
         f"{payload['validation_units']['adversarial_model_outputs']} adversarial source-support variants, "
         f"{payload['validation_units']['issue_public_records']} issue-specific public output/source records, "
         f"{payload['validation_units']['issue_gold_sets']} mixed-authority source-screening packets, "

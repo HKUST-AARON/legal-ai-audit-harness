@@ -144,15 +144,16 @@ Current coverage:
 | Endpoint-matched public retrieval benchmark | 225 | Tests public case-law or known-item outputs against authority sets the endpoint can return, while mixed-authority gaps are recorded separately. |
 | Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
 | Source-supported model-output repairs | 10 | Tests whether the same model outputs qualify only after manifest, locator, hashed source-support excerpt, procedural source-tag and issue-set validation. |
+| Model-output evidence ladder | 70 | Tests the same model outputs across raw, source-bound, counter-material, contestability, logging, authorized-adoption and unauthorized-action conditions. |
 | Adversarial source-support repairs | 60 | Tests whether locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions are rejected. |
 | Public source-text anchors | 30 | Checks manifest support terms against extracted public source text snapshots; current result is 30/30 verified across 30 records with snapshots. |
 | Mixed-authority public source-screening packets | 5 | Tests normative material screening with source-bound statute, case and public-source packets. |
 | Issue-defined ablations | 20 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
-| Annotation robustness recoding | 320 | Re-scores all 160 scenario packets under strict and lenient coding policies to test status stability. |
-| Score-blinded dual coding | 320 | Two coding passes score all 160 packets without original scores or expected outcomes, then compare coder-coder and base-coder status agreement. |
-| Full-threshold sensitivity | 800 | Re-evaluates all 160 scenario packets under normative thresholds 8-12. |
+| Annotation robustness recoding | 460 | Re-scores all 230 scenario packets under strict and lenient coding policies to test status stability. |
+| Score-blinded dual coding | 460 | Two coding passes score all 230 packets without original scores or expected outcomes, then compare coder-coder and base-coder status agreement. |
+| Full-threshold sensitivity | 1150 | Re-evaluates all 230 scenario packets under normative thresholds 8-12. |
 
-The current full validation report covers 160 scenario files containing 539 embedded records/items, 30 public source-text anchor checks, plus strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the endpoint-matched public retrieval benchmark, source-supported model-output repair layer, public source-text anchor layer, adversarial repair layer, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, source-support interventions, external source anchors, negative controls, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and reports both inter-coder and base-coder agreement.
+The current full validation report covers 230 scenario files containing 609 embedded records/items, 30 public source-text anchor checks, plus strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the endpoint-matched public retrieval benchmark, source-supported model-output repair layer, model-output evidence ladder, public source-text anchor layer, adversarial repair layer, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, source-support interventions, external source anchors, negative controls, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and reports both inter-coder and base-coder agreement.
 
 ## Jurisdiction Profiles
 
@@ -198,7 +199,7 @@ The current mixed-authority packets cover:
 - Canadian administrative-law standard of review after `Vavilov`, including the companion Supreme Court of Canada decisions and historical `Dunsmuir` framework;
 - German/EU right-to-be-forgotten review, including the Federal Constitutional Court decisions and the EU fundamental-rights materials they interact with.
 
-The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 160 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
+The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 230 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
 
 The issue-ablation suite is generated from the same issue packets:
 
@@ -217,7 +218,7 @@ The repository includes a coding-uncertainty experiment:
 python scripts/run_annotation_robustness.py
 ```
 
-The script re-scores all 160 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
+The script re-scores all 230 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
 
 ## Score-Blinded Dual Coding Study
 
@@ -228,7 +229,7 @@ python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 ```
 
-The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 160 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 230 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
 
 ## Raw Model Output Pilot
 
@@ -248,6 +249,15 @@ python -m audit_harness.cli experiment experiments/model_output_repairs/scenario
 ```
 
 The builder does not simply assign higher scores. It validates each repaired output-source link against the issue manifest, locator, hashed manifest source-support excerpt, contradiction patterns, procedural source tag and high-authority/counter-material coverage before writing `source_binding_validation` and the derived audit-vector scores. The current result is the paired contrast used in the paper: all ten raw outputs remain `reference_information`; all ten manifest-backed validator repairs qualify as `normative_material_screening_output`.
+
+The model-output evidence ladder extends the paired contrast into seven controlled conditions over the same ten outputs:
+
+```bash
+python scripts/build_model_output_evidence_ladder.py
+python -m audit_harness.cli experiment experiments/model_output_evidence_ladder/scenarios --out experiments/model_output_evidence_ladder/results/model_output_evidence_ladder_experiment.md --json-out experiments/model_output_evidence_ladder/results/model_output_evidence_ladder_experiment.json
+```
+
+The current ladder result is 70/70 expected outcomes passed: 10 decision-support reasons, 10 no-effect outputs, 10 normative-material screening outputs, 10 professional-support outputs and 30 reference-information outputs.
 
 The adversarial repair layer then attacks the same repair gate:
 
@@ -305,6 +315,7 @@ experiments/issue_public_outputs/  issue-specific public output snapshots and sc
 experiments/public_retrieval_benchmark/ public search snapshots and issue benchmark outputs
 experiments/blind_coding/          score-blinded packets and dual-coding outputs
 experiments/ai_outputs/            raw Codex model-output pilot and scored scenarios
+experiments/model_output_evidence_ladder/ controlled model-output evidence interventions
 experiments/real_cases/            public metadata snapshots, manifests and outputs
 experiments/public_system_outputs/ ordered public output snapshots and pilot outputs
 tests/                  unit tests

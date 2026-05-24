@@ -1,14 +1,14 @@
 # Annotation Robustness Study
 
-Base scenarios: 160
-Strict/lenient recoded evaluations: 320
-Strict status stable: 158/160
-Lenient status stable: 160/160
-Stable under all coding policies: 158/160
-Mean score delta, strict: 0.88
-Mean score delta, lenient: 1.12
-Weighted status agreement, base vs strict: 0.99
-Weighted status agreement, base vs lenient: 1.00
+Base scenarios: 230
+Strict/lenient recoded evaluations: 460
+Strict status stable: 228/230
+Lenient status stable: 220/230
+Stable under all coding policies: 218/230
+Mean score delta, strict: 0.78
+Mean score delta, lenient: 0.87
+Weighted status agreement, base vs strict: 1.00
+Weighted status agreement, base vs lenient: 0.98
 
 ## Status Stability
 
@@ -86,6 +86,76 @@ Weighted status agreement, base vs lenient: 1.00
 | source-bound-codex55-us-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | source-bound-codex55-us-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | source-bound-codex55-us-03 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-eu-01--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-01--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-eu-01--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-01--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-01--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-eu-01--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-eu-01--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-02--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-02--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-eu-02--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-02--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-02--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-eu-02--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-eu-02--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-03--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-03--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-eu-03--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-03--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-03--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-eu-03--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-eu-03--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-04--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-eu-04--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-eu-04--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-04--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-eu-04--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-eu-04--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-eu-04--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-uk-01--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-uk-01--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-uk-01--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-uk-01--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-uk-01--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-uk-01--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-uk-01--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-uk-02--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-uk-02--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-uk-02--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-uk-02--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-uk-02--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-uk-02--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-uk-02--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-uk-03--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-uk-03--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-uk-03--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-uk-03--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-uk-03--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-uk-03--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-uk-03--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-us-01--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-us-01--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-us-01--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-us-01--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-us-01--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-us-01--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-us-01--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-us-02--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-us-02--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-us-02--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-us-02--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-us-02--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-us-02--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-us-02--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
+| evidence-ladder-codex55-us-03--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
+| evidence-ladder-codex55-us-03--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| evidence-ladder-codex55-us-03--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| evidence-ladder-codex55-us-03--source-bound-no-contestability | professional_support_output | professional_support_output | normative_material_screening_output | 9 | 9 | 10 |
+| evidence-ladder-codex55-us-03--source-bound-no-counter | reference_information | reference_information | reference_information | 11 | 9 | 11 |
+| evidence-ladder-codex55-us-03--source-bound-no-logging | reference_information | reference_information | reference_information | 10 | 9 | 10 |
+| evidence-ladder-codex55-us-03--unauthorized-external-action | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 12 | 12 | 12 |
 | source-bound-codex55-eu-01--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
 | source-bound-codex55-eu-01--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
 | source-bound-codex55-eu-01--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |

@@ -1,0 +1,217 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "recipient-categories-only-as-default-under-article-15-1-c"
+    ],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-12-5",
+      "gdpr-art-15-4",
+      "gdpr-art-4-9",
+      "edpb-guidelines-01-2022"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15 recipient identity. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "Article 15(1)(c)",
+        "source_id": "gdpr-art-15",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-1",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15",
+            "matched_terms": [
+              "article 15",
+              "recipients"
+            ],
+            "support_id": "gdpr-art-15-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15",
+          "recipients"
+        ]
+      },
+      {
+        "locator": "C-154/21",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-2",
+        "validated_source_support": [
+          {
+            "locator": "Case C-154/21",
+            "matched_terms": [
+              "c-154/21",
+              "recipients"
+            ],
+            "support_id": "cjeu-c-154-21-osterreichische-post-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "c-154/21",
+          "recipients"
+        ]
+      },
+      {
+        "locator": "Article 12(5)",
+        "source_id": "gdpr-art-12-5",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-3",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 12(5)",
+            "matched_terms": [
+              "article 12(5)",
+              "limits"
+            ],
+            "support_id": "gdpr-art-12-5-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 12(5)",
+          "limits"
+        ]
+      },
+      {
+        "locator": "Article 15(4)",
+        "source_id": "gdpr-art-15-4",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-3",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 15(4)",
+            "matched_terms": [
+              "article 15(4)"
+            ],
+            "support_id": "gdpr-art-15-4-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 15(4)"
+        ]
+      },
+      {
+        "locator": "Article 4(9)",
+        "source_id": "gdpr-art-4-9",
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "supports_claim": true,
+        "unit_id": "unit-4",
+        "validated_source_support": [
+          {
+            "locator": "GDPR Article 4(9)",
+            "matched_terms": [
+              "article 4(9)",
+              "public-authority"
+            ],
+            "support_id": "gdpr-art-4-9-support-1"
+          }
+        ],
+        "validated_support_terms": [
+          "article 4(9)",
+          "public-authority"
+        ]
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "GDPR Article 15(1)(c) governs recipients or categories of recipients.",
+        "id": "unit-1",
+        "locators": [
+          "Article 15(1)(c)"
+        ],
+        "source_ids": [
+          "gdpr-art-15"
+        ]
+      },
+      {
+        "claim": "C-154/21 requires specific recipients where identifiable and no limit applies.",
+        "id": "unit-2",
+        "locators": [
+          "C-154/21"
+        ],
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ]
+      },
+      {
+        "claim": "Article 12(5) and Article 15(4) supply limits.",
+        "id": "unit-3",
+        "locators": [
+          "Article 12(5)",
+          "Article 15(4)"
+        ],
+        "source_ids": [
+          "gdpr-art-12-5",
+          "gdpr-art-15-4"
+        ]
+      },
+      {
+        "claim": "Article 4(9) contains a public-authority carve-out.",
+        "id": "unit-4",
+        "locators": [
+          "Article 4(9)"
+        ],
+        "source_ids": [
+          "gdpr-art-4-9"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": 0.96,
+    "precision": 0.93,
+    "recall": 1.0
+  },
+  "upstream_output": {
+    "capture_mode": "no_browse_no_tools",
+    "model": "gpt-5.5",
+    "provider": "codex",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-01",
+    "reasoning_effort": "xhigh"
+  }
+}
