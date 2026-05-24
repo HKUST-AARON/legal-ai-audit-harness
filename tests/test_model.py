@@ -68,6 +68,19 @@ class AuditModelTest(unittest.TestCase):
         result = evaluate_scenario(scenario)
         self.assertEqual(result.allowed_status, "normative_material_screening_output")
 
+    def test_system_role_caps_highest_available_status(self):
+        scenario = deepcopy(load("decision_support_ready.json"))
+        scenario["system_role"] = "auditable_procedural_tool"
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+        self.assertIn("system_role:auditable_procedural_tool->max:normative_material_screening_output", result.missing_gates)
+
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["system_role"] = "disclosed_assistance_tool"
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "professional_support_output")
+        self.assertIn("system_role:disclosed_assistance_tool->max:professional_support_output", result.missing_gates)
+
     def test_withdrawal_blocks_external_effect(self):
         result = evaluate_scenario(load("unverifiable_legal_output.json"))
         self.assertEqual(result.allowed_status, "no_external_legal_effect")
@@ -211,18 +224,31 @@ class AuditModelTest(unittest.TestCase):
             self.assertFalse(result.claim_supported, path.name)
             self.assertGreaterEqual(scenario["upstream_metrics"]["recall"], 0.9, path.name)
 
+    def test_issue_specific_public_outputs_shape(self):
+        paths = sorted((ROOT / "experiments" / "issue_public_outputs" / "scenarios").glob("*.json"))
+        self.assertEqual(len(paths), 3)
+        statuses = {}
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            result = evaluate_scenario(scenario)
+            self.assertTrue(result.expected_passed, path.name)
+            statuses[result.allowed_status] = statuses.get(result.allowed_status, 0) + 1
+        self.assertEqual(statuses["normative_material_screening_output"], 1)
+        self.assertEqual(statuses["reference_information"], 2)
+
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 8)
-        self.assertEqual(report["scenario_files"], 47)
-        self.assertEqual(report["validation_units"]["total"], 215)
-        self.assertEqual(report["validation_units"]["annotation_recodings"], 94)
+        self.assertEqual(report["suite_count"], 9)
+        self.assertEqual(report["scenario_files"], 50)
+        self.assertEqual(report["validation_units"]["total"], 234)
+        self.assertEqual(report["validation_units"]["issue_public_records"], 19)
+        self.assertEqual(report["validation_units"]["annotation_recodings"], 100)
         self.assertEqual(report["blind_coding_evaluations"], 94)
         self.assertEqual(report["validation_units"]["blind_coding_packets"], 47)
-        self.assertEqual(report["total_evaluation_rows"], 403)
-        self.assertEqual(report["expected_passed"], 47)
-        self.assertEqual(report["expected_total"], 47)
-        self.assertEqual(report["annotation_robustness"]["scenario_count"], 47)
+        self.assertEqual(report["total_evaluation_rows"], 428)
+        self.assertEqual(report["expected_passed"], 50)
+        self.assertEqual(report["expected_total"], 50)
+        self.assertEqual(report["annotation_robustness"]["scenario_count"], 50)
         self.assertEqual(report["blind_coding"]["packet_count"], 47)
 
     def test_annotation_robustness_report_shape(self):
@@ -235,8 +261,8 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "annotation_robustness" / "results" / "annotation_robustness.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["scenario_count"], 47)
-        self.assertEqual(report["recoded_evaluations"], 94)
+        self.assertEqual(report["scenario_count"], 50)
+        self.assertEqual(report["recoded_evaluations"], 100)
         self.assertGreaterEqual(report["weighted_status_agreement_base_strict"], 0.9)
         self.assertGreaterEqual(report["all_policy_status_stable"], 40)
 
@@ -288,6 +314,18 @@ class AuditModelTest(unittest.TestCase):
             shutil.copytree(ROOT / "experiments" / "public_system_outputs" / "downloads", Path(directory) / "downloads")
             completed = subprocess.run(
                 [sys.executable, "scripts/collect_public_system_outputs.py", "--out", directory],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+
+    def test_issue_public_output_collector_supports_external_output_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            shutil.copytree(ROOT / "experiments" / "issue_public_outputs" / "downloads", Path(directory) / "downloads")
+            completed = subprocess.run(
+                [sys.executable, "scripts/collect_issue_public_outputs.py", "--out", directory],
                 cwd=ROOT,
                 check=False,
                 capture_output=True,

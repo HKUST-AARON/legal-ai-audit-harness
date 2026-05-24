@@ -1,12 +1,12 @@
 # Annotation Robustness Study
 
-Base scenarios: 47
-Strict/lenient recoded evaluations: 94
-Strict status stable: 45/47
-Lenient status stable: 47/47
-Stable under all coding policies: 45/47
-Mean score delta, strict: 0.87
-Mean score delta, lenient: 0.49
+Base scenarios: 50
+Strict/lenient recoded evaluations: 100
+Strict status stable: 48/50
+Lenient status stable: 50/50
+Stable under all coding policies: 48/50
+Mean score delta, strict: 0.92
+Mean score delta, lenient: 0.50
 Weighted status agreement, base vs strict: 0.98
 Weighted status agreement, base vs lenient: 1.00
 
@@ -46,6 +46,9 @@ Weighted status agreement, base vs lenient: 1.00
 | codex55-us-01 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-us-02 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-us-03 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| issue-public-output-eu-official-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| issue-public-output-uk-tna-fairchild-mesothelioma | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| issue-public-output-us-courtlistener-loper-bright | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | eu-gdpr-article15-access-rights | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | uk-mesothelioma-causation-after-fairchild | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | us-agency-deference-after-loper-bright | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |

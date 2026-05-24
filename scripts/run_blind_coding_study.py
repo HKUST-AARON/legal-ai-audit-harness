@@ -74,6 +74,7 @@ def _scenario_from_annotation(packet: dict, annotation: dict, coder_id: str) -> 
     scenario = {
         "id": f"{packet['packet_id']}--{coder_id}",
         "claimed_status": packet["claimed_status"],
+        "system_role": packet.get("system_role"),
         "jurisdiction_profile": packet.get("jurisdiction_profile", "unspecified"),
         "scores": {dimension: {"score": annotation["scores"][dimension]} for dimension in DIMENSIONS},
         "authority_sets": packet.get("authority_sets", {}),
@@ -84,7 +85,7 @@ def _scenario_from_annotation(packet: dict, annotation: dict, coder_id: str) -> 
     }
     if packet.get("counter_material_complete") is not None:
         scenario["counter_material_complete"] = packet["counter_material_complete"]
-    return scenario
+    return {key: value for key, value in scenario.items() if value is not None}
 
 
 def _payload(rows: list[dict], coders: list[dict]) -> dict:

@@ -36,6 +36,7 @@ python -m audit_harness.cli run examples/scenarios --out reports/sample_report.m
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
 python scripts/collect_public_system_outputs.py
+python scripts/collect_issue_public_outputs.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
@@ -56,6 +57,7 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
 {
   "id": "court-authority-report",
   "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "common_law",
   "scores": {
     "S": { "score": 2, "evidence": "Corpus manifest and source links are recorded." },
@@ -110,6 +112,8 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
 | `decision_support_reason` | all normative-screening gates, total score `>= 10`, `T = L = 2`, completed review, `authorized_adoption`, human authorization, recorded jurisdiction assumptions, adoption reasons, and contestation record |
 | `no_external_legal_effect` | missing gates or withdrawal-level failures |
 
+`system_role` caps the highest status available to an output: `back_office_tool` caps at reference, `disclosed_assistance_tool` at professional support, `auditable_procedural_tool` at normative screening, `authorized_decision_support_tool` at decision support, and `unaccountable_external_disposition` at no external legal effect. When `system_role` is omitted, the harness infers it from the review gate and claimed status.
+
 Failure flags can downgrade or withdraw an output from external procedural use.
 
 ## Full Validation Suite
@@ -135,12 +139,13 @@ Current coverage:
 | Public legal-record metadata | 120 | Tests source reconstruction across six public legal-record sources. |
 | Public legal-system outputs | 60 | Tests ordered real upstream public legal-output reconstruction. |
 | Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
+| Issue-specific public output/source packets | 19 | Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements. |
 | Issue-defined positive controls | 3 | Tests normative material screening with source-bound high-authority and counter-material sets. |
 | Issue-defined ablations | 12 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
-| Annotation robustness recoding | 94 | Re-scores all 47 scenario packets under strict and lenient coding policies to test status stability. |
+| Annotation robustness recoding | 100 | Re-scores all 50 scenario packets under strict and lenient coding policies to test status stability. |
 | Score-blinded dual coding | 94 | Two coding passes score all 47 packets without original scores or expected outcomes. |
 
-The current full validation report covers 47 scenario files containing 215 embedded records/items, 94 strict/lenient recoded evaluations, and 94 score-blinded coder evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the robustness and blind-coding layers test whether status allocation is stable under plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
+The current full validation report covers 50 scenario files containing 234 embedded records/items, 100 strict/lenient recoded evaluations, and 94 score-blinded coder evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the robustness and blind-coding layers test whether status allocation is stable under plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
 
 ## Jurisdiction Profiles
 
@@ -196,7 +201,7 @@ The repository includes a coding-uncertainty experiment:
 python scripts/run_annotation_robustness.py
 ```
 
-The script re-scores all 47 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
+The script re-scores all 50 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
 
 ## Score-Blinded Dual Coding Study
 
@@ -207,7 +212,7 @@ python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 ```
 
-The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, and manual failure flags from every committed scenario. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports exact status agreement, weighted status agreement, dimension-level agreement, and disputed packets.
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, and manual failure flags from 47 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports exact status agreement, weighted status agreement, dimension-level agreement, and disputed packets.
 
 ## Raw Model Output Pilot
 
@@ -218,6 +223,17 @@ python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out ex
 ```
 
 Raw outputs are stored in `experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md`. The pilot asks whether fluent model answers with strong authority and counter-material coverage can claim `normative_material_screening_output` status without source-bound evidence. The current result is deliberately strict: all ten outputs are downgraded to `reference_information` because their citations are marked `needs_verification`.
+
+## Issue-Specific Public Output/Source Study
+
+The repository includes a stricter public layer over issue-specific public search outputs and a source-bound public-source packet:
+
+```bash
+python scripts/collect_issue_public_outputs.py
+python -m audit_harness.cli experiment experiments/issue_public_outputs/scenarios --out experiments/issue_public_outputs/results/issue_public_output_experiment.md --json-out experiments/issue_public_outputs/results/issue_public_output_experiment.json
+```
+
+The default command uses committed snapshots. Pass `--refresh` to fetch current public pages/API output. The study freezes a CourtListener issue search for U.S. agency deference after `Loper Bright`, a National Archives issue search for English mesothelioma causation, and a Legislation.gov.uk/CURIA public-source packet for GDPR Article 15. It then tests whether the visible records preserve enough high-authority and counter-material evidence to claim `normative_material_screening_output` status. The current result is mixed by design: one source-bound public-source packet qualifies, while two issue-search outputs are capped at `reference_information` because their returned records omit high-authority or counter-material materials.
 
 ## Public System Output Pilot
 
@@ -240,6 +256,7 @@ experiments/stress_tests/results/  committed stress-test and sensitivity outputs
 experiments/full_validation/        aggregate full-suite validation report
 experiments/issue_gold_sets/       curated issue packets and gold-set outputs
 experiments/issue_ablations/       generated positive-control ablations
+experiments/issue_public_outputs/  issue-specific public output snapshots and scenarios
 experiments/blind_coding/          score-blinded packets and dual-coding outputs
 experiments/ai_outputs/            raw Codex model-output pilot and scored scenarios
 experiments/real_cases/            public metadata snapshots, manifests and outputs

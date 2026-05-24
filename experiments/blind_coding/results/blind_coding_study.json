@@ -116,7 +116,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -131,7 +133,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -151,7 +155,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -166,7 +172,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -186,7 +194,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -201,7 +211,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -221,7 +233,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -236,7 +250,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -256,7 +272,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -271,7 +289,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -291,7 +311,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -306,7 +328,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -326,7 +350,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -341,7 +367,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -361,7 +389,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -376,7 +406,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -396,7 +428,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -411,7 +445,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -431,7 +467,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,
@@ -446,7 +484,9 @@
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
           "disposition": "downgrade",
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scores": {
             "H": 2,
             "K": 2,

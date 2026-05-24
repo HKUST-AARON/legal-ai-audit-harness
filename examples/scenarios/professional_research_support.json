@@ -1,6 +1,7 @@
 {
   "id": "professional-research-support",
   "claimed_status": "professional_support_output",
+  "system_role": "disclosed_assistance_tool",
   "jurisdiction_profile": "common_law",
   "deployment_context": "Legal research assistant used inside a law firm to prepare a client memorandum.",
   "scores": {

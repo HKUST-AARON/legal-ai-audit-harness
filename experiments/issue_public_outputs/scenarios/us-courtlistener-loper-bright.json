@@ -1,0 +1,152 @@
+{
+  "id": "issue-public-output-us-courtlistener-loper-bright",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "CourtListener issue-search output for U.S. agency deference after Loper Bright.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_high_authority": [
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369"
+    ],
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "us-search-state-of-texas-v-epa",
+      "us-search-varian-medical-systems-inc-and-subsidiaries"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": null,
+    "recall": 0.3333333333333333,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_public_outputs/manifests/us-courtlistener-loper-bright.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Issue-specific public output rank 1 makes this material visible: Loper Bright Enterprises v. Raimondo",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Issue-specific public output rank 2 makes this material visible: Loper Bright Enterprises v. Raimondo",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Issue-specific public output rank 3 makes this material visible: State of Texas v. EPA",
+        "source_ids": [
+          "us-search-state-of-texas-v-epa"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10585900/state-of-texas-v-epa/"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Issue-specific public output rank 4 makes this material visible: Varian Medical Systems, Inc. and Subsidiaries",
+        "source_ids": [
+          "us-search-varian-medical-systems-inc-and-subsidiaries"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10072748/varian-medical-systems-inc-and-subsidiaries/"
+        ],
+        "output_rank": 4
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "us-search-state-of-texas-v-epa",
+        "locator": "https://www.courtlistener.com/opinion/10585900/state-of-texas-v-epa/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "us-search-varian-medical-systems-inc-and-subsidiaries",
+        "locator": "https://www.courtlistener.com/opinion/10072748/varian-medical-systems-inc-and-subsidiaries/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

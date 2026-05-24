@@ -18,7 +18,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-01",
           "scores": {
             "H": 2,
@@ -29,6 +31,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -44,7 +47,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-02",
           "scores": {
             "H": 2,
@@ -55,6 +60,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -70,7 +76,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-03",
           "scores": {
             "H": 2,
@@ -81,6 +89,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -96,7 +105,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-04",
           "scores": {
             "H": 2,
@@ -107,6 +118,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -122,7 +134,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-uk-01",
           "scores": {
             "H": 2,
@@ -133,6 +147,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -148,7 +163,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-uk-02",
           "scores": {
             "H": 2,
@@ -159,6 +176,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -174,7 +192,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-uk-03",
           "scores": {
             "H": 2,
@@ -185,6 +205,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -200,7 +221,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-us-01",
           "scores": {
             "H": 2,
@@ -211,6 +234,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -226,7 +250,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-us-02",
           "scores": {
             "H": 2,
@@ -237,6 +263,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -252,7 +279,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-us-03",
           "scores": {
             "H": 2,
@@ -263,6 +292,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         }
       ],
@@ -287,7 +317,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-01",
           "scores": {
             "H": 2,
@@ -298,6 +330,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -313,7 +346,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-02",
           "scores": {
             "H": 2,
@@ -324,6 +359,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -339,7 +375,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-03",
           "scores": {
             "H": 2,
@@ -350,6 +388,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -365,7 +404,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-eu-04",
           "scores": {
             "H": 2,
@@ -376,6 +417,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -391,7 +433,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-uk-01",
           "scores": {
             "H": 2,
@@ -402,6 +446,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -417,7 +462,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-uk-02",
           "scores": {
             "H": 2,
@@ -428,6 +475,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -443,7 +491,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-uk-03",
           "scores": {
             "H": 2,
@@ -454,6 +504,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -469,7 +520,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-us-01",
           "scores": {
             "H": 2,
@@ -480,6 +533,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -495,7 +549,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-us-02",
           "scores": {
             "H": 2,
@@ -506,6 +562,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -521,7 +578,9 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
-          "missing_gates": [],
+          "missing_gates": [
+            "system_role:disclosed_assistance_tool->max:professional_support_output"
+          ],
           "scenario_id": "codex55-us-03",
           "scores": {
             "H": 2,
@@ -532,6 +591,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         }
       ],
@@ -569,6 +629,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -597,6 +658,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -625,6 +687,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -653,6 +716,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -681,6 +745,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -709,6 +774,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -737,6 +803,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -765,6 +832,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -793,6 +861,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -821,6 +890,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         }
       ],
@@ -858,6 +928,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -886,6 +957,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -914,6 +986,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -942,6 +1015,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -970,6 +1044,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -998,6 +1073,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -1026,6 +1102,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -1054,6 +1131,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -1082,6 +1160,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         },
         {
@@ -1110,6 +1189,7 @@
             "T": 1
           },
           "source_tag_coverage": 1.0,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 9
         }
       ],

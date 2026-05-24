@@ -1,10 +1,10 @@
 {
-  "all_policy_status_stable": 45,
-  "lenient_status_stable": 47,
-  "mean_score_delta_lenient": 0.48936170212765956,
-  "mean_score_delta_strict": 0.8723404255319149,
+  "all_policy_status_stable": 48,
+  "lenient_status_stable": 50,
+  "mean_score_delta_lenient": 0.5,
+  "mean_score_delta_strict": 0.92,
   "policy_count": 3,
-  "recoded_evaluations": 94,
+  "recoded_evaluations": 100,
   "rows": [
     {
       "base": {
@@ -756,6 +756,75 @@
         "disposition": "none",
         "total_score": 11
       },
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15",
+      "source_path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "issue-public-output-uk-tna-fairchild-mesothelioma",
+      "source_path": "experiments/issue_public_outputs/scenarios/uk-tna-fairchild-mesothelioma.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "issue-public-output-us-courtlistener-loper-bright",
+      "source_path": "experiments/issue_public_outputs/scenarios/us-courtlistener-loper-bright.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
       "scenario_id": "eu-gdpr-article15-access-rights",
       "source_path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
       "strict": {
@@ -1088,8 +1157,8 @@
       }
     }
   ],
-  "scenario_count": 47,
-  "strict_status_stable": 45,
+  "scenario_count": 50,
+  "strict_status_stable": 48,
   "weighted_status_agreement_base_lenient": 1.0,
-  "weighted_status_agreement_base_strict": 0.9758602978941961
+  "weighted_status_agreement_base_strict": 0.9773242630385488
 }

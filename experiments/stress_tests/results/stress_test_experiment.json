@@ -28,6 +28,7 @@
         "T": 1
       },
       "source_tag_coverage": null,
+      "system_role": "auditable_procedural_tool",
       "total_score": 8,
       "upstream_f1": 0.85,
       "upstream_precision": 0.82,
@@ -58,6 +59,7 @@
         "T": 2
       },
       "source_tag_coverage": null,
+      "system_role": "auditable_procedural_tool",
       "total_score": 10,
       "upstream_f1": 0.84,
       "upstream_precision": 0.86,
@@ -88,6 +90,7 @@
         "T": 2
       },
       "source_tag_coverage": null,
+      "system_role": "auditable_procedural_tool",
       "total_score": 10,
       "upstream_f1": 0.85,
       "upstream_precision": 0.88,
@@ -118,6 +121,7 @@
         "T": 2
       },
       "source_tag_coverage": null,
+      "system_role": "authorized_decision_support_tool",
       "total_score": 12,
       "upstream_f1": 0.94,
       "upstream_precision": 0.94,
@@ -148,6 +152,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 0.9,
       "upstream_precision": 0.9,
@@ -181,6 +186,7 @@
         "T": 0
       },
       "source_tag_coverage": 1.0,
+      "system_role": "auditable_procedural_tool",
       "total_score": 5,
       "upstream_f1": 0.92,
       "upstream_precision": 0.92,
@@ -211,6 +217,7 @@
         "T": 2
       },
       "source_tag_coverage": null,
+      "system_role": "authorized_decision_support_tool",
       "total_score": 12,
       "upstream_f1": 0.89,
       "upstream_precision": 0.88,
@@ -244,6 +251,7 @@
         "T": 1
       },
       "source_tag_coverage": null,
+      "system_role": "disclosed_assistance_tool",
       "total_score": 5,
       "upstream_f1": 0.59,
       "upstream_precision": 0.61,
@@ -274,6 +282,7 @@
         "T": 2
       },
       "source_tag_coverage": null,
+      "system_role": "auditable_procedural_tool",
       "total_score": 10,
       "upstream_f1": 0.82,
       "upstream_precision": 0.81,
@@ -307,6 +316,7 @@
         "T": 0
       },
       "source_tag_coverage": 1.0,
+      "system_role": "auditable_procedural_tool",
       "total_score": 0,
       "upstream_f1": 0.71,
       "upstream_precision": 0.7,

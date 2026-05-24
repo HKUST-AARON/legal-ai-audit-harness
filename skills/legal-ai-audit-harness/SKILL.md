@@ -42,22 +42,29 @@ Score each dimension from `0` to `2`:
    - `normative_material_screening_output`
    - `decision_support_reason`
    - `no_external_legal_effect`
-4. Select or define the jurisdiction profile before scoring `H` and `K`.
-5. Prepare a scenario JSON file with scores, evidence, authority sets, upstream metrics, optional `upstream_output`, optional `evidence_packet`, and optional `review_gate`.
-6. Run the harness from the repository root:
+4. Identify the system role:
+   - `back_office_tool`
+   - `disclosed_assistance_tool`
+   - `auditable_procedural_tool`
+   - `authorized_decision_support_tool`
+   - `unaccountable_external_disposition`
+5. Select or define the jurisdiction profile before scoring `H` and `K`.
+6. Prepare a scenario JSON file with scores, evidence, authority sets, upstream metrics, optional `system_role`, optional `upstream_output`, optional `evidence_packet`, and optional `review_gate`.
+7. Run the harness from the repository root:
 
 ```bash
 python -m audit_harness.cli score examples/scenarios/court_authority_report.json
 python -m audit_harness.cli run examples/scenarios --out reports/sample_report.md --json-out reports/sample_report.json
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
+python scripts/collect_issue_public_outputs.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
 ```
 
-7. Treat strong upstream performance as insufficient if the output fails source reconstruction, source tagging, counter-material presentation, contestability, review gating, or adoption logging.
-8. For paper or review work, report the harness as a status-allocation instrument, not as a legal merits evaluator.
+8. Treat strong upstream performance as insufficient if the output fails source reconstruction, source tagging, counter-material presentation, contestability, review gating, role gating, or adoption logging.
+9. For paper or review work, report the harness as a status-allocation instrument, not as a legal merits evaluator.
 
 ## Full Validation Protocol
 
@@ -68,7 +75,7 @@ python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
-The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation and coding-uncertainty analysis, not as independent legal merits validation.
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, issue-specific public output/source packets, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the issue-public-output file at `experiments/issue_public_outputs/results/issue_public_output_experiment.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation, public output/source audit, and coding-uncertainty analysis, not as independent legal merits validation.
 
 ## Single-Model Output Audit Protocol
 
@@ -95,6 +102,14 @@ Report both halves separately: (a) what upstream outputs were captured, and (b) 
 - `normative_material_screening_output`: all six dimensions `>= 1` and total score `>= 9`
 - `decision_support_reason`: `S, Q, H, K >= 1`, `T = L = 2`, completed authorized adoption, human authorization, jurisdiction assumptions, adoption reasons and contestation record
 - `no_external_legal_effect`: missing gates or withdrawal-level failures
+
+System roles cap status:
+
+- `back_office_tool`: maximum `reference_information`
+- `disclosed_assistance_tool`: maximum `professional_support_output`
+- `auditable_procedural_tool`: maximum `normative_material_screening_output`
+- `authorized_decision_support_tool`: maximum `decision_support_reason`
+- `unaccountable_external_disposition`: maximum `no_external_legal_effect`
 
 Failure flags can cap or downgrade status:
 

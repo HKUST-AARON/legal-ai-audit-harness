@@ -6,6 +6,7 @@ Minimum scenario shape:
 {
   "id": "scenario-id",
   "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "common_law",
   "deployment_context": "Short description.",
   "scores": {
@@ -54,6 +55,8 @@ Minimum scenario shape:
 ```
 
 Use deterministic IDs. Keep source text excerpts short and prefer links, paragraph IDs, neutral citations, and hashes over long copyrighted text. `evidence_packet` is provider-agnostic and can be produced by any upstream search, database, generation, agent, or manual review process.
+
+`system_role` is optional but recommended. Use `back_office_tool`, `disclosed_assistance_tool`, `auditable_procedural_tool`, `authorized_decision_support_tool`, or `unaccountable_external_disposition`. The role caps the maximum procedural status, so a disclosed assistance tool cannot become a court-facing screening output without the audit artefacts and review posture of an auditable procedural tool. If omitted, the harness infers the role from `review_gate` and `claimed_status`.
 
 `source_tag` should state how a reviewer should treat the source link, for example `tool_verified`, `official_source`, `public_metadata`, `user_provided`, `user_provided_verified`, `settled`, `needs_verification`, or `pinpoint_needs_verification`. Missing tags downgrade external procedural claims. For `normative_material_screening_output`, tags such as `needs_verification`, `pinpoint_needs_verification`, `public_metadata`, or unverified `user_provided` are not enough; they show the source is visible but not procedurally verified.
 

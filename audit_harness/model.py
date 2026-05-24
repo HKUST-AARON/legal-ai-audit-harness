@@ -36,6 +36,14 @@ STATUS_RANK = {
     Status.DECISION_SUPPORT_REASON.value: 4,
 }
 
+SYSTEM_ROLE_CAPS = {
+    "back_office_tool": Status.REFERENCE_INFORMATION.value,
+    "disclosed_assistance_tool": Status.PROFESSIONAL_SUPPORT_OUTPUT.value,
+    "auditable_procedural_tool": Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value,
+    "authorized_decision_support_tool": Status.DECISION_SUPPORT_REASON.value,
+    "unaccountable_external_disposition": Status.NO_EXTERNAL_LEGAL_EFFECT.value,
+}
+
 FLAG_DISPOSITIONS = {
     "authority_omission": "suspension",
     "counter_material_suppression": "suspension",
@@ -63,6 +71,7 @@ DISPOSITION_RANK = {
 class AuditResult:
     scenario_id: str
     claimed_status: str
+    system_role: str
     allowed_status: str
     total_score: int
     scores: dict[str, int]
@@ -92,7 +101,9 @@ def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = No
     scores = _parse_scores(scenario.get("scores", {}))
     total = sum(scores.values())
     missing_gates: list[str] = []
+    system_role = _system_role(scenario)
     allowed = _allowed_status(scenario, scores, total, missing_gates, policy)
+    allowed = _cap_by_system_role(allowed, system_role, missing_gates)
     metrics = _scenario_metrics(scenario)
     disposition = _disposition(_derived_failure_flags(scenario, metrics))
 
@@ -116,6 +127,7 @@ def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = No
     return AuditResult(
         scenario_id=scenario.get("id", "unnamed-scenario"),
         claimed_status=claimed,
+        system_role=system_role,
         allowed_status=allowed,
         total_score=total,
         scores=scores,
@@ -145,6 +157,9 @@ def _validate_scenario(scenario: dict[str, Any]) -> None:
     unknown_flags = set(scenario.get("failure_flags", [])) - set(FLAG_DISPOSITIONS)
     if unknown_flags:
         raise ValueError(f"Unknown failure_flags: {', '.join(sorted(unknown_flags))}")
+    role = scenario.get("system_role")
+    if role is not None and role not in SYSTEM_ROLE_CAPS:
+        raise ValueError(f"Unknown system_role: {role}")
 
 
 def _parse_scores(raw_scores: dict[str, Any]) -> dict[str, int]:
@@ -184,6 +199,31 @@ def _allowed_status(scenario: dict[str, Any], scores: dict[str, int], total: int
     if scores["Q"] == 0:
         missing_gates.append("Q")
     return Status.NO_EXTERNAL_LEGAL_EFFECT.value
+
+
+def _system_role(scenario: dict[str, Any]) -> str:
+    explicit = scenario.get("system_role")
+    if explicit:
+        return explicit
+    gate = scenario.get("review_gate", {})
+    reliance_gate = gate.get("reliance_gate")
+    if gate.get("irreversible_action") is True and gate.get("human_authorization") is not True:
+        return "unaccountable_external_disposition"
+    if reliance_gate == "authorized_adoption":
+        return "authorized_decision_support_tool"
+    if reliance_gate in {"attorney_review", "external_reliance", "filing", "sending", "execution"}:
+        return "auditable_procedural_tool"
+    if reliance_gate in {"internal_research", "not_for_merits_reliance"}:
+        return "disclosed_assistance_tool"
+    return "back_office_tool"
+
+
+def _cap_by_system_role(allowed: str, system_role: str, missing_gates: list[str]) -> str:
+    cap = SYSTEM_ROLE_CAPS[system_role]
+    if STATUS_RANK[allowed] <= STATUS_RANK[cap]:
+        return allowed
+    missing_gates.append(f"system_role:{system_role}->max:{cap}")
+    return cap
 
 
 def _adoption_gate_satisfied(scenario: dict[str, Any]) -> bool:

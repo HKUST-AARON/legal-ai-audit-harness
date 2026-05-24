@@ -29,6 +29,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 8
         },
         {
@@ -55,6 +56,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -81,6 +83,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -107,6 +110,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -133,6 +137,7 @@
             "T": 2
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 11
         },
         {
@@ -162,6 +167,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 5
         },
         {
@@ -188,6 +194,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -217,6 +224,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 5
         },
         {
@@ -243,6 +251,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -272,6 +281,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 0
         }
       ],
@@ -313,6 +323,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 8
         },
         {
@@ -339,6 +350,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -365,6 +377,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -391,6 +404,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -417,6 +431,7 @@
             "T": 2
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 11
         },
         {
@@ -446,6 +461,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 5
         },
         {
@@ -472,6 +488,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -501,6 +518,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 5
         },
         {
@@ -527,6 +545,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -556,6 +575,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 0
         }
       ],
@@ -597,6 +617,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 8
         },
         {
@@ -623,6 +644,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -649,6 +671,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -675,6 +698,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -701,6 +725,7 @@
             "T": 2
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 11
         },
         {
@@ -730,6 +755,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 5
         },
         {
@@ -756,6 +782,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -785,6 +812,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 5
         },
         {
@@ -811,6 +839,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -840,6 +869,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 0
         }
       ],
@@ -881,6 +911,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 8
         },
         {
@@ -909,6 +940,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -937,6 +969,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -963,6 +996,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -989,6 +1023,7 @@
             "T": 2
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 11
         },
         {
@@ -1018,6 +1053,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 5
         },
         {
@@ -1044,6 +1080,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
         {
@@ -1073,6 +1110,7 @@
             "T": 1
           },
           "source_tag_coverage": null,
+          "system_role": "disclosed_assistance_tool",
           "total_score": 5
         },
         {
@@ -1101,6 +1139,7 @@
             "T": 2
           },
           "source_tag_coverage": null,
+          "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
         {
@@ -1130,6 +1169,7 @@
             "T": 0
           },
           "source_tag_coverage": 1.0,
+          "system_role": "auditable_procedural_tool",
           "total_score": 0
         }
       ],

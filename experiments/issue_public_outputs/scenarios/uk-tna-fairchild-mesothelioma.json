@@ -1,0 +1,262 @@
+{
+  "id": "issue-public-output-uk-tna-fairchild-mesothelioma",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "The National Archives issue-search output for English mesothelioma causation.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "retrieved_high_authority": [],
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+      "uk-search-michael-holmes-v-poeton-holdings-limited",
+      "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+      "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+      "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic",
+      "uk-search-bannister-estate-of-v-freemans-public-ltd-company-rev-1",
+      "uk-search-the-department-for-communities-and-local-government-v-blackm",
+      "uk-search-lugay-v-london-borough-of-hammersmith-and-fulham",
+      "uk-search-heneghan-v-manchester-dry-docks-ltd-ors"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": null,
+    "recall": 0.0,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_public_outputs/manifests/uk-tna-fairchild-mesothelioma.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Issue-specific public output rank 1 makes this material visible: Shaikh Abdul Rehman & Ors v Secretary of State for Health and Social Care & Ors",
+        "source_ids": [
+          "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-"
+        ],
+        "locators": [
+          "[2026] EWHC 6 (KB)"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Issue-specific public output rank 2 makes this material visible: Teresa Evans v The Secretary of State for Health and Social Care",
+        "source_ids": [
+          "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-"
+        ],
+        "locators": [
+          "[2024] EWHC 496 (KB)"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Issue-specific public output rank 3 makes this material visible: Michael Holmes v Poeton Holdings Limited",
+        "source_ids": [
+          "uk-search-michael-holmes-v-poeton-holdings-limited"
+        ],
+        "locators": [
+          "[2023] EWCA Civ 1377"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Issue-specific public output rank 4 makes this material visible: Sharon Alexandra Ness v Carillion Capital Projects Limited & Ors.",
+        "source_ids": [
+          "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o"
+        ],
+        "locators": [
+          "[2023] EWHC 1219 (KB)"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Issue-specific public output rank 5 makes this material visible: CNZ v Royal Bath Hospitals NHS Foundation Trust & Anor",
+        "source_ids": [
+          "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor"
+        ],
+        "locators": [
+          "[2023] EWHC 19 (KB)"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Issue-specific public output rank 6 makes this material visible: The Asbestos Victims Support Groups' Forum UK, R (On the Application Of) v The Lord Chancellor",
+        "source_ids": [
+          "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic"
+        ],
+        "locators": [
+          "[2020] EWHC 2108 (Admin)"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Issue-specific public output rank 7 makes this material visible: Bannister (Estate of) v Freemans Public Ltd Company (Rev 1)",
+        "source_ids": [
+          "uk-search-bannister-estate-of-v-freemans-public-ltd-company-rev-1"
+        ],
+        "locators": [
+          "[2020] EWHC 1256 (QB)"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Issue-specific public output rank 8 makes this material visible: The Department for Communities And Local Government v Blackmore (Rev 1)",
+        "source_ids": [
+          "uk-search-the-department-for-communities-and-local-government-v-blackm"
+        ],
+        "locators": [
+          "[2017] EWCA Civ 1136"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Issue-specific public output rank 9 makes this material visible: Lugay v London Borough of Hammersmith And Fulham",
+        "source_ids": [
+          "uk-search-lugay-v-london-borough-of-hammersmith-and-fulham"
+        ],
+        "locators": [
+          "[2017] EWHC 1823 (QB)"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Issue-specific public output rank 10 makes this material visible: Heneghan v Manchester Dry Docks Ltd & Ors",
+        "source_ids": [
+          "uk-search-heneghan-v-manchester-dry-docks-ltd-ors"
+        ],
+        "locators": [
+          "[2016] EWCA Civ 86"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "locator": "[2026] EWHC 6 (KB)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+        "locator": "[2024] EWHC 496 (KB)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "locator": "[2023] EWCA Civ 1377",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "locator": "[2023] EWHC 1219 (KB)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "locator": "[2023] EWHC 19 (KB)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic",
+        "locator": "[2020] EWHC 2108 (Admin)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "uk-search-bannister-estate-of-v-freemans-public-ltd-company-rev-1",
+        "locator": "[2020] EWHC 1256 (QB)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "uk-search-the-department-for-communities-and-local-government-v-blackm",
+        "locator": "[2017] EWCA Civ 1136",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "uk-search-lugay-v-london-borough-of-hammersmith-and-fulham",
+        "locator": "[2017] EWHC 1823 (QB)",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "uk-search-heneghan-v-manchester-dry-docks-ltd-ors",
+        "locator": "[2016] EWCA Civ 86",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

@@ -45,6 +45,7 @@ def _packet(scenario: dict, path: Path) -> dict:
         "packet_id": scenario["id"],
         "source_path": str(path.relative_to(ROOT)),
         "claimed_status": scenario["claimed_status"],
+        "system_role": scenario.get("system_role"),
         "jurisdiction_profile": scenario.get("jurisdiction_profile"),
         "deployment_context": scenario.get("deployment_context"),
         "authority_sets": scenario.get("authority_sets", {}),

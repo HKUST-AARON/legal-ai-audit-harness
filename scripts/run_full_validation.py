@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "experiments" / "full_validation" / "results"
+BASE_VALIDATION_UNITS = 234
 
 SUITES = [
     {
@@ -36,6 +37,15 @@ SUITES = [
         "json_out": ROOT / "experiments" / "public_system_outputs" / "results" / "public_system_output_experiment.json",
         "validation_units": "60 visible public-system records",
         "finding": "Tests ordered real upstream legal-output reconstruction.",
+    },
+    {
+        "id": "issue_public_outputs",
+        "label": "Issue-specific public output/source packets",
+        "path": ROOT / "experiments" / "issue_public_outputs" / "scenarios",
+        "out": ROOT / "experiments" / "issue_public_outputs" / "results" / "issue_public_output_experiment.md",
+        "json_out": ROOT / "experiments" / "issue_public_outputs" / "results" / "issue_public_output_experiment.json",
+        "validation_units": "19 issue-specific public output/source records",
+        "finding": "Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.",
     },
     {
         "id": "ai_outputs",
@@ -71,6 +81,7 @@ def main() -> int:
     RESULTS.mkdir(parents=True, exist_ok=True)
     _run([sys.executable, "scripts/collect_real_cases.py"])
     _run([sys.executable, "scripts/collect_public_system_outputs.py"])
+    _run([sys.executable, "scripts/collect_issue_public_outputs.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
 
@@ -141,7 +152,7 @@ def main() -> int:
         "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
         "recoded_evaluations": robustness_payload["recoded_evaluations"],
         "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
-        "total_evaluation_rows": 215
+        "total_evaluation_rows": BASE_VALIDATION_UNITS
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"]),
         "validation_units": {
@@ -149,11 +160,12 @@ def main() -> int:
             "public_metadata_records": 120,
             "public_system_records": 60,
             "raw_model_outputs": 10,
+            "issue_public_records": 19,
             "issue_gold_sets": 3,
             "issue_ablations": 12,
             "annotation_recodings": robustness_payload["recoded_evaluations"],
             "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
-            "total": 215,
+            "total": BASE_VALIDATION_UNITS,
         },
         "expected_passed": sum(row["expected_passed"] for row in rows if "expected_passed" in row),
         "expected_total": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
@@ -256,6 +268,7 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['public_metadata_records']} public metadata records, "
         f"{payload['validation_units']['public_system_records']} public-system records, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
+        f"{payload['validation_units']['issue_public_records']} issue-specific public output/source records, "
         f"{payload['validation_units']['issue_gold_sets']} issue-defined positive controls, "
         f"{payload['validation_units']['issue_ablations']} issue ablations)",
         f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",

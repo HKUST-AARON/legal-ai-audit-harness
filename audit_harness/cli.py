@@ -88,6 +88,7 @@ def _format_result(result: AuditResult) -> str:
         [
             f"scenario: {result.scenario_id}",
             f"claimed_status: {result.claimed_status}",
+            f"system_role: {result.system_role}",
             f"allowed_status: {result.allowed_status}",
             f"claim_supported: {result.claim_supported}",
             f"total_score: {result.total_score}",
