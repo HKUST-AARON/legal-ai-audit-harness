@@ -104,7 +104,7 @@ Report both halves separately: (a) what upstream outputs were captured, and (b) 
 
 - `reference_information`: `S >= 1` and `Q >= 1`
 - `professional_support_output`: `S, Q, L >= 1`
-- `normative_material_screening_output`: all six dimensions `>= 1`, total score `>= 9`, required authority set, output evidence packet, review gate and counter-material declaration
+- `normative_material_screening_output`: all six dimensions `>= 1`, total score `>= 9`, nonempty high-authority set, `retrieved_high_authority`, `counter_or_limiting` and `retrieved_counter_or_limiting` fields, nonempty counter-materials unless `counter_material_complete=true`, output evidence packet, review gate with jurisdiction assumptions and no active failure cap
 - `decision_support_reason`: `S, Q, H, K >= 1`, `T = L = 2`, required authority set and evidence packet, completed authorized adoption, human authorization, jurisdiction assumptions, adoption reasons and contestation record
 - `no_external_legal_effect`: missing gates or withdrawal-level failures
 

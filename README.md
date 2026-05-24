@@ -111,13 +111,23 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
 | --- | --- |
 | `reference_information` | `S >= 1` and `Q >= 1` |
 | `professional_support_output` | `S, Q, L >= 1` |
-| `normative_material_screening_output` | all six dimensions `>= 1` and total score `>= 9` |
+| `normative_material_screening_output` | all six dimensions `>= 1`, total score `>= 9`, nonempty high-authority set, `retrieved_high_authority`, `counter_or_limiting` and `retrieved_counter_or_limiting` fields, nonempty counter-materials unless `counter_material_complete=true`, output evidence packet with output units and source links, review gate with jurisdiction assumptions, and no active failure cap |
 | `decision_support_reason` | all normative-screening gates, total score `>= 10`, `T = L = 2`, completed review, `authorized_adoption`, human authorization, recorded jurisdiction assumptions, adoption reasons, and contestation record |
 | `no_external_legal_effect` | missing gates or withdrawal-level failures |
 
-`system_role` caps the highest status available to an output: `back_office_tool` caps at reference, `disclosed_assistance_tool` at professional support, `auditable_procedural_tool` at normative screening, `authorized_decision_support_tool` at decision support, and `unaccountable_external_disposition` at no external legal effect. When `system_role` is omitted, the harness infers it from the review gate and claimed status.
+`system_role` caps the highest status available to an output: `back_office_tool` caps at reference, `disclosed_assistance_tool` at professional support, `auditable_procedural_tool` at normative screening, `authorized_decision_support_tool` at decision support, and `unaccountable_external_disposition` at no external legal effect. When `system_role` is omitted, the harness infers it from `review_gate.reliance_gate` and irreversible-action evidence; `claimed_status` does not raise the role cap.
 
 Failure flags can downgrade or withdraw an output from external procedural use.
+
+For external procedural statuses, numeric scores are never enough. The harness first assigns a score-based candidate status, then applies role caps, failure flags and withdrawal rules. It caps or downgrades an otherwise high-scoring output when authority sets are empty, output-source links are missing, evidence fidelity or coverage is incomplete, source tags are nonprocedural, counter-materials are undeclared, jurisdiction assumptions are missing, the review gate is absent, the system role is too weak, or adoption evidence is incomplete.
+
+## Artifact Replication
+
+For the submission artifact and one-command replication checklist, see [`ARTIFACT.md`](ARTIFACT.md). The primary deterministic command is:
+
+```bash
+python scripts/run_full_validation.py
+```
 
 ## Full Validation Suite
 

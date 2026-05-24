@@ -546,6 +546,10 @@ The proposed framework makes that category operational. It separates output effe
 
 The contribution is therefore not another general claim that AI cannot be a judge or a legal source. It is a stricter evaluation logic for legal AI outputs: no source chain, no status; no counter-material pathway, no screening qualification; no adoption record, no decision reason.
 
+\section*{Data and Code Availability}
+
+The companion artifact contains the audit harness, scenario packets, public snapshots, raw model-output transcript, validation scripts and generated Markdown/JSON reports. The primary replication command is \path{python scripts/run_full_validation.py}; it reruns the full validation matrix and writes the aggregate report under \path{experiments/full_validation/results/}. The artifact is designed for deterministic review without LLM API access because public-source snapshots and raw model outputs are committed. Fresh public collection is available only through explicit refresh commands and is not required to reproduce the reported results.
+
 \begin{thebibliography}{99}
 
 \bibitem[Ashley(1992)]{ashley1992}
