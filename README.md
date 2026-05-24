@@ -145,7 +145,7 @@ Current coverage:
 | Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
 | Source-supported model-output repairs | 10 | Tests whether the same model outputs qualify only after manifest, locator, hashed source-support excerpt, procedural source-tag and issue-set validation. |
 | Adversarial source-support repairs | 60 | Tests whether locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions are rejected. |
-| Public source-text anchors | 30 | Checks manifest support terms against extracted public source text snapshots; current result is 21/30 verified across 21 records with snapshots. |
+| Public source-text anchors | 30 | Checks manifest support terms against extracted public source text snapshots; current result is 30/30 verified across 30 records with snapshots. |
 | Mixed-authority public source-screening packets | 5 | Tests normative material screening with source-bound statute, case and public-source packets. |
 | Issue-defined ablations | 20 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
 | Annotation robustness recoding | 320 | Re-scores all 160 scenario packets under strict and lenient coding policies to test status stability. |

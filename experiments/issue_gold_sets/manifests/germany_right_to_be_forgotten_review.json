@@ -105,10 +105,11 @@
           "source_excerpt": "EU Charter Articles 7, 8, 11 and 16 supply privacy, data protection, expression and business-freedom interests.",
           "excerpt_sha256": "86b340f4f4216c6a5419a92e78b516eff7f94f25d6881ac89cc40945caddd793",
           "support_terms": [
-            "eu",
             "charter",
-            "rights",
-            "relevant"
+            "article 7",
+            "article 8",
+            "freedom of expression",
+            "freedom to conduct business"
           ],
           "contradiction_patterns": [
             "charter articles 7 8 11 16 have no balancing role"

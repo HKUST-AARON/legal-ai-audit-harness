@@ -6,7 +6,7 @@ Base embedded records/items: 539 (10 stress scenarios, 120 public metadata recor
 Strict/lenient recoded evaluations: 320
 Score-blinded coding-pass evaluations: 320
 Full-threshold sensitivity evaluations: 800
-Public source-text anchor checks: 21/30 verified across 21 records with text snapshots
+Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Derived robustness evaluations: 1470
 Expected outcomes passed: 160/160
 High-upstream-performance but procedurally blocked scenarios: 88
@@ -26,7 +26,7 @@ Score-blinded coding: 160 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Adversarial source-support repairs | negative-control model-output validation | 60 adversarial source-support variants | 60 | 60/60 | 8.83 | 1.00 | 60 | no_external_legal_effect: 20, reference_information: 40 |
 | Mixed-authority public source-screening packets | mixed-authority construct test | 5 curated issue packets | 5 | 5/5 | 11.00 | 1.00 | 0 | normative_material_screening_output: 5 |
 | Issue-defined ablations | negative-control construct test | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
-| Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 21/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 21, verified_ratio: 0.7 |
+| Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Annotation robustness recoding | coding robustness | 320 strict/lenient recoded evaluations | 160 | 158/160 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 0.99 |
 | Score-blinded dual coding | codebook reproducibility | 160 packets x 2 coding passes | 160 | 0.99 coder agreement; 0.93 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.96, status_disagreements: 2 |
 

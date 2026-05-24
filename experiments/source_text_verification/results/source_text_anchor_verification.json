@@ -1,11 +1,11 @@
 {
   "manifest_count": 5,
   "record_count": 30,
-  "records_with_text_snapshot": 21,
+  "records_with_text_snapshot": 30,
   "support_item_count": 30,
-  "support_items_verified": 21,
-  "support_items_unverified": 9,
-  "verified_ratio": 0.7,
+  "support_items_verified": 30,
+  "support_items_unverified": 0,
+  "verified_ratio": 1.0,
   "items": [
     {
       "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
@@ -46,18 +46,18 @@
       "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
       "record_id": "canada-post-2019-scc-67",
       "support_id": "canada-post-2019-scc-67-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/canada-post-2019-scc-67-47356c25c36f.txt",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18086/index.do",
+      "snapshot_sha256": "37f7bff941b4dcd44ebb68b754a72b8a456e3c5ed804ca839a6dd27eb28b5e73",
+      "text_length": 2149,
+      "matched_terms": [
         "canada",
         "post",
         "corp"
       ],
+      "missing_terms": [],
       "matched_locator_terms": [],
-      "verified": false
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
@@ -119,40 +119,46 @@
       "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
       "record_id": "cjeu-c-154-21-osterreichische-post",
       "support_id": "cjeu-c-154-21-osterreichische-post-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/cjeu-c-154-21-osterreichische-post-1421b7fe23f6.txt",
+      "source_url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-01/cp230004en.pdf",
+      "snapshot_sha256": "c10dc7604443a679a69367fbe33f5acde39b8d994ff8b994eded44e14e00d40d",
+      "text_length": 3861,
+      "matched_terms": [
         "154/21",
-        "specific recipients",
+        "specific identity",
         "recipients",
-        "article 12(5)"
+        "manifestly unfounded"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "case 154/21"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
       "record_id": "cjeu-c-487-21-crif",
       "support_id": "cjeu-c-487-21-crif-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/cjeu-c-487-21-crif-453ee4553d22.txt",
+      "source_url": "https://files.lbr.cloud/public/2023-05/ECJ%20dataset%20-%20CRIF%20-%20Judgment.pdf?VersionId=Y0gciLZJRdR4c3R4BvXic7bR5zTy5OrQ",
+      "snapshot_sha256": "97f87eb6a34f7e34c573030ac38433999a2e5e46ca6c835226aee5c113e4058f",
+      "text_length": 36573,
+      "matched_terms": [
         "487/21",
         "faithful",
         "intelligible",
         "copy",
-        "personal data",
+        "personal data"
+      ],
+      "missing_terms": [
         "balancing",
         "total refusal"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "matched_locator_terms": [
+        "case 487/21",
+        "sterreichische datenschutzbeh rde crif"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
@@ -219,19 +225,21 @@
       "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
       "record_id": "cjeu-c-307-22-ft",
       "support_id": "cjeu-c-307-22-ft-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/cjeu-c-307-22-ft-0aee4d4b3f6a.txt",
+      "source_url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-10/cp230161en.pdf",
+      "snapshot_sha256": "84ea7f0cd812bfefc948e1affec0119633a4660d2b34f4a501a859d064039daa",
+      "text_length": 3510,
+      "matched_terms": [
         "307/22",
         "first free copy",
         "medical record",
         "medical records"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "case 307/22"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
@@ -239,8 +247,8 @@
       "support_id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13-support-1",
       "snapshot_path": "experiments/source_text_verification/snapshots/bverfg-right-to-be-forgotten-i-1-bvr-16-13-883b0dff6ada.txt",
       "source_url": "https://germanlawjournal.com/right-to-be-forgotten-i-1-bvr-16-13/",
-      "snapshot_sha256": "4644f96b713e19f2699c3d3823f877d83978fb11a8deb027e7f5cbe77fb0c73d",
-      "text_length": 138154,
+      "snapshot_sha256": "af066b0db7217b5a8a35e89bc588ea3477a4b74ab6d262e5af4c3c4ba7a8610e",
+      "text_length": 138121,
       "matched_terms": [
         "recht",
         "auf",
@@ -259,8 +267,8 @@
       "support_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17-support-1",
       "snapshot_path": "experiments/source_text_verification/snapshots/bverfg-right-to-be-forgotten-ii-1-bvr-276-17-914146861143.txt",
       "source_url": "https://germanlawjournal.com/right-to-be-forgotten-ii-1-bvr-276-17/",
-      "snapshot_sha256": "c8d1ed1a22b9bb65ccbd9a6100852e4d472e410cffeece3975f68308d8944ede",
-      "text_length": 130157,
+      "snapshot_sha256": "7aaa8e98827cf29b091bb135b1db8d331fa90fb147c631b83af83e57e8fc0621",
+      "text_length": 130232,
       "matched_terms": [
         "recht",
         "auf",
@@ -278,36 +286,38 @@
       "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
       "record_id": "google-spain-c-131-12",
       "support_id": "google-spain-c-131-12-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/google-spain-c-131-12-24e114f26a90.txt",
+      "source_url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2014-05/cp140070en.pdf",
+      "snapshot_sha256": "3a4143f229c8d900257219254091617a13b66b9d7ce8a1a088ebd562950080c0",
+      "text_length": 12148,
+      "matched_terms": [
         "google",
         "spain",
         "sl"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "case 131/12"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
       "record_id": "charter-articles-7-8-11-16",
       "support_id": "charter-articles-7-8-11-16-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
-        "eu",
+      "snapshot_path": "experiments/source_text_verification/snapshots/charter-articles-7-8-11-16-64321aea9af7.txt",
+      "source_url": "https://www.europarl.europa.eu/charter/pdf/text_en.pdf",
+      "snapshot_sha256": "8858f9260d7e24182b2fa6cb74d4a2017f057030ea145d9a7e91ba3f135418a0",
+      "text_length": 27126,
+      "matched_terms": [
         "charter",
-        "rights",
-        "relevant"
+        "article",
+        "freedom expression",
+        "freedom conduct business"
       ],
+      "missing_terms": [],
       "matched_locator_terms": [],
-      "verified": false
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
@@ -331,37 +341,42 @@
       "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
       "record_id": "fairchild-2002-ukhl-22",
       "support_id": "fairchild-2002-ukhl-22-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/fairchild-2002-ukhl-22-a3ef306d5581.txt",
+      "source_url": "https://zoomlaw.co.uk/2002UKHL22.html",
+      "snapshot_sha256": "3f91901dfae68d2a907c36a9bf937c4fb0d1d176bac9d33eb4c9f6153d968175",
+      "text_length": 9464,
+      "matched_terms": [
         "fairchild",
         "material increase",
         "material risk",
         "mesothelioma risk"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "2002 ukhl 22",
+        "fairchild glenhaven funeral services ltd"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
       "record_id": "barker-2006-ukhl-20",
       "support_id": "barker-2006-ukhl-20-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/barker-2006-ukhl-20-167fa99f3d54.txt",
+      "source_url": "https://www.globalhealthrights.org/wp-content/uploads/2013/03/HL-2006-Barker-v.-Corus-UK-Ltd.pdf",
+      "snapshot_sha256": "8d9386b89703dde85da499c7d48e12bb27d484e710be1915e1961c8ed28afc14",
+      "text_length": 137587,
+      "matched_terms": [
         "barker",
         "proportionate liability",
         "proportionate risk",
         "limited liability"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "2006 ukhl 20"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
@@ -472,17 +487,20 @@
       "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
       "record_id": "bonnington-1956-ac-613",
       "support_id": "bonnington-1956-ac-613-support-1",
-      "snapshot_path": null,
-      "source_url": null,
-      "snapshot_sha256": null,
-      "text_length": 0,
-      "matched_terms": [],
-      "missing_terms": [
+      "snapshot_path": "experiments/source_text_verification/snapshots/bonnington-1956-ac-613-056d6062f28e.txt",
+      "source_url": "https://lawprof.co/tort/causation-cases/bonnington-castings-ltd-v-wardlaw-1956-ac-613/",
+      "snapshot_sha256": "19324669fa12eaed1fd72a4428ed82960196f3759689142b1b983d9098a27e6a",
+      "text_length": 2352,
+      "matched_terms": [
         "bonnington",
         "causation"
       ],
-      "matched_locator_terms": [],
-      "verified": false
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "1956 ac 613",
+        "bonnington castings ltd wardlaw"
+      ],
+      "verified": true
     },
     {
       "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",

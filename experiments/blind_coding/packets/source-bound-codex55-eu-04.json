@@ -70,7 +70,6 @@
             "locator": "Case C-154/21",
             "matched_terms": [
               "c-154/21",
-              "specific recipients",
               "recipients"
             ],
             "support_id": "cjeu-c-154-21-osterreichische-post-support-1"
@@ -78,8 +77,7 @@
         ],
         "validated_support_terms": [
           "c-154/21",
-          "recipients",
-          "specific recipients"
+          "recipients"
         ]
       },
       {

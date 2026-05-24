@@ -418,7 +418,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 800)
         self.assertEqual(report["source_text_anchor_evaluations"], 30)
         self.assertEqual(report["validation_units"]["source_text_anchor_checks"], 30)
-        self.assertGreaterEqual(report["validation_units"]["source_text_anchor_verified"], 20)
+        self.assertEqual(report["validation_units"]["source_text_anchor_verified"], 30)
         self.assertEqual(report["total_evaluation_rows"], 2009)
         self.assertEqual(report["expected_passed"], 160)
         self.assertEqual(report["expected_total"], 160)
@@ -429,8 +429,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
         self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 75)
         self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 21)
-        self.assertGreaterEqual(report["source_text_verification"]["support_items_verified"], 20)
-        self.assertGreaterEqual(report["source_text_verification"]["records_with_text_snapshot"], 20)
+        self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
+        self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(
@@ -443,8 +443,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "source_text_verification" / "results" / "source_text_anchor_verification.json").read_text(encoding="utf-8"))
         self.assertEqual(report["support_item_count"], 30)
-        self.assertGreaterEqual(report["support_items_verified"], 20)
-        self.assertGreaterEqual(report["records_with_text_snapshot"], 20)
+        self.assertEqual(report["support_items_verified"], 30)
+        self.assertEqual(report["records_with_text_snapshot"], 30)
         verified = [item for item in report["items"] if item["verified"]]
         self.assertTrue(all(item["snapshot_sha256"] for item in verified))
 

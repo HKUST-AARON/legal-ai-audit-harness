@@ -53,9 +53,9 @@
       "issue_role": "high_authority",
       "support_terms": [
         "c-154/21",
-        "specific recipients",
+        "specific identity",
         "recipients",
-        "article 12(5)"
+        "manifestly unfounded"
       ],
       "source_support": [
         {
@@ -67,9 +67,9 @@
           "excerpt_sha256": "1c8159fd613e0f59798a5522812c8a09e1fa4d708d180e30d6e0e3d6e2bc09f3",
           "support_terms": [
             "c-154/21",
-            "specific recipients",
+            "specific identity",
             "recipients",
-            "article 12(5)"
+            "manifestly unfounded"
           ],
           "contradiction_patterns": [
             "c-154/21 does not require specific recipients",

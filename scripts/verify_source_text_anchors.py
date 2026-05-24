@@ -19,6 +19,7 @@ DEFAULT_OUT = ROOT / "experiments" / "source_text_verification"
 MANIFESTS = ROOT / "experiments" / "issue_gold_sets" / "manifests"
 
 SOURCE_ALIASES = {
+    "canada-post-2019-scc-67": ["https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18086/index.do"],
     "chevron-467-us-837": ["https://www.law.cornell.edu/supremecourt/text/467/837"],
     "apa-5-usc-706": ["https://www.law.cornell.edu/uscode/text/5/706"],
     "kisor-588-us-558": ["https://www.supremecourt.gov/opinions/18pdf/18-15_9p6b.pdf"],
@@ -26,9 +27,14 @@ SOURCE_ALIASES = {
     "gdpr-art-12-5": ["https://www.legislation.gov.uk/eur/2016/679/article/12"],
     "gdpr-art-15-4": ["https://www.legislation.gov.uk/eur/2016/679/article/15"],
     "gdpr-art-4-9": ["https://www.legislation.gov.uk/eur/2016/679/article/4"],
-    "cjeu-c-154-21-osterreichische-post": ["https://curia.europa.eu/juris/document/document.jsf?docid=268603&doclang=EN"],
-    "cjeu-c-487-21-crif": ["https://curia.europa.eu/juris/document/document.jsf?docid=274103&doclang=EN"],
-    "cjeu-c-307-22-ft": ["https://curia.europa.eu/juris/document/document.jsf?docid=279125&doclang=EN"],
+    "cjeu-c-154-21-osterreichische-post": ["https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-01/cp230004en.pdf"],
+    "cjeu-c-487-21-crif": ["https://files.lbr.cloud/public/2023-05/ECJ%20dataset%20-%20CRIF%20-%20Judgment.pdf?VersionId=Y0gciLZJRdR4c3R4BvXic7bR5zTy5OrQ"],
+    "cjeu-c-307-22-ft": ["https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-10/cp230161en.pdf"],
+    "google-spain-c-131-12": ["https://curia.europa.eu/jcms/upload/docs/application/pdf/2014-05/cp140070en.pdf"],
+    "charter-articles-7-8-11-16": ["https://www.europarl.europa.eu/charter/pdf/text_en.pdf"],
+    "fairchild-2002-ukhl-22": ["https://zoomlaw.co.uk/2002UKHL22.html"],
+    "barker-2006-ukhl-20": ["https://www.globalhealthrights.org/wp-content/uploads/2013/03/HL-2006-Barker-v.-Corus-UK-Ltd.pdf"],
+    "bonnington-1956-ac-613": ["https://lawprof.co/tort/causation-cases/bonnington-castings-ltd-v-wardlaw-1956-ac-613/"],
     "sienkiewicz-2011-uksc-10": ["https://caselaw.nationalarchives.gov.uk/uksc/2011/10/data.xml"],
     "durham-2012-uksc-14": ["https://caselaw.nationalarchives.gov.uk/uksc/2012/14/data.xml"],
     "williams-2011-ewca-civ-1242": ["https://caselaw.nationalarchives.gov.uk/ewca/civ/2011/1242/data.xml"],

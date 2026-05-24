@@ -23,7 +23,7 @@ SOURCES = [
 def main() -> int:
     PACKETS.mkdir(parents=True, exist_ok=True)
     for old in PACKETS.glob("*.json"):
-        old.unlink()
+        old.unlink(missing_ok=True)
     manifest = []
     for source in SOURCES:
         for path in sorted(source.glob("*.json")):

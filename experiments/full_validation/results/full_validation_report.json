@@ -73,10 +73,10 @@
   "source_text_anchor_evaluations": 30,
   "source_text_verification": {
     "record_count": 30,
-    "records_with_text_snapshot": 21,
+    "records_with_text_snapshot": 30,
     "support_item_count": 30,
-    "support_items_verified": 21,
-    "verified_ratio": 0.7
+    "support_items_verified": 30,
+    "verified_ratio": 1.0
   },
   "suite_count": 13,
   "suites": [
@@ -273,11 +273,11 @@
       "label": "Public source-text anchors",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "21/30 verified",
+      "rule_pass": "30/30 verified",
       "scenario_count": 30,
       "status_distribution": {
-        "records_with_text_snapshot": 21,
-        "verified_ratio": 0.7
+        "records_with_text_snapshot": 30,
+        "verified_ratio": 1.0
       },
       "validation_units": "30 public source-support anchor checks"
     },
@@ -408,7 +408,7 @@
     "raw_model_outputs": 10,
     "source_bound_model_outputs": 10,
     "source_text_anchor_checks": 30,
-    "source_text_anchor_verified": 21,
+    "source_text_anchor_verified": 30,
     "stress_scenarios": 10,
     "threshold_sensitivity_evaluations": 800,
     "total": 539
