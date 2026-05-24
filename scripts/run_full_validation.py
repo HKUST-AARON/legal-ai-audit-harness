@@ -520,7 +520,7 @@ def _formal_invariant_row(payload: dict) -> dict:
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
         "status_distribution": {check["id"]: check["failed"] for check in payload["checks"]},
-        "finding": "Exhaustively tests monotonicity, evidence-packet necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.",
+        "finding": "Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.",
     }
 
 

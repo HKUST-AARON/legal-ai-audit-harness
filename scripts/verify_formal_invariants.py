@@ -18,6 +18,7 @@ def main() -> int:
         _check_gated_monotonicity(),
         _check_gate_non_substitutability(),
         _check_evidence_packet_necessity(),
+        _check_authority_gate_necessity(),
         _check_counter_material_gate_necessity(),
         _check_decision_adoption_necessity(),
         _check_role_cap_dominance(),
@@ -97,6 +98,26 @@ def _check_evidence_packet_necessity() -> dict:
         if STATUS_RANK[result.allowed_status] >= STATUS_RANK["normative_material_screening_output"]:
             failures.append({"missing": field, "status": result.allowed_status, "flags": result.failure_flags})
     return _check("evidence_packet_necessity", len(cases), failures)
+
+
+def _check_authority_gate_necessity() -> dict:
+    cases = []
+
+    scenario = _scenario((2, 2, 2, 2, 2, 2), "authorized_decision_support_tool")
+    scenario["authority_sets"]["high_authority"] = []
+    scenario["authority_sets"]["retrieved_high_authority"] = []
+    cases.append(("empty_high_authority_without_source_set", scenario))
+
+    scenario = _scenario((2, 2, 2, 2, 2, 2), "authorized_decision_support_tool")
+    scenario["authority_sets"]["retrieved_high_authority"] = []
+    cases.append(("missing_retrieved_high_authority", scenario))
+
+    failures = []
+    for label, scenario in cases:
+        result = evaluate_scenario(scenario)
+        if STATUS_RANK[result.allowed_status] >= STATUS_RANK["normative_material_screening_output"]:
+            failures.append({"case": label, "status": result.allowed_status, "flags": result.failure_flags})
+    return _check("authority_gate_necessity", len(cases), failures)
 
 
 def _check_counter_material_gate_necessity() -> dict:

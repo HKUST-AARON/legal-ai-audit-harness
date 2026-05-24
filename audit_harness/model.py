@@ -372,6 +372,8 @@ def _required_external_evidence_flags(scenario: dict[str, Any]) -> list[str]:
     else:
         if "high_authority" not in authority_sets or "retrieved_high_authority" not in authority_sets:
             flags.append("authority_omission")
+        elif not authority_sets.get("high_authority"):
+            flags.append("authority_omission")
         if "counter_or_limiting" not in authority_sets or "retrieved_counter_or_limiting" not in authority_sets:
             flags.append("counter_material_suppression")
         elif not authority_sets.get("counter_or_limiting") and scenario.get("counter_material_complete") is not True:

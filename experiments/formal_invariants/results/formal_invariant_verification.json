@@ -1,6 +1,6 @@
 {
   "all_passed": true,
-  "check_count": 8,
+  "check_count": 9,
   "checks": [
     {
       "checks": 46656,
@@ -22,6 +22,13 @@
       "failures": [],
       "id": "evidence_packet_necessity",
       "passed": 4
+    },
+    {
+      "checks": 2,
+      "failed": 0,
+      "failures": [],
+      "id": "authority_gate_necessity",
+      "passed": 2
     },
     {
       "checks": 4,
@@ -59,6 +66,6 @@
       "passed": 2
     }
   ],
-  "passed_checks": 51641,
-  "total_checks": 51641
+  "passed_checks": 51643,
+  "total_checks": 51643
 }

@@ -68,12 +68,12 @@
   },
   "expected_passed": 230,
   "expected_total": 230,
-  "formal_invariant_evaluations": 51641,
+  "formal_invariant_evaluations": 51643,
   "formal_invariant_verification": {
     "all_passed": true,
-    "check_count": 8,
-    "passed_checks": 51641,
-    "total_checks": 51641
+    "check_count": 9,
+    "passed_checks": 51643,
+    "total_checks": 51643
   },
   "high_upstream_but_blocked": 128,
   "model_output_transcript_evaluations": 50,
@@ -342,15 +342,16 @@
     },
     {
       "evidence_class": "exhaustive model-property check",
-      "finding": "Exhaustively tests monotonicity, evidence-packet necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.",
+      "finding": "Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.",
       "high_upstream_but_blocked": null,
       "id": "formal_invariant_verification",
       "label": "Formal invariant verification",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "51641/51641 passed",
-      "scenario_count": 51641,
+      "rule_pass": "51643/51643 passed",
+      "scenario_count": 51643,
       "status_distribution": {
+        "authority_gate_necessity": 0,
         "counter_material_gate_necessity": 0,
         "decision_adoption_necessity": 0,
         "evidence_packet_necessity": 0,
@@ -360,7 +361,7 @@
         "metric_non_equivalence": 0,
         "role_cap_dominance": 0
       },
-      "validation_units": "51641 generated audit-policy states"
+      "validation_units": "51643 generated audit-policy states"
     },
     {
       "evidence_class": "coding robustness",
@@ -475,14 +476,14 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 54400,
+  "total_evaluation_rows": 54402,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
     "blind_coding_packets": 230,
     "evidence_ladder_model_outputs": 70,
-    "formal_invariant_checks": 51641,
-    "formal_invariant_passed": 51641,
+    "formal_invariant_checks": 51643,
+    "formal_invariant_passed": 51643,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,

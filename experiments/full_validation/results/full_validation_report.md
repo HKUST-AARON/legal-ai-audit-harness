@@ -8,8 +8,8 @@ Score-blinded coding-pass evaluations: 460
 Full-threshold sensitivity evaluations: 1150
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
-Formal invariant checks: 51641/51641 passed
-Derived robustness evaluations: 53791
+Formal invariant checks: 51643/51643 passed
+Derived robustness evaluations: 53793
 Expected outcomes passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
@@ -31,7 +31,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Issue-defined ablations | negative-control construct test | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
-| Formal invariant verification | exhaustive model-property check | 51641 generated audit-policy states | 51641 | 51641/51641 passed | n/a | n/a | n/a | counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
+| Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
 | Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
@@ -50,7 +50,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
 - **Public source-text anchors:** Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.
 - **Model-output transcript anchors:** Checks that raw model-output scenario locators are anchored in the committed transcript sections.
-- **Formal invariant verification:** Exhaustively tests monotonicity, evidence-packet necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.
+- **Formal invariant verification:** Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 
