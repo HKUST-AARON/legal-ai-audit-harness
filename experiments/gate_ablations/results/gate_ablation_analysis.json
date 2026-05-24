@@ -1,0 +1,4091 @@
+{
+  "ablation_count": 288,
+  "by_ablation": {
+    "missing_counter_material": {
+      "failed": 0,
+      "passed": 46,
+      "total": 46
+    },
+    "missing_decision_adoption": {
+      "failed": 0,
+      "passed": 12,
+      "total": 12
+    },
+    "missing_evidence_packet": {
+      "failed": 0,
+      "passed": 46,
+      "total": 46
+    },
+    "missing_high_authority": {
+      "failed": 0,
+      "passed": 46,
+      "total": 46
+    },
+    "missing_review_gate": {
+      "failed": 0,
+      "passed": 46,
+      "total": 46
+    },
+    "nonprocedural_source_tags": {
+      "failed": 0,
+      "passed": 46,
+      "total": 46
+    },
+    "professional_role_cap": {
+      "failed": 0,
+      "passed": 46,
+      "total": 46
+    }
+  },
+  "failed_count": 0,
+  "failures": [],
+  "passed_count": 288,
+  "qualified_scenario_count": 46,
+  "results": [
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "scenario_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "scenario_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "scenario_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "scenario_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "scenario_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "scenario_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/court_authority_report.json",
+      "scenario_id": "court-authority-report"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/court_authority_report.json",
+      "scenario_id": "court-authority-report"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/court_authority_report.json",
+      "scenario_id": "court-authority-report"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/court_authority_report.json",
+      "scenario_id": "court-authority-report"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/court_authority_report.json",
+      "scenario_id": "court-authority-report"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/court_authority_report.json",
+      "scenario_id": "court-authority-report"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/decision_support_ready.json",
+      "scenario_id": "decision-support-ready"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/grounded_output_summary.json",
+      "scenario_id": "grounded-output-summary"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/grounded_output_summary.json",
+      "scenario_id": "grounded-output-summary"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/grounded_output_summary.json",
+      "scenario_id": "grounded-output-summary"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/grounded_output_summary.json",
+      "scenario_id": "grounded-output-summary"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/grounded_output_summary.json",
+      "scenario_id": "grounded-output-summary"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/grounded_output_summary.json",
+      "scenario_id": "grounded-output-summary"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "examples/scenarios/odr_authorized_review.json",
+      "scenario_id": "odr-authorized-review"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+      "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
+      "scenario_id": "source-bound-codex55-eu-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
+      "scenario_id": "source-bound-codex55-eu-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
+      "scenario_id": "source-bound-codex55-eu-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
+      "scenario_id": "source-bound-codex55-eu-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
+      "scenario_id": "source-bound-codex55-eu-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
+      "scenario_id": "source-bound-codex55-eu-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
+      "scenario_id": "source-bound-codex55-eu-02"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
+      "scenario_id": "source-bound-codex55-eu-02"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
+      "scenario_id": "source-bound-codex55-eu-02"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
+      "scenario_id": "source-bound-codex55-eu-02"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
+      "scenario_id": "source-bound-codex55-eu-02"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
+      "scenario_id": "source-bound-codex55-eu-02"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
+      "scenario_id": "source-bound-codex55-eu-03"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
+      "scenario_id": "source-bound-codex55-eu-03"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
+      "scenario_id": "source-bound-codex55-eu-03"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
+      "scenario_id": "source-bound-codex55-eu-03"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
+      "scenario_id": "source-bound-codex55-eu-03"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
+      "scenario_id": "source-bound-codex55-eu-03"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
+      "scenario_id": "source-bound-codex55-eu-04"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
+      "scenario_id": "source-bound-codex55-eu-04"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
+      "scenario_id": "source-bound-codex55-eu-04"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
+      "scenario_id": "source-bound-codex55-eu-04"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
+      "scenario_id": "source-bound-codex55-eu-04"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
+      "scenario_id": "source-bound-codex55-eu-04"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
+      "scenario_id": "source-bound-codex55-uk-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
+      "scenario_id": "source-bound-codex55-uk-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
+      "scenario_id": "source-bound-codex55-uk-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
+      "scenario_id": "source-bound-codex55-uk-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
+      "scenario_id": "source-bound-codex55-uk-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
+      "scenario_id": "source-bound-codex55-uk-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
+      "scenario_id": "source-bound-codex55-uk-02"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
+      "scenario_id": "source-bound-codex55-uk-02"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
+      "scenario_id": "source-bound-codex55-uk-02"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
+      "scenario_id": "source-bound-codex55-uk-02"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
+      "scenario_id": "source-bound-codex55-uk-02"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
+      "scenario_id": "source-bound-codex55-uk-02"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
+      "scenario_id": "source-bound-codex55-uk-03"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
+      "scenario_id": "source-bound-codex55-uk-03"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
+      "scenario_id": "source-bound-codex55-uk-03"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
+      "scenario_id": "source-bound-codex55-uk-03"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
+      "scenario_id": "source-bound-codex55-uk-03"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
+      "scenario_id": "source-bound-codex55-uk-03"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
+      "scenario_id": "source-bound-codex55-us-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
+      "scenario_id": "source-bound-codex55-us-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
+      "scenario_id": "source-bound-codex55-us-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
+      "scenario_id": "source-bound-codex55-us-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
+      "scenario_id": "source-bound-codex55-us-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
+      "scenario_id": "source-bound-codex55-us-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
+      "scenario_id": "source-bound-codex55-us-02"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
+      "scenario_id": "source-bound-codex55-us-02"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
+      "scenario_id": "source-bound-codex55-us-02"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
+      "scenario_id": "source-bound-codex55-us-02"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
+      "scenario_id": "source-bound-codex55-us-02"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
+      "scenario_id": "source-bound-codex55-us-02"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "decision_support_reason",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_decision_adoption",
+      "allowed_status": "normative_material_screening_output",
+      "base_status": "decision_support_reason",
+      "disposition": "none",
+      "expected_below": "decision_support_reason",
+      "failure_flags": [],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
+      "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "scenario_id": "canada-vavilov-standard-of-review"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "scenario_id": "canada-vavilov-standard-of-review"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "scenario_id": "canada-vavilov-standard-of-review"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "scenario_id": "canada-vavilov-standard-of-review"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "scenario_id": "canada-vavilov-standard-of-review"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "scenario_id": "canada-vavilov-standard-of-review"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "scenario_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "scenario_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "scenario_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "scenario_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "scenario_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "scenario_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
+      "scenario_id": "germany-right-to-be-forgotten-review"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
+      "scenario_id": "germany-right-to-be-forgotten-review"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
+      "scenario_id": "germany-right-to-be-forgotten-review"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
+      "scenario_id": "germany-right-to-be-forgotten-review"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
+      "scenario_id": "germany-right-to-be-forgotten-review"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
+      "scenario_id": "germany-right-to-be-forgotten-review"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "scenario_id": "us-agency-deference-after-loper-bright"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "scenario_id": "us-agency-deference-after-loper-bright"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "scenario_id": "us-agency-deference-after-loper-bright"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "scenario_id": "us-agency-deference-after-loper-bright"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "scenario_id": "us-agency-deference-after-loper-bright"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "scenario_id": "us-agency-deference-after-loper-bright"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [
+        "system_role:back_office_tool->max:reference_information"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    }
+  ],
+  "status_distribution": {
+    "normative_material_screening_output": 12,
+    "professional_support_output": 46,
+    "reference_information": 230
+  }
+}

@@ -75,6 +75,50 @@
     "passed_checks": 51643,
     "total_checks": 51643
   },
+  "gate_ablation": {
+    "ablation_count": 288,
+    "by_ablation": {
+      "missing_counter_material": {
+        "failed": 0,
+        "passed": 46,
+        "total": 46
+      },
+      "missing_decision_adoption": {
+        "failed": 0,
+        "passed": 12,
+        "total": 12
+      },
+      "missing_evidence_packet": {
+        "failed": 0,
+        "passed": 46,
+        "total": 46
+      },
+      "missing_high_authority": {
+        "failed": 0,
+        "passed": 46,
+        "total": 46
+      },
+      "missing_review_gate": {
+        "failed": 0,
+        "passed": 46,
+        "total": 46
+      },
+      "nonprocedural_source_tags": {
+        "failed": 0,
+        "passed": 46,
+        "total": 46
+      },
+      "professional_role_cap": {
+        "failed": 0,
+        "passed": 46,
+        "total": 46
+      }
+    },
+    "failed_count": 0,
+    "passed_count": 288,
+    "qualified_scenario_count": 46
+  },
+  "gate_ablation_evaluations": 288,
   "high_upstream_but_blocked": 128,
   "metric_separation": {
     "gate_cascade": [
@@ -172,7 +216,7 @@
     "support_items_verified": 30,
     "verified_ratio": 1.0
   },
-  "suite_count": 17,
+  "suite_count": 18,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -458,6 +502,27 @@
       "validation_units": "185 upstream-metric scenario packets"
     },
     {
+      "evidence_class": "counterfactual gate-necessity check",
+      "finding": "Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.",
+      "high_upstream_but_blocked": null,
+      "id": "gate_ablation",
+      "label": "Qualified-output gate ablations",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "288/288",
+      "scenario_count": 288,
+      "status_distribution": {
+        "missing_counter_material": 0,
+        "missing_decision_adoption": 0,
+        "missing_evidence_packet": 0,
+        "missing_high_authority": 0,
+        "missing_review_gate": 0,
+        "nonprocedural_source_tags": 0,
+        "professional_role_cap": 0
+      },
+      "validation_units": "288 ablations over 46 qualified packets"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -570,7 +635,7 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 54587,
+  "total_evaluation_rows": 54875,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
@@ -578,6 +643,7 @@
     "evidence_ladder_model_outputs": 70,
     "formal_invariant_checks": 51643,
     "formal_invariant_passed": 51643,
+    "gate_ablation_evaluations": 288,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,

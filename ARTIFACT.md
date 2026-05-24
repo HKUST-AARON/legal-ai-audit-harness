@@ -22,12 +22,13 @@ python scripts/run_full_validation.py
 
 Expected aggregate output:
 
-- 17 validation suites
+- 18 validation suites
 - 230 scenario files
 - 609 embedded records or output items
-- 54,587 total evaluation rows
+- 54,875 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 185 metric-separation evaluations
+- 288/288 gate-ablation evaluations passed
 - 230/230 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
 - 50/50 raw model-output transcript locators verified
@@ -53,8 +54,8 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 32 pages in the current local format.
+The expected manuscript build is 33 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status, not legal merits. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, recoding and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds and coding uncertainty.
+The artifact evaluates legal-output procedural status, not legal merits. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, recoding and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal and coding uncertainty.

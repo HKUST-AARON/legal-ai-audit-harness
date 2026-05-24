@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 17
+Validation suites: 18
 Scenario files: 230
 Base embedded records/items: 609 (10 stress scenarios, 120 public metadata records, 60 public-system records, 225 public retrieval records, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 460
@@ -10,7 +10,8 @@ Public source-text anchor checks: 30/30 verified across 30 records with text sna
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
 Formal invariant checks: 51643/51643 passed
 Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181
-Derived robustness evaluations: 53978
+Gate ablation evaluations: 288/288 passed over 46 qualified packets
+Derived robustness evaluations: 54266
 Scenario-regression expectations passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
@@ -34,6 +35,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
 | Metric separation analysis | retrieval/status non-equivalence check | 185 upstream-metric scenario packets | 185 | recall-threshold precision 0.25; full gate precision 1.00 | n/a | n/a | n/a | full_gate_specificity: 1.0, high_recall_blocked_rate: 0.75, recall_point_biserial: 0.05 |
+| Qualified-output gate ablations | counterfactual gate-necessity check | 288 ablations over 46 qualified packets | 288 | 288/288 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
 | Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
@@ -54,6 +56,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Model-output transcript anchors:** Checks that raw model-output scenario locators are anchored in the committed transcript sections.
 - **Formal invariant verification:** Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
+- **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 
