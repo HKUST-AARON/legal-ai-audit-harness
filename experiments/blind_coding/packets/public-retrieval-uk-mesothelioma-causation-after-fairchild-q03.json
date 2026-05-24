@@ -1,0 +1,238 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+      "uk-search-steven-dilks-v-secretary-of-state-for-energy-and-climate-cha",
+      "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "uk-search-alexander-johnstone-v-fawcett-s-garage-newbury-limited",
+      "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+      "uk-search-alexander-joseph-johnstone-v-fawcett-s-garage-newbury-limite",
+      "uk-search-michael-holmes-v-poeton-holdings-limited",
+      "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+      "uk-search-anne-edith-powell-v-university-hospitals-sussex-nhs-foundati",
+      "uk-search-simon-coram-v-d-r-dunthorn-son-ltd"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Public search output for query: material increase in risk mesothelioma Fairchild",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "[2026] EWHC 560 (KB)",
+        "source_id": "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "[2026] EWHC 146 (KB)",
+        "source_id": "uk-search-steven-dilks-v-secretary-of-state-for-energy-and-climate-cha",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "[2026] EWHC 6 (KB)",
+        "source_id": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "[2025] EWCA Civ 467",
+        "source_id": "uk-search-alexander-johnstone-v-fawcett-s-garage-newbury-limited",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "[2024] EWHC 496 (KB)",
+        "source_id": "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      },
+      {
+        "locator": "[2023] EWHC 3010 (KB)",
+        "source_id": "uk-search-alexander-joseph-johnstone-v-fawcett-s-garage-newbury-limite",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-06"
+      },
+      {
+        "locator": "[2023] EWCA Civ 1377",
+        "source_id": "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-07"
+      },
+      {
+        "locator": "[2023] EWHC 1219 (KB)",
+        "source_id": "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-08"
+      },
+      {
+        "locator": "[2023] EWHC 736 (KB)",
+        "source_id": "uk-search-anne-edith-powell-v-university-hospitals-sussex-nhs-foundati",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-09"
+      },
+      {
+        "locator": "[2023] EWHC 731 (SCCO)",
+        "source_id": "uk-search-simon-coram-v-d-r-dunthorn-son-ltd",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-10"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public search rank 1 makes this material visible: LXLP v St George's University Hospitals NHS Foundation Trust",
+        "id": "rank-01",
+        "locators": [
+          "[2026] EWHC 560 (KB)"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust"
+        ]
+      },
+      {
+        "claim": "Public search rank 2 makes this material visible: Steven Dilks v Secretary of State for Energy and Climate Change",
+        "id": "rank-02",
+        "locators": [
+          "[2026] EWHC 146 (KB)"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "uk-search-steven-dilks-v-secretary-of-state-for-energy-and-climate-cha"
+        ]
+      },
+      {
+        "claim": "Public search rank 3 makes this material visible: Shaikh Abdul Rehman & Ors v Secretary of State for Health and Social Care & Ors",
+        "id": "rank-03",
+        "locators": [
+          "[2026] EWHC 6 (KB)"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-"
+        ]
+      },
+      {
+        "claim": "Public search rank 4 makes this material visible: Alexander Johnstone v Fawcett's Garage (Newbury) Limited",
+        "id": "rank-04",
+        "locators": [
+          "[2025] EWCA Civ 467"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "uk-search-alexander-johnstone-v-fawcett-s-garage-newbury-limited"
+        ]
+      },
+      {
+        "claim": "Public search rank 5 makes this material visible: Teresa Evans v The Secretary of State for Health and Social Care",
+        "id": "rank-05",
+        "locators": [
+          "[2024] EWHC 496 (KB)"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-"
+        ]
+      },
+      {
+        "claim": "Public search rank 6 makes this material visible: Alexander Joseph Johnstone v Fawcett\u2019s Garage (Newbury) Limited",
+        "id": "rank-06",
+        "locators": [
+          "[2023] EWHC 3010 (KB)"
+        ],
+        "output_rank": 6,
+        "source_ids": [
+          "uk-search-alexander-joseph-johnstone-v-fawcett-s-garage-newbury-limite"
+        ]
+      },
+      {
+        "claim": "Public search rank 7 makes this material visible: Michael Holmes v Poeton Holdings Limited",
+        "id": "rank-07",
+        "locators": [
+          "[2023] EWCA Civ 1377"
+        ],
+        "output_rank": 7,
+        "source_ids": [
+          "uk-search-michael-holmes-v-poeton-holdings-limited"
+        ]
+      },
+      {
+        "claim": "Public search rank 8 makes this material visible: Sharon Alexandra Ness v Carillion Capital Projects Limited & Ors.",
+        "id": "rank-08",
+        "locators": [
+          "[2023] EWHC 1219 (KB)"
+        ],
+        "output_rank": 8,
+        "source_ids": [
+          "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o"
+        ]
+      },
+      {
+        "claim": "Public search rank 9 makes this material visible: Anne Edith Powell v University Hospitals Sussex NHS Foundation Trust",
+        "id": "rank-09",
+        "locators": [
+          "[2023] EWHC 736 (KB)"
+        ],
+        "output_rank": 9,
+        "source_ids": [
+          "uk-search-anne-edith-powell-v-university-hospitals-sussex-nhs-foundati"
+        ]
+      },
+      {
+        "claim": "Public search rank 10 makes this material visible: Simon Coram v D R Dunthorn & Son Ltd",
+        "id": "rank-10",
+        "locators": [
+          "[2023] EWHC 731 (SCCO)"
+        ],
+        "output_rank": 10,
+        "source_ids": [
+          "uk-search-simon-coram-v-d-r-dunthorn-son-ltd"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/uk-mesothelioma-causation-after-fairchild-q03.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q03.json",
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "upstream_output": {}
+}

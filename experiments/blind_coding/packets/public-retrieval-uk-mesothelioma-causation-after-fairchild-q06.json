@@ -1,0 +1,238 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "uk-search-christine-devall-ors-v-english-electric-company-limited",
+      "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+      "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+      "uk-search-michael-holmes-v-poeton-holdings-limited",
+      "uk-search-simon-coram-v-d-r-dunthorn-son-ltd",
+      "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+      "uk-search-manuel-mathieu-v-tony-martin-hinds-anor",
+      "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+      "uk-search-davies-v-frimley-health-nhs-foundation-trust"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Public search output for query: mesothelioma damages causation House of Lords Fairchild",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "[2026] EWHC 1025 (KB)",
+        "source_id": "uk-search-christine-devall-ors-v-english-electric-company-limited",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "[2026] EWHC 560 (KB)",
+        "source_id": "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "[2026] EWHC 6 (KB)",
+        "source_id": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "[2024] EWHC 496 (KB)",
+        "source_id": "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "[2023] EWCA Civ 1377",
+        "source_id": "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      },
+      {
+        "locator": "[2023] EWHC 731 (SCCO)",
+        "source_id": "uk-search-simon-coram-v-d-r-dunthorn-son-ltd",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-06"
+      },
+      {
+        "locator": "[2023] EWHC 19 (KB)",
+        "source_id": "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-07"
+      },
+      {
+        "locator": "[2022] EWHC 924 (QB)",
+        "source_id": "uk-search-manuel-mathieu-v-tony-martin-hinds-anor",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-08"
+      },
+      {
+        "locator": "[2022] EWCA Civ 15",
+        "source_id": "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-09"
+      },
+      {
+        "locator": "[2021] EWHC 169 (QB)",
+        "source_id": "uk-search-davies-v-frimley-health-nhs-foundation-trust",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-10"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public search rank 1 makes this material visible: Christine Devall & Ors v English Electric Company Limited",
+        "id": "rank-01",
+        "locators": [
+          "[2026] EWHC 1025 (KB)"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "uk-search-christine-devall-ors-v-english-electric-company-limited"
+        ]
+      },
+      {
+        "claim": "Public search rank 2 makes this material visible: LXLP v St George's University Hospitals NHS Foundation Trust",
+        "id": "rank-02",
+        "locators": [
+          "[2026] EWHC 560 (KB)"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust"
+        ]
+      },
+      {
+        "claim": "Public search rank 3 makes this material visible: Shaikh Abdul Rehman & Ors v Secretary of State for Health and Social Care & Ors",
+        "id": "rank-03",
+        "locators": [
+          "[2026] EWHC 6 (KB)"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-"
+        ]
+      },
+      {
+        "claim": "Public search rank 4 makes this material visible: Teresa Evans v The Secretary of State for Health and Social Care",
+        "id": "rank-04",
+        "locators": [
+          "[2024] EWHC 496 (KB)"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-"
+        ]
+      },
+      {
+        "claim": "Public search rank 5 makes this material visible: Michael Holmes v Poeton Holdings Limited",
+        "id": "rank-05",
+        "locators": [
+          "[2023] EWCA Civ 1377"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "uk-search-michael-holmes-v-poeton-holdings-limited"
+        ]
+      },
+      {
+        "claim": "Public search rank 6 makes this material visible: Simon Coram v D R Dunthorn & Son Ltd",
+        "id": "rank-06",
+        "locators": [
+          "[2023] EWHC 731 (SCCO)"
+        ],
+        "output_rank": 6,
+        "source_ids": [
+          "uk-search-simon-coram-v-d-r-dunthorn-son-ltd"
+        ]
+      },
+      {
+        "claim": "Public search rank 7 makes this material visible: CNZ v Royal Bath Hospitals NHS Foundation Trust & Anor",
+        "id": "rank-07",
+        "locators": [
+          "[2023] EWHC 19 (KB)"
+        ],
+        "output_rank": 7,
+        "source_ids": [
+          "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor"
+        ]
+      },
+      {
+        "claim": "Public search rank 8 makes this material visible: MANUEL MATHIEU v TONY MARTIN HINDS & Anor",
+        "id": "rank-08",
+        "locators": [
+          "[2022] EWHC 924 (QB)"
+        ],
+        "output_rank": 8,
+        "source_ids": [
+          "uk-search-manuel-mathieu-v-tony-martin-hinds-anor"
+        ]
+      },
+      {
+        "claim": "Public search rank 9 makes this material visible: Aviva Insurance Limited v The Secretary of State for Work and Pensions",
+        "id": "rank-09",
+        "locators": [
+          "[2022] EWCA Civ 15"
+        ],
+        "output_rank": 9,
+        "source_ids": [
+          "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an"
+        ]
+      },
+      {
+        "claim": "Public search rank 10 makes this material visible: Davies v Frimley Health NHS Foundation Trust",
+        "id": "rank-10",
+        "locators": [
+          "[2021] EWHC 169 (QB)"
+        ],
+        "output_rank": 10,
+        "source_ids": [
+          "uk-search-davies-v-frimley-health-nhs-foundation-trust"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/uk-mesothelioma-causation-after-fairchild-q06.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q06.json",
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "upstream_output": {}
+}

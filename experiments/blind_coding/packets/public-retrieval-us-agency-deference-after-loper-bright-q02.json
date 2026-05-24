@@ -1,0 +1,243 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "us-search-eng-v-united-states-environmental-protection-agency",
+      "us-search-savage-v-n-c-dep-t-of-transp",
+      "us-search-bruckner-truck-sales-v-guzman",
+      "us-search-ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiora",
+      "us-search-saul-aguilar-sanchez-v-merrick-garland",
+      "us-search-united-states-v-yafa"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Public search output for query: agency deference after Loper Bright Chevron",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "603 U.S. 369",
+        "source_id": "loper-bright-603-us-369",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "603 U.S. 369",
+        "source_id": "loper-bright-603-us-369",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "45 F.4th 359",
+        "source_id": "loper-bright-603-us-369",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/",
+        "source_id": "loper-bright-603-us-369",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "https://www.courtlistener.com/opinion/10839353/eng-v-united-states-environmental-protection-agency/",
+        "source_id": "us-search-eng-v-united-states-environmental-protection-agency",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      },
+      {
+        "locator": "https://www.courtlistener.com/opinion/10658754/savage-v-nc-dept-of-transp/",
+        "source_id": "us-search-savage-v-n-c-dep-t-of-transp",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-06"
+      },
+      {
+        "locator": "https://www.courtlistener.com/opinion/10649066/bruckner-truck-sales-v-guzman/",
+        "source_id": "us-search-bruckner-truck-sales-v-guzman",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-07"
+      },
+      {
+        "locator": "https://www.courtlistener.com/opinion/10715409/ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiorari-to-the/",
+        "source_id": "us-search-ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiora",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-08"
+      },
+      {
+        "locator": "87 F.4th 878",
+        "source_id": "us-search-saul-aguilar-sanchez-v-merrick-garland",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-09"
+      },
+      {
+        "locator": "136 F.4th 1194",
+        "source_id": "us-search-united-states-v-yafa",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-10"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public search rank 1 makes this material visible: Loper Bright Enterprises v. Raimondo",
+        "id": "rank-01",
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "Public search rank 2 makes this material visible: Loper Bright Enterprises v. Raimondo",
+        "id": "rank-02",
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "Public search rank 3 makes this material visible: Loper Bright Enterprises, Inc v. Gina Raimondo",
+        "id": "rank-03",
+        "locators": [
+          "45 F.4th 359"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "Public search rank 4 makes this material visible: Loper Bright Enterprises, Inc. v. Wilbur L. Ross, Jr.",
+        "id": "rank-04",
+        "locators": [
+          "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "Public search rank 5 makes this material visible: Eng v. United States Environmental Protection Agency",
+        "id": "rank-05",
+        "locators": [
+          "https://www.courtlistener.com/opinion/10839353/eng-v-united-states-environmental-protection-agency/"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "us-search-eng-v-united-states-environmental-protection-agency"
+        ]
+      },
+      {
+        "claim": "Public search rank 6 makes this material visible: Savage v. N.C. Dep't of Transp.",
+        "id": "rank-06",
+        "locators": [
+          "https://www.courtlistener.com/opinion/10658754/savage-v-nc-dept-of-transp/"
+        ],
+        "output_rank": 6,
+        "source_ids": [
+          "us-search-savage-v-n-c-dep-t-of-transp"
+        ]
+      },
+      {
+        "claim": "Public search rank 7 makes this material visible: Bruckner Truck Sales v. Guzman",
+        "id": "rank-07",
+        "locators": [
+          "https://www.courtlistener.com/opinion/10649066/bruckner-truck-sales-v-guzman/"
+        ],
+        "output_rank": 7,
+        "source_ids": [
+          "us-search-bruckner-truck-sales-v-guzman"
+        ]
+      },
+      {
+        "claim": "Public search rank 8 makes this material visible: Ex parte TheraTrue Alabama, LLC PETITION FOR WRIT OF CERTIORARI TO THE COURT OF CIVIL APPEALS (In re: TheraTrue Alabama, LLC v. Alabama Medical Cannabis Commission and Rex Vaughn, Sam Blakemore, Dwight Gamble, Dr. Jimmie Harvey, James Harwell, Taylor Hatchett, Dr. Eric Jensen, Dr. Angela Martin, Hon. Charles Price, Dr. William Saliski, Loree Skelton, Dr. Jerzy Szaflarski, Dr. H. Mac Barnes, and Dion Robinson, in their official capacities as members of the Alabama Medical Cannabis Commission) (Montgomery Circuit Court: CV-24-58; Civil Appeals: CL-2024-0312).",
+        "id": "rank-08",
+        "locators": [
+          "https://www.courtlistener.com/opinion/10715409/ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiorari-to-the/"
+        ],
+        "output_rank": 8,
+        "source_ids": [
+          "us-search-ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiora"
+        ]
+      },
+      {
+        "claim": "Public search rank 9 makes this material visible: Saul Aguilar-Sanchez v. Merrick Garland",
+        "id": "rank-09",
+        "locators": [
+          "87 F.4th 878"
+        ],
+        "output_rank": 9,
+        "source_ids": [
+          "us-search-saul-aguilar-sanchez-v-merrick-garland"
+        ]
+      },
+      {
+        "claim": "Public search rank 10 makes this material visible: United States v. Yafa",
+        "id": "rank-10",
+        "locators": [
+          "136 F.4th 1194"
+        ],
+        "output_rank": 10,
+        "source_ids": [
+          "us-search-united-states-v-yafa"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/us-agency-deference-after-loper-bright-q02.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q02",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q02.json",
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": 0.4,
+    "recall": 0.3333333333333333
+  },
+  "upstream_output": {}
+}

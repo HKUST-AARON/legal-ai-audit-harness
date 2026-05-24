@@ -4,12 +4,13 @@ Validation suites: 10
 Scenario files: 62
 Base embedded records/items: 333 (10 stress scenarios, 120 public metadata records, 60 public-system records, 99 public retrieval records, 10 raw model outputs, 19 issue-specific public output/source records, 3 issue-defined positive controls, 12 issue ablations)
 Strict/lenient recoded evaluations: 124
-Score-blinded coding-pass evaluations: 94
-Total evaluation rows including recodings: 551
+Score-blinded coding-pass evaluations: 124
+Full-threshold sensitivity evaluations: 310
+Total evaluation rows including recodings: 891
 Expected outcomes passed: 62/62
 High-upstream-performance but procedurally blocked scenarios: 20
 Annotation robustness: 60/62 stable across base, strict and lenient coding policies
-Score-blinded coding: 47 packets, 2 coding passes, 0.96 exact status agreement, 0.97 weighted status agreement
+Score-blinded coding: 62 packets, 2 coding passes, 0.97 exact status agreement, 0.98 weighted status agreement
 
 | Suite | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -22,7 +23,7 @@ Score-blinded coding: 47 packets, 2 coding passes, 0.96 exact status agreement, 
 | Issue-defined positive controls | 3 curated issue packets | 3 | 3/3 | 11.00 | 1.00 | 0 | normative_material_screening_output: 3 |
 | Issue-defined ablations | 12 issue-packet ablations | 12 | 12/12 | 10.50 | 0.93 | 7 | normative_material_screening_output: 3, reference_information: 9 |
 | Annotation robustness recoding | 124 strict/lenient recoded evaluations | 62 | 60/62 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 0.98 |
-| Score-blinded dual coding | 47 packets x 2 coding passes | 47 | 0.96 exact status agreement | n/a | n/a | n/a | status_disagreements: 2, weighted_status_agreement: 0.97 |
+| Score-blinded dual coding | 62 packets x 2 coding passes | 62 | 0.97 exact status agreement | n/a | n/a | n/a | status_disagreements: 2, weighted_status_agreement: 0.98 |
 
 ## Findings
 
@@ -36,3 +37,15 @@ Score-blinded coding: 47 packets, 2 coding passes, 0.96 exact status agreement, 
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.
+
+## Full-Threshold Sensitivity
+
+All 62 scenario packets were re-evaluated under normative thresholds 8--12.
+
+| Normative threshold | Decision threshold | Status flips from default | Promotions | Demotions | Status distribution |
+| ---: | ---: | ---: | ---: | ---: | --- |
+| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 10, professional_support_output: 13, reference_information: 35 |
+| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 10, professional_support_output: 13, reference_information: 35 |
+| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 10, professional_support_output: 13, reference_information: 35 |
+| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 8, professional_support_output: 15, reference_information: 35 |
+| 12 | 13 | 9 | 0 | 9 | no_external_legal_effect: 2, normative_material_screening_output: 5, professional_support_output: 20, reference_information: 35 |

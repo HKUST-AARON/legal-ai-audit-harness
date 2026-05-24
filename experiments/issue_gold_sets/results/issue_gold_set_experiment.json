@@ -16,6 +16,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "eu-gdpr-article15-access-rights",
       "scores": {
         "H": 2,
@@ -47,6 +48,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild",
       "scores": {
         "H": 2,
@@ -78,6 +80,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "us-agency-deference-after-loper-bright",
       "scores": {
         "H": 2,

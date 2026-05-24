@@ -13,6 +13,7 @@
 \usepackage{hyperref}
 
 \geometry{left=2.8cm,right=2.8cm,top=2.6cm,bottom=2.6cm}
+\emergencystretch=2em
 \onehalfspacing
 \hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
 \setlist[itemize]{itemsep=0.25em,topsep=0.35em,leftmargin=1.8em}
@@ -30,7 +31,7 @@ An Audit Framework for Case Recommendation}
 \maketitle
 
 \begin{abstract}
-Legal AI case recommendation matters because it can determine which authorities become visible before legal reasons are written. This article argues that such outputs occupy a missing middle category: \textit{normative material screening outputs}. They are more than retrieval results because they structure the materials available for legal argument, but they are not legal sources or decision reasons. Their procedural status should therefore depend on auditability rather than model sophistication, autonomy or aggregate accuracy. The article formalizes procedural qualification through output effect, system-role caps and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It implements the model in a provider-agnostic harness and evaluates it across ten layers, including 120 public metadata records, 60 public-system outputs, 99 true public search results, issue-defined gold packets, raw model outputs, ablations, recoding and score-blinded dual coding. The runs show that high authority coverage alone does not create procedural status, source-bound issue packets can qualify as normative screening, public search outputs can remain reference information despite source reconstruction, 60 of 62 packet statuses remain stable under strict/lenient recoding, and score-blinded coding reached 0.96 exact status agreement across 47 packets. The resulting rule is simple: no reconstructable source chain, no procedural status; no counter-material pathway, no screening qualification; no adoption record, no decision-support reason.
+Legal AI case recommendation matters because it can decide which authorities become visible before legal reasons are written. This article argues that such outputs form a missing middle category: \textit{normative material screening outputs}. They are neither neutral retrieval results nor legal sources, but procedurally relevant filters over the materials from which legal arguments are built. The article formalizes procedural qualification through output effect, system-role caps and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and tests it through public legal-system outputs, issue-specific public search outputs, raw model outputs, source-bound positive controls, ablations, full-threshold sensitivity and score-blinded coding. The strongest finding is not that legal AI can retrieve authorities; it is that retrieval success and procedural qualification diverge. Twelve public search outputs remained reference information despite stable source reconstruction; ten raw GPT-5.5 outputs reached complete authority coverage but had zero procedural-source binding; and source-bound issue packets qualified as normative material screening only when high-authority, counter-material and source-link conditions were all satisfied. Across 62 packets and 891 evaluation rows, status allocation was unchanged under thresholds 8--10, stable for 60 of 62 strict/lenient recodings, and reached 0.97 exact agreement in score-blinded coding. The rule is simple: no reconstructable source chain, no procedural status; no counter-material pathway, no screening qualification; no adoption record, no decision-support reason.
 \end{abstract}
 
 \noindent\textbf{Keywords:} legal information retrieval; case recommendation; legal AI auditing; contestability; output evidence packets; normative material screening
@@ -53,9 +54,9 @@ The paper therefore asks three operational questions:
 
 The resulting framework has two dimensions. The output-effect dimension classifies what the output does in the legal process. The system-role dimension classifies how the system enters that process. The two dimensions are then linked to verifiability, contestability and accountability requirements. The model is intentionally output-first: it asks when a legal AI output may move from internal reference to procedural material, and when it must be downgraded or withdrawn.
 
-This article contributes a concept, a model and an artifact. The concept is normative material screening: the intermediate procedural role of AI-generated authority lists, ranked case sets and legal-material summaries. The model separates output effect from system role and links both to a six-part audit vector with status thresholds, role caps and failure caps. The artifact is a provider-agnostic harness that implements status allocation, downgrade and withdrawal, threshold sensitivity, public retrieval benchmarking, issue-specific public-output/source testing, score-blinded packet coding and coding-uncertainty recoding.
+This article contributes a concept, a model and an artifact. The concept is normative material screening: the intermediate procedural role of AI-generated authority lists, ranked case sets and legal-material summaries. The model separates output effect from system role and links both to a six-part audit vector with status thresholds, role caps and failure caps. The artifact is a provider-agnostic harness that implements the model and exposes the paper's central empirical contrast: public search outputs can be source-reconstructable but procedurally underqualified, while raw model outputs can identify the right authorities yet fail for lack of procedural source binding.
 
-AI-based case recommendation is the core case because it sits at the boundary between legal information retrieval and legal reasoning. Case recommendation systems are central to case-based reasoning and legal information retrieval, both long-standing areas of AI and Law research \citep{ashley1992,rissland1995,vanopijnen2017}. They are also procedurally sensitive. In common-law precedent search, civil-law court-decision databases, administrative adjudication systems, arbitral award repositories and ODR platforms, ranking and omission can affect the legal materials available for argument. The evaluation below is therefore framed as jurisdiction-neutral: each legal system supplies its own authority hierarchy, but the verifiability problem is shared.
+AI-based case recommendation is the core case because it sits at the boundary between legal information retrieval and legal reasoning. Case recommendation systems are central to case-based reasoning and legal information retrieval, both long-standing areas of AI and Law research \citep{ashley1992,rissland1995,vanopijnen2017}. They are also procedurally sensitive. In common-law precedent search, civil-law court-decision databases, administrative adjudication systems, arbitral award repositories and ODR platforms, ranking and omission can affect the legal materials available for argument. The framework is therefore jurisdiction-parameterized rather than jurisdiction-neutral: each legal system supplies its own authority hierarchy, while the verifiability problem remains shared.
 
 \section{Related Work and Gap}
 
@@ -67,7 +68,7 @@ Legal information retrieval and case-based reasoning both show why case recommen
 
 Benchmarking work has substantially improved the technical evaluation of legal retrieval. COLIEE defines shared tasks for case-law retrieval, case-law entailment, statute retrieval and statutory entailment, with explicit datasets, runs and leaderboard metrics \citep{goebel2024}. Neural retrieval systems such as BERT-PLI model paragraph-level interactions between a query case and candidate cases, addressing the length and structure of legal cases more directly than generic ad hoc retrieval models \citep{shao2020}. Legal language and holding benchmarks such as LexGLUE and CaseHOLD extend evaluation to standardized legal-language understanding and legal holding selection \citep{chalkidis2022,zheng2021}. Recent retrieval-augmented legal benchmarks, including reasoning-focused legal retrieval and CLERC, move closer to professional research tasks by connecting retrieval to downstream legal analysis and citation support \citep{zheng2025,hou2025}. LegalBench further extends the evaluation agenda to a broader set of legal reasoning tasks for large language models \citep{guha2023}.
 
-These benchmarks are indispensable, but they do not settle the procedural-status question addressed here. Precision, recall, F1, mean reciprocal rank and entailment accuracy evaluate whether a system retrieves or classifies materials correctly under a defined task. They do not determine whether a ranked set may be attached to a court report, relied upon in a professional opinion, or incorporated into a decision reason. A benchmark can show that a system performs well in aggregate while leaving unmeasured whether it records corpus boundaries, distinguishes authority levels, presents counter-authorities, supports party contestation or logs human adoption.
+These benchmarks are indispensable, but they answer a different question. COLIEE, LegalBench, CLERC and retrieval benchmarks ask whether a system retrieves, entails, cites or reasons correctly under task conditions. This article asks whether a particular output is procedurally eligible for use after it has been produced. Precision, recall, F1, mean reciprocal rank and entailment accuracy do not determine whether a ranked set may be attached to a court report, relied upon in a professional opinion, or incorporated into a decision reason. Procedural eligibility requires corpus records, authority labels, counter-authority handling, contestability and adoption logs that ordinary retrieval metrics do not measure.
 
 \subsection{Generated legal outputs and source verification}
 
@@ -169,7 +170,7 @@ PS_{\Pi}(o)=\min_{\preceq}\{c(R(o)),\kappa_{F(o)}(\sigma_{\Pi}(o))\}.
 \]
 Warning flags leave the status unchanged while recording a defect. Downgrade and suspension flags cap external status at reference information unless the missing artefact is restored. Withdrawal flags cap status at $p_0$.
 
-The protocol has three formal properties. First, it is monotone only within satisfied gates: if $\mathcal{A}'\geq\mathcal{A}$ componentwise, $R$, $G_D$ and $F$ are unchanged, then $\sigma_{\Pi}(\mathcal{A}')\succeq\sigma_{\Pi}(\mathcal{A})$; but a missing gate cannot be offset by surplus score elsewhere. Second, caps dominate scores: for any output $o$, $PS_{\Pi}(o)\preceq\sigma_{\Pi}(o)$ and $PS_{\Pi}(o)\preceq c(R(o))$, while withdrawal flags force $PS_{\Pi}(o)=p_0$ regardless of upstream recall. Third, upstream metrics are evidence variables rather than status variables. They may inform $K$ or issue-packet construction, but they do not by themselves determine $PS_{\Pi}(o)$.
+The protocol has three invariants. First, \textit{gated monotonicity}: if $\mathcal{A}'\geq\mathcal{A}$ componentwise and $R$, $G_D$ and $F$ are unchanged, then $\sigma_{\Pi}(\mathcal{A}')\succeq\sigma_{\Pi}(\mathcal{A})$ only inside the same satisfied gate. Extra score cannot compensate for a missing source, counter-material or adoption gate. Second, \textit{cap dominance}: for any output $o$, $PS_{\Pi}(o)\preceq\sigma_{\Pi}(o)$ and $PS_{\Pi}(o)\preceq c(R(o))$, while withdrawal flags force $PS_{\Pi}(o)=p_0$ regardless of upstream recall. Third, \textit{metric non-equivalence}: retrieval metrics may inform $K$ or issue-packet construction, but they are evidence variables, not status variables. These invariants are what make the model non-compensatory: legal fluency, high recall or strong ranking cannot purchase procedural status when a required audit artefact is absent.
 
 \subsection{Audit dimensions}
 
@@ -231,23 +232,24 @@ Second, apply system-role and failure caps. A disclosed assistance tool cannot e
 
 Operationally, an evaluator applies the model in six steps: identify the candidate procedural status claimed for the output; freeze the relevant issue, query, source collection, workflow version and output identifier; score each component of $\mathcal{A}(o)$ using the audit artefacts in Table 2; apply the necessary gates in Table 3; assign the highest available status or record the missing gate; and repeat the audit after material corpus, workflow or interface changes. This makes the framework usable as a deployment checklist, post-use audit and benchmark extension.
 
-The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means absent, 1 means incomplete or internal, and 2 means reviewable by the relevant professional or procedural actor. The default $\tau_N=9$ permits one limited weakness while still requiring every gate; decision-support status requires $T=L=2$ because external reasons require both contestation and adoption records. The sensitivity table shows that the default is not a knife-edge choice: thresholds 8--10 produced the same allocation, while threshold 11 moved two normative-screening scenarios to professional support.
+The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means absent, 1 means incomplete or internal, and 2 means reviewable by the relevant professional or procedural actor. The default $\tau_N=9$ permits one limited weakness while still requiring every gate; decision-support status requires $T=L=2$ because external reasons require both contestation and adoption records. The full validation suite re-evaluates all 62 packets under thresholds 8--12. Thresholds 8--10 produced identical status allocations; only stricter thresholds generated demotions, and none generated promotions.
 
 \begin{table}[htbp]
 \centering
-\caption{Sensitivity of stress-test status allocation to threshold policy}
-\small
+\caption{Full-packet sensitivity of status allocation to threshold policy}
+\scriptsize
 \renewcommand{\arraystretch}{1.1}
-\begin{tabular}{rrrrrrr}
+\begin{tabularx}{\textwidth}{rrrrY}
 \toprule
-$\tau_N$ & $\tau_D$ & Decision & Normative & Professional & Reference & No effect \\
+$\tau_N$ & $\tau_D$ & Flips & Demotions & Status distribution \\
 \midrule
-8 & 10 & 2 & 3 & 1 & 2 & 2 \\
-9 & 10 & 2 & 3 & 1 & 2 & 2 \\
-10 & 11 & 2 & 3 & 1 & 2 & 2 \\
-11 & 12 & 2 & 1 & 3 & 2 & 2 \\
+8 & 10 & 0 & 0 & decision 2; screening 10; professional 13; reference 35; no effect 2 \\
+9 & 10 & 0 & 0 & decision 2; screening 10; professional 13; reference 35; no effect 2 \\
+10 & 11 & 0 & 0 & decision 2; screening 10; professional 13; reference 35; no effect 2 \\
+11 & 12 & 2 & 2 & decision 2; screening 8; professional 15; reference 35; no effect 2 \\
+12 & 13 & 9 & 9 & decision 0; screening 5; professional 20; reference 35; no effect 2 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \subsection{Jurisdictional parameterization}
@@ -281,7 +283,7 @@ AI-based case recommendation can be produced by many upstream architectures, but
 
 The evaluation protocol should therefore separate upstream performance metrics from procedural checks. Precision, recall, F1, MRR and related metrics may help evaluate an upstream retrieval or recommendation component. They do not evaluate whether the output has preserved the legal hierarchy of authorities, displayed counter-materials, distinguished binding and persuasive materials, recorded update status, or produced a contestable adoption trail. These are evaluation requirements for procedural status.
 
-The procedural metrics can be stated directly. \textit{Authority coverage} asks whether known high-authority materials for the issue appear in the output set. \textit{Counter-authority recall} asks whether legally relevant contrary or limiting materials are surfaced. \textit{Hierarchy accuracy} asks whether the output correctly labels binding, precedential, persuasive, overruled or superseded materials. \textit{Version traceability} asks whether the source collection and upstream run state that produced the output can be reconstructed. \textit{Adoption-log completeness} asks whether later human use of the output is observable. These metrics do not replace upstream benchmarks; they determine whether a benchmarked output can be used procedurally.
+The procedural metrics can be stated directly. \textit{Authority coverage} asks whether known high-authority materials for the issue appear in the output set. \textit{Counter-authority recall} asks whether legally relevant contrary or limiting materials are surfaced. \textit{Hierarchy accuracy} asks whether the output correctly labels binding, precedential, persuasive, overruled or superseded materials. \textit{Version traceability} asks whether the source collection and upstream run state that produced the output can be reconstructed. \textit{Procedural-source coverage} asks whether source links are bound to official, tool-verified or otherwise procedurally usable source tags rather than merely named. \textit{Adoption-log completeness} asks whether later human use of the output is observable. These metrics do not replace upstream benchmarks; they determine whether a benchmarked output can be used procedurally.
 
 \begin{table}[htbp]
 \centering
@@ -344,7 +346,13 @@ EC=\frac{|\text{output units with source-locator support}|}{|\text{all legally m
 STC=\frac{|\text{output-source links with source-attribution tags}|}{|\text{all output-source links}|}.
 \]
 
-The tag may indicate, for example, whether the source was verified by a connected legal research tool, drawn from public metadata, supplied by the user, treated as settled background, or still requires pinpoint verification. For external normative screening, a tag that merely says ``needs verification'' is not enough; it records work still to be done rather than procedural source support. Low $EF$, $EC$ or $STC$ is different from ordinary low upstream recall. It means that the legal output is not procedurally reconstructable or reviewable even if an upstream system found relevant documents. A generated or summarized output with strong upstream performance but weak evidence fidelity, missing locators, untagged sources or no party-facing contestation path should be downgraded or withdrawn from external procedural use.
+\textit{Procedural-source coverage} is stricter:
+
+\[
+PSC=\frac{|\text{links tagged official, tool-verified, user-verified or settled}|}{|\text{all output-source links}|}.
+\]
+
+The tag may indicate, for example, whether the source was verified by a connected legal research tool, drawn from public metadata, supplied by the user, treated as settled background, or still requires pinpoint verification. For external normative screening, a tag that merely says ``needs verification'' is not enough; it records work still to be done rather than procedural source support. Low $EF$, $EC$, $STC$ or $PSC$ is different from ordinary low upstream recall. It means that the legal output is not procedurally reconstructable or reviewable even if an upstream system found relevant documents. A generated or summarized output with strong upstream performance but weak evidence fidelity, missing locators, nonprocedural source tags or no party-facing contestation path should be downgraded or withdrawn from external procedural use.
 
 \subsection{Review and adoption gates}
 
@@ -376,9 +384,9 @@ Withdrawal & Source, corpus, ranking or adoption chain cannot be reconstructed, 
 
 To test whether the framework is operational rather than merely classificatory, the rules above were implemented in a lightweight command-line audit harness. The implementation uses local JSON scenario files as the unit of evidence and produces both Markdown and JSON run artefacts. An anonymized companion repository should supply the harness, scenario files, run artefacts and replication commands.
 
-The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, system role or role-inference evidence, a base audit vector $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner does not read the expected outcome when computing status. It computes the allowed status, role cap, counter-authority recall, authority coverage, invalid-authority rate, packet-level evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. Separate commands vary status thresholds and re-score the same packets under strict and lenient coding policies.
+The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, system role or role-inference evidence, a base audit vector $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner does not read the expected outcome when computing status. It computes the allowed status, role cap, counter-authority recall, authority coverage, invalid-authority rate, packet-level evidence fidelity, evidence coverage, source-tag coverage, procedural-source-tag coverage and downgrade or withdrawal disposition. Separate commands vary status thresholds and re-score the same packets under strict and lenient coding policies.
 
-The complete evaluation matrix contains ten layers: ten protocol stress scenarios, 120 embedded public metadata records, 60 ordered public-system output records, 19 issue-specific public output/source records, 99 true public search result records, ten raw model outputs, three issue-defined positive-control packets, twelve issue-level ablations, 124 strict/lenient recoded evaluations and 94 score-blinded coder evaluations over 47 packets. This is executable audit evaluation rather than a field deployment study. Stress scenarios test the decision protocol. Metadata and public-system outputs test source reconstruction. The issue-specific public layer separates two naturally returned issue-search outputs from one source-bound public-source positive packet. The public retrieval benchmark tests real query outputs against issue-defined high-authority and counter-material gold sets. Raw model outputs test the gap between legal fluency and procedural status. Positive-control packets test the conditions under which normative material screening is justified. Ablations test whether specific defects trigger downgrade or suspension. Recoding and dual coding test whether status allocation is fragile to audit-vector disagreement.
+The complete evaluation matrix contains 62 scenario packets, 333 embedded records or outputs, 310 threshold-sensitivity evaluations, 124 strict/lenient recodings and 124 score-blinded coding evaluations, for 891 evaluation rows. The evidence is organized in four groups. First, protocol tests and ablations check whether gates, caps, downgrade and withdrawal rules behave as specified. Second, public metadata and public-system snapshots test whether real legal outputs can be reconstructed above heterogeneous sources. Third, issue-level public search, raw model outputs and source-bound positive controls test the paper's central contrast between retrieval success, source binding and screening qualification. Fourth, threshold sensitivity, recoding and score-blinded coding test robustness of status allocation.
 
 \begin{table}[htbp]
 \centering
@@ -398,7 +406,8 @@ Raw model outputs & 10 & 10/10 & High authority coverage without source binding 
 Positive-control issue packets & 3 & 3/3 & Source-bound high-authority and counter-material packets can qualify as normative screening. \\
 Issue ablations & 12 & 12/12 & High-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger caps. \\
 Annotation robustness & 124 recodings & 60/62 stable & Strict and lenient recoding policies test status stability across all packets. \\
-Score-blinded dual coding & 47 packets, 2 passes & 0.96 agreement & Coding passes score packets without original scores or expected outcomes. \\
+Score-blinded dual coding & 62 packets, 2 passes & 0.97 agreement & Coding passes score packets without original scores or expected outcomes. \\
+Threshold sensitivity & 310 evaluations & 0 flips at thresholds 8--10 & All 62 packets are re-evaluated under normative thresholds 8--12. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -444,20 +453,20 @@ All twelve outputs were capped at reference information. Mean high-authority rec
 
 The harness was also run on ten raw legal-authority recommendations generated by a single upstream model configuration, Codex GPT-5.5 with extra-high reasoning. The prompts covered the same three issue families as the positive-control packets: U.S. agency deference after \textit{Loper Bright}, English mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access rights. The model was not allowed to browse or use tools. The point was therefore not to benchmark legal correctness against a commercial research system, but to ask whether fluent model text with strong authority coverage can itself claim normative screening status.
 
-It cannot. All ten raw outputs identified the expected high-authority and limiting materials in the issue families, producing mean upstream recall of 1.00 and counter-authority recall of 1.00. Yet every claimed normative-screening output was downgraded to reference information because the citations were marked as requiring verification rather than bound to official sources, corpus manifests, pinpoint locators and a contestation pathway. The result is the paper's central rule in executable form: authority coverage is not procedural status.
+It cannot. All ten raw outputs identified the expected high-authority and limiting materials in the issue families, producing mean upstream recall of 1.00 and counter-authority recall of 1.00. Yet every claimed normative-screening output was downgraded to reference information because the citations were marked as requiring verification rather than bound to official sources, corpus manifests, pinpoint locators and a contestation pathway. Their source-tag coverage was 1.00, but procedural-source coverage was 0.00. The result is the paper's central rule in executable form: authority coverage is not procedural status.
 
 \begin{table}[htbp]
 \centering
 \caption{Raw model-output pilot}
 \small
 \renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{3.0cm}p{1.6cm}p{2.0cm}p{1.9cm}Y}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{2.8cm}p{1.2cm}p{1.6cm}p{1.7cm}p{1.0cm}Y}
 \toprule
-Issue family & Outputs & Mean score & Upstream recall & Allowed status \\
+Issue family & N & Mean score & Upstream recall & PSC & Allowed status \\
 \midrule
-U.S. agency deference after \textit{Loper Bright} & 3 & 9 & 1.00 & Reference information \\
-English mesothelioma causation after \textit{Fairchild} & 3 & 9 & 1.00 & Reference information \\
-EU GDPR Article 15 access rights & 4 & 9 & 1.00 & Reference information \\
+U.S. agency deference after \textit{Loper Bright} & 3 & 9 & 1.00 & 0.00 & Reference information \\
+English mesothelioma causation after \textit{Fairchild} & 3 & 9 & 1.00 & 0.00 & Reference information \\
+EU GDPR Article 15 access rights & 4 & 9 & 1.00 & 0.00 & Reference information \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -482,7 +491,7 @@ EU GDPR Article 15 access rights & Civil law/EU & H=3; C=2; invalid=2 treatments
 
 The ablation suite then removes one procedural condition at a time from those packets. Twelve ablations were generated: high-authority omission, counter-material suppression, unverified source tags and missing authorized-adoption gates for each issue family. Nine were capped at reference information through downgrade or suspension. The remaining three claimed decision-support status but were capped at normative screening because the packet lacked authorized institutional adoption. This is the crucial negative test: a packet that is otherwise strong on source links and authority coverage still loses status when the missing condition is procedural rather than semantic.
 
-The final layers address coding uncertainty. First, all 62 committed scenario packets were re-scored under strict and lenient policies. Status allocation was stable for 60 of 62 packets; weighted status agreement was 0.98 for base versus strict and 1.00 for base versus lenient. Second, 47 packets were converted into score-blinded packet files that removed original scores, expected outcomes and manual failure flags. Two independent coding passes then applied the shared codebook to the packets. They reached 0.96 exact status agreement and 0.97 weighted status agreement, with disagreements only on two decision-support packets where the review-gate evidence was interpreted differently. This does not replace a larger human annotation study, but it directly tests whether the proposed status categories can be applied from packet evidence rather than from the author's original labels.
+The final layers address coding uncertainty. First, all 62 committed scenario packets were re-scored under strict and lenient policies. Status allocation was stable for 60 of 62 packets; weighted status agreement was 0.98 for base versus strict and 1.00 for base versus lenient. Second, the same 62 packets were converted into score-blinded packet files that removed original scores, expected outcomes and manual failure flags. Two codebook-based coding passes then applied fresh scores to the packets. They reached 0.97 exact status agreement and 0.98 weighted status agreement, with disagreements only on two decision-support packets where the review-gate evidence was interpreted differently. This does not replace a larger external annotation study, but it directly tests whether the proposed status categories can be applied from packet evidence rather than from the author's original labels.
 
 \section{Implications and Limitations}
 

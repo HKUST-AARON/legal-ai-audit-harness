@@ -687,6 +687,243 @@
       },
       "failure_flags": [],
       "notes": "Official/tool-verified links and complete high-authority/counter sets are reviewable."
+    },
+    {
+      "packet_id": "issue-public-output-eu-official-gdpr-article15",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public-source packet is complete enough for screening, but no decision adoption record is present."
+    },
+    {
+      "packet_id": "issue-public-output-uk-tna-fairchild-mesothelioma",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Visible public records are traceable, but the issue authority/counter chain is incomplete."
+    },
+    {
+      "packet_id": "issue-public-output-us-courtlistener-loper-bright",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Visible public records are traceable, but the issue authority/counter chain is incomplete."
+    },
+    {
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
     }
   ]
 }

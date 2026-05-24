@@ -83,6 +83,7 @@ class AuditResult:
     evidence_fidelity: float | None
     evidence_coverage: float | None
     source_tag_coverage: float | None
+    procedural_source_tag_coverage: float | None
     disposition: str
     expected_allowed_status: str | None
     expected_disposition: str | None
@@ -139,6 +140,7 @@ def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = No
         evidence_fidelity=metrics["evidence_fidelity"],
         evidence_coverage=metrics["evidence_coverage"],
         source_tag_coverage=metrics["source_tag_coverage"],
+        procedural_source_tag_coverage=metrics["procedural_source_tag_coverage"],
         disposition=disposition,
         expected_allowed_status=expected_allowed,
         expected_disposition=expected_disposition,
@@ -255,6 +257,7 @@ def _scenario_metrics(scenario: dict[str, Any]) -> dict[str, float | None]:
         "evidence_fidelity": _evidence_fidelity(evidence_packet),
         "evidence_coverage": _evidence_coverage(evidence_packet),
         "source_tag_coverage": _source_tag_coverage(evidence_packet),
+        "procedural_source_tag_coverage": _procedural_source_tag_coverage(evidence_packet),
     }
 
 
@@ -316,6 +319,14 @@ def _source_tag_coverage(evidence_packet: dict[str, Any]) -> float | None:
     if not links:
         return None
     tagged = [link for link in links if link.get("source_tag") in SOURCE_TAGS]
+    return len(tagged) / len(links)
+
+
+def _procedural_source_tag_coverage(evidence_packet: dict[str, Any]) -> float | None:
+    links = evidence_packet.get("output_links", [])
+    if not links:
+        return None
+    tagged = [link for link in links if link.get("source_tag") in PROCEDURAL_SOURCE_TAGS]
     return len(tagged) / len(links)
 
 

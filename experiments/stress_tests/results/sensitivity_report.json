@@ -19,6 +19,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "administrative-guidance-conflict",
           "scores": {
             "H": 1,
@@ -46,6 +47,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -73,6 +75,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -100,6 +103,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -127,6 +131,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "grounded-output-summary",
           "scores": {
             "H": 2,
@@ -157,6 +162,7 @@
             "T",
             "total_score>=8"
           ],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "high-coverage-uncontestable-output",
           "scores": {
             "H": 1,
@@ -184,6 +190,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -214,6 +221,7 @@
             "K",
             "total_score>=8"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "professional-research-support",
           "scores": {
             "H": 1,
@@ -241,6 +249,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "suspended-authority-omission",
           "scores": {
             "H": 2,
@@ -271,6 +280,7 @@
             "S",
             "Q"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "unverifiable-legal-output",
           "scores": {
             "H": 0,
@@ -313,6 +323,7 @@
           "missing_gates": [
             "total_score>=9"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "administrative-guidance-conflict",
           "scores": {
             "H": 1,
@@ -340,6 +351,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -367,6 +379,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -394,6 +407,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -421,6 +435,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "grounded-output-summary",
           "scores": {
             "H": 2,
@@ -451,6 +466,7 @@
             "T",
             "total_score>=9"
           ],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "high-coverage-uncontestable-output",
           "scores": {
             "H": 1,
@@ -478,6 +494,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -508,6 +525,7 @@
             "K",
             "total_score>=9"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "professional-research-support",
           "scores": {
             "H": 1,
@@ -535,6 +553,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "suspended-authority-omission",
           "scores": {
             "H": 2,
@@ -565,6 +584,7 @@
             "S",
             "Q"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "unverifiable-legal-output",
           "scores": {
             "H": 0,
@@ -607,6 +627,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "administrative-guidance-conflict",
           "scores": {
             "H": 1,
@@ -634,6 +655,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -661,6 +683,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -688,6 +711,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -715,6 +739,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "grounded-output-summary",
           "scores": {
             "H": 2,
@@ -745,6 +770,7 @@
             "T",
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "high-coverage-uncontestable-output",
           "scores": {
             "H": 1,
@@ -772,6 +798,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -802,6 +829,7 @@
             "K",
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "professional-research-support",
           "scores": {
             "H": 1,
@@ -829,6 +857,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "suspended-authority-omission",
           "scores": {
             "H": 2,
@@ -859,6 +888,7 @@
             "S",
             "Q"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "unverifiable-legal-output",
           "scores": {
             "H": 0,
@@ -901,6 +931,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "administrative-guidance-conflict",
           "scores": {
             "H": 1,
@@ -930,6 +961,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -959,6 +991,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -986,6 +1019,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -1013,6 +1047,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "grounded-output-summary",
           "scores": {
             "H": 2,
@@ -1043,6 +1078,7 @@
             "T",
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "high-coverage-uncontestable-output",
           "scores": {
             "H": 1,
@@ -1070,6 +1106,7 @@
           "expected_passed": true,
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -1100,6 +1137,7 @@
             "K",
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "professional-research-support",
           "scores": {
             "H": 1,
@@ -1129,6 +1167,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": null,
           "scenario_id": "suspended-authority-omission",
           "scores": {
             "H": 2,
@@ -1159,6 +1198,7 @@
             "S",
             "Q"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "unverifiable-legal-output",
           "scores": {
             "H": 0,

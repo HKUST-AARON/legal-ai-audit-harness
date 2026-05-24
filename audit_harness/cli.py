@@ -100,6 +100,7 @@ def _format_result(result: AuditResult) -> str:
             f"evidence_fidelity: {_metric(result.evidence_fidelity)}",
             f"evidence_coverage: {_metric(result.evidence_coverage)}",
             f"source_tag_coverage: {_metric(result.source_tag_coverage)}",
+            f"procedural_source_tag_coverage: {_metric(result.procedural_source_tag_coverage)}",
             f"disposition: {result.disposition}",
             f"expected_passed: {result.expected_passed}",
         ]
@@ -161,8 +162,8 @@ def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str
             "",
             "## Scenario Results",
             "",
-            "| Scenario | Profile | Claimed | Allowed | Score | Upstream recall | CAR | Authority coverage | Evidence fidelity | Source tags | Disposition |",
-            "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+            "| Scenario | Profile | Claimed | Allowed | Score | Upstream recall | CAR | Authority coverage | Evidence fidelity | Source tags | Procedural tags | Disposition |",
+            "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
         ]
     )
     for row in rows:
@@ -180,6 +181,7 @@ def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str
                     _metric(row["authority_coverage"]),
                     _metric(row["evidence_fidelity"]),
                     _metric(row["source_tag_coverage"]),
+                    _metric(row["procedural_source_tag_coverage"]),
                     row["disposition"],
                 ]
             )

@@ -7,18 +7,18 @@
   },
   "blind_coding": {
     "coder_count": 2,
-    "packet_count": 47,
+    "packet_count": 62,
     "pairwise_status": [
       {
-        "exact_status_agreement": 0.9574468085106383,
+        "exact_status_agreement": 0.967741935483871,
         "left": "coder_a",
         "right": "coder_b",
-        "weighted_status_agreement": 0.9680851063829787
+        "weighted_status_agreement": 0.9758064516129032
       }
     ],
     "status_disagreement_count": 2
   },
-  "blind_coding_evaluations": 94,
+  "blind_coding_evaluations": 124,
   "expected_passed": 62,
   "expected_total": 62,
   "high_upstream_but_blocked": 20,
@@ -166,19 +166,98 @@
       "label": "Score-blinded dual coding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.96 exact status agreement",
-      "scenario_count": 47,
+      "rule_pass": "0.97 exact status agreement",
+      "scenario_count": 62,
       "status_distribution": {
         "status_disagreements": 2,
-        "weighted_status_agreement": 0.97
+        "weighted_status_agreement": 0.98
       },
-      "validation_units": "47 packets x 2 coding passes"
+      "validation_units": "62 packets x 2 coding passes"
     }
   ],
-  "total_evaluation_rows": 551,
+  "threshold_sensitivity": {
+    "default_policy": {
+      "decision_threshold": 10,
+      "normative_threshold": 9
+    },
+    "runs": [
+      {
+        "decision_threshold": 10,
+        "demotions_from_default": 0,
+        "normative_threshold": 8,
+        "promotions_from_default": 0,
+        "status_distribution": {
+          "decision_support_reason": 2,
+          "no_external_legal_effect": 2,
+          "normative_material_screening_output": 10,
+          "professional_support_output": 13,
+          "reference_information": 35
+        },
+        "status_flips_from_default": 0
+      },
+      {
+        "decision_threshold": 10,
+        "demotions_from_default": 0,
+        "normative_threshold": 9,
+        "promotions_from_default": 0,
+        "status_distribution": {
+          "decision_support_reason": 2,
+          "no_external_legal_effect": 2,
+          "normative_material_screening_output": 10,
+          "professional_support_output": 13,
+          "reference_information": 35
+        },
+        "status_flips_from_default": 0
+      },
+      {
+        "decision_threshold": 11,
+        "demotions_from_default": 0,
+        "normative_threshold": 10,
+        "promotions_from_default": 0,
+        "status_distribution": {
+          "decision_support_reason": 2,
+          "no_external_legal_effect": 2,
+          "normative_material_screening_output": 10,
+          "professional_support_output": 13,
+          "reference_information": 35
+        },
+        "status_flips_from_default": 0
+      },
+      {
+        "decision_threshold": 12,
+        "demotions_from_default": 2,
+        "normative_threshold": 11,
+        "promotions_from_default": 0,
+        "status_distribution": {
+          "decision_support_reason": 2,
+          "no_external_legal_effect": 2,
+          "normative_material_screening_output": 8,
+          "professional_support_output": 15,
+          "reference_information": 35
+        },
+        "status_flips_from_default": 2
+      },
+      {
+        "decision_threshold": 13,
+        "demotions_from_default": 9,
+        "normative_threshold": 12,
+        "promotions_from_default": 0,
+        "status_distribution": {
+          "no_external_legal_effect": 2,
+          "normative_material_screening_output": 5,
+          "professional_support_output": 20,
+          "reference_information": 35
+        },
+        "status_flips_from_default": 9
+      }
+    ],
+    "scenario_count": 62
+  },
+  "threshold_sensitivity_evaluations": 310,
+  "total_evaluation_rows": 891,
   "validation_units": {
     "annotation_recodings": 124,
-    "blind_coding_packets": 47,
+    "blind_coding_packets": 62,
     "issue_ablations": 12,
     "issue_gold_sets": 3,
     "issue_public_records": 19,
@@ -187,6 +266,7 @@
     "public_system_records": 60,
     "raw_model_outputs": 10,
     "stress_scenarios": 10,
+    "threshold_sensitivity_evaluations": 310,
     "total": 333
   }
 }

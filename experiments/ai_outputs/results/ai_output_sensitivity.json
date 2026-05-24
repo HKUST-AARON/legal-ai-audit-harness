@@ -21,6 +21,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-01",
           "scores": {
             "H": 2,
@@ -50,6 +51,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-02",
           "scores": {
             "H": 2,
@@ -79,6 +81,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-03",
           "scores": {
             "H": 2,
@@ -108,6 +111,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-04",
           "scores": {
             "H": 2,
@@ -137,6 +141,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-01",
           "scores": {
             "H": 2,
@@ -166,6 +171,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-02",
           "scores": {
             "H": 2,
@@ -195,6 +201,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-03",
           "scores": {
             "H": 2,
@@ -224,6 +231,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-01",
           "scores": {
             "H": 2,
@@ -253,6 +261,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-02",
           "scores": {
             "H": 2,
@@ -282,6 +291,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-03",
           "scores": {
             "H": 2,
@@ -320,6 +330,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-01",
           "scores": {
             "H": 2,
@@ -349,6 +360,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-02",
           "scores": {
             "H": 2,
@@ -378,6 +390,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-03",
           "scores": {
             "H": 2,
@@ -407,6 +420,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-04",
           "scores": {
             "H": 2,
@@ -436,6 +450,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-01",
           "scores": {
             "H": 2,
@@ -465,6 +480,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-02",
           "scores": {
             "H": 2,
@@ -494,6 +510,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-03",
           "scores": {
             "H": 2,
@@ -523,6 +540,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-01",
           "scores": {
             "H": 2,
@@ -552,6 +570,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-02",
           "scores": {
             "H": 2,
@@ -581,6 +600,7 @@
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-03",
           "scores": {
             "H": 2,
@@ -619,6 +639,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-01",
           "scores": {
             "H": 2,
@@ -648,6 +669,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-02",
           "scores": {
             "H": 2,
@@ -677,6 +699,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-03",
           "scores": {
             "H": 2,
@@ -706,6 +729,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-04",
           "scores": {
             "H": 2,
@@ -735,6 +759,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-01",
           "scores": {
             "H": 2,
@@ -764,6 +789,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-02",
           "scores": {
             "H": 2,
@@ -793,6 +819,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-03",
           "scores": {
             "H": 2,
@@ -822,6 +849,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-01",
           "scores": {
             "H": 2,
@@ -851,6 +879,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-02",
           "scores": {
             "H": 2,
@@ -880,6 +909,7 @@
           "missing_gates": [
             "total_score>=10"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-03",
           "scores": {
             "H": 2,
@@ -918,6 +948,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-01",
           "scores": {
             "H": 2,
@@ -947,6 +978,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-02",
           "scores": {
             "H": 2,
@@ -976,6 +1008,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-03",
           "scores": {
             "H": 2,
@@ -1005,6 +1038,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-eu-04",
           "scores": {
             "H": 2,
@@ -1034,6 +1068,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-01",
           "scores": {
             "H": 2,
@@ -1063,6 +1098,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-02",
           "scores": {
             "H": 2,
@@ -1092,6 +1128,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-uk-03",
           "scores": {
             "H": 2,
@@ -1121,6 +1158,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-01",
           "scores": {
             "H": 2,
@@ -1150,6 +1188,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-02",
           "scores": {
             "H": 2,
@@ -1179,6 +1218,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
+          "procedural_source_tag_coverage": 0.0,
           "scenario_id": "codex55-us-03",
           "scores": {
             "H": 2,

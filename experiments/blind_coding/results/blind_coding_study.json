@@ -5,14 +5,14 @@
     "coder_b"
   ],
   "mean_total_score": {
-    "coder_a": 8.25531914893617,
-    "coder_b": 8.319148936170214
+    "coder_a": 8.225806451612904,
+    "coder_b": 8.274193548387096
   },
-  "packet_count": 47,
+  "packet_count": 62,
   "pairwise_dimensions": [
     {
       "dimension_agreement": {
-        "H": 0.8936170212765957,
+        "H": 0.9193548387096774,
         "K": 1.0,
         "L": 1.0,
         "Q": 1.0,
@@ -25,10 +25,10 @@
   ],
   "pairwise_status": [
     {
-      "exact_status_agreement": 0.9574468085106383,
+      "exact_status_agreement": 0.967741935483871,
       "left": "coder_a",
       "right": "coder_b",
-      "weighted_status_agreement": 0.9680851063829787
+      "weighted_status_agreement": 0.9758064516129032
     }
   ],
   "rows": [
@@ -834,6 +834,119 @@
     {
       "annotations": [
         {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "issue-public-output-uk-tna-fairchild-mesothelioma"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "issue-public-output-us-courtlistener-loper-bright"
+    },
+    {
+      "annotations": [
+        {
           "allowed_status": "decision_support_reason",
           "coder_id": "coder_a",
           "disposition": "none",
@@ -904,6 +1017,474 @@
         }
       ],
       "packet_id": "professional-research-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q01"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q02"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q03"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q05"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q06"
     },
     {
       "annotations": [

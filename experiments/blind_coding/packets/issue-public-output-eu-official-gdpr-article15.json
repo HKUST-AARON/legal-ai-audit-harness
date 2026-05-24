@@ -1,0 +1,149 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif",
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Legislation.gov.uk/CURIA public source packet for GDPR Article 15 access rights.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "GDPR Article 15",
+        "source_id": "gdpr-art-15",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "Case C-154/21",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "Case C-487/21",
+        "source_id": "cjeu-c-487-21-crif",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "GDPR Article 12(5)",
+        "source_id": "gdpr-art-12-5",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "GDPR Article 15(4)",
+        "source_id": "gdpr-art-15-4",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Issue-specific public output rank 1 makes this material visible: Regulation (EU) 2016/679 Article 15",
+        "id": "rank-01",
+        "locators": [
+          "GDPR Article 15"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "gdpr-art-15"
+        ]
+      },
+      {
+        "claim": "Issue-specific public output rank 2 makes this material visible: RW v \u00d6sterreichische Post AG",
+        "id": "rank-02",
+        "locators": [
+          "Case C-154/21"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ]
+      },
+      {
+        "claim": "Issue-specific public output rank 3 makes this material visible: \u00d6sterreichische Datenschutzbeh\u00f6rde and CRIF",
+        "id": "rank-03",
+        "locators": [
+          "Case C-487/21"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "cjeu-c-487-21-crif"
+        ]
+      },
+      {
+        "claim": "Issue-specific public output rank 4 makes this material visible: Regulation (EU) 2016/679 Article 12(5)",
+        "id": "rank-04",
+        "locators": [
+          "GDPR Article 12(5)"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "gdpr-art-12-5"
+        ]
+      },
+      {
+        "claim": "Issue-specific public output rank 5 makes this material visible: Regulation (EU) 2016/679 Article 15(4)",
+        "id": "rank-05",
+        "locators": [
+          "GDPR Article 15(4)"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "gdpr-art-15-4"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_public_outputs/manifests/eu-official-gdpr-article15.json"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "issue-public-output-eu-official-gdpr-article15",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": null,
+    "recall": 1.0
+  },
+  "upstream_output": {}
+}

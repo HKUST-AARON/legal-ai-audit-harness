@@ -5,10 +5,13 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(ROOT := Path(__file__).resolve().parents[1]))
 
-ROOT = Path(__file__).resolve().parents[1]
+from audit_harness.model import STATUS_RANK, StatusPolicy, evaluate_scenario
+
 RESULTS = ROOT / "experiments" / "full_validation" / "results"
 BASE_VALIDATION_UNITS = 333
+THRESHOLDS = [8, 9, 10, 11, 12]
 
 SUITES = [
     {
@@ -157,14 +160,18 @@ def main() -> int:
         )
         rows.append(_blind_coding_row(blind_coding_payload))
 
+    threshold_sensitivity = _threshold_sensitivity(_load_all_scenarios())
+    threshold_evaluations = threshold_sensitivity["scenario_count"] * len(threshold_sensitivity["runs"])
     payload = {
         "suite_count": len(rows),
         "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
         "recoded_evaluations": robustness_payload["recoded_evaluations"],
         "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
+        "threshold_sensitivity_evaluations": threshold_evaluations,
         "total_evaluation_rows": BASE_VALIDATION_UNITS
         + robustness_payload["recoded_evaluations"]
-        + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"]),
+        + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
+        + threshold_evaluations,
         "validation_units": {
             "stress_scenarios": 10,
             "public_metadata_records": 120,
@@ -176,6 +183,7 @@ def main() -> int:
             "issue_ablations": 12,
             "annotation_recodings": robustness_payload["recoded_evaluations"],
             "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
+            "threshold_sensitivity_evaluations": threshold_evaluations,
             "total": BASE_VALIDATION_UNITS,
         },
         "expected_passed": sum(row["expected_passed"] for row in rows if "expected_passed" in row),
@@ -199,6 +207,7 @@ def main() -> int:
             "status_disagreement_count": blind_coding_payload["status_disagreement_count"],
             "pairwise_status": blind_coding_payload["pairwise_status"],
         },
+        "threshold_sensitivity": threshold_sensitivity,
         "suites": rows,
     }
     (RESULTS / "full_validation_report.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
@@ -209,6 +218,54 @@ def main() -> int:
 
 def _run(command: list[str]) -> None:
     subprocess.run(command, cwd=ROOT, check=True)
+
+
+def _load_all_scenarios() -> list[dict]:
+    scenarios = []
+    for suite in SUITES:
+        for path in sorted(suite["path"].glob("*.json")):
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            scenario["_source_path"] = str(path.relative_to(ROOT))
+            scenarios.append(scenario)
+    return scenarios
+
+
+def _threshold_sensitivity(scenarios: list[dict]) -> dict:
+    base_policy = StatusPolicy(normative_threshold=9, decision_threshold=10)
+    base = {
+        scenario["id"]: evaluate_scenario(scenario, base_policy).allowed_status
+        for scenario in scenarios
+    }
+    runs = []
+    for threshold in THRESHOLDS:
+        policy = StatusPolicy(normative_threshold=threshold, decision_threshold=max(10, threshold + 1))
+        distribution: dict[str, int] = {}
+        flips = promotions = demotions = 0
+        for scenario in scenarios:
+            status = evaluate_scenario(scenario, policy).allowed_status
+            distribution[status] = distribution.get(status, 0) + 1
+            base_status = base[scenario["id"]]
+            if status != base_status:
+                flips += 1
+                if STATUS_RANK[status] > STATUS_RANK[base_status]:
+                    promotions += 1
+                else:
+                    demotions += 1
+        runs.append(
+            {
+                "normative_threshold": threshold,
+                "decision_threshold": policy.decision_threshold,
+                "status_distribution": distribution,
+                "status_flips_from_default": flips,
+                "promotions_from_default": promotions,
+                "demotions_from_default": demotions,
+            }
+        )
+    return {
+        "scenario_count": len(scenarios),
+        "default_policy": {"normative_threshold": 9, "decision_threshold": 10},
+        "runs": runs,
+    }
 
 
 def _suite_row(suite: dict, payload: dict) -> dict:
@@ -285,6 +342,7 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['issue_ablations']} issue ablations)",
         f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
+        f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Total evaluation rows including recodings: {payload['total_evaluation_rows']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
@@ -316,6 +374,36 @@ def _format_report(payload: dict) -> str:
     lines.extend(["", "## Findings", ""])
     for row in payload["suites"]:
         lines.append(f"- **{row['label']}:** {row['finding']}")
+    lines.extend(["", "## Full-Threshold Sensitivity", ""])
+    lines.append(
+        f"All {payload['threshold_sensitivity']['scenario_count']} scenario packets were re-evaluated under "
+        "normative thresholds 8--12."
+    )
+    lines.extend(
+        [
+            "",
+            "| Normative threshold | Decision threshold | Status flips from default | Promotions | Demotions | Status distribution |",
+            "| ---: | ---: | ---: | ---: | ---: | --- |",
+        ]
+    )
+    for run in payload["threshold_sensitivity"]["runs"]:
+        distribution = ", ".join(
+            f"{status}: {count}" for status, count in sorted(run["status_distribution"].items())
+        )
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    str(run["normative_threshold"]),
+                    str(run["decision_threshold"]),
+                    str(run["status_flips_from_default"]),
+                    str(run["promotions_from_default"]),
+                    str(run["demotions_from_default"]),
+                    distribution,
+                ]
+            )
+            + " |"
+        )
     return "\n".join(lines)
 
 

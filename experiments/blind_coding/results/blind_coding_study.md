@@ -1,6 +1,6 @@
 # Blind Coding Study
 
-Packets: 47
+Packets: 62
 Coding passes: 2 (coder_a, coder_b)
 Status disagreements: 2
 
@@ -8,14 +8,14 @@ Status disagreements: 2
 
 | Left | Right | Exact status agreement | Weighted status agreement |
 | --- | --- | ---: | ---: |
-| coder_a | coder_b | 0.96 | 0.97 |
+| coder_a | coder_b | 0.97 | 0.98 |
 
 ## Mean Total Score
 
 | Coder | Mean total score |
 | --- | ---: |
-| coder_a | 8.26 |
-| coder_b | 8.32 |
+| coder_a | 8.23 |
+| coder_b | 8.27 |
 
 ## Status Disagreements
 
@@ -47,8 +47,23 @@ Status disagreements: 2
 | eu-gdpr-article15-access-rights | normative_material_screening_output | normative_material_screening_output |
 | grounded-output-summary | professional_support_output | professional_support_output |
 | high-coverage-uncontestable-output | no_external_legal_effect | no_external_legal_effect |
+| issue-public-output-eu-official-gdpr-article15 | normative_material_screening_output | normative_material_screening_output |
+| issue-public-output-uk-tna-fairchild-mesothelioma | reference_information | reference_information |
+| issue-public-output-us-courtlistener-loper-bright | reference_information | reference_information |
 | odr-authorized-review | decision_support_reason | reference_information |
 | professional-research-support | no_external_legal_effect | no_external_legal_effect |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | reference_information | reference_information |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | reference_information | reference_information |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | reference_information | reference_information |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q04 | reference_information | reference_information |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | reference_information | reference_information |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q06 | reference_information | reference_information |
+| public-retrieval-us-agency-deference-after-loper-bright-q01 | reference_information | reference_information |
+| public-retrieval-us-agency-deference-after-loper-bright-q02 | reference_information | reference_information |
+| public-retrieval-us-agency-deference-after-loper-bright-q03 | reference_information | reference_information |
+| public-retrieval-us-agency-deference-after-loper-bright-q04 | reference_information | reference_information |
+| public-retrieval-us-agency-deference-after-loper-bright-q05 | reference_information | reference_information |
+| public-retrieval-us-agency-deference-after-loper-bright-q06 | reference_information | reference_information |
 | public-system-output-canada | professional_support_output | professional_support_output |
 | public-system-output-germany | professional_support_output | professional_support_output |
 | public-system-output-hong_kong | professional_support_output | professional_support_output |

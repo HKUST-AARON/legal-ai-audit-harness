@@ -193,6 +193,96 @@
   },
   {
     "claimed_status": "normative_material_screening_output",
+    "packet_id": "issue-public-output-eu-official-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/issue-public-output-eu-official-gdpr-article15.json",
+    "source_path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "issue-public-output-uk-tna-fairchild-mesothelioma",
+    "packet_path": "experiments/blind_coding/packets/issue-public-output-uk-tna-fairchild-mesothelioma.json",
+    "source_path": "experiments/issue_public_outputs/scenarios/uk-tna-fairchild-mesothelioma.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "issue-public-output-us-courtlistener-loper-bright",
+    "packet_path": "experiments/blind_coding/packets/issue-public-output-us-courtlistener-loper-bright.json",
+    "source_path": "experiments/issue_public_outputs/scenarios/us-courtlistener-loper-bright.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q01.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q01.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q02.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q02.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q03.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q03.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q04.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q04.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q05.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q06.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q06.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q01",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q01.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q01.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q02",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q02.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q02.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q03",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q03.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q03.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q04.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q04.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q05.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q05.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q06.json",
+    "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
     "packet_id": "eu-gdpr-article15-access-rights",
     "packet_path": "experiments/blind_coding/packets/eu-gdpr-article15-access-rights.json",
     "source_path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json"

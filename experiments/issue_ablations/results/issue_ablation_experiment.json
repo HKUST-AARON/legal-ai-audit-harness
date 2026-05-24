@@ -16,6 +16,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "eu-gdpr-article15-access-rights-counter-material-suppressed",
       "scores": {
         "H": 2,
@@ -47,6 +48,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
       "scores": {
         "H": 2,
@@ -78,6 +80,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "eu-gdpr-article15-access-rights-missing-high-authority",
       "scores": {
         "H": 2,
@@ -109,6 +112,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "eu-gdpr-article15-access-rights-unverified-source-tags",
       "scores": {
         "H": 2,
@@ -140,6 +144,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed",
       "scores": {
         "H": 2,
@@ -171,6 +176,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
       "scores": {
         "H": 2,
@@ -202,6 +208,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
       "scores": {
         "H": 2,
@@ -233,6 +240,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags",
       "scores": {
         "H": 2,
@@ -264,6 +272,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "us-agency-deference-after-loper-bright-counter-material-suppressed",
       "scores": {
         "H": 2,
@@ -295,6 +304,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
       "scores": {
         "H": 2,
@@ -326,6 +336,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "us-agency-deference-after-loper-bright-missing-high-authority",
       "scores": {
         "H": 2,
@@ -357,6 +368,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "us-agency-deference-after-loper-bright-unverified-source-tags",
       "scores": {
         "H": 2,

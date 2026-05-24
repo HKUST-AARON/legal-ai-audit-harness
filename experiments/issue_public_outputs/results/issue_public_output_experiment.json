@@ -16,6 +16,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "issue-public-output-eu-official-gdpr-article15",
       "scores": {
         "H": 2,
@@ -47,6 +48,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "issue-public-output-uk-tna-fairchild-mesothelioma",
       "scores": {
         "H": 1,
@@ -78,6 +80,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "issue-public-output-us-courtlistener-loper-bright",
       "scores": {
         "H": 1,

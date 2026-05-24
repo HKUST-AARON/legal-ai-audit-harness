@@ -104,6 +104,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.allowed_status, "reference_information")
         self.assertEqual(result.disposition, "downgrade")
         self.assertAlmostEqual(result.source_tag_coverage, 1.0)
+        self.assertAlmostEqual(result.procedural_source_tag_coverage, 0.0)
 
     def test_review_gate_blocks_unreviewed_external_reliance(self):
         scenario = deepcopy(load("decision_support_ready.json"))
@@ -222,6 +223,7 @@ class AuditModelTest(unittest.TestCase):
             self.assertEqual(result.allowed_status, "reference_information", path.name)
             self.assertEqual(result.disposition, "downgrade", path.name)
             self.assertFalse(result.claim_supported, path.name)
+            self.assertAlmostEqual(result.procedural_source_tag_coverage, 0.0, msg=path.name)
             self.assertGreaterEqual(scenario["upstream_metrics"]["recall"], 0.9, path.name)
 
     def test_issue_specific_public_outputs_shape(self):
@@ -257,13 +259,17 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 99)
         self.assertEqual(report["validation_units"]["issue_public_records"], 19)
         self.assertEqual(report["validation_units"]["annotation_recodings"], 124)
-        self.assertEqual(report["blind_coding_evaluations"], 94)
-        self.assertEqual(report["validation_units"]["blind_coding_packets"], 47)
-        self.assertEqual(report["total_evaluation_rows"], 551)
+        self.assertEqual(report["blind_coding_evaluations"], 124)
+        self.assertEqual(report["validation_units"]["blind_coding_packets"], 62)
+        self.assertEqual(report["threshold_sensitivity_evaluations"], 310)
+        self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 310)
+        self.assertEqual(report["total_evaluation_rows"], 891)
         self.assertEqual(report["expected_passed"], 62)
         self.assertEqual(report["expected_total"], 62)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 62)
-        self.assertEqual(report["blind_coding"]["packet_count"], 47)
+        self.assertEqual(report["blind_coding"]["packet_count"], 62)
+        self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 62)
+        self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
 
     def test_annotation_robustness_report_shape(self):
         completed = subprocess.run(
@@ -295,7 +301,7 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "blind_coding" / "results" / "blind_coding_study.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["packet_count"], 47)
+        self.assertEqual(report["packet_count"], 62)
         self.assertEqual(report["coder_count"], 2)
         self.assertGreaterEqual(report["pairwise_status"][0]["exact_status_agreement"], 0.9)
 

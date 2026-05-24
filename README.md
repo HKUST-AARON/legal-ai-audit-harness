@@ -145,9 +145,10 @@ Current coverage:
 | Issue-defined positive controls | 3 | Tests normative material screening with source-bound high-authority and counter-material sets. |
 | Issue-defined ablations | 12 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
 | Annotation robustness recoding | 124 | Re-scores all 62 scenario packets under strict and lenient coding policies to test status stability. |
-| Score-blinded dual coding | 94 | Two coding passes score all 47 packets without original scores or expected outcomes. |
+| Score-blinded dual coding | 124 | Two coding passes score all 62 packets without original scores or expected outcomes. |
+| Full-threshold sensitivity | 310 | Re-evaluates all 62 scenario packets under normative thresholds 8-12. |
 
-The current full validation report covers 62 scenario files containing 333 embedded records/items, 124 strict/lenient recoded evaluations, and 94 score-blinded coder evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the public retrieval benchmark, robustness and blind-coding layers test whether status allocation survives real public search outputs and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
+The current full validation report covers 62 scenario files containing 333 embedded records/items, 124 strict/lenient recoded evaluations, 124 score-blinded coder evaluations, and 310 full-threshold sensitivity evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the public retrieval benchmark, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
 
 ## Jurisdiction Profiles
 
@@ -155,7 +156,7 @@ Profiles in `examples/jurisdiction_profiles/` parameterize `H` and `K` for diffe
 
 ## Output Evidence Auditing
 
-Scenarios can include an `evidence_packet` object with output-to-source mappings. This sits above any upstream implementation. The harness reports evidence fidelity, evidence coverage, and source-tag coverage. Unsupported output units are withdrawal-level failures when they claim external procedural status; missing source tags downgrade external status because reviewers cannot tell whether a citation was tool-verified, user-provided, public metadata, or still needs verification.
+Scenarios can include an `evidence_packet` object with output-to-source mappings. This sits above any upstream implementation. The harness reports evidence fidelity, evidence coverage, source-tag coverage, and procedural-source-tag coverage. Unsupported output units are withdrawal-level failures when they claim external procedural status; missing or nonprocedural source tags downgrade external status because reviewers cannot tell whether a citation was tool-verified, officially sourced, user-verified, public metadata, or still needs verification.
 
 ## Review Gates
 
@@ -184,7 +185,7 @@ The current positive controls cover:
 - English-law mesothelioma causation after `Fairchild`, `Barker`, the Compensation Act 2006 and `Sienkiewicz`;
 - EU GDPR Article 15 access-right materials on recipients and copies of personal data, including CJEU decisions C-154/21 and C-487/21 plus regulation-based limitations.
 
-The sensitivity command varies the normative-screening threshold from 8 to 11 and reports the resulting status distribution. This is intended to show whether status allocation depends on a single arbitrary threshold.
+The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 62 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
 
 The issue-ablation suite is generated from the same issue packets:
 
@@ -214,7 +215,7 @@ python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 ```
 
-The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, and manual failure flags from 47 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports exact status agreement, weighted status agreement, dimension-level agreement, and disputed packets.
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, and manual failure flags from 62 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports exact status agreement, weighted status agreement, dimension-level agreement, and disputed packets.
 
 ## Raw Model Output Pilot
 

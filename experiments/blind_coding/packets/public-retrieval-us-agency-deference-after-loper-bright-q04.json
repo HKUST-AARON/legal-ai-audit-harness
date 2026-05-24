@@ -1,0 +1,67 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "us-search-center-for-biological-diversity-v-lee-zeldin"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Public search output for query: Loper Bright independent judgment 5 USC 706",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "https://www.courtlistener.com/opinion/10825537/center-for-biological-diversity-v-lee-zeldin/",
+        "source_id": "us-search-center-for-biological-diversity-v-lee-zeldin",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public search rank 1 makes this material visible: Center for Biological Diversity v. Lee Zeldin",
+        "id": "rank-01",
+        "locators": [
+          "https://www.courtlistener.com/opinion/10825537/center-for-biological-diversity-v-lee-zeldin/"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "us-search-center-for-biological-diversity-v-lee-zeldin"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/us-agency-deference-after-loper-bright-q04.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q04.json",
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "upstream_output": {}
+}

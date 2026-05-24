@@ -16,6 +16,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
       "scores": {
         "H": 1,
@@ -47,6 +48,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02",
       "scores": {
         "H": 1,
@@ -78,6 +80,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03",
       "scores": {
         "H": 1,
@@ -109,6 +112,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
       "scores": {
         "H": 1,
@@ -140,6 +144,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
       "scores": {
         "H": 1,
@@ -171,6 +176,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 1.0,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06",
       "scores": {
         "H": 1,
@@ -202,6 +208,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q01",
       "scores": {
         "H": 1,
@@ -233,6 +240,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q02",
       "scores": {
         "H": 1,
@@ -264,6 +272,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q03",
       "scores": {
         "H": 1,
@@ -295,6 +304,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q04",
       "scores": {
         "H": 1,
@@ -326,6 +336,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
       "scores": {
         "H": 1,
@@ -357,6 +368,7 @@
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [],
+      "procedural_source_tag_coverage": 0.0,
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
       "scores": {
         "H": 1,
