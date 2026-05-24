@@ -1,0 +1,81 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "limiting-precedent-c"
+    ],
+    "high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "binding-precedent-a",
+      "statute-b",
+      "limiting-precedent-c"
+    ],
+    "retrieved_counter_or_limiting": [
+      "limiting-precedent-c"
+    ],
+    "retrieved_high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Legal output with strong upstream coverage but missing output-evidence mapping and party contestability.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "",
+        "source_id": "binding-precedent-a",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "unit-1"
+      },
+      {
+        "locator": "section 2",
+        "source_id": "statute-b",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "unit-2"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-1",
+        "locators": [],
+        "source_ids": [
+          "binding-precedent-a"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "locators": [
+          "section 2"
+        ],
+        "source_ids": [
+          "statute-b"
+        ]
+      }
+    ]
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "high-coverage-uncontestable-output",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/high_coverage_uncontestable_output.json",
+  "upstream_metrics": {
+    "f1": 0.92,
+    "precision": 0.92,
+    "recall": 0.93
+  },
+  "upstream_output": {}
+}

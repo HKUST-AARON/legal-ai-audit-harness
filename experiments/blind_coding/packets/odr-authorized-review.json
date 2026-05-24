@@ -1,0 +1,51 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "exception-policy-c",
+      "appeal-decision-d"
+    ],
+    "high_authority": [
+      "consumer-statute-a",
+      "platform-rule-b"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "consumer-statute-a",
+      "platform-rule-b",
+      "exception-policy-c",
+      "appeal-decision-d"
+    ],
+    "retrieved_counter_or_limiting": [
+      "exception-policy-c",
+      "appeal-decision-d"
+    ],
+    "retrieved_high_authority": [
+      "consumer-statute-a",
+      "platform-rule-b"
+    ]
+  },
+  "claimed_status": "decision_support_reason",
+  "deployment_context": "ODR recommendation used only after prior authorization, appeal notice, source trace and human-review override.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "odr",
+  "packet_id": "odr-authorized-review",
+  "review_gate": {
+    "adoption_reasons_recorded": true,
+    "attorney_review_required": true,
+    "contestation_recorded": true,
+    "human_authorization": true,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "odr"
+    ],
+    "reliance_gate": "authorized_adoption",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/odr_authorized_review.json",
+  "upstream_metrics": {
+    "f1": 0.89,
+    "precision": 0.88,
+    "recall": 0.91
+  },
+  "upstream_output": {}
+}

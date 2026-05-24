@@ -1,0 +1,82 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "limiting-precedent-b"
+    ],
+    "high_authority": [
+      "binding-precedent-a"
+    ],
+    "invalid_or_superseded": [
+      "overruled-case-c"
+    ],
+    "retrieved": [
+      "binding-precedent-a",
+      "limiting-precedent-b"
+    ],
+    "retrieved_counter_or_limiting": [
+      "limiting-precedent-b"
+    ],
+    "retrieved_high_authority": [
+      "binding-precedent-a"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Legal output layer that summarizes selected authorities while exposing provider-agnostic source locators and output-level evidence links.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "para 12-15",
+        "source_id": "binding-precedent-a",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "unit-1"
+      },
+      {
+        "locator": "para 8-10",
+        "source_id": "limiting-precedent-b",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "unit-2"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-1",
+        "locators": [
+          "para 12-15"
+        ],
+        "source_ids": [
+          "binding-precedent-a"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "locators": [
+          "para 8-10"
+        ],
+        "source_ids": [
+          "limiting-precedent-b"
+        ]
+      }
+    ]
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "grounded-output-summary",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/grounded_output_summary.json",
+  "upstream_metrics": {
+    "f1": 0.9,
+    "precision": 0.9,
+    "recall": 0.9
+  },
+  "upstream_output": {}
+}

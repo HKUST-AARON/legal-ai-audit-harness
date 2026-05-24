@@ -1,0 +1,42 @@
+{
+  "authority_sets": {},
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Legal output that summarizes alleged authorities without a reconstructable output evidence packet.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "",
+        "source_id": "unknown-case",
+        "source_tag": "needs_verification",
+        "supports_claim": false,
+        "unit_id": "unit-1"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-1",
+        "locators": [],
+        "source_ids": []
+      }
+    ]
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "unverifiable-legal-output",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/unverifiable_legal_output.json",
+  "upstream_metrics": {
+    "f1": 0.71,
+    "precision": 0.7,
+    "recall": 0.72
+  },
+  "upstream_output": {}
+}

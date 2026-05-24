@@ -1,0 +1,152 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "chevron-as-current-mandatory-deference-rule"
+    ],
+    "retrieved": [
+      "loper-bright-603-us-369",
+      "chevron-467-us-837",
+      "skidmore-323-us-134",
+      "apa-5-usc-706",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "decision_support_reason",
+  "deployment_context": "Issue-defined U.S. administrative-law authority packet for agency statutory interpretations after Loper Bright. Ablation: decision reason without adoption.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "603 U.S. 369",
+        "source_id": "loper-bright-603-us-369",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "unit-1"
+      },
+      {
+        "locator": "467 U.S. 837",
+        "source_id": "chevron-467-us-837",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "unit-2"
+      },
+      {
+        "locator": "323 U.S. 134",
+        "source_id": "skidmore-323-us-134",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "unit-3"
+      },
+      {
+        "locator": "5 U.S.C. 706",
+        "source_id": "apa-5-usc-706",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "unit-4"
+      },
+      {
+        "locator": "588 U.S. 558",
+        "source_id": "kisor-588-us-558",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "unit-5"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Loper Bright is the current controlling Supreme Court authority on judicial review of agency statutory interpretations.",
+        "id": "unit-1",
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "Chevron must be visible as overruled treatment, not as a currently controlling mandatory deference rule.",
+        "id": "unit-2",
+        "locators": [
+          "603 U.S. 369",
+          "467 U.S. 837"
+        ],
+        "source_ids": [
+          "loper-bright-603-us-369",
+          "chevron-467-us-837"
+        ]
+      },
+      {
+        "claim": "Skidmore remains a limiting/persuasive-respect authority for agency interpretations.",
+        "id": "unit-3",
+        "locators": [
+          "323 U.S. 134",
+          "603 U.S. 369"
+        ],
+        "source_ids": [
+          "skidmore-323-us-134",
+          "loper-bright-603-us-369"
+        ]
+      },
+      {
+        "claim": "APA 5 U.S.C. 706 is a governing statutory source for independent judicial judgment.",
+        "id": "unit-4",
+        "locators": [
+          "5 U.S.C. 706"
+        ],
+        "source_ids": [
+          "apa-5-usc-706"
+        ]
+      },
+      {
+        "claim": "Kisor is a related limiting authority on agency deference that should be exposed rather than silently omitted.",
+        "id": "unit-5",
+        "locators": [
+          "588 U.S. 558"
+        ],
+        "source_ids": [
+          "kisor-588-us-558"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "united_states_federal_administrative_law",
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+  "upstream_metrics": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "upstream_output": {}
+}

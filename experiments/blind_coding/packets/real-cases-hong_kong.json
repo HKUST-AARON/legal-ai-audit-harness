@@ -1,0 +1,417 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [],
+    "high_authority": [
+      "hong-kong-2023-hkcfa-28",
+      "hong-kong-2023-hkcfa-31",
+      "hong-kong-2024-hkcfa-14",
+      "hong-kong-2024-hkcfa-15",
+      "hong-kong-2024-hkcfa-19",
+      "hong-kong-2024-hkcfa-26",
+      "hong-kong-2024-hkcfa-31",
+      "hong-kong-2024-hkcfa-32",
+      "hong-kong-2024-hkcfa-5",
+      "hong-kong-2024-hkcfa-6",
+      "hong-kong-2024-hkcfa-7",
+      "hong-kong-2025-hkcfa-1",
+      "hong-kong-2025-hkcfa-16",
+      "hong-kong-2025-hkcfa-17",
+      "hong-kong-2025-hkcfa-8",
+      "hong-kong-2026-hkcfa-10",
+      "hong-kong-2026-hkcfa-14",
+      "hong-kong-2026-hkcfa-15",
+      "hong-kong-2026-hkcfa-8",
+      "hong-kong-2026-hkcfa-9"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "hong-kong-2023-hkcfa-28",
+      "hong-kong-2023-hkcfa-31",
+      "hong-kong-2024-hkcfa-14",
+      "hong-kong-2024-hkcfa-15",
+      "hong-kong-2024-hkcfa-19",
+      "hong-kong-2024-hkcfa-26",
+      "hong-kong-2024-hkcfa-31",
+      "hong-kong-2024-hkcfa-32",
+      "hong-kong-2024-hkcfa-5",
+      "hong-kong-2024-hkcfa-6",
+      "hong-kong-2024-hkcfa-7",
+      "hong-kong-2025-hkcfa-1",
+      "hong-kong-2025-hkcfa-16",
+      "hong-kong-2025-hkcfa-17",
+      "hong-kong-2025-hkcfa-8",
+      "hong-kong-2026-hkcfa-10",
+      "hong-kong-2026-hkcfa-14",
+      "hong-kong-2026-hkcfa-15",
+      "hong-kong-2026-hkcfa-8",
+      "hong-kong-2026-hkcfa-9"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "hong-kong-2023-hkcfa-28",
+      "hong-kong-2023-hkcfa-31",
+      "hong-kong-2024-hkcfa-14",
+      "hong-kong-2024-hkcfa-15",
+      "hong-kong-2024-hkcfa-19",
+      "hong-kong-2024-hkcfa-26",
+      "hong-kong-2024-hkcfa-31",
+      "hong-kong-2024-hkcfa-32",
+      "hong-kong-2024-hkcfa-5",
+      "hong-kong-2024-hkcfa-6",
+      "hong-kong-2024-hkcfa-7",
+      "hong-kong-2025-hkcfa-1",
+      "hong-kong-2025-hkcfa-16",
+      "hong-kong-2025-hkcfa-17",
+      "hong-kong-2025-hkcfa-8",
+      "hong-kong-2026-hkcfa-10",
+      "hong-kong-2026-hkcfa-14",
+      "hong-kong-2026-hkcfa-15",
+      "hong-kong-2026-hkcfa-8",
+      "hong-kong-2026-hkcfa-9"
+    ]
+  },
+  "claimed_status": "professional_support_output",
+  "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "[2023] HKCFA 28 | FACV14/2022 | 2023-09-05 | https://www.hklii.org/en/cases/hkcfa/2023/28",
+        "source_id": "hong-kong-2023-hkcfa-28",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-01"
+      },
+      {
+        "locator": "[2023] HKCFA 31 | FACV14/2022 | 2023-10-27 | https://www.hklii.org/en/cases/hkcfa/2023/31",
+        "source_id": "hong-kong-2023-hkcfa-31",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-02"
+      },
+      {
+        "locator": "[2024] HKCFA 14 | FACC1/2024 | 2024-06-12 | https://www.hklii.org/en/cases/hkcfa/2024/14",
+        "source_id": "hong-kong-2024-hkcfa-14",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-03"
+      },
+      {
+        "locator": "[2024] HKCFA 15 | FACV9/2023 | 2024-06-14 | https://www.hklii.org/en/cases/hkcfa/2024/15",
+        "source_id": "hong-kong-2024-hkcfa-15",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-04"
+      },
+      {
+        "locator": "[2024] HKCFA 19 | FAMC4/2023 | 2024-07-11 | https://www.hklii.org/en/cases/hkcfa/2024/19",
+        "source_id": "hong-kong-2024-hkcfa-19",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-05"
+      },
+      {
+        "locator": "[2024] HKCFA 26 | FAMV71/2024 | 2024-08-19 | https://www.hklii.org/en/cases/hkcfa/2024/26",
+        "source_id": "hong-kong-2024-hkcfa-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-06"
+      },
+      {
+        "locator": "[2024] HKCFA 31 | FACV5/2024 | 2024-12-18 | https://www.hklii.org/en/cases/hkcfa/2024/31",
+        "source_id": "hong-kong-2024-hkcfa-31",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-07"
+      },
+      {
+        "locator": "[2024] HKCFA 32 | FACV6/2024 | 2024-12-23 | https://www.hklii.org/en/cases/hkcfa/2024/32",
+        "source_id": "hong-kong-2024-hkcfa-32",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-08"
+      },
+      {
+        "locator": "[2024] HKCFA 5 | FAMV36/2023 | 2024-03-15 | https://www.hklii.org/en/cases/hkcfa/2024/5",
+        "source_id": "hong-kong-2024-hkcfa-5",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-09"
+      },
+      {
+        "locator": "[2024] HKCFA 6 | FACV8/2023 | 2024-03-22 | https://www.hklii.org/en/cases/hkcfa/2024/6",
+        "source_id": "hong-kong-2024-hkcfa-6",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-10"
+      },
+      {
+        "locator": "[2024] HKCFA 7 | FACC13/2023 | 2024-04-03 | https://www.hklii.org/en/cases/hkcfa/2024/7",
+        "source_id": "hong-kong-2024-hkcfa-7",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-11"
+      },
+      {
+        "locator": "[2025] HKCFA 1 | FACC9/2024 | 2025-01-07 | https://www.hklii.org/en/cases/hkcfa/2025/1",
+        "source_id": "hong-kong-2025-hkcfa-1",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-12"
+      },
+      {
+        "locator": "[2025] HKCFA 16 | FAMV42/2025 | 2025-09-19 | https://www.hklii.org/en/cases/hkcfa/2025/16",
+        "source_id": "hong-kong-2025-hkcfa-16",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-13"
+      },
+      {
+        "locator": "[2025] HKCFA 17 | FACV2/2025 | 2025-10-16 | https://www.hklii.org/en/cases/hkcfa/2025/17",
+        "source_id": "hong-kong-2025-hkcfa-17",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-14"
+      },
+      {
+        "locator": "[2025] HKCFA 8 | FACV12/2024 | 2025-05-20 | https://www.hklii.org/en/cases/hkcfa/2025/8",
+        "source_id": "hong-kong-2025-hkcfa-8",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-15"
+      },
+      {
+        "locator": "[2026] HKCFA 10 | FACV3/2025 | 2026-02-26 | https://www.hklii.org/en/cases/hkcfa/2026/10",
+        "source_id": "hong-kong-2026-hkcfa-10",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-16"
+      },
+      {
+        "locator": "[2026] HKCFA 14 | FACV5/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/14",
+        "source_id": "hong-kong-2026-hkcfa-14",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-17"
+      },
+      {
+        "locator": "[2026] HKCFA 15 | FAMC32/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/15",
+        "source_id": "hong-kong-2026-hkcfa-15",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-18"
+      },
+      {
+        "locator": "[2026] HKCFA 8 | FAMV138/2025 | 2026-02-12 | https://www.hklii.org/en/cases/hkcfa/2026/8",
+        "source_id": "hong-kong-2026-hkcfa-8",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-19"
+      },
+      {
+        "locator": "[2026] HKCFA 9 | FAMV174/2025 | 2026-02-13 | https://www.hklii.org/en/cases/hkcfa/2026/9",
+        "source_id": "hong-kong-2026-hkcfa-9",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-20"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-01",
+        "locators": [
+          "[2023] HKCFA 28 | FACV14/2022 | 2023-09-05 | https://www.hklii.org/en/cases/hkcfa/2023/28"
+        ],
+        "source_ids": [
+          "hong-kong-2023-hkcfa-28"
+        ]
+      },
+      {
+        "id": "unit-02",
+        "locators": [
+          "[2023] HKCFA 31 | FACV14/2022 | 2023-10-27 | https://www.hklii.org/en/cases/hkcfa/2023/31"
+        ],
+        "source_ids": [
+          "hong-kong-2023-hkcfa-31"
+        ]
+      },
+      {
+        "id": "unit-03",
+        "locators": [
+          "[2024] HKCFA 14 | FACC1/2024 | 2024-06-12 | https://www.hklii.org/en/cases/hkcfa/2024/14"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-14"
+        ]
+      },
+      {
+        "id": "unit-04",
+        "locators": [
+          "[2024] HKCFA 15 | FACV9/2023 | 2024-06-14 | https://www.hklii.org/en/cases/hkcfa/2024/15"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-15"
+        ]
+      },
+      {
+        "id": "unit-05",
+        "locators": [
+          "[2024] HKCFA 19 | FAMC4/2023 | 2024-07-11 | https://www.hklii.org/en/cases/hkcfa/2024/19"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-19"
+        ]
+      },
+      {
+        "id": "unit-06",
+        "locators": [
+          "[2024] HKCFA 26 | FAMV71/2024 | 2024-08-19 | https://www.hklii.org/en/cases/hkcfa/2024/26"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-26"
+        ]
+      },
+      {
+        "id": "unit-07",
+        "locators": [
+          "[2024] HKCFA 31 | FACV5/2024 | 2024-12-18 | https://www.hklii.org/en/cases/hkcfa/2024/31"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-31"
+        ]
+      },
+      {
+        "id": "unit-08",
+        "locators": [
+          "[2024] HKCFA 32 | FACV6/2024 | 2024-12-23 | https://www.hklii.org/en/cases/hkcfa/2024/32"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-32"
+        ]
+      },
+      {
+        "id": "unit-09",
+        "locators": [
+          "[2024] HKCFA 5 | FAMV36/2023 | 2024-03-15 | https://www.hklii.org/en/cases/hkcfa/2024/5"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-5"
+        ]
+      },
+      {
+        "id": "unit-10",
+        "locators": [
+          "[2024] HKCFA 6 | FACV8/2023 | 2024-03-22 | https://www.hklii.org/en/cases/hkcfa/2024/6"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-6"
+        ]
+      },
+      {
+        "id": "unit-11",
+        "locators": [
+          "[2024] HKCFA 7 | FACC13/2023 | 2024-04-03 | https://www.hklii.org/en/cases/hkcfa/2024/7"
+        ],
+        "source_ids": [
+          "hong-kong-2024-hkcfa-7"
+        ]
+      },
+      {
+        "id": "unit-12",
+        "locators": [
+          "[2025] HKCFA 1 | FACC9/2024 | 2025-01-07 | https://www.hklii.org/en/cases/hkcfa/2025/1"
+        ],
+        "source_ids": [
+          "hong-kong-2025-hkcfa-1"
+        ]
+      },
+      {
+        "id": "unit-13",
+        "locators": [
+          "[2025] HKCFA 16 | FAMV42/2025 | 2025-09-19 | https://www.hklii.org/en/cases/hkcfa/2025/16"
+        ],
+        "source_ids": [
+          "hong-kong-2025-hkcfa-16"
+        ]
+      },
+      {
+        "id": "unit-14",
+        "locators": [
+          "[2025] HKCFA 17 | FACV2/2025 | 2025-10-16 | https://www.hklii.org/en/cases/hkcfa/2025/17"
+        ],
+        "source_ids": [
+          "hong-kong-2025-hkcfa-17"
+        ]
+      },
+      {
+        "id": "unit-15",
+        "locators": [
+          "[2025] HKCFA 8 | FACV12/2024 | 2025-05-20 | https://www.hklii.org/en/cases/hkcfa/2025/8"
+        ],
+        "source_ids": [
+          "hong-kong-2025-hkcfa-8"
+        ]
+      },
+      {
+        "id": "unit-16",
+        "locators": [
+          "[2026] HKCFA 10 | FACV3/2025 | 2026-02-26 | https://www.hklii.org/en/cases/hkcfa/2026/10"
+        ],
+        "source_ids": [
+          "hong-kong-2026-hkcfa-10"
+        ]
+      },
+      {
+        "id": "unit-17",
+        "locators": [
+          "[2026] HKCFA 14 | FACV5/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/14"
+        ],
+        "source_ids": [
+          "hong-kong-2026-hkcfa-14"
+        ]
+      },
+      {
+        "id": "unit-18",
+        "locators": [
+          "[2026] HKCFA 15 | FAMC32/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/15"
+        ],
+        "source_ids": [
+          "hong-kong-2026-hkcfa-15"
+        ]
+      },
+      {
+        "id": "unit-19",
+        "locators": [
+          "[2026] HKCFA 8 | FAMV138/2025 | 2026-02-12 | https://www.hklii.org/en/cases/hkcfa/2026/8"
+        ],
+        "source_ids": [
+          "hong-kong-2026-hkcfa-8"
+        ]
+      },
+      {
+        "id": "unit-20",
+        "locators": [
+          "[2026] HKCFA 9 | FAMV174/2025 | 2026-02-13 | https://www.hklii.org/en/cases/hkcfa/2026/9"
+        ],
+        "source_ids": [
+          "hong-kong-2026-hkcfa-9"
+        ]
+      }
+    ],
+    "source_collection": "experiments/real_cases/manifests/hong_kong.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "real-cases-hong_kong",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "not_for_merits_reliance",
+    "review_status": "source_integrity_only"
+  },
+  "source_path": "experiments/real_cases/scenarios/hong_kong.json",
+  "upstream_metrics": {},
+  "upstream_output": {}
+}

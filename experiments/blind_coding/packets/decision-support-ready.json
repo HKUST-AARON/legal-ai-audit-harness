@@ -1,0 +1,51 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "public-policy-exception-c",
+      "contrary-award-d"
+    ],
+    "high_authority": [
+      "contract-clause-a",
+      "mandatory-law-b"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "contract-clause-a",
+      "mandatory-law-b",
+      "public-policy-exception-c",
+      "contrary-award-d"
+    ],
+    "retrieved_counter_or_limiting": [
+      "public-policy-exception-c",
+      "contrary-award-d"
+    ],
+    "retrieved_high_authority": [
+      "contract-clause-a",
+      "mandatory-law-b"
+    ]
+  },
+  "claimed_status": "decision_support_reason",
+  "deployment_context": "Authority recommendation adopted into an institutional decision after reasoned human review.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "arbitral",
+  "packet_id": "decision-support-ready",
+  "review_gate": {
+    "adoption_reasons_recorded": true,
+    "attorney_review_required": true,
+    "contestation_recorded": true,
+    "human_authorization": true,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "arbitral"
+    ],
+    "reliance_gate": "authorized_adoption",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/decision_support_ready.json",
+  "upstream_metrics": {
+    "f1": 0.94,
+    "precision": 0.94,
+    "recall": 0.95
+  },
+  "upstream_output": {}
+}

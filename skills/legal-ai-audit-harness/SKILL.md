@@ -51,6 +51,8 @@ python -m audit_harness.cli score examples/scenarios/court_authority_report.json
 python -m audit_harness.cli run examples/scenarios --out reports/sample_report.md --json-out reports/sample_report.json
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
+python scripts/build_blind_coding_packets.py
+python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
 ```
 
@@ -66,7 +68,7 @@ python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
-The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md` and the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`. Describe it as scenario-regression, artifact validation and coding-uncertainty analysis, not as independent legal merits validation.
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation and coding-uncertainty analysis, not as independent legal merits validation.
 
 ## Single-Model Output Audit Protocol
 

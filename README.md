@@ -36,6 +36,8 @@ python -m audit_harness.cli run examples/scenarios --out reports/sample_report.m
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
 python scripts/collect_public_system_outputs.py
+python scripts/build_blind_coding_packets.py
+python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
 python scripts/run_full_validation.py
 python -m unittest discover -s tests
@@ -136,8 +138,9 @@ Current coverage:
 | Issue-defined positive controls | 3 | Tests normative material screening with source-bound high-authority and counter-material sets. |
 | Issue-defined ablations | 12 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
 | Annotation robustness recoding | 94 | Re-scores all 47 scenario packets under strict and lenient coding policies to test status stability. |
+| Score-blinded dual coding | 94 | Two coding passes score all 47 packets without original scores or expected outcomes. |
 
-The current full validation report covers 47 scenario files containing 215 embedded records/items plus 94 strict/lenient recoded evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the robustness layer tests whether status allocation is stable under plausible coding disagreement.
+The current full validation report covers 47 scenario files containing 215 embedded records/items, 94 strict/lenient recoded evaluations, and 94 score-blinded coder evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the robustness and blind-coding layers test whether status allocation is stable under plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
 
 ## Jurisdiction Profiles
 
@@ -195,6 +198,17 @@ python scripts/run_annotation_robustness.py
 
 The script re-scores all 47 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
 
+## Score-Blinded Dual Coding Study
+
+The repository includes a score-blinded coding layer:
+
+```bash
+python scripts/build_blind_coding_packets.py
+python scripts/run_blind_coding_study.py
+```
+
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, and manual failure flags from every committed scenario. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports exact status agreement, weighted status agreement, dimension-level agreement, and disputed packets.
+
 ## Raw Model Output Pilot
 
 The repository includes a ten-output Codex `gpt-5.5` / `xhigh` pilot:
@@ -226,6 +240,7 @@ experiments/stress_tests/results/  committed stress-test and sensitivity outputs
 experiments/full_validation/        aggregate full-suite validation report
 experiments/issue_gold_sets/       curated issue packets and gold-set outputs
 experiments/issue_ablations/       generated positive-control ablations
+experiments/blind_coding/          score-blinded packets and dual-coding outputs
 experiments/ai_outputs/            raw Codex model-output pilot and scored scenarios
 experiments/real_cases/            public metadata snapshots, manifests and outputs
 experiments/public_system_outputs/ ordered public output snapshots and pilot outputs

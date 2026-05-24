@@ -1,0 +1,1782 @@
+{
+  "coder_count": 2,
+  "coder_ids": [
+    "coder_a",
+    "coder_b"
+  ],
+  "mean_total_score": {
+    "coder_a": 8.25531914893617,
+    "coder_b": 8.319148936170214
+  },
+  "packet_count": 47,
+  "pairwise_dimensions": [
+    {
+      "dimension_agreement": {
+        "H": 0.8936170212765957,
+        "K": 1.0,
+        "L": 1.0,
+        "Q": 1.0,
+        "S": 1.0,
+        "T": 1.0
+      },
+      "left": "coder_a",
+      "right": "coder_b"
+    }
+  ],
+  "pairwise_status": [
+    {
+      "exact_status_agreement": 0.9574468085106383,
+      "left": "coder_a",
+      "right": "coder_b",
+      "weighted_status_agreement": 0.9680851063829787
+    }
+  ],
+  "rows": [
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        }
+      ],
+      "packet_id": "administrative-guidance-conflict"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        }
+      ],
+      "packet_id": "civil-law-statutory-interpretation"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-eu-01"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-eu-02"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-eu-03"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-eu-04"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-uk-01"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-uk-02"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-uk-03"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-us-01"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-us-02"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "codex55-us-03"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        }
+      ],
+      "packet_id": "court-authority-report"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 1,
+            "S": 1,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 1,
+            "S": 1,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "decision-support-ready"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "eu-gdpr-article15-access-rights-counter-material-suppressed"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "eu-gdpr-article15-access-rights-missing-high-authority"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "eu-gdpr-article15-access-rights-unverified-source-tags"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "grounded-output-summary"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 2,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 7
+        }
+      ],
+      "packet_id": "high-coverage-uncontestable-output"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "decision_support_reason",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 1,
+            "S": 1,
+            "T": 2
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 2,
+            "Q": 1,
+            "S": 1,
+            "T": 2
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "odr-authorized-review"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "S"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 0,
+            "L": 0,
+            "Q": 1,
+            "S": 0,
+            "T": 1
+          },
+          "total_score": 2
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "S"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 0,
+            "L": 0,
+            "Q": 1,
+            "S": 0,
+            "T": 1
+          },
+          "total_score": 2
+        }
+      ],
+      "packet_id": "professional-research-support"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-system-output-canada"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "H",
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-system-output-germany"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-system-output-hong_kong"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-system-output-mainland_china"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "H",
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-system-output-united_kingdom"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "public-system-output-united_states"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "real-cases-canada"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "H",
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "real-cases-germany"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "real-cases-hong_kong"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "real-cases-mainland_china"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "H",
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 7
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "real-cases-united_kingdom"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "professional_support_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "real-cases-united_states"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 6
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 1,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 6
+        }
+      ],
+      "packet_id": "suspended-authority-omission"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "uk-mesothelioma-causation-after-fairchild"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_a",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "S"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 0,
+            "L": 1,
+            "Q": 1,
+            "S": 0,
+            "T": 1
+          },
+          "total_score": 3
+        },
+        {
+          "allowed_status": "no_external_legal_effect",
+          "coder_id": "coder_b",
+          "disposition": "withdrawal",
+          "missing_gates": [
+            "S"
+          ],
+          "scores": {
+            "H": 0,
+            "K": 0,
+            "L": 1,
+            "Q": 1,
+            "S": 0,
+            "T": 1
+          },
+          "total_score": 3
+        }
+      ],
+      "packet_id": "unverifiable-legal-output"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "us-agency-deference-after-loper-bright-counter-material-suppressed"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "packet_id": "us-agency-deference-after-loper-bright-missing-high-authority"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "packet_id": "us-agency-deference-after-loper-bright-unverified-source-tags"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "packet_id": "us-agency-deference-after-loper-bright"
+    }
+  ],
+  "status_disagreement_count": 2,
+  "status_disagreements": [
+    "decision-support-ready",
+    "odr-authorized-review"
+  ]
+}

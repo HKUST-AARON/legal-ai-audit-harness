@@ -5,12 +5,26 @@
     "weighted_status_agreement_base_lenient": 1.0,
     "weighted_status_agreement_base_strict": 0.9758602978941961
   },
+  "blind_coding": {
+    "coder_count": 2,
+    "packet_count": 47,
+    "pairwise_status": [
+      {
+        "exact_status_agreement": 0.9574468085106383,
+        "left": "coder_a",
+        "right": "coder_b",
+        "weighted_status_agreement": 0.9680851063829787
+      }
+    ],
+    "status_disagreement_count": 2
+  },
+  "blind_coding_evaluations": 94,
   "expected_passed": 47,
   "expected_total": 47,
   "high_upstream_but_blocked": 20,
   "recoded_evaluations": 94,
   "scenario_files": 47,
-  "suite_count": 7,
+  "suite_count": 8,
   "suites": [
     {
       "expected_passed": 10,
@@ -115,11 +129,27 @@
         "base_vs_strict_weighted_agreement": 0.98
       },
       "validation_units": "94 strict/lenient recoded evaluations"
+    },
+    {
+      "finding": "Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.",
+      "high_upstream_but_blocked": null,
+      "id": "blind_coding",
+      "label": "Score-blinded dual coding",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "0.96 exact status agreement",
+      "scenario_count": 47,
+      "status_distribution": {
+        "status_disagreements": 2,
+        "weighted_status_agreement": 0.97
+      },
+      "validation_units": "47 packets x 2 coding passes"
     }
   ],
-  "total_evaluation_rows": 309,
+  "total_evaluation_rows": 403,
   "validation_units": {
     "annotation_recodings": 94,
+    "blind_coding_packets": 47,
     "issue_ablations": 12,
     "issue_gold_sets": 3,
     "public_metadata_records": 120,

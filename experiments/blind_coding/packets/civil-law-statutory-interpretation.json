@@ -1,0 +1,49 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "competing-commentary-a",
+      "later-amendment-b"
+    ],
+    "high_authority": [
+      "code-article-1",
+      "special-statute-2"
+    ],
+    "invalid_or_superseded": [
+      "old-code-article-x"
+    ],
+    "retrieved": [
+      "code-article-1",
+      "special-statute-2",
+      "competing-commentary-a"
+    ],
+    "retrieved_counter_or_limiting": [
+      "competing-commentary-a"
+    ],
+    "retrieved_high_authority": [
+      "code-article-1",
+      "special-statute-2"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Civil-law legal retrieval system recommending code provisions, high-court decisions and doctrinal materials for a statutory interpretation issue.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "civil-law-statutory-interpretation",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/civil_law_statutory_interpretation.json",
+  "upstream_metrics": {
+    "f1": 0.84,
+    "precision": 0.86,
+    "recall": 0.82
+  },
+  "upstream_output": {}
+}

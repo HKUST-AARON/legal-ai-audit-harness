@@ -1,0 +1,417 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [],
+    "high_authority": [
+      "mainland-china-chinese-court-holds-trial-in-absentia-of-embezzlement-fugitive",
+      "mainland-china-court-rejects-claim-against-livestream-host",
+      "mainland-china-death-penalty-for-man-who-killed-doctor-upheld",
+      "mainland-china-death-sentence-for-ex-con-who-fatally-injured-senior",
+      "mainland-china-guiding-case-no-115",
+      "mainland-china-guiding-case-no-159",
+      "mainland-china-guiding-case-no-220",
+      "mainland-china-guiding-case-no-223",
+      "mainland-china-guiding-case-no-231",
+      "mainland-china-high-profile-criminal-executed-after-ruling-from-top-court",
+      "mainland-china-mafia-kingpin-sentenced-to-death-in-hainan",
+      "mainland-china-man-gets-18-months-in-prison-for-indecent-acts-against-alibaba-employee",
+      "mainland-china-man-who-murdered-wife-hid-body-executed-in-shanghai",
+      "mainland-china-mother-of-slain-student-wins-case-against-her-roommate",
+      "mainland-china-one-sentenced-in-epidemic-related-fraud-case-in-shanghai",
+      "mainland-china-osteoarthritis-treatment-ip-case-solved-in-court",
+      "mainland-china-spc-s-circuit-court-hears-civil-cases-on-online-mobile-platform",
+      "mainland-china-spc-s-third-circuit-court-concludes-foreign-related-commercial-case-online",
+      "mainland-china-taiwan-academic-gets-jail-time-for-espionage",
+      "mainland-china-transnational-trial-heard-online-amid-epidemic"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "mainland-china-chinese-court-holds-trial-in-absentia-of-embezzlement-fugitive",
+      "mainland-china-court-rejects-claim-against-livestream-host",
+      "mainland-china-death-penalty-for-man-who-killed-doctor-upheld",
+      "mainland-china-death-sentence-for-ex-con-who-fatally-injured-senior",
+      "mainland-china-guiding-case-no-115",
+      "mainland-china-guiding-case-no-159",
+      "mainland-china-guiding-case-no-220",
+      "mainland-china-guiding-case-no-223",
+      "mainland-china-guiding-case-no-231",
+      "mainland-china-high-profile-criminal-executed-after-ruling-from-top-court",
+      "mainland-china-mafia-kingpin-sentenced-to-death-in-hainan",
+      "mainland-china-man-gets-18-months-in-prison-for-indecent-acts-against-alibaba-employee",
+      "mainland-china-man-who-murdered-wife-hid-body-executed-in-shanghai",
+      "mainland-china-mother-of-slain-student-wins-case-against-her-roommate",
+      "mainland-china-one-sentenced-in-epidemic-related-fraud-case-in-shanghai",
+      "mainland-china-osteoarthritis-treatment-ip-case-solved-in-court",
+      "mainland-china-spc-s-circuit-court-hears-civil-cases-on-online-mobile-platform",
+      "mainland-china-spc-s-third-circuit-court-concludes-foreign-related-commercial-case-online",
+      "mainland-china-taiwan-academic-gets-jail-time-for-espionage",
+      "mainland-china-transnational-trial-heard-online-amid-epidemic"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "mainland-china-chinese-court-holds-trial-in-absentia-of-embezzlement-fugitive",
+      "mainland-china-court-rejects-claim-against-livestream-host",
+      "mainland-china-death-penalty-for-man-who-killed-doctor-upheld",
+      "mainland-china-death-sentence-for-ex-con-who-fatally-injured-senior",
+      "mainland-china-guiding-case-no-115",
+      "mainland-china-guiding-case-no-159",
+      "mainland-china-guiding-case-no-220",
+      "mainland-china-guiding-case-no-223",
+      "mainland-china-guiding-case-no-231",
+      "mainland-china-high-profile-criminal-executed-after-ruling-from-top-court",
+      "mainland-china-mafia-kingpin-sentenced-to-death-in-hainan",
+      "mainland-china-man-gets-18-months-in-prison-for-indecent-acts-against-alibaba-employee",
+      "mainland-china-man-who-murdered-wife-hid-body-executed-in-shanghai",
+      "mainland-china-mother-of-slain-student-wins-case-against-her-roommate",
+      "mainland-china-one-sentenced-in-epidemic-related-fraud-case-in-shanghai",
+      "mainland-china-osteoarthritis-treatment-ip-case-solved-in-court",
+      "mainland-china-spc-s-circuit-court-hears-civil-cases-on-online-mobile-platform",
+      "mainland-china-spc-s-third-circuit-court-concludes-foreign-related-commercial-case-online",
+      "mainland-china-taiwan-academic-gets-jail-time-for-espionage",
+      "mainland-china-transnational-trial-heard-online-amid-epidemic"
+    ]
+  },
+  "claimed_status": "professional_support_output",
+  "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "2021-12-10 | https://english.court.gov.cn/2021-12/10/c_761915.htm",
+        "source_id": "mainland-china-chinese-court-holds-trial-in-absentia-of-embezzlement-fugitive",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-01"
+      },
+      {
+        "locator": "2021-08-18 | https://english.court.gov.cn/2021-08/18/c_761841.htm",
+        "source_id": "mainland-china-court-rejects-claim-against-livestream-host",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-02"
+      },
+      {
+        "locator": "2020-02-17 | https://english.court.gov.cn/2020-02/17/c_761885.htm",
+        "source_id": "mainland-china-death-penalty-for-man-who-killed-doctor-upheld",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-03"
+      },
+      {
+        "locator": "2021-02-01 | https://english.court.gov.cn/2021-02/01/c_761842.htm",
+        "source_id": "mainland-china-death-sentence-for-ex-con-who-fatally-injured-senior",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-04"
+      },
+      {
+        "locator": "Guiding Case No. 115 | 2026-02-04 | https://english.court.gov.cn/2026-02/04/c_1158923.htm",
+        "source_id": "mainland-china-guiding-case-no-115",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-05"
+      },
+      {
+        "locator": "Guiding Case No. 159 | 2026-02-02 | https://english.court.gov.cn/2026-02/02/c_1158623.htm",
+        "source_id": "mainland-china-guiding-case-no-159",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-06"
+      },
+      {
+        "locator": "Guiding Case No. 220 | 2026-02-03 | https://english.court.gov.cn/2026-02/03/c_1158712.htm",
+        "source_id": "mainland-china-guiding-case-no-220",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-07"
+      },
+      {
+        "locator": "Guiding Case No. 223 | 2026-02-04 | https://english.court.gov.cn/2026-02/04/c_1158919.htm",
+        "source_id": "mainland-china-guiding-case-no-223",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-08"
+      },
+      {
+        "locator": "Guiding Case No. 231 | 2026-02-06 | https://english.court.gov.cn/2026-02/06/c_1159803.htm",
+        "source_id": "mainland-china-guiding-case-no-231",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-09"
+      },
+      {
+        "locator": "2020-02-21 | https://english.court.gov.cn/2020-02/21/c_761884.htm",
+        "source_id": "mainland-china-high-profile-criminal-executed-after-ruling-from-top-court",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-10"
+      },
+      {
+        "locator": "2020-03-12 | https://english.court.gov.cn/2020-03/12/c_761910.htm",
+        "source_id": "mainland-china-mafia-kingpin-sentenced-to-death-in-hainan",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-11"
+      },
+      {
+        "locator": "2022-06-23 | https://english.court.gov.cn/2022-06/23/c_772966.htm",
+        "source_id": "mainland-china-man-gets-18-months-in-prison-for-indecent-acts-against-alibaba-employee",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-12"
+      },
+      {
+        "locator": "2020-06-05 | https://english.court.gov.cn/2020-06/05/c_761814.htm",
+        "source_id": "mainland-china-man-who-murdered-wife-hid-body-executed-in-shanghai",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-13"
+      },
+      {
+        "locator": "2022-01-11 | https://english.court.gov.cn/2022-01/11/c_761843.htm",
+        "source_id": "mainland-china-mother-of-slain-student-wins-case-against-her-roommate",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-14"
+      },
+      {
+        "locator": "2020-03-04 | https://english.court.gov.cn/2020-03/04/c_761900.htm",
+        "source_id": "mainland-china-one-sentenced-in-epidemic-related-fraud-case-in-shanghai",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-15"
+      },
+      {
+        "locator": "2024-12-06 | https://english.court.gov.cn/2024-12/06/c_1051210.htm",
+        "source_id": "mainland-china-osteoarthritis-treatment-ip-case-solved-in-court",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-16"
+      },
+      {
+        "locator": "2020-03-23 | https://english.court.gov.cn/2020-03/23/c_761881.htm",
+        "source_id": "mainland-china-spc-s-circuit-court-hears-civil-cases-on-online-mobile-platform",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-17"
+      },
+      {
+        "locator": "2020-03-31 | https://english.court.gov.cn/2020-03/31/c_761911.htm",
+        "source_id": "mainland-china-spc-s-third-circuit-court-concludes-foreign-related-commercial-case-online",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-18"
+      },
+      {
+        "locator": "2020-11-26 | https://english.court.gov.cn/2020-11/26/c_761812.htm",
+        "source_id": "mainland-china-taiwan-academic-gets-jail-time-for-espionage",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-19"
+      },
+      {
+        "locator": "2020-03-11 | https://english.court.gov.cn/2020-03/11/c_761878.htm",
+        "source_id": "mainland-china-transnational-trial-heard-online-amid-epidemic",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-20"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-01",
+        "locators": [
+          "2021-12-10 | https://english.court.gov.cn/2021-12/10/c_761915.htm"
+        ],
+        "source_ids": [
+          "mainland-china-chinese-court-holds-trial-in-absentia-of-embezzlement-fugitive"
+        ]
+      },
+      {
+        "id": "unit-02",
+        "locators": [
+          "2021-08-18 | https://english.court.gov.cn/2021-08/18/c_761841.htm"
+        ],
+        "source_ids": [
+          "mainland-china-court-rejects-claim-against-livestream-host"
+        ]
+      },
+      {
+        "id": "unit-03",
+        "locators": [
+          "2020-02-17 | https://english.court.gov.cn/2020-02/17/c_761885.htm"
+        ],
+        "source_ids": [
+          "mainland-china-death-penalty-for-man-who-killed-doctor-upheld"
+        ]
+      },
+      {
+        "id": "unit-04",
+        "locators": [
+          "2021-02-01 | https://english.court.gov.cn/2021-02/01/c_761842.htm"
+        ],
+        "source_ids": [
+          "mainland-china-death-sentence-for-ex-con-who-fatally-injured-senior"
+        ]
+      },
+      {
+        "id": "unit-05",
+        "locators": [
+          "Guiding Case No. 115 | 2026-02-04 | https://english.court.gov.cn/2026-02/04/c_1158923.htm"
+        ],
+        "source_ids": [
+          "mainland-china-guiding-case-no-115"
+        ]
+      },
+      {
+        "id": "unit-06",
+        "locators": [
+          "Guiding Case No. 159 | 2026-02-02 | https://english.court.gov.cn/2026-02/02/c_1158623.htm"
+        ],
+        "source_ids": [
+          "mainland-china-guiding-case-no-159"
+        ]
+      },
+      {
+        "id": "unit-07",
+        "locators": [
+          "Guiding Case No. 220 | 2026-02-03 | https://english.court.gov.cn/2026-02/03/c_1158712.htm"
+        ],
+        "source_ids": [
+          "mainland-china-guiding-case-no-220"
+        ]
+      },
+      {
+        "id": "unit-08",
+        "locators": [
+          "Guiding Case No. 223 | 2026-02-04 | https://english.court.gov.cn/2026-02/04/c_1158919.htm"
+        ],
+        "source_ids": [
+          "mainland-china-guiding-case-no-223"
+        ]
+      },
+      {
+        "id": "unit-09",
+        "locators": [
+          "Guiding Case No. 231 | 2026-02-06 | https://english.court.gov.cn/2026-02/06/c_1159803.htm"
+        ],
+        "source_ids": [
+          "mainland-china-guiding-case-no-231"
+        ]
+      },
+      {
+        "id": "unit-10",
+        "locators": [
+          "2020-02-21 | https://english.court.gov.cn/2020-02/21/c_761884.htm"
+        ],
+        "source_ids": [
+          "mainland-china-high-profile-criminal-executed-after-ruling-from-top-court"
+        ]
+      },
+      {
+        "id": "unit-11",
+        "locators": [
+          "2020-03-12 | https://english.court.gov.cn/2020-03/12/c_761910.htm"
+        ],
+        "source_ids": [
+          "mainland-china-mafia-kingpin-sentenced-to-death-in-hainan"
+        ]
+      },
+      {
+        "id": "unit-12",
+        "locators": [
+          "2022-06-23 | https://english.court.gov.cn/2022-06/23/c_772966.htm"
+        ],
+        "source_ids": [
+          "mainland-china-man-gets-18-months-in-prison-for-indecent-acts-against-alibaba-employee"
+        ]
+      },
+      {
+        "id": "unit-13",
+        "locators": [
+          "2020-06-05 | https://english.court.gov.cn/2020-06/05/c_761814.htm"
+        ],
+        "source_ids": [
+          "mainland-china-man-who-murdered-wife-hid-body-executed-in-shanghai"
+        ]
+      },
+      {
+        "id": "unit-14",
+        "locators": [
+          "2022-01-11 | https://english.court.gov.cn/2022-01/11/c_761843.htm"
+        ],
+        "source_ids": [
+          "mainland-china-mother-of-slain-student-wins-case-against-her-roommate"
+        ]
+      },
+      {
+        "id": "unit-15",
+        "locators": [
+          "2020-03-04 | https://english.court.gov.cn/2020-03/04/c_761900.htm"
+        ],
+        "source_ids": [
+          "mainland-china-one-sentenced-in-epidemic-related-fraud-case-in-shanghai"
+        ]
+      },
+      {
+        "id": "unit-16",
+        "locators": [
+          "2024-12-06 | https://english.court.gov.cn/2024-12/06/c_1051210.htm"
+        ],
+        "source_ids": [
+          "mainland-china-osteoarthritis-treatment-ip-case-solved-in-court"
+        ]
+      },
+      {
+        "id": "unit-17",
+        "locators": [
+          "2020-03-23 | https://english.court.gov.cn/2020-03/23/c_761881.htm"
+        ],
+        "source_ids": [
+          "mainland-china-spc-s-circuit-court-hears-civil-cases-on-online-mobile-platform"
+        ]
+      },
+      {
+        "id": "unit-18",
+        "locators": [
+          "2020-03-31 | https://english.court.gov.cn/2020-03/31/c_761911.htm"
+        ],
+        "source_ids": [
+          "mainland-china-spc-s-third-circuit-court-concludes-foreign-related-commercial-case-online"
+        ]
+      },
+      {
+        "id": "unit-19",
+        "locators": [
+          "2020-11-26 | https://english.court.gov.cn/2020-11/26/c_761812.htm"
+        ],
+        "source_ids": [
+          "mainland-china-taiwan-academic-gets-jail-time-for-espionage"
+        ]
+      },
+      {
+        "id": "unit-20",
+        "locators": [
+          "2020-03-11 | https://english.court.gov.cn/2020-03/11/c_761878.htm"
+        ],
+        "source_ids": [
+          "mainland-china-transnational-trial-heard-online-amid-epidemic"
+        ]
+      }
+    ],
+    "source_collection": "experiments/real_cases/manifests/mainland_china.json"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "real-cases-mainland_china",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "reliance_gate": "not_for_merits_reliance",
+    "review_status": "source_integrity_only"
+  },
+  "source_path": "experiments/real_cases/scenarios/mainland_china.json",
+  "upstream_metrics": {},
+  "upstream_output": {}
+}

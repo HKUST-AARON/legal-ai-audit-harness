@@ -72,6 +72,7 @@ def main() -> int:
     _run([sys.executable, "scripts/collect_real_cases.py"])
     _run([sys.executable, "scripts/collect_public_system_outputs.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
+    _run([sys.executable, "scripts/build_blind_coding_packets.py"])
 
     rows = []
     for suite in SUITES:
@@ -124,12 +125,25 @@ def main() -> int:
         )
     )
     rows.append(_robustness_row(robustness_payload))
+    blind_coding_payload = None
+    blind_annotation_files = sorted((ROOT / "experiments" / "blind_coding" / "annotations").glob("coder_*.json"))
+    if len(blind_annotation_files) >= 2:
+        _run([sys.executable, "scripts/run_blind_coding_study.py"])
+        blind_coding_payload = json.loads(
+            (ROOT / "experiments" / "blind_coding" / "results" / "blind_coding_study.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        rows.append(_blind_coding_row(blind_coding_payload))
 
     payload = {
         "suite_count": len(rows),
         "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
         "recoded_evaluations": robustness_payload["recoded_evaluations"],
-        "total_evaluation_rows": 215 + robustness_payload["recoded_evaluations"],
+        "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
+        "total_evaluation_rows": 215
+        + robustness_payload["recoded_evaluations"]
+        + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"]),
         "validation_units": {
             "stress_scenarios": 10,
             "public_metadata_records": 120,
@@ -138,6 +152,7 @@ def main() -> int:
             "issue_gold_sets": 3,
             "issue_ablations": 12,
             "annotation_recodings": robustness_payload["recoded_evaluations"],
+            "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
             "total": 215,
         },
         "expected_passed": sum(row["expected_passed"] for row in rows if "expected_passed" in row),
@@ -152,6 +167,14 @@ def main() -> int:
             "scenario_count": robustness_payload["scenario_count"],
             "weighted_status_agreement_base_strict": robustness_payload["weighted_status_agreement_base_strict"],
             "weighted_status_agreement_base_lenient": robustness_payload["weighted_status_agreement_base_lenient"],
+        },
+        "blind_coding": None
+        if blind_coding_payload is None
+        else {
+            "packet_count": blind_coding_payload["packet_count"],
+            "coder_count": blind_coding_payload["coder_count"],
+            "status_disagreement_count": blind_coding_payload["status_disagreement_count"],
+            "pairwise_status": blind_coding_payload["pairwise_status"],
         },
         "suites": rows,
     }
@@ -203,6 +226,25 @@ def _robustness_row(payload: dict) -> dict:
     }
 
 
+def _blind_coding_row(payload: dict) -> dict:
+    first_pair = payload["pairwise_status"][0]
+    return {
+        "id": "blind_coding",
+        "label": "Score-blinded dual coding",
+        "validation_units": f"{payload['packet_count']} packets x {payload['coder_count']} coding passes",
+        "scenario_count": payload["packet_count"],
+        "rule_pass": f"{first_pair['exact_status_agreement']:.2f} exact status agreement",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "weighted_status_agreement": round(first_pair["weighted_status_agreement"], 2),
+            "status_disagreements": payload["status_disagreement_count"],
+        },
+        "finding": "Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -217,10 +259,12 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['issue_gold_sets']} issue-defined positive controls, "
         f"{payload['validation_units']['issue_ablations']} issue ablations)",
         f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",
+        f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Total evaluation rows including recodings: {payload['total_evaluation_rows']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
         f"Annotation robustness: {payload['annotation_robustness']['all_policy_status_stable']}/{payload['annotation_robustness']['scenario_count']} stable across base, strict and lenient coding policies",
+        _blind_coding_summary(payload),
         "",
         "| Suite | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |",
@@ -248,6 +292,18 @@ def _format_report(payload: dict) -> str:
     for row in payload["suites"]:
         lines.append(f"- **{row['label']}:** {row['finding']}")
     return "\n".join(lines)
+
+
+def _blind_coding_summary(payload: dict) -> str:
+    if payload["blind_coding"] is None:
+        return "Score-blinded coding: not run; fewer than two coder annotation files found"
+    first_pair = payload["blind_coding"]["pairwise_status"][0]
+    return (
+        f"Score-blinded coding: {payload['blind_coding']['packet_count']} packets, "
+        f"{payload['blind_coding']['coder_count']} coding passes, "
+        f"{first_pair['exact_status_agreement']:.2f} exact status agreement, "
+        f"{first_pair['weighted_status_agreement']:.2f} weighted status agreement"
+    )
 
 
 def _metric(value: float | None) -> str:

@@ -1,0 +1,49 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "limiting-authority-a",
+      "contrary-authority-b"
+    ],
+    "high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ],
+    "invalid_or_superseded": [
+      "overruled-authority-c"
+    ],
+    "retrieved": [
+      "binding-precedent-a",
+      "statute-b",
+      "limiting-authority-a"
+    ],
+    "retrieved_counter_or_limiting": [
+      "limiting-authority-a"
+    ],
+    "retrieved_high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Court-facing authority report for a disputed legal issue.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "common_law",
+  "packet_id": "court-authority-report",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/court_authority_report.json",
+  "upstream_metrics": {
+    "f1": 0.85,
+    "precision": 0.88,
+    "recall": 0.83
+  },
+  "upstream_output": {}
+}

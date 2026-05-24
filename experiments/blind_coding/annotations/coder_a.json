@@ -1,0 +1,287 @@
+{
+  "coder_id": "coder_a",
+  "annotations": [
+    {
+      "packet_id": "administrative-guidance-conflict",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["counter_material_suppression", "invalid_authority"],
+      "notes": "High authorities are named, but counter material is missing and a withdrawn guidance item is retrieved."
+    },
+    {
+      "packet_id": "civil-law-statutory-interpretation",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["counter_material_suppression"],
+      "notes": "Core statutes are retrieved, but a later amendment is omitted and source evidence is sparse."
+    },
+    {
+      "packet_id": "codex55-eu-01",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "Raw model citations are reconstructable but all source tags need verification and review is pending."
+    },
+    {
+      "packet_id": "codex55-eu-02",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "Issue and authority set are traceable, but citations are unverified and attorney review is pending."
+    },
+    {
+      "packet_id": "codex55-eu-03",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "High and limiting materials are present, but source tags require verification and review is pending."
+    },
+    {
+      "packet_id": "codex55-eu-04",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "Coverage is complete, but raw citations are unverified and the required review is not completed."
+    },
+    {
+      "packet_id": "codex55-uk-01",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "The authority set is complete, but source tags need verification and review remains pending."
+    },
+    {
+      "packet_id": "codex55-uk-02",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "The cited materials are mapped but unverified, with only pending internal review."
+    },
+    {
+      "packet_id": "codex55-uk-03",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "High and limiting authorities are included, but citations require verification and review is pending."
+    },
+    {
+      "packet_id": "codex55-us-01",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "The output is traceable, but raw citations are unverified and professional review is incomplete."
+    },
+    {
+      "packet_id": "codex55-us-02",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "Authority coverage is complete, but all source tags need verification and review is pending."
+    },
+    {
+      "packet_id": "codex55-us-03",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "review_gate_failure"],
+      "notes": "The packet maps authorities and counters, but sources are unverified and review is incomplete."
+    },
+    {
+      "packet_id": "court-authority-report",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["counter_material_suppression"],
+      "notes": "High authorities are named, but a contrary authority is omitted and evidence links are absent."
+    },
+    {
+      "packet_id": "decision-support-ready",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 2, "T": 2, "L": 2},
+      "failure_flags": [],
+      "notes": "Authority coverage is complete and authorized adoption with reasons and contestation is recorded."
+    },
+    {
+      "packet_id": "eu-gdpr-article15-access-rights-counter-material-suppressed",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["counter_material_suppression"],
+      "notes": "Official sources are mapped, but a known counter material is omitted despite completeness being asserted."
+    },
+    {
+      "packet_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["review_gate_failure", "contestation_failure"],
+      "notes": "Source coverage is complete, but decision status lacks authorized adoption and contestation record."
+    },
+    {
+      "packet_id": "eu-gdpr-article15-access-rights-missing-high-authority",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["authority_omission"],
+      "notes": "The source packet is traceable, but one known high authority is not retrieved."
+    },
+    {
+      "packet_id": "eu-gdpr-article15-access-rights-unverified-source-tags",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap"],
+      "notes": "Coverage is complete, but normative use rests on source tags marked needs_verification."
+    },
+    {
+      "packet_id": "eu-gdpr-article15-access-rights",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official sources, high authorities, counters, and output links are fully reviewable."
+    },
+    {
+      "packet_id": "grounded-output-summary",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Output links are verified, but corpus and version context are limited."
+    },
+    {
+      "packet_id": "high-coverage-uncontestable-output",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["summary_distortion"],
+      "notes": "Coverage is strong, but one output unit lacks a locator and contestability is only internal."
+    },
+    {
+      "packet_id": "odr-authorized-review",
+      "scores": {"S": 1, "Q": 1, "H": 2, "K": 2, "T": 2, "L": 2},
+      "failure_flags": [],
+      "notes": "Authority coverage is complete with authorized human review, reasons, and contestation recorded."
+    },
+    {
+      "packet_id": "professional-research-support",
+      "scores": {"S": 0, "Q": 1, "H": 0, "K": 0, "T": 1, "L": 0},
+      "failure_flags": [],
+      "notes": "Only an internal research context is available; sources, hierarchy, and audit logging are absent."
+    },
+    {
+      "packet_id": "public-system-output-canada",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official ranked records are reconstructable, but merits hierarchy and counter-material review are limited."
+    },
+    {
+      "packet_id": "public-system-output-germany",
+      "scores": {"S": 2, "Q": 2, "H": 0, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public metadata and ranking are traceable, but legal hierarchy is not distinguished."
+    },
+    {
+      "packet_id": "public-system-output-hong_kong",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public ranked records are traceable, but the packet remains source-integrity only."
+    },
+    {
+      "packet_id": "public-system-output-mainland_china",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official source records are reconstructable, with limited merits hierarchy and no counter review."
+    },
+    {
+      "packet_id": "public-system-output-united_kingdom",
+      "scores": {"S": 2, "Q": 2, "H": 0, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official ranked records are visible, but high-authority status is not distinguished."
+    },
+    {
+      "packet_id": "public-system-output-united_states",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official ranked records are reconstructable, but counter-material and merits review are limited."
+    },
+    {
+      "packet_id": "real-cases-canada",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public case records are mapped, but the packet is source-integrity rather than merits review."
+    },
+    {
+      "packet_id": "real-cases-germany",
+      "scores": {"S": 2, "Q": 2, "H": 0, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public metadata records are traceable, but legal status is not distinguished."
+    },
+    {
+      "packet_id": "real-cases-hong_kong",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public case records are mapped, with limited hierarchy and no counter-material analysis."
+    },
+    {
+      "packet_id": "real-cases-mainland_china",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public case records are reconstructable, but merits hierarchy and counter review are limited."
+    },
+    {
+      "packet_id": "real-cases-united_kingdom",
+      "scores": {"S": 2, "Q": 2, "H": 0, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public metadata records are traceable, but legal hierarchy is not distinguished."
+    },
+    {
+      "packet_id": "real-cases-united_states",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Public case records are mapped, but counter-material and adoption review are limited."
+    },
+    {
+      "packet_id": "suspended-authority-omission",
+      "scores": {"S": 1, "Q": 1, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["authority_omission"],
+      "notes": "A known high-authority material is omitted, though counter material and review status are present."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["counter_material_suppression"],
+      "notes": "Official sources are mapped, but a known counter material is suppressed."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["review_gate_failure", "contestation_failure"],
+      "notes": "Authority coverage is complete, but decision status lacks authorized adoption and contestation."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["authority_omission"],
+      "notes": "The packet is traceable, but Sienkiewicz is omitted from retrieved high authority."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap"],
+      "notes": "Authority coverage is complete, but normative use depends on unverified source tags."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official sources, high authorities, counters, and output links are fully reviewable."
+    },
+    {
+      "packet_id": "unverifiable-legal-output",
+      "scores": {"S": 0, "Q": 1, "H": 0, "K": 0, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap", "summary_distortion"],
+      "notes": "The only link lacks a locator, does not support the claim, and needs verification."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-counter-material-suppressed",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["counter_material_suppression"],
+      "notes": "Source mapping is complete, but a known limiting authority is suppressed."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["review_gate_failure", "contestation_failure"],
+      "notes": "Authority coverage is complete, but decision status lacks authorized adoption and contestation."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-missing-high-authority",
+      "scores": {"S": 2, "Q": 2, "H": 1, "K": 1, "T": 1, "L": 1},
+      "failure_flags": ["authority_omission"],
+      "notes": "The source packet is traceable, but Skidmore is omitted from retrieved high authority."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-unverified-source-tags",
+      "scores": {"S": 1, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": ["source_attribution_gap"],
+      "notes": "Coverage is complete, but normative status relies on source tags needing verification."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright",
+      "scores": {"S": 2, "Q": 2, "H": 2, "K": 2, "T": 1, "L": 1},
+      "failure_flags": [],
+      "notes": "Official and verified sources, high authorities, counters, and links are fully reviewable."
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [],
+    "high_authority": [
+      "hong-kong-2026-hkcfa-18",
+      "hong-kong-2026-hkcfa-17",
+      "hong-kong-2026-hkcfa-14",
+      "hong-kong-2026-hkcfa-15",
+      "hong-kong-2026-hkcfa-16",
+      "hong-kong-2026-hkcfa-13",
+      "hong-kong-2026-hkcfa-12",
+      "hong-kong-2026-hkcfa-11",
+      "hong-kong-2026-hkcfa-10",
+      "hong-kong-2026-hkcfa-9"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "hong-kong-2026-hkcfa-18",
+      "hong-kong-2026-hkcfa-17",
+      "hong-kong-2026-hkcfa-14",
+      "hong-kong-2026-hkcfa-15",
+      "hong-kong-2026-hkcfa-16",
+      "hong-kong-2026-hkcfa-13",
+      "hong-kong-2026-hkcfa-12",
+      "hong-kong-2026-hkcfa-11",
+      "hong-kong-2026-hkcfa-10",
+      "hong-kong-2026-hkcfa-9"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "hong-kong-2026-hkcfa-18",
+      "hong-kong-2026-hkcfa-17",
+      "hong-kong-2026-hkcfa-14",
+      "hong-kong-2026-hkcfa-15",
+      "hong-kong-2026-hkcfa-16",
+      "hong-kong-2026-hkcfa-13",
+      "hong-kong-2026-hkcfa-12",
+      "hong-kong-2026-hkcfa-11",
+      "hong-kong-2026-hkcfa-10",
+      "hong-kong-2026-hkcfa-9"
+    ]
+  },
+  "claimed_status": "professional_support_output",
+  "deployment_context": "Provider-agnostic audit of the top ten records exposed by a public legal retrieval or listing system output.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "[2026] HKCFA 18 | FACV6/2025 | 2026-04-21 | https://www.hklii.org/en/cases/hkcfa/2026/18",
+        "source_id": "hong-kong-2026-hkcfa-18",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "[2026] HKCFA 17 | FACV1/2026 | 2026-04-17 | https://www.hklii.org/en/cases/hkcfa/2026/17",
+        "source_id": "hong-kong-2026-hkcfa-17",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "[2026] HKCFA 14 | FACV5/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/14",
+        "source_id": "hong-kong-2026-hkcfa-14",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "[2026] HKCFA 15 | FAMC32/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/15",
+        "source_id": "hong-kong-2026-hkcfa-15",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "[2026] HKCFA 16 | FAMC48/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/16",
+        "source_id": "hong-kong-2026-hkcfa-16",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      },
+      {
+        "locator": "[2026] HKCFA 13 | FACC5/2025 | 2026-04-14 | https://www.hklii.org/en/cases/hkcfa/2026/13",
+        "source_id": "hong-kong-2026-hkcfa-13",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-06"
+      },
+      {
+        "locator": "[2026] HKCFA 12 | FAMV109/2025 | 2026-03-26 | https://www.hklii.org/en/cases/hkcfa/2026/12",
+        "source_id": "hong-kong-2026-hkcfa-12",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-07"
+      },
+      {
+        "locator": "[2026] HKCFA 11 | FAMC21/2025 | 2026-03-24 | https://www.hklii.org/en/cases/hkcfa/2026/11",
+        "source_id": "hong-kong-2026-hkcfa-11",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-08"
+      },
+      {
+        "locator": "[2026] HKCFA 10 | FACV3/2025 | 2026-02-26 | https://www.hklii.org/en/cases/hkcfa/2026/10",
+        "source_id": "hong-kong-2026-hkcfa-10",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-09"
+      },
+      {
+        "locator": "[2026] HKCFA 9 | FAMV174/2025 | 2026-02-13 | https://www.hklii.org/en/cases/hkcfa/2026/9",
+        "source_id": "hong-kong-2026-hkcfa-9",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-10"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public system output rank 1 makes this legal material visible: LEONG MA LI V. HIGH FASHION NEW MEDIA CORPORATION LIMITED (SUING ON BEHALF OF ITSELF AND ALSO IN ITS CAPACITY AS THE SOLE SHAREHOLDER OF LONGFORD INFORMATION AND TECHNOLOGY CO., LIMITED) (\u4e0a\u6d77\u6881\u5bcc\u4fe1\u606f\u79d1\u6280\u6709\u9650\u516c\u53f8)",
+        "id": "rank-01",
+        "locators": [
+          "[2026] HKCFA 18 | FACV6/2025 | 2026-04-21 | https://www.hklii.org/en/cases/hkcfa/2026/18"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-18"
+        ]
+      },
+      {
+        "claim": "Public system output rank 2 makes this legal material visible: TO SZE ON, THE PERSONAL REPRESENTATIVE OF THE ESTATE OF TO CHEONG LAM, DECEASED (APPELLANT) V. YIM TIN FOOK, SINCE DECEASED (YIM LOK MAN WINNE, APPOINTED BY ORDER DATED 10 MAY 2024 TO REPRESENT THE ESTATE OF YIM TIN FOOK, DECEASED) AND OTHERS",
+        "id": "rank-02",
+        "locators": [
+          "[2026] HKCFA 17 | FACV1/2026 | 2026-04-17 | https://www.hklii.org/en/cases/hkcfa/2026/17"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-17"
+        ]
+      },
+      {
+        "claim": "Public system output rank 3 makes this legal material visible: MAI, JIEPING TRADING AS FAI TAT RMB EXCHANGE V. WONG, CHI HUNG",
+        "id": "rank-03",
+        "locators": [
+          "[2026] HKCFA 14 | FACV5/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/14"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-14"
+        ]
+      },
+      {
+        "claim": "Public system output rank 4 makes this legal material visible: HKSAR V. MODIC ENTERTAINMENT (HK) COMPANY LIMITED \u6fb3\u6ecc\u5a1b\u6a02(\u9999\u6e2f)\u6709\u9650\u516c\u53f8",
+        "id": "rank-04",
+        "locators": [
+          "[2026] HKCFA 15 | FAMC32/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/15"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-15"
+        ]
+      },
+      {
+        "claim": "Public system output rank 5 makes this legal material visible: HKSAR V. NG TZE KIN (\u5433\u5b50\u5065)",
+        "id": "rank-05",
+        "locators": [
+          "[2026] HKCFA 16 | FAMC48/2025 | 2026-04-15 | https://www.hklii.org/en/cases/hkcfa/2026/16"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-16"
+        ]
+      },
+      {
+        "claim": "Public system output rank 6 makes this legal material visible: HKSAR V. F.S.L.",
+        "id": "rank-06",
+        "locators": [
+          "[2026] HKCFA 13 | FACC5/2025 | 2026-04-14 | https://www.hklii.org/en/cases/hkcfa/2026/13"
+        ],
+        "output_rank": 6,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-13"
+        ]
+      },
+      {
+        "claim": "Public system output rank 7 makes this legal material visible: DR LEUNG KA LAU V. THE MEDICAL COUNCIL OF HONG KONG",
+        "id": "rank-07",
+        "locators": [
+          "[2026] HKCFA 12 | FAMV109/2025 | 2026-03-26 | https://www.hklii.org/en/cases/hkcfa/2026/12"
+        ],
+        "output_rank": 7,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-12"
+        ]
+      },
+      {
+        "claim": "Public system output rank 8 makes this legal material visible: HKSAR V. WONG, CHUN LOK (\u9ec3\u4fca\u6a02)",
+        "id": "rank-08",
+        "locators": [
+          "[2026] HKCFA 11 | FAMC21/2025 | 2026-03-24 | https://www.hklii.org/en/cases/hkcfa/2026/11"
+        ],
+        "output_rank": 8,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-11"
+        ]
+      },
+      {
+        "claim": "Public system output rank 9 makes this legal material visible: SAMANTHA JANE BRADLEY V. SIR ELLY KADOORIE & SONS LIMITED (FOR AND ON BEHALF OF ITSELF, ITS CURRENT AND FORMER OFFICERS, EMPLOYEES AND AGENTS, INCLUDING ITS LEGAL REPRESENTATIVES, MESSRS SIMMONS & SIMMONS)",
+        "id": "rank-09",
+        "locators": [
+          "[2026] HKCFA 10 | FACV3/2025 | 2026-02-26 | https://www.hklii.org/en/cases/hkcfa/2026/10"
+        ],
+        "output_rank": 9,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-10"
+        ]
+      },
+      {
+        "claim": "Public system output rank 10 makes this legal material visible: EXCELLENCE RAISE OVERSEAS LIMITED, JOLLY ADMIRE LIMITED, HIGH EXPRESS HOLDINGS LIMITED V. ANZ COMMODITY TRADING PTY LTD",
+        "id": "rank-10",
+        "locators": [
+          "[2026] HKCFA 9 | FAMV174/2025 | 2026-02-13 | https://www.hklii.org/en/cases/hkcfa/2026/9"
+        ],
+        "output_rank": 10,
+        "source_ids": [
+          "hong-kong-2026-hkcfa-9"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_system_outputs/manifests/hong_kong.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "public-system-output-hong_kong",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "not_for_merits_reliance",
+    "review_status": "source_integrity_only"
+  },
+  "source_path": "experiments/public_system_outputs/scenarios/hong_kong.json",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": null,
+    "recall": null
+  },
+  "upstream_output": {}
+}

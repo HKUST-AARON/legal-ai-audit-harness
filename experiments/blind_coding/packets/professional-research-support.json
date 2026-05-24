@@ -1,0 +1,25 @@
+{
+  "authority_sets": {},
+  "claimed_status": "professional_support_output",
+  "deployment_context": "Legal research assistant used inside a law firm to prepare a client memorandum.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "common_law",
+  "packet_id": "professional-research-support",
+  "review_gate": {
+    "attorney_review_required": false,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "internal_only",
+    "review_status": "not_required"
+  },
+  "source_path": "examples/scenarios/professional_research_support.json",
+  "upstream_metrics": {
+    "f1": 0.59,
+    "precision": 0.61,
+    "recall": 0.58
+  },
+  "upstream_output": {}
+}

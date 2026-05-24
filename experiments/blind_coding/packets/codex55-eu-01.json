@@ -1,0 +1,144 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "recipient-categories-only-as-default-under-article-15-1-c"
+    ],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-12-5",
+      "gdpr-art-15-4",
+      "gdpr-art-4-9",
+      "edpb-guidelines-01-2022"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15 recipient identity.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "Article 15(1)(c)",
+        "source_id": "gdpr-art-15",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-1"
+      },
+      {
+        "locator": "C-154/21",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-2"
+      },
+      {
+        "locator": "Article 12(5)",
+        "source_id": "gdpr-art-12-5",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-3"
+      },
+      {
+        "locator": "Article 15(4)",
+        "source_id": "gdpr-art-15-4",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-3"
+      },
+      {
+        "locator": "Article 4(9)",
+        "source_id": "gdpr-art-4-9",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-4"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "GDPR Article 15(1)(c) governs recipients or categories of recipients.",
+        "id": "unit-1",
+        "locators": [
+          "Article 15(1)(c)"
+        ],
+        "source_ids": [
+          "gdpr-art-15"
+        ]
+      },
+      {
+        "claim": "C-154/21 requires specific recipients where identifiable and no limit applies.",
+        "id": "unit-2",
+        "locators": [
+          "C-154/21"
+        ],
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ]
+      },
+      {
+        "claim": "Article 12(5) and Article 15(4) supply limits.",
+        "id": "unit-3",
+        "locators": [
+          "Article 12(5)",
+          "Article 15(4)"
+        ],
+        "source_ids": [
+          "gdpr-art-12-5",
+          "gdpr-art-15-4"
+        ]
+      },
+      {
+        "claim": "Article 4(9) contains a public-authority carve-out.",
+        "id": "unit-4",
+        "locators": [
+          "Article 4(9)"
+        ],
+        "source_ids": [
+          "gdpr-art-4-9"
+        ]
+      }
+    ],
+    "source_collection": "raw model output; citations require independent verification"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "codex55-eu-01",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law"
+    ],
+    "reliance_gate": "internal_research",
+    "review_status": "pending"
+  },
+  "source_path": "experiments/ai_outputs/scenarios/codex55_eu_01.json",
+  "upstream_metrics": {
+    "f1": 0.96,
+    "precision": 0.93,
+    "recall": 1.0
+  },
+  "upstream_output": {
+    "capture_mode": "no_browse_no_tools",
+    "model": "gpt-5.5",
+    "provider": "codex",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-01",
+    "reasoning_effort": "xhigh"
+  }
+}

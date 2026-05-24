@@ -1,0 +1,41 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "limiting-authority-b"
+    ],
+    "high_authority": [
+      "high-authority-material-a"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "limiting-authority-b",
+      "ordinary-authority-c"
+    ],
+    "retrieved_counter_or_limiting": [
+      "limiting-authority-b"
+    ],
+    "retrieved_high_authority": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Case recommendation output that otherwise has logs but repeatedly omits a known high-authority material.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "common_law",
+  "packet_id": "suspended-authority-omission",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/suspended_authority_omission.json",
+  "upstream_metrics": {
+    "f1": 0.82,
+    "precision": 0.81,
+    "recall": 0.84
+  },
+  "upstream_output": {}
+}

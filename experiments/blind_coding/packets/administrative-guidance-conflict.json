@@ -1,0 +1,46 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "conflicting-guidance-c"
+    ],
+    "high_authority": [
+      "statute-a",
+      "binding-regulation-b"
+    ],
+    "invalid_or_superseded": [
+      "withdrawn-guidance-d"
+    ],
+    "retrieved": [
+      "statute-a",
+      "binding-regulation-b",
+      "withdrawn-guidance-d"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "statute-a",
+      "binding-regulation-b"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Administrative adjudication support system recommending agency rules and guidance documents.",
+  "evidence_packet": {},
+  "jurisdiction_profile": "administrative",
+  "packet_id": "administrative-guidance-conflict",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "administrative"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "source_path": "examples/scenarios/administrative_guidance_conflict.json",
+  "upstream_metrics": {
+    "f1": 0.85,
+    "precision": 0.82,
+    "recall": 0.88
+  },
+  "upstream_output": {}
+}

@@ -1,0 +1,417 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [],
+    "high_authority": [
+      "canada-1981-1-scr-753",
+      "canada-1987-2-scr-541",
+      "canada-1996-2-scr-291",
+      "canada-2000-scc-44",
+      "canada-2002-scc-61",
+      "canada-2005-scc-71",
+      "canada-2018-scc-55",
+      "canada-2019-scc-50",
+      "canada-2022-scc-42",
+      "canada-2022-scc-51",
+      "canada-2023-scc-10",
+      "canada-2023-scc-11",
+      "canada-2023-scc-14",
+      "canada-2023-scc-3",
+      "canada-2024-scc-35",
+      "canada-2025-scc-2",
+      "canada-2025-scc-40",
+      "canada-2026-scc-15",
+      "canada-2026-scc-18",
+      "canada-2026-scc-4"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "canada-1981-1-scr-753",
+      "canada-1987-2-scr-541",
+      "canada-1996-2-scr-291",
+      "canada-2000-scc-44",
+      "canada-2002-scc-61",
+      "canada-2005-scc-71",
+      "canada-2018-scc-55",
+      "canada-2019-scc-50",
+      "canada-2022-scc-42",
+      "canada-2022-scc-51",
+      "canada-2023-scc-10",
+      "canada-2023-scc-11",
+      "canada-2023-scc-14",
+      "canada-2023-scc-3",
+      "canada-2024-scc-35",
+      "canada-2025-scc-2",
+      "canada-2025-scc-40",
+      "canada-2026-scc-15",
+      "canada-2026-scc-18",
+      "canada-2026-scc-4"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "canada-1981-1-scr-753",
+      "canada-1987-2-scr-541",
+      "canada-1996-2-scr-291",
+      "canada-2000-scc-44",
+      "canada-2002-scc-61",
+      "canada-2005-scc-71",
+      "canada-2018-scc-55",
+      "canada-2019-scc-50",
+      "canada-2022-scc-42",
+      "canada-2022-scc-51",
+      "canada-2023-scc-10",
+      "canada-2023-scc-11",
+      "canada-2023-scc-14",
+      "canada-2023-scc-3",
+      "canada-2024-scc-35",
+      "canada-2025-scc-2",
+      "canada-2025-scc-40",
+      "canada-2026-scc-15",
+      "canada-2026-scc-18",
+      "canada-2026-scc-4"
+    ]
+  },
+  "claimed_status": "professional_support_output",
+  "deployment_context": "Provider-agnostic source-manifest and output-evidence-packet test over 20 public case records.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "[1981] 1 SCR 753 | 1981-09-28 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2519/index.do",
+        "source_id": "canada-1981-1-scr-753",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-01"
+      },
+      {
+        "locator": "[1987] 2 SCR 541 | 18613 | 1987-11-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/266/index.do",
+        "source_id": "canada-1987-2-scr-541",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-02"
+      },
+      {
+        "locator": "[1996] 2 SCR 291 | 24766 | 1996-06-20 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1397/index.do",
+        "source_id": "canada-1996-2-scr-291",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-03"
+      },
+      {
+        "locator": "2000 SCC 44 | 26789 | 2000-10-05 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1808/index.do",
+        "source_id": "canada-2000-scc-44",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-04"
+      },
+      {
+        "locator": "2002 SCC 61 | 28385, 28144, 27852 | 2002-09-12 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2002/index.do",
+        "source_id": "canada-2002-scc-61",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-05"
+      },
+      {
+        "locator": "2005 SCC 71 | 30642 | 2005-12-02 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2253/index.do",
+        "source_id": "canada-2005-scc-71",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-06"
+      },
+      {
+        "locator": "2018 SCC 55 | 37566 | 2018-12-07 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/17404/index.do",
+        "source_id": "canada-2018-scc-55",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-07"
+      },
+      {
+        "locator": "2019 SCC 50 | 37893 | 2019-10-31 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/17986/index.do",
+        "source_id": "canada-2019-scc-50",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-08"
+      },
+      {
+        "locator": "2022 SCC 42 | 39879 | 2022-11-17 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19552/index.do",
+        "source_id": "canada-2022-scc-42",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-09"
+      },
+      {
+        "locator": "2022 SCC 51 | 39875 | 2022-12-02 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19572/index.do",
+        "source_id": "canada-2022-scc-51",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-10"
+      },
+      {
+        "locator": "2023 SCC 10 | 39906 | 2023-04-14 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19829/index.do",
+        "source_id": "canada-2023-scc-10",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-11"
+      },
+      {
+        "locator": "2023 SCC 11 | 39635 | 2023-04-28 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19851/index.do",
+        "source_id": "canada-2023-scc-11",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-12"
+      },
+      {
+        "locator": "2023 SCC 14 | 39796 | 2023-05-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19911/index.do",
+        "source_id": "canada-2023-scc-14",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-13"
+      },
+      {
+        "locator": "2023 SCC 3 | 39438 | 2023-01-27 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19639/index.do",
+        "source_id": "canada-2023-scc-3",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-14"
+      },
+      {
+        "locator": "2024 SCC 35 | 40428 | 2024-11-01 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20723/index.do",
+        "source_id": "canada-2024-scc-35",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-15"
+      },
+      {
+        "locator": "2025 SCC 2 | 41320 | 2025-02-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20846/index.do",
+        "source_id": "canada-2025-scc-2",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-16"
+      },
+      {
+        "locator": "2025 SCC 40 | 41785 | 2025-12-03 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21295/index.do",
+        "source_id": "canada-2025-scc-40",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-17"
+      },
+      {
+        "locator": "2026 SCC 15 | 41296 | 2026-05-08 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21492/index.do",
+        "source_id": "canada-2026-scc-15",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-18"
+      },
+      {
+        "locator": "2026 SCC 18 | 41567 | 2026-05-22 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21519/index.do",
+        "source_id": "canada-2026-scc-18",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-19"
+      },
+      {
+        "locator": "2026 SCC 4 | 41215 | 2026-02-06 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21365/index.do",
+        "source_id": "canada-2026-scc-4",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "unit-20"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-01",
+        "locators": [
+          "[1981] 1 SCR 753 | 1981-09-28 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2519/index.do"
+        ],
+        "source_ids": [
+          "canada-1981-1-scr-753"
+        ]
+      },
+      {
+        "id": "unit-02",
+        "locators": [
+          "[1987] 2 SCR 541 | 18613 | 1987-11-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/266/index.do"
+        ],
+        "source_ids": [
+          "canada-1987-2-scr-541"
+        ]
+      },
+      {
+        "id": "unit-03",
+        "locators": [
+          "[1996] 2 SCR 291 | 24766 | 1996-06-20 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1397/index.do"
+        ],
+        "source_ids": [
+          "canada-1996-2-scr-291"
+        ]
+      },
+      {
+        "id": "unit-04",
+        "locators": [
+          "2000 SCC 44 | 26789 | 2000-10-05 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/1808/index.do"
+        ],
+        "source_ids": [
+          "canada-2000-scc-44"
+        ]
+      },
+      {
+        "id": "unit-05",
+        "locators": [
+          "2002 SCC 61 | 28385, 28144, 27852 | 2002-09-12 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2002/index.do"
+        ],
+        "source_ids": [
+          "canada-2002-scc-61"
+        ]
+      },
+      {
+        "id": "unit-06",
+        "locators": [
+          "2005 SCC 71 | 30642 | 2005-12-02 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/2253/index.do"
+        ],
+        "source_ids": [
+          "canada-2005-scc-71"
+        ]
+      },
+      {
+        "id": "unit-07",
+        "locators": [
+          "2018 SCC 55 | 37566 | 2018-12-07 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/17404/index.do"
+        ],
+        "source_ids": [
+          "canada-2018-scc-55"
+        ]
+      },
+      {
+        "id": "unit-08",
+        "locators": [
+          "2019 SCC 50 | 37893 | 2019-10-31 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/17986/index.do"
+        ],
+        "source_ids": [
+          "canada-2019-scc-50"
+        ]
+      },
+      {
+        "id": "unit-09",
+        "locators": [
+          "2022 SCC 42 | 39879 | 2022-11-17 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19552/index.do"
+        ],
+        "source_ids": [
+          "canada-2022-scc-42"
+        ]
+      },
+      {
+        "id": "unit-10",
+        "locators": [
+          "2022 SCC 51 | 39875 | 2022-12-02 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19572/index.do"
+        ],
+        "source_ids": [
+          "canada-2022-scc-51"
+        ]
+      },
+      {
+        "id": "unit-11",
+        "locators": [
+          "2023 SCC 10 | 39906 | 2023-04-14 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19829/index.do"
+        ],
+        "source_ids": [
+          "canada-2023-scc-10"
+        ]
+      },
+      {
+        "id": "unit-12",
+        "locators": [
+          "2023 SCC 11 | 39635 | 2023-04-28 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19851/index.do"
+        ],
+        "source_ids": [
+          "canada-2023-scc-11"
+        ]
+      },
+      {
+        "id": "unit-13",
+        "locators": [
+          "2023 SCC 14 | 39796 | 2023-05-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19911/index.do"
+        ],
+        "source_ids": [
+          "canada-2023-scc-14"
+        ]
+      },
+      {
+        "id": "unit-14",
+        "locators": [
+          "2023 SCC 3 | 39438 | 2023-01-27 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19639/index.do"
+        ],
+        "source_ids": [
+          "canada-2023-scc-3"
+        ]
+      },
+      {
+        "id": "unit-15",
+        "locators": [
+          "2024 SCC 35 | 40428 | 2024-11-01 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20723/index.do"
+        ],
+        "source_ids": [
+          "canada-2024-scc-35"
+        ]
+      },
+      {
+        "id": "unit-16",
+        "locators": [
+          "2025 SCC 2 | 41320 | 2025-02-19 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20846/index.do"
+        ],
+        "source_ids": [
+          "canada-2025-scc-2"
+        ]
+      },
+      {
+        "id": "unit-17",
+        "locators": [
+          "2025 SCC 40 | 41785 | 2025-12-03 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21295/index.do"
+        ],
+        "source_ids": [
+          "canada-2025-scc-40"
+        ]
+      },
+      {
+        "id": "unit-18",
+        "locators": [
+          "2026 SCC 15 | 41296 | 2026-05-08 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21492/index.do"
+        ],
+        "source_ids": [
+          "canada-2026-scc-15"
+        ]
+      },
+      {
+        "id": "unit-19",
+        "locators": [
+          "2026 SCC 18 | 41567 | 2026-05-22 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21519/index.do"
+        ],
+        "source_ids": [
+          "canada-2026-scc-18"
+        ]
+      },
+      {
+        "id": "unit-20",
+        "locators": [
+          "2026 SCC 4 | 41215 | 2026-02-06 | https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21365/index.do"
+        ],
+        "source_ids": [
+          "canada-2026-scc-4"
+        ]
+      }
+    ],
+    "source_collection": "experiments/real_cases/manifests/canada.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "real-cases-canada",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "not_for_merits_reliance",
+    "review_status": "source_integrity_only"
+  },
+  "source_path": "experiments/real_cases/scenarios/canada.json",
+  "upstream_metrics": {},
+  "upstream_output": {}
+}

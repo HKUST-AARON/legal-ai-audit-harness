@@ -1,0 +1,284 @@
+[
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "administrative-guidance-conflict",
+    "packet_path": "experiments/blind_coding/packets/administrative-guidance-conflict.json",
+    "source_path": "examples/scenarios/administrative_guidance_conflict.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "civil-law-statutory-interpretation",
+    "packet_path": "experiments/blind_coding/packets/civil-law-statutory-interpretation.json",
+    "source_path": "examples/scenarios/civil_law_statutory_interpretation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "court-authority-report",
+    "packet_path": "experiments/blind_coding/packets/court-authority-report.json",
+    "source_path": "examples/scenarios/court_authority_report.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "decision-support-ready",
+    "packet_path": "experiments/blind_coding/packets/decision-support-ready.json",
+    "source_path": "examples/scenarios/decision_support_ready.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "grounded-output-summary",
+    "packet_path": "experiments/blind_coding/packets/grounded-output-summary.json",
+    "source_path": "examples/scenarios/grounded_output_summary.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "high-coverage-uncontestable-output",
+    "packet_path": "experiments/blind_coding/packets/high-coverage-uncontestable-output.json",
+    "source_path": "examples/scenarios/high_coverage_uncontestable_output.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "odr-authorized-review",
+    "packet_path": "experiments/blind_coding/packets/odr-authorized-review.json",
+    "source_path": "examples/scenarios/odr_authorized_review.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "professional-research-support",
+    "packet_path": "experiments/blind_coding/packets/professional-research-support.json",
+    "source_path": "examples/scenarios/professional_research_support.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "suspended-authority-omission",
+    "packet_path": "experiments/blind_coding/packets/suspended-authority-omission.json",
+    "source_path": "examples/scenarios/suspended_authority_omission.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "unverifiable-legal-output",
+    "packet_path": "experiments/blind_coding/packets/unverifiable-legal-output.json",
+    "source_path": "examples/scenarios/unverifiable_legal_output.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "real-cases-canada",
+    "packet_path": "experiments/blind_coding/packets/real-cases-canada.json",
+    "source_path": "experiments/real_cases/scenarios/canada.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "real-cases-germany",
+    "packet_path": "experiments/blind_coding/packets/real-cases-germany.json",
+    "source_path": "experiments/real_cases/scenarios/germany.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "real-cases-hong_kong",
+    "packet_path": "experiments/blind_coding/packets/real-cases-hong_kong.json",
+    "source_path": "experiments/real_cases/scenarios/hong_kong.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "real-cases-mainland_china",
+    "packet_path": "experiments/blind_coding/packets/real-cases-mainland_china.json",
+    "source_path": "experiments/real_cases/scenarios/mainland_china.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "real-cases-united_kingdom",
+    "packet_path": "experiments/blind_coding/packets/real-cases-united_kingdom.json",
+    "source_path": "experiments/real_cases/scenarios/united_kingdom.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "real-cases-united_states",
+    "packet_path": "experiments/blind_coding/packets/real-cases-united_states.json",
+    "source_path": "experiments/real_cases/scenarios/united_states.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "public-system-output-canada",
+    "packet_path": "experiments/blind_coding/packets/public-system-output-canada.json",
+    "source_path": "experiments/public_system_outputs/scenarios/canada.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "public-system-output-germany",
+    "packet_path": "experiments/blind_coding/packets/public-system-output-germany.json",
+    "source_path": "experiments/public_system_outputs/scenarios/germany.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "public-system-output-hong_kong",
+    "packet_path": "experiments/blind_coding/packets/public-system-output-hong_kong.json",
+    "source_path": "experiments/public_system_outputs/scenarios/hong_kong.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "public-system-output-mainland_china",
+    "packet_path": "experiments/blind_coding/packets/public-system-output-mainland_china.json",
+    "source_path": "experiments/public_system_outputs/scenarios/mainland_china.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "public-system-output-united_kingdom",
+    "packet_path": "experiments/blind_coding/packets/public-system-output-united_kingdom.json",
+    "source_path": "experiments/public_system_outputs/scenarios/united_kingdom.json"
+  },
+  {
+    "claimed_status": "professional_support_output",
+    "packet_id": "public-system-output-united_states",
+    "packet_path": "experiments/blind_coding/packets/public-system-output-united_states.json",
+    "source_path": "experiments/public_system_outputs/scenarios/united_states.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-eu-01",
+    "packet_path": "experiments/blind_coding/packets/codex55-eu-01.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_eu_01.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-eu-02",
+    "packet_path": "experiments/blind_coding/packets/codex55-eu-02.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_eu_02.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-eu-03",
+    "packet_path": "experiments/blind_coding/packets/codex55-eu-03.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_eu_03.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-eu-04",
+    "packet_path": "experiments/blind_coding/packets/codex55-eu-04.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_eu_04.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-uk-01",
+    "packet_path": "experiments/blind_coding/packets/codex55-uk-01.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_uk_01.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-uk-02",
+    "packet_path": "experiments/blind_coding/packets/codex55-uk-02.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_uk_02.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-uk-03",
+    "packet_path": "experiments/blind_coding/packets/codex55-uk-03.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_uk_03.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-us-01",
+    "packet_path": "experiments/blind_coding/packets/codex55-us-01.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_us_01.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-us-02",
+    "packet_path": "experiments/blind_coding/packets/codex55-us-02.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_us_02.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "codex55-us-03",
+    "packet_path": "experiments/blind_coding/packets/codex55-us-03.json",
+    "source_path": "experiments/ai_outputs/scenarios/codex55_us_03.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "eu-gdpr-article15-access-rights",
+    "packet_path": "experiments/blind_coding/packets/eu-gdpr-article15-access-rights.json",
+    "source_path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "uk-mesothelioma-causation-after-fairchild",
+    "packet_path": "experiments/blind_coding/packets/uk-mesothelioma-causation-after-fairchild.json",
+    "source_path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "us-agency-deference-after-loper-bright",
+    "packet_path": "experiments/blind_coding/packets/us-agency-deference-after-loper-bright.json",
+    "source_path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "eu-gdpr-article15-access-rights-counter-material-suppressed",
+    "packet_path": "experiments/blind_coding/packets/eu-gdpr-article15-access-rights-counter-material-suppressed.json",
+    "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-counter-material-suppressed.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+    "packet_path": "experiments/blind_coding/packets/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+    "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "eu-gdpr-article15-access-rights-missing-high-authority",
+    "packet_path": "experiments/blind_coding/packets/eu-gdpr-article15-access-rights-missing-high-authority.json",
+    "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-missing-high-authority.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "eu-gdpr-article15-access-rights-unverified-source-tags",
+    "packet_path": "experiments/blind_coding/packets/eu-gdpr-article15-access-rights-unverified-source-tags.json",
+    "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-unverified-source-tags.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed",
+    "packet_path": "experiments/blind_coding/packets/uk-mesothelioma-causation-after-fairchild-counter-material-suppressed.json",
+    "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-counter-material-suppressed.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+    "packet_path": "experiments/blind_coding/packets/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+    "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
+    "packet_path": "experiments/blind_coding/packets/uk-mesothelioma-causation-after-fairchild-missing-high-authority.json",
+    "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-missing-high-authority.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags",
+    "packet_path": "experiments/blind_coding/packets/uk-mesothelioma-causation-after-fairchild-unverified-source-tags.json",
+    "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-unverified-source-tags.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "us-agency-deference-after-loper-bright-counter-material-suppressed",
+    "packet_path": "experiments/blind_coding/packets/us-agency-deference-after-loper-bright-counter-material-suppressed.json",
+    "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-counter-material-suppressed.json"
+  },
+  {
+    "claimed_status": "decision_support_reason",
+    "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
+    "packet_path": "experiments/blind_coding/packets/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+    "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "us-agency-deference-after-loper-bright-missing-high-authority",
+    "packet_path": "experiments/blind_coding/packets/us-agency-deference-after-loper-bright-missing-high-authority.json",
+    "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-missing-high-authority.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "us-agency-deference-after-loper-bright-unverified-source-tags",
+    "packet_path": "experiments/blind_coding/packets/us-agency-deference-after-loper-bright-unverified-source-tags.json",
+    "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-unverified-source-tags.json"
+  }
+]
