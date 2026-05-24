@@ -232,7 +232,7 @@ python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 ```
 
-The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 230 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 230 committed score-blinded coding packets. The resulting packet files preserve the legal-output evidence needed for coding: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, deployment context and packet identifiers. This is a codebook reproducibility layer, not an external annotation study. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
 
 ## Raw Model Output Pilot
 

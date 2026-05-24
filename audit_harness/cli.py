@@ -146,7 +146,7 @@ def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str
         "# Legal AI Audit Harness Experiment",
         "",
         f"Scenarios: {len(rows)}",
-        f"Expected outcomes passed: {sum(row['expected_passed'] for row in rows)}/{len(rows)}",
+        f"Scenario-regression expectations passed: {sum(row['expected_passed'] for row in rows)}/{len(rows)}",
         f"Mean audit score: {_metric(mean(row['total_score'] for row in rows))}",
         f"Mean upstream recall: {_metric(_mean_optional(row['upstream_recall'] for row in rows))}",
         f"High-upstream-performance but procedurally blocked scenarios: {len(blocked_despite_recall)}",

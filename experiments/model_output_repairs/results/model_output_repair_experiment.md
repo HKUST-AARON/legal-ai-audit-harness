@@ -1,7 +1,7 @@
 # Legal AI Audit Harness Experiment
 
 Scenarios: 10
-Expected outcomes passed: 10/10
+Scenario-regression expectations passed: 10/10
 Mean audit score: 11.00
 Mean upstream recall: 1.00
 High-upstream-performance but procedurally blocked scenarios: 0
