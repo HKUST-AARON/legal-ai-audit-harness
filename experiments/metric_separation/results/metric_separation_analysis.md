@@ -33,7 +33,7 @@ Procedurally qualified outputs: 45
 ## Bootstrap and Permutation Robustness
 
 Bootstrap resamples: 1000 with seed 10506.
-Recall point-biserial permutation p-value: 0.553.
+Recall point-biserial permutation p-value: 0.558.
 
 | Metric | 2.5% | Median | 97.5% |
 | --- | ---: | ---: | ---: |

@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 19
+Validation suites: 20
 Scenario files: 230
 Base embedded records/items: 609 (10 stress scenarios, 120 public metadata records, 60 public-system records, 225 public retrieval records, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 460
@@ -13,7 +13,8 @@ Metric separation evaluations: 185 upstream-metric scenario packets; high-recall
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Gate ablation evaluations: 288/288 passed over 46 qualified packets
 Repair frontier evaluations: 176/176 blocked claims repairable across 2236 counterfactual repairs
-Derived robustness evaluations: 58502
+Jurisdiction-profile evaluations: 217/217 profile checks supported; 138/138 counterfactual mutations passed
+Derived robustness evaluations: 58857
 Scenario-regression expectations passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
@@ -39,6 +40,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Metric separation analysis | retrieval/status non-equivalence check | 185 upstream-metric scenario packets | 185 | recall-threshold precision 0.25; full gate precision 1.00 | n/a | n/a | n/a | full_gate_specificity: 1.0, high_recall_blocked_rate: 0.75, recall_point_biserial: 0.05 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 288 ablations over 46 qualified packets | 288 | 288/288 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
 | Blocked-claim repair frontiers | counterfactual repair-necessity check | 2236 repair counterfactuals over 176 blocked claims | 2236 | 176/176 repairable | n/a | n/a | n/a | 1: 118, 2: 44, 3: 13, 4: 1 |
+| Jurisdiction-profile mutations | cross-profile gate check | 355 profile checks and counterfactuals | 355 | 217/217 profile checks; 138/138 mutations | n/a | n/a | n/a | generic_preserved: 46, mismatch_downgraded: 46, missing_downgraded: 46 |
 | Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
@@ -61,6 +63,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
 - **Blocked-claim repair frontiers:** Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.
+- **Jurisdiction-profile mutations:** Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 

@@ -143,6 +143,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
     _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
+    _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
 
     rows = []
     for suite in SUITES:
@@ -197,6 +198,12 @@ def main() -> int:
         )
     )
     rows.append(_repair_frontier_row(repair_frontier_payload))
+    jurisdiction_profile_payload = json.loads(
+        (ROOT / "experiments" / "jurisdiction_profiles" / "results" / "jurisdiction_profile_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_jurisdiction_profile_row(jurisdiction_profile_payload))
 
     _run(
         [
@@ -263,6 +270,8 @@ def main() -> int:
             + metric_separation_payload["permutation"]["iterations"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
             "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
+            "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
+            + jurisdiction_profile_payload["counterfactual_evaluation_count"],
         }
     )
     payload = {
@@ -279,6 +288,8 @@ def main() -> int:
         + metric_separation_payload["permutation"]["iterations"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
+        "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
+        + jurisdiction_profile_payload["counterfactual_evaluation_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
@@ -288,6 +299,8 @@ def main() -> int:
         + metric_separation_payload["permutation"]["iterations"]
         + gate_ablation_payload["ablation_count"]
         + repair_frontier_payload["counterfactual_evaluation_count"]
+        + jurisdiction_profile_payload["profile_check_count"]
+        + jurisdiction_profile_payload["counterfactual_evaluation_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
@@ -360,6 +373,16 @@ def main() -> int:
             "unrepairable_count": repair_frontier_payload["unrepairable_count"],
             "minimal_repair_size_distribution": repair_frontier_payload["minimal_repair_size_distribution"],
             "minimal_repair_gate_frequency": repair_frontier_payload["minimal_repair_gate_frequency"],
+        },
+        "jurisdiction_profile": {
+            "profile_check_count": jurisdiction_profile_payload["profile_check_count"],
+            "profile_supported_count": jurisdiction_profile_payload["profile_supported_count"],
+            "qualified_status_count": jurisdiction_profile_payload["qualified_status_count"],
+            "counterfactual_evaluation_count": jurisdiction_profile_payload["counterfactual_evaluation_count"],
+            "passed_count": jurisdiction_profile_payload["passed_count"],
+            "generic_profile_preserved": jurisdiction_profile_payload["generic_profile_preserved"],
+            "missing_assumption_downgraded": jurisdiction_profile_payload["missing_assumption_downgraded"],
+            "mismatched_profile_downgraded": jurisdiction_profile_payload["mismatched_profile_downgraded"],
         },
         "suites": rows,
     }
@@ -641,6 +664,27 @@ def _repair_frontier_row(payload: dict) -> dict:
     }
 
 
+def _jurisdiction_profile_row(payload: dict) -> dict:
+    evaluations = payload["profile_check_count"] + payload["counterfactual_evaluation_count"]
+    return {
+        "id": "jurisdiction_profile",
+        "label": "Jurisdiction-profile mutations",
+        "evidence_class": "cross-profile gate check",
+        "validation_units": f"{evaluations} profile checks and counterfactuals",
+        "scenario_count": evaluations,
+        "rule_pass": f"{payload['profile_supported_count']}/{payload['profile_check_count']} profile checks; {payload['passed_count']}/{payload['counterfactual_evaluation_count']} mutations",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "generic_preserved": payload["generic_profile_preserved"],
+            "missing_downgraded": payload["missing_assumption_downgraded"],
+            "mismatch_downgraded": payload["mismatched_profile_downgraded"],
+        },
+        "finding": "Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -669,6 +713,7 @@ def _format_report(payload: dict) -> str:
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
+        f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

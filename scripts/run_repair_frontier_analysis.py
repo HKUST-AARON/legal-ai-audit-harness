@@ -209,7 +209,7 @@ def _complete_review_contestability(scenario: dict, target: str) -> None:
     gate["attorney_review_required"] = True
     gate["review_status"] = "completed"
     gate["reliance_gate"] = "attorney_review"
-    gate["jurisdiction_assumptions"] = gate.get("jurisdiction_assumptions") or ["repair-frontier-jurisdiction"]
+    gate["jurisdiction_assumptions"] = gate.get("jurisdiction_assumptions") or [_repair_jurisdiction_profile(scenario)]
     gate["irreversible_action"] = False
     gate["human_authorization"] = False
 
@@ -228,7 +228,7 @@ def _complete_decision_adoption(scenario: dict, target: str) -> None:
     gate["review_status"] = "completed"
     gate["reliance_gate"] = "authorized_adoption"
     gate["human_authorization"] = True
-    gate["jurisdiction_assumptions"] = gate.get("jurisdiction_assumptions") or ["repair-frontier-jurisdiction"]
+    gate["jurisdiction_assumptions"] = gate.get("jurisdiction_assumptions") or [_repair_jurisdiction_profile(scenario)]
     gate["adoption_reasons_recorded"] = True
     gate["contestation_recorded"] = True
     gate["irreversible_action"] = False
@@ -237,6 +237,10 @@ def _complete_decision_adoption(scenario: dict, target: str) -> None:
 
 def _clear_failure_flags(scenario: dict, target: str) -> None:
     scenario["failure_flags"] = []
+
+
+def _repair_jurisdiction_profile(scenario: dict) -> str:
+    return scenario.get("jurisdiction_profile") or "repair-frontier-jurisdiction"
 
 
 def _size_distribution(rows: list[dict]) -> dict[str, int]:

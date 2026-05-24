@@ -120,6 +120,17 @@
   },
   "gate_ablation_evaluations": 288,
   "high_upstream_but_blocked": 128,
+  "jurisdiction_profile": {
+    "counterfactual_evaluation_count": 138,
+    "generic_profile_preserved": 46,
+    "mismatched_profile_downgraded": 46,
+    "missing_assumption_downgraded": 46,
+    "passed_count": 138,
+    "profile_check_count": 217,
+    "profile_supported_count": 217,
+    "qualified_status_count": 46
+  },
+  "jurisdiction_profile_evaluations": 355,
   "metric_separation": {
     "bootstrap": {
       "confidence_interval": {
@@ -277,7 +288,7 @@
     "support_items_verified": 30,
     "verified_ratio": 1.0
   },
-  "suite_count": 19,
+  "suite_count": 20,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -602,6 +613,23 @@
       "validation_units": "2236 repair counterfactuals over 176 blocked claims"
     },
     {
+      "evidence_class": "cross-profile gate check",
+      "finding": "Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.",
+      "high_upstream_but_blocked": null,
+      "id": "jurisdiction_profile",
+      "label": "Jurisdiction-profile mutations",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "217/217 profile checks; 138/138 mutations",
+      "scenario_count": 355,
+      "status_distribution": {
+        "generic_preserved": 46,
+        "mismatch_downgraded": 46,
+        "missing_downgraded": 46
+      },
+      "validation_units": "355 profile checks and counterfactuals"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -714,7 +742,7 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 59111,
+  "total_evaluation_rows": 59466,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
@@ -726,6 +754,7 @@
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
+    "jurisdiction_profile_evaluations": 355,
     "metric_separation_evaluations": 185,
     "metric_statistical_resamples": 2000,
     "model_output_transcript_locator_checks": 50,

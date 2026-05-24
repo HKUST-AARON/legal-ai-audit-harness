@@ -252,6 +252,28 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["repairable_count"], payload["blocked_claim_count"])
         self.assertFalse(payload["unrepairable"])
 
+    def test_jurisdiction_profile_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_jurisdiction_profile_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Jurisdiction Profile Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "jurisdiction_profiles" / "results" / "jurisdiction_profile_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["profile_check_count"], 217)
+        self.assertEqual(payload["profile_supported_count"], 217)
+        self.assertEqual(payload["qualified_status_count"], 46)
+        self.assertEqual(payload["counterfactual_evaluation_count"], 138)
+        self.assertEqual(payload["passed_count"], 138)
+        self.assertFalse(payload["failures"])
+
     def test_claim_consistency_verification_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/verify_claim_consistency.py"],
@@ -559,7 +581,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 19)
+        self.assertEqual(report["suite_count"], 20)
         self.assertEqual(report["scenario_files"], 230)
         self.assertEqual(report["validation_units"]["total"], 609)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
@@ -591,7 +613,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 288)
         self.assertEqual(report["repair_frontier_evaluations"], 2236)
         self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 2236)
-        self.assertEqual(report["total_evaluation_rows"], 59111)
+        self.assertEqual(report["jurisdiction_profile_evaluations"], 355)
+        self.assertEqual(report["validation_units"]["jurisdiction_profile_evaluations"], 355)
+        self.assertEqual(report["total_evaluation_rows"], 59466)
         self.assertEqual(report["expected_passed"], 230)
         self.assertEqual(report["expected_total"], 230)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
@@ -615,6 +639,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["gate_ablation"]["passed_count"], 288)
         self.assertEqual(report["repair_frontier"]["blocked_claim_count"], 176)
         self.assertEqual(report["repair_frontier"]["repairable_count"], 176)
+        self.assertEqual(report["jurisdiction_profile"]["profile_check_count"], 217)
+        self.assertEqual(report["jurisdiction_profile"]["profile_supported_count"], 217)
+        self.assertEqual(report["jurisdiction_profile"]["passed_count"], 138)
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(

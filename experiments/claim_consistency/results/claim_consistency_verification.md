@@ -1,4 +1,4 @@
 # Claim Consistency Verification
 
-Checks: 47/47
+Checks: 58/58
 All passed: True

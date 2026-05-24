@@ -18,6 +18,27 @@ SOURCE_TAGS = {
     "web_search_verify",
 }
 PROCEDURAL_SOURCE_TAGS = {"tool_verified", "official_source", "user_provided_verified", "settled"}
+PROFILE_ASSUMPTION_ALIASES = {
+    "common_law": {
+        "common_law",
+        "canadian_administrative_law",
+        "england_and_wales_tort_law",
+        "united_states_federal_administrative_law",
+    },
+    "civil_law": {
+        "civil_law",
+        "european_union_data_protection_law",
+        "european_union_fundamental_rights",
+        "german_constitutional_law",
+    },
+    "administrative": {
+        "administrative",
+        "canadian_administrative_law",
+        "united_states_federal_administrative_law",
+    },
+    "arbitral": {"arbitral"},
+    "odr": {"odr"},
+}
 
 
 class Status(str, Enum):
@@ -237,10 +258,21 @@ def _adoption_gate_satisfied(scenario: dict[str, Any]) -> bool:
         gate.get("review_status") == "completed"
         and gate.get("reliance_gate") == "authorized_adoption"
         and gate.get("human_authorization") is True
-        and bool(gate.get("jurisdiction_assumptions"))
+        and _jurisdiction_assumptions_supported(scenario)
         and gate.get("adoption_reasons_recorded") is True
         and gate.get("contestation_recorded") is True
     )
+
+
+def _jurisdiction_assumptions_supported(scenario: dict[str, Any]) -> bool:
+    assumptions = set(scenario.get("review_gate", {}).get("jurisdiction_assumptions") or [])
+    if not assumptions:
+        return False
+    profile = scenario.get("jurisdiction_profile")
+    if not profile:
+        return True
+    aliases = PROFILE_ASSUMPTION_ALIASES.get(profile, {profile})
+    return bool(assumptions & aliases)
 
 
 def _normative_missing_gates(scores: dict[str, int], total: int, policy: StatusPolicy) -> list[str]:
@@ -419,7 +451,7 @@ def _review_gate_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:
     flags: list[str] = []
     if gate.get("irreversible_action") is True and gate.get("human_authorization") is not True:
         flags.append("unauthorized_action")
-    if target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and not gate.get("jurisdiction_assumptions"):
+    if target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and not _jurisdiction_assumptions_supported(scenario):
         flags.append("jurisdiction_assumption_gap")
     review_required = gate.get("attorney_review_required") is True
     review_incomplete = gate.get("review_status") not in {"completed", "not_required"}
