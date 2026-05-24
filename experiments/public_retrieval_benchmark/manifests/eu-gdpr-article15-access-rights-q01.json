@@ -1,0 +1,23 @@
+{
+  "id": "eu-gdpr-article15-access-rights-q01",
+  "issue_id": "eu-gdpr-article15-access-rights",
+  "query": "C-154/21 GDPR Article 15 recipients",
+  "top_k": 10,
+  "source_system": "CURIA case-law list search",
+  "endpoint_scope": "case_law_known_item",
+  "mixed_authority_required_elsewhere": [
+    "gdpr-art-15",
+    "gdpr-art-12-5",
+    "gdpr-art-15-4"
+  ],
+  "records": [
+    {
+      "id": "cjeu-c-154-21-osterreichische-post",
+      "title": "Judgment - 12/01/2023 - Österreichische Post (Informations relatives aux destinataires de données personnelles) Case C-154/21 Reports of Cases published in the electronic Reports o",
+      "citation": "Case C-154/21",
+      "source_url": "https://juris.curia.europa.eu/juris/document/document.jsf;jsessionid=0DE24F82E2C6399D4E3F9D7E3F005BAB?text=&docid=260543&pageIndex=0&doclang=en&mode=lst&dir=&occ=first&part=1&cid=2360494",
+      "rank": 1,
+      "source_system": "CURIA case-law list search"
+    }
+  ]
+}

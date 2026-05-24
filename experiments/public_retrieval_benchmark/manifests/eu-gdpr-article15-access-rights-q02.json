@@ -1,0 +1,23 @@
+{
+  "id": "eu-gdpr-article15-access-rights-q02",
+  "issue_id": "eu-gdpr-article15-access-rights",
+  "query": "C-487/21 GDPR Article 15 copy",
+  "top_k": 10,
+  "source_system": "CURIA case-law list search",
+  "endpoint_scope": "case_law_known_item",
+  "mixed_authority_required_elsewhere": [
+    "gdpr-art-15",
+    "gdpr-art-12-5",
+    "gdpr-art-15-4"
+  ],
+  "records": [
+    {
+      "id": "cjeu-c-487-21-crif",
+      "title": "Judgment - 04/05/2023 - Österreichische Datenschutzbehörde Case C-487/21 Reports of Cases published in the electronic Reports of Cases (Court Reports - general) Links to the texts",
+      "citation": "Case C-487/21",
+      "source_url": "https://juris.curia.europa.eu/juris/document/document.jsf;jsessionid=317E0BD14A4850ECE691F839CBCC7906?text=&docid=268626&pageIndex=0&doclang=en&mode=lst&dir=&occ=first&part=1&cid=2360588",
+      "rank": 1,
+      "source_system": "CURIA case-law list search"
+    }
+  ]
+}

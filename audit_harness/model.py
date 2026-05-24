@@ -84,6 +84,7 @@ class AuditResult:
     evidence_coverage: float | None
     source_tag_coverage: float | None
     procedural_source_tag_coverage: float | None
+    failure_flags: list[str]
     disposition: str
     expected_allowed_status: str | None
     expected_disposition: str | None
@@ -106,7 +107,8 @@ def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = No
     allowed = _allowed_status(scenario, scores, total, missing_gates, policy)
     allowed = _cap_by_system_role(allowed, system_role, missing_gates)
     metrics = _scenario_metrics(scenario)
-    disposition = _disposition(_derived_failure_flags(scenario, metrics))
+    failure_flags = _derived_failure_flags(scenario, metrics)
+    disposition = _disposition(failure_flags)
 
     if disposition == "withdrawal":
         allowed = Status.NO_EXTERNAL_LEGAL_EFFECT.value
@@ -141,6 +143,7 @@ def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = No
         evidence_coverage=metrics["evidence_coverage"],
         source_tag_coverage=metrics["source_tag_coverage"],
         procedural_source_tag_coverage=metrics["procedural_source_tag_coverage"],
+        failure_flags=sorted(set(failure_flags)),
         disposition=disposition,
         expected_allowed_status=expected_allowed,
         expected_disposition=expected_disposition,
@@ -353,7 +356,31 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
             flags.append("source_attribution_gap")
         if claimed_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and _has_nonprocedural_source_tags(scenario["evidence_packet"]):
             flags.append("source_attribution_gap")
+    flags.extend(_source_binding_validation_flags(scenario, claimed_rank))
     flags.extend(_review_gate_flags(scenario, claimed_rank))
+    return flags
+
+
+def _source_binding_validation_flags(scenario: dict[str, Any], claimed_rank: int) -> list[str]:
+    if claimed_rank < STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value]:
+        return []
+    validation = scenario.get("source_binding_validation")
+    if not isinstance(validation, dict):
+        return []
+    flags: list[str] = []
+    if validation.get("all_links_source_bound") is False:
+        flags.append("source_attribution_gap")
+    if validation.get("high_authority_complete") is False:
+        flags.append("authority_omission")
+    if validation.get("counter_material_complete") is False:
+        flags.append("counter_material_suppression")
+    material_support_failures = {
+        "contradiction_pattern_matched",
+        "support_terms_not_shared_by_claim_and_excerpt",
+        "missing_claim",
+    }
+    if any(item.get("reason") in material_support_failures for item in validation.get("unsupported_source_support", [])):
+        flags.append("summary_distortion")
     return flags
 
 

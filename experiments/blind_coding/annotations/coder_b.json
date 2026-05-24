@@ -548,6 +548,298 @@
       "notes": "Internal-use context is available, but no reconstructable sources or authority sets are supplied."
     },
     {
+      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q04",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q05",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q06",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q04",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q05",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q06",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "notes": "Public issue-search output is reconstructable, but the top-k results do not preserve the complete issue-defined authority and counter-material chain."
+    },
+    {
+      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q01",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "notes": "OpenLegalData public search output is reproducible, but source tags are nonprocedural and the issue-defined authority/counter-material chain is absent."
+    },
+    {
+      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q02",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "notes": "OpenLegalData public search output is reproducible, but source tags are nonprocedural and the issue-defined authority/counter-material chain is absent."
+    },
+    {
+      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q03",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "notes": "OpenLegalData public search output is reproducible, but source tags are nonprocedural and the issue-defined authority/counter-material chain is absent."
+    },
+    {
+      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q04",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "notes": "OpenLegalData public search output is reproducible, but source tags are nonprocedural and the issue-defined authority/counter-material chain is absent."
+    },
+    {
+      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q05",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "notes": "OpenLegalData public search output is reproducible, but source tags are nonprocedural and the issue-defined authority/counter-material chain is absent."
+    },
+    {
+      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q06",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 2
+      },
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "notes": "OpenLegalData public search output is reproducible, but source tags are nonprocedural and the issue-defined authority/counter-material chain is absent."
+    },
+    {
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
       "scores": {
         "S": 2,
@@ -894,6 +1186,956 @@
       },
       "failure_flags": [],
       "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-01--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-02--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-03--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-eu-04--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-01--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-02--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-uk-03--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-01--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-02--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Same model answer is procedurally screenable after source binding, reviewable output-source links, and completed professional review are added."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03--contradictory-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: contradiction_pattern. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03--counter-material-omission",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: counter_material_omission."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03--missing-output-link",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: unit_source_link_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03--out-of-manifest-source",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: manifest_membership_gap."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03--unsupported-claim",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "summary_distortion"
+      ],
+      "notes": "Adversarial source-support negative control: claim_support_gap. Coder marks unsupported or contradictory source support as summary distortion."
+    },
+    {
+      "packet_id": "source-bound-codex55-us-03--wrong-locator",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Adversarial source-support negative control: locator_mismatch."
     },
     {
       "packet_id": "suspended-authority-omission",

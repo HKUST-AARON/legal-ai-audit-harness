@@ -1,15 +1,15 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 70,
-    "scenario_count": 72,
+    "all_policy_status_stable": 158,
+    "scenario_count": 160,
     "weighted_status_agreement_base_lenient": 1.0,
-    "weighted_status_agreement_base_strict": 0.9830866807610994
+    "weighted_status_agreement_base_strict": 0.9925320886814469
   },
   "blind_coding": {
     "base_status_agreement": {
       "coder_a": {
-        "exact_status_agreement": 0.875,
-        "match_count": 63,
+        "exact_status_agreement": 0.94375,
+        "match_count": 151,
         "mismatch_count": 9,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -22,11 +22,11 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "weighted_status_agreement": 0.9409722222222222
+        "weighted_status_agreement": 0.9734375
       },
       "coder_b": {
-        "exact_status_agreement": 0.8472222222222222,
-        "match_count": 61,
+        "exact_status_agreement": 0.93125,
+        "match_count": 149,
         "mismatch_count": 11,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -41,30 +41,54 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "weighted_status_agreement": 0.9201388888888888
+        "weighted_status_agreement": 0.9640625
       }
     },
     "coder_count": 2,
-    "packet_count": 72,
+    "packet_count": 160,
     "pairwise_status": [
       {
-        "exact_status_agreement": 0.9722222222222222,
+        "exact_status_agreement": 0.9875,
         "left": "coder_a",
         "right": "coder_b",
-        "weighted_status_agreement": 0.9791666666666666
+        "weighted_status_agreement": 0.990625
       }
     ],
     "status_disagreement_count": 2
   },
-  "blind_coding_evaluations": 144,
-  "expected_passed": 72,
-  "expected_total": 72,
-  "high_upstream_but_blocked": 26,
-  "recoded_evaluations": 144,
-  "scenario_files": 72,
-  "suite_count": 10,
+  "blind_coding_evaluations": 320,
+  "blocked_reason_distribution": {
+    "authority_omission": 5,
+    "contestation_failure": 1,
+    "counter_material_suppression": 17,
+    "invalid_authority": 1,
+    "source_attribution_gap": 75,
+    "summary_distortion": 21
+  },
+  "expected_passed": 160,
+  "expected_total": 160,
+  "high_upstream_but_blocked": 88,
+  "recoded_evaluations": 320,
+  "scenario_files": 160,
+  "source_text_anchor_evaluations": 30,
+  "source_text_verification": {
+    "record_count": 30,
+    "records_with_text_snapshot": 21,
+    "support_item_count": 30,
+    "support_items_verified": 21,
+    "verified_ratio": 0.7
+  },
+  "suite_count": 13,
   "suites": [
     {
+      "blocked_reason_distribution": {
+        "authority_omission": 1,
+        "contestation_failure": 1,
+        "counter_material_suppression": 1,
+        "invalid_authority": 1,
+        "summary_distortion": 1
+      },
+      "evidence_class": "construct test",
       "expected_passed": 10,
       "finding": "Tests downgrade, withdrawal, decision-support and high-recall-but-blocked behavior.",
       "high_upstream_but_blocked": 3,
@@ -83,6 +107,8 @@
       "validation_units": "10 stress scenarios"
     },
     {
+      "blocked_reason_distribution": {},
+      "evidence_class": "public-source reconstruction",
       "expected_passed": 6,
       "finding": "Tests source reconstruction across six public legal-record sources.",
       "high_upstream_but_blocked": 0,
@@ -97,6 +123,8 @@
       "validation_units": "120 public metadata records"
     },
     {
+      "blocked_reason_distribution": {},
+      "evidence_class": "public-output audit",
       "expected_passed": 6,
       "finding": "Tests ordered real upstream legal-output reconstruction.",
       "high_upstream_but_blocked": 0,
@@ -111,6 +139,8 @@
       "validation_units": "60 visible public-system records"
     },
     {
+      "blocked_reason_distribution": {},
+      "evidence_class": "mixed public-output/source audit",
       "expected_passed": 3,
       "finding": "Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.",
       "high_upstream_but_blocked": 0,
@@ -126,20 +156,28 @@
       "validation_units": "19 issue-specific public output/source records"
     },
     {
-      "expected_passed": 12,
-      "finding": "Tests true public search outputs against issue-defined high-authority and counter-material gold sets.",
-      "high_upstream_but_blocked": 0,
-      "id": "public_retrieval_benchmark",
-      "label": "Public retrieval benchmark",
-      "mean_audit_score": 9,
-      "mean_upstream_recall": 0.1111111111111111,
-      "scenario_count": 12,
-      "status_distribution": {
-        "reference_information": 12
+      "blocked_reason_distribution": {
+        "counter_material_suppression": 2
       },
-      "validation_units": "99 public search result records"
+      "evidence_class": "endpoint-compatible public-output benchmark",
+      "expected_passed": 30,
+      "finding": "Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.",
+      "high_upstream_but_blocked": 2,
+      "id": "public_retrieval_benchmark",
+      "label": "Endpoint-matched public retrieval benchmark",
+      "mean_audit_score": 9.066666666666666,
+      "mean_upstream_recall": 0.25555555555555554,
+      "scenario_count": 30,
+      "status_distribution": {
+        "reference_information": 30
+      },
+      "validation_units": "225 public search result records"
     },
     {
+      "blocked_reason_distribution": {
+        "source_attribution_gap": 10
+      },
+      "evidence_class": "model-output audit",
       "expected_passed": 10,
       "finding": "Tests whether strong authority coverage without source binding remains procedurally capped.",
       "high_upstream_but_blocked": 10,
@@ -154,11 +192,50 @@
       "validation_units": "10 raw model outputs"
     },
     {
+      "blocked_reason_distribution": {},
+      "evidence_class": "model-output intervention",
+      "expected_passed": 10,
+      "finding": "Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.",
+      "high_upstream_but_blocked": 0,
+      "id": "model_output_repairs",
+      "label": "Source-supported model-output repairs",
+      "mean_audit_score": 11,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 10,
+      "status_distribution": {
+        "normative_material_screening_output": 10
+      },
+      "validation_units": "10 source-supported model-output variants"
+    },
+    {
+      "blocked_reason_distribution": {
+        "counter_material_suppression": 10,
+        "source_attribution_gap": 60,
+        "summary_distortion": 20
+      },
+      "evidence_class": "negative-control model-output validation",
+      "expected_passed": 60,
+      "finding": "Tests whether source-support repair gates reject locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions.",
+      "high_upstream_but_blocked": 60,
+      "id": "model_output_adversarial",
+      "label": "Adversarial source-support repairs",
+      "mean_audit_score": 8.833333333333334,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 60,
+      "status_distribution": {
+        "no_external_legal_effect": 20,
+        "reference_information": 40
+      },
+      "validation_units": "60 adversarial source-support variants"
+    },
+    {
+      "blocked_reason_distribution": {},
+      "evidence_class": "mixed-authority construct test",
       "expected_passed": 5,
-      "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
+      "finding": "Tests normative material screening with mixed statute/case/source packets rather than single-endpoint public search results.",
       "high_upstream_but_blocked": 0,
       "id": "issue_gold_sets",
-      "label": "Issue-defined positive controls",
+      "label": "Mixed-authority public source-screening packets",
       "mean_audit_score": 11,
       "mean_upstream_recall": 1.0,
       "scenario_count": 5,
@@ -168,6 +245,12 @@
       "validation_units": "5 curated issue packets"
     },
     {
+      "blocked_reason_distribution": {
+        "authority_omission": 4,
+        "counter_material_suppression": 4,
+        "source_attribution_gap": 5
+      },
+      "evidence_class": "negative-control construct test",
       "expected_passed": 20,
       "finding": "Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.",
       "high_upstream_but_blocked": 13,
@@ -183,35 +266,53 @@
       "validation_units": "20 issue-packet ablations"
     },
     {
+      "evidence_class": "external source-grounding check",
+      "finding": "Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.",
+      "high_upstream_but_blocked": null,
+      "id": "source_text_verification",
+      "label": "Public source-text anchors",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "21/30 verified",
+      "scenario_count": 30,
+      "status_distribution": {
+        "records_with_text_snapshot": 21,
+        "verified_ratio": 0.7
+      },
+      "validation_units": "30 public source-support anchor checks"
+    },
+    {
+      "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
       "id": "annotation_robustness",
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "70/72 stable across all policies",
-      "scenario_count": 72,
+      "rule_pass": "158/160 stable across all policies",
+      "scenario_count": 160,
       "status_distribution": {
         "base_vs_lenient_weighted_agreement": 1.0,
-        "base_vs_strict_weighted_agreement": 0.98
+        "base_vs_strict_weighted_agreement": 0.99
       },
-      "validation_units": "144 strict/lenient recoded evaluations"
+      "validation_units": "320 strict/lenient recoded evaluations"
     },
     {
+      "evidence_class": "codebook reproducibility",
       "finding": "Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.",
       "high_upstream_but_blocked": null,
       "id": "blind_coding",
       "label": "Score-blinded dual coding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.97 coder agreement; 0.85 min base agreement",
-      "scenario_count": 72,
+      "rule_pass": "0.99 coder agreement; 0.93 min base agreement",
+      "scenario_count": 160,
       "status_distribution": {
-        "coder_weighted_status_agreement": 0.98,
-        "min_base_weighted_status_agreement": 0.92,
+        "coder_weighted_status_agreement": 0.99,
+        "min_base_weighted_status_agreement": 0.96,
         "status_disagreements": 2
       },
-      "validation_units": "72 packets x 2 coding passes"
+      "validation_units": "160 packets x 2 coding passes"
     }
   ],
   "threshold_sensitivity": {
@@ -227,10 +328,10 @@
         "promotions_from_default": 0,
         "status_distribution": {
           "decision_support_reason": 2,
-          "no_external_legal_effect": 2,
-          "normative_material_screening_output": 14,
+          "no_external_legal_effect": 22,
+          "normative_material_screening_output": 24,
           "professional_support_output": 13,
-          "reference_information": 41
+          "reference_information": 99
         },
         "status_flips_from_default": 0
       },
@@ -241,10 +342,10 @@
         "promotions_from_default": 0,
         "status_distribution": {
           "decision_support_reason": 2,
-          "no_external_legal_effect": 2,
-          "normative_material_screening_output": 14,
+          "no_external_legal_effect": 22,
+          "normative_material_screening_output": 24,
           "professional_support_output": 13,
-          "reference_information": 41
+          "reference_information": 99
         },
         "status_flips_from_default": 0
       },
@@ -255,10 +356,10 @@
         "promotions_from_default": 0,
         "status_distribution": {
           "decision_support_reason": 2,
-          "no_external_legal_effect": 2,
-          "normative_material_screening_output": 14,
+          "no_external_legal_effect": 22,
+          "normative_material_screening_output": 24,
           "professional_support_output": 13,
-          "reference_information": 41
+          "reference_information": 99
         },
         "status_flips_from_default": 0
       },
@@ -269,43 +370,47 @@
         "promotions_from_default": 0,
         "status_distribution": {
           "decision_support_reason": 2,
-          "no_external_legal_effect": 2,
-          "normative_material_screening_output": 12,
+          "no_external_legal_effect": 22,
+          "normative_material_screening_output": 22,
           "professional_support_output": 15,
-          "reference_information": 41
+          "reference_information": 99
         },
         "status_flips_from_default": 2
       },
       {
         "decision_threshold": 13,
-        "demotions_from_default": 11,
+        "demotions_from_default": 21,
         "normative_threshold": 12,
         "promotions_from_default": 0,
         "status_distribution": {
-          "no_external_legal_effect": 2,
+          "no_external_legal_effect": 22,
           "normative_material_screening_output": 7,
-          "professional_support_output": 22,
-          "reference_information": 41
+          "professional_support_output": 32,
+          "reference_information": 99
         },
-        "status_flips_from_default": 11
+        "status_flips_from_default": 21
       }
     ],
-    "scenario_count": 72
+    "scenario_count": 160
   },
-  "threshold_sensitivity_evaluations": 360,
-  "total_evaluation_rows": 991,
+  "threshold_sensitivity_evaluations": 800,
+  "total_evaluation_rows": 2009,
   "validation_units": {
-    "annotation_recodings": 144,
-    "blind_coding_packets": 72,
+    "adversarial_model_outputs": 60,
+    "annotation_recodings": 320,
+    "blind_coding_packets": 160,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
     "public_metadata_records": 120,
-    "public_retrieval_records": 99,
+    "public_retrieval_records": 225,
     "public_system_records": 60,
     "raw_model_outputs": 10,
+    "source_bound_model_outputs": 10,
+    "source_text_anchor_checks": 30,
+    "source_text_anchor_verified": 21,
     "stress_scenarios": 10,
-    "threshold_sensitivity_evaluations": 360,
-    "total": 343
+    "threshold_sensitivity_evaluations": 800,
+    "total": 539
   }
 }

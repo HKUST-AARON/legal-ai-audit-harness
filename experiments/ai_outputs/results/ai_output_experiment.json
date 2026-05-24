@@ -13,6 +13,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -47,6 +50,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -81,6 +87,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -115,6 +124,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -149,6 +161,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -183,6 +198,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -217,6 +235,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -251,6 +272,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -285,6 +309,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -319,6 +346,9 @@
       "expected_allowed_status": "reference_information",
       "expected_disposition": "downgrade",
       "expected_passed": true,
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -344,6 +374,9 @@
   ],
   "scenario_path": "experiments/ai_outputs/scenarios",
   "summary": {
+    "blocked_reason_distribution": {
+      "source_attribution_gap": 10
+    },
     "expected_passed": 10,
     "high_upstream_but_blocked": 10,
     "mean_audit_score": 9,

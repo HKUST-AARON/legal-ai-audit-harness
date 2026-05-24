@@ -17,6 +17,10 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "counter_material_suppression",
+            "invalid_authority"
+          ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -45,6 +49,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -73,6 +78,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -101,6 +107,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -129,6 +136,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": 1.0,
@@ -157,6 +165,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "contestation_failure",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "T",
@@ -188,6 +200,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -216,6 +229,7 @@
           "expected_allowed_status": "professional_support_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": null,
           "missing_gates": [
             "K",
@@ -247,6 +261,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "authority_omission"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -275,6 +292,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": null,
           "missing_gates": [
             "S",
@@ -319,6 +340,10 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "counter_material_suppression",
+            "invalid_authority"
+          ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [
             "total_score>=9"
@@ -349,6 +374,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -377,6 +403,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -405,6 +432,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -433,6 +461,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": 1.0,
@@ -461,6 +490,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "contestation_failure",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "T",
@@ -492,6 +525,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -520,6 +554,7 @@
           "expected_allowed_status": "professional_support_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": null,
           "missing_gates": [
             "K",
@@ -551,6 +586,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "authority_omission"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -579,6 +617,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": null,
           "missing_gates": [
             "S",
@@ -623,6 +665,10 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "counter_material_suppression",
+            "invalid_authority"
+          ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [
             "total_score>=10"
@@ -653,6 +699,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -681,6 +728,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -709,6 +757,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -737,6 +786,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": 1.0,
@@ -765,6 +815,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "contestation_failure",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "T",
@@ -796,6 +850,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -824,6 +879,7 @@
           "expected_allowed_status": "professional_support_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": null,
           "missing_gates": [
             "K",
@@ -855,6 +911,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "authority_omission"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -883,6 +942,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": null,
           "missing_gates": [
             "S",
@@ -927,6 +990,10 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "counter_material_suppression",
+            "invalid_authority"
+          ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [
             "total_score>=11"
@@ -957,6 +1024,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": false,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -987,6 +1055,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": false,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1017,6 +1086,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -1045,6 +1115,7 @@
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": 1.0,
@@ -1073,6 +1144,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "contestation_failure",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "T",
@@ -1104,6 +1179,7 @@
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
           "procedural_source_tag_coverage": null,
@@ -1132,6 +1208,7 @@
           "expected_allowed_status": "professional_support_output",
           "expected_disposition": "none",
           "expected_passed": true,
+          "failure_flags": [],
           "invalid_authority_rate": null,
           "missing_gates": [
             "K",
@@ -1163,6 +1240,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "suspension",
           "expected_passed": true,
+          "failure_flags": [
+            "authority_omission"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1193,6 +1273,10 @@
           "expected_allowed_status": "no_external_legal_effect",
           "expected_disposition": "withdrawal",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap",
+            "summary_distortion"
+          ],
           "invalid_authority_rate": null,
           "missing_gates": [
             "S",

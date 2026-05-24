@@ -17,6 +17,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -47,6 +50,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -77,6 +83,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -107,6 +116,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -137,6 +149,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -167,6 +182,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -197,6 +215,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -227,6 +248,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -257,6 +281,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -287,6 +314,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -326,6 +356,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -356,6 +389,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -386,6 +422,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -416,6 +455,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -446,6 +488,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -476,6 +521,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -506,6 +554,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -536,6 +587,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -566,6 +620,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -596,6 +653,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
@@ -635,6 +695,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -665,6 +728,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -695,6 +761,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -725,6 +794,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -755,6 +827,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -785,6 +860,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -815,6 +893,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -845,6 +926,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -875,6 +959,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -905,6 +992,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=10"
@@ -944,6 +1034,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -974,6 +1067,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1004,6 +1100,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1034,6 +1133,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1064,6 +1166,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1094,6 +1199,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1124,6 +1232,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1154,6 +1265,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1184,6 +1298,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"
@@ -1214,6 +1331,9 @@
           "expected_allowed_status": "reference_information",
           "expected_disposition": "downgrade",
           "expected_passed": true,
+          "failure_flags": [
+            "source_attribution_gap"
+          ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
             "total_score>=11"

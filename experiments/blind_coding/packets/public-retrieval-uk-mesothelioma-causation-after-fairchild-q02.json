@@ -1,12 +1,10 @@
 {
   "authority_sets": {
     "counter_or_limiting": [
-      "barker-2006-ukhl-20",
-      "compensation-act-2006-s3"
+      "barker-2006-ukhl-20"
     ],
     "high_authority": [
       "fairchild-2002-ukhl-22",
-      "compensation-act-2006-s3",
       "sienkiewicz-2011-uksc-10"
     ],
     "invalid_or_superseded": [],
@@ -27,7 +25,7 @@
   },
   "claimed_status": "normative_material_screening_output",
   "counter_material_complete": true,
-  "deployment_context": "Public search output for query: mesothelioma causation Fairchild Barker Compensation Act",
+  "deployment_context": "Public case_law_only output for query: mesothelioma causation Fairchild Barker Compensation Act",
   "evidence_packet": {
     "output_links": [
       {

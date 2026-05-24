@@ -14,7 +14,26 @@
       "citation": "BVerfG, 1 BvR 16/13, 6 November 2019",
       "source_url": "https://germanlawjournal.com/right-to-be-forgotten-i-1-bvr-16-13/",
       "authority_level": "constitutional_court_decision_public_translation",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "source_support": [
+        {
+          "id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13-support-1",
+          "locator": "BVerfG, 1 BvR 16/13, 6 November 2019",
+          "source_url": "https://germanlawjournal.com/right-to-be-forgotten-i-1-bvr-16-13/",
+          "support_scope": "high_authority",
+          "source_excerpt": "Right to be Forgotten I concerns German constitutional review where domestic fundamental rights frame the analysis.",
+          "excerpt_sha256": "3a809e4bf03995aca8e3d7ae16291cde08384649d20627f7335d4bae840e1f2c",
+          "support_terms": [
+            "recht",
+            "auf",
+            "vergessen",
+            "i"
+          ],
+          "contradiction_patterns": [
+            "right to be forgotten i is only eu charter review"
+          ]
+        }
+      ]
     },
     {
       "id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
@@ -22,7 +41,26 @@
       "citation": "BVerfG, 1 BvR 276/17, 6 November 2019",
       "source_url": "https://germanlawjournal.com/right-to-be-forgotten-ii-1-bvr-276-17/",
       "authority_level": "constitutional_court_decision_public_translation",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "source_support": [
+        {
+          "id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17-support-1",
+          "locator": "BVerfG, 1 BvR 276/17, 6 November 2019",
+          "source_url": "https://germanlawjournal.com/right-to-be-forgotten-ii-1-bvr-276-17/",
+          "support_scope": "high_authority",
+          "source_excerpt": "Right to be Forgotten II concerns EU fundamental rights review where Union law is fully harmonized.",
+          "excerpt_sha256": "3e37ea15dc4c2200a4e237bf924023501446e0bf527cac2d4f90a017a55d697d",
+          "support_terms": [
+            "recht",
+            "auf",
+            "vergessen",
+            "ii"
+          ],
+          "contradiction_patterns": [
+            "right to be forgotten ii excludes eu fundamental rights"
+          ]
+        }
+      ]
     },
     {
       "id": "google-spain-c-131-12",
@@ -30,7 +68,26 @@
       "citation": "Case C-131/12",
       "source_url": "https://curia.europa.eu/juris/liste.jsf?num=C-131/12",
       "authority_level": "court_of_justice_high_authority",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "source_support": [
+        {
+          "id": "google-spain-c-131-12-support-1",
+          "locator": "Case C-131/12",
+          "source_url": "https://curia.europa.eu/juris/liste.jsf?num=C-131/12",
+          "support_scope": "high_authority",
+          "source_excerpt": "Google Spain is Court of Justice authority on data protection and right-to-be-forgotten delisting.",
+          "excerpt_sha256": "45d2a5150dca36a3b2f8155e1c24bf6d28ae0217ebfd33d3264df963b7824b4d",
+          "support_terms": [
+            "google",
+            "spain",
+            "sl",
+            "and"
+          ],
+          "contradiction_patterns": [
+            "google spain rejects right to be forgotten"
+          ]
+        }
+      ]
     },
     {
       "id": "charter-articles-7-8-11-16",
@@ -38,7 +95,26 @@
       "citation": "Articles 7, 8, 11 and 16 CFR",
       "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12012P/TXT",
       "authority_level": "governing_union_primary_law",
-      "issue_role": "counter_or_limiting_material"
+      "issue_role": "counter_or_limiting_material",
+      "source_support": [
+        {
+          "id": "charter-articles-7-8-11-16-support-1",
+          "locator": "Articles 7, 8, 11 and 16 CFR",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12012P/TXT",
+          "support_scope": "counter_or_limiting_material",
+          "source_excerpt": "EU Charter Articles 7, 8, 11 and 16 supply privacy, data protection, expression and business-freedom interests.",
+          "excerpt_sha256": "86b340f4f4216c6a5419a92e78b516eff7f94f25d6881ac89cc40945caddd793",
+          "support_terms": [
+            "eu",
+            "charter",
+            "rights",
+            "relevant"
+          ],
+          "contradiction_patterns": [
+            "charter articles 7 8 11 16 have no balancing role"
+          ]
+        }
+      ]
     },
     {
       "id": "basic-law-personality-expression-balance",
@@ -46,7 +122,26 @@
       "citation": "Articles 1, 2 and 5 GG",
       "source_url": "https://www.gesetze-im-internet.de/englisch_gg/",
       "authority_level": "governing_constitutional_text",
-      "issue_role": "counter_or_limiting_material"
+      "issue_role": "counter_or_limiting_material",
+      "source_support": [
+        {
+          "id": "basic-law-personality-expression-balance-support-1",
+          "locator": "Articles 1, 2 and 5 GG",
+          "source_url": "https://www.gesetze-im-internet.de/englisch_gg/",
+          "support_scope": "counter_or_limiting_material",
+          "source_excerpt": "The Basic Law materials frame personality, dignity and expression balancing in German constitutional analysis.",
+          "excerpt_sha256": "609f97b353ff624095d5ad149741ad65e8025be8a0999187a5a2dd286520b3a6",
+          "support_terms": [
+            "basic",
+            "law",
+            "personality",
+            "and"
+          ],
+          "contradiction_patterns": [
+            "basic law has no personality expression balance"
+          ]
+        }
+      ]
     }
   ]
 }

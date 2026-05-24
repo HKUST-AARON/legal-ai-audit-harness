@@ -1,29 +1,34 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 10
-Scenario files: 72
-Base embedded records/items: 343 (10 stress scenarios, 120 public metadata records, 60 public-system records, 99 public retrieval records, 10 raw model outputs, 19 issue-specific public output/source records, 5 issue-defined positive controls, 20 issue ablations)
-Strict/lenient recoded evaluations: 144
-Score-blinded coding-pass evaluations: 144
-Full-threshold sensitivity evaluations: 360
-Composite validation observations: 991
-Expected outcomes passed: 72/72
-High-upstream-performance but procedurally blocked scenarios: 26
-Annotation robustness: 70/72 stable across base, strict and lenient coding policies
-Score-blinded coding: 72 packets, 2 coding passes, 0.97 coder-coder exact agreement, 0.85 minimum base-coder exact agreement, 0.92 minimum base-coder weighted agreement
+Validation suites: 13
+Scenario files: 160
+Base embedded records/items: 539 (10 stress scenarios, 120 public metadata records, 60 public-system records, 225 public retrieval records, 10 raw model outputs, 10 source-supported model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
+Strict/lenient recoded evaluations: 320
+Score-blinded coding-pass evaluations: 320
+Full-threshold sensitivity evaluations: 800
+Public source-text anchor checks: 21/30 verified across 21 records with text snapshots
+Derived robustness evaluations: 1470
+Expected outcomes passed: 160/160
+High-upstream-performance but procedurally blocked scenarios: 88
+Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 17, invalid_authority: 1, source_attribution_gap: 75, summary_distortion: 21
+Annotation robustness: 158/160 stable across base, strict and lenient coding policies
+Score-blinded coding: 160 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.93 minimum base-coder exact agreement, 0.96 minimum base-coder weighted agreement
 
-| Suite | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Protocol stress scenarios | 10 stress scenarios | 10 | 10/10 | 8.30 | 0.84 | 3 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 3, professional_support_output: 1, reference_information: 2 |
-| Public legal-record metadata | 120 public metadata records | 6 | 6/6 | 8.67 | n/a | 0 | professional_support_output: 6 |
-| Public legal-system outputs | 60 visible public-system records | 6 | 6/6 | 8.67 | n/a | 0 | professional_support_output: 6 |
-| Issue-specific public output/source packets | 19 issue-specific public output/source records | 3 | 3/3 | 9.67 | 0.44 | 0 | normative_material_screening_output: 1, reference_information: 2 |
-| Public retrieval benchmark | 99 public search result records | 12 | 12/12 | 9.00 | 0.11 | 0 | reference_information: 12 |
-| Raw Codex GPT-5.5 xhigh outputs | 10 raw model outputs | 10 | 10/10 | 9.00 | 1.00 | 10 | reference_information: 10 |
-| Issue-defined positive controls | 5 curated issue packets | 5 | 5/5 | 11.00 | 1.00 | 0 | normative_material_screening_output: 5 |
-| Issue-defined ablations | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
-| Annotation robustness recoding | 144 strict/lenient recoded evaluations | 72 | 70/72 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 0.98 |
-| Score-blinded dual coding | 72 packets x 2 coding passes | 72 | 0.97 coder agreement; 0.85 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.98, min_base_weighted_status_agreement: 0.92, status_disagreements: 2 |
+| Suite | Evidence role | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Protocol stress scenarios | construct test | 10 stress scenarios | 10 | 10/10 | 8.30 | 0.84 | 3 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 3, professional_support_output: 1, reference_information: 2 |
+| Public legal-record metadata | public-source reconstruction | 120 public metadata records | 6 | 6/6 | 8.67 | n/a | 0 | professional_support_output: 6 |
+| Public legal-system outputs | public-output audit | 60 visible public-system records | 6 | 6/6 | 8.67 | n/a | 0 | professional_support_output: 6 |
+| Issue-specific public output/source packets | mixed public-output/source audit | 19 issue-specific public output/source records | 3 | 3/3 | 9.67 | 0.44 | 0 | normative_material_screening_output: 1, reference_information: 2 |
+| Endpoint-matched public retrieval benchmark | endpoint-compatible public-output benchmark | 225 public search result records | 30 | 30/30 | 9.07 | 0.26 | 2 | reference_information: 30 |
+| Raw Codex GPT-5.5 xhigh outputs | model-output audit | 10 raw model outputs | 10 | 10/10 | 9.00 | 1.00 | 10 | reference_information: 10 |
+| Source-supported model-output repairs | model-output intervention | 10 source-supported model-output variants | 10 | 10/10 | 11.00 | 1.00 | 0 | normative_material_screening_output: 10 |
+| Adversarial source-support repairs | negative-control model-output validation | 60 adversarial source-support variants | 60 | 60/60 | 8.83 | 1.00 | 60 | no_external_legal_effect: 20, reference_information: 40 |
+| Mixed-authority public source-screening packets | mixed-authority construct test | 5 curated issue packets | 5 | 5/5 | 11.00 | 1.00 | 0 | normative_material_screening_output: 5 |
+| Issue-defined ablations | negative-control construct test | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
+| Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 21/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 21, verified_ratio: 0.7 |
+| Annotation robustness recoding | coding robustness | 320 strict/lenient recoded evaluations | 160 | 158/160 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 0.99 |
+| Score-blinded dual coding | codebook reproducibility | 160 packets x 2 coding passes | 160 | 0.99 coder agreement; 0.93 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.96, status_disagreements: 2 |
 
 ## Findings
 
@@ -31,21 +36,24 @@ Score-blinded coding: 72 packets, 2 coding passes, 0.97 coder-coder exact agreem
 - **Public legal-record metadata:** Tests source reconstruction across six public legal-record sources.
 - **Public legal-system outputs:** Tests ordered real upstream legal-output reconstruction.
 - **Issue-specific public output/source packets:** Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.
-- **Public retrieval benchmark:** Tests true public search outputs against issue-defined high-authority and counter-material gold sets.
+- **Endpoint-matched public retrieval benchmark:** Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.
 - **Raw Codex GPT-5.5 xhigh outputs:** Tests whether strong authority coverage without source binding remains procedurally capped.
-- **Issue-defined positive controls:** Tests normative material screening with source-bound high-authority and counter-material sets.
+- **Source-supported model-output repairs:** Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.
+- **Adversarial source-support repairs:** Tests whether source-support repair gates reject locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions.
+- **Mixed-authority public source-screening packets:** Tests normative material screening with mixed statute/case/source packets rather than single-endpoint public search results.
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
+- **Public source-text anchors:** Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 
 ## Full-Threshold Sensitivity
 
-All 72 scenario packets were re-evaluated under normative thresholds 8--12.
+All 160 scenario packets were re-evaluated under normative thresholds 8--12.
 
 | Normative threshold | Decision threshold | Status flips from default | Promotions | Demotions | Status distribution |
 | ---: | ---: | ---: | ---: | ---: | --- |
-| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 14, professional_support_output: 13, reference_information: 41 |
-| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 14, professional_support_output: 13, reference_information: 41 |
-| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 14, professional_support_output: 13, reference_information: 41 |
-| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 12, professional_support_output: 15, reference_information: 41 |
-| 12 | 13 | 11 | 0 | 11 | no_external_legal_effect: 2, normative_material_screening_output: 7, professional_support_output: 22, reference_information: 41 |
+| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 22, normative_material_screening_output: 24, professional_support_output: 13, reference_information: 99 |
+| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 22, normative_material_screening_output: 24, professional_support_output: 13, reference_information: 99 |
+| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 22, normative_material_screening_output: 24, professional_support_output: 13, reference_information: 99 |
+| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 2, no_external_legal_effect: 22, normative_material_screening_output: 22, professional_support_output: 15, reference_information: 99 |
+| 12 | 13 | 21 | 0 | 21 | no_external_legal_effect: 22, normative_material_screening_output: 7, professional_support_output: 32, reference_information: 99 |

@@ -1,0 +1,95 @@
+{
+  "id": "germany-right-to-be-forgotten-review-q03",
+  "issue_id": "germany-right-to-be-forgotten-review",
+  "query": "1 BvR 276/17 Recht auf Vergessen",
+  "top_k": 10,
+  "source_system": "OpenLegalData German case API search",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "google-spain-c-131-12",
+    "charter-articles-7-8-11-16",
+    "basic-law-personality-expression-balance"
+  ],
+  "records": [
+    {
+      "id": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "title": "Oberverwaltungsgericht Nordrhein-Westfalen 4 B 46/26",
+      "citation": "ECLI:DE:OVGNRW:2026:0515.4B46.26.00",
+      "source_url": "https://de.openlegaldata.io/api/cases/521147/",
+      "rank": 1,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-399-26",
+      "title": "Europäischer Gerichtshof C-399/26",
+      "citation": "ECLI:EU:C:2026:399",
+      "source_url": "https://de.openlegaldata.io/api/cases/521079/",
+      "rank": 2,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-402-26",
+      "title": "Europäischer Gerichtshof C-402/26",
+      "citation": "ECLI:EU:C:2026:402",
+      "source_url": "https://de.openlegaldata.io/api/cases/521080/",
+      "rank": 3,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-401-26",
+      "title": "Europäischer Gerichtshof C-401/26",
+      "citation": "ECLI:EU:C:2026:401",
+      "source_url": "https://de.openlegaldata.io/api/cases/521081/",
+      "rank": 4,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-405-26",
+      "title": "Europäischer Gerichtshof C-405/26",
+      "citation": "ECLI:EU:C:2026:405",
+      "source_url": "https://de.openlegaldata.io/api/cases/521082/",
+      "rank": 5,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-398-26",
+      "title": "Europäischer Gerichtshof C-398/26",
+      "citation": "ECLI:EU:C:2026:398",
+      "source_url": "https://de.openlegaldata.io/api/cases/521083/",
+      "rank": 6,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-404-26",
+      "title": "Europäischer Gerichtshof C-404/26",
+      "citation": "ECLI:EU:C:2026:404",
+      "source_url": "https://de.openlegaldata.io/api/cases/521084/",
+      "rank": 7,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-396-26",
+      "title": "Europäischer Gerichtshof C-396/26",
+      "citation": "ECLI:EU:C:2026:396",
+      "source_url": "https://de.openlegaldata.io/api/cases/521085/",
+      "rank": 8,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-397-26",
+      "title": "Europäischer Gerichtshof C-397/26",
+      "citation": "ECLI:EU:C:2026:397",
+      "source_url": "https://de.openlegaldata.io/api/cases/521086/",
+      "rank": 9,
+      "source_system": "OpenLegalData German case API search"
+    },
+    {
+      "id": "germany-search-europ-ischer-gerichtshof-c-400-26",
+      "title": "Europäischer Gerichtshof C-400/26",
+      "citation": "ECLI:EU:C:2026:400",
+      "source_url": "https://de.openlegaldata.io/api/cases/521087/",
+      "rank": 10,
+      "source_system": "OpenLegalData German case API search"
+    }
+  ]
+}

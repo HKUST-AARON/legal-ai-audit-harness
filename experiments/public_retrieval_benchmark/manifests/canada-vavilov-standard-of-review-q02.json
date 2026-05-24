@@ -1,0 +1,93 @@
+{
+  "id": "canada-vavilov-standard-of-review-q02",
+  "issue_id": "canada-vavilov-standard-of-review",
+  "query": "Vavilov Bell Canada Canada Post standard of review",
+  "top_k": 10,
+  "source_system": "Supreme Court of Canada Lexum search",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "vavilov-statutory-appeal-limits"
+  ],
+  "records": [
+    {
+      "id": "canada-post-2019-scc-67",
+      "title": "Canada Post Corp. v. Canadian Union of Postal Workers",
+      "citation": "2019 SCC 67",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/18086/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 1,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-pepa-v-canada-citizenship-and-immigration",
+      "title": "Pepa v. Canada (Citizenship and Immigration)",
+      "citation": "2025 SCC 21",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21114/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 2,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+      "title": "Society of Composers, Authors and Music Publishers of Canada v. Entertainment Software Association",
+      "citation": "2022 SCC 30",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19441/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 3,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "vavilov-2019-scc-65",
+      "title": "Canada (Minister of Citizenship and Immigration) v. Vavilov",
+      "citation": "2019 SCC 65",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/18078/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 4,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-commission-scolaire-francophone-des-territoires-du-nord-oues",
+      "title": "Commission scolaire francophone des Territoires du Nord-Ouest v. Northwest Territories (Education, Culture and Employment)",
+      "citation": "2023 SCC 31",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20177/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 5,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-dorsey-v-canada-attorney-general",
+      "title": "Dorsey v. Canada (Attorney General)",
+      "citation": "2025 SCC 38",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21282/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 6,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-piekut-v-canada-national-revenue",
+      "title": "Piekut v. Canada (National Revenue)",
+      "citation": "2025 SCC 13",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20939/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 7,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-telus-communications-inc-v-federation-of-canadian-municipali",
+      "title": "Telus Communications Inc. v. Federation of Canadian Municipalities",
+      "citation": "2025 SCC 15",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20977/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 8,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-r-v-mcgregor",
+      "title": "R. v. McGregor",
+      "citation": "2023 SCC 4",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19693/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 9,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-ontario-attorney-general-v-restoule",
+      "title": "Ontario (Attorney General) v. Restoule",
+      "citation": "2024 SCC 27",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20554/index.do?q=Vavilov+Bell+Canada+Canada+Post+standard+of+review",
+      "rank": 10,
+      "source_system": "Supreme Court of Canada Lexum search"
+    }
+  ]
+}

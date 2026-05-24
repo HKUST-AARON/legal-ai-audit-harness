@@ -1,0 +1,23 @@
+{
+  "id": "eu-gdpr-article15-access-rights-q05",
+  "issue_id": "eu-gdpr-article15-access-rights",
+  "query": "C-300/21 GDPR damage access",
+  "top_k": 10,
+  "source_system": "CURIA case-law list search",
+  "endpoint_scope": "case_law_known_item",
+  "mixed_authority_required_elsewhere": [
+    "gdpr-art-15",
+    "gdpr-art-12-5",
+    "gdpr-art-15-4"
+  ],
+  "records": [
+    {
+      "id": "eu-search-c-300-21",
+      "title": "Judgment - 04/05/2023 - Österreichische Post (Préjudice moral lié au traitement de données personnelles) Case C-300/21 Reports of Cases published in the electronic Reports of Cases",
+      "citation": "Case C-300/21",
+      "source_url": "https://juris.curia.europa.eu/juris/document/document.jsf;jsessionid=9CD8F33BBDFB5379C21E98F9D831DED1?text=&docid=266842&pageIndex=0&doclang=en&mode=lst&dir=&occ=first&part=1&cid=2360607",
+      "rank": 1,
+      "source_system": "CURIA case-law list search"
+    }
+  ]
+}

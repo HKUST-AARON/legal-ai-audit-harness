@@ -5,6 +5,7 @@ Expected outcomes passed: 5/5
 Mean audit score: 11.00
 Mean upstream recall: 1.00
 High-upstream-performance but procedurally blocked scenarios: 0
+Blocked reason distribution: none
 
 ## Allowed Status Distribution
 

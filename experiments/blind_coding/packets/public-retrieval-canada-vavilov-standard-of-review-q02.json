@@ -1,0 +1,239 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "dunsmuir-2008-scc-9"
+    ],
+    "high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "canada-post-2019-scc-67",
+      "canada-search-pepa-v-canada-citizenship-and-immigration",
+      "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+      "vavilov-2019-scc-65",
+      "canada-search-commission-scolaire-francophone-des-territoires-du-nord-oues",
+      "canada-search-dorsey-v-canada-attorney-general",
+      "canada-search-piekut-v-canada-national-revenue",
+      "canada-search-telus-communications-inc-v-federation-of-canadian-municipali",
+      "canada-search-r-v-mcgregor",
+      "canada-search-ontario-attorney-general-v-restoule"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": [
+      "canada-post-2019-scc-67",
+      "vavilov-2019-scc-65"
+    ]
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Public case_law_only output for query: Vavilov Bell Canada Canada Post standard of review",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "2019 SCC 67",
+        "source_id": "canada-post-2019-scc-67",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "2025 SCC 21",
+        "source_id": "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "2022 SCC 30",
+        "source_id": "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "2019 SCC 65",
+        "source_id": "vavilov-2019-scc-65",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "2023 SCC 31",
+        "source_id": "canada-search-commission-scolaire-francophone-des-territoires-du-nord-oues",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      },
+      {
+        "locator": "2025 SCC 38",
+        "source_id": "canada-search-dorsey-v-canada-attorney-general",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-06"
+      },
+      {
+        "locator": "2025 SCC 13",
+        "source_id": "canada-search-piekut-v-canada-national-revenue",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-07"
+      },
+      {
+        "locator": "2025 SCC 15",
+        "source_id": "canada-search-telus-communications-inc-v-federation-of-canadian-municipali",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-08"
+      },
+      {
+        "locator": "2023 SCC 4",
+        "source_id": "canada-search-r-v-mcgregor",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-09"
+      },
+      {
+        "locator": "2024 SCC 27",
+        "source_id": "canada-search-ontario-attorney-general-v-restoule",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "rank-10"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public search rank 1 makes this material visible: Canada Post Corp. v. Canadian Union of Postal Workers",
+        "id": "rank-01",
+        "locators": [
+          "2019 SCC 67"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ]
+      },
+      {
+        "claim": "Public search rank 2 makes this material visible: Pepa v. Canada (Citizenship and Immigration)",
+        "id": "rank-02",
+        "locators": [
+          "2025 SCC 21"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "canada-search-pepa-v-canada-citizenship-and-immigration"
+        ]
+      },
+      {
+        "claim": "Public search rank 3 makes this material visible: Society of Composers, Authors and Music Publishers of Canada v. Entertainment Software Association",
+        "id": "rank-03",
+        "locators": [
+          "2022 SCC 30"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "canada-search-society-of-composers-authors-and-music-publishers-of-canada-"
+        ]
+      },
+      {
+        "claim": "Public search rank 4 makes this material visible: Canada (Minister of Citizenship and Immigration) v. Vavilov",
+        "id": "rank-04",
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "vavilov-2019-scc-65"
+        ]
+      },
+      {
+        "claim": "Public search rank 5 makes this material visible: Commission scolaire francophone des Territoires du Nord-Ouest v. Northwest Territories (Education, Culture and Employment)",
+        "id": "rank-05",
+        "locators": [
+          "2023 SCC 31"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "canada-search-commission-scolaire-francophone-des-territoires-du-nord-oues"
+        ]
+      },
+      {
+        "claim": "Public search rank 6 makes this material visible: Dorsey v. Canada (Attorney General)",
+        "id": "rank-06",
+        "locators": [
+          "2025 SCC 38"
+        ],
+        "output_rank": 6,
+        "source_ids": [
+          "canada-search-dorsey-v-canada-attorney-general"
+        ]
+      },
+      {
+        "claim": "Public search rank 7 makes this material visible: Piekut v. Canada (National Revenue)",
+        "id": "rank-07",
+        "locators": [
+          "2025 SCC 13"
+        ],
+        "output_rank": 7,
+        "source_ids": [
+          "canada-search-piekut-v-canada-national-revenue"
+        ]
+      },
+      {
+        "claim": "Public search rank 8 makes this material visible: Telus Communications Inc. v. Federation of Canadian Municipalities",
+        "id": "rank-08",
+        "locators": [
+          "2025 SCC 15"
+        ],
+        "output_rank": 8,
+        "source_ids": [
+          "canada-search-telus-communications-inc-v-federation-of-canadian-municipali"
+        ]
+      },
+      {
+        "claim": "Public search rank 9 makes this material visible: R. v. McGregor",
+        "id": "rank-09",
+        "locators": [
+          "2023 SCC 4"
+        ],
+        "output_rank": 9,
+        "source_ids": [
+          "canada-search-r-v-mcgregor"
+        ]
+      },
+      {
+        "claim": "Public search rank 10 makes this material visible: Ontario (Attorney General) v. Restoule",
+        "id": "rank-10",
+        "locators": [
+          "2024 SCC 27"
+        ],
+        "output_rank": 10,
+        "source_ids": [
+          "canada-search-ontario-attorney-general-v-restoule"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/canada-vavilov-standard-of-review-q02.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q02",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": 0.2,
+    "recall": 0.6666666666666666
+  },
+  "upstream_output": {}
+}

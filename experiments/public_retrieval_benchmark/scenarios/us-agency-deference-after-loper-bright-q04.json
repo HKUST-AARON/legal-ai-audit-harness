@@ -3,7 +3,11 @@
   "claimed_status": "normative_material_screening_output",
   "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "common_law",
-  "deployment_context": "Public search output for query: Loper Bright independent judgment 5 USC 706",
+  "deployment_context": "Public case_law_only output for query: Loper Bright independent judgment 5 USC 706",
+  "benchmark_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "apa-5-usc-706"
+  ],
   "scores": {
     "S": {
       "score": 2,
@@ -33,7 +37,6 @@
   "authority_sets": {
     "high_authority": [
       "loper-bright-603-us-369",
-      "apa-5-usc-706",
       "skidmore-323-us-134"
     ],
     "retrieved_high_authority": [],

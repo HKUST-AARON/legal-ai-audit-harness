@@ -6,7 +6,6 @@
     ],
     "high_authority": [
       "loper-bright-603-us-369",
-      "apa-5-usc-706",
       "skidmore-323-us-134"
     ],
     "invalid_or_superseded": [],
@@ -27,7 +26,7 @@
   },
   "claimed_status": "normative_material_screening_output",
   "counter_material_complete": true,
-  "deployment_context": "Public search output for query: Chevron overruled Skidmore APA 706",
+  "deployment_context": "Public case_law_only output for query: Chevron overruled Skidmore APA 706",
   "evidence_packet": {
     "output_links": [
       {

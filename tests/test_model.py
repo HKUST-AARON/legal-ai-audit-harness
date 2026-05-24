@@ -1,4 +1,5 @@
 import json
+import hashlib
 import shutil
 import subprocess
 import sys
@@ -12,6 +13,8 @@ from audit_harness.model import evaluate_scenario
 
 ROOT = Path(__file__).resolve().parents[1]
 SCENARIOS = ROOT / "examples" / "scenarios"
+sys.path.insert(0, str(ROOT / "scripts"))
+from build_model_output_repairs import matched_source_support, repair
 
 
 def load(name: str) -> dict:
@@ -192,6 +195,19 @@ class AuditModelTest(unittest.TestCase):
             self.assertAlmostEqual(result.counter_authority_recall, 1.0, msg=path.name)
             self.assertAlmostEqual(result.evidence_fidelity, 1.0, msg=path.name)
 
+    def test_issue_manifests_include_hashed_source_support(self):
+        paths = sorted((ROOT / "experiments" / "issue_gold_sets" / "manifests").glob("*.json"))
+        self.assertGreaterEqual(len(paths), 5)
+        for path in paths:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            for record in manifest["records"]:
+                support = record.get("source_support", [])
+                self.assertTrue(support, f"{path.name}:{record['id']}")
+                for item in support:
+                    excerpt = item.get("source_excerpt", "")
+                    self.assertTrue(excerpt, f"{path.name}:{record['id']}")
+                    self.assertEqual(hashlib.sha256(excerpt.encode("utf-8")).hexdigest(), item.get("excerpt_sha256"))
+
     def test_issue_ablations_apply_failure_caps(self):
         subprocess.run(
             [sys.executable, "scripts/build_issue_ablations.py"],
@@ -226,6 +242,117 @@ class AuditModelTest(unittest.TestCase):
             self.assertAlmostEqual(result.procedural_source_tag_coverage, 0.0, msg=path.name)
             self.assertGreaterEqual(scenario["upstream_metrics"]["recall"], 0.9, path.name)
 
+    def test_source_bound_model_outputs_can_qualify(self):
+        paths = sorted((ROOT / "experiments" / "model_output_repairs" / "scenarios").glob("source-bound-*.json"))
+        self.assertEqual(len(paths), 10)
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            result = evaluate_scenario(scenario)
+            self.assertEqual(result.allowed_status, "normative_material_screening_output", path.name)
+            self.assertEqual(result.disposition, "none", path.name)
+            self.assertAlmostEqual(result.procedural_source_tag_coverage, 1.0, msg=path.name)
+            validation = scenario.get("source_binding_validation", {})
+            self.assertTrue(validation.get("all_links_source_bound"), path.name)
+            self.assertTrue(validation.get("claim_support_complete"), path.name)
+            self.assertTrue(validation.get("source_support_complete"), path.name)
+            self.assertEqual(validation.get("missing_source_ids"), [], path.name)
+            self.assertEqual(validation.get("missing_output_links"), [], path.name)
+            self.assertEqual(validation.get("unsupported_locators"), [], path.name)
+            self.assertEqual(validation.get("unsupported_claims"), [], path.name)
+            self.assertTrue(validation.get("source_support_by_link"), path.name)
+            self.assertEqual(
+                validation.get("source_tag_assignment"),
+                "assigned_after_manifest_locator_issue_set_and_source_support_validation",
+                path.name,
+            )
+            self.assertEqual(validation.get("assigned_procedural_source_tags"), len(scenario["evidence_packet"]["output_links"]), path.name)
+            for link in scenario["evidence_packet"]["output_links"]:
+                self.assertEqual(link.get("support_label"), "supports", path.name)
+                self.assertTrue(link.get("validated_source_support"), path.name)
+                self.assertTrue(link.get("validated_support_terms"), path.name)
+
+    def test_claim_support_validator_blocks_unmatched_claims(self):
+        raw = json.loads((ROOT / "experiments" / "ai_outputs" / "scenarios" / "codex55_us_01.json").read_text(encoding="utf-8"))
+        raw["evidence_packet"]["output_units"][0]["claim"] = "This unrelated proposition is not supported by the cited authority."
+        repaired = repair(raw)
+        validation = repaired["source_binding_validation"]
+        self.assertFalse(validation["all_links_source_bound"])
+        self.assertFalse(validation["claim_support_complete"])
+        self.assertFalse(validation["source_support_complete"])
+        self.assertTrue(validation["unsupported_claims"])
+        result = evaluate_scenario(repaired)
+        self.assertEqual(result.allowed_status, "no_external_legal_effect")
+        self.assertEqual(result.disposition, "withdrawal")
+
+    def test_source_support_validator_blocks_same_term_contradictions(self):
+        raw = json.loads((ROOT / "experiments" / "ai_outputs" / "scenarios" / "codex55_eu_01.json").read_text(encoding="utf-8"))
+        raw["evidence_packet"]["output_units"][1]["claim"] = "C-154/21 does not require specific recipients where recipients are identifiable."
+        repaired = repair(raw)
+        validation = repaired["source_binding_validation"]
+        self.assertFalse(validation["all_links_source_bound"])
+        self.assertFalse(validation["source_support_complete"])
+        self.assertIn("contradiction_pattern_matched", {item["reason"] for item in validation["unsupported_source_support"]})
+        result = evaluate_scenario(repaired)
+        self.assertEqual(result.allowed_status, "no_external_legal_effect")
+        self.assertEqual(result.disposition, "withdrawal")
+
+    def test_source_support_evidence_item_is_required(self):
+        unit = {"claim": "Loper Bright overruled Chevron for statutory interpretation."}
+        link = {"locator": "Loper Bright"}
+        record = {
+            "id": "loper-bright-603-us-369",
+            "title": "Loper Bright Enterprises v. Raimondo",
+            "citation": "603 U.S. 369 (2024)",
+            "support_terms": ["loper bright", "overruled chevron"],
+        }
+        matches, errors = matched_source_support(unit, link, record)
+        self.assertEqual(matches, [])
+        self.assertEqual(errors[0]["reason"], "missing_source_support")
+
+    def test_source_support_validator_blocks_missing_output_links(self):
+        raw = json.loads((ROOT / "experiments" / "ai_outputs" / "scenarios" / "codex55_us_01.json").read_text(encoding="utf-8"))
+        raw["evidence_packet"]["output_links"] = raw["evidence_packet"]["output_links"][1:]
+        repaired = repair(raw)
+        validation = repaired["source_binding_validation"]
+        self.assertFalse(validation["all_links_source_bound"])
+        self.assertTrue(validation["missing_output_links"])
+        result = evaluate_scenario(repaired)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+
+    def test_model_output_adversarial_suite_rejects_all_attacks(self):
+        subprocess.run(
+            [sys.executable, "scripts/build_model_output_adversarial.py"],
+            cwd=ROOT,
+            check=True,
+        )
+        paths = sorted((ROOT / "experiments" / "model_output_adversarial" / "scenarios").glob("*.json"))
+        self.assertEqual(len(paths), 60)
+        attacks = {}
+        statuses = {}
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            attack = scenario["adversarial_intervention"]["attack"]
+            attacks[attack] = attacks.get(attack, 0) + 1
+            validation = scenario.get("source_binding_validation", {})
+            self.assertFalse(validation.get("all_links_source_bound"), path.name)
+            result = evaluate_scenario(scenario)
+            statuses[result.allowed_status] = statuses.get(result.allowed_status, 0) + 1
+            self.assertTrue(result.expected_passed, path.name)
+            self.assertIn(result.allowed_status, {"reference_information", "no_external_legal_effect"}, path.name)
+        self.assertEqual(statuses, {"no_external_legal_effect": 20, "reference_information": 40})
+        self.assertEqual(
+            attacks,
+            {
+                "claim_support_gap": 10,
+                "contradiction_pattern": 10,
+                "counter_material_omission": 10,
+                "locator_mismatch": 10,
+                "manifest_membership_gap": 10,
+                "unit_source_link_gap": 10,
+            },
+        )
+
     def test_issue_specific_public_outputs_shape(self):
         paths = sorted((ROOT / "experiments" / "issue_public_outputs" / "scenarios").glob("*.json"))
         self.assertEqual(len(paths), 3)
@@ -240,39 +367,86 @@ class AuditModelTest(unittest.TestCase):
 
     def test_public_retrieval_benchmark_shape(self):
         paths = sorted((ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios").glob("*.json"))
-        self.assertEqual(len(paths), 12)
+        self.assertEqual(len(paths), 30)
         records = 0
+        counter_recalls = []
         for path in paths:
             scenario = json.loads(path.read_text(encoding="utf-8"))
+            self.assertIn(scenario.get("benchmark_scope"), {"case_law_only", "case_law_known_item"}, path.name)
+            endpoint_gold = set(scenario["authority_sets"]["high_authority"]) | set(scenario["authority_sets"]["counter_or_limiting"])
+            self.assertFalse(
+                {item for item in endpoint_gold if item.startswith(("apa-", "gdpr-", "compensation-act", "charter-", "basic-law-"))},
+                path.name,
+            )
+            self.assertTrue(scenario.get("mixed_authority_required_elsewhere"), path.name)
             records += len(scenario["evidence_packet"]["output_units"])
             result = evaluate_scenario(scenario)
             self.assertTrue(result.expected_passed, path.name)
             self.assertEqual(result.allowed_status, "reference_information", path.name)
             self.assertEqual(result.disposition, "suspension", path.name)
-        self.assertEqual(records, 99)
+            if result.counter_authority_recall is not None:
+                counter_recalls.append(result.counter_authority_recall)
+            if path.name.startswith("canada-vavilov"):
+                self.assertNotIn("dunsmuir-2008-scc-9", scenario["authority_sets"]["retrieved"], path.name)
+            if path.name == "us-agency-deference-after-loper-bright-q02.json":
+                by_locator = {
+                    unit["locators"][0]: unit["source_ids"][0]
+                    for unit in scenario["evidence_packet"]["output_units"]
+                    if unit.get("locators") and unit.get("source_ids")
+                }
+                self.assertNotEqual(by_locator.get("45 F.4th 359"), "loper-bright-603-us-369")
+                self.assertIn("us-search-loper-bright-enterprises-inc-v-wilbur-l-ross-jr", scenario["authority_sets"]["retrieved"])
+        self.assertEqual(records, 225)
+        self.assertTrue(counter_recalls)
+        self.assertTrue(all(recall == 0 for recall in counter_recalls))
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 10)
-        self.assertEqual(report["scenario_files"], 72)
-        self.assertEqual(report["validation_units"]["total"], 343)
-        self.assertEqual(report["validation_units"]["public_retrieval_records"], 99)
+        self.assertEqual(report["suite_count"], 13)
+        self.assertEqual(report["scenario_files"], 160)
+        self.assertEqual(report["validation_units"]["total"], 539)
+        self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
+        self.assertEqual(report["validation_units"]["source_bound_model_outputs"], 10)
+        self.assertEqual(report["validation_units"]["adversarial_model_outputs"], 60)
         self.assertEqual(report["validation_units"]["issue_public_records"], 19)
         self.assertEqual(report["validation_units"]["issue_gold_sets"], 5)
         self.assertEqual(report["validation_units"]["issue_ablations"], 20)
-        self.assertEqual(report["validation_units"]["annotation_recodings"], 144)
-        self.assertEqual(report["blind_coding_evaluations"], 144)
-        self.assertEqual(report["validation_units"]["blind_coding_packets"], 72)
-        self.assertEqual(report["threshold_sensitivity_evaluations"], 360)
-        self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 360)
-        self.assertEqual(report["total_evaluation_rows"], 991)
-        self.assertEqual(report["expected_passed"], 72)
-        self.assertEqual(report["expected_total"], 72)
-        self.assertEqual(report["annotation_robustness"]["scenario_count"], 72)
-        self.assertEqual(report["blind_coding"]["packet_count"], 72)
+        self.assertEqual(report["validation_units"]["annotation_recodings"], 320)
+        self.assertEqual(report["blind_coding_evaluations"], 320)
+        self.assertEqual(report["validation_units"]["blind_coding_packets"], 160)
+        self.assertEqual(report["threshold_sensitivity_evaluations"], 800)
+        self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 800)
+        self.assertEqual(report["source_text_anchor_evaluations"], 30)
+        self.assertEqual(report["validation_units"]["source_text_anchor_checks"], 30)
+        self.assertGreaterEqual(report["validation_units"]["source_text_anchor_verified"], 20)
+        self.assertEqual(report["total_evaluation_rows"], 2009)
+        self.assertEqual(report["expected_passed"], 160)
+        self.assertEqual(report["expected_total"], 160)
+        self.assertEqual(report["annotation_robustness"]["scenario_count"], 160)
+        self.assertEqual(report["blind_coding"]["packet_count"], 160)
         self.assertIn("base_status_agreement", report["blind_coding"])
-        self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 72)
+        self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 160)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
+        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 75)
+        self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 21)
+        self.assertGreaterEqual(report["source_text_verification"]["support_items_verified"], 20)
+        self.assertGreaterEqual(report["source_text_verification"]["records_with_text_snapshot"], 20)
+
+    def test_public_source_text_anchor_verification(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/verify_source_text_anchors.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "source_text_verification" / "results" / "source_text_anchor_verification.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["support_item_count"], 30)
+        self.assertGreaterEqual(report["support_items_verified"], 20)
+        self.assertGreaterEqual(report["records_with_text_snapshot"], 20)
+        verified = [item for item in report["items"] if item["verified"]]
+        self.assertTrue(all(item["snapshot_sha256"] for item in verified))
 
     def test_annotation_robustness_report_shape(self):
         completed = subprocess.run(
@@ -284,12 +458,17 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "annotation_robustness" / "results" / "annotation_robustness.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["scenario_count"], 72)
-        self.assertEqual(report["recoded_evaluations"], 144)
+        self.assertEqual(report["scenario_count"], 160)
+        self.assertEqual(report["recoded_evaluations"], 320)
         self.assertGreaterEqual(report["weighted_status_agreement_base_strict"], 0.9)
-        self.assertGreaterEqual(report["all_policy_status_stable"], 60)
+        self.assertGreaterEqual(report["all_policy_status_stable"], 140)
 
     def test_blind_coding_study_report_shape(self):
+        subprocess.run(
+            [sys.executable, "scripts/build_model_output_adversarial.py"],
+            cwd=ROOT,
+            check=True,
+        )
         subprocess.run(
             [sys.executable, "scripts/build_blind_coding_packets.py"],
             cwd=ROOT,
@@ -304,7 +483,7 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "blind_coding" / "results" / "blind_coding_study.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["packet_count"], 72)
+        self.assertEqual(report["packet_count"], 160)
         self.assertEqual(report["coder_count"], 2)
         self.assertGreaterEqual(report["pairwise_status"][0]["exact_status_agreement"], 0.9)
         base_agreements = report["base_status_agreement"].values()

@@ -1,0 +1,582 @@
+{
+  "manifest_count": 5,
+  "record_count": 30,
+  "records_with_text_snapshot": 21,
+  "support_item_count": 30,
+  "support_items_verified": 21,
+  "support_items_unverified": 9,
+  "verified_ratio": 0.7,
+  "items": [
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+      "record_id": "vavilov-2019-scc-65",
+      "support_id": "vavilov-2019-scc-65-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/vavilov-2019-scc-65-2d23684d6334.txt",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
+      "snapshot_sha256": "1d76ba7d8da8277aacb9c8977e168810fd1001a424b4258253bef61912cb99d0",
+      "text_length": 2161,
+      "matched_terms": [
+        "canada",
+        "minister",
+        "citizenship"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+      "record_id": "bell-canada-2019-scc-66",
+      "support_id": "bell-canada-2019-scc-66-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/bell-canada-2019-scc-66-13152a916703.txt",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18079/index.do",
+      "snapshot_sha256": "0b66e9ca65edcd9004592401f825ac2397d5a7358a78fbd021ff4cb6b2e6a86a",
+      "text_length": 2123,
+      "matched_terms": [
+        "bell",
+        "canada"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "bell canada v. canada (attorney general)"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+      "record_id": "canada-post-2019-scc-67",
+      "support_id": "canada-post-2019-scc-67-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "canada",
+        "post",
+        "corp"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+      "record_id": "dunsmuir-2008-scc-9",
+      "support_id": "dunsmuir-2008-scc-9-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/dunsmuir-2008-scc-9-4cae8a7eeaab.txt",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/2408/index.do",
+      "snapshot_sha256": "64b00784a4543e3966186bb9a9782f11c8be0864e11980d42105ddcaa717e97d",
+      "text_length": 2093,
+      "matched_terms": [
+        "dunsmuir",
+        "new",
+        "brunswick"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "dunsmuir v. new brunswick"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+      "record_id": "vavilov-statutory-appeal-limits",
+      "support_id": "vavilov-statutory-appeal-limits-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/vavilov-statutory-appeal-limits-2d23684d6334.txt",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
+      "snapshot_sha256": "1d76ba7d8da8277aacb9c8977e168810fd1001a424b4258253bef61912cb99d0",
+      "text_length": 2161,
+      "matched_terms": [
+        "vavilov",
+        "appeal"
+      ],
+      "missing_terms": [
+        "statutory"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "gdpr-art-15",
+      "support_id": "gdpr-art-15-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/gdpr-art-15-85d448224f5a.txt",
+      "source_url": "https://www.legislation.gov.uk/eur/2016/679/article/15",
+      "snapshot_sha256": "aa25dbe776544145480cbec2cfdf2b3df7dea214777be18bdb94c31ca5d07f6a",
+      "text_length": 13498,
+      "matched_terms": [
+        "article 15",
+        "recipients",
+        "copy",
+        "personal data",
+        "access"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "cjeu-c-154-21-osterreichische-post",
+      "support_id": "cjeu-c-154-21-osterreichische-post-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "154/21",
+        "specific recipients",
+        "recipients",
+        "article 12(5)"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "cjeu-c-487-21-crif",
+      "support_id": "cjeu-c-487-21-crif-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "487/21",
+        "faithful",
+        "intelligible",
+        "copy",
+        "personal data",
+        "balancing",
+        "total refusal"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "gdpr-art-12-5",
+      "support_id": "gdpr-art-12-5-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/gdpr-art-12-5-1838e81920fd.txt",
+      "source_url": "https://www.legislation.gov.uk/eur/2016/679/article/12",
+      "snapshot_sha256": "92b9e26b81bba05124a94d2b3aee44174f13f8d29c4088acf850e62580018e9f",
+      "text_length": 17363,
+      "matched_terms": [
+        "manifestly unfounded",
+        "excessive"
+      ],
+      "missing_terms": [
+        "article 12(5)",
+        "refusal",
+        "fees",
+        "limits",
+        "abusive",
+        "disproportionate"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "gdpr-art-15-4",
+      "support_id": "gdpr-art-15-4-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/gdpr-art-15-4-85d448224f5a.txt",
+      "source_url": "https://www.legislation.gov.uk/eur/2016/679/article/15",
+      "snapshot_sha256": "aa25dbe776544145480cbec2cfdf2b3df7dea214777be18bdb94c31ca5d07f6a",
+      "text_length": 13498,
+      "matched_terms": [
+        "rights freedoms",
+        "blanket"
+      ],
+      "missing_terms": [
+        "article 15(4)",
+        "limit",
+        "limits"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "gdpr-art-4-9",
+      "support_id": "gdpr-art-4-9-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/gdpr-art-4-9-586140347c9b.txt",
+      "source_url": "https://www.legislation.gov.uk/eur/2016/679/article/4",
+      "snapshot_sha256": "f24e56d638f917e1f59befef84094e85a398bc86f3e023c9ec2f895e6fcc5cc6",
+      "text_length": 24271,
+      "matched_terms": [
+        "public authority",
+        "recipient"
+      ],
+      "missing_terms": [
+        "article 4(9)"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+      "record_id": "cjeu-c-307-22-ft",
+      "support_id": "cjeu-c-307-22-ft-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "307/22",
+        "first free copy",
+        "medical record",
+        "medical records"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+      "record_id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "support_id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/bverfg-right-to-be-forgotten-i-1-bvr-16-13-883b0dff6ada.txt",
+      "source_url": "https://germanlawjournal.com/right-to-be-forgotten-i-1-bvr-16-13/",
+      "snapshot_sha256": "4644f96b713e19f2699c3d3823f877d83978fb11a8deb027e7f5cbe77fb0c73d",
+      "text_length": 138154,
+      "matched_terms": [
+        "recht",
+        "auf",
+        "vergessen"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "bverfg bvr 16/13 november 2019",
+        "recht auf vergessen"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+      "record_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+      "support_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/bverfg-right-to-be-forgotten-ii-1-bvr-276-17-914146861143.txt",
+      "source_url": "https://germanlawjournal.com/right-to-be-forgotten-ii-1-bvr-276-17/",
+      "snapshot_sha256": "c8d1ed1a22b9bb65ccbd9a6100852e4d472e410cffeece3975f68308d8944ede",
+      "text_length": 130157,
+      "matched_terms": [
+        "recht",
+        "auf",
+        "vergessen",
+        "ii"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "bverfg bvr 276/17 november 2019",
+        "recht auf vergessen ii"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+      "record_id": "google-spain-c-131-12",
+      "support_id": "google-spain-c-131-12-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "google",
+        "spain",
+        "sl"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+      "record_id": "charter-articles-7-8-11-16",
+      "support_id": "charter-articles-7-8-11-16-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "eu",
+        "charter",
+        "rights",
+        "relevant"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+      "record_id": "basic-law-personality-expression-balance",
+      "support_id": "basic-law-personality-expression-balance-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/basic-law-personality-expression-balance-0658dce39558.txt",
+      "source_url": "https://www.gesetze-im-internet.de/englisch_gg/",
+      "snapshot_sha256": "aee0ad33873d7355b1c54407e3f41b55f5a97538294aca734d78d2aa60a14914",
+      "text_length": 12446,
+      "matched_terms": [
+        "basic",
+        "law"
+      ],
+      "missing_terms": [
+        "personality"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "fairchild-2002-ukhl-22",
+      "support_id": "fairchild-2002-ukhl-22-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "fairchild",
+        "material increase",
+        "material risk",
+        "mesothelioma risk"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "barker-2006-ukhl-20",
+      "support_id": "barker-2006-ukhl-20-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "barker",
+        "proportionate liability",
+        "proportionate risk",
+        "limited liability"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "compensation-act-2006-s3",
+      "support_id": "compensation-act-2006-s3-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/compensation-act-2006-s3-969f98eca5ef.txt",
+      "source_url": "https://www.legislation.gov.uk/ukpga/2006/29/section/3",
+      "snapshot_sha256": "98583da9007a77bb29a9da6f0783c9de66d62157ac6f3475debda046d9e3130e",
+      "text_length": 13979,
+      "matched_terms": [
+        "compensation act",
+        "section"
+      ],
+      "missing_terms": [
+        "reversed barker",
+        "reversed mesothelioma",
+        "altered mesothelioma"
+      ],
+      "matched_locator_terms": [
+        "compensation act 2006 s.",
+        "compensation act 2006 section"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "sienkiewicz-2011-uksc-10",
+      "support_id": "sienkiewicz-2011-uksc-10-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/sienkiewicz-2011-uksc-10-e75871837fd4.txt",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/uksc/2011/10/data.xml",
+      "snapshot_sha256": "5005cf435ef181ea634dc5caa35e165bf22ec5d96465091f65283e69da31bcc8",
+      "text_length": 224963,
+      "matched_terms": [
+        "sienkiewicz",
+        "mesothelioma",
+        "risk",
+        "causation"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "2011 uksc 10"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "durham-2012-uksc-14",
+      "support_id": "durham-2012-uksc-14-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/durham-2012-uksc-14-f90e6b6dd032.txt",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/uksc/2012/14/data.xml",
+      "snapshot_sha256": "53a5bd4345e27aa21748df0683f6a0d9ddcc61b9fe0402e22e3b372d09a7918b",
+      "text_length": 164788,
+      "matched_terms": [
+        "durham",
+        "follow"
+      ],
+      "missing_terms": [
+        "limiting"
+      ],
+      "matched_locator_terms": [
+        "2012 uksc 14"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "williams-2011-ewca-civ-1242",
+      "support_id": "williams-2011-ewca-civ-1242-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/williams-2011-ewca-civ-1242-5bcfb039b1e5.txt",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2011/1242/data.xml",
+      "snapshot_sha256": "fe65ce94be0e906cd0260bd2852b90f4a3dd23b2908ea583f9acf40746d01834",
+      "text_length": 85974,
+      "matched_terms": [
+        "williams",
+        "mesothelioma",
+        "risk",
+        "causation"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "2011 ewca civ 1242",
+        "williams university birmingham"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "heneghan-2016-ewca-civ-86",
+      "support_id": "heneghan-2016-ewca-civ-86-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/heneghan-2016-ewca-civ-86-6f28084c0eff.txt",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2016/86/data.xml",
+      "snapshot_sha256": "cb234cdb4deaa48588541993c120ccf4e4a7edf870265e7e634a2b5647cafed0",
+      "text_length": 49178,
+      "matched_terms": [
+        "heneghan",
+        "fairchild",
+        "risk",
+        "causation"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "2016 ewca civ 86",
+        "heneghan manchester dry docks ltd"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+      "record_id": "bonnington-1956-ac-613",
+      "support_id": "bonnington-1956-ac-613-support-1",
+      "snapshot_path": null,
+      "source_url": null,
+      "snapshot_sha256": null,
+      "text_length": 0,
+      "matched_terms": [],
+      "missing_terms": [
+        "bonnington",
+        "causation"
+      ],
+      "matched_locator_terms": [],
+      "verified": false
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+      "record_id": "loper-bright-603-us-369",
+      "support_id": "loper-bright-603-us-369-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/loper-bright-603-us-369-7b8d0116866c.txt",
+      "source_url": "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf",
+      "snapshot_sha256": "c2af5d6040062afc0582dd665c94fef9750ae8d1ff82e38f49b45eb347acadc4",
+      "text_length": 238602,
+      "matched_terms": [
+        "loper bright",
+        "overruled chevron",
+        "statutory interpretation",
+        "statutory interpretations"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "loper bright enterprises v. raimondo"
+      ],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+      "record_id": "chevron-467-us-837",
+      "support_id": "chevron-467-us-837-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/chevron-467-us-837-64ad268c91e6.txt",
+      "source_url": "https://www.law.cornell.edu/supremecourt/text/467/837",
+      "snapshot_sha256": "6dfed320766bedcd21571e93cc3dd01f0d0ec01a964f9b283045ae1ecdd5a1e0",
+      "text_length": 66211,
+      "matched_terms": [
+        "chevron",
+        "mandatory",
+        "deference"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+      "record_id": "skidmore-323-us-134",
+      "support_id": "skidmore-323-us-134-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/skidmore-323-us-134-06b4b9e00980.txt",
+      "source_url": "https://www.law.cornell.edu/supremecourt/text/323/134",
+      "snapshot_sha256": "8fda8f5c643dfbce6824966abb72585c7ec89b1d1cbd0d449ec6c132c1bd8ed1",
+      "text_length": 12757,
+      "matched_terms": [
+        "skidmore",
+        "respect"
+      ],
+      "missing_terms": [
+        "persuasive"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+      "record_id": "apa-5-usc-706",
+      "support_id": "apa-5-usc-706-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/apa-5-usc-706-7da8048703d4.txt",
+      "source_url": "https://www.law.cornell.edu/uscode/text/5/706",
+      "snapshot_sha256": "89ea10f142ebdaf5270acb0d6b8688ebf5900fa2e6ac736bc13753b5b9fd44ee",
+      "text_length": 3313,
+      "matched_terms": [
+        "section 706",
+        "reviewing court",
+        "questions law",
+        "decide"
+      ],
+      "missing_terms": [
+        "independent judgment"
+      ],
+      "matched_locator_terms": [],
+      "verified": true
+    },
+    {
+      "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+      "record_id": "kisor-588-us-558",
+      "support_id": "kisor-588-us-558-support-1",
+      "snapshot_path": "experiments/source_text_verification/snapshots/kisor-588-us-558-f97b784b0e60.txt",
+      "source_url": "https://www.supremecourt.gov/opinions/18pdf/18-15_9p6b.pdf",
+      "snapshot_sha256": "ee6e8699d5480fedbe7e9dee2e06198acc28cafbe98b235123b60cd881895071",
+      "text_length": 161295,
+      "matched_terms": [
+        "kisor",
+        "agency regulations",
+        "regulations"
+      ],
+      "missing_terms": [],
+      "matched_locator_terms": [
+        "kisor v. wilkie"
+      ],
+      "verified": true
+    }
+  ]
+}

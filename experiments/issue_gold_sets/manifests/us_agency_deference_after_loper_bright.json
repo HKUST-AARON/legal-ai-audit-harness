@@ -14,7 +14,34 @@
       "citation": "603 U.S. 369 (2024)",
       "source_url": "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf",
       "authority_level": "current_controlling_supreme_court_precedent",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "loper bright",
+        "overruled chevron",
+        "statutory interpretation",
+        "statutory interpretations"
+      ],
+      "source_support": [
+        {
+          "id": "loper-bright-603-us-369-support-1",
+          "locator": "603 U.S. 369 (2024)",
+          "source_url": "https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf",
+          "support_scope": "high_authority",
+          "source_excerpt": "Loper Bright overruled Chevron for agency statutory interpretation and requires courts to exercise independent judgment.",
+          "excerpt_sha256": "96c2b1033040a50843866a696776d6160aa58de876de0558db8cacf66352fcb6",
+          "support_terms": [
+            "loper bright",
+            "overruled chevron",
+            "statutory interpretation",
+            "statutory interpretations"
+          ],
+          "contradiction_patterns": [
+            "does not overrule chevron",
+            "did not overrule chevron",
+            "chevron remains mandatory"
+          ]
+        }
+      ]
     },
     {
       "id": "chevron-467-us-837",
@@ -22,7 +49,31 @@
       "citation": "467 U.S. 837 (1984)",
       "source_url": "https://www.govinfo.gov/app/details/USREPORTS-467/USREPORTS-467-837",
       "authority_level": "overruled_supreme_court_precedent_for_mandatory_deference",
-      "issue_role": "invalidated_treatment"
+      "issue_role": "invalidated_treatment",
+      "support_terms": [
+        "chevron",
+        "mandatory",
+        "deference"
+      ],
+      "source_support": [
+        {
+          "id": "chevron-467-us-837-support-1",
+          "locator": "467 U.S. 837 (1984)",
+          "source_url": "https://www.govinfo.gov/app/details/USREPORTS-467/USREPORTS-467-837",
+          "support_scope": "invalidated_treatment",
+          "source_excerpt": "Chevron supplied mandatory deference before Loper Bright overruled that treatment.",
+          "excerpt_sha256": "39e467208e47c1f6cad973945d7ea2456103d0ecd95a4c12a7e4dcd7e66c0cd4",
+          "support_terms": [
+            "chevron",
+            "mandatory",
+            "deference"
+          ],
+          "contradiction_patterns": [
+            "chevron remains mandatory after loper bright",
+            "chevron was not overruled"
+          ]
+        }
+      ]
     },
     {
       "id": "skidmore-323-us-134",
@@ -30,7 +81,31 @@
       "citation": "323 U.S. 134 (1944)",
       "source_url": "https://www.law.cornell.edu/supremecourt/text/323/134",
       "authority_level": "persuasive_respect_standard",
-      "issue_role": "limiting_material"
+      "issue_role": "limiting_material",
+      "support_terms": [
+        "skidmore",
+        "persuasive",
+        "respect"
+      ],
+      "source_support": [
+        {
+          "id": "skidmore-323-us-134-support-1",
+          "locator": "323 U.S. 134 (1944)",
+          "source_url": "https://www.law.cornell.edu/supremecourt/text/323/134",
+          "support_scope": "limiting_material",
+          "source_excerpt": "Skidmore remains a persuasive respect framework for agency views according to their power to persuade.",
+          "excerpt_sha256": "3a9f2a0a047d9b439b6bbf271a91ac8d086ffeca33e7d158367cbfd5d73b11b8",
+          "support_terms": [
+            "skidmore",
+            "persuasive",
+            "respect"
+          ],
+          "contradiction_patterns": [
+            "skidmore is binding mandatory deference",
+            "skidmore is irrelevant"
+          ]
+        }
+      ]
     },
     {
       "id": "apa-5-usc-706",
@@ -38,7 +113,35 @@
       "citation": "5 U.S.C. 706",
       "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section706",
       "authority_level": "governing_statute",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "section 706",
+        "reviewing court",
+        "questions of law",
+        "decide",
+        "independent judgment"
+      ],
+      "source_support": [
+        {
+          "id": "apa-5-usc-706-support-1",
+          "locator": "5 U.S.C. 706",
+          "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section706",
+          "support_scope": "high_authority",
+          "source_excerpt": "APA section 706 assigns reviewing courts authority to decide questions of law and exercise independent judgment.",
+          "excerpt_sha256": "7ee79bfa951512fe0294554e499c723f3c32a37113c660b201e05675aa9eef69",
+          "support_terms": [
+            "section 706",
+            "reviewing court",
+            "questions of law",
+            "decide",
+            "independent judgment"
+          ],
+          "contradiction_patterns": [
+            "apa section 706 requires deference",
+            "apa removes independent judgment"
+          ]
+        }
+      ]
     },
     {
       "id": "kisor-588-us-558",
@@ -46,7 +149,31 @@
       "citation": "588 U.S. 558 (2019)",
       "source_url": "https://www.supremecourt.gov/opinions/18pdf/18-15_9p6b.pdf",
       "authority_level": "related_limiting_precedent_on_agency_deference",
-      "issue_role": "limiting_material"
+      "issue_role": "limiting_material",
+      "support_terms": [
+        "kisor",
+        "agency regulations",
+        "regulations"
+      ],
+      "source_support": [
+        {
+          "id": "kisor-588-us-558-support-1",
+          "locator": "588 U.S. 558 (2019)",
+          "source_url": "https://www.supremecourt.gov/opinions/18pdf/18-15_9p6b.pdf",
+          "support_scope": "limiting_material",
+          "source_excerpt": "Kisor concerns agency interpretations of agency regulations, a separate regulatory deference track.",
+          "excerpt_sha256": "e229aed640c7df41f1055b503e146bd67a6998b9bd8ea51df0bba8ce521826be",
+          "support_terms": [
+            "kisor",
+            "agency regulations",
+            "regulations"
+          ],
+          "contradiction_patterns": [
+            "kisor governs statutory interpretation",
+            "kisor was overruled by loper bright"
+          ]
+        }
+      ]
     }
   ]
 }

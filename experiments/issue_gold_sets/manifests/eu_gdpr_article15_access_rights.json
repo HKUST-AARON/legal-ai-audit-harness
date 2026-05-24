@@ -14,7 +14,35 @@
       "citation": "GDPR Article 15",
       "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
       "authority_level": "governing_regulation",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "article 15",
+        "recipients",
+        "copy",
+        "personal data",
+        "access"
+      ],
+      "source_support": [
+        {
+          "id": "gdpr-art-15-support-1",
+          "locator": "GDPR Article 15",
+          "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+          "support_scope": "high_authority",
+          "source_excerpt": "GDPR Article 15 gives data subjects access to personal data, recipients, and copies of personal data.",
+          "excerpt_sha256": "3e189f469230bbf95663445bf0aef76666950702fef25c427e1302fe43f9fd3b",
+          "support_terms": [
+            "article 15",
+            "recipients",
+            "copy",
+            "personal data",
+            "access"
+          ],
+          "contradiction_patterns": [
+            "article 15 gives no access right",
+            "article 15 excludes recipients"
+          ]
+        }
+      ]
     },
     {
       "id": "cjeu-c-154-21-osterreichische-post",
@@ -22,7 +50,33 @@
       "citation": "Case C-154/21",
       "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62021CJ0154",
       "authority_level": "court_of_justice_judgment",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "c-154/21",
+        "specific recipients",
+        "recipients",
+        "article 12(5)"
+      ],
+      "source_support": [
+        {
+          "id": "cjeu-c-154-21-osterreichische-post-support-1",
+          "locator": "Case C-154/21",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62021CJ0154",
+          "support_scope": "high_authority",
+          "source_excerpt": "Case C-154/21 concerns Article 15 recipient identity and specific recipients where identifiable.",
+          "excerpt_sha256": "1c8159fd613e0f59798a5522812c8a09e1fa4d708d180e30d6e0e3d6e2bc09f3",
+          "support_terms": [
+            "c-154/21",
+            "specific recipients",
+            "recipients",
+            "article 12(5)"
+          ],
+          "contradiction_patterns": [
+            "c-154/21 does not require specific recipients",
+            "specific recipients are never required"
+          ]
+        }
+      ]
     },
     {
       "id": "cjeu-c-487-21-crif",
@@ -30,7 +84,39 @@
       "citation": "Case C-487/21",
       "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62021CJ0487",
       "authority_level": "court_of_justice_judgment",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "c-487/21",
+        "faithful",
+        "intelligible",
+        "copy",
+        "personal data",
+        "balancing",
+        "total refusal"
+      ],
+      "source_support": [
+        {
+          "id": "cjeu-c-487-21-crif-support-1",
+          "locator": "Case C-487/21",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62021CJ0487",
+          "support_scope": "high_authority",
+          "source_excerpt": "Case C-487/21 requires a faithful and intelligible copy of personal data under Article 15.",
+          "excerpt_sha256": "730624f987a91e3f4fcb6bbc7902888bdb563856bb1207ca1686450cf0860b85",
+          "support_terms": [
+            "c-487/21",
+            "faithful",
+            "intelligible",
+            "copy",
+            "personal data",
+            "balancing",
+            "total refusal"
+          ],
+          "contradiction_patterns": [
+            "c-487/21 does not require a faithful copy",
+            "c-487/21 allows total refusal"
+          ]
+        }
+      ]
     },
     {
       "id": "gdpr-art-12-5",
@@ -38,7 +124,41 @@
       "citation": "GDPR Article 12(5)",
       "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
       "authority_level": "governing_regulation_limitation",
-      "issue_role": "limiting_material"
+      "issue_role": "limiting_material",
+      "support_terms": [
+        "article 12(5)",
+        "manifestly unfounded",
+        "excessive",
+        "refusal",
+        "fees",
+        "limits",
+        "abusive",
+        "disproportionate"
+      ],
+      "source_support": [
+        {
+          "id": "gdpr-art-12-5-support-1",
+          "locator": "GDPR Article 12(5)",
+          "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+          "support_scope": "limiting_material",
+          "source_excerpt": "GDPR Article 12(5) limits access requests that are manifestly unfounded, excessive, abusive, or disproportionate.",
+          "excerpt_sha256": "9d1a9988feb2b87d9b416996998b51ce3268f34cbf1426aadf806f759a18d2b6",
+          "support_terms": [
+            "article 12(5)",
+            "manifestly unfounded",
+            "excessive",
+            "refusal",
+            "fees",
+            "limits",
+            "abusive",
+            "disproportionate"
+          ],
+          "contradiction_patterns": [
+            "article 12(5) never permits refusal",
+            "article 12(5) has no limits"
+          ]
+        }
+      ]
     },
     {
       "id": "gdpr-art-15-4",
@@ -46,7 +166,100 @@
       "citation": "GDPR Article 15(4)",
       "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
       "authority_level": "governing_regulation_limitation",
-      "issue_role": "limiting_material"
+      "issue_role": "limiting_material",
+      "support_terms": [
+        "article 15(4)",
+        "rights and freedoms",
+        "limit",
+        "limits",
+        "blanket"
+      ],
+      "source_support": [
+        {
+          "id": "gdpr-art-15-4-support-1",
+          "locator": "GDPR Article 15(4)",
+          "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+          "support_scope": "limiting_material",
+          "source_excerpt": "GDPR Article 15(4) protects rights and freedoms of others but is not a blanket defence.",
+          "excerpt_sha256": "ba14a7b990e3b4d803711d6b50703e3452e5b89afed7ab776802117a0f84ed67",
+          "support_terms": [
+            "article 15(4)",
+            "rights and freedoms",
+            "limit",
+            "limits",
+            "blanket"
+          ],
+          "contradiction_patterns": [
+            "article 15(4) is a blanket defence",
+            "article 15(4) has no limit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gdpr-art-4-9",
+      "title": "Regulation (EU) 2016/679 Article 4(9)",
+      "citation": "GDPR Article 4(9)",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "authority_level": "definition_relevant_to_recipient_scope",
+      "issue_role": "supplementary_material",
+      "support_terms": [
+        "article 4(9)",
+        "public-authority",
+        "recipient"
+      ],
+      "source_support": [
+        {
+          "id": "gdpr-art-4-9-support-1",
+          "locator": "GDPR Article 4(9)",
+          "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+          "support_scope": "supplementary_material",
+          "source_excerpt": "GDPR Article 4(9) defines recipient and includes a public-authority carve-out.",
+          "excerpt_sha256": "7542c5e1e1c4a731adacd9ec591a7fda0a2d4eff4708723822b73fac1ee5e230",
+          "support_terms": [
+            "article 4(9)",
+            "public-authority",
+            "recipient"
+          ],
+          "contradiction_patterns": [
+            "article 4(9) has no public-authority carve-out"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cjeu-c-307-22-ft",
+      "title": "FT v DW",
+      "citation": "Case C-307/22",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62022CJ0307",
+      "authority_level": "court_of_justice_judgment",
+      "issue_role": "supplementary_material",
+      "support_terms": [
+        "c-307/22",
+        "first free copy",
+        "medical-record",
+        "medical records"
+      ],
+      "source_support": [
+        {
+          "id": "cjeu-c-307-22-ft-support-1",
+          "locator": "Case C-307/22",
+          "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62022CJ0307",
+          "support_scope": "supplementary_material",
+          "source_excerpt": "Case C-307/22 concerns the first free copy and medical-record personal data.",
+          "excerpt_sha256": "09eaaffb5b566881b05a44de3d8060bf213c27b801da6d73b82e4d7047fdaf89",
+          "support_terms": [
+            "c-307/22",
+            "first free copy",
+            "medical-record",
+            "medical records"
+          ],
+          "contradiction_patterns": [
+            "c-307/22 rejects first free copy",
+            "c-307/22 is not about medical records"
+          ]
+        }
+      ]
     }
   ]
 }

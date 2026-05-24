@@ -59,6 +59,7 @@ python -m audit_harness.cli experiment examples/scenarios --out reports/experime
 python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
 python scripts/collect_issue_public_outputs.py
 python scripts/collect_public_retrieval_benchmark.py
+python scripts/verify_source_text_anchors.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
@@ -76,7 +77,7 @@ python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
-The full matrix includes stress scenarios, public metadata records, public legal-system outputs, issue-specific public output/source packets, a public retrieval benchmark, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the issue-public-output file at `experiments/issue_public_outputs/results/issue_public_output_experiment.md`, the public retrieval file at `experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation, public retrieval audit, public output/source audit, and coding-uncertainty analysis, not as independent legal merits validation.
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, issue-specific public output/source packets, a public retrieval benchmark, raw model outputs, source-supported model-output repairs, adversarial source-support repairs, public source-text anchor checks, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the source-text anchor file at `experiments/source_text_verification/results/source_text_anchor_verification.md`, the issue-public-output file at `experiments/issue_public_outputs/results/issue_public_output_experiment.md`, the public retrieval file at `experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.md`, the model-repair files at `experiments/model_output_repairs/results/model_output_repair_experiment.md` and `experiments/model_output_adversarial/results/model_output_adversarial_experiment.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation, public retrieval audit, public output/source audit, source-support positive and negative control validation, external source-anchor validation, and coding-uncertainty analysis, not as independent legal merits validation.
 
 ## Single-Model Output Audit Protocol
 

@@ -3,7 +3,11 @@
   "claimed_status": "normative_material_screening_output",
   "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "common_law",
-  "deployment_context": "Public search output for query: Sienkiewicz Greif Barker Corus Fairchild",
+  "deployment_context": "Public case_law_only output for query: Sienkiewicz Greif Barker Corus Fairchild",
+  "benchmark_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "compensation-act-2006-s3"
+  ],
   "scores": {
     "S": {
       "score": 2,
@@ -33,13 +37,11 @@
   "authority_sets": {
     "high_authority": [
       "fairchild-2002-ukhl-22",
-      "compensation-act-2006-s3",
       "sienkiewicz-2011-uksc-10"
     ],
     "retrieved_high_authority": [],
     "counter_or_limiting": [
-      "barker-2006-ukhl-20",
-      "compensation-act-2006-s3"
+      "barker-2006-ukhl-20"
     ],
     "retrieved_counter_or_limiting": [],
     "invalid_or_superseded": [],

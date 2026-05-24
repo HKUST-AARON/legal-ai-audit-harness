@@ -1,0 +1,139 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "barker-proportionate-liability-as-current-mesothelioma-rule"
+    ],
+    "retrieved": [
+      "fairchild-2002-ukhl-22",
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10",
+      "international-energy-group-2015-uksc-33",
+      "bussey-2018-ewca-civ-243"
+    ],
+    "retrieved_counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "retrieved_high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh answer on Sienkiewicz in English mesothelioma causation. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "[2002] UKHL 22",
+        "source_id": "fairchild-2002-ukhl-22",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-2"
+      },
+      {
+        "locator": "[2006] UKHL 20",
+        "source_id": "barker-2006-ukhl-20",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-3"
+      },
+      {
+        "locator": "Compensation Act 2006, s 3",
+        "source_id": "compensation-act-2006-s3",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-3"
+      },
+      {
+        "locator": "[1956] AC 613",
+        "source_id": "bonnington-1956-ac-613",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-4"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Sienkiewicz is core authority for mesothelioma causation.",
+        "id": "unit-1",
+        "locators": [
+          "[2011] UKSC 10"
+        ],
+        "source_ids": [
+          "sienkiewicz-2011-uksc-10"
+        ]
+      },
+      {
+        "claim": "Fairchild supplies the mesothelioma material-risk exception.",
+        "id": "unit-2",
+        "locators": [
+          "[2002] UKHL 22"
+        ],
+        "source_ids": [
+          "fairchild-2002-ukhl-22"
+        ]
+      },
+      {
+        "claim": "Barker was altered for mesothelioma by Compensation Act 2006 section 3.",
+        "id": "unit-3",
+        "locators": [
+          "[2006] UKHL 20",
+          "Compensation Act 2006, s 3"
+        ],
+        "source_ids": [
+          "barker-2006-ukhl-20",
+          "compensation-act-2006-s3"
+        ]
+      },
+      {
+        "claim": "The rule is not a general toxic-tort causation doctrine.",
+        "id": "unit-4",
+        "locators": [
+          "[1956] AC 613"
+        ],
+        "source_ids": [
+          "bonnington-1956-ac-613"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "source-bound-codex55-uk-03--missing-output-link",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "england_and_wales_tort_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": 0.97,
+    "precision": 0.95,
+    "recall": 1.0
+  },
+  "upstream_output": {
+    "capture_mode": "no_browse_no_tools",
+    "model": "gpt-5.5",
+    "provider": "codex",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-uk-03",
+    "reasoning_effort": "xhigh"
+  }
+}

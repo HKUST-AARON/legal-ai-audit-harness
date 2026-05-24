@@ -1,0 +1,235 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+    ],
+    "high_authority": [
+      "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "germany-search-europ-ischer-gerichtshof-c-399-26",
+      "germany-search-europ-ischer-gerichtshof-c-402-26",
+      "germany-search-europ-ischer-gerichtshof-c-401-26",
+      "germany-search-europ-ischer-gerichtshof-c-405-26",
+      "germany-search-europ-ischer-gerichtshof-c-398-26",
+      "germany-search-europ-ischer-gerichtshof-c-404-26",
+      "germany-search-europ-ischer-gerichtshof-c-396-26",
+      "germany-search-europ-ischer-gerichtshof-c-397-26",
+      "germany-search-europ-ischer-gerichtshof-c-400-26"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "retrieved_high_authority": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "counter_material_complete": true,
+  "deployment_context": "Public case_law_only output for query: Datenschutz Grundrechte Recht auf Vergessen",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "ECLI:DE:OVGNRW:2026:0515.4B46.26.00",
+        "source_id": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-01"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:399",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-02"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:402",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-03"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:401",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-04"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:405",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-05"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:398",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-06"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:404",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-07"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:396",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-08"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:397",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-09"
+      },
+      {
+        "locator": "ECLI:EU:C:2026:400",
+        "source_id": "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "source_tag": "public_metadata",
+        "supports_claim": true,
+        "unit_id": "rank-10"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Public search rank 1 makes this material visible: Oberverwaltungsgericht Nordrhein-Westfalen 4 B 46/26",
+        "id": "rank-01",
+        "locators": [
+          "ECLI:DE:OVGNRW:2026:0515.4B46.26.00"
+        ],
+        "output_rank": 1,
+        "source_ids": [
+          "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 2 makes this material visible: Europ\u00e4ischer Gerichtshof C-399/26",
+        "id": "rank-02",
+        "locators": [
+          "ECLI:EU:C:2026:399"
+        ],
+        "output_rank": 2,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-399-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 3 makes this material visible: Europ\u00e4ischer Gerichtshof C-402/26",
+        "id": "rank-03",
+        "locators": [
+          "ECLI:EU:C:2026:402"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-402-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 4 makes this material visible: Europ\u00e4ischer Gerichtshof C-401/26",
+        "id": "rank-04",
+        "locators": [
+          "ECLI:EU:C:2026:401"
+        ],
+        "output_rank": 4,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-401-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 5 makes this material visible: Europ\u00e4ischer Gerichtshof C-405/26",
+        "id": "rank-05",
+        "locators": [
+          "ECLI:EU:C:2026:405"
+        ],
+        "output_rank": 5,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-405-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 6 makes this material visible: Europ\u00e4ischer Gerichtshof C-398/26",
+        "id": "rank-06",
+        "locators": [
+          "ECLI:EU:C:2026:398"
+        ],
+        "output_rank": 6,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-398-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 7 makes this material visible: Europ\u00e4ischer Gerichtshof C-404/26",
+        "id": "rank-07",
+        "locators": [
+          "ECLI:EU:C:2026:404"
+        ],
+        "output_rank": 7,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-404-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 8 makes this material visible: Europ\u00e4ischer Gerichtshof C-396/26",
+        "id": "rank-08",
+        "locators": [
+          "ECLI:EU:C:2026:396"
+        ],
+        "output_rank": 8,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-396-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 9 makes this material visible: Europ\u00e4ischer Gerichtshof C-397/26",
+        "id": "rank-09",
+        "locators": [
+          "ECLI:EU:C:2026:397"
+        ],
+        "output_rank": 9,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-397-26"
+        ]
+      },
+      {
+        "claim": "Public search rank 10 makes this material visible: Europ\u00e4ischer Gerichtshof C-400/26",
+        "id": "rank-10",
+        "locators": [
+          "ECLI:EU:C:2026:400"
+        ],
+        "output_rank": 10,
+        "source_ids": [
+          "germany-search-europ-ischer-gerichtshof-c-400-26"
+        ]
+      }
+    ],
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/germany-right-to-be-forgotten-review-q05.json"
+  },
+  "jurisdiction_profile": "civil_law",
+  "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q05",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "system_role": "auditable_procedural_tool",
+  "upstream_metrics": {
+    "f1": null,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "upstream_output": {}
+}

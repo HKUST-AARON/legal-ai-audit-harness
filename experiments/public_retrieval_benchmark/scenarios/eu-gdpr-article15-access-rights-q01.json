@@ -1,0 +1,100 @@
+{
+  "id": "public-retrieval-eu-gdpr-article15-access-rights-q01",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Public case_law_known_item output for query: C-154/21 GDPR Article 15 recipients",
+  "benchmark_scope": "case_law_known_item",
+  "mixed_authority_required_elsewhere": [
+    "gdpr-art-15",
+    "gdpr-art-12-5",
+    "gdpr-art-15-4"
+  ],
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every visible result has a public source URL and source-system label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, source endpoint, snapshot and rank window are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined high-authority set."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined counter-material set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected by a reviewer but does not create a party-facing contestation pathway."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The query, manifest, scenario and harness result are logged as reproducible artifacts."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif",
+      "cjeu-c-307-22-ft"
+    ],
+    "retrieved_high_authority": [
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "counter_or_limiting": [
+      "google-spain-c-131-12"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "cjeu-c-154-21-osterreichische-post"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/eu-gdpr-article15-access-rights-q01.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public search rank 1 makes this material visible: Judgment - 12/01/2023 - Österreichische Post (Informations relatives aux destinataires de données personnelles) Case C-154/21 Reports of Cases published in the electronic Reports o",
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ],
+        "locators": [
+          "Case C-154/21"
+        ],
+        "output_rank": 1
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "locator": "Case C-154/21",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

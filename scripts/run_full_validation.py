@@ -10,7 +10,6 @@ sys.path.insert(0, str(ROOT := Path(__file__).resolve().parents[1]))
 from audit_harness.model import STATUS_RANK, StatusPolicy, evaluate_scenario
 
 RESULTS = ROOT / "experiments" / "full_validation" / "results"
-BASE_VALIDATION_UNITS = 343
 THRESHOLDS = [8, 9, 10, 11, 12]
 
 SUITES = [
@@ -20,7 +19,8 @@ SUITES = [
         "path": ROOT / "examples" / "scenarios",
         "out": ROOT / "experiments" / "stress_tests" / "results" / "stress_test_experiment.md",
         "json_out": ROOT / "experiments" / "stress_tests" / "results" / "stress_test_experiment.json",
-        "validation_units": "10 stress scenarios",
+        "unit_label": "stress scenarios",
+        "evidence_class": "construct test",
         "finding": "Tests downgrade, withdrawal, decision-support and high-recall-but-blocked behavior.",
     },
     {
@@ -29,7 +29,8 @@ SUITES = [
         "path": ROOT / "experiments" / "real_cases" / "scenarios",
         "out": ROOT / "experiments" / "real_cases" / "results" / "real_case_experiment.md",
         "json_out": ROOT / "experiments" / "real_cases" / "results" / "real_case_experiment.json",
-        "validation_units": "120 public metadata records",
+        "unit_label": "public metadata records",
+        "evidence_class": "public-source reconstruction",
         "finding": "Tests source reconstruction across six public legal-record sources.",
     },
     {
@@ -38,7 +39,8 @@ SUITES = [
         "path": ROOT / "experiments" / "public_system_outputs" / "scenarios",
         "out": ROOT / "experiments" / "public_system_outputs" / "results" / "public_system_output_experiment.md",
         "json_out": ROOT / "experiments" / "public_system_outputs" / "results" / "public_system_output_experiment.json",
-        "validation_units": "60 visible public-system records",
+        "unit_label": "visible public-system records",
+        "evidence_class": "public-output audit",
         "finding": "Tests ordered real upstream legal-output reconstruction.",
     },
     {
@@ -47,17 +49,19 @@ SUITES = [
         "path": ROOT / "experiments" / "issue_public_outputs" / "scenarios",
         "out": ROOT / "experiments" / "issue_public_outputs" / "results" / "issue_public_output_experiment.md",
         "json_out": ROOT / "experiments" / "issue_public_outputs" / "results" / "issue_public_output_experiment.json",
-        "validation_units": "19 issue-specific public output/source records",
+        "unit_label": "issue-specific public output/source records",
+        "evidence_class": "mixed public-output/source audit",
         "finding": "Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.",
     },
     {
         "id": "public_retrieval_benchmark",
-        "label": "Public retrieval benchmark",
+        "label": "Endpoint-matched public retrieval benchmark",
         "path": ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios",
         "out": ROOT / "experiments" / "public_retrieval_benchmark" / "results" / "public_retrieval_benchmark.md",
         "json_out": ROOT / "experiments" / "public_retrieval_benchmark" / "results" / "public_retrieval_benchmark.json",
-        "validation_units": "99 public search result records",
-        "finding": "Tests true public search outputs against issue-defined high-authority and counter-material gold sets.",
+        "unit_label": "public search result records",
+        "evidence_class": "endpoint-compatible public-output benchmark",
+        "finding": "Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.",
     },
     {
         "id": "ai_outputs",
@@ -65,17 +69,39 @@ SUITES = [
         "path": ROOT / "experiments" / "ai_outputs" / "scenarios",
         "out": ROOT / "experiments" / "ai_outputs" / "results" / "ai_output_experiment.md",
         "json_out": ROOT / "experiments" / "ai_outputs" / "results" / "ai_output_experiment.json",
-        "validation_units": "10 raw model outputs",
+        "unit_label": "raw model outputs",
+        "evidence_class": "model-output audit",
         "finding": "Tests whether strong authority coverage without source binding remains procedurally capped.",
     },
     {
+        "id": "model_output_repairs",
+        "label": "Source-supported model-output repairs",
+        "path": ROOT / "experiments" / "model_output_repairs" / "scenarios",
+        "out": ROOT / "experiments" / "model_output_repairs" / "results" / "model_output_repair_experiment.md",
+        "json_out": ROOT / "experiments" / "model_output_repairs" / "results" / "model_output_repair_experiment.json",
+        "unit_label": "source-supported model-output variants",
+        "evidence_class": "model-output intervention",
+        "finding": "Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.",
+    },
+    {
+        "id": "model_output_adversarial",
+        "label": "Adversarial source-support repairs",
+        "path": ROOT / "experiments" / "model_output_adversarial" / "scenarios",
+        "out": ROOT / "experiments" / "model_output_adversarial" / "results" / "model_output_adversarial_experiment.md",
+        "json_out": ROOT / "experiments" / "model_output_adversarial" / "results" / "model_output_adversarial_experiment.json",
+        "unit_label": "adversarial source-support variants",
+        "evidence_class": "negative-control model-output validation",
+        "finding": "Tests whether source-support repair gates reject locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions.",
+    },
+    {
         "id": "issue_gold_sets",
-        "label": "Issue-defined positive controls",
+        "label": "Mixed-authority public source-screening packets",
         "path": ROOT / "experiments" / "issue_gold_sets" / "scenarios",
         "out": ROOT / "experiments" / "issue_gold_sets" / "results" / "issue_gold_set_experiment.md",
         "json_out": ROOT / "experiments" / "issue_gold_sets" / "results" / "issue_gold_set_experiment.json",
-        "validation_units": "5 curated issue packets",
-        "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
+        "unit_label": "curated issue packets",
+        "evidence_class": "mixed-authority construct test",
+        "finding": "Tests normative material screening with mixed statute/case/source packets rather than single-endpoint public search results.",
     },
     {
         "id": "issue_ablations",
@@ -83,7 +109,8 @@ SUITES = [
         "path": ROOT / "experiments" / "issue_ablations" / "scenarios",
         "out": ROOT / "experiments" / "issue_ablations" / "results" / "issue_ablation_experiment.md",
         "json_out": ROOT / "experiments" / "issue_ablations" / "results" / "issue_ablation_experiment.json",
-        "validation_units": "20 issue-packet ablations",
+        "unit_label": "issue-packet ablations",
+        "evidence_class": "negative-control construct test",
         "finding": "Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.",
     },
 ]
@@ -95,8 +122,11 @@ def main() -> int:
     _run([sys.executable, "scripts/collect_public_system_outputs.py"])
     _run([sys.executable, "scripts/collect_issue_public_outputs.py"])
     _run([sys.executable, "scripts/collect_public_retrieval_benchmark.py"])
+    _run([sys.executable, "scripts/build_model_output_repairs.py"])
+    _run([sys.executable, "scripts/build_model_output_adversarial.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
+    _run([sys.executable, "scripts/verify_source_text_anchors.py"])
 
     rows = []
     for suite in SUITES:
@@ -115,6 +145,12 @@ def main() -> int:
         )
         payload = json.loads(suite["json_out"].read_text(encoding="utf-8"))
         rows.append(_suite_row(suite, payload))
+    source_text_payload = json.loads(
+        (ROOT / "experiments" / "source_text_verification" / "results" / "source_text_anchor_verification.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_source_text_row(source_text_payload))
 
     _run(
         [
@@ -160,32 +196,33 @@ def main() -> int:
         )
         rows.append(_blind_coding_row(blind_coding_payload))
 
+    validation_units = _validation_units()
+    base_validation_units = validation_units["total"]
     threshold_sensitivity = _threshold_sensitivity(_load_all_scenarios())
     threshold_evaluations = threshold_sensitivity["scenario_count"] * len(threshold_sensitivity["runs"])
+    validation_units_payload = dict(validation_units)
+    validation_units_payload.update(
+        {
+            "annotation_recodings": robustness_payload["recoded_evaluations"],
+            "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
+            "threshold_sensitivity_evaluations": threshold_evaluations,
+            "source_text_anchor_checks": source_text_payload["support_item_count"],
+            "source_text_anchor_verified": source_text_payload["support_items_verified"],
+        }
+    )
     payload = {
         "suite_count": len(rows),
         "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
         "recoded_evaluations": robustness_payload["recoded_evaluations"],
         "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
         "threshold_sensitivity_evaluations": threshold_evaluations,
-        "total_evaluation_rows": BASE_VALIDATION_UNITS
+        "source_text_anchor_evaluations": source_text_payload["support_item_count"],
+        "total_evaluation_rows": base_validation_units
+        + source_text_payload["support_item_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
-        "validation_units": {
-            "stress_scenarios": 10,
-            "public_metadata_records": 120,
-            "public_system_records": 60,
-            "public_retrieval_records": 99,
-            "raw_model_outputs": 10,
-            "issue_public_records": 19,
-            "issue_gold_sets": 5,
-            "issue_ablations": 20,
-            "annotation_recodings": robustness_payload["recoded_evaluations"],
-            "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
-            "threshold_sensitivity_evaluations": threshold_evaluations,
-            "total": BASE_VALIDATION_UNITS,
-        },
+        "validation_units": validation_units_payload,
         "expected_passed": sum(row["expected_passed"] for row in rows if "expected_passed" in row),
         "expected_total": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
         "high_upstream_but_blocked": sum(
@@ -193,6 +230,7 @@ def main() -> int:
             for row in rows
             if row.get("high_upstream_but_blocked") is not None
         ),
+        "blocked_reason_distribution": _blocked_reason_distribution(rows),
         "annotation_robustness": {
             "all_policy_status_stable": robustness_payload["all_policy_status_stable"],
             "scenario_count": robustness_payload["scenario_count"],
@@ -209,6 +247,13 @@ def main() -> int:
             "base_status_agreement": blind_coding_payload["base_status_agreement"],
         },
         "threshold_sensitivity": threshold_sensitivity,
+        "source_text_verification": {
+            "record_count": source_text_payload["record_count"],
+            "records_with_text_snapshot": source_text_payload["records_with_text_snapshot"],
+            "support_item_count": source_text_payload["support_item_count"],
+            "support_items_verified": source_text_payload["support_items_verified"],
+            "verified_ratio": source_text_payload["verified_ratio"],
+        },
         "suites": rows,
     }
     (RESULTS / "full_validation_report.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
@@ -229,6 +274,35 @@ def _load_all_scenarios() -> list[dict]:
             scenario["_source_path"] = str(path.relative_to(ROOT))
             scenarios.append(scenario)
     return scenarios
+
+
+def _validation_units() -> dict[str, int]:
+    counts = {
+        "stress_scenarios": _scenario_count(ROOT / "examples" / "scenarios"),
+        "public_metadata_records": _output_unit_count(ROOT / "experiments" / "real_cases" / "scenarios"),
+        "public_system_records": _output_unit_count(ROOT / "experiments" / "public_system_outputs" / "scenarios"),
+        "public_retrieval_records": _output_unit_count(ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios"),
+        "raw_model_outputs": _scenario_count(ROOT / "experiments" / "ai_outputs" / "scenarios"),
+        "source_bound_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_repairs" / "scenarios"),
+        "adversarial_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_adversarial" / "scenarios"),
+        "issue_public_records": _output_unit_count(ROOT / "experiments" / "issue_public_outputs" / "scenarios"),
+        "issue_gold_sets": _scenario_count(ROOT / "experiments" / "issue_gold_sets" / "scenarios"),
+        "issue_ablations": _scenario_count(ROOT / "experiments" / "issue_ablations" / "scenarios"),
+    }
+    counts["total"] = sum(counts.values())
+    return counts
+
+
+def _scenario_count(path: Path) -> int:
+    return len(list(path.glob("*.json")))
+
+
+def _output_unit_count(path: Path) -> int:
+    total = 0
+    for scenario_path in path.glob("*.json"):
+        scenario = json.loads(scenario_path.read_text(encoding="utf-8"))
+        total += len(scenario.get("evidence_packet", {}).get("output_units", []))
+    return total
 
 
 def _threshold_sensitivity(scenarios: list[dict]) -> dict:
@@ -278,21 +352,37 @@ def _suite_row(suite: dict, payload: dict) -> dict:
     return {
         "id": suite["id"],
         "label": suite["label"],
-        "validation_units": suite["validation_units"],
+        "evidence_class": suite["evidence_class"],
+        "validation_units": _suite_validation_units(suite),
         "scenario_count": summary["scenario_count"],
         "expected_passed": summary["expected_passed"],
         "mean_audit_score": summary["mean_audit_score"],
         "mean_upstream_recall": summary["mean_upstream_recall"],
         "high_upstream_but_blocked": summary["high_upstream_but_blocked"],
+        "blocked_reason_distribution": summary.get("blocked_reason_distribution", {}),
         "status_distribution": status_distribution,
         "finding": suite["finding"],
     }
+
+
+def _suite_validation_units(suite: dict) -> str:
+    path = suite["path"]
+    count = _scenario_count(path) if suite["unit_label"] in {
+        "stress scenarios",
+        "raw model outputs",
+        "source-supported model-output variants",
+        "adversarial source-support variants",
+        "curated issue packets",
+        "issue-packet ablations",
+    } else _output_unit_count(path)
+    return f"{count} {suite['unit_label']}"
 
 
 def _robustness_row(payload: dict) -> dict:
     return {
         "id": "annotation_robustness",
         "label": "Annotation robustness recoding",
+        "evidence_class": "coding robustness",
         "validation_units": f"{payload['recoded_evaluations']} strict/lenient recoded evaluations",
         "scenario_count": payload["scenario_count"],
         "rule_pass": f"{payload['all_policy_status_stable']}/{payload['scenario_count']} stable across all policies",
@@ -314,6 +404,7 @@ def _blind_coding_row(payload: dict) -> dict:
     return {
         "id": "blind_coding",
         "label": "Score-blinded dual coding",
+        "evidence_class": "codebook reproducibility",
         "validation_units": f"{payload['packet_count']} packets x {payload['coder_count']} coding passes",
         "scenario_count": payload["packet_count"],
         "rule_pass": f"{first_pair['exact_status_agreement']:.2f} coder agreement; {base_exact:.2f} min base agreement",
@@ -329,6 +420,25 @@ def _blind_coding_row(payload: dict) -> dict:
     }
 
 
+def _source_text_row(payload: dict) -> dict:
+    return {
+        "id": "source_text_verification",
+        "label": "Public source-text anchors",
+        "evidence_class": "external source-grounding check",
+        "validation_units": f"{payload['support_item_count']} public source-support anchor checks",
+        "scenario_count": payload["support_item_count"],
+        "rule_pass": f"{payload['support_items_verified']}/{payload['support_item_count']} verified",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "records_with_text_snapshot": payload["records_with_text_snapshot"],
+            "verified_ratio": payload["verified_ratio"],
+        },
+        "finding": "Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -341,20 +451,24 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['public_system_records']} public-system records, "
         f"{payload['validation_units']['public_retrieval_records']} public retrieval records, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
+        f"{payload['validation_units']['source_bound_model_outputs']} source-supported model-output variants, "
+        f"{payload['validation_units']['adversarial_model_outputs']} adversarial source-support variants, "
         f"{payload['validation_units']['issue_public_records']} issue-specific public output/source records, "
-        f"{payload['validation_units']['issue_gold_sets']} issue-defined positive controls, "
+        f"{payload['validation_units']['issue_gold_sets']} mixed-authority source-screening packets, "
         f"{payload['validation_units']['issue_ablations']} issue ablations)",
         f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
-        f"Composite validation observations: {payload['total_evaluation_rows']}",
+        f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
+        f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
+        "Blocked reason distribution: " + _format_distribution(payload["blocked_reason_distribution"]),
         f"Annotation robustness: {payload['annotation_robustness']['all_policy_status_stable']}/{payload['annotation_robustness']['scenario_count']} stable across base, strict and lenient coding policies",
         _blind_coding_summary(payload),
         "",
-        "| Suite | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
-        "| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |",
+        "| Suite | Evidence role | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
     for row in payload["suites"]:
         status_distribution = ", ".join(f"{status}: {count}" for status, count in sorted(row["status_distribution"].items()))
@@ -364,6 +478,7 @@ def _format_report(payload: dict) -> str:
             + " | ".join(
                 [
                     row["label"],
+                    row["evidence_class"],
                     row["validation_units"],
                     str(row["scenario_count"]),
                     rule_or_stability,
@@ -424,6 +539,20 @@ def _blind_coding_summary(payload: dict) -> str:
         f"{base_exact:.2f} minimum base-coder exact agreement, "
         f"{base_weighted:.2f} minimum base-coder weighted agreement"
     )
+
+
+def _blocked_reason_distribution(rows: list[dict]) -> dict[str, int]:
+    merged: dict[str, int] = {}
+    for row in rows:
+        for reason, count in row.get("blocked_reason_distribution", {}).items():
+            merged[reason] = merged.get(reason, 0) + count
+    return merged
+
+
+def _format_distribution(distribution: dict[str, int]) -> str:
+    if not distribution:
+        return "none"
+    return ", ".join(f"{key}: {value}" for key, value in sorted(distribution.items()))
 
 
 def _metric(value: float | None) -> str:

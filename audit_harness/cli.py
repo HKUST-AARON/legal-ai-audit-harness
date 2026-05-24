@@ -138,6 +138,7 @@ def _format_report(results: list[AuditResult]) -> str:
 def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str:
     rows = _experiment_rows(scenarios, results)
     blocked_despite_recall = [row for row in rows if row["upstream_recall"] is not None and row["upstream_recall"] >= 0.8 and row["allowed_status"] in {"reference_information", "no_external_legal_effect"}]
+    blocked_reasons = _failure_reason_counts(blocked_despite_recall)
     allowed_by_status = {}
     for row in rows:
         allowed_by_status[row["allowed_status"]] = allowed_by_status.get(row["allowed_status"], 0) + 1
@@ -149,6 +150,7 @@ def _format_experiment(scenarios: list[dict], results: list[AuditResult]) -> str
         f"Mean audit score: {_metric(mean(row['total_score'] for row in rows))}",
         f"Mean upstream recall: {_metric(_mean_optional(row['upstream_recall'] for row in rows))}",
         f"High-upstream-performance but procedurally blocked scenarios: {len(blocked_despite_recall)}",
+        "Blocked reason distribution: " + _reason_distribution(blocked_reasons),
         "",
         "## Allowed Status Distribution",
         "",
@@ -201,6 +203,15 @@ def _experiment_payload(path: Path, scenarios: list[dict], results: list[AuditRe
             "mean_audit_score": mean(row["total_score"] for row in rows),
             "mean_upstream_recall": _mean_optional(row["upstream_recall"] for row in rows),
             "high_upstream_but_blocked": len([row for row in rows if row["upstream_recall"] is not None and row["upstream_recall"] >= 0.8 and row["allowed_status"] in {"reference_information", "no_external_legal_effect"}]),
+            "blocked_reason_distribution": _failure_reason_counts(
+                [
+                    row
+                    for row in rows
+                    if row["upstream_recall"] is not None
+                    and row["upstream_recall"] >= 0.8
+                    and row["allowed_status"] in {"reference_information", "no_external_legal_effect"}
+                ]
+            ),
         },
         "results": rows,
     }
@@ -261,6 +272,20 @@ def _experiment_rows(scenarios: list[dict], results: list[AuditResult]) -> list[
         row["upstream_f1"] = metrics.get("f1")
         rows.append(row)
     return rows
+
+
+def _failure_reason_counts(rows: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for row in rows:
+        for reason in row.get("failure_flags", []):
+            counts[reason] = counts.get(reason, 0) + 1
+    return counts
+
+
+def _reason_distribution(counts: dict[str, int]) -> str:
+    if not counts:
+        return "none"
+    return ", ".join(f"{reason}: {count}" for reason, count in sorted(counts.items()))
 
 
 def _mean_optional(values) -> float | None:

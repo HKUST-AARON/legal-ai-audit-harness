@@ -1,13 +1,13 @@
 # Annotation Robustness Study
 
-Base scenarios: 72
-Strict/lenient recoded evaluations: 144
-Strict status stable: 70/72
-Lenient status stable: 72/72
-Stable under all coding policies: 70/72
-Mean score delta, strict: 1.17
-Mean score delta, lenient: 0.57
-Weighted status agreement, base vs strict: 0.98
+Base scenarios: 160
+Strict/lenient recoded evaluations: 320
+Strict status stable: 158/160
+Lenient status stable: 160/160
+Stable under all coding policies: 158/160
+Mean score delta, strict: 0.88
+Mean score delta, lenient: 1.12
+Weighted status agreement, base vs strict: 0.99
 Weighted status agreement, base vs lenient: 1.00
 
 ## Status Stability
@@ -36,6 +36,24 @@ Weighted status agreement, base vs lenient: 1.00
 | public-system-output-mainland_china | professional_support_output | professional_support_output | professional_support_output | 9 | 8 | 9 |
 | public-system-output-united_kingdom | professional_support_output | professional_support_output | professional_support_output | 8 | 7 | 8 |
 | public-system-output-united_states | professional_support_output | professional_support_output | professional_support_output | 9 | 8 | 9 |
+| public-retrieval-canada-vavilov-standard-of-review-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-canada-vavilov-standard-of-review-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-canada-vavilov-standard-of-review-q03 | reference_information | reference_information | reference_information | 10 | 8 | 11 |
+| public-retrieval-canada-vavilov-standard-of-review-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-canada-vavilov-standard-of-review-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-canada-vavilov-standard-of-review-q06 | reference_information | reference_information | reference_information | 10 | 8 | 11 |
+| public-retrieval-eu-gdpr-article15-access-rights-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-eu-gdpr-article15-access-rights-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-eu-gdpr-article15-access-rights-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-eu-gdpr-article15-access-rights-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-eu-gdpr-article15-access-rights-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-eu-gdpr-article15-access-rights-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-germany-right-to-be-forgotten-review-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-germany-right-to-be-forgotten-review-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-germany-right-to-be-forgotten-review-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-germany-right-to-be-forgotten-review-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-germany-right-to-be-forgotten-review-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-germany-right-to-be-forgotten-review-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
@@ -58,6 +76,76 @@ Weighted status agreement, base vs lenient: 1.00
 | codex55-us-01 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-us-02 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-us-03 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| source-bound-codex55-eu-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-eu-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-eu-03 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-eu-04 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-uk-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-uk-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-uk-03 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-us-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-us-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-us-03 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-codex55-eu-01--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-01--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-eu-01--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-01--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-01--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-01--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-02--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-02--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-eu-02--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-02--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-02--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-02--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-03--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-03--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-eu-03--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-03--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-03--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-03--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-04--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-04--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-eu-04--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-04--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-eu-04--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-eu-04--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-01--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-uk-01--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-uk-01--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-01--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-01--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-uk-01--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-02--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-uk-02--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-uk-02--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-02--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-02--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-uk-02--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-03--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-uk-03--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-uk-03--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-03--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-uk-03--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-uk-03--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-01--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-us-01--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-us-01--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-01--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-01--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-us-01--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-02--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-us-02--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-us-02--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-02--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-02--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-us-02--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-03--contradictory-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-us-03--counter-material-omission | reference_information | reference_information | reference_information | 8 | 7 | 10 |
+| source-bound-codex55-us-03--missing-output-link | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-03--out-of-manifest-source | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| source-bound-codex55-us-03--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect | 9 | 9 | 11 |
+| source-bound-codex55-us-03--wrong-locator | reference_information | reference_information | reference_information | 9 | 9 | 11 |
 | issue-public-output-eu-official-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | issue-public-output-uk-tna-fairchild-mesothelioma | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | issue-public-output-us-courtlistener-loper-bright | reference_information | reference_information | reference_information | 9 | 7 | 10 |

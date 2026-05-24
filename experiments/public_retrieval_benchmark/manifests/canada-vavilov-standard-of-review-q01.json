@@ -1,0 +1,93 @@
+{
+  "id": "canada-vavilov-standard-of-review-q01",
+  "issue_id": "canada-vavilov-standard-of-review",
+  "query": "Vavilov Dunsmuir standard of review",
+  "top_k": 10,
+  "source_system": "Supreme Court of Canada Lexum search",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "vavilov-statutory-appeal-limits"
+  ],
+  "records": [
+    {
+      "id": "vavilov-2019-scc-65",
+      "title": "Canada (Minister of Citizenship and Immigration) v. Vavilov",
+      "citation": "2019 SCC 65",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/18078/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 1,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-post-2019-scc-67",
+      "title": "Canada Post Corp. v. Canadian Union of Postal Workers",
+      "citation": "2019 SCC 67",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/18086/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 2,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+      "title": "Society of Composers, Authors and Music Publishers of Canada v. Entertainment Software Association",
+      "citation": "2022 SCC 30",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19441/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 3,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-law-society-of-saskatchewan-v-abrametz",
+      "title": "Law Society of Saskatchewan v. Abrametz",
+      "citation": "2022 SCC 29",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19439/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 4,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-pepa-v-canada-citizenship-and-immigration",
+      "title": "Pepa v. Canada (Citizenship and Immigration)",
+      "citation": "2025 SCC 21",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21114/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 5,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-yatar-v-td-insurance-meloche-monnex",
+      "title": "Yatar v. TD Insurance Meloche Monnex",
+      "citation": "2024 SCC 8",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20336/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 6,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-mason-v-canada-citizenship-and-immigration",
+      "title": "Mason v. Canada (Citizenship and Immigration)",
+      "citation": "2023 SCC 21",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20081/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 7,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-auer-v-auer",
+      "title": "Auer v. Auer",
+      "citation": "2024 SCC 36",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/20730/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 8,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-minister-of-citizenship-and-immigration-v-alexander-vavilov",
+      "title": "Minister of Citizenship and Immigration v. Alexander Vavilov",
+      "citation": "",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-l-csc-a/en/item/17079/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 9,
+      "source_system": "Supreme Court of Canada Lexum search"
+    },
+    {
+      "id": "canada-search-bell-canada-et-al-v-attorney-general-of-canada",
+      "title": "Bell Canada, et al. v. Attorney General of Canada",
+      "citation": "",
+      "source_url": "https://decisions.scc-csc.ca/scc-csc/scc-l-csc-a/en/item/17083/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+      "rank": 10,
+      "source_system": "Supreme Court of Canada Lexum search"
+    }
+  ]
+}

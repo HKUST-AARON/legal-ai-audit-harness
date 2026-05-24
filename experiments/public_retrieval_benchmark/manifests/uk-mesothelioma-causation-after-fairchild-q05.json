@@ -4,6 +4,10 @@
   "query": "Compensation Act 2006 section 3 Barker mesothelioma",
   "top_k": 10,
   "source_system": "The National Archives Find Case Law Atom search",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "compensation-act-2006-s3"
+  ],
   "records": [
     {
       "id": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",

@@ -285,14 +285,14 @@ def fetch(url: str, path: Path, refresh: bool) -> str:
 
 
 def map_us_record(case_name: str, citations: list[str], absolute_url: str) -> str:
-    text_value = " ".join([case_name, " ".join(citations), absolute_url]).lower()
-    if "loper bright" in text_value:
+    citation_text = " ".join(citations).lower()
+    if "603 u.s. 369" in citation_text:
         return "loper-bright-603-us-369"
-    if "chevron" in text_value:
+    if "467 u.s. 837" in citation_text:
         return "chevron-467-us-837"
-    if "skidmore" in text_value:
+    if "323 u.s. 134" in citation_text:
         return "skidmore-323-us-134"
-    if "kisor" in text_value:
+    if "588 u.s. 558" in citation_text:
         return "kisor-588-us-558"
     return "us-search-" + re.sub(r"[^a-z0-9]+", "-", case_name.lower()).strip("-")[:60]
 

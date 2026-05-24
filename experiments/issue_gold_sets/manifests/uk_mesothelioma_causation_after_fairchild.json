@@ -14,7 +14,33 @@
       "citation": "[2002] UKHL 22",
       "source_url": "https://publications.parliament.uk/pa/ld200102/ldjudgmt/jd020620/fchild-1.htm",
       "authority_level": "house_of_lords_precedent",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "fairchild",
+        "material increase",
+        "material-risk",
+        "mesothelioma risk"
+      ],
+      "source_support": [
+        {
+          "id": "fairchild-2002-ukhl-22-support-1",
+          "locator": "[2002] UKHL 22",
+          "source_url": "https://publications.parliament.uk/pa/ld200102/ldjudgmt/jd020620/fchild-1.htm",
+          "support_scope": "high_authority",
+          "source_excerpt": "Fairchild recognizes recovery where wrongful exposure materially increased the risk of mesothelioma.",
+          "excerpt_sha256": "8db8edc1acf7644cac4d95dbadb5a9bfc826431432c73d8abad15f0b3438043b",
+          "support_terms": [
+            "fairchild",
+            "material increase",
+            "material-risk",
+            "mesothelioma risk"
+          ],
+          "contradiction_patterns": [
+            "fairchild rejects material increase in risk",
+            "fairchild is not about mesothelioma risk"
+          ]
+        }
+      ]
     },
     {
       "id": "barker-2006-ukhl-20",
@@ -22,7 +48,33 @@
       "citation": "[2006] UKHL 20",
       "source_url": "https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060503/barker.pdf",
       "authority_level": "house_of_lords_subsequent_limiting_precedent",
-      "issue_role": "limiting_material"
+      "issue_role": "limiting_material",
+      "support_terms": [
+        "barker",
+        "proportionate liability",
+        "proportionate risk",
+        "limited liability"
+      ],
+      "source_support": [
+        {
+          "id": "barker-2006-ukhl-20-support-1",
+          "locator": "[2006] UKHL 20",
+          "source_url": "https://publications.parliament.uk/pa/ld200506/ldjudgmt/jd060503/barker.pdf",
+          "support_scope": "limiting_material",
+          "source_excerpt": "Barker limited Fairchild by proportionate liability or proportionate risk before statutory reversal for mesothelioma.",
+          "excerpt_sha256": "0fc36597aebf099ce3377b799e76b0ec83e337155d2f6d611e75f931e60f614d",
+          "support_terms": [
+            "barker",
+            "proportionate liability",
+            "proportionate risk",
+            "limited liability"
+          ],
+          "contradiction_patterns": [
+            "barker imposed full liability for mesothelioma",
+            "barker was never limited by statute"
+          ]
+        }
+      ]
     },
     {
       "id": "compensation-act-2006-s3",
@@ -30,7 +82,35 @@
       "citation": "Compensation Act 2006, s. 3",
       "source_url": "https://www.legislation.gov.uk/ukpga/2006/29/section/3",
       "authority_level": "governing_statute",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "compensation act",
+        "section 3",
+        "reversed barker",
+        "reversed for mesothelioma",
+        "altered for mesothelioma"
+      ],
+      "source_support": [
+        {
+          "id": "compensation-act-2006-s3-support-1",
+          "locator": "Compensation Act 2006, s. 3",
+          "source_url": "https://www.legislation.gov.uk/ukpga/2006/29/section/3",
+          "support_scope": "high_authority",
+          "source_excerpt": "Compensation Act 2006 section 3 reversed Barker for mesothelioma and reversed for mesothelioma the proportionate liability rule for responsible persons.",
+          "excerpt_sha256": "3950b51ab242c15468284713058c766de5cc6e1bd6c39ca663245781ae8c063a",
+          "support_terms": [
+            "compensation act",
+            "section 3",
+            "reversed barker",
+            "reversed for mesothelioma",
+            "altered for mesothelioma"
+          ],
+          "contradiction_patterns": [
+            "compensation act did not reverse barker",
+            "section 3 preserves barker proportionate liability"
+          ]
+        }
+      ]
     },
     {
       "id": "sienkiewicz-2011-uksc-10",
@@ -38,7 +118,161 @@
       "citation": "[2011] UKSC 10",
       "source_url": "https://www.supremecourt.uk/cases/uksc-2009-0219",
       "authority_level": "uk_supreme_court_precedent",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "support_terms": [
+        "sienkiewicz",
+        "mesothelioma",
+        "risk",
+        "causation"
+      ],
+      "source_support": [
+        {
+          "id": "sienkiewicz-2011-uksc-10-support-1",
+          "locator": "[2011] UKSC 10",
+          "source_url": "https://www.supremecourt.uk/cases/uksc-2009-0219",
+          "support_scope": "high_authority",
+          "source_excerpt": "Sienkiewicz confirms the mesothelioma causation rule and rejects a doubling-of-risk requirement.",
+          "excerpt_sha256": "a37e69a02990706d6b07cff3564935afe7962ecaf76bea4aa5edbaa566cf478d",
+          "support_terms": [
+            "sienkiewicz",
+            "mesothelioma",
+            "risk",
+            "causation"
+          ],
+          "contradiction_patterns": [
+            "sienkiewicz requires doubling of risk",
+            "sienkiewicz rejects fairchild"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "durham-2012-uksc-14",
+      "title": "Durham v BAI (Run Off) Ltd",
+      "citation": "[2012] UKSC 14",
+      "source_url": "https://www.supremecourt.uk/cases/uksc-2011-0102",
+      "authority_level": "uk_supreme_court_related_precedent",
+      "issue_role": "supplementary_material",
+      "support_terms": [
+        "durham",
+        "follow-on",
+        "limiting"
+      ],
+      "source_support": [
+        {
+          "id": "durham-2012-uksc-14-support-1",
+          "locator": "[2012] UKSC 14",
+          "source_url": "https://www.supremecourt.uk/cases/uksc-2011-0102",
+          "support_scope": "supplementary_material",
+          "source_excerpt": "Durham is a follow-on mesothelioma authority relevant to the Fairchild statutory setting.",
+          "excerpt_sha256": "e8db448f7f4238893831ec1d714fa517a2578083541efde9bca37093d8bdd53f",
+          "support_terms": [
+            "durham",
+            "follow-on",
+            "limiting"
+          ],
+          "contradiction_patterns": [
+            "durham is unrelated to mesothelioma"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "williams-2011-ewca-civ-1242",
+      "title": "Williams v University of Birmingham",
+      "citation": "[2011] EWCA Civ 1242",
+      "source_url": "https://www.bailii.org/ew/cases/EWCA/Civ/2011/1242.html",
+      "authority_level": "court_of_appeal_limiting_precedent",
+      "issue_role": "supplementary_material",
+      "support_terms": [
+        "williams",
+        "mesothelioma",
+        "risk",
+        "causation"
+      ],
+      "source_support": [
+        {
+          "id": "williams-2011-ewca-civ-1242-support-1",
+          "locator": "[2011] EWCA Civ 1242",
+          "source_url": "https://www.bailii.org/ew/cases/EWCA/Civ/2011/1242.html",
+          "support_scope": "supplementary_material",
+          "source_excerpt": "Williams limits extension of the Fairchild exception outside legally material mesothelioma exposure.",
+          "excerpt_sha256": "b21e6f263a19f235737c4fe1254452545aecc9a800fcb7cb2feda7a53f29e3df",
+          "support_terms": [
+            "williams",
+            "mesothelioma",
+            "risk",
+            "causation"
+          ],
+          "contradiction_patterns": [
+            "williams extends fairchild generally",
+            "williams removes limits outside mesothelioma"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heneghan-2016-ewca-civ-86",
+      "title": "Heneghan v Manchester Dry Docks Ltd",
+      "citation": "[2016] EWCA Civ 86",
+      "source_url": "https://www.bailii.org/ew/cases/EWCA/Civ/2016/86.html",
+      "authority_level": "court_of_appeal_limiting_precedent",
+      "issue_role": "supplementary_material",
+      "support_terms": [
+        "heneghan",
+        "fairchild",
+        "risk",
+        "causation"
+      ],
+      "source_support": [
+        {
+          "id": "heneghan-2016-ewca-civ-86-support-1",
+          "locator": "[2016] EWCA Civ 86",
+          "source_url": "https://www.bailii.org/ew/cases/EWCA/Civ/2016/86.html",
+          "support_scope": "supplementary_material",
+          "source_excerpt": "Heneghan limits extension of Fairchild-style reasoning outside the mesothelioma setting.",
+          "excerpt_sha256": "9bffaaf15d3e541948e81f1184a3d7f177f66a18d3188361a93abbc59ca6e2b2",
+          "support_terms": [
+            "heneghan",
+            "fairchild",
+            "risk",
+            "causation"
+          ],
+          "contradiction_patterns": [
+            "heneghan extends fairchild generally",
+            "heneghan removes limits outside mesothelioma"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bonnington-1956-ac-613",
+      "title": "Bonnington Castings Ltd v Wardlaw",
+      "citation": "[1956] AC 613",
+      "source_url": "https://www.bailii.org/uk/cases/UKHL/1956/1.html",
+      "authority_level": "house_of_lords_related_causation_precedent",
+      "issue_role": "supplementary_material",
+      "support_terms": [
+        "bonnington",
+        "causation"
+      ],
+      "source_support": [
+        {
+          "id": "bonnington-1956-ac-613-support-1",
+          "locator": "[1956] AC 613",
+          "source_url": "https://www.bailii.org/uk/cases/UKHL/1956/1.html",
+          "support_scope": "supplementary_material",
+          "source_excerpt": "Bonnington is a causation authority distinct from the Fairchild mesothelioma exception.",
+          "excerpt_sha256": "c3b50418ccadc6e07ab5171d41bbf95fd837c49b33563fc518d9d89a7872dbb8",
+          "support_terms": [
+            "bonnington",
+            "causation"
+          ],
+          "contradiction_patterns": [
+            "bonnington is the fairchild mesothelioma exception"
+          ]
+        }
+      ]
     }
   ]
 }

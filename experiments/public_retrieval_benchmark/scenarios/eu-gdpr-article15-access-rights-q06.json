@@ -1,0 +1,100 @@
+{
+  "id": "public-retrieval-eu-gdpr-article15-access-rights-q06",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Public case_law_known_item output for query: C-307/22 GDPR medical records access",
+  "benchmark_scope": "case_law_known_item",
+  "mixed_authority_required_elsewhere": [
+    "gdpr-art-15",
+    "gdpr-art-12-5",
+    "gdpr-art-15-4"
+  ],
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every visible result has a public source URL and source-system label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, source endpoint, snapshot and rank window are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined high-authority set."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined counter-material set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected by a reviewer but does not create a party-facing contestation pathway."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The query, manifest, scenario and harness result are logged as reproducible artifacts."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif",
+      "cjeu-c-307-22-ft"
+    ],
+    "retrieved_high_authority": [
+      "cjeu-c-307-22-ft"
+    ],
+    "counter_or_limiting": [
+      "google-spain-c-131-12"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "cjeu-c-307-22-ft"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/eu-gdpr-article15-access-rights-q06.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public search rank 1 makes this material visible: Judgment - 26/10/2023 - FT (Copies du dossier médical) Case C-307/22 Reports of Cases published in the electronic Reports of Cases (Court Reports - general) Links to the texts",
+        "source_ids": [
+          "cjeu-c-307-22-ft"
+        ],
+        "locators": [
+          "Case C-307/22"
+        ],
+        "output_rank": 1
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "cjeu-c-307-22-ft",
+        "locator": "Case C-307/22",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

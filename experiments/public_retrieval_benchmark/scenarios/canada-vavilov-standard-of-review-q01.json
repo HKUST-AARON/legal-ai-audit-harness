@@ -1,0 +1,270 @@
+{
+  "id": "public-retrieval-canada-vavilov-standard-of-review-q01",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Public case_law_only output for query: Vavilov Dunsmuir standard of review",
+  "benchmark_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "vavilov-statutory-appeal-limits"
+  ],
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every visible result has a public source URL and source-system label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, source endpoint, snapshot and rank window are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined high-authority set."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined counter-material set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected by a reviewer but does not create a party-facing contestation pathway."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The query, manifest, scenario and harness result are logged as reproducible artifacts."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "retrieved_high_authority": [
+      "vavilov-2019-scc-65",
+      "canada-post-2019-scc-67"
+    ],
+    "counter_or_limiting": [
+      "dunsmuir-2008-scc-9"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "vavilov-2019-scc-65",
+      "canada-post-2019-scc-67",
+      "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+      "canada-search-law-society-of-saskatchewan-v-abrametz",
+      "canada-search-pepa-v-canada-citizenship-and-immigration",
+      "canada-search-yatar-v-td-insurance-meloche-monnex",
+      "canada-search-mason-v-canada-citizenship-and-immigration",
+      "canada-search-auer-v-auer",
+      "canada-search-minister-of-citizenship-and-immigration-v-alexander-vavilov",
+      "canada-search-bell-canada-et-al-v-attorney-general-of-canada"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 0.2,
+    "recall": 0.6666666666666666,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/canada-vavilov-standard-of-review-q01.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public search rank 1 makes this material visible: Canada (Minister of Citizenship and Immigration) v. Vavilov",
+        "source_ids": [
+          "vavilov-2019-scc-65"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public search rank 2 makes this material visible: Canada Post Corp. v. Canadian Union of Postal Workers",
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ],
+        "locators": [
+          "2019 SCC 67"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public search rank 3 makes this material visible: Society of Composers, Authors and Music Publishers of Canada v. Entertainment Software Association",
+        "source_ids": [
+          "canada-search-society-of-composers-authors-and-music-publishers-of-canada-"
+        ],
+        "locators": [
+          "2022 SCC 30"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public search rank 4 makes this material visible: Law Society of Saskatchewan v. Abrametz",
+        "source_ids": [
+          "canada-search-law-society-of-saskatchewan-v-abrametz"
+        ],
+        "locators": [
+          "2022 SCC 29"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public search rank 5 makes this material visible: Pepa v. Canada (Citizenship and Immigration)",
+        "source_ids": [
+          "canada-search-pepa-v-canada-citizenship-and-immigration"
+        ],
+        "locators": [
+          "2025 SCC 21"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public search rank 6 makes this material visible: Yatar v. TD Insurance Meloche Monnex",
+        "source_ids": [
+          "canada-search-yatar-v-td-insurance-meloche-monnex"
+        ],
+        "locators": [
+          "2024 SCC 8"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public search rank 7 makes this material visible: Mason v. Canada (Citizenship and Immigration)",
+        "source_ids": [
+          "canada-search-mason-v-canada-citizenship-and-immigration"
+        ],
+        "locators": [
+          "2023 SCC 21"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public search rank 8 makes this material visible: Auer v. Auer",
+        "source_ids": [
+          "canada-search-auer-v-auer"
+        ],
+        "locators": [
+          "2024 SCC 36"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public search rank 9 makes this material visible: Minister of Citizenship and Immigration v. Alexander Vavilov",
+        "source_ids": [
+          "canada-search-minister-of-citizenship-and-immigration-v-alexander-vavilov"
+        ],
+        "locators": [
+          "https://decisions.scc-csc.ca/scc-csc/scc-l-csc-a/en/item/17079/index.do?q=Vavilov+Dunsmuir+standard+of+review"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public search rank 10 makes this material visible: Bell Canada, et al. v. Attorney General of Canada",
+        "source_ids": [
+          "canada-search-bell-canada-et-al-v-attorney-general-of-canada"
+        ],
+        "locators": [
+          "https://decisions.scc-csc.ca/scc-csc/scc-l-csc-a/en/item/17083/index.do?q=Vavilov+Dunsmuir+standard+of+review"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "vavilov-2019-scc-65",
+        "locator": "2019 SCC 65",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "canada-post-2019-scc-67",
+        "locator": "2019 SCC 67",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "locator": "2022 SCC 30",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "canada-search-law-society-of-saskatchewan-v-abrametz",
+        "locator": "2022 SCC 29",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "locator": "2025 SCC 21",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "canada-search-yatar-v-td-insurance-meloche-monnex",
+        "locator": "2024 SCC 8",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "canada-search-mason-v-canada-citizenship-and-immigration",
+        "locator": "2023 SCC 21",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "canada-search-auer-v-auer",
+        "locator": "2024 SCC 36",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "canada-search-minister-of-citizenship-and-immigration-v-alexander-vavilov",
+        "locator": "https://decisions.scc-csc.ca/scc-csc/scc-l-csc-a/en/item/17079/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "canada-search-bell-canada-et-al-v-attorney-general-of-canada",
+        "locator": "https://decisions.scc-csc.ca/scc-csc/scc-l-csc-a/en/item/17083/index.do?q=Vavilov+Dunsmuir+standard+of+review",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

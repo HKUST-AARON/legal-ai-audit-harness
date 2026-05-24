@@ -38,6 +38,7 @@ python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensiti
 python scripts/collect_public_system_outputs.py
 python scripts/collect_issue_public_outputs.py
 python scripts/collect_public_retrieval_benchmark.py
+python scripts/build_model_output_repairs.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
@@ -140,15 +141,18 @@ Current coverage:
 | Public legal-record metadata | 120 | Tests source reconstruction across six public legal-record sources. |
 | Public legal-system outputs | 60 | Tests ordered real upstream public legal-output reconstruction. |
 | Issue-specific public output/source packets | 19 | Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements. |
-| Public retrieval benchmark | 99 | Tests true public search outputs against issue-defined high-authority and counter-material gold sets. |
+| Endpoint-matched public retrieval benchmark | 225 | Tests public case-law or known-item outputs against authority sets the endpoint can return, while mixed-authority gaps are recorded separately. |
 | Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
-| Issue-defined positive controls | 5 | Tests normative material screening with source-bound high-authority and counter-material sets. |
+| Source-supported model-output repairs | 10 | Tests whether the same model outputs qualify only after manifest, locator, hashed source-support excerpt, procedural source-tag and issue-set validation. |
+| Adversarial source-support repairs | 60 | Tests whether locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions are rejected. |
+| Public source-text anchors | 30 | Checks manifest support terms against extracted public source text snapshots; current result is 21/30 verified across 21 records with snapshots. |
+| Mixed-authority public source-screening packets | 5 | Tests normative material screening with source-bound statute, case and public-source packets. |
 | Issue-defined ablations | 20 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
-| Annotation robustness recoding | 144 | Re-scores all 72 scenario packets under strict and lenient coding policies to test status stability. |
-| Score-blinded dual coding | 144 | Two coding passes score all 72 packets without original scores or expected outcomes, then compare coder-coder and base-coder status agreement. |
-| Full-threshold sensitivity | 360 | Re-evaluates all 72 scenario packets under normative thresholds 8-12. |
+| Annotation robustness recoding | 320 | Re-scores all 160 scenario packets under strict and lenient coding policies to test status stability. |
+| Score-blinded dual coding | 320 | Two coding passes score all 160 packets without original scores or expected outcomes, then compare coder-coder and base-coder status agreement. |
+| Full-threshold sensitivity | 800 | Re-evaluates all 160 scenario packets under normative thresholds 8-12. |
 
-The current full validation report covers 72 scenario files containing 343 embedded records/items, 144 strict/lenient recoded evaluations, 144 score-blinded coder evaluations, and 360 full-threshold sensitivity evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the public retrieval benchmark, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and now reports both inter-coder and base-coder agreement.
+The current full validation report covers 160 scenario files containing 539 embedded records/items, 30 public source-text anchor checks, plus strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the endpoint-matched public retrieval benchmark, source-supported model-output repair layer, public source-text anchor layer, adversarial repair layer, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, source-support interventions, external source anchors, negative controls, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and reports both inter-coder and base-coder agreement.
 
 ## Jurisdiction Profiles
 
@@ -156,7 +160,14 @@ Profiles in `examples/jurisdiction_profiles/` parameterize `H` and `K` for diffe
 
 ## Output Evidence Auditing
 
-Scenarios can include an `evidence_packet` object with output-to-source mappings. This sits above any upstream implementation. The harness reports evidence fidelity, evidence coverage, source-tag coverage, and procedural-source-tag coverage. Unsupported output units are withdrawal-level failures when they claim external procedural status; missing or nonprocedural source tags downgrade external status because reviewers cannot tell whether a citation was tool-verified, officially sourced, user-verified, public metadata, or still needs verification.
+Scenarios can include an `evidence_packet` object with output-to-source mappings. This sits above any upstream implementation. The harness reports structural evidence fidelity, evidence coverage, source-tag coverage, and procedural-source-tag coverage. Unsupported output units are withdrawal-level failures when they claim external procedural status; missing or nonprocedural source tags downgrade external status because reviewers cannot tell whether a citation was tool-verified, officially sourced, user-verified, public metadata, or still needs verification.
+
+The source-text anchor verifier adds an external check for issue-manifest support. It uses committed public source snapshots by default and only refreshes public pages when `--refresh` is supplied:
+
+```bash
+python scripts/verify_source_text_anchors.py
+python scripts/verify_source_text_anchors.py --refresh
+```
 
 ## Review Gates
 
@@ -173,13 +184,13 @@ python -m audit_harness.cli experiment experiments/real_cases/scenarios --out ex
 
 By default the script uses the committed public metadata snapshots for deterministic reruns. Pass `--refresh` to download fresh snapshots. The experiment samples 20 records per jurisdiction with a fixed seed, writes source manifests, and runs the harness over the generated output evidence packets. It tests whether evidence packets can be reconstructed and audited; it does not evaluate legal merits, ranking quality or any upstream system architecture. For that reason these metadata-only packets are capped at `professional_support_output`, not `normative_material_screening_output`.
 
-The repository also includes five issue-defined positive-control packets:
+The repository also includes five mixed-authority public source-screening packets:
 
 ```bash
 python -m audit_harness.cli experiment experiments/issue_gold_sets/scenarios --out experiments/issue_gold_sets/results/issue_gold_set_experiment.md --json-out experiments/issue_gold_sets/results/issue_gold_set_experiment.json
 ```
 
-The current positive controls cover:
+The current mixed-authority packets cover:
 
 - U.S. agency statutory interpretation after `Loper Bright`, with manually curated high-authority, limiting and invalidated-treatment labels for `Loper Bright`, `Chevron`, `Skidmore`, APA `5 U.S.C. 706` and `Kisor`;
 - English-law mesothelioma causation after `Fairchild`, `Barker`, the Compensation Act 2006 and `Sienkiewicz`;
@@ -187,7 +198,7 @@ The current positive controls cover:
 - Canadian administrative-law standard of review after `Vavilov`, including the companion Supreme Court of Canada decisions and historical `Dunsmuir` framework;
 - German/EU right-to-be-forgotten review, including the Federal Constitutional Court decisions and the EU fundamental-rights materials they interact with.
 
-The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 72 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
+The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 160 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
 
 The issue-ablation suite is generated from the same issue packets:
 
@@ -206,7 +217,7 @@ The repository includes a coding-uncertainty experiment:
 python scripts/run_annotation_robustness.py
 ```
 
-The script re-scores all 72 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
+The script re-scores all 160 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
 
 ## Score-Blinded Dual Coding Study
 
@@ -217,7 +228,7 @@ python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 ```
 
-The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 72 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 160 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
 
 ## Raw Model Output Pilot
 
@@ -227,7 +238,25 @@ The repository includes a ten-output Codex `gpt-5.5` / `xhigh` pilot:
 python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
 ```
 
-Raw outputs are stored in `experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md`. The pilot asks whether fluent model answers with strong authority and counter-material coverage can claim `normative_material_screening_output` status without source-bound evidence. The current result is deliberately strict: all ten outputs are downgraded to `reference_information` because their citations are marked `needs_verification`.
+Raw outputs are stored in `experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md`. The pilot asks whether fluent model answers with strong authority and counter-material coverage can claim `normative_material_screening_output` status without source-support evidence. The current result is deliberately strict: all ten outputs are downgraded to `reference_information` because their citations are marked `needs_verification`.
+
+The source-supported repair layer holds the same model answers constant and runs:
+
+```bash
+python scripts/build_model_output_repairs.py
+python -m audit_harness.cli experiment experiments/model_output_repairs/scenarios --out experiments/model_output_repairs/results/model_output_repair_experiment.md --json-out experiments/model_output_repairs/results/model_output_repair_experiment.json
+```
+
+The builder does not simply assign higher scores. It validates each repaired output-source link against the issue manifest, locator, hashed manifest source-support excerpt, contradiction patterns, procedural source tag and high-authority/counter-material coverage before writing `source_binding_validation` and the derived audit-vector scores. The current result is the paired contrast used in the paper: all ten raw outputs remain `reference_information`; all ten manifest-backed validator repairs qualify as `normative_material_screening_output`.
+
+The adversarial repair layer then attacks the same repair gate:
+
+```bash
+python scripts/build_model_output_adversarial.py
+python -m audit_harness.cli experiment experiments/model_output_adversarial/scenarios --out experiments/model_output_adversarial/results/model_output_adversarial_experiment.md --json-out experiments/model_output_adversarial/results/model_output_adversarial_experiment.json
+```
+
+It generates sixty negative controls from the ten model outputs: locator mismatches, unsupported claims, contradiction-pattern claims, out-of-manifest sources, missing output-source links and counter-material omissions. All sixty are rejected despite high upstream recall: forty are capped at `reference_information`, and twenty unsupported or contradictory source-support variants are withdrawn as `no_external_legal_effect`.
 
 ## Issue-Specific Public Output/Source Study
 
@@ -242,14 +271,14 @@ The default command uses committed snapshots. Pass `--refresh` to fetch current 
 
 ## Public Retrieval Benchmark
 
-The repository includes a true public-search benchmark over issue-defined authority sets:
+The repository includes an endpoint-matched public-search benchmark over issue-defined authority sets:
 
 ```bash
 python scripts/collect_public_retrieval_benchmark.py
 python -m audit_harness.cli experiment experiments/public_retrieval_benchmark/scenarios --out experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.md --json-out experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.json
 ```
 
-The benchmark freezes twelve public search outputs: six CourtListener queries for U.S. agency deference after `Loper Bright`, and six National Archives queries for English mesothelioma causation after `Fairchild`. It then measures high-authority recall, counter-material recall, source reconstruction and procedural status. The current result is stringent: all twelve real search outputs remain `reference_information`, with mean high-authority recall of 0.11, because top-k public search results do not preserve the complete issue-specific authority and counter-material chain.
+The benchmark freezes thirty public search outputs across five issue families: U.S. agency deference after `Loper Bright`, English mesothelioma causation after `Fairchild`, Canadian administrative-law standard of review after `Vavilov`, German/EU right-to-be-forgotten review, and EU GDPR Article 15 access rights. It uses committed CourtListener, National Archives, Supreme Court of Canada Lexum, OpenLegalData and CURIA snapshots, then measures high-authority recall, counter-material recall, source reconstruction and procedural status. The gold sets are matched to endpoint scope, so case-law endpoints are not penalized for failing to return legislation; mixed statute/case screening is tested in the source-screening packets. The current result is stringent: all thirty real search outputs remain `reference_information`, with mean high-authority recall of 0.26 and mean counter-material recall of 0.00, because top-k public search results do not preserve the complete issue-specific authority and counter-material chain.
 
 ## Public System Output Pilot
 

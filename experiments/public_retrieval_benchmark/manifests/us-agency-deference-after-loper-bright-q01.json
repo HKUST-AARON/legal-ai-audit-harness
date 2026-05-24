@@ -4,6 +4,10 @@
   "query": "Loper Bright Chevron Skidmore Kisor",
   "top_k": 10,
   "source_system": "CourtListener opinion search API",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "apa-5-usc-706"
+  ],
   "records": [
     {
       "id": "loper-bright-603-us-369",

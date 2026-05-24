@@ -13,6 +13,7 @@
       "expected_allowed_status": "professional_support_output",
       "expected_disposition": "none",
       "expected_passed": true,
+      "failure_flags": [],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -47,6 +48,7 @@
       "expected_allowed_status": "professional_support_output",
       "expected_disposition": "none",
       "expected_passed": true,
+      "failure_flags": [],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -82,6 +84,7 @@
       "expected_allowed_status": "professional_support_output",
       "expected_disposition": "none",
       "expected_passed": true,
+      "failure_flags": [],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -116,6 +119,7 @@
       "expected_allowed_status": "professional_support_output",
       "expected_disposition": "none",
       "expected_passed": true,
+      "failure_flags": [],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -150,6 +154,7 @@
       "expected_allowed_status": "professional_support_output",
       "expected_disposition": "none",
       "expected_passed": true,
+      "failure_flags": [],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -185,6 +190,7 @@
       "expected_allowed_status": "professional_support_output",
       "expected_disposition": "none",
       "expected_passed": true,
+      "failure_flags": [],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -210,6 +216,7 @@
   ],
   "scenario_path": "experiments/real_cases/scenarios",
   "summary": {
+    "blocked_reason_distribution": {},
     "expected_passed": 6,
     "high_upstream_but_blocked": 0,
     "mean_audit_score": 8.666666666666666,

@@ -4,6 +4,10 @@
   "query": "agency deference after Loper Bright Chevron",
   "top_k": 10,
   "source_system": "CourtListener opinion search API",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "apa-5-usc-706"
+  ],
   "records": [
     {
       "id": "loper-bright-603-us-369",
@@ -22,7 +26,7 @@
       "source_system": "CourtListener opinion search API"
     },
     {
-      "id": "loper-bright-603-us-369",
+      "id": "us-search-loper-bright-enterprises-inc-v-gina-raimondo",
       "title": "Loper Bright Enterprises, Inc v. Gina Raimondo",
       "citation": "45 F.4th 359",
       "source_url": "https://www.courtlistener.com/opinion/7856351/loper-bright-enterprises-inc-v-gina-raimondo/",
@@ -30,7 +34,7 @@
       "source_system": "CourtListener opinion search API"
     },
     {
-      "id": "loper-bright-603-us-369",
+      "id": "us-search-loper-bright-enterprises-inc-v-wilbur-l-ross-jr",
       "title": "Loper Bright Enterprises, Inc. v. Wilbur L. Ross, Jr.",
       "citation": "",
       "source_url": "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/",

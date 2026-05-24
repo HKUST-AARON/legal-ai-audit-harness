@@ -1,0 +1,23 @@
+{
+  "id": "eu-gdpr-article15-access-rights-q03",
+  "issue_id": "eu-gdpr-article15-access-rights",
+  "query": "C-131/12 Google Spain data protection",
+  "top_k": 10,
+  "source_system": "CURIA case-law list search",
+  "endpoint_scope": "case_law_known_item",
+  "mixed_authority_required_elsewhere": [
+    "gdpr-art-15",
+    "gdpr-art-12-5",
+    "gdpr-art-15-4"
+  ],
+  "records": [
+    {
+      "id": "eu-search-judgment-of-the-court-grand-chamber-13-may-2014-google-spain",
+      "title": "Judgment of the Court (Grand Chamber), 13 May 2014 Google Spain SL and Google Inc. v Agencia Española de Protección de Datos (AEPD) and Mario Costeja González Request for a prelimi",
+      "citation": "",
+      "source_url": "https://juris.curia.europa.eu/juris/document/document.jsf;jsessionid=CC0AC23D7801AF0262DF59EA2F3C9BE2?text=&docid=138782&pageIndex=0&doclang=en&mode=lst&dir=&occ=first&part=1&cid=2360498",
+      "rank": 1,
+      "source_system": "CURIA case-law list search"
+    }
+  ]
+}

@@ -4,6 +4,10 @@
   "query": "Chevron overruled Skidmore APA 706",
   "top_k": 10,
   "source_system": "CourtListener opinion search API",
+  "endpoint_scope": "case_law_only",
+  "mixed_authority_required_elsewhere": [
+    "apa-5-usc-706"
+  ],
   "records": [
     {
       "id": "us-search-restaurant-law-center-v-labr",

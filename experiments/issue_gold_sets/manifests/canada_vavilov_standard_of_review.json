@@ -14,7 +14,26 @@
       "citation": "2019 SCC 65",
       "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
       "authority_level": "current_controlling_supreme_court_precedent",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "source_support": [
+        {
+          "id": "vavilov-2019-scc-65-support-1",
+          "locator": "2019 SCC 65",
+          "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
+          "support_scope": "high_authority",
+          "source_excerpt": "Vavilov sets the current Canadian administrative-law standard-of-review framework, including reasonableness review and correctness exceptions.",
+          "excerpt_sha256": "81a52f5f363dd8fa7225817b990561c37940f7d67d9a85ee3a105ece5245990d",
+          "support_terms": [
+            "canada",
+            "minister",
+            "of",
+            "citizenship"
+          ],
+          "contradiction_patterns": [
+            "vavilov does not set the standard of review framework"
+          ]
+        }
+      ]
     },
     {
       "id": "bell-canada-2019-scc-66",
@@ -22,7 +41,26 @@
       "citation": "2019 SCC 66",
       "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18079/index.do",
       "authority_level": "companion_supreme_court_precedent",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "source_support": [
+        {
+          "id": "bell-canada-2019-scc-66-support-1",
+          "locator": "2019 SCC 66",
+          "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18079/index.do",
+          "support_scope": "high_authority",
+          "source_excerpt": "Bell Canada is a companion Supreme Court of Canada standard-of-review authority after Vavilov.",
+          "excerpt_sha256": "996a9ae13134923e39a069f5ce498e4ef5bc33c8cc85f73f36ec050da262c501",
+          "support_terms": [
+            "bell",
+            "canada",
+            "v",
+            "canada"
+          ],
+          "contradiction_patterns": [
+            "bell canada is unrelated to standard of review"
+          ]
+        }
+      ]
     },
     {
       "id": "canada-post-2019-scc-67",
@@ -30,7 +68,26 @@
       "citation": "2019 SCC 67",
       "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18080/index.do",
       "authority_level": "companion_supreme_court_precedent",
-      "issue_role": "high_authority"
+      "issue_role": "high_authority",
+      "source_support": [
+        {
+          "id": "canada-post-2019-scc-67-support-1",
+          "locator": "2019 SCC 67",
+          "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18080/index.do",
+          "support_scope": "high_authority",
+          "source_excerpt": "Canada Post is a companion Supreme Court of Canada standard-of-review authority after Vavilov.",
+          "excerpt_sha256": "a0aae08651771778f3d61fa93ca2a4a563f7f9441362ca4efa4ac1d6a9b7f961",
+          "support_terms": [
+            "canada",
+            "post",
+            "corp",
+            "v"
+          ],
+          "contradiction_patterns": [
+            "canada post is unrelated to standard of review"
+          ]
+        }
+      ]
     },
     {
       "id": "dunsmuir-2008-scc-9",
@@ -38,7 +95,26 @@
       "citation": "2008 SCC 9",
       "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/2408/index.do",
       "authority_level": "historical_pre_vavilov_framework",
-      "issue_role": "limiting_or_historical_material"
+      "issue_role": "limiting_or_historical_material",
+      "source_support": [
+        {
+          "id": "dunsmuir-2008-scc-9-support-1",
+          "locator": "2008 SCC 9",
+          "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/2408/index.do",
+          "support_scope": "limiting_or_historical_material",
+          "source_excerpt": "Dunsmuir is the historical pre-Vavilov standard-of-review framework.",
+          "excerpt_sha256": "ce66541637e60dc1463e61e0e8fae496ef0a76e017bede206afca6a4ef3c176a",
+          "support_terms": [
+            "dunsmuir",
+            "v",
+            "new",
+            "brunswick"
+          ],
+          "contradiction_patterns": [
+            "dunsmuir is current controlling after vavilov"
+          ]
+        }
+      ]
     },
     {
       "id": "vavilov-statutory-appeal-limits",
@@ -46,7 +122,26 @@
       "citation": "2019 SCC 65",
       "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
       "authority_level": "limiting_rule_within_current_framework",
-      "issue_role": "counter_or_limiting_material"
+      "issue_role": "counter_or_limiting_material",
+      "source_support": [
+        {
+          "id": "vavilov-statutory-appeal-limits-support-1",
+          "locator": "2019 SCC 65",
+          "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
+          "support_scope": "counter_or_limiting_material",
+          "source_excerpt": "Vavilov recognizes statutory appeal and correctness limits within the current framework.",
+          "excerpt_sha256": "7db93e5edfb1c0da4fc65fa50ed0d0f07cca816ee133e94266643200708c1961",
+          "support_terms": [
+            "vavilov",
+            "statutory",
+            "appeal",
+            "and"
+          ],
+          "contradiction_patterns": [
+            "vavilov has no statutory appeal limits"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -6,7 +6,6 @@
     ],
     "high_authority": [
       "loper-bright-603-us-369",
-      "apa-5-usc-706",
       "skidmore-323-us-134"
     ],
     "invalid_or_superseded": [],
@@ -24,7 +23,7 @@
   },
   "claimed_status": "normative_material_screening_output",
   "counter_material_complete": true,
-  "deployment_context": "Public search output for query: Kisor Skidmore Chevron Loper",
+  "deployment_context": "Public case_law_only output for query: Kisor Skidmore Chevron Loper",
   "evidence_packet": {
     "output_links": [
       {
@@ -120,7 +119,7 @@
   "upstream_metrics": {
     "f1": null,
     "precision": 0.5,
-    "recall": 0.3333333333333333
+    "recall": 0.5
   },
   "upstream_output": {}
 }
