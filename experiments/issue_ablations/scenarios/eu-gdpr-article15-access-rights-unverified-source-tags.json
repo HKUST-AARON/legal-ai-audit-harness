@@ -1,0 +1,168 @@
+{
+  "id": "eu-gdpr-article15-access-rights-unverified-source-tags",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Issue-defined EU-law authority packet for GDPR Article 15 access-right screening over recipient identity and copy-of-data materials. Ablation: unverified source tags.",
+  "scores": {
+    "S": {
+      "score": 1,
+      "evidence": "The packet names sources, but every source tag still requires independent verification."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The issue statement, source collection and output identifier are fixed in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The packet distinguishes governing regulation, Court of Justice judgments and regulation-based limiting materials."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "The gold set includes high-authority materials, statutory limitations and invalidated treatments."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect all authority roles and challenge the inclusion, label or omission of each item."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The packet is logged as a reusable audit artifact, but no adjudicator or regulator has adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "recipient-categories-only-as-default-under-article-15-1-c",
+      "summary-table-always-sufficient-under-article-15-3"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif",
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "GDPR Article 15 is the governing regulation source for the access-right issue.",
+        "source_ids": [
+          "gdpr-art-15"
+        ],
+        "locators": [
+          "Article 15"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "Case C-154/21 is high authority on disclosure of specific recipients rather than categories only where data have been disclosed and no exception applies.",
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ],
+        "locators": [
+          "Case C-154/21"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Case C-487/21 is high authority on the right to a faithful and intelligible copy of personal data under Article 15(3).",
+        "source_ids": [
+          "cjeu-c-487-21-crif"
+        ],
+        "locators": [
+          "Case C-487/21"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "Article 12(5) and Article 15(4) are limiting materials for manifestly unfounded or excessive requests and the rights and freedoms of others.",
+        "source_ids": [
+          "gdpr-art-12-5",
+          "gdpr-art-15-4"
+        ],
+        "locators": [
+          "Article 12(5)",
+          "Article 15(4)"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "gdpr-art-15",
+        "locator": "Article 15",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "locator": "Case C-154/21",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "cjeu-c-487-21-crif",
+        "locator": "Case C-487/21",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "gdpr-art-12-5",
+        "locator": "Article 12(5)",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "gdpr-art-15-4",
+        "locator": "Article 15(4)",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law",
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "downgrade"
+}

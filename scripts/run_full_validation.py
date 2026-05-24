@@ -21,12 +21,12 @@ SUITES = [
     },
     {
         "id": "real_cases",
-        "label": "Public metadata records",
+        "label": "Public legal-record metadata",
         "path": ROOT / "experiments" / "real_cases" / "scenarios",
         "out": ROOT / "experiments" / "real_cases" / "results" / "real_case_experiment.md",
         "json_out": ROOT / "experiments" / "real_cases" / "results" / "real_case_experiment.json",
         "validation_units": "120 public metadata records",
-        "finding": "Tests source reconstruction across six jurisdictions.",
+        "finding": "Tests source reconstruction across six public legal-record sources.",
     },
     {
         "id": "public_system_outputs",
@@ -48,12 +48,21 @@ SUITES = [
     },
     {
         "id": "issue_gold_sets",
-        "label": "Issue-defined gold sets",
+        "label": "Issue-defined positive controls",
         "path": ROOT / "experiments" / "issue_gold_sets" / "scenarios",
         "out": ROOT / "experiments" / "issue_gold_sets" / "results" / "issue_gold_set_experiment.md",
         "json_out": ROOT / "experiments" / "issue_gold_sets" / "results" / "issue_gold_set_experiment.json",
         "validation_units": "3 curated issue packets",
         "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
+    },
+    {
+        "id": "issue_ablations",
+        "label": "Issue-defined ablations",
+        "path": ROOT / "experiments" / "issue_ablations" / "scenarios",
+        "out": ROOT / "experiments" / "issue_ablations" / "results" / "issue_ablation_experiment.md",
+        "json_out": ROOT / "experiments" / "issue_ablations" / "results" / "issue_ablation_experiment.json",
+        "validation_units": "12 issue-packet ablations",
+        "finding": "Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.",
     },
 ]
 
@@ -62,6 +71,7 @@ def main() -> int:
     RESULTS.mkdir(parents=True, exist_ok=True)
     _run([sys.executable, "scripts/collect_real_cases.py"])
     _run([sys.executable, "scripts/collect_public_system_outputs.py"])
+    _run([sys.executable, "scripts/build_issue_ablations.py"])
 
     rows = []
     for suite in SUITES:
@@ -117,7 +127,8 @@ def main() -> int:
             "public_system_records": 60,
             "raw_model_outputs": 10,
             "issue_gold_sets": 3,
-            "total": 203,
+            "issue_ablations": 12,
+            "total": 215,
         },
         "expected_passed": sum(row["expected_passed"] for row in rows),
         "expected_total": sum(row["scenario_count"] for row in rows),
@@ -160,16 +171,17 @@ def _format_report(payload: dict) -> str:
         "",
         f"Validation suites: {payload['suite_count']}",
         f"Scenario files: {payload['scenario_files']}",
-        f"Validation units: {payload['validation_units']['total']} "
+        f"Embedded records/items: {payload['validation_units']['total']} "
         f"({payload['validation_units']['stress_scenarios']} stress scenarios, "
         f"{payload['validation_units']['public_metadata_records']} public metadata records, "
         f"{payload['validation_units']['public_system_records']} public-system records, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
-        f"{payload['validation_units']['issue_gold_sets']} issue-defined gold sets)",
+        f"{payload['validation_units']['issue_gold_sets']} issue-defined positive controls, "
+        f"{payload['validation_units']['issue_ablations']} issue ablations)",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
         "",
-        "| Suite | Validation units | Scenarios | Expected passed | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
+        "| Suite | Embedded records/items | Scenario files | Rule pass | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
     for row in payload["suites"]:

@@ -70,6 +70,8 @@
       "odr"
     ],
     "irreversible_action": false,
-    "human_authorization": true
+    "human_authorization": true,
+    "adoption_reasons_recorded": true,
+    "contestation_recorded": true
   }
 }

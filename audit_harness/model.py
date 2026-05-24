@@ -193,6 +193,8 @@ def _adoption_gate_satisfied(scenario: dict[str, Any]) -> bool:
         and gate.get("reliance_gate") == "authorized_adoption"
         and gate.get("human_authorization") is True
         and bool(gate.get("jurisdiction_assumptions"))
+        and gate.get("adoption_reasons_recorded") is True
+        and gate.get("contestation_recorded") is True
     )
 
 
@@ -281,9 +283,13 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
     flags = list(scenario.get("failure_flags", []))
     claimed_rank = STATUS_RANK.get(scenario.get("claimed_status", Status.REFERENCE_INFORMATION.value), 1)
     if scenario.get("authority_sets"):
-        if metrics["authority_coverage"] == 0:
+        if metrics["authority_coverage"] is not None and metrics["authority_coverage"] < 1:
             flags.append("authority_omission")
-        if metrics["counter_authority_recall"] == 0:
+        if metrics["counter_authority_recall"] == 0 or (
+            metrics["counter_authority_recall"] is not None
+            and metrics["counter_authority_recall"] < 1
+            and scenario.get("counter_material_complete") is True
+        ):
             flags.append("counter_material_suppression")
         if metrics["invalid_authority_rate"] is not None and metrics["invalid_authority_rate"] > 0:
             flags.append("invalid_authority")

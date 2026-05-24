@@ -1,9 +1,9 @@
 {
-  "expected_passed": 35,
-  "expected_total": 35,
-  "high_upstream_but_blocked": 13,
-  "scenario_files": 35,
-  "suite_count": 5,
+  "expected_passed": 47,
+  "expected_total": 47,
+  "high_upstream_but_blocked": 20,
+  "scenario_files": 47,
+  "suite_count": 6,
   "suites": [
     {
       "expected_passed": 10,
@@ -25,10 +25,10 @@
     },
     {
       "expected_passed": 6,
-      "finding": "Tests source reconstruction across six jurisdictions.",
+      "finding": "Tests source reconstruction across six public legal-record sources.",
       "high_upstream_but_blocked": 0,
       "id": "real_cases",
-      "label": "Public metadata records",
+      "label": "Public legal-record metadata",
       "mean_audit_score": 8.666666666666666,
       "mean_upstream_recall": null,
       "scenario_count": 6,
@@ -70,7 +70,7 @@
       "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
       "high_upstream_but_blocked": 0,
       "id": "issue_gold_sets",
-      "label": "Issue-defined gold sets",
+      "label": "Issue-defined positive controls",
       "mean_audit_score": 11,
       "mean_upstream_recall": 1.0,
       "scenario_count": 3,
@@ -78,14 +78,30 @@
         "normative_material_screening_output": 3
       },
       "validation_units": "3 curated issue packets"
+    },
+    {
+      "expected_passed": 12,
+      "finding": "Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.",
+      "high_upstream_but_blocked": 7,
+      "id": "issue_ablations",
+      "label": "Issue-defined ablations",
+      "mean_audit_score": 10.5,
+      "mean_upstream_recall": 0.925,
+      "scenario_count": 12,
+      "status_distribution": {
+        "normative_material_screening_output": 3,
+        "reference_information": 9
+      },
+      "validation_units": "12 issue-packet ablations"
     }
   ],
   "validation_units": {
+    "issue_ablations": 12,
     "issue_gold_sets": 3,
     "public_metadata_records": 120,
     "public_system_records": 60,
     "raw_model_outputs": 10,
     "stress_scenarios": 10,
-    "total": 203
+    "total": 215
   }
 }

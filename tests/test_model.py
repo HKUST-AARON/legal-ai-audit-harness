@@ -58,6 +58,16 @@ class AuditModelTest(unittest.TestCase):
         result = evaluate_scenario(scenario)
         self.assertEqual(result.allowed_status, "normative_material_screening_output")
 
+        scenario = deepcopy(load("decision_support_ready.json"))
+        scenario["review_gate"]["adoption_reasons_recorded"] = False
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+
+        scenario = deepcopy(load("decision_support_ready.json"))
+        scenario["review_gate"]["contestation_recorded"] = False
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+
     def test_withdrawal_blocks_external_effect(self):
         result = evaluate_scenario(load("unverifiable_legal_output.json"))
         self.assertEqual(result.allowed_status, "no_external_legal_effect")
@@ -168,6 +178,27 @@ class AuditModelTest(unittest.TestCase):
             self.assertAlmostEqual(result.counter_authority_recall, 1.0, msg=path.name)
             self.assertAlmostEqual(result.evidence_fidelity, 1.0, msg=path.name)
 
+    def test_issue_ablations_apply_failure_caps(self):
+        subprocess.run(
+            [sys.executable, "scripts/build_issue_ablations.py"],
+            cwd=ROOT,
+            check=True,
+        )
+        paths = sorted((ROOT / "experiments" / "issue_ablations" / "scenarios").glob("*.json"))
+        self.assertEqual(len(paths), 12)
+        blocked = 0
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            result = evaluate_scenario(scenario)
+            self.assertTrue(result.expected_passed, path.name)
+            if path.stem.endswith(("missing-high-authority", "counter-material-suppressed", "unverified-source-tags")):
+                blocked += 1
+                self.assertEqual(result.allowed_status, "reference_information", path.name)
+                if path.stem.endswith("counter-material-suppressed"):
+                    scenario["failure_flags"] = []
+                    self.assertEqual(evaluate_scenario(scenario).disposition, "suspension", path.name)
+        self.assertEqual(blocked, 9)
+
     def test_codex_gpt55_xhigh_raw_outputs_are_source_capped(self):
         paths = sorted((ROOT / "experiments" / "ai_outputs" / "scenarios").glob("codex55_*.json"))
         self.assertEqual(len(paths), 10)
@@ -182,11 +213,11 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 5)
-        self.assertEqual(report["scenario_files"], 35)
-        self.assertEqual(report["validation_units"]["total"], 203)
-        self.assertEqual(report["expected_passed"], 35)
-        self.assertEqual(report["expected_total"], 35)
+        self.assertEqual(report["suite_count"], 6)
+        self.assertEqual(report["scenario_files"], 47)
+        self.assertEqual(report["validation_units"]["total"], 215)
+        self.assertEqual(report["expected_passed"], 47)
+        self.assertEqual(report["expected_total"], 47)
 
     def test_cli_sensitivity_report(self):
         completed = subprocess.run(

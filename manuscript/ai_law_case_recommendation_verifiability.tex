@@ -30,7 +30,7 @@ An Audit Framework for Case Recommendation}
 \maketitle
 
 \begin{abstract}
-Legal AI case recommendation can alter legal reasoning by controlling which authorities become visible, ranked, cited and contestable. Such outputs are no longer ordinary retrieval, because they structure the materials available for argument; yet they are not legal reasons or legal sources. This article names that missing middle category a \textit{normative material screening output} and argues that its procedural status should depend on auditability rather than model sophistication, autonomy or aggregate accuracy. The article formalizes procedural qualification through output effect, system role and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and validates it across synthetic stress scenarios, public metadata packets, public-system snapshots, raw model outputs and issue-defined authority sets. The resulting rule is simple: a legal AI output may enter procedure only when its legal-material chain can be reconstructed, contested and attributed; otherwise it remains professional support or reference information, however fluent or accurate it appears.
+Legal AI case recommendation is procedurally important because it can decide which legal authorities become visible before legal reasons are written. Such outputs are no longer ordinary retrieval, because they structure the materials available for argument; yet they are not legal reasons or legal sources. This article names that missing middle category a \textit{normative material screening output} and argues that its procedural status should depend on auditability rather than model sophistication, autonomy or aggregate accuracy. The article formalizes procedural qualification through output effect, system role and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and tests it through stress scenarios, public legal-record snapshots, raw model outputs, issue-defined positive controls and issue-level ablations. The resulting rule is simple: no reconstructable source chain, no procedural status; no counter-material pathway, no screening qualification; no adoption record, no decision-support reason.
 \end{abstract}
 
 \noindent\textbf{Keywords:} legal information retrieval; case recommendation; legal AI auditing; contestability; output evidence packets; normative material screening
@@ -148,15 +148,15 @@ Let the procedural statuses be ordered as
 \]
 where $p_0$ is no external legal effect, $p_1$ is reference information, $p_2$ is professional support output, $p_3$ is normative material screening output and $p_4$ is decision-support reason. The order $p_0\prec p_1\prec p_2\prec p_3\prec p_4$ expresses the maximum procedural status an output may claim. Let $\mathcal{A}(o)\in\{0,1,2\}^{6}$ be the audit vector and let $\Pi=(\tau_N,\tau_D,\Gamma,\Delta)$ be a status policy, where $\tau_N$ is the normative-screening threshold, $\tau_D$ is the decision-support threshold, $\Gamma$ is the set of necessary gate predicates and $\Delta$ is the failure-flag cap.
 
-For a candidate status $p$, define a gate predicate $m_p(\mathcal{A},\Pi)\in\{0,1\}$. The preliminary status is the greatest status whose gate is satisfied:
+Output effect and system role enter the executable protocol by selecting the claimed status, jurisdiction profile and review gate. They are not hidden model features. The operational rule then computes the highest procedurally available status from the audit vector and the relevant adoption gate. For a candidate status $p$, define a gate predicate $m_p(\mathcal{A},G_D,\Pi)\in\{0,1\}$. The preliminary status is the greatest status whose gate is satisfied:
 \[
-\sigma_{\Pi}(o)=\max_{\preceq}\{p\in\mathcal{P}:m_p(\mathcal{A}(o),\Pi)=1\}.
+\sigma_{\Pi}(o)=\max_{\preceq}\{p\in\mathcal{P}:m_p(\mathcal{A}(o),G_D(o),\Pi)=1\}.
 \]
-Let $G_D=1$ only when the review gate records completed review, authorized adoption, human authorization and jurisdiction assumptions. Failure flags then apply a cap operator $\kappa_F:\mathcal{P}\rightarrow\mathcal{P}$:
+Let $G_D=1$ only when the review gate records completed review, authorized adoption, human authorization, jurisdiction assumptions, adoption reasons and contestation record. Failure flags then apply a cap operator $\kappa_F:\mathcal{P}\rightarrow\mathcal{P}$:
 \[
 PS_{\Pi}(o)=\kappa_{F(o)}(\sigma_{\Pi}(o)).
 \]
-Warning flags leave the status unchanged while recording a defect. Downgrade and suspension flags cap external status at reference information unless the missing artefact is restored. Withdrawal flags cap status at $p_0$. This formalization yields three invariants. First, necessary gates are non-compensatory: a missing $S$, $Q$, $H$, $K$, $T$ or $L$ gate cannot be offset by high scores elsewhere. Second, failure caps dominate aggregate scores: an output with high retrieval recall is still withdrawn if its sources are unreconstructable or an irreversible external action lacks authorization. Third, upstream retrieval metrics are evidence variables, not status variables; they may inform $K$ or issue-packet construction, but they do not by themselves determine $PS_{\Pi}(o)$.
+Warning flags leave the status unchanged while recording a defect. Downgrade and suspension flags cap external status at reference information unless the missing artefact is restored. Withdrawal flags cap status at $p_0$. This formalization yields three invariants. First, necessary gates are non-compensatory within each claimed status: a missing screening gate cannot be offset by high fluency or high scores elsewhere. Second, failure caps dominate aggregate scores: an output with high retrieval recall is still withdrawn if its sources are unreconstructable or an irreversible external action lacks authorization. Third, upstream retrieval metrics are evidence variables, not status variables; they may inform $K$ or issue-packet construction, but they do not by themselves determine $PS_{\Pi}(o)$.
 
 \subsection{Audit dimensions}
 
@@ -194,7 +194,7 @@ Candidate status & Necessary gates & Additional condition \\
 \midrule
 Reference information & $S\geq1$ and $Q\geq1$ & Output remains internal or user verifies sources before external reliance. \\
 Professional support output & $S,Q,L\geq1$ & Professional user accepts verification responsibility and can explain limits. \\
-Normative material screening output & $S,Q,H,K,T,L\geq1$ & Total score $\sum \mathcal{A}(o)\geq9$ and counter-material handling is reviewable. \\
+Normative material screening output & $S,Q,H,K,T,L\geq1$ & Total score $\sum \mathcal{A}(o)\geq9$ and counter-material handling is at least partially reviewable; declared complete-set omissions trigger caps. \\
 Decision-support reason & $S,Q,H,K,T,L\geq1$, $T=L=2$ and authorized-adoption gate satisfied & Total score $\sum \mathcal{A}(o)\geq10$ plus completed review, human authorization, reasons and recorded contestation. \\
 No external legal effect & Any necessary gate for the claimed status is missing & Output is blocked, downgraded or retained only as internal reference. \\
 \bottomrule
@@ -206,7 +206,7 @@ The mapping function $g$ is therefore explicit rather than discretionary. First,
 \[
 g_0(\mathcal{A})=
 \begin{cases}
-p_4, & S,Q,H,K,T,L\geq1,\ \sum\mathcal{A}\geq10,\ T=L=2,\ G_D=1,\\
+p_4, & S,Q,H,K,T,L\geq1,\ \sum\mathcal{A}\geq10,\ T=L=2,\ G_D(o)=1,\\
 p_3, & S,Q,H,K,T,L\geq1 \text{ and } \sum \mathcal{A}\geq9,\\
 p_2, & S,Q,L\geq1,\\
 p_1, & S,Q\geq1,\\
@@ -214,7 +214,7 @@ p_0, & \text{otherwise.}
 \end{cases}
 \]
 
-Second, apply failure flags. Withdrawal-level failures, such as unreconstructable sources, materially false generated summaries or irreversible external action without human authorization, set $PS(o)$ to no external legal effect. Suspension or downgrade flags, such as high-authority omission, invalid-authority recommendation, counter-material suppression, missing source-attribution tags, absent jurisdiction assumptions, review-gate failure, ranking drift or contestation failure, cap the output at reference status until the missing artefact is restored. Thus $g$ combines the gate function $g_0$ with a failure-flag cap. If $K=0$, the output cannot be treated as normative material screening because the ranking and counter-material treatment cannot be reviewed. If $T<2$ or $L<2$, the output cannot be a decision-support reason, even if retrieval accuracy is high. If the system purports to trigger an external disposition without legal authorization, review, contestability or accountability, the output has no external legal effect.
+Second, apply failure flags. Withdrawal-level failures, such as unreconstructable sources, materially false generated summaries or irreversible external action without human authorization, set $PS(o)$ to no external legal effect. Suspension or downgrade flags, such as high-authority omission, invalid-authority recommendation, counter-material suppression, missing source-attribution tags, absent jurisdiction assumptions, review-gate failure, ranking drift or contestation failure, cap the output at reference status until the missing artefact is restored. Thus $g$ combines the gate function $g_0$ with a failure-flag cap. If $K=0$, the output cannot be treated as normative material screening because the ranking and counter-material treatment cannot be reviewed. If $T<2$, $L<2$ or $G_D(o)=0$, the output cannot be a decision-support reason, even if retrieval accuracy is high. If the system purports to trigger an external disposition without legal authorization, review, contestability or accountability, the output has no external legal effect.
 
 Operationally, an evaluator applies the model in six steps: identify the candidate procedural status claimed for the output; freeze the relevant issue, query, source collection, workflow version and output identifier; score each component of $\mathcal{A}(o)$ using the audit artefacts in Table 2; apply the necessary gates in Table 3; assign the highest available status or record the missing gate; and repeat the audit after material corpus, workflow or interface changes. This makes the framework usable as a deployment checklist, post-use audit and benchmark extension.
 
@@ -359,52 +359,29 @@ Withdrawal & Source, corpus, ranking or adoption chain cannot be reconstructed, 
 \end{tabularx}
 \end{table}
 
-\section{Illustrative Worked Case Audit}
-
-To show the mechanics, consider an issue packet containing high-authority materials $G_q$, contrary or limiting materials $C_q$, and invalid, superseded or wrong-jurisdiction materials $O_q$. A procedural case recommendation output should link sources, record run state, label hierarchy, surface $C_q$ and $O_q$, support contestation and log adoption. Table 6 shows one illustrative audit record.
-
-\begin{table}[htbp]
-\centering
-\caption{Illustrative audit record for a case recommendation output}
-\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{2.3cm}p{4.2cm}p{1.2cm}Y}
-\toprule
-Dimension & Observable audit evidence & Score & Reason \\
-\midrule
-$S$ & Output links each recommended authority to its source, records corpus boundaries, source database, jurisdiction, court or institution level and update date. & 2 & The source and corpus can be reconstructed. \\
-$Q$ & Issue, filters, source-collection version, workflow run identifier and interface version are recorded. & 2 & The output can be reconstructed and compared. \\
-$H$ & Output separates binding, precedential, persuasive, superseded, overruled and wrong-jurisdiction materials. & 2 & Authority level and validity are visible. \\
-$K$ & Output explains broad ranking factors and retrieves some limiting materials from $C_q$, but the omitted-material check is incomplete. & 1 & Ranking is partly reviewable, but counter-authority recall is incomplete. \\
-$T$ & Parties, reviewers or professional supervisors can inspect the result list, submit additional authorities and challenge summary characterizations. & 2 & Contestation is procedurally available. \\
-$L$ & The system logs output ID, user, query, recommended materials and whether the responsible human adopted, rejected or distinguished them. & 1 & Adoption is recorded, but reasons are not yet fully structured. \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-The total score is 10, and all dimensions score at least 1. The output may qualify as normative material screening, but not as a decision-support reason because $L=1$: adoption is logged, but reasons for adopting, rejecting or distinguishing authorities are not fully structured. If a known high-authority material in $G_q$ is missing, $S$ or $K$ collapses; if authority level or subsequent treatment is not visible, $H$ falls; if a summary reverses controlling material, suspension or withdrawal flags apply.
-
 \section{Implementation and Evaluation}
 
 To test whether the framework is operational rather than merely classificatory, the rules above were implemented in a lightweight command-line audit harness. The implementation uses local JSON scenario files as the unit of evidence and produces both Markdown and JSON run artefacts. An anonymized companion repository should supply the harness, scenario files, run artefacts and replication commands.
 
-The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, scores $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner computes the allowed status, counter-authority recall, authority coverage, invalid-authority rate, evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. A separate sensitivity command varies the normative and decision thresholds and reports status-distribution changes. The validation layers test protocol behavior, model-output auditability and status allocation rather than legal merits in the large.
+The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, a human-coded audit vector $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner computes the allowed status, counter-authority recall, authority coverage, invalid-authority rate, packet-level evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. A separate sensitivity command varies the normative and decision thresholds and reports status-distribution changes. The validation layers test rule conformance, artifact integrity and status allocation, not legal merits in the large.
 
-The complete validation matrix contains five layers and 203 validation units: ten protocol stress scenarios, 120 public metadata records, 60 ordered public-system output records, ten raw model outputs and three issue-defined gold sets. Expected outcomes passed in all 35 scenario files. This breadth matters because each layer tests a different claim. Stress scenarios test the decision protocol. Metadata and public-system outputs test source reconstruction. Raw model outputs test the gap between legal fluency and procedural status. Gold sets test the conditions under which normative material screening is actually justified.
+The complete validation matrix contains six layers: ten protocol stress scenarios, 120 embedded public metadata records, 60 ordered public-system output records, ten raw model outputs, three issue-defined positive-control packets and twelve issue-level ablations. All 47 committed scenario files reproduced their pre-specified status outcomes. This is artifact validation, not a field study. Stress scenarios test the decision protocol. Metadata and public-system outputs test source reconstruction. Raw model outputs test the gap between legal fluency and procedural status. Positive-control packets test the conditions under which normative material screening is justified. Ablations test whether specific defects trigger the expected downgrade or suspension.
 
 \begin{table}[htbp]
 \centering
-\caption{Full validation matrix}
+\caption{Full artifact validation matrix}
 \small
 \renewcommand{\arraystretch}{1.1}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{3.0cm}p{1.8cm}p{2.0cm}Y}
 \toprule
-Layer & Units & Expected pass & What it validates \\
+Layer & Units & Rule pass & What it checks \\
 \midrule
 Stress scenarios & 10 & 10/10 & Status gates, failure caps, downgrade and withdrawal behavior. \\
-Public metadata & 120 & 6/6 & Source reconstruction across six jurisdictions. \\
-Public-system outputs & 60 & 6/6 & Real upstream legal-output reconstruction and professional-support caps. \\
+Public metadata & 120 records in 6 files & 6/6 & Source reconstruction across six public legal-record sources. \\
+Public-system outputs & 60 records in 6 files & 6/6 & Real upstream legal-output reconstruction and professional-support caps. \\
 Raw model outputs & 10 & 10/10 & High authority coverage without source binding remains procedurally capped. \\
-Issue gold sets & 3 & 3/3 & Source-bound high-authority and counter-material packets can qualify as normative screening. \\
+Positive-control issue packets & 3 & 3/3 & Source-bound high-authority and counter-material packets can qualify as normative screening. \\
+Issue ablations & 12 & 12/12 & High-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger caps. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -428,59 +405,15 @@ Authorized ODR review & ODR & Decision-support reason & 12 & 0.91 & Permitted on
 \end{tabularx}
 \end{table}
 
-Across ten stress-test scenarios, expected outcomes passed in all ten. The mean audit score was 8.30 and mean upstream recall was 0.84. Three scenarios had upstream recall above 0.80 but were procedurally blocked or downgraded. This is the intended behavior of the framework: upstream performance and procedural qualification are related but not interchangeable. A high-recall system may still be unfit for external legal use when it omits a high-authority material, suppresses a relevant limiting material, recommends invalid authority, lacks output-source evidence or prevents affected persons from contesting the output.
+Across ten stress-test scenarios, all rule outcomes were reproduced. The mean audit score was 8.30 and mean upstream recall was 0.84. Three scenarios had upstream recall above 0.80 but were procedurally blocked or downgraded. A high-recall output may still be unfit for external legal use when it omits a high-authority material, suppresses a relevant limiting material, recommends invalid authority, lacks output-source evidence or prevents affected persons from contesting the output.
 
-The harness was also run on a public metadata evidence-packet validation. Committed public case metadata snapshots were used from six jurisdictions, including apex-court feeds, national case-law feeds and public legal-data APIs. The experiment used a fixed seed and sampled 20 records per jurisdiction from candidate pools ranging from 99 to 199 records. For each sampled record, the harness generated an output evidence packet with source identifier, source collection, citation or docket, date, court label and URL.
+\subsection{Public legal-record reconstruction}
 
-\begin{table}[htbp]
-\centering
-\caption{Public metadata evidence-packet validation}
-\small
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{2.8cm}p{3.1cm}p{1.5cm}p{1.3cm}Y}
-\toprule
-Jurisdiction & Candidate source & Pool N & Sample N & Allowed status \\
-\midrule
-United States & Supreme Court slip opinions & 199 & 20 & Professional support \\
-United Kingdom & Find Case Law Atom feed & 150 & 20 & Professional support \\
-Germany & OpenLegalData case API & 100 & 20 & Professional support \\
-Canada & Supreme Court JSON feed & 100 & 20 & Professional support \\
-Hong Kong & Court of Final Appeal metadata & 100 & 20 & Professional support \\
-Mainland China & Typical and guiding case pages & 99 & 20 & Professional support \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-All six metadata scenarios passed their expected outcomes. The mean audit score was 8.67 and source-tag coverage was complete in all six scenarios. They were classified as professional support outputs, not normative material screening outputs, because the packets intentionally lack issue-specific ranking and counter-material gold sets. Complete public metadata and evidence links can establish source reconstructability, but they do not by themselves authorize procedural screening status.
-
-\subsection{Public legal-system output pilot}
-
-The harness was then applied to ordered outputs from public legal retrieval or listing systems. This pilot differs from the metadata validation: the unit is not a random source-pool sample but the top ten records visible in a public output stream. It tests whether real upstream legal outputs can be frozen, source-tagged, reconstructed and procedurally classified by the audit layer.
-
-\begin{table}[htbp]
-\centering
-\caption{Public legal-system output pilot}
-\small
-\renewcommand{\arraystretch}{1.1}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{2.5cm}p{4.0cm}p{1.3cm}Y}
-\toprule
-Output stream & Visible output records & Score & Allowed status \\
-\midrule
-United States & Supreme Court slip-opinion stream, top 10 & 9 & Professional support \\
-United Kingdom & Find Case Law Atom stream, top 10 & 8 & Professional support \\
-Germany & OpenLegalData case API stream, top 10 & 8 & Professional support \\
-Canada & Supreme Court JSON stream, top 10 & 9 & Professional support \\
-Hong Kong & Court of Final Appeal API stream, top 10 & 9 & Professional support \\
-Mainland China & Supreme People's Court typical-cases stream, top 10 & 9 & Professional support \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-All six public-output scenarios passed their expected outcomes. The mean audit score was 8.67; evidence fidelity and source-tag coverage were 1.00 in every scenario. The results support the framework's central distinction. A real public system output may be reconstructable, source-tagged and professionally useful, yet still fail to qualify as normative material screening because it does not define an issue-specific ranking task, counter-material set or party-facing contestation pathway. Public output visibility is therefore a necessary audit input, not a substitute for procedural qualification.
+The harness was also run on public legal-record snapshots. One layer sampled 20 public metadata records from each of six legal systems. A second layer froze the top ten records visible in six public legal retrieval or listing streams. These layers use real upstream public legal outputs, but they test reconstruction rather than merits: whether visible records can be frozen, source-tagged, linked to locators and assigned a procedural cap by the audit layer. In both layers, all six scenario files were classified as professional support outputs. The reason is substantive, not conservative: public record visibility establishes source reconstructability, but not issue-specific ranking, counter-material completeness or party-facing contestation.
 
 \subsection{Raw model-output pilot}
 
-The harness was also run on ten raw legal-authority recommendations generated by a single upstream model configuration, Codex GPT-5.5 with extra-high reasoning. The prompts covered three issue families also used in the gold sets: U.S. agency deference after \textit{Loper Bright}, English mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access rights. The model was not allowed to browse or use tools. The point was therefore not to benchmark legal correctness against a commercial research system, but to ask whether fluent model text with strong authority coverage can itself claim normative screening status.
+The harness was also run on ten raw legal-authority recommendations generated by a single upstream model configuration, Codex GPT-5.5 with extra-high reasoning. The prompts covered the same three issue families as the positive-control packets: U.S. agency deference after \textit{Loper Bright}, English mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access rights. The model was not allowed to browse or use tools. The point was therefore not to benchmark legal correctness against a commercial research system, but to ask whether fluent model text with strong authority coverage can itself claim normative screening status.
 
 It cannot. All ten raw outputs identified the expected high-authority and limiting materials in the issue families, producing mean upstream recall of 1.00 and counter-authority recall of 1.00. Yet every claimed normative-screening output was downgraded to reference information because the citations were marked as requiring verification rather than bound to official sources, corpus manifests, pinpoint locators and a contestation pathway. The result is the paper's central rule in executable form: authority coverage is not procedural status.
 
@@ -500,11 +433,11 @@ EU GDPR Article 15 access rights & 4 & 9 & 1.00 & Reference information \\
 \end{tabularx}
 \end{table}
 
-To test normative material screening with real issue-defined authority sets, the harness includes three manually curated gold sets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access-right interpretation. Each gold set defines high-authority materials, limiting or counter-materials, invalidated treatments, source tags and output-to-source links at the level of individual output units. All three passed their expected outcomes with audit scores of 11, authority coverage of 1.00, counter-authority recall of 1.00, evidence fidelity of 1.00 and source-tag coverage of 1.00. They qualified as normative material screening, not as decision-support reasons, because no authorized decision-maker adopted them as reasoned outcomes.
+To test normative material screening itself, the harness includes three manually curated issue packets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access-right interpretation. Each packet defines high-authority materials, limiting or counter-materials, invalidated treatments, source tags and output-to-source links at the level of individual output units. These are positive controls, not a benchmark leaderboard: they ask whether a source-bound, issue-defined authority packet can obtain screening status under the protocol. All three qualified as normative material screening, not as decision-support reasons, because no authorized decision-maker adopted them as reasoned outcomes.
 
 \begin{table}[htbp]
 \centering
-\caption{Issue-defined gold-set validation}
+\caption{Issue-defined positive-control packets}
 \scriptsize
 \renewcommand{\arraystretch}{1.1}
 \begin{tabularx}{\textwidth}{>{\bfseries}Yp{1.8cm}p{2.3cm}p{2.0cm}p{1.8cm}}
@@ -517,6 +450,8 @@ EU GDPR Article 15 access rights & Civil law/EU & H=3; C=2; invalid=2 treatments
 \bottomrule
 \end{tabularx}
 \end{table}
+
+The ablation suite then removes one procedural condition at a time from those packets. Twelve ablations were generated: high-authority omission, counter-material suppression, unverified source tags and missing authorized-adoption gates for each issue family. Nine were capped at reference information through downgrade or suspension. The remaining three claimed decision-support status but were capped at normative screening because the packet lacked authorized institutional adoption. This is the crucial negative test: a packet that is otherwise strong on source links and authority coverage still loses status when the missing condition is procedural rather than semantic.
 
 \section{Implications and Limitations}
 

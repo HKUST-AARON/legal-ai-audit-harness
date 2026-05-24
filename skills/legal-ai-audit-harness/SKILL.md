@@ -65,7 +65,7 @@ python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
-The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined gold sets and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`.
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined positive controls, issue ablations and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`. Describe it as scenario-regression and artifact validation, not as independent legal merits validation.
 
 ## Single-Model Output Audit Protocol
 
@@ -90,7 +90,7 @@ Report both halves separately: (a) what upstream outputs were captured, and (b) 
 - `reference_information`: `S >= 1` and `Q >= 1`
 - `professional_support_output`: `S, Q, L >= 1`
 - `normative_material_screening_output`: all six dimensions `>= 1` and total score `>= 9`
-- `decision_support_reason`: `S, Q, H, K >= 1` and `T = L = 2`
+- `decision_support_reason`: `S, Q, H, K >= 1`, `T = L = 2`, completed authorized adoption, human authorization, jurisdiction assumptions, adoption reasons and contestation record
 - `no_external_legal_effect`: missing gates or withdrawal-level failures
 
 Failure flags can cap or downgrade status:

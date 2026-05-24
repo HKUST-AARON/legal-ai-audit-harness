@@ -1,0 +1,179 @@
+{
+  "id": "us-agency-deference-after-loper-bright-unverified-source-tags",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Issue-defined U.S. administrative-law authority packet for agency statutory interpretations after Loper Bright. Ablation: unverified source tags.",
+  "scores": {
+    "S": {
+      "score": 1,
+      "evidence": "The packet names sources, but every source tag still requires independent verification."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The issue statement, source collection and output identifier are fixed in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The packet distinguishes current controlling precedent, overruled treatment, governing statute and persuasive/limiting authority."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "The gold set includes high-authority materials, limiting materials and invalidated Chevron treatment."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect all authority roles and challenge the inclusion, label or omission of each item."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The packet is logged as a reusable audit artifact, but no adjudicator has adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "chevron-as-current-mandatory-deference-rule"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "loper-bright-603-us-369",
+      "chevron-467-us-837",
+      "skidmore-323-us-134",
+      "apa-5-usc-706",
+      "kisor-588-us-558"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "Loper Bright is the current controlling Supreme Court authority on judicial review of agency statutory interpretations.",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "Chevron must be visible as overruled treatment, not as a currently controlling mandatory deference rule.",
+        "source_ids": [
+          "loper-bright-603-us-369",
+          "chevron-467-us-837"
+        ],
+        "locators": [
+          "603 U.S. 369",
+          "467 U.S. 837"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Skidmore remains a limiting/persuasive-respect authority for agency interpretations.",
+        "source_ids": [
+          "skidmore-323-us-134",
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "323 U.S. 134",
+          "603 U.S. 369"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "APA 5 U.S.C. 706 is a governing statutory source for independent judicial judgment.",
+        "source_ids": [
+          "apa-5-usc-706"
+        ],
+        "locators": [
+          "5 U.S.C. 706"
+        ]
+      },
+      {
+        "id": "unit-5",
+        "claim": "Kisor is a related limiting authority on agency deference that should be exposed rather than silently omitted.",
+        "source_ids": [
+          "kisor-588-us-558"
+        ],
+        "locators": [
+          "588 U.S. 558"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "chevron-467-us-837",
+        "locator": "467 U.S. 837",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "skidmore-323-us-134",
+        "locator": "323 U.S. 134",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "apa-5-usc-706",
+        "locator": "5 U.S.C. 706",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-5",
+        "source_id": "kisor-588-us-558",
+        "locator": "588 U.S. 558",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "united_states_federal_administrative_law",
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "downgrade"
+}
