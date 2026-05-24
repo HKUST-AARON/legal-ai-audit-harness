@@ -10,9 +10,10 @@ Public source-text anchor checks: 30/30 verified across 30 records with text sna
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
 Formal invariant checks: 51643/51643 passed
 Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181
+Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Gate ablation evaluations: 288/288 passed over 46 qualified packets
 Repair frontier evaluations: 176/176 blocked claims repairable across 2236 counterfactual repairs
-Derived robustness evaluations: 56502
+Derived robustness evaluations: 58502
 Scenario-regression expectations passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import random
 import sys
 from pathlib import Path
 from statistics import mean
@@ -13,6 +14,8 @@ from run_full_validation import SUITES
 
 RESULTS = ROOT / "experiments" / "metric_separation" / "results"
 THRESHOLD = 0.8
+RESAMPLE_ITERATIONS = 1000
+RNG_SEED = 10506
 
 
 def main() -> int:
@@ -33,6 +36,8 @@ def main() -> int:
         ],
         "gate_cascade": _gate_cascade(rows),
         "high_recall_blocked": _high_recall_blocked(rows),
+        "bootstrap": _bootstrap(rows),
+        "permutation": _permutation(rows),
     }
     report = _format_report(payload)
     (RESULTS / "metric_separation_analysis.json").write_text(
@@ -93,6 +98,10 @@ def _review_role_ready(scenario: dict, system_role: str) -> bool:
 def _point_biserial(rows: list[dict], metric: str) -> float:
     xs = [row[metric] for row in rows]
     ys = [1 if row["qualified"] else 0 for row in rows]
+    return _point_biserial_vectors(xs, ys)
+
+
+def _point_biserial_vectors(xs: list[float], ys: list[int]) -> float:
     mean_x = mean(xs)
     mean_y = mean(ys)
     numerator = sum((x - mean_x) * (y - mean_y) for x, y in zip(xs, ys))
@@ -167,6 +176,61 @@ def _high_recall_blocked(rows: list[dict]) -> dict:
     }
 
 
+def _bootstrap(rows: list[dict]) -> dict:
+    rng = random.Random(RNG_SEED)
+    samples = []
+    for _ in range(RESAMPLE_ITERATIONS):
+        sample = [rows[rng.randrange(len(rows))] for _ in rows]
+        recall_test = _confusion_row(sample, f"recall>={THRESHOLD}", lambda row: row["recall"] >= THRESHOLD)
+        final_gate = _gate_cascade(sample)[-1]
+        samples.append(
+            {
+                "recall_point_biserial": _point_biserial(sample, "recall"),
+                "recall_threshold_precision": recall_test["precision"],
+                "full_gate_precision": final_gate["precision"],
+                "full_gate_specificity": final_gate["specificity"],
+                "high_recall_blocked_rate": _high_recall_blocked(sample)["rate"],
+            }
+        )
+    return {
+        "iterations": RESAMPLE_ITERATIONS,
+        "seed": RNG_SEED,
+        "confidence_interval": {
+            metric: _interval([sample[metric] for sample in samples])
+            for metric in samples[0]
+        },
+    }
+
+
+def _permutation(rows: list[dict]) -> dict:
+    rng = random.Random(RNG_SEED)
+    observed = abs(_point_biserial(rows, "recall"))
+    recalls = [row["recall"] for row in rows]
+    labels = [1 if row["qualified"] else 0 for row in rows]
+    more_extreme = 0
+    for _ in range(RESAMPLE_ITERATIONS):
+        shuffled = labels[:]
+        rng.shuffle(shuffled)
+        if abs(_point_biserial_vectors(recalls, shuffled)) >= observed:
+            more_extreme += 1
+    return {
+        "iterations": RESAMPLE_ITERATIONS,
+        "seed": RNG_SEED,
+        "metric": "recall_point_biserial",
+        "observed_abs": observed,
+        "two_sided_p": (more_extreme + 1) / (RESAMPLE_ITERATIONS + 1),
+    }
+
+
+def _interval(values: list[float]) -> dict[str, float]:
+    ordered = sorted(values)
+    return {
+        "low": ordered[int(0.025 * (len(ordered) - 1))],
+        "median": ordered[int(0.5 * (len(ordered) - 1))],
+        "high": ordered[int(0.975 * (len(ordered) - 1))],
+    }
+
+
 def _flag_counts(rows: list[dict]) -> dict[str, int]:
     counts: dict[str, int] = {}
     for row in rows:
@@ -207,6 +271,22 @@ def _format_report(payload: dict) -> str:
     lines.extend(["", "## Gate Cascade", "", "| Predictor | TP | FP | TN | FN | Precision | Recall | Specificity |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"])
     for row in payload["gate_cascade"]:
         lines.append(_confusion_line(row))
+    lines.extend(
+        [
+            "",
+            "## Bootstrap and Permutation Robustness",
+            "",
+            f"Bootstrap resamples: {payload['bootstrap']['iterations']} with seed {payload['bootstrap']['seed']}.",
+            f"Recall point-biserial permutation p-value: {payload['permutation']['two_sided_p']:.3f}.",
+            "",
+            "| Metric | 2.5% | Median | 97.5% |",
+            "| --- | ---: | ---: | ---: |",
+        ]
+    )
+    for metric, interval in sorted(payload["bootstrap"]["confidence_interval"].items()):
+        lines.append(
+            f"| {metric} | {interval['low']:.2f} | {interval['median']:.2f} | {interval['high']:.2f} |"
+        )
     blocked = payload["high_recall_blocked"]
     lines.extend(
         [

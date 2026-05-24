@@ -30,6 +30,19 @@ Procedurally qualified outputs: 45
 | + review role | 45 | 18 | 122 | 0 | 0.71 | 1.00 | 0.87 |
 | + no failure cap | 45 | 0 | 140 | 0 | 1.00 | 1.00 | 1.00 |
 
+## Bootstrap and Permutation Robustness
+
+Bootstrap resamples: 1000 with seed 10506.
+Recall point-biserial permutation p-value: 0.553.
+
+| Metric | 2.5% | Median | 97.5% |
+| --- | ---: | ---: | ---: |
+| full_gate_precision | 1.00 | 1.00 | 1.00 |
+| full_gate_specificity | 1.00 | 1.00 | 1.00 |
+| high_recall_blocked_rate | 0.68 | 0.75 | 0.81 |
+| recall_point_biserial | -0.08 | 0.05 | 0.14 |
+| recall_threshold_precision | 0.19 | 0.25 | 0.32 |
+
 ## High-Recall Blocked Outputs
 
 High-recall outputs blocked below normative screening: 136/181 (0.75).

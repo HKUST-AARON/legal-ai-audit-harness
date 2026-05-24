@@ -1,4 +1,35 @@
 {
+  "bootstrap": {
+    "confidence_interval": {
+      "full_gate_precision": {
+        "high": 1.0,
+        "low": 1.0,
+        "median": 1.0
+      },
+      "full_gate_specificity": {
+        "high": 1.0,
+        "low": 1.0,
+        "median": 1.0
+      },
+      "high_recall_blocked_rate": {
+        "high": 0.8076923076923077,
+        "low": 0.6833333333333333,
+        "median": 0.751412429378531
+      },
+      "recall_point_biserial": {
+        "high": 0.13951661164838006,
+        "low": -0.08227279255606186,
+        "median": 0.04851331018008224
+      },
+      "recall_threshold_precision": {
+        "high": 0.31666666666666665,
+        "low": 0.19230769230769232,
+        "median": 0.24725274725274726
+      }
+    },
+    "iterations": 1000,
+    "seed": 10506
+  },
   "gate_cascade": [
     {
       "false_negative": 0,
@@ -71,6 +102,13 @@
     }
   },
   "metric_scenario_count": 185,
+  "permutation": {
+    "iterations": 1000,
+    "metric": "recall_point_biserial",
+    "observed_abs": 0.04601049146076604,
+    "seed": 10506,
+    "two_sided_p": 0.5534465534465535
+  },
   "point_biserial": {
     "f1": 0.07937466315340556,
     "precision": 0.07105330644567431,

@@ -259,6 +259,8 @@ def main() -> int:
             "formal_invariant_checks": invariant_payload["total_checks"],
             "formal_invariant_passed": invariant_payload["passed_checks"],
             "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
+            "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
+            + metric_separation_payload["permutation"]["iterations"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
             "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         }
@@ -273,6 +275,8 @@ def main() -> int:
         "model_output_transcript_evaluations": transcript_payload["locator_count"],
         "formal_invariant_evaluations": invariant_payload["total_checks"],
         "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
+        "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
+        + metric_separation_payload["permutation"]["iterations"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         "total_evaluation_rows": base_validation_units
@@ -280,6 +284,8 @@ def main() -> int:
         + transcript_payload["locator_count"]
         + invariant_payload["total_checks"]
         + metric_separation_payload["metric_scenario_count"]
+        + metric_separation_payload["bootstrap"]["iterations"]
+        + metric_separation_payload["permutation"]["iterations"]
         + gate_ablation_payload["ablation_count"]
         + repair_frontier_payload["counterfactual_evaluation_count"]
         + robustness_payload["recoded_evaluations"]
@@ -337,6 +343,8 @@ def main() -> int:
             "recall_point_biserial": metric_separation_payload["point_biserial"]["recall"],
             "high_recall_blocked": metric_separation_payload["high_recall_blocked"],
             "gate_cascade": metric_separation_payload["gate_cascade"],
+            "bootstrap": metric_separation_payload["bootstrap"],
+            "permutation": metric_separation_payload["permutation"],
         },
         "gate_ablation": {
             "qualified_scenario_count": gate_ablation_payload["qualified_scenario_count"],
@@ -658,6 +666,7 @@ def _format_report(payload: dict) -> str:
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
+        f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",

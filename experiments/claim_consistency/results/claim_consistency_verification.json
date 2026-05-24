@@ -1,5 +1,5 @@
 {
-  "check_count": 40,
+  "check_count": 47,
   "checks": [
     {
       "expected": "- 19 validation suites",
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 57,111 total evaluation rows",
+      "expected": "- 59,111 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -28,6 +28,11 @@
     },
     {
       "expected": "- 185 metric-separation evaluations",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -72,12 +77,17 @@
       "path": "README.md"
     },
     {
-      "expected": "185 metric-separation evaluations, 288 gate-ablation evaluations and 2,236 repair-frontier evaluations",
+      "expected": "185 metric-separation evaluations, 2,000 metric statistical resamples, 288 gate-ablation evaluations and 2,236 repair-frontier evaluations",
       "passed": true,
       "path": "README.md"
     },
     {
       "expected": "| Metric separation analysis | 185 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Metric statistical robustness | 2000 |",
       "passed": true,
       "path": "README.md"
     },
@@ -107,7 +117,17 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Metric bootstrap/permutation robustness",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Blocked-claim repair frontiers",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "bootstrap/permutation robustness",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -123,6 +143,11 @@
     },
     {
       "expected": "288/288 gate-ablation evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "1,000 metric bootstrap resamples, 1,000 metric permutation shuffles",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -147,7 +172,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "51,643 formal invariant checks, 185 metric-separation evaluations, 288 gate-ablation evaluations and 2,236 repair-frontier counterfactuals",
+      "expected": "51,643 formal invariant checks, 185 metric-separation evaluations, 2,000 metric resamples",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "2,000 metric bootstrap/permutation resamples",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -187,6 +217,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Gate ablation evaluations: 288/288 passed over 46 qualified packets",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -204,5 +239,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 40
+  "passed_count": 47
 }

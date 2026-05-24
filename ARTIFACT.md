@@ -26,9 +26,10 @@ Expected aggregate output:
 - 19 validation suites
 - 230 scenario files
 - 609 embedded records or output items
-- 57,111 total evaluation rows
+- 59,111 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 185 metric-separation evaluations
+- 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 288/288 gate-ablation evaluations passed
 - 176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations
 - 230/230 scenario-regression expectations passed
