@@ -56,9 +56,20 @@ python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out ex
 7. Treat strong upstream performance as insufficient if the output fails source reconstruction, source tagging, counter-material presentation, contestability, review gating, or adoption logging.
 8. For paper or review work, report the harness as a status-allocation instrument, not as a legal merits evaluator.
 
-## First-10 Output Audit Protocol
+## Full Validation Protocol
 
-When the user asks for a real experiment, start with ten outputs rather than claiming full empirical validation:
+When the user asks for the most complete validation, run the full matrix rather than only a single pilot:
+
+```bash
+python scripts/run_full_validation.py
+python -m unittest discover -s tests
+```
+
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined gold sets and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`.
+
+## Single-Model Output Audit Protocol
+
+When the user asks to evaluate one model or provider, run a ten-output pilot before claiming broader empirical validation:
 
 1. Choose 2--3 issue-defined legal questions with known high-authority and counter-material sets.
 2. Capture or generate one upstream output at a time. Save raw prompts, output text, provider label if available, timestamp, source links and any visible citations.

@@ -36,6 +36,7 @@ python -m audit_harness.cli run examples/scenarios --out reports/sample_report.m
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
 python scripts/collect_public_system_outputs.py
+python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
@@ -108,6 +109,33 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
 
 Failure flags can downgrade or withdraw an output from external procedural use.
 
+## Full Validation Suite
+
+Run the complete validation matrix with:
+
+```bash
+python scripts/run_full_validation.py
+```
+
+The full suite reruns all committed validation layers and writes:
+
+```text
+experiments/full_validation/results/full_validation_report.md
+experiments/full_validation/results/full_validation_report.json
+```
+
+Current coverage:
+
+| Layer | Validation units | Purpose |
+| --- | ---: | --- |
+| Protocol stress scenarios | 10 | Tests downgrade, withdrawal, decision-support and high-recall-but-blocked behavior. |
+| Public metadata records | 120 | Tests source reconstruction across six jurisdictions. |
+| Public legal-system outputs | 60 | Tests ordered real upstream public legal-output reconstruction. |
+| Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
+| Issue-defined gold sets | 3 | Tests normative material screening with source-bound high-authority and counter-material sets. |
+
+The current full validation report covers 203 validation units across 35 scenario files, with expected outcomes passing in all 35 scenarios.
+
 ## Jurisdiction Profiles
 
 Profiles in `examples/jurisdiction_profiles/` parameterize `H` and `K` for different legal settings. Common-law scenarios use binding and persuasive precedent labels, while civil-law scenarios use code provisions, special statutes, high-court decisions, doctrinal views and later amendments. The scoring dimensions stay stable; the legal materials used to prove each dimension vary by profile.
@@ -173,6 +201,7 @@ audit_harness/          scoring model and CLI
 examples/scenarios/     runnable audit scenarios
 examples/jurisdiction_profiles/  legal-system parameter profiles
 experiments/stress_tests/results/  committed stress-test and sensitivity outputs
+experiments/full_validation/        aggregate full-suite validation report
 experiments/issue_gold_sets/       curated issue packets and gold-set outputs
 experiments/ai_outputs/            raw Codex model-output pilot and scored scenarios
 experiments/real_cases/            public metadata snapshots, manifests and outputs

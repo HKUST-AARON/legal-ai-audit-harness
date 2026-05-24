@@ -389,6 +389,26 @@ To test whether the framework is operational rather than merely classificatory, 
 
 The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, scores $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner computes the allowed status, counter-authority recall, authority coverage, invalid-authority rate, evidence fidelity, evidence coverage, source-tag coverage and downgrade or withdrawal disposition. A separate sensitivity command varies the normative and decision thresholds and reports status-distribution changes. The validation layers test protocol behavior, model-output auditability and status allocation rather than legal merits in the large.
 
+The complete validation matrix contains five layers and 203 validation units: ten protocol stress scenarios, 120 public metadata records, 60 ordered public-system output records, ten raw model outputs and three issue-defined gold sets. Expected outcomes passed in all 35 scenario files. This breadth matters because each layer tests a different claim. Stress scenarios test the decision protocol. Metadata and public-system outputs test source reconstruction. Raw model outputs test the gap between legal fluency and procedural status. Gold sets test the conditions under which normative material screening is actually justified.
+
+\begin{table}[htbp]
+\centering
+\caption{Full validation matrix}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.0cm}p{1.8cm}p{2.0cm}Y}
+\toprule
+Layer & Units & Expected pass & What it validates \\
+\midrule
+Stress scenarios & 10 & 10/10 & Status gates, failure caps, downgrade and withdrawal behavior. \\
+Public metadata & 120 & 6/6 & Source reconstruction across six jurisdictions. \\
+Public-system outputs & 60 & 6/6 & Real upstream legal-output reconstruction and professional-support caps. \\
+Raw model outputs & 10 & 10/10 & High authority coverage without source binding remains procedurally capped. \\
+Issue gold sets & 3 & 3/3 & Source-bound high-authority and counter-material packets can qualify as normative screening. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \begin{table}[htbp]
 \centering
 \caption{Scenario-based harness results}

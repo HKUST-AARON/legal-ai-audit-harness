@@ -1,0 +1,91 @@
+{
+  "expected_passed": 35,
+  "expected_total": 35,
+  "high_upstream_but_blocked": 13,
+  "scenario_files": 35,
+  "suite_count": 5,
+  "suites": [
+    {
+      "expected_passed": 10,
+      "finding": "Tests downgrade, withdrawal, decision-support and high-recall-but-blocked behavior.",
+      "high_upstream_but_blocked": 3,
+      "id": "stress_tests",
+      "label": "Protocol stress scenarios",
+      "mean_audit_score": 8.3,
+      "mean_upstream_recall": 0.836,
+      "scenario_count": 10,
+      "status_distribution": {
+        "decision_support_reason": 2,
+        "no_external_legal_effect": 2,
+        "normative_material_screening_output": 3,
+        "professional_support_output": 1,
+        "reference_information": 2
+      },
+      "validation_units": "10 stress scenarios"
+    },
+    {
+      "expected_passed": 6,
+      "finding": "Tests source reconstruction across six jurisdictions.",
+      "high_upstream_but_blocked": 0,
+      "id": "real_cases",
+      "label": "Public metadata records",
+      "mean_audit_score": 8.666666666666666,
+      "mean_upstream_recall": null,
+      "scenario_count": 6,
+      "status_distribution": {
+        "professional_support_output": 6
+      },
+      "validation_units": "120 public metadata records"
+    },
+    {
+      "expected_passed": 6,
+      "finding": "Tests ordered real upstream legal-output reconstruction.",
+      "high_upstream_but_blocked": 0,
+      "id": "public_system_outputs",
+      "label": "Public legal-system outputs",
+      "mean_audit_score": 8.666666666666666,
+      "mean_upstream_recall": null,
+      "scenario_count": 6,
+      "status_distribution": {
+        "professional_support_output": 6
+      },
+      "validation_units": "60 visible public-system records"
+    },
+    {
+      "expected_passed": 10,
+      "finding": "Tests whether strong authority coverage without source binding remains procedurally capped.",
+      "high_upstream_but_blocked": 10,
+      "id": "ai_outputs",
+      "label": "Raw Codex GPT-5.5 xhigh outputs",
+      "mean_audit_score": 9,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 10,
+      "status_distribution": {
+        "reference_information": 10
+      },
+      "validation_units": "10 raw model outputs"
+    },
+    {
+      "expected_passed": 3,
+      "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
+      "high_upstream_but_blocked": 0,
+      "id": "issue_gold_sets",
+      "label": "Issue-defined gold sets",
+      "mean_audit_score": 11,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 3,
+      "status_distribution": {
+        "normative_material_screening_output": 3
+      },
+      "validation_units": "3 curated issue packets"
+    }
+  ],
+  "validation_units": {
+    "issue_gold_sets": 3,
+    "public_metadata_records": 120,
+    "public_system_records": 60,
+    "raw_model_outputs": 10,
+    "stress_scenarios": 10,
+    "total": 203
+  }
+}

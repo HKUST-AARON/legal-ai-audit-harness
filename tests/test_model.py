@@ -180,6 +180,14 @@ class AuditModelTest(unittest.TestCase):
             self.assertFalse(result.claim_supported, path.name)
             self.assertGreaterEqual(scenario["upstream_metrics"]["recall"], 0.9, path.name)
 
+    def test_full_validation_report_shape(self):
+        report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["suite_count"], 5)
+        self.assertEqual(report["scenario_files"], 35)
+        self.assertEqual(report["validation_units"]["total"], 203)
+        self.assertEqual(report["expected_passed"], 35)
+        self.assertEqual(report["expected_total"], 35)
+
     def test_cli_sensitivity_report(self):
         completed = subprocess.run(
             [sys.executable, "-m", "audit_harness.cli", "sensitivity", str(SCENARIOS)],
