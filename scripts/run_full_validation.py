@@ -117,10 +117,19 @@ def main() -> int:
             "experiments/ai_outputs/results/ai_output_sensitivity.json",
         ]
     )
+    _run([sys.executable, "scripts/run_annotation_robustness.py"])
+    robustness_payload = json.loads(
+        (ROOT / "experiments" / "annotation_robustness" / "results" / "annotation_robustness.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_robustness_row(robustness_payload))
 
     payload = {
         "suite_count": len(rows),
-        "scenario_files": sum(row["scenario_count"] for row in rows),
+        "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
+        "recoded_evaluations": robustness_payload["recoded_evaluations"],
+        "total_evaluation_rows": 215 + robustness_payload["recoded_evaluations"],
         "validation_units": {
             "stress_scenarios": 10,
             "public_metadata_records": 120,
@@ -128,11 +137,22 @@ def main() -> int:
             "raw_model_outputs": 10,
             "issue_gold_sets": 3,
             "issue_ablations": 12,
+            "annotation_recodings": robustness_payload["recoded_evaluations"],
             "total": 215,
         },
-        "expected_passed": sum(row["expected_passed"] for row in rows),
-        "expected_total": sum(row["scenario_count"] for row in rows),
-        "high_upstream_but_blocked": sum(row["high_upstream_but_blocked"] for row in rows),
+        "expected_passed": sum(row["expected_passed"] for row in rows if "expected_passed" in row),
+        "expected_total": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
+        "high_upstream_but_blocked": sum(
+            row["high_upstream_but_blocked"]
+            for row in rows
+            if row.get("high_upstream_but_blocked") is not None
+        ),
+        "annotation_robustness": {
+            "all_policy_status_stable": robustness_payload["all_policy_status_stable"],
+            "scenario_count": robustness_payload["scenario_count"],
+            "weighted_status_agreement_base_strict": robustness_payload["weighted_status_agreement_base_strict"],
+            "weighted_status_agreement_base_lenient": robustness_payload["weighted_status_agreement_base_lenient"],
+        },
         "suites": rows,
     }
     (RESULTS / "full_validation_report.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
@@ -165,27 +185,49 @@ def _suite_row(suite: dict, payload: dict) -> dict:
     }
 
 
+def _robustness_row(payload: dict) -> dict:
+    return {
+        "id": "annotation_robustness",
+        "label": "Annotation robustness recoding",
+        "validation_units": f"{payload['recoded_evaluations']} strict/lenient recoded evaluations",
+        "scenario_count": payload["scenario_count"],
+        "rule_pass": f"{payload['all_policy_status_stable']}/{payload['scenario_count']} stable across all policies",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "base_vs_strict_weighted_agreement": round(payload["weighted_status_agreement_base_strict"], 2),
+            "base_vs_lenient_weighted_agreement": round(payload["weighted_status_agreement_base_lenient"], 2),
+        },
+        "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
         "",
         f"Validation suites: {payload['suite_count']}",
         f"Scenario files: {payload['scenario_files']}",
-        f"Embedded records/items: {payload['validation_units']['total']} "
+        f"Base embedded records/items: {payload['validation_units']['total']} "
         f"({payload['validation_units']['stress_scenarios']} stress scenarios, "
         f"{payload['validation_units']['public_metadata_records']} public metadata records, "
         f"{payload['validation_units']['public_system_records']} public-system records, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
         f"{payload['validation_units']['issue_gold_sets']} issue-defined positive controls, "
         f"{payload['validation_units']['issue_ablations']} issue ablations)",
+        f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",
+        f"Total evaluation rows including recodings: {payload['total_evaluation_rows']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
+        f"Annotation robustness: {payload['annotation_robustness']['all_policy_status_stable']}/{payload['annotation_robustness']['scenario_count']} stable across base, strict and lenient coding policies",
         "",
-        "| Suite | Embedded records/items | Scenario files | Rule pass | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
+        "| Suite | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
     for row in payload["suites"]:
         status_distribution = ", ".join(f"{status}: {count}" for status, count in sorted(row["status_distribution"].items()))
+        rule_or_stability = row["rule_pass"] if "rule_pass" in row else f"{row['expected_passed']}/{row['scenario_count']}"
         lines.append(
             "| "
             + " | ".join(
@@ -193,10 +235,10 @@ def _format_report(payload: dict) -> str:
                     row["label"],
                     row["validation_units"],
                     str(row["scenario_count"]),
-                    str(row["expected_passed"]),
-                    f"{row['mean_audit_score']:.2f}",
+                    rule_or_stability,
+                    _metric(row["mean_audit_score"]),
                     _metric(row["mean_upstream_recall"]),
-                    str(row["high_upstream_but_blocked"]),
+                    "n/a" if row["high_upstream_but_blocked"] is None else str(row["high_upstream_but_blocked"]),
                     status_distribution,
                 ]
             )

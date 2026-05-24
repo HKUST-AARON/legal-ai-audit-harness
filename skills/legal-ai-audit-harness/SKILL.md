@@ -51,6 +51,7 @@ python -m audit_harness.cli score examples/scenarios/court_authority_report.json
 python -m audit_harness.cli run examples/scenarios --out reports/sample_report.md --json-out reports/sample_report.json
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
+python scripts/run_annotation_robustness.py
 ```
 
 7. Treat strong upstream performance as insufficient if the output fails source reconstruction, source tagging, counter-material presentation, contestability, review gating, or adoption logging.
@@ -65,7 +66,7 @@ python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
-The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined positive controls, issue ablations and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`. Describe it as scenario-regression and artifact validation, not as independent legal merits validation.
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md` and the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`. Describe it as scenario-regression, artifact validation and coding-uncertainty analysis, not as independent legal merits validation.
 
 ## Single-Model Output Audit Protocol
 

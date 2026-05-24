@@ -213,11 +213,29 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 6)
+        self.assertEqual(report["suite_count"], 7)
         self.assertEqual(report["scenario_files"], 47)
         self.assertEqual(report["validation_units"]["total"], 215)
+        self.assertEqual(report["total_evaluation_rows"], 309)
+        self.assertEqual(report["validation_units"]["annotation_recodings"], 94)
         self.assertEqual(report["expected_passed"], 47)
         self.assertEqual(report["expected_total"], 47)
+        self.assertEqual(report["annotation_robustness"]["scenario_count"], 47)
+
+    def test_annotation_robustness_report_shape(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_annotation_robustness.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "annotation_robustness" / "results" / "annotation_robustness.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["scenario_count"], 47)
+        self.assertEqual(report["recoded_evaluations"], 94)
+        self.assertGreaterEqual(report["weighted_status_agreement_base_strict"], 0.9)
+        self.assertGreaterEqual(report["all_policy_status_stable"], 40)
 
     def test_cli_sensitivity_report(self):
         completed = subprocess.run(

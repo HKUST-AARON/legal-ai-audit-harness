@@ -1,9 +1,16 @@
 {
+  "annotation_robustness": {
+    "all_policy_status_stable": 45,
+    "scenario_count": 47,
+    "weighted_status_agreement_base_lenient": 1.0,
+    "weighted_status_agreement_base_strict": 0.9758602978941961
+  },
   "expected_passed": 47,
   "expected_total": 47,
   "high_upstream_but_blocked": 20,
+  "recoded_evaluations": 94,
   "scenario_files": 47,
-  "suite_count": 6,
+  "suite_count": 7,
   "suites": [
     {
       "expected_passed": 10,
@@ -93,9 +100,26 @@
         "reference_information": 9
       },
       "validation_units": "12 issue-packet ablations"
+    },
+    {
+      "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
+      "high_upstream_but_blocked": null,
+      "id": "annotation_robustness",
+      "label": "Annotation robustness recoding",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "45/47 stable across all policies",
+      "scenario_count": 47,
+      "status_distribution": {
+        "base_vs_lenient_weighted_agreement": 1.0,
+        "base_vs_strict_weighted_agreement": 0.98
+      },
+      "validation_units": "94 strict/lenient recoded evaluations"
     }
   ],
+  "total_evaluation_rows": 309,
   "validation_units": {
+    "annotation_recodings": 94,
     "issue_ablations": 12,
     "issue_gold_sets": 3,
     "public_metadata_records": 120,

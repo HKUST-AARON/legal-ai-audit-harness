@@ -1,0 +1,1095 @@
+{
+  "all_policy_status_stable": 45,
+  "lenient_status_stable": 47,
+  "mean_score_delta_lenient": 0.48936170212765956,
+  "mean_score_delta_strict": 0.8723404255319149,
+  "policy_count": 3,
+  "recoded_evaluations": 94,
+  "rows": [
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      },
+      "jurisdiction_profile": "administrative",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "administrative-guidance-conflict",
+      "source_path": "examples/scenarios/administrative_guidance_conflict.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "civil-law-statutory-interpretation",
+      "source_path": "examples/scenarios/civil_law_statutory_interpretation.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      },
+      "scenario_id": "court-authority-report",
+      "source_path": "examples/scenarios/court_authority_report.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "arbitral",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "decision-support-ready",
+      "source_path": "examples/scenarios/decision_support_ready.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "grounded-output-summary",
+      "source_path": "examples/scenarios/grounded_output_summary.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 5
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 8
+      },
+      "scenario_id": "high-coverage-uncontestable-output",
+      "source_path": "examples/scenarios/high_coverage_uncontestable_output.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 4
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "odr",
+      "lenient": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "odr-authorized-review",
+      "source_path": "examples/scenarios/odr_authorized_review.json",
+      "strict": {
+        "allowed_status": "decision_support_reason",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 12
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 5
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 5
+      },
+      "scenario_id": "professional-research-support",
+      "source_path": "examples/scenarios/professional_research_support.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 5
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "suspended-authority-omission",
+      "source_path": "examples/scenarios/suspended_authority_omission.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 0
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 1
+      },
+      "scenario_id": "unverifiable-legal-output",
+      "source_path": "examples/scenarios/unverifiable_legal_output.json",
+      "strict": {
+        "allowed_status": "no_external_legal_effect",
+        "claim_supported": false,
+        "disposition": "withdrawal",
+        "total_score": 0
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "real-cases-canada",
+      "source_path": "experiments/real_cases/scenarios/canada.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "scenario_id": "real-cases-germany",
+      "source_path": "experiments/real_cases/scenarios/germany.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "real-cases-hong_kong",
+      "source_path": "experiments/real_cases/scenarios/hong_kong.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "real-cases-mainland_china",
+      "source_path": "experiments/real_cases/scenarios/mainland_china.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "scenario_id": "real-cases-united_kingdom",
+      "source_path": "experiments/real_cases/scenarios/united_kingdom.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "real-cases-united_states",
+      "source_path": "experiments/real_cases/scenarios/united_states.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "public-system-output-canada",
+      "source_path": "experiments/public_system_outputs/scenarios/canada.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "scenario_id": "public-system-output-germany",
+      "source_path": "experiments/public_system_outputs/scenarios/germany.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "public-system-output-hong_kong",
+      "source_path": "experiments/public_system_outputs/scenarios/hong_kong.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "public-system-output-mainland_china",
+      "source_path": "experiments/public_system_outputs/scenarios/mainland_china.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      },
+      "scenario_id": "public-system-output-united_kingdom",
+      "source_path": "experiments/public_system_outputs/scenarios/united_kingdom.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 9
+      },
+      "scenario_id": "public-system-output-united_states",
+      "source_path": "experiments/public_system_outputs/scenarios/united_states.json",
+      "strict": {
+        "allowed_status": "professional_support_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-eu-01",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_eu_01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-eu-02",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_eu_02.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-eu-03",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_eu_03.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-eu-04",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_eu_04.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-uk-01",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_uk_01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-uk-02",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_uk_02.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-uk-03",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_uk_03.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-us-01",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_us_01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-us-02",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_us_02.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "codex55-us-03",
+      "source_path": "experiments/ai_outputs/scenarios/codex55_us_03.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "eu-gdpr-article15-access-rights",
+      "source_path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild",
+      "source_path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "us-agency-deference-after-loper-bright",
+      "source_path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "eu-gdpr-article15-access-rights-counter-material-suppressed",
+      "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-counter-material-suppressed.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+      "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "eu-gdpr-article15-access-rights-missing-high-authority",
+      "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-missing-high-authority.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "eu-gdpr-article15-access-rights-unverified-source-tags",
+      "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-unverified-source-tags.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed",
+      "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-counter-material-suppressed.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+      "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
+      "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-missing-high-authority.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags",
+      "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-unverified-source-tags.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "us-agency-deference-after-loper-bright-counter-material-suppressed",
+      "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-counter-material-suppressed.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
+      "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "us-agency-deference-after-loper-bright-missing-high-authority",
+      "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-missing-high-authority.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "us-agency-deference-after-loper-bright-unverified-source-tags",
+      "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-unverified-source-tags.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    }
+  ],
+  "scenario_count": 47,
+  "strict_status_stable": 45,
+  "weighted_status_agreement_base_lenient": 1.0,
+  "weighted_status_agreement_base_strict": 0.9758602978941961
+}
