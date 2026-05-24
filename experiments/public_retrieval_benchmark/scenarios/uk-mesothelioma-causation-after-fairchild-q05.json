@@ -1,0 +1,264 @@
+{
+  "id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Public search output for query: Compensation Act 2006 section 3 Barker mesothelioma",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every visible result has a public source URL and source-system label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, source endpoint, snapshot and rank window are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined high-authority set."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined counter-material set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected by a reviewer but does not create a party-facing contestation pathway."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The query, manifest, scenario and harness result are logged as reproducible artifacts."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "retrieved_high_authority": [],
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "uk-search-michael-holmes-v-poeton-holdings-limited",
+      "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+      "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+      "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+      "uk-search-davies-v-frimley-health-nhs-foundation-trust",
+      "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre",
+      "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre",
+      "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic",
+      "uk-search-avonwick-holdings-ltd-v-azitio-holdings-ltd-ors"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/uk-mesothelioma-causation-after-fairchild-q05.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public search rank 1 makes this material visible: Shaikh Abdul Rehman & Ors v Secretary of State for Health and Social Care & Ors",
+        "source_ids": [
+          "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-"
+        ],
+        "locators": [
+          "[2026] EWHC 6 (KB)"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public search rank 2 makes this material visible: Michael Holmes v Poeton Holdings Limited",
+        "source_ids": [
+          "uk-search-michael-holmes-v-poeton-holdings-limited"
+        ],
+        "locators": [
+          "[2023] EWCA Civ 1377"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public search rank 3 makes this material visible: Sharon Alexandra Ness v Carillion Capital Projects Limited & Ors.",
+        "source_ids": [
+          "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o"
+        ],
+        "locators": [
+          "[2023] EWHC 1219 (KB)"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public search rank 4 makes this material visible: CNZ v Royal Bath Hospitals NHS Foundation Trust & Anor",
+        "source_ids": [
+          "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor"
+        ],
+        "locators": [
+          "[2023] EWHC 19 (KB)"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public search rank 5 makes this material visible: Aviva Insurance Limited v The Secretary of State for Work and Pensions",
+        "source_ids": [
+          "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an"
+        ],
+        "locators": [
+          "[2022] EWCA Civ 15"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public search rank 6 makes this material visible: Davies v Frimley Health NHS Foundation Trust",
+        "source_ids": [
+          "uk-search-davies-v-frimley-health-nhs-foundation-trust"
+        ],
+        "locators": [
+          "[2021] EWHC 169 (QB)"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public search rank 7 makes this material visible: Aviva Insurance Ltd & Anor, R (On the Application Of) v The Secretary of State for Work And Pensions",
+        "source_ids": [
+          "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre"
+        ],
+        "locators": [
+          "[2021] EWHC 30 (Admin)"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public search rank 8 makes this material visible: Aviva Insurance Ltd & Anor, R (On the Application Of) v The Secretary of State for Work and Pensions",
+        "source_ids": [
+          "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre"
+        ],
+        "locators": [
+          "[2020] EWHC 3118 (Admin)"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public search rank 9 makes this material visible: The Asbestos Victims Support Groups' Forum UK, R (On the Application Of) v The Lord Chancellor",
+        "source_ids": [
+          "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic"
+        ],
+        "locators": [
+          "[2020] EWHC 2108 (Admin)"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public search rank 10 makes this material visible: Avonwick Holdings Ltd v Azitio Holdings Ltd & Ors",
+        "source_ids": [
+          "uk-search-avonwick-holdings-ltd-v-azitio-holdings-ltd-ors"
+        ],
+        "locators": [
+          "[2020] EWHC 1844 (Comm)"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "locator": "[2026] EWHC 6 (KB)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "locator": "[2023] EWCA Civ 1377",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "locator": "[2023] EWHC 1219 (KB)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "locator": "[2023] EWHC 19 (KB)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+        "locator": "[2022] EWCA Civ 15",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "uk-search-davies-v-frimley-health-nhs-foundation-trust",
+        "locator": "[2021] EWHC 169 (QB)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre",
+        "locator": "[2021] EWHC 30 (Admin)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre",
+        "locator": "[2020] EWHC 3118 (Admin)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic",
+        "locator": "[2020] EWHC 2108 (Admin)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "uk-search-avonwick-holdings-ltd-v-azitio-holdings-ltd-ors",
+        "locator": "[2020] EWHC 1844 (Comm)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "us-agency-deference-after-loper-bright-q03",
+  "issue_id": "us-agency-deference-after-loper-bright",
+  "query": "Chevron overruled Skidmore APA 706",
+  "top_k": 10,
+  "source_system": "CourtListener opinion search API",
+  "records": [
+    {
+      "id": "us-search-restaurant-law-center-v-labr",
+      "title": "Restaurant Law Center v. LABR",
+      "citation": "120 F.4th 163",
+      "source_url": "https://www.courtlistener.com/opinion/10074785/restaurant-law-center-v-labr/",
+      "rank": 1,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-restaurant-law-center-v-labr",
+      "title": "Restaurant Law Center v. LABR",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10162593/restaurant-law-center-v-labr/",
+      "rank": 2,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-united-states-department-of-state-v-picur",
+      "title": "United States Department of State v. Picur",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10144701/united-states-department-of-state-v-picur/",
+      "rank": 3,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-michael-lissack-v-cmsnr-irs",
+      "title": "Michael Lissack v. Cmsnr. IRS",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10311621/michael-lissack-v-cmsnr-irs/",
+      "rank": 4,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-turtle-island-restoration-network-v-united-states-department",
+      "title": "Turtle Island Restoration Network v. United States Department of Commerce",
+      "citation": "878 F.3d 725",
+      "source_url": "https://www.courtlistener.com/opinion/4455382/turtle-island-restoration-network-v-united-states-department-of-commerce/",
+      "rank": 5,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-kalshiex-llc-v-commodity-futures-trading-commission",
+      "title": "Kalshiex LLC v. Commodity Futures Trading Commission",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10114926/kalshiex-llc-v-commodity-futures-trading-commission/",
+      "rank": 6,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-clifford-v-united-states-coast-guard",
+      "title": "Clifford v. United States Coast Guard",
+      "citation": "915 F. Supp. 2d 299; 2013 U.S. Dist. LEXIS 4143; 2013 WL 139190",
+      "source_url": "https://www.courtlistener.com/opinion/8721735/clifford-v-united-states-coast-guard/",
+      "rank": 7,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-northern-new-mexico-stockman-s-v-united-states-fish",
+      "title": "Northern New Mexico Stockman's v. United States Fish",
+      "citation": "30 F.4th 1210",
+      "source_url": "https://www.courtlistener.com/opinion/6460040/northern-new-mexico-stockmans-v-united-states-fish/",
+      "rank": 8,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-struniak-v-lynch",
+      "title": "Struniak v. Lynch",
+      "citation": "159 F. Supp. 3d 643; 2016 U.S. Dist. LEXIS 11081; 2016 WL 393953",
+      "source_url": "https://www.courtlistener.com/opinion/7318136/struniak-v-lynch/",
+      "rank": 9,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-new-jersey-v-bessent-village-of-scarsdale-v-irs",
+      "title": "New Jersey v. Bessent; Village of Scarsdale v. IRS",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10653879/new-jersey-v-bessent-village-of-scarsdale-v-irs/",
+      "rank": 10,
+      "source_system": "CourtListener opinion search API"
+    }
+  ]
+}

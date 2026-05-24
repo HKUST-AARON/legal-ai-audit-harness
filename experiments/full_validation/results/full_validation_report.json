@@ -1,9 +1,9 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 48,
-    "scenario_count": 50,
+    "all_policy_status_stable": 60,
+    "scenario_count": 62,
     "weighted_status_agreement_base_lenient": 1.0,
-    "weighted_status_agreement_base_strict": 0.9773242630385488
+    "weighted_status_agreement_base_strict": 0.9796387520525451
   },
   "blind_coding": {
     "coder_count": 2,
@@ -19,12 +19,12 @@
     "status_disagreement_count": 2
   },
   "blind_coding_evaluations": 94,
-  "expected_passed": 50,
-  "expected_total": 50,
+  "expected_passed": 62,
+  "expected_total": 62,
   "high_upstream_but_blocked": 20,
-  "recoded_evaluations": 100,
-  "scenario_files": 50,
-  "suite_count": 9,
+  "recoded_evaluations": 124,
+  "scenario_files": 62,
+  "suite_count": 10,
   "suites": [
     {
       "expected_passed": 10,
@@ -88,6 +88,20 @@
       "validation_units": "19 issue-specific public output/source records"
     },
     {
+      "expected_passed": 12,
+      "finding": "Tests true public search outputs against issue-defined high-authority and counter-material gold sets.",
+      "high_upstream_but_blocked": 0,
+      "id": "public_retrieval_benchmark",
+      "label": "Public retrieval benchmark",
+      "mean_audit_score": 9,
+      "mean_upstream_recall": 0.1111111111111111,
+      "scenario_count": 12,
+      "status_distribution": {
+        "reference_information": 12
+      },
+      "validation_units": "99 public search result records"
+    },
+    {
       "expected_passed": 10,
       "finding": "Tests whether strong authority coverage without source binding remains procedurally capped.",
       "high_upstream_but_blocked": 10,
@@ -137,13 +151,13 @@
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "48/50 stable across all policies",
-      "scenario_count": 50,
+      "rule_pass": "60/62 stable across all policies",
+      "scenario_count": 62,
       "status_distribution": {
         "base_vs_lenient_weighted_agreement": 1.0,
         "base_vs_strict_weighted_agreement": 0.98
       },
-      "validation_units": "100 strict/lenient recoded evaluations"
+      "validation_units": "124 strict/lenient recoded evaluations"
     },
     {
       "finding": "Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.",
@@ -161,17 +175,18 @@
       "validation_units": "47 packets x 2 coding passes"
     }
   ],
-  "total_evaluation_rows": 428,
+  "total_evaluation_rows": 551,
   "validation_units": {
-    "annotation_recodings": 100,
+    "annotation_recodings": 124,
     "blind_coding_packets": 47,
     "issue_ablations": 12,
     "issue_gold_sets": 3,
     "issue_public_records": 19,
     "public_metadata_records": 120,
+    "public_retrieval_records": 99,
     "public_system_records": 60,
     "raw_model_outputs": 10,
     "stress_scenarios": 10,
-    "total": 234
+    "total": 333
   }
 }

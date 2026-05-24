@@ -1,0 +1,41 @@
+{
+  "id": "us-agency-deference-after-loper-bright-q01",
+  "issue_id": "us-agency-deference-after-loper-bright",
+  "query": "Loper Bright Chevron Skidmore Kisor",
+  "top_k": 10,
+  "source_system": "CourtListener opinion search API",
+  "records": [
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369",
+      "source_url": "https://www.courtlistener.com/opinion/9986254/loper-bright-enterprises-v-raimondo/",
+      "rank": 1,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369",
+      "source_url": "https://www.courtlistener.com/opinion/10600041/loper-bright-enterprises-v-raimondo/",
+      "rank": 2,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-state-of-texas-v-epa",
+      "title": "State of Texas v. EPA",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10585900/state-of-texas-v-epa/",
+      "rank": 3,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-varian-medical-systems-inc-and-subsidiaries",
+      "title": "Varian Medical Systems, Inc. and Subsidiaries",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10072748/varian-medical-systems-inc-and-subsidiaries/",
+      "rank": 4,
+      "source_system": "CourtListener opinion search API"
+    }
+  ]
+}

@@ -37,6 +37,7 @@ python -m audit_harness.cli experiment examples/scenarios --out reports/experime
 python -m audit_harness.cli sensitivity examples/scenarios --out reports/sensitivity_report.md --json-out reports/sensitivity_report.json
 python scripts/collect_public_system_outputs.py
 python scripts/collect_issue_public_outputs.py
+python scripts/collect_public_retrieval_benchmark.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
@@ -138,14 +139,15 @@ Current coverage:
 | Protocol stress scenarios | 10 | Tests downgrade, withdrawal, decision-support and high-recall-but-blocked behavior. |
 | Public legal-record metadata | 120 | Tests source reconstruction across six public legal-record sources. |
 | Public legal-system outputs | 60 | Tests ordered real upstream public legal-output reconstruction. |
-| Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
 | Issue-specific public output/source packets | 19 | Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements. |
+| Public retrieval benchmark | 99 | Tests true public search outputs against issue-defined high-authority and counter-material gold sets. |
+| Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
 | Issue-defined positive controls | 3 | Tests normative material screening with source-bound high-authority and counter-material sets. |
 | Issue-defined ablations | 12 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
-| Annotation robustness recoding | 100 | Re-scores all 50 scenario packets under strict and lenient coding policies to test status stability. |
+| Annotation robustness recoding | 124 | Re-scores all 62 scenario packets under strict and lenient coding policies to test status stability. |
 | Score-blinded dual coding | 94 | Two coding passes score all 47 packets without original scores or expected outcomes. |
 
-The current full validation report covers 50 scenario files containing 234 embedded records/items, 100 strict/lenient recoded evaluations, and 94 score-blinded coder evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the robustness and blind-coding layers test whether status allocation is stable under plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
+The current full validation report covers 62 scenario files containing 333 embedded records/items, 124 strict/lenient recoded evaluations, and 94 score-blinded coder evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the public retrieval benchmark, robustness and blind-coding layers test whether status allocation survives real public search outputs and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
 
 ## Jurisdiction Profiles
 
@@ -201,7 +203,7 @@ The repository includes a coding-uncertainty experiment:
 python scripts/run_annotation_robustness.py
 ```
 
-The script re-scores all 50 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
+The script re-scores all 62 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
 
 ## Score-Blinded Dual Coding Study
 
@@ -235,6 +237,17 @@ python -m audit_harness.cli experiment experiments/issue_public_outputs/scenario
 
 The default command uses committed snapshots. Pass `--refresh` to fetch current public pages/API output. The study freezes a CourtListener issue search for U.S. agency deference after `Loper Bright`, a National Archives issue search for English mesothelioma causation, and a Legislation.gov.uk/CURIA public-source packet for GDPR Article 15. It then tests whether the visible records preserve enough high-authority and counter-material evidence to claim `normative_material_screening_output` status. The current result is mixed by design: one source-bound public-source packet qualifies, while two issue-search outputs are capped at `reference_information` because their returned records omit high-authority or counter-material materials.
 
+## Public Retrieval Benchmark
+
+The repository includes a true public-search benchmark over issue-defined authority sets:
+
+```bash
+python scripts/collect_public_retrieval_benchmark.py
+python -m audit_harness.cli experiment experiments/public_retrieval_benchmark/scenarios --out experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.md --json-out experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.json
+```
+
+The benchmark freezes twelve public search outputs: six CourtListener queries for U.S. agency deference after `Loper Bright`, and six National Archives queries for English mesothelioma causation after `Fairchild`. It then measures high-authority recall, counter-material recall, source reconstruction and procedural status. The current result is stringent: all twelve real search outputs remain `reference_information`, with mean high-authority recall of 0.11, because top-k public search results do not preserve the complete issue-specific authority and counter-material chain.
+
 ## Public System Output Pilot
 
 The repository includes a public legal system output pilot:
@@ -257,6 +270,7 @@ experiments/full_validation/        aggregate full-suite validation report
 experiments/issue_gold_sets/       curated issue packets and gold-set outputs
 experiments/issue_ablations/       generated positive-control ablations
 experiments/issue_public_outputs/  issue-specific public output snapshots and scenarios
+experiments/public_retrieval_benchmark/ public search snapshots and issue benchmark outputs
 experiments/blind_coding/          score-blinded packets and dual-coding outputs
 experiments/ai_outputs/            raw Codex model-output pilot and scored scenarios
 experiments/real_cases/            public metadata snapshots, manifests and outputs

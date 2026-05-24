@@ -1,0 +1,264 @@
+{
+  "id": "public-retrieval-us-agency-deference-after-loper-bright-q03",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Public search output for query: Chevron overruled Skidmore APA 706",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every visible result has a public source URL and source-system label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, source endpoint, snapshot and rank window are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined high-authority set."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined counter-material set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected by a reviewer but does not create a party-facing contestation pathway."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The query, manifest, scenario and harness result are logged as reproducible artifacts."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_high_authority": [],
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "us-search-restaurant-law-center-v-labr",
+      "us-search-restaurant-law-center-v-labr",
+      "us-search-united-states-department-of-state-v-picur",
+      "us-search-michael-lissack-v-cmsnr-irs",
+      "us-search-turtle-island-restoration-network-v-united-states-department",
+      "us-search-kalshiex-llc-v-commodity-futures-trading-commission",
+      "us-search-clifford-v-united-states-coast-guard",
+      "us-search-northern-new-mexico-stockman-s-v-united-states-fish",
+      "us-search-struniak-v-lynch",
+      "us-search-new-jersey-v-bessent-village-of-scarsdale-v-irs"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/us-agency-deference-after-loper-bright-q03.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public search rank 1 makes this material visible: Restaurant Law Center v. LABR",
+        "source_ids": [
+          "us-search-restaurant-law-center-v-labr"
+        ],
+        "locators": [
+          "120 F.4th 163"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public search rank 2 makes this material visible: Restaurant Law Center v. LABR",
+        "source_ids": [
+          "us-search-restaurant-law-center-v-labr"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10162593/restaurant-law-center-v-labr/"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public search rank 3 makes this material visible: United States Department of State v. Picur",
+        "source_ids": [
+          "us-search-united-states-department-of-state-v-picur"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10144701/united-states-department-of-state-v-picur/"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public search rank 4 makes this material visible: Michael Lissack v. Cmsnr. IRS",
+        "source_ids": [
+          "us-search-michael-lissack-v-cmsnr-irs"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10311621/michael-lissack-v-cmsnr-irs/"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public search rank 5 makes this material visible: Turtle Island Restoration Network v. United States Department of Commerce",
+        "source_ids": [
+          "us-search-turtle-island-restoration-network-v-united-states-department"
+        ],
+        "locators": [
+          "878 F.3d 725"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public search rank 6 makes this material visible: Kalshiex LLC v. Commodity Futures Trading Commission",
+        "source_ids": [
+          "us-search-kalshiex-llc-v-commodity-futures-trading-commission"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10114926/kalshiex-llc-v-commodity-futures-trading-commission/"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public search rank 7 makes this material visible: Clifford v. United States Coast Guard",
+        "source_ids": [
+          "us-search-clifford-v-united-states-coast-guard"
+        ],
+        "locators": [
+          "915 F. Supp. 2d 299; 2013 U.S. Dist. LEXIS 4143; 2013 WL 139190"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public search rank 8 makes this material visible: Northern New Mexico Stockman's v. United States Fish",
+        "source_ids": [
+          "us-search-northern-new-mexico-stockman-s-v-united-states-fish"
+        ],
+        "locators": [
+          "30 F.4th 1210"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public search rank 9 makes this material visible: Struniak v. Lynch",
+        "source_ids": [
+          "us-search-struniak-v-lynch"
+        ],
+        "locators": [
+          "159 F. Supp. 3d 643; 2016 U.S. Dist. LEXIS 11081; 2016 WL 393953"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public search rank 10 makes this material visible: New Jersey v. Bessent; Village of Scarsdale v. IRS",
+        "source_ids": [
+          "us-search-new-jersey-v-bessent-village-of-scarsdale-v-irs"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10653879/new-jersey-v-bessent-village-of-scarsdale-v-irs/"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "us-search-restaurant-law-center-v-labr",
+        "locator": "120 F.4th 163",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "us-search-restaurant-law-center-v-labr",
+        "locator": "https://www.courtlistener.com/opinion/10162593/restaurant-law-center-v-labr/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "us-search-united-states-department-of-state-v-picur",
+        "locator": "https://www.courtlistener.com/opinion/10144701/united-states-department-of-state-v-picur/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "us-search-michael-lissack-v-cmsnr-irs",
+        "locator": "https://www.courtlistener.com/opinion/10311621/michael-lissack-v-cmsnr-irs/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "us-search-turtle-island-restoration-network-v-united-states-department",
+        "locator": "878 F.3d 725",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "us-search-kalshiex-llc-v-commodity-futures-trading-commission",
+        "locator": "https://www.courtlistener.com/opinion/10114926/kalshiex-llc-v-commodity-futures-trading-commission/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "us-search-clifford-v-united-states-coast-guard",
+        "locator": "915 F. Supp. 2d 299; 2013 U.S. Dist. LEXIS 4143; 2013 WL 139190",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "us-search-northern-new-mexico-stockman-s-v-united-states-fish",
+        "locator": "30 F.4th 1210",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "us-search-struniak-v-lynch",
+        "locator": "159 F. Supp. 3d 643; 2016 U.S. Dist. LEXIS 11081; 2016 WL 393953",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "us-search-new-jersey-v-bessent-village-of-scarsdale-v-irs",
+        "locator": "https://www.courtlistener.com/opinion/10653879/new-jersey-v-bessent-village-of-scarsdale-v-irs/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

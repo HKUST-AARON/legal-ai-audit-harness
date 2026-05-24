@@ -1,0 +1,89 @@
+{
+  "id": "us-agency-deference-after-loper-bright-q02",
+  "issue_id": "us-agency-deference-after-loper-bright",
+  "query": "agency deference after Loper Bright Chevron",
+  "top_k": 10,
+  "source_system": "CourtListener opinion search API",
+  "records": [
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369",
+      "source_url": "https://www.courtlistener.com/opinion/9986254/loper-bright-enterprises-v-raimondo/",
+      "rank": 1,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369",
+      "source_url": "https://www.courtlistener.com/opinion/10600041/loper-bright-enterprises-v-raimondo/",
+      "rank": 2,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises, Inc v. Gina Raimondo",
+      "citation": "45 F.4th 359",
+      "source_url": "https://www.courtlistener.com/opinion/7856351/loper-bright-enterprises-inc-v-gina-raimondo/",
+      "rank": 3,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises, Inc. v. Wilbur L. Ross, Jr.",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/",
+      "rank": 4,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-eng-v-united-states-environmental-protection-agency",
+      "title": "Eng v. United States Environmental Protection Agency",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10839353/eng-v-united-states-environmental-protection-agency/",
+      "rank": 5,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-savage-v-n-c-dep-t-of-transp",
+      "title": "Savage v. N.C. Dep't of Transp.",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10658754/savage-v-nc-dept-of-transp/",
+      "rank": 6,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-bruckner-truck-sales-v-guzman",
+      "title": "Bruckner Truck Sales v. Guzman",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10649066/bruckner-truck-sales-v-guzman/",
+      "rank": 7,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiora",
+      "title": "Ex parte TheraTrue Alabama, LLC PETITION FOR WRIT OF CERTIORARI TO THE COURT OF CIVIL APPEALS (In re: TheraTrue Alabama, LLC v. Alabama Medical Cannabis Commission and Rex Vaughn, Sam Blakemore, Dwight Gamble, Dr. Jimmie Harvey, James Harwell, Taylor Hatchett, Dr. Eric Jensen, Dr. Angela Martin, Hon. Charles Price, Dr. William Saliski, Loree Skelton, Dr. Jerzy Szaflarski, Dr. H. Mac Barnes, and Dion Robinson, in their official capacities as members of the Alabama Medical Cannabis Commission) (Montgomery Circuit Court: CV-24-58; Civil Appeals: CL-2024-0312).",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10715409/ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiorari-to-the/",
+      "rank": 8,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-saul-aguilar-sanchez-v-merrick-garland",
+      "title": "Saul Aguilar-Sanchez v. Merrick Garland",
+      "citation": "87 F.4th 878",
+      "source_url": "https://www.courtlistener.com/opinion/9448737/saul-aguilar-sanchez-v-merrick-garland/",
+      "rank": 9,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-united-states-v-yafa",
+      "title": "United States v. Yafa",
+      "citation": "136 F.4th 1194",
+      "source_url": "https://www.courtlistener.com/opinion/10584956/united-states-v-yafa/",
+      "rank": 10,
+      "source_system": "CourtListener opinion search API"
+    }
+  ]
+}

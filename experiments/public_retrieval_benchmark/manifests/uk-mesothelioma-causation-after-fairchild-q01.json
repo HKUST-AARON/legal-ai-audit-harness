@@ -1,0 +1,89 @@
+{
+  "id": "uk-mesothelioma-causation-after-fairchild-q01",
+  "issue_id": "uk-mesothelioma-causation-after-fairchild",
+  "query": "Fairchild Barker Sienkiewicz mesothelioma",
+  "top_k": 10,
+  "source_system": "The National Archives Find Case Law Atom search",
+  "records": [
+    {
+      "id": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "title": "Shaikh Abdul Rehman & Ors v Secretary of State for Health and Social Care & Ors",
+      "citation": "[2026] EWHC 6 (KB)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/kb/2026/6",
+      "rank": 1,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+      "title": "Teresa Evans v The Secretary of State for Health and Social Care",
+      "citation": "[2024] EWHC 496 (KB)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/kb/2024/496",
+      "rank": 2,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-michael-holmes-v-poeton-holdings-limited",
+      "title": "Michael Holmes v Poeton Holdings Limited",
+      "citation": "[2023] EWCA Civ 1377",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2023/1377",
+      "rank": 3,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+      "title": "Sharon Alexandra Ness v Carillion Capital Projects Limited & Ors.",
+      "citation": "[2023] EWHC 1219 (KB)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/kb/2023/1219",
+      "rank": 4,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+      "title": "CNZ v Royal Bath Hospitals NHS Foundation Trust & Anor",
+      "citation": "[2023] EWHC 19 (KB)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/kb/2023/19",
+      "rank": 5,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic",
+      "title": "The Asbestos Victims Support Groups' Forum UK, R (On the Application Of) v The Lord Chancellor",
+      "citation": "[2020] EWHC 2108 (Admin)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2020/2108",
+      "rank": 6,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-bannister-estate-of-v-freemans-public-ltd-company-rev-1",
+      "title": "Bannister (Estate of) v Freemans Public Ltd Company (Rev 1)",
+      "citation": "[2020] EWHC 1256 (QB)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/qb/2020/1256",
+      "rank": 7,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-the-department-for-communities-and-local-government-v-blackm",
+      "title": "The Department for Communities And Local Government v Blackmore (Rev 1)",
+      "citation": "[2017] EWCA Civ 1136",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2017/1136",
+      "rank": 8,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-lugay-v-london-borough-of-hammersmith-and-fulham",
+      "title": "Lugay v London Borough of Hammersmith And Fulham",
+      "citation": "[2017] EWHC 1823 (QB)",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewhc/qb/2017/1823",
+      "rank": 9,
+      "source_system": "The National Archives Find Case Law Atom search"
+    },
+    {
+      "id": "uk-search-heneghan-v-manchester-dry-docks-ltd-ors",
+      "title": "Heneghan v Manchester Dry Docks Ltd & Ors",
+      "citation": "[2016] EWCA Civ 86",
+      "source_url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2016/86",
+      "rank": 10,
+      "source_system": "The National Archives Find Case Law Atom search"
+    }
+  ]
+}

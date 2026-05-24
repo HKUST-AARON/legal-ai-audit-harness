@@ -1,0 +1,17 @@
+{
+  "id": "us-agency-deference-after-loper-bright-q04",
+  "issue_id": "us-agency-deference-after-loper-bright",
+  "query": "Loper Bright independent judgment 5 USC 706",
+  "top_k": 10,
+  "source_system": "CourtListener opinion search API",
+  "records": [
+    {
+      "id": "us-search-center-for-biological-diversity-v-lee-zeldin",
+      "title": "Center for Biological Diversity v. Lee Zeldin",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10825537/center-for-biological-diversity-v-lee-zeldin/",
+      "rank": 1,
+      "source_system": "CourtListener opinion search API"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Public search output for query: judicial review agency statutory interpretation after Loper Bright",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every visible result has a public source URL and source-system label."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The query, source endpoint, snapshot and rank window are recorded."
+    },
+    "H": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined high-authority set."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The benchmark compares returned records with an issue-defined counter-material set."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected by a reviewer but does not create a party-facing contestation pathway."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The query, manifest, scenario and harness result are logged as reproducible artifacts."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_high_authority": [
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369"
+    ],
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "loper-bright-603-us-369",
+      "us-search-waterkeeper-alliance-v-united-states-environmental-protectio",
+      "us-search-savage-v-n-c-dep-t-of-transp",
+      "us-search-center-for-biological-diversity-v-united-states-environmenta",
+      "us-search-florida-agency-for-health-care-administration-v-administrato",
+      "us-search-computer-world-services-corporation-v-united-states",
+      "us-search-liberty-petroleum-corp-v-ndic-et-al"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 0.4,
+    "recall": 0.3333333333333333,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/public_retrieval_benchmark/manifests/us-agency-deference-after-loper-bright-q06.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Public search rank 1 makes this material visible: Loper Bright Enterprises v. Raimondo",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Public search rank 2 makes this material visible: Loper Bright Enterprises v. Raimondo",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Public search rank 3 makes this material visible: Loper Bright Enterprises, Inc v. Gina Raimondo",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "45 F.4th 359"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Public search rank 4 makes this material visible: Loper Bright Enterprises, Inc. v. Wilbur L. Ross, Jr.",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Public search rank 5 makes this material visible: Waterkeeper Alliance v. United States Environmental Protection Agency",
+        "source_ids": [
+          "us-search-waterkeeper-alliance-v-united-states-environmental-protectio"
+        ],
+        "locators": [
+          "140 F.4th 1193"
+        ],
+        "output_rank": 5
+      },
+      {
+        "id": "rank-06",
+        "claim": "Public search rank 6 makes this material visible: Savage v. N.C. Dep't of Transp.",
+        "source_ids": [
+          "us-search-savage-v-n-c-dep-t-of-transp"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10658754/savage-v-nc-dept-of-transp/"
+        ],
+        "output_rank": 6
+      },
+      {
+        "id": "rank-07",
+        "claim": "Public search rank 7 makes this material visible: Center for Biological Diversity v. United States Environmental Protection Agency",
+        "source_ids": [
+          "us-search-center-for-biological-diversity-v-united-states-environmenta"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10802994/center-for-biological-diversity-v-united-states-environmental-protection/"
+        ],
+        "output_rank": 7
+      },
+      {
+        "id": "rank-08",
+        "claim": "Public search rank 8 makes this material visible: Florida Agency for Health Care Administration v. Administrator for the Centers for Medicare & Medicaid Services",
+        "source_ids": [
+          "us-search-florida-agency-for-health-care-administration-v-administrato"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10748433/florida-agency-for-health-care-administration-v-administrator-for-the/"
+        ],
+        "output_rank": 8
+      },
+      {
+        "id": "rank-09",
+        "claim": "Public search rank 9 makes this material visible: Computer World Services Corporation v. United States",
+        "source_ids": [
+          "us-search-computer-world-services-corporation-v-united-states"
+        ],
+        "locators": [
+          "https://www.courtlistener.com/opinion/10267153/computer-world-services-corporation-v-united-states/"
+        ],
+        "output_rank": 9
+      },
+      {
+        "id": "rank-10",
+        "claim": "Public search rank 10 makes this material visible: Liberty Petroleum Corp. v. NDIC, et al.",
+        "source_ids": [
+          "us-search-liberty-petroleum-corp-v-ndic-et-al"
+        ],
+        "locators": [
+          "2024 ND 183"
+        ],
+        "output_rank": 10
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "45 F.4th 359",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "us-search-waterkeeper-alliance-v-united-states-environmental-protectio",
+        "locator": "140 F.4th 1193",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-06",
+        "source_id": "us-search-savage-v-n-c-dep-t-of-transp",
+        "locator": "https://www.courtlistener.com/opinion/10658754/savage-v-nc-dept-of-transp/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-07",
+        "source_id": "us-search-center-for-biological-diversity-v-united-states-environmenta",
+        "locator": "https://www.courtlistener.com/opinion/10802994/center-for-biological-diversity-v-united-states-environmental-protection/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-08",
+        "source_id": "us-search-florida-agency-for-health-care-administration-v-administrato",
+        "locator": "https://www.courtlistener.com/opinion/10748433/florida-agency-for-health-care-administration-v-administrator-for-the/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-09",
+        "source_id": "us-search-computer-world-services-corporation-v-united-states",
+        "locator": "https://www.courtlistener.com/opinion/10267153/computer-world-services-corporation-v-united-states/",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      },
+      {
+        "unit_id": "rank-10",
+        "source_id": "us-search-liberty-petroleum-corp-v-ndic-et-al",
+        "locator": "2024 ND 183",
+        "supports_claim": true,
+        "source_tag": "public_metadata"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension"
+}

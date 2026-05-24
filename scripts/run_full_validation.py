@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "experiments" / "full_validation" / "results"
-BASE_VALIDATION_UNITS = 234
+BASE_VALIDATION_UNITS = 333
 
 SUITES = [
     {
@@ -48,6 +48,15 @@ SUITES = [
         "finding": "Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.",
     },
     {
+        "id": "public_retrieval_benchmark",
+        "label": "Public retrieval benchmark",
+        "path": ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios",
+        "out": ROOT / "experiments" / "public_retrieval_benchmark" / "results" / "public_retrieval_benchmark.md",
+        "json_out": ROOT / "experiments" / "public_retrieval_benchmark" / "results" / "public_retrieval_benchmark.json",
+        "validation_units": "99 public search result records",
+        "finding": "Tests true public search outputs against issue-defined high-authority and counter-material gold sets.",
+    },
+    {
         "id": "ai_outputs",
         "label": "Raw Codex GPT-5.5 xhigh outputs",
         "path": ROOT / "experiments" / "ai_outputs" / "scenarios",
@@ -82,6 +91,7 @@ def main() -> int:
     _run([sys.executable, "scripts/collect_real_cases.py"])
     _run([sys.executable, "scripts/collect_public_system_outputs.py"])
     _run([sys.executable, "scripts/collect_issue_public_outputs.py"])
+    _run([sys.executable, "scripts/collect_public_retrieval_benchmark.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
 
@@ -159,6 +169,7 @@ def main() -> int:
             "stress_scenarios": 10,
             "public_metadata_records": 120,
             "public_system_records": 60,
+            "public_retrieval_records": 99,
             "raw_model_outputs": 10,
             "issue_public_records": 19,
             "issue_gold_sets": 3,
@@ -267,6 +278,7 @@ def _format_report(payload: dict) -> str:
         f"({payload['validation_units']['stress_scenarios']} stress scenarios, "
         f"{payload['validation_units']['public_metadata_records']} public metadata records, "
         f"{payload['validation_units']['public_system_records']} public-system records, "
+        f"{payload['validation_units']['public_retrieval_records']} public retrieval records, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
         f"{payload['validation_units']['issue_public_records']} issue-specific public output/source records, "
         f"{payload['validation_units']['issue_gold_sets']} issue-defined positive controls, "

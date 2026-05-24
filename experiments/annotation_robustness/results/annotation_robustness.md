@@ -1,12 +1,12 @@
 # Annotation Robustness Study
 
-Base scenarios: 50
-Strict/lenient recoded evaluations: 100
-Strict status stable: 48/50
-Lenient status stable: 50/50
-Stable under all coding policies: 48/50
-Mean score delta, strict: 0.92
-Mean score delta, lenient: 0.50
+Base scenarios: 62
+Strict/lenient recoded evaluations: 124
+Strict status stable: 60/62
+Lenient status stable: 62/62
+Stable under all coding policies: 60/62
+Mean score delta, strict: 1.13
+Mean score delta, lenient: 0.60
 Weighted status agreement, base vs strict: 0.98
 Weighted status agreement, base vs lenient: 1.00
 
@@ -36,6 +36,18 @@ Weighted status agreement, base vs lenient: 1.00
 | public-system-output-mainland_china | professional_support_output | professional_support_output | professional_support_output | 9 | 8 | 9 |
 | public-system-output-united_kingdom | professional_support_output | professional_support_output | professional_support_output | 8 | 7 | 8 |
 | public-system-output-united_states | professional_support_output | professional_support_output | professional_support_output | 9 | 8 | 9 |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-us-agency-deference-after-loper-bright-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-us-agency-deference-after-loper-bright-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-us-agency-deference-after-loper-bright-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-us-agency-deference-after-loper-bright-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-us-agency-deference-after-loper-bright-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| public-retrieval-us-agency-deference-after-loper-bright-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | codex55-eu-01 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-eu-02 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-eu-03 | reference_information | reference_information | reference_information | 9 | 9 | 10 |

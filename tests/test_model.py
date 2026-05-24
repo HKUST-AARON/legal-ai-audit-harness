@@ -236,19 +236,33 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(statuses["normative_material_screening_output"], 1)
         self.assertEqual(statuses["reference_information"], 2)
 
+    def test_public_retrieval_benchmark_shape(self):
+        paths = sorted((ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios").glob("*.json"))
+        self.assertEqual(len(paths), 12)
+        records = 0
+        for path in paths:
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            records += len(scenario["evidence_packet"]["output_units"])
+            result = evaluate_scenario(scenario)
+            self.assertTrue(result.expected_passed, path.name)
+            self.assertEqual(result.allowed_status, "reference_information", path.name)
+            self.assertEqual(result.disposition, "suspension", path.name)
+        self.assertEqual(records, 99)
+
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 9)
-        self.assertEqual(report["scenario_files"], 50)
-        self.assertEqual(report["validation_units"]["total"], 234)
+        self.assertEqual(report["suite_count"], 10)
+        self.assertEqual(report["scenario_files"], 62)
+        self.assertEqual(report["validation_units"]["total"], 333)
+        self.assertEqual(report["validation_units"]["public_retrieval_records"], 99)
         self.assertEqual(report["validation_units"]["issue_public_records"], 19)
-        self.assertEqual(report["validation_units"]["annotation_recodings"], 100)
+        self.assertEqual(report["validation_units"]["annotation_recodings"], 124)
         self.assertEqual(report["blind_coding_evaluations"], 94)
         self.assertEqual(report["validation_units"]["blind_coding_packets"], 47)
-        self.assertEqual(report["total_evaluation_rows"], 428)
-        self.assertEqual(report["expected_passed"], 50)
-        self.assertEqual(report["expected_total"], 50)
-        self.assertEqual(report["annotation_robustness"]["scenario_count"], 50)
+        self.assertEqual(report["total_evaluation_rows"], 551)
+        self.assertEqual(report["expected_passed"], 62)
+        self.assertEqual(report["expected_total"], 62)
+        self.assertEqual(report["annotation_robustness"]["scenario_count"], 62)
         self.assertEqual(report["blind_coding"]["packet_count"], 47)
 
     def test_annotation_robustness_report_shape(self):
@@ -261,10 +275,10 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "annotation_robustness" / "results" / "annotation_robustness.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["scenario_count"], 50)
-        self.assertEqual(report["recoded_evaluations"], 100)
+        self.assertEqual(report["scenario_count"], 62)
+        self.assertEqual(report["recoded_evaluations"], 124)
         self.assertGreaterEqual(report["weighted_status_agreement_base_strict"], 0.9)
-        self.assertGreaterEqual(report["all_policy_status_stable"], 40)
+        self.assertGreaterEqual(report["all_policy_status_stable"], 50)
 
     def test_blind_coding_study_report_shape(self):
         subprocess.run(
@@ -326,6 +340,18 @@ class AuditModelTest(unittest.TestCase):
             shutil.copytree(ROOT / "experiments" / "issue_public_outputs" / "downloads", Path(directory) / "downloads")
             completed = subprocess.run(
                 [sys.executable, "scripts/collect_issue_public_outputs.py", "--out", directory],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+
+    def test_public_retrieval_benchmark_collector_supports_external_output_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            shutil.copytree(ROOT / "experiments" / "public_retrieval_benchmark" / "downloads", Path(directory) / "downloads")
+            completed = subprocess.run(
+                [sys.executable, "scripts/collect_public_retrieval_benchmark.py", "--out", directory],
                 cwd=ROOT,
                 check=False,
                 capture_output=True,

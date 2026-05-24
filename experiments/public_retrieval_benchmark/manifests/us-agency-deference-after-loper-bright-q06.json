@@ -1,0 +1,89 @@
+{
+  "id": "us-agency-deference-after-loper-bright-q06",
+  "issue_id": "us-agency-deference-after-loper-bright",
+  "query": "judicial review agency statutory interpretation after Loper Bright",
+  "top_k": 10,
+  "source_system": "CourtListener opinion search API",
+  "records": [
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369",
+      "source_url": "https://www.courtlistener.com/opinion/9986254/loper-bright-enterprises-v-raimondo/",
+      "rank": 1,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises v. Raimondo",
+      "citation": "603 U.S. 369",
+      "source_url": "https://www.courtlistener.com/opinion/10600041/loper-bright-enterprises-v-raimondo/",
+      "rank": 2,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises, Inc v. Gina Raimondo",
+      "citation": "45 F.4th 359",
+      "source_url": "https://www.courtlistener.com/opinion/7856351/loper-bright-enterprises-inc-v-gina-raimondo/",
+      "rank": 3,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "loper-bright-603-us-369",
+      "title": "Loper Bright Enterprises, Inc. v. Wilbur L. Ross, Jr.",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/4891883/loper-bright-enterprises-inc-v-wilbur-l-ross-jr/",
+      "rank": 4,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-waterkeeper-alliance-v-united-states-environmental-protectio",
+      "title": "Waterkeeper Alliance v. United States Environmental Protection Agency",
+      "citation": "140 F.4th 1193",
+      "source_url": "https://www.courtlistener.com/opinion/10613049/waterkeeper-alliance-v-united-states-environmental-protection-agency/",
+      "rank": 5,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-savage-v-n-c-dep-t-of-transp",
+      "title": "Savage v. N.C. Dep't of Transp.",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10658754/savage-v-nc-dept-of-transp/",
+      "rank": 6,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-center-for-biological-diversity-v-united-states-environmenta",
+      "title": "Center for Biological Diversity v. United States Environmental Protection Agency",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10802994/center-for-biological-diversity-v-united-states-environmental-protection/",
+      "rank": 7,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-florida-agency-for-health-care-administration-v-administrato",
+      "title": "Florida Agency for Health Care Administration v. Administrator for the Centers for Medicare & Medicaid Services",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10748433/florida-agency-for-health-care-administration-v-administrator-for-the/",
+      "rank": 8,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-computer-world-services-corporation-v-united-states",
+      "title": "Computer World Services Corporation v. United States",
+      "citation": "",
+      "source_url": "https://www.courtlistener.com/opinion/10267153/computer-world-services-corporation-v-united-states/",
+      "rank": 9,
+      "source_system": "CourtListener opinion search API"
+    },
+    {
+      "id": "us-search-liberty-petroleum-corp-v-ndic-et-al",
+      "title": "Liberty Petroleum Corp. v. NDIC, et al.",
+      "citation": "2024 ND 183",
+      "source_url": "https://www.courtlistener.com/opinion/10131085/liberty-petroleum-corp-v-ndic-et-al/",
+      "rank": 10,
+      "source_system": "CourtListener opinion search API"
+    }
+  ]
+}

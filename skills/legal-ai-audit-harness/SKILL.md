@@ -58,6 +58,7 @@ python -m audit_harness.cli run examples/scenarios --out reports/sample_report.m
 python -m audit_harness.cli experiment examples/scenarios --out reports/experiment_report.md --json-out reports/experiment_report.json
 python -m audit_harness.cli experiment experiments/ai_outputs/scenarios --out experiments/ai_outputs/results/ai_output_experiment.md --json-out experiments/ai_outputs/results/ai_output_experiment.json
 python scripts/collect_issue_public_outputs.py
+python scripts/collect_public_retrieval_benchmark.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
@@ -75,7 +76,7 @@ python scripts/run_full_validation.py
 python -m unittest discover -s tests
 ```
 
-The full matrix includes stress scenarios, public metadata records, public legal-system outputs, issue-specific public output/source packets, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the issue-public-output file at `experiments/issue_public_outputs/results/issue_public_output_experiment.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation, public output/source audit, and coding-uncertainty analysis, not as independent legal merits validation.
+The full matrix includes stress scenarios, public metadata records, public legal-system outputs, issue-specific public output/source packets, a public retrieval benchmark, raw model outputs, issue-defined positive controls, issue ablations, annotation robustness recoding, score-blinded dual coding and threshold sensitivity reports. Report the aggregate file at `experiments/full_validation/results/full_validation_report.md`, the issue-public-output file at `experiments/issue_public_outputs/results/issue_public_output_experiment.md`, the public retrieval file at `experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.md`, the recoding file at `experiments/annotation_robustness/results/annotation_robustness.md`, and the blind-coding file at `experiments/blind_coding/results/blind_coding_study.md`. Describe it as scenario-regression, artifact validation, public retrieval audit, public output/source audit, and coding-uncertainty analysis, not as independent legal merits validation.
 
 ## Single-Model Output Audit Protocol
 
