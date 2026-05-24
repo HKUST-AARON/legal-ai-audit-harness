@@ -32,7 +32,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/unverifiable_legal_output.json",
   "upstream_metrics": {
     "f1": 0.71,
     "precision": 0.7,

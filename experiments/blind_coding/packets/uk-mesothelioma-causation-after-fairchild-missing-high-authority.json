@@ -101,7 +101,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-missing-high-authority.json",
   "upstream_metrics": {
     "f1": 0.8571,
     "precision": 1.0,

@@ -142,13 +142,13 @@ Current coverage:
 | Issue-specific public output/source packets | 19 | Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements. |
 | Public retrieval benchmark | 99 | Tests true public search outputs against issue-defined high-authority and counter-material gold sets. |
 | Raw Codex GPT-5.5 xhigh outputs | 10 | Tests whether strong authority coverage without source binding remains procedurally capped. |
-| Issue-defined positive controls | 3 | Tests normative material screening with source-bound high-authority and counter-material sets. |
-| Issue-defined ablations | 12 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
-| Annotation robustness recoding | 124 | Re-scores all 62 scenario packets under strict and lenient coding policies to test status stability. |
-| Score-blinded dual coding | 124 | Two coding passes score all 62 packets without original scores or expected outcomes. |
-| Full-threshold sensitivity | 310 | Re-evaluates all 62 scenario packets under normative thresholds 8-12. |
+| Issue-defined positive controls | 5 | Tests normative material screening with source-bound high-authority and counter-material sets. |
+| Issue-defined ablations | 20 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
+| Annotation robustness recoding | 144 | Re-scores all 72 scenario packets under strict and lenient coding policies to test status stability. |
+| Score-blinded dual coding | 144 | Two coding passes score all 72 packets without original scores or expected outcomes, then compare coder-coder and base-coder status agreement. |
+| Full-threshold sensitivity | 360 | Re-evaluates all 72 scenario packets under normative thresholds 8-12. |
 
-The current full validation report covers 62 scenario files containing 333 embedded records/items, 124 strict/lenient recoded evaluations, 124 score-blinded coder evaluations, and 310 full-threshold sensitivity evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the public retrieval benchmark, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes.
+The current full validation report covers 72 scenario files containing 343 embedded records/items, 144 strict/lenient recoded evaluations, 144 score-blinded coder evaluations, and 360 full-threshold sensitivity evaluations. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the public retrieval benchmark, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and now reports both inter-coder and base-coder agreement.
 
 ## Jurisdiction Profiles
 
@@ -173,7 +173,7 @@ python -m audit_harness.cli experiment experiments/real_cases/scenarios --out ex
 
 By default the script uses the committed public metadata snapshots for deterministic reruns. Pass `--refresh` to download fresh snapshots. The experiment samples 20 records per jurisdiction with a fixed seed, writes source manifests, and runs the harness over the generated output evidence packets. It tests whether evidence packets can be reconstructed and audited; it does not evaluate legal merits, ranking quality or any upstream system architecture. For that reason these metadata-only packets are capped at `professional_support_output`, not `normative_material_screening_output`.
 
-The repository also includes three issue-defined positive-control packets:
+The repository also includes five issue-defined positive-control packets:
 
 ```bash
 python -m audit_harness.cli experiment experiments/issue_gold_sets/scenarios --out experiments/issue_gold_sets/results/issue_gold_set_experiment.md --json-out experiments/issue_gold_sets/results/issue_gold_set_experiment.json
@@ -183,9 +183,11 @@ The current positive controls cover:
 
 - U.S. agency statutory interpretation after `Loper Bright`, with manually curated high-authority, limiting and invalidated-treatment labels for `Loper Bright`, `Chevron`, `Skidmore`, APA `5 U.S.C. 706` and `Kisor`;
 - English-law mesothelioma causation after `Fairchild`, `Barker`, the Compensation Act 2006 and `Sienkiewicz`;
-- EU GDPR Article 15 access-right materials on recipients and copies of personal data, including CJEU decisions C-154/21 and C-487/21 plus regulation-based limitations.
+- EU GDPR Article 15 access-right materials on recipients and copies of personal data, including CJEU decisions C-154/21 and C-487/21 plus regulation-based limitations;
+- Canadian administrative-law standard of review after `Vavilov`, including the companion Supreme Court of Canada decisions and historical `Dunsmuir` framework;
+- German/EU right-to-be-forgotten review, including the Federal Constitutional Court decisions and the EU fundamental-rights materials they interact with.
 
-The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 62 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
+The sensitivity command varies the normative-screening threshold from 8 to 11 for a selected scenario directory. The full validation suite additionally re-evaluates all 72 scenario packets under thresholds 8-12, so threshold robustness is tested across the complete artifact rather than only the stress scenarios.
 
 The issue-ablation suite is generated from the same issue packets:
 
@@ -204,7 +206,7 @@ The repository includes a coding-uncertainty experiment:
 python scripts/run_annotation_robustness.py
 ```
 
-The script re-scores all 62 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
+The script re-scores all 72 committed scenario packets under two alternative coding policies. The strict policy lowers scores when evidence is only internally reviewable, counter-material recall is incomplete, source tags are not procedural, or adoption and contestation records are absent. The lenient policy raises scores only when evidence-packet metrics, authority coverage, counter-authority recall, or review gates support the higher score. It then reports status stability, score deltas, and weighted status agreement against the base coding. This is not a substitute for a future human inter-annotator study, but it directly tests whether the protocol's status outcomes are fragile to plausible audit-vector disagreement.
 
 ## Score-Blinded Dual Coding Study
 
@@ -215,7 +217,7 @@ python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 ```
 
-The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, and manual failure flags from 62 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports exact status agreement, weighted status agreement, dimension-level agreement, and disputed packets.
+The packet builder strips original `scores`, `expected_allowed_status`, `expected_disposition`, source paths, and manual failure flags from 72 committed score-blinded coding packets. The resulting packet files preserve only the legal-output evidence: claimed status, jurisdiction profile, authority sets, upstream metrics, evidence packet, review gate, and deployment context. Two separate annotation files in `experiments/blind_coding/annotations/` then score the packets under the shared codebook in `experiments/blind_coding/CODEBOOK.md`. The study reports coder-coder exact and weighted status agreement, base-coder agreement against the harness allocation, dimension-level agreement, and disputed packets.
 
 ## Raw Model Output Pilot
 

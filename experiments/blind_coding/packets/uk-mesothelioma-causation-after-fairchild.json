@@ -120,7 +120,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
   "upstream_metrics": {
     "f1": 1.0,
     "precision": 1.0,

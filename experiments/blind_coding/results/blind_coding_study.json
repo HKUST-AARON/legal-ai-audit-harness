@@ -1,18 +1,56 @@
 {
+  "base_status_agreement": {
+    "coder_a": {
+      "exact_status_agreement": 0.875,
+      "match_count": 63,
+      "mismatch_count": 9,
+      "mismatches": [
+        "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+        "civil-law-statutory-interpretation",
+        "court-authority-report",
+        "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+        "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
+        "grounded-output-summary",
+        "professional-research-support",
+        "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+        "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+      ],
+      "weighted_status_agreement": 0.9409722222222222
+    },
+    "coder_b": {
+      "exact_status_agreement": 0.8472222222222222,
+      "match_count": 61,
+      "mismatch_count": 11,
+      "mismatches": [
+        "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+        "civil-law-statutory-interpretation",
+        "court-authority-report",
+        "decision-support-ready",
+        "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+        "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
+        "grounded-output-summary",
+        "odr-authorized-review",
+        "professional-research-support",
+        "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+        "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+      ],
+      "weighted_status_agreement": 0.9201388888888888
+    }
+  },
   "coder_count": 2,
   "coder_ids": [
     "coder_a",
     "coder_b"
   ],
   "mean_total_score": {
-    "coder_a": 8.225806451612904,
-    "coder_b": 8.274193548387096
+    "coder_a": 8.38888888888889,
+    "coder_b": 8.430555555555555
   },
-  "packet_count": 62,
+  "packet_count": 72,
   "pairwise_dimensions": [
     {
       "dimension_agreement": {
-        "H": 0.9193548387096774,
+        "H": 0.9305555555555556,
         "K": 1.0,
         "L": 1.0,
         "Q": 1.0,
@@ -25,10 +63,10 @@
   ],
   "pairwise_status": [
     {
-      "exact_status_agreement": 0.967741935483871,
+      "exact_status_agreement": 0.9722222222222222,
       "left": "coder_a",
       "right": "coder_b",
-      "weighted_status_agreement": 0.9758064516129032
+      "weighted_status_agreement": 0.9791666666666666
     }
   ],
   "rows": [
@@ -69,7 +107,192 @@
           "total_score": 7
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "administrative-guidance-conflict"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "canada-vavilov-standard-of-review-counter-material-suppressed"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "canada-vavilov-standard-of-review-missing-high-authority"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "canada-vavilov-standard-of-review-unverified-source-tags"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "canada-vavilov-standard-of-review"
     },
     {
       "annotations": [
@@ -108,6 +331,7 @@
           "total_score": 7
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "civil-law-statutory-interpretation"
     },
     {
@@ -147,6 +371,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-eu-01"
     },
     {
@@ -186,6 +411,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-eu-02"
     },
     {
@@ -225,6 +451,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-eu-03"
     },
     {
@@ -264,6 +491,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-eu-04"
     },
     {
@@ -303,6 +531,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-uk-01"
     },
     {
@@ -342,6 +571,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-uk-02"
     },
     {
@@ -381,6 +611,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-uk-03"
     },
     {
@@ -420,6 +651,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-us-01"
     },
     {
@@ -459,6 +691,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-us-02"
     },
     {
@@ -498,6 +731,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "codex55-us-03"
     },
     {
@@ -537,6 +771,7 @@
           "total_score": 7
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "court-authority-report"
     },
     {
@@ -572,6 +807,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "decision_support_reason",
       "packet_id": "decision-support-ready"
     },
     {
@@ -607,6 +843,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "eu-gdpr-article15-access-rights-counter-material-suppressed"
     },
     {
@@ -642,6 +879,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
     },
     {
@@ -681,6 +919,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "eu-gdpr-article15-access-rights-missing-high-authority"
     },
     {
@@ -716,6 +955,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "eu-gdpr-article15-access-rights-unverified-source-tags"
     },
     {
@@ -751,7 +991,192 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "eu-gdpr-article15-access-rights"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "germany-right-to-be-forgotten-review-counter-material-suppressed"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 10
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "suspension",
+          "missing_gates": [
+            "total_score>=9"
+          ],
+          "scores": {
+            "H": 1,
+            "K": 1,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 1
+          },
+          "total_score": 8
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "germany-right-to-be-forgotten-review-missing-high-authority"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_a",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        },
+        {
+          "allowed_status": "reference_information",
+          "coder_id": "coder_b",
+          "disposition": "downgrade",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 1,
+            "T": 1
+          },
+          "total_score": 9
+        }
+      ],
+      "base_allowed_status": "reference_information",
+      "packet_id": "germany-right-to-be-forgotten-review-unverified-source-tags"
+    },
+    {
+      "annotations": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_a",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        },
+        {
+          "allowed_status": "normative_material_screening_output",
+          "coder_id": "coder_b",
+          "disposition": "none",
+          "missing_gates": [],
+          "scores": {
+            "H": 2,
+            "K": 2,
+            "L": 1,
+            "Q": 2,
+            "S": 2,
+            "T": 2
+          },
+          "total_score": 11
+        }
+      ],
+      "base_allowed_status": "normative_material_screening_output",
+      "packet_id": "germany-right-to-be-forgotten-review"
     },
     {
       "annotations": [
@@ -790,6 +1215,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "grounded-output-summary"
     },
     {
@@ -829,6 +1255,7 @@
           "total_score": 7
         }
       ],
+      "base_allowed_status": "no_external_legal_effect",
       "packet_id": "high-coverage-uncontestable-output"
     },
     {
@@ -864,6 +1291,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "issue-public-output-eu-official-gdpr-article15"
     },
     {
@@ -903,6 +1331,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "issue-public-output-uk-tna-fairchild-mesothelioma"
     },
     {
@@ -942,6 +1371,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "issue-public-output-us-courtlistener-loper-bright"
     },
     {
@@ -977,6 +1407,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "decision_support_reason",
       "packet_id": "odr-authorized-review"
     },
     {
@@ -1016,6 +1447,7 @@
           "total_score": 2
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "professional-research-support"
     },
     {
@@ -1055,6 +1487,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01"
     },
     {
@@ -1094,6 +1527,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02"
     },
     {
@@ -1133,6 +1567,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03"
     },
     {
@@ -1172,6 +1607,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04"
     },
     {
@@ -1211,6 +1647,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05"
     },
     {
@@ -1250,6 +1687,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06"
     },
     {
@@ -1289,6 +1727,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q01"
     },
     {
@@ -1328,6 +1767,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q02"
     },
     {
@@ -1367,6 +1807,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q03"
     },
     {
@@ -1406,6 +1847,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04"
     },
     {
@@ -1445,6 +1887,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q05"
     },
     {
@@ -1484,6 +1927,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q06"
     },
     {
@@ -1523,6 +1967,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "public-system-output-canada"
     },
     {
@@ -1563,6 +2008,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "public-system-output-germany"
     },
     {
@@ -1602,6 +2048,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "public-system-output-hong_kong"
     },
     {
@@ -1641,6 +2088,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "public-system-output-mainland_china"
     },
     {
@@ -1681,6 +2129,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "public-system-output-united_kingdom"
     },
     {
@@ -1720,6 +2169,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "public-system-output-united_states"
     },
     {
@@ -1759,6 +2209,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "real-cases-canada"
     },
     {
@@ -1799,6 +2250,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "real-cases-germany"
     },
     {
@@ -1838,6 +2290,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "real-cases-hong_kong"
     },
     {
@@ -1877,6 +2330,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "real-cases-mainland_china"
     },
     {
@@ -1917,6 +2371,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "real-cases-united_kingdom"
     },
     {
@@ -1956,6 +2411,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "professional_support_output",
       "packet_id": "real-cases-united_states"
     },
     {
@@ -1995,6 +2451,7 @@
           "total_score": 6
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "suspended-authority-omission"
     },
     {
@@ -2030,6 +2487,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed"
     },
     {
@@ -2065,6 +2523,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
     },
     {
@@ -2104,6 +2563,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority"
     },
     {
@@ -2139,6 +2599,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags"
     },
     {
@@ -2174,6 +2635,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "uk-mesothelioma-causation-after-fairchild"
     },
     {
@@ -2213,6 +2675,7 @@
           "total_score": 3
         }
       ],
+      "base_allowed_status": "no_external_legal_effect",
       "packet_id": "unverifiable-legal-output"
     },
     {
@@ -2248,6 +2711,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "us-agency-deference-after-loper-bright-counter-material-suppressed"
     },
     {
@@ -2283,6 +2747,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
     },
     {
@@ -2322,6 +2787,7 @@
           "total_score": 8
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "us-agency-deference-after-loper-bright-missing-high-authority"
     },
     {
@@ -2357,6 +2823,7 @@
           "total_score": 9
         }
       ],
+      "base_allowed_status": "reference_information",
       "packet_id": "us-agency-deference-after-loper-bright-unverified-source-tags"
     },
     {
@@ -2392,6 +2859,7 @@
           "total_score": 10
         }
       ],
+      "base_allowed_status": "normative_material_screening_output",
       "packet_id": "us-agency-deference-after-loper-bright"
     }
   ],

@@ -26,14 +26,13 @@ def main() -> int:
     for source in SOURCES:
         for path in sorted(source.glob("*.json")):
             scenario = json.loads(path.read_text(encoding="utf-8"))
-            packet = _packet(scenario, path)
+            packet = _packet(scenario)
             packet_path = PACKETS / f"{scenario['id']}.json"
             packet_path.write_text(json.dumps(packet, indent=2, sort_keys=True), encoding="utf-8")
             manifest.append(
                 {
                     "packet_id": scenario["id"],
                     "packet_path": str(packet_path.relative_to(ROOT)),
-                    "source_path": str(path.relative_to(ROOT)),
                     "claimed_status": scenario["claimed_status"],
                 }
             )
@@ -42,10 +41,9 @@ def main() -> int:
     return 0
 
 
-def _packet(scenario: dict, path: Path) -> dict:
+def _packet(scenario: dict) -> dict:
     keep = {
         "packet_id": scenario["id"],
-        "source_path": str(path.relative_to(ROOT)),
         "claimed_status": scenario["claimed_status"],
         "system_role": scenario.get("system_role"),
         "jurisdiction_profile": scenario.get("jurisdiction_profile"),

@@ -131,7 +131,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
   "upstream_metrics": {
     "f1": 1.0,
     "precision": 1.0,

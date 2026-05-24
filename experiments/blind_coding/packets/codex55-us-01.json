@@ -120,7 +120,6 @@
     "reliance_gate": "internal_research",
     "review_status": "pending"
   },
-  "source_path": "experiments/ai_outputs/scenarios/codex55_us_01.json",
   "upstream_metrics": {
     "f1": 0.97,
     "precision": 0.95,

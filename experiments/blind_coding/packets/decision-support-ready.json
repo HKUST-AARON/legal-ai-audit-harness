@@ -41,7 +41,6 @@
     "reliance_gate": "authorized_adoption",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/decision_support_ready.json",
   "upstream_metrics": {
     "f1": 0.94,
     "precision": 0.94,

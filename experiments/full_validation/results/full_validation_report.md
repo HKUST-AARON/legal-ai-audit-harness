@@ -1,16 +1,16 @@
 # Full Legal AI Audit Harness Validation
 
 Validation suites: 10
-Scenario files: 62
-Base embedded records/items: 333 (10 stress scenarios, 120 public metadata records, 60 public-system records, 99 public retrieval records, 10 raw model outputs, 19 issue-specific public output/source records, 3 issue-defined positive controls, 12 issue ablations)
-Strict/lenient recoded evaluations: 124
-Score-blinded coding-pass evaluations: 124
-Full-threshold sensitivity evaluations: 310
-Total evaluation rows including recodings: 891
-Expected outcomes passed: 62/62
-High-upstream-performance but procedurally blocked scenarios: 20
-Annotation robustness: 60/62 stable across base, strict and lenient coding policies
-Score-blinded coding: 62 packets, 2 coding passes, 0.97 exact status agreement, 0.98 weighted status agreement
+Scenario files: 72
+Base embedded records/items: 343 (10 stress scenarios, 120 public metadata records, 60 public-system records, 99 public retrieval records, 10 raw model outputs, 19 issue-specific public output/source records, 5 issue-defined positive controls, 20 issue ablations)
+Strict/lenient recoded evaluations: 144
+Score-blinded coding-pass evaluations: 144
+Full-threshold sensitivity evaluations: 360
+Composite validation observations: 991
+Expected outcomes passed: 72/72
+High-upstream-performance but procedurally blocked scenarios: 26
+Annotation robustness: 70/72 stable across base, strict and lenient coding policies
+Score-blinded coding: 72 packets, 2 coding passes, 0.97 coder-coder exact agreement, 0.85 minimum base-coder exact agreement, 0.92 minimum base-coder weighted agreement
 
 | Suite | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -20,10 +20,10 @@ Score-blinded coding: 62 packets, 2 coding passes, 0.97 exact status agreement, 
 | Issue-specific public output/source packets | 19 issue-specific public output/source records | 3 | 3/3 | 9.67 | 0.44 | 0 | normative_material_screening_output: 1, reference_information: 2 |
 | Public retrieval benchmark | 99 public search result records | 12 | 12/12 | 9.00 | 0.11 | 0 | reference_information: 12 |
 | Raw Codex GPT-5.5 xhigh outputs | 10 raw model outputs | 10 | 10/10 | 9.00 | 1.00 | 10 | reference_information: 10 |
-| Issue-defined positive controls | 3 curated issue packets | 3 | 3/3 | 11.00 | 1.00 | 0 | normative_material_screening_output: 3 |
-| Issue-defined ablations | 12 issue-packet ablations | 12 | 12/12 | 10.50 | 0.93 | 7 | normative_material_screening_output: 3, reference_information: 9 |
-| Annotation robustness recoding | 124 strict/lenient recoded evaluations | 62 | 60/62 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 0.98 |
-| Score-blinded dual coding | 62 packets x 2 coding passes | 62 | 0.97 exact status agreement | n/a | n/a | n/a | status_disagreements: 2, weighted_status_agreement: 0.98 |
+| Issue-defined positive controls | 5 curated issue packets | 5 | 5/5 | 11.00 | 1.00 | 0 | normative_material_screening_output: 5 |
+| Issue-defined ablations | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
+| Annotation robustness recoding | 144 strict/lenient recoded evaluations | 72 | 70/72 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 0.98 |
+| Score-blinded dual coding | 72 packets x 2 coding passes | 72 | 0.97 coder agreement; 0.85 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.98, min_base_weighted_status_agreement: 0.92, status_disagreements: 2 |
 
 ## Findings
 
@@ -36,16 +36,16 @@ Score-blinded coding: 62 packets, 2 coding passes, 0.97 exact status agreement, 
 - **Issue-defined positive controls:** Tests normative material screening with source-bound high-authority and counter-material sets.
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
-- **Score-blinded dual coding:** Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.
+- **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 
 ## Full-Threshold Sensitivity
 
-All 62 scenario packets were re-evaluated under normative thresholds 8--12.
+All 72 scenario packets were re-evaluated under normative thresholds 8--12.
 
 | Normative threshold | Decision threshold | Status flips from default | Promotions | Demotions | Status distribution |
 | ---: | ---: | ---: | ---: | ---: | --- |
-| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 10, professional_support_output: 13, reference_information: 35 |
-| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 10, professional_support_output: 13, reference_information: 35 |
-| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 10, professional_support_output: 13, reference_information: 35 |
-| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 8, professional_support_output: 15, reference_information: 35 |
-| 12 | 13 | 9 | 0 | 9 | no_external_legal_effect: 2, normative_material_screening_output: 5, professional_support_output: 20, reference_information: 35 |
+| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 14, professional_support_output: 13, reference_information: 41 |
+| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 14, professional_support_output: 13, reference_information: 41 |
+| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 14, professional_support_output: 13, reference_information: 41 |
+| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 2, no_external_legal_effect: 2, normative_material_screening_output: 12, professional_support_output: 15, reference_information: 41 |
+| 12 | 13 | 11 | 0 | 11 | no_external_legal_effect: 2, normative_material_screening_output: 7, professional_support_output: 22, reference_information: 41 |

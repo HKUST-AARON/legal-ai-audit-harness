@@ -39,7 +39,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/civil_law_statutory_interpretation.json",
   "upstream_metrics": {
     "f1": 0.84,
     "precision": 0.86,

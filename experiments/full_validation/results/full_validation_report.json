@@ -1,29 +1,67 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 60,
-    "scenario_count": 62,
+    "all_policy_status_stable": 70,
+    "scenario_count": 72,
     "weighted_status_agreement_base_lenient": 1.0,
-    "weighted_status_agreement_base_strict": 0.9796387520525451
+    "weighted_status_agreement_base_strict": 0.9830866807610994
   },
   "blind_coding": {
+    "base_status_agreement": {
+      "coder_a": {
+        "exact_status_agreement": 0.875,
+        "match_count": 63,
+        "mismatch_count": 9,
+        "mismatches": [
+          "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+          "civil-law-statutory-interpretation",
+          "court-authority-report",
+          "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+          "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
+          "grounded-output-summary",
+          "professional-research-support",
+          "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+          "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+        ],
+        "weighted_status_agreement": 0.9409722222222222
+      },
+      "coder_b": {
+        "exact_status_agreement": 0.8472222222222222,
+        "match_count": 61,
+        "mismatch_count": 11,
+        "mismatches": [
+          "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+          "civil-law-statutory-interpretation",
+          "court-authority-report",
+          "decision-support-ready",
+          "eu-gdpr-article15-access-rights-decision-reason-without-adoption",
+          "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
+          "grounded-output-summary",
+          "odr-authorized-review",
+          "professional-research-support",
+          "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+          "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
+        ],
+        "weighted_status_agreement": 0.9201388888888888
+      }
+    },
     "coder_count": 2,
-    "packet_count": 62,
+    "packet_count": 72,
     "pairwise_status": [
       {
-        "exact_status_agreement": 0.967741935483871,
+        "exact_status_agreement": 0.9722222222222222,
         "left": "coder_a",
         "right": "coder_b",
-        "weighted_status_agreement": 0.9758064516129032
+        "weighted_status_agreement": 0.9791666666666666
       }
     ],
     "status_disagreement_count": 2
   },
-  "blind_coding_evaluations": 124,
-  "expected_passed": 62,
-  "expected_total": 62,
-  "high_upstream_but_blocked": 20,
-  "recoded_evaluations": 124,
-  "scenario_files": 62,
+  "blind_coding_evaluations": 144,
+  "expected_passed": 72,
+  "expected_total": 72,
+  "high_upstream_but_blocked": 26,
+  "recoded_evaluations": 144,
+  "scenario_files": 72,
   "suite_count": 10,
   "suites": [
     {
@@ -116,33 +154,33 @@
       "validation_units": "10 raw model outputs"
     },
     {
-      "expected_passed": 3,
+      "expected_passed": 5,
       "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
       "high_upstream_but_blocked": 0,
       "id": "issue_gold_sets",
       "label": "Issue-defined positive controls",
       "mean_audit_score": 11,
       "mean_upstream_recall": 1.0,
-      "scenario_count": 3,
+      "scenario_count": 5,
       "status_distribution": {
-        "normative_material_screening_output": 3
+        "normative_material_screening_output": 5
       },
-      "validation_units": "3 curated issue packets"
+      "validation_units": "5 curated issue packets"
     },
     {
-      "expected_passed": 12,
+      "expected_passed": 20,
       "finding": "Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.",
-      "high_upstream_but_blocked": 7,
+      "high_upstream_but_blocked": 13,
       "id": "issue_ablations",
       "label": "Issue-defined ablations",
       "mean_audit_score": 10.5,
-      "mean_upstream_recall": 0.925,
-      "scenario_count": 12,
+      "mean_upstream_recall": 0.915,
+      "scenario_count": 20,
       "status_distribution": {
-        "normative_material_screening_output": 3,
-        "reference_information": 9
+        "normative_material_screening_output": 5,
+        "reference_information": 15
       },
-      "validation_units": "12 issue-packet ablations"
+      "validation_units": "20 issue-packet ablations"
     },
     {
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
@@ -151,28 +189,29 @@
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "60/62 stable across all policies",
-      "scenario_count": 62,
+      "rule_pass": "70/72 stable across all policies",
+      "scenario_count": 72,
       "status_distribution": {
         "base_vs_lenient_weighted_agreement": 1.0,
         "base_vs_strict_weighted_agreement": 0.98
       },
-      "validation_units": "124 strict/lenient recoded evaluations"
+      "validation_units": "144 strict/lenient recoded evaluations"
     },
     {
-      "finding": "Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.",
+      "finding": "Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.",
       "high_upstream_but_blocked": null,
       "id": "blind_coding",
       "label": "Score-blinded dual coding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.97 exact status agreement",
-      "scenario_count": 62,
+      "rule_pass": "0.97 coder agreement; 0.85 min base agreement",
+      "scenario_count": 72,
       "status_distribution": {
-        "status_disagreements": 2,
-        "weighted_status_agreement": 0.98
+        "coder_weighted_status_agreement": 0.98,
+        "min_base_weighted_status_agreement": 0.92,
+        "status_disagreements": 2
       },
-      "validation_units": "62 packets x 2 coding passes"
+      "validation_units": "72 packets x 2 coding passes"
     }
   ],
   "threshold_sensitivity": {
@@ -189,9 +228,9 @@
         "status_distribution": {
           "decision_support_reason": 2,
           "no_external_legal_effect": 2,
-          "normative_material_screening_output": 10,
+          "normative_material_screening_output": 14,
           "professional_support_output": 13,
-          "reference_information": 35
+          "reference_information": 41
         },
         "status_flips_from_default": 0
       },
@@ -203,9 +242,9 @@
         "status_distribution": {
           "decision_support_reason": 2,
           "no_external_legal_effect": 2,
-          "normative_material_screening_output": 10,
+          "normative_material_screening_output": 14,
           "professional_support_output": 13,
-          "reference_information": 35
+          "reference_information": 41
         },
         "status_flips_from_default": 0
       },
@@ -217,9 +256,9 @@
         "status_distribution": {
           "decision_support_reason": 2,
           "no_external_legal_effect": 2,
-          "normative_material_screening_output": 10,
+          "normative_material_screening_output": 14,
           "professional_support_output": 13,
-          "reference_information": 35
+          "reference_information": 41
         },
         "status_flips_from_default": 0
       },
@@ -231,42 +270,42 @@
         "status_distribution": {
           "decision_support_reason": 2,
           "no_external_legal_effect": 2,
-          "normative_material_screening_output": 8,
+          "normative_material_screening_output": 12,
           "professional_support_output": 15,
-          "reference_information": 35
+          "reference_information": 41
         },
         "status_flips_from_default": 2
       },
       {
         "decision_threshold": 13,
-        "demotions_from_default": 9,
+        "demotions_from_default": 11,
         "normative_threshold": 12,
         "promotions_from_default": 0,
         "status_distribution": {
           "no_external_legal_effect": 2,
-          "normative_material_screening_output": 5,
-          "professional_support_output": 20,
-          "reference_information": 35
+          "normative_material_screening_output": 7,
+          "professional_support_output": 22,
+          "reference_information": 41
         },
-        "status_flips_from_default": 9
+        "status_flips_from_default": 11
       }
     ],
-    "scenario_count": 62
+    "scenario_count": 72
   },
-  "threshold_sensitivity_evaluations": 310,
-  "total_evaluation_rows": 891,
+  "threshold_sensitivity_evaluations": 360,
+  "total_evaluation_rows": 991,
   "validation_units": {
-    "annotation_recodings": 124,
-    "blind_coding_packets": 62,
-    "issue_ablations": 12,
-    "issue_gold_sets": 3,
+    "annotation_recodings": 144,
+    "blind_coding_packets": 72,
+    "issue_ablations": 20,
+    "issue_gold_sets": 5,
     "issue_public_records": 19,
     "public_metadata_records": 120,
     "public_retrieval_records": 99,
     "public_system_records": 60,
     "raw_model_outputs": 10,
     "stress_scenarios": 10,
-    "threshold_sensitivity_evaluations": 310,
-    "total": 333
+    "threshold_sensitivity_evaluations": 360,
+    "total": 343
   }
 }

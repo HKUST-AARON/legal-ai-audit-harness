@@ -241,7 +241,6 @@
     "reliance_gate": "not_for_merits_reliance",
     "review_status": "source_integrity_only"
   },
-  "source_path": "experiments/public_system_outputs/scenarios/united_states.json",
   "upstream_metrics": {
     "f1": null,
     "precision": null,

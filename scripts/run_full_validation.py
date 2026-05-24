@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT := Path(__file__).resolve().parents[1]))
 from audit_harness.model import STATUS_RANK, StatusPolicy, evaluate_scenario
 
 RESULTS = ROOT / "experiments" / "full_validation" / "results"
-BASE_VALIDATION_UNITS = 333
+BASE_VALIDATION_UNITS = 343
 THRESHOLDS = [8, 9, 10, 11, 12]
 
 SUITES = [
@@ -74,7 +74,7 @@ SUITES = [
         "path": ROOT / "experiments" / "issue_gold_sets" / "scenarios",
         "out": ROOT / "experiments" / "issue_gold_sets" / "results" / "issue_gold_set_experiment.md",
         "json_out": ROOT / "experiments" / "issue_gold_sets" / "results" / "issue_gold_set_experiment.json",
-        "validation_units": "3 curated issue packets",
+        "validation_units": "5 curated issue packets",
         "finding": "Tests normative material screening with source-bound high-authority and counter-material sets.",
     },
     {
@@ -83,7 +83,7 @@ SUITES = [
         "path": ROOT / "experiments" / "issue_ablations" / "scenarios",
         "out": ROOT / "experiments" / "issue_ablations" / "results" / "issue_ablation_experiment.md",
         "json_out": ROOT / "experiments" / "issue_ablations" / "results" / "issue_ablation_experiment.json",
-        "validation_units": "12 issue-packet ablations",
+        "validation_units": "20 issue-packet ablations",
         "finding": "Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.",
     },
 ]
@@ -179,8 +179,8 @@ def main() -> int:
             "public_retrieval_records": 99,
             "raw_model_outputs": 10,
             "issue_public_records": 19,
-            "issue_gold_sets": 3,
-            "issue_ablations": 12,
+            "issue_gold_sets": 5,
+            "issue_ablations": 20,
             "annotation_recodings": robustness_payload["recoded_evaluations"],
             "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
             "threshold_sensitivity_evaluations": threshold_evaluations,
@@ -206,6 +206,7 @@ def main() -> int:
             "coder_count": blind_coding_payload["coder_count"],
             "status_disagreement_count": blind_coding_payload["status_disagreement_count"],
             "pairwise_status": blind_coding_payload["pairwise_status"],
+            "base_status_agreement": blind_coding_payload["base_status_agreement"],
         },
         "threshold_sensitivity": threshold_sensitivity,
         "suites": rows,
@@ -308,20 +309,23 @@ def _robustness_row(payload: dict) -> dict:
 
 def _blind_coding_row(payload: dict) -> dict:
     first_pair = payload["pairwise_status"][0]
+    base_exact = min(item["exact_status_agreement"] for item in payload["base_status_agreement"].values())
+    base_weighted = min(item["weighted_status_agreement"] for item in payload["base_status_agreement"].values())
     return {
         "id": "blind_coding",
         "label": "Score-blinded dual coding",
         "validation_units": f"{payload['packet_count']} packets x {payload['coder_count']} coding passes",
         "scenario_count": payload["packet_count"],
-        "rule_pass": f"{first_pair['exact_status_agreement']:.2f} exact status agreement",
+        "rule_pass": f"{first_pair['exact_status_agreement']:.2f} coder agreement; {base_exact:.2f} min base agreement",
         "mean_audit_score": None,
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
         "status_distribution": {
-            "weighted_status_agreement": round(first_pair["weighted_status_agreement"], 2),
+            "coder_weighted_status_agreement": round(first_pair["weighted_status_agreement"], 2),
+            "min_base_weighted_status_agreement": round(base_weighted, 2),
             "status_disagreements": payload["status_disagreement_count"],
         },
-        "finding": "Tests whether two score-blinded coding passes assign similar procedural status from the same evidence packets.",
+        "finding": "Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.",
     }
 
 
@@ -343,7 +347,7 @@ def _format_report(payload: dict) -> str:
         f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
-        f"Total evaluation rows including recodings: {payload['total_evaluation_rows']}",
+        f"Composite validation observations: {payload['total_evaluation_rows']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
         f"Annotation robustness: {payload['annotation_robustness']['all_policy_status_stable']}/{payload['annotation_robustness']['scenario_count']} stable across base, strict and lenient coding policies",
@@ -411,11 +415,14 @@ def _blind_coding_summary(payload: dict) -> str:
     if payload["blind_coding"] is None:
         return "Score-blinded coding: not run; fewer than two coder annotation files found"
     first_pair = payload["blind_coding"]["pairwise_status"][0]
+    base_exact = min(item["exact_status_agreement"] for item in payload["blind_coding"]["base_status_agreement"].values())
+    base_weighted = min(item["weighted_status_agreement"] for item in payload["blind_coding"]["base_status_agreement"].values())
     return (
         f"Score-blinded coding: {payload['blind_coding']['packet_count']} packets, "
         f"{payload['blind_coding']['coder_count']} coding passes, "
-        f"{first_pair['exact_status_agreement']:.2f} exact status agreement, "
-        f"{first_pair['weighted_status_agreement']:.2f} weighted status agreement"
+        f"{first_pair['exact_status_agreement']:.2f} coder-coder exact agreement, "
+        f"{base_exact:.2f} minimum base-coder exact agreement, "
+        f"{base_weighted:.2f} minimum base-coder weighted agreement"
     )
 
 

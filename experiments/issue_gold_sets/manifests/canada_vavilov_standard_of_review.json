@@ -1,0 +1,52 @@
+{
+  "id": "canada-vavilov-standard-of-review-manifest",
+  "jurisdiction": "canada",
+  "issue": "Which authorities should be visible when screening Canadian administrative-law standard-of-review materials after Vavilov?",
+  "created_at": "2026-05-25T00:00:00Z",
+  "curation": {
+    "method": "manual issue-defined gold set from public Supreme Court of Canada and CanLII sources",
+    "curator_notes": "This set validates procedural audit behavior only. It is not a merits answer for any live matter."
+  },
+  "records": [
+    {
+      "id": "vavilov-2019-scc-65",
+      "title": "Canada (Minister of Citizenship and Immigration) v. Vavilov",
+      "citation": "2019 SCC 65",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
+      "authority_level": "current_controlling_supreme_court_precedent",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "bell-canada-2019-scc-66",
+      "title": "Bell Canada v. Canada (Attorney General)",
+      "citation": "2019 SCC 66",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18079/index.do",
+      "authority_level": "companion_supreme_court_precedent",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "canada-post-2019-scc-67",
+      "title": "Canada Post Corp. v. Canadian Union of Postal Workers",
+      "citation": "2019 SCC 67",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18080/index.do",
+      "authority_level": "companion_supreme_court_precedent",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "dunsmuir-2008-scc-9",
+      "title": "Dunsmuir v. New Brunswick",
+      "citation": "2008 SCC 9",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/2408/index.do",
+      "authority_level": "historical_pre_vavilov_framework",
+      "issue_role": "limiting_or_historical_material"
+    },
+    {
+      "id": "vavilov-statutory-appeal-limits",
+      "title": "Vavilov statutory appeal and correctness exceptions",
+      "citation": "2019 SCC 65",
+      "source_url": "https://scc-csc.lexum.com/scc-csc/scc-csc/en/item/18078/index.do",
+      "authority_level": "limiting_rule_within_current_framework",
+      "issue_role": "counter_or_limiting_material"
+    }
+  ]
+}

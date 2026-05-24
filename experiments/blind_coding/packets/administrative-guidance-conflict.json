@@ -36,7 +36,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/administrative_guidance_conflict.json",
   "upstream_metrics": {
     "f1": 0.85,
     "precision": 0.82,

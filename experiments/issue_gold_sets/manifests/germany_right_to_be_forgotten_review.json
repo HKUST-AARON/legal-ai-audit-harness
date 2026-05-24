@@ -1,0 +1,52 @@
+{
+  "id": "germany-right-to-be-forgotten-review-manifest",
+  "jurisdiction": "germany",
+  "issue": "Which authorities should be visible when screening German constitutional review standards where domestic law interacts with EU fundamental rights?",
+  "created_at": "2026-05-25T00:00:00Z",
+  "curation": {
+    "method": "manual issue-defined gold set from public German constitutional-law materials and public translations",
+    "curator_notes": "This set validates procedural audit behavior only. It is not a merits answer for any live matter."
+  },
+  "records": [
+    {
+      "id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "title": "Recht auf Vergessen I",
+      "citation": "BVerfG, 1 BvR 16/13, 6 November 2019",
+      "source_url": "https://germanlawjournal.com/right-to-be-forgotten-i-1-bvr-16-13/",
+      "authority_level": "constitutional_court_decision_public_translation",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+      "title": "Recht auf Vergessen II",
+      "citation": "BVerfG, 1 BvR 276/17, 6 November 2019",
+      "source_url": "https://germanlawjournal.com/right-to-be-forgotten-ii-1-bvr-276-17/",
+      "authority_level": "constitutional_court_decision_public_translation",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "google-spain-c-131-12",
+      "title": "Google Spain SL and Google Inc. v Agencia Espanola de Proteccion de Datos",
+      "citation": "Case C-131/12",
+      "source_url": "https://curia.europa.eu/juris/liste.jsf?num=C-131/12",
+      "authority_level": "court_of_justice_high_authority",
+      "issue_role": "high_authority"
+    },
+    {
+      "id": "charter-articles-7-8-11-16",
+      "title": "EU Charter rights relevant to data protection, expression and business freedom",
+      "citation": "Articles 7, 8, 11 and 16 CFR",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12012P/TXT",
+      "authority_level": "governing_union_primary_law",
+      "issue_role": "counter_or_limiting_material"
+    },
+    {
+      "id": "basic-law-personality-expression-balance",
+      "title": "Basic Law personality and expression balancing materials",
+      "citation": "Articles 1, 2 and 5 GG",
+      "source_url": "https://www.gesetze-im-internet.de/englisch_gg/",
+      "authority_level": "governing_constitutional_text",
+      "issue_role": "counter_or_limiting_material"
+    }
+  ]
+}

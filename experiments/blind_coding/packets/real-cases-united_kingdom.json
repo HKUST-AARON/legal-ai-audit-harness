@@ -369,7 +369,6 @@
     "reliance_gate": "not_for_merits_reliance",
     "review_status": "source_integrity_only"
   },
-  "source_path": "experiments/real_cases/scenarios/united_kingdom.json",
   "upstream_metrics": {},
   "upstream_output": {}
 }

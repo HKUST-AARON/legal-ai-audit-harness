@@ -142,7 +142,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
   "upstream_metrics": {
     "f1": 1.0,
     "precision": 1.0,

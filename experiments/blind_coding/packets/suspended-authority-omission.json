@@ -31,7 +31,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/suspended_authority_omission.json",
   "upstream_metrics": {
     "f1": 0.82,
     "precision": 0.81,

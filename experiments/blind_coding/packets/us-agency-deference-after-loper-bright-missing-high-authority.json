@@ -121,7 +121,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-missing-high-authority.json",
   "upstream_metrics": {
     "f1": 1.0,
     "precision": 1.0,

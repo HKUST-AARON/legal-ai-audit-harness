@@ -139,7 +139,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
   "upstream_metrics": {
     "f1": null,
     "precision": null,

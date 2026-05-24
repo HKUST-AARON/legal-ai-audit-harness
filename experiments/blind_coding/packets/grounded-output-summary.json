@@ -72,7 +72,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/grounded_output_summary.json",
   "upstream_metrics": {
     "f1": 0.9,
     "precision": 0.9,

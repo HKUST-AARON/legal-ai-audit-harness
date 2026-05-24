@@ -19,6 +19,80 @@
       "notes": "Named authorities, but no source tags, one counter missing, and withdrawn guidance retrieved."
     },
     {
+      "packet_id": "canada-vavilov-standard-of-review",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound issue packet includes high-authority and counter-material sets, but no authorized adoption."
+    },
+    {
+      "packet_id": "canada-vavilov-standard-of-review-counter-material-suppressed",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "notes": "The packet suppresses a known limiting or contrary material."
+    },
+    {
+      "packet_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "review_gate_failure",
+        "contestation_failure"
+      ],
+      "notes": "The packet is screenable but lacks authorized adoption and contestation evidence for decision-reason status."
+    },
+    {
+      "packet_id": "canada-vavilov-standard-of-review-missing-high-authority",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "notes": "The packet omits an issue-defined high-authority material, blocking screening status."
+    },
+    {
+      "packet_id": "canada-vavilov-standard-of-review-unverified-source-tags",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Authorities are present, but source tags remain nonprocedural and require verification."
+    },
+    {
       "packet_id": "civil-law-statutory-interpretation",
       "scores": {
         "S": 1,
@@ -226,6 +300,19 @@
       "notes": "Adoption and contestation are logged, but source evidence tags and locators are absent."
     },
     {
+      "packet_id": "eu-gdpr-article15-access-rights",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Official source links and complete high-authority/counter sets are reviewable."
+    },
+    {
       "packet_id": "eu-gdpr-article15-access-rights-counter-material-suppressed",
       "scores": {
         "S": 2,
@@ -286,7 +373,35 @@
       "notes": "Authority coverage is complete, but every source tag needs verification."
     },
     {
-      "packet_id": "eu-gdpr-article15-access-rights",
+      "packet_id": "germany-right-to-be-forgotten-review",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-bound issue packet includes high-authority and counter-material sets, but no authorized adoption."
+    },
+    {
+      "packet_id": "germany-right-to-be-forgotten-review-counter-material-suppressed",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "notes": "The packet suppresses a known limiting or contrary material."
+    },
+    {
+      "packet_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
       "scores": {
         "S": 2,
         "Q": 2,
@@ -295,8 +410,41 @@
         "T": 1,
         "L": 1
       },
-      "failure_flags": [],
-      "notes": "Official source links and complete high-authority/counter sets are reviewable."
+      "failure_flags": [
+        "review_gate_failure",
+        "contestation_failure"
+      ],
+      "notes": "The packet is screenable but lacks authorized adoption and contestation evidence for decision-reason status."
+    },
+    {
+      "packet_id": "germany-right-to-be-forgotten-review-missing-high-authority",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "notes": "The packet omits an issue-defined high-authority material, blocking screening status."
+    },
+    {
+      "packet_id": "germany-right-to-be-forgotten-review-unverified-source-tags",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Authorities are present, but source tags remain nonprocedural and require verification."
     },
     {
       "packet_id": "grounded-output-summary",
@@ -325,368 +473,6 @@
         "summary_distortion"
       ],
       "notes": "Coverage is strong, but one output link lacks a locator and contestability is only internal."
-    },
-    {
-      "packet_id": "odr-authorized-review",
-      "scores": {
-        "S": 1,
-        "Q": 1,
-        "H": 2,
-        "K": 2,
-        "T": 2,
-        "L": 2
-      },
-      "failure_flags": [
-        "source_attribution_gap"
-      ],
-      "notes": "Authorization and appeal logging are present, but source evidence tags and locators are absent."
-    },
-    {
-      "packet_id": "professional-research-support",
-      "scores": {
-        "S": 0,
-        "Q": 1,
-        "H": 0,
-        "K": 0,
-        "T": 1,
-        "L": 0
-      },
-      "failure_flags": [],
-      "notes": "Internal-use context is available, but no reconstructable sources or authority sets are supplied."
-    },
-    {
-      "packet_id": "public-system-output-canada",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public source manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "public-system-output-germany",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public metadata manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "public-system-output-hong_kong",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public metadata manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "public-system-output-mainland_china",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Official source manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "public-system-output-united_kingdom",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Official source manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "public-system-output-united_states",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Official source manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "real-cases-canada",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "real-cases-germany",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "real-cases-hong_kong",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "real-cases-mainland_china",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "real-cases-united_kingdom",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "real-cases-united_states",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
-    },
-    {
-      "packet_id": "suspended-authority-omission",
-      "scores": {
-        "S": 1,
-        "Q": 1,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "authority_omission",
-        "source_attribution_gap"
-      ],
-      "notes": "A known high authority is omitted and no source evidence tags are supplied."
-    },
-    {
-      "packet_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 2,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "counter_material_suppression"
-      ],
-      "notes": "Verified source links are present, but a known limiting Barker material is missing."
-    },
-    {
-      "packet_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 2,
-        "K": 2,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "contestation_failure"
-      ],
-      "notes": "Merits packet is complete, but claimed decision status lacks adoption and contestation record."
-    },
-    {
-      "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "authority_omission"
-      ],
-      "notes": "Verified packet omits one known high-authority UKSC source."
-    },
-    {
-      "packet_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags",
-      "scores": {
-        "S": 1,
-        "Q": 2,
-        "H": 2,
-        "K": 2,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "source_attribution_gap"
-      ],
-      "notes": "Authority coverage is complete, but every source tag needs verification."
-    },
-    {
-      "packet_id": "uk-mesothelioma-causation-after-fairchild",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 2,
-        "K": 2,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Official source links and complete high-authority/counter sets are reviewable."
-    },
-    {
-      "packet_id": "unverifiable-legal-output",
-      "scores": {
-        "S": 0,
-        "Q": 1,
-        "H": 0,
-        "K": 0,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "source_attribution_gap",
-        "summary_distortion"
-      ],
-      "notes": "The only source link lacks a locator, needs verification, and does not support the claim."
-    },
-    {
-      "packet_id": "us-agency-deference-after-loper-bright-counter-material-suppressed",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 2,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "counter_material_suppression"
-      ],
-      "notes": "Verified source links are present, but a known limiting Skidmore material is missing."
-    },
-    {
-      "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 2,
-        "K": 2,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "contestation_failure"
-      ],
-      "notes": "Merits packet is complete, but claimed decision status lacks adoption and contestation record."
-    },
-    {
-      "packet_id": "us-agency-deference-after-loper-bright-missing-high-authority",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 1,
-        "K": 1,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "authority_omission"
-      ],
-      "notes": "Verified packet omits one known high-authority Skidmore source."
-    },
-    {
-      "packet_id": "us-agency-deference-after-loper-bright-unverified-source-tags",
-      "scores": {
-        "S": 1,
-        "Q": 2,
-        "H": 2,
-        "K": 2,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [
-        "source_attribution_gap"
-      ],
-      "notes": "Authority coverage is complete, but every source tag needs verification."
-    },
-    {
-      "packet_id": "us-agency-deference-after-loper-bright",
-      "scores": {
-        "S": 2,
-        "Q": 2,
-        "H": 2,
-        "K": 2,
-        "T": 1,
-        "L": 1
-      },
-      "failure_flags": [],
-      "notes": "Official/tool-verified links and complete high-authority/counter sets are reviewable."
     },
     {
       "packet_id": "issue-public-output-eu-official-gdpr-article15",
@@ -732,6 +518,34 @@
         "counter_material_suppression"
       ],
       "notes": "Visible public records are traceable, but the issue authority/counter chain is incomplete."
+    },
+    {
+      "packet_id": "odr-authorized-review",
+      "scores": {
+        "S": 1,
+        "Q": 1,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 2
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Authorization and appeal logging are present, but source evidence tags and locators are absent."
+    },
+    {
+      "packet_id": "professional-research-support",
+      "scores": {
+        "S": 0,
+        "Q": 1,
+        "H": 0,
+        "K": 0,
+        "T": 1,
+        "L": 0
+      },
+      "failure_flags": [],
+      "notes": "Internal-use context is available, but no reconstructable sources or authority sets are supplied."
     },
     {
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
@@ -924,6 +738,340 @@
         "counter_material_suppression"
       ],
       "notes": "Public query output has stable source evidence, but incomplete authority/counter coverage blocks screening status."
+    },
+    {
+      "packet_id": "public-system-output-canada",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public source manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "public-system-output-germany",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public metadata manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "public-system-output-hong_kong",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public metadata manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "public-system-output-mainland_china",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Official source manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "public-system-output-united_kingdom",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Official source manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "public-system-output-united_states",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Official source manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "real-cases-canada",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "real-cases-germany",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "real-cases-hong_kong",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "real-cases-mainland_china",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "real-cases-united_kingdom",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "real-cases-united_states",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Public case manifest and locators are reviewable, but merits hierarchy and counters are limited."
+    },
+    {
+      "packet_id": "suspended-authority-omission",
+      "scores": {
+        "S": 1,
+        "Q": 1,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission",
+        "source_attribution_gap"
+      ],
+      "notes": "A known high authority is omitted and no source evidence tags are supplied."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Official source links and complete high-authority/counter sets are reviewable."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "notes": "Verified source links are present, but a known limiting Barker material is missing."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "notes": "Merits packet is complete, but claimed decision status lacks adoption and contestation record."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "notes": "Verified packet omits one known high-authority UKSC source."
+    },
+    {
+      "packet_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Authority coverage is complete, but every source tag needs verification."
+    },
+    {
+      "packet_id": "unverifiable-legal-output",
+      "scores": {
+        "S": 0,
+        "Q": 1,
+        "H": 0,
+        "K": 0,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap",
+        "summary_distortion"
+      ],
+      "notes": "The only source link lacks a locator, needs verification, and does not support the claim."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Official/tool-verified links and complete high-authority/counter sets are reviewable."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-counter-material-suppressed",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "notes": "Verified source links are present, but a known limiting Skidmore material is missing."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "notes": "Merits packet is complete, but claimed decision status lacks adoption and contestation record."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-missing-high-authority",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 1,
+        "K": 1,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "notes": "Verified packet omits one known high-authority Skidmore source."
+    },
+    {
+      "packet_id": "us-agency-deference-after-loper-bright-unverified-source-tags",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Authority coverage is complete, but every source tag needs verification."
     }
   ]
 }

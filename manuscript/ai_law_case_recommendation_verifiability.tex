@@ -31,7 +31,7 @@ An Audit Framework for Case Recommendation}
 \maketitle
 
 \begin{abstract}
-Legal AI case recommendation matters because it can decide which authorities become visible before legal reasons are written. This article argues that such outputs form a missing middle category: \textit{normative material screening outputs}. They are neither neutral retrieval results nor legal sources, but procedurally relevant filters over the materials from which legal arguments are built. The article formalizes procedural qualification through output effect, system-role caps and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and tests it through public legal-system outputs, issue-specific public search outputs, raw model outputs, source-bound positive controls, ablations, full-threshold sensitivity and score-blinded coding. The strongest finding is not that legal AI can retrieve authorities; it is that retrieval success and procedural qualification diverge. Twelve public search outputs remained reference information despite stable source reconstruction; ten raw GPT-5.5 outputs reached complete authority coverage but had zero procedural-source binding; and source-bound issue packets qualified as normative material screening only when high-authority, counter-material and source-link conditions were all satisfied. Across 62 packets and 891 evaluation rows, status allocation was unchanged under thresholds 8--10, stable for 60 of 62 strict/lenient recodings, and reached 0.97 exact agreement in score-blinded coding. The rule is simple: no reconstructable source chain, no procedural status; no counter-material pathway, no screening qualification; no adoption record, no decision-support reason.
+Case recommendation systems can shape legal reasoning before any legal reasons are written: they decide which authorities become visible. This article argues that such outputs form a missing middle category, \textit{normative material screening outputs}. They are neither neutral retrieval results nor legal sources, but procedurally relevant filters over the materials from which legal arguments are built. The article formalizes procedural qualification through output effect, system-role caps and a six-part audit vector covering source and corpus, query and version, authority hierarchy, ranking and counter-materials, contestability and adoption logging. It then implements the model in a provider-agnostic harness and tests it across public legal-system outputs, issue-specific public search outputs, raw model outputs, five source-bound issue controls, ablations, full-threshold sensitivity and score-blinded coding. The central result is a separation result in executable form: retrieval success is not procedural qualification. Twelve public search outputs remained reference information despite stable source reconstruction; ten raw GPT-5.5 outputs reached complete authority coverage but had zero procedural-source binding; and source-bound issue packets qualified as normative material screening only when high-authority, counter-material and source-link conditions were all satisfied. Across 72 packets and 991 validation observations, status allocation was unchanged under thresholds 8--10, stable for 70 of 72 strict/lenient recodings, and reached 0.97 inter-coder agreement plus 0.85 minimum base-coder agreement in score-blinded coding. The rule is simple: no reconstructable source chain, no procedural status; no counter-material pathway, no screening qualification; no adoption record, no decision-support reason.
 \end{abstract}
 
 \noindent\textbf{Keywords:} legal information retrieval; case recommendation; legal AI auditing; contestability; output evidence packets; normative material screening
@@ -232,7 +232,7 @@ Second, apply system-role and failure caps. A disclosed assistance tool cannot e
 
 Operationally, an evaluator applies the model in six steps: identify the candidate procedural status claimed for the output; freeze the relevant issue, query, source collection, workflow version and output identifier; score each component of $\mathcal{A}(o)$ using the audit artefacts in Table 2; apply the necessary gates in Table 3; assign the highest available status or record the missing gate; and repeat the audit after material corpus, workflow or interface changes. This makes the framework usable as a deployment checklist, post-use audit and benchmark extension.
 
-The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means absent, 1 means incomplete or internal, and 2 means reviewable by the relevant professional or procedural actor. The default $\tau_N=9$ permits one limited weakness while still requiring every gate; decision-support status requires $T=L=2$ because external reasons require both contestation and adoption records. The full validation suite re-evaluates all 62 packets under thresholds 8--12. Thresholds 8--10 produced identical status allocations; only stricter thresholds generated demotions, and none generated promotions.
+The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means absent, 1 means incomplete or internal, and 2 means reviewable by the relevant professional or procedural actor. The default $\tau_N=9$ permits one limited weakness while still requiring every gate; decision-support status requires $T=L=2$ because external reasons require both contestation and adoption records. The full validation suite re-evaluates all 72 packets under thresholds 8--12. Thresholds 8--10 produced identical status allocations; only stricter thresholds generated demotions, and none generated promotions.
 
 \begin{table}[htbp]
 \centering
@@ -243,11 +243,11 @@ The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means a
 \toprule
 $\tau_N$ & $\tau_D$ & Flips & Demotions & Status distribution \\
 \midrule
-8 & 10 & 0 & 0 & decision 2; screening 10; professional 13; reference 35; no effect 2 \\
-9 & 10 & 0 & 0 & decision 2; screening 10; professional 13; reference 35; no effect 2 \\
-10 & 11 & 0 & 0 & decision 2; screening 10; professional 13; reference 35; no effect 2 \\
-11 & 12 & 2 & 2 & decision 2; screening 8; professional 15; reference 35; no effect 2 \\
-12 & 13 & 9 & 9 & decision 0; screening 5; professional 20; reference 35; no effect 2 \\
+8 & 10 & 0 & 0 & decision 2; screening 14; professional 13; reference 41; no effect 2 \\
+9 & 10 & 0 & 0 & decision 2; screening 14; professional 13; reference 41; no effect 2 \\
+10 & 11 & 0 & 0 & decision 2; screening 14; professional 13; reference 41; no effect 2 \\
+11 & 12 & 2 & 2 & decision 2; screening 12; professional 15; reference 41; no effect 2 \\
+12 & 13 & 11 & 11 & decision 0; screening 7; professional 22; reference 41; no effect 2 \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -275,7 +275,7 @@ ODR & Platform rules, consumer statutes, terms of service, regulatory guidance a
 
 \subsection{Contestability and audit responsibility}
 
-Contestability requires a practical opportunity to inspect selected materials, identify missing or contrary materials, submit alternatives, request human review and receive a recorded response when the output is adopted. Audit responsibility assigns each artefact to the actor that controls it: developers for capability and safety claims, deployers for corpus and interface records, professional users for issue framing and verification, and authorized adopters for decision uptake. The point is status evidence, not a general liability regime.
+Contestability requires a practical opportunity to inspect selected materials, identify missing or contrary materials, submit alternatives, request human review and receive a recorded response when the output is adopted. Adoption logging is distinct: it records whether, why and by whom the output was taken up after contestation was possible. Audit responsibility assigns each artefact to the actor that controls it: developers for capability and safety claims, deployers for corpus and interface records, professional users for issue framing and verification, and authorized adopters for decision uptake. The point is status evidence, not a general liability regime.
 
 \section{Operationalizing the Framework for Case Recommendation}
 
@@ -386,7 +386,7 @@ To test whether the framework is operational rather than merely classificatory, 
 
 The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, system role or role-inference evidence, a base audit vector $S,Q,H,K,T,L$, a jurisdiction profile, optional authority sets, optional upstream-performance metrics, optional evidence-packet fields, optional review-gate fields and expected outcomes. The runner does not read the expected outcome when computing status. It computes the allowed status, role cap, counter-authority recall, authority coverage, invalid-authority rate, packet-level evidence fidelity, evidence coverage, source-tag coverage, procedural-source-tag coverage and downgrade or withdrawal disposition. Separate commands vary status thresholds and re-score the same packets under strict and lenient coding policies.
 
-The complete evaluation matrix contains 62 scenario packets, 333 embedded records or outputs, 310 threshold-sensitivity evaluations, 124 strict/lenient recodings and 124 score-blinded coding evaluations, for 891 evaluation rows. The evidence is organized in four groups. First, protocol tests and ablations check whether gates, caps, downgrade and withdrawal rules behave as specified. Second, public metadata and public-system snapshots test whether real legal outputs can be reconstructed above heterogeneous sources. Third, issue-level public search, raw model outputs and source-bound positive controls test the paper's central contrast between retrieval success, source binding and screening qualification. Fourth, threshold sensitivity, recoding and score-blinded coding test robustness of status allocation.
+The complete evaluation matrix contains 72 scenario packets, 343 embedded records or outputs, 360 threshold-sensitivity evaluations, 144 strict/lenient recodings and 144 score-blinded coding evaluations, for 991 validation observations. The evidence is organized in four groups. First, protocol tests and ablations check whether gates, caps, downgrade and withdrawal rules behave as specified. Second, public metadata and public-system snapshots test whether real legal outputs can be reconstructed above heterogeneous sources. Third, issue-level public search, raw model outputs and source-bound positive controls test the paper's central contrast between retrieval success, source binding and screening qualification. Fourth, threshold sensitivity, recoding and score-blinded coding test robustness of status allocation.
 
 \begin{table}[htbp]
 \centering
@@ -403,11 +403,11 @@ Public-system outputs & 60 records in 6 files & 6/6 & Real upstream legal-output
 Issue-specific public output/source packets & 19 records in 3 files & 3/3 & Public issue-search outputs and one source-bound public-source packet tested against high-authority and counter-material requirements. \\
 Public retrieval benchmark & 99 records in 12 files & 12/12 & True public search outputs tested against issue-defined gold authority and counter-material sets. \\
 Raw model outputs & 10 & 10/10 & High authority coverage without source binding remains procedurally capped. \\
-Positive-control issue packets & 3 & 3/3 & Source-bound high-authority and counter-material packets can qualify as normative screening. \\
-Issue ablations & 12 & 12/12 & High-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger caps. \\
-Annotation robustness & 124 recodings & 60/62 stable & Strict and lenient recoding policies test status stability across all packets. \\
-Score-blinded dual coding & 62 packets, 2 passes & 0.97 agreement & Coding passes score packets without original scores or expected outcomes. \\
-Threshold sensitivity & 310 evaluations & 0 flips at thresholds 8--10 & All 62 packets are re-evaluated under normative thresholds 8--12. \\
+Positive-control issue packets & 5 & 5/5 & Source-bound high-authority and counter-material packets can qualify as normative screening. \\
+Issue ablations & 20 & 20/20 & High-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger caps. \\
+Annotation robustness & 144 recodings & 70/72 stable & Strict and lenient recoding policies test status stability across all packets. \\
+Score-blinded dual coding & 72 packets, 2 passes & 0.97 coder agreement; 0.85 min base agreement & Coding passes score packets without original scores or expected outcomes. \\
+Threshold sensitivity & 360 evaluations & 0 flips at thresholds 8--10 & All 72 packets are re-evaluated under normative thresholds 8--12. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -471,7 +471,7 @@ EU GDPR Article 15 access rights & 4 & 9 & 1.00 & 0.00 & Reference information \
 \end{tabularx}
 \end{table}
 
-To test normative material screening itself, the harness includes three manually curated issue packets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, and EU GDPR Article 15 access-right interpretation. Each packet defines high-authority materials, limiting or counter-materials, invalidated treatments, source tags and output-to-source links at the level of individual output units. These are positive controls, not a benchmark leaderboard: they ask whether a source-bound, issue-defined authority packet can obtain screening status under the protocol. All three qualified as normative material screening, not as decision-support reasons, because no authorized decision-maker adopted them as reasoned outcomes.
+To test normative material screening itself, the harness includes five manually curated issue packets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, EU GDPR Article 15 access-right interpretation, Canadian administrative-law standard of review after \textit{Vavilov}, and German/EU fundamental-rights review after the \textit{Right to be Forgotten} decisions. Each packet defines high-authority materials, limiting or counter-materials, invalidated or historical treatments, source tags and output-to-source links at the level of individual output units. These are positive controls, not a benchmark leaderboard: they ask whether a source-bound, issue-defined authority packet can obtain screening status under the protocol. All five qualified as normative material screening, not as decision-support reasons, because no authorized decision-maker adopted them as reasoned outcomes.
 
 \begin{table}[htbp]
 \centering
@@ -485,13 +485,15 @@ Issue packet & Profile & Authority set & Metrics & Status \\
 U.S. agency deference after \textit{Loper Bright} & Common law & H=3; C=2; invalid=1 treatment & Auth.=1.00; CAR=1.00; EF=1.00 & Normative screening \\
 English mesothelioma causation after \textit{Fairchild} & Common law & H=3; C=2; invalid=1 treatment & Auth.=1.00; CAR=1.00; EF=1.00 & Normative screening \\
 EU GDPR Article 15 access rights & Civil law/EU & H=3; C=2; invalid=2 treatments & Auth.=1.00; CAR=1.00; EF=1.00 & Normative screening \\
+Canada standard of review after \textit{Vavilov} & Common law & H=3; C=2; historical=1 treatment & Auth.=1.00; CAR=1.00; EF=1.00 & Normative screening \\
+Germany/EU right-to-be-forgotten review & Civil law/EU & H=3; C=2; cross-system=2 treatments & Auth.=1.00; CAR=1.00; EF=1.00 & Normative screening \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-The ablation suite then removes one procedural condition at a time from those packets. Twelve ablations were generated: high-authority omission, counter-material suppression, unverified source tags and missing authorized-adoption gates for each issue family. Nine were capped at reference information through downgrade or suspension. The remaining three claimed decision-support status but were capped at normative screening because the packet lacked authorized institutional adoption. This is the crucial negative test: a packet that is otherwise strong on source links and authority coverage still loses status when the missing condition is procedural rather than semantic.
+The ablation suite then removes one procedural condition at a time from those packets. Twenty ablations were generated: high-authority omission, counter-material suppression, unverified source tags and missing authorized-adoption gates for each issue family. Fifteen were capped at reference information through downgrade or suspension. The remaining five claimed decision-support status but were capped at normative screening because the packet lacked authorized institutional adoption. This is the crucial negative test: a packet that is otherwise strong on source links and authority coverage still loses status when the missing condition is procedural rather than semantic.
 
-The final layers address coding uncertainty. First, all 62 committed scenario packets were re-scored under strict and lenient policies. Status allocation was stable for 60 of 62 packets; weighted status agreement was 0.98 for base versus strict and 1.00 for base versus lenient. Second, the same 62 packets were converted into score-blinded packet files that removed original scores, expected outcomes and manual failure flags. Two codebook-based coding passes then applied fresh scores to the packets. They reached 0.97 exact status agreement and 0.98 weighted status agreement, with disagreements only on two decision-support packets where the review-gate evidence was interpreted differently. This does not replace a larger external annotation study, but it directly tests whether the proposed status categories can be applied from packet evidence rather than from the author's original labels.
+The final layers address coding uncertainty. First, all 72 committed scenario packets were re-scored under strict and lenient policies. Status allocation was stable for 70 of 72 packets; weighted status agreement was 0.98 for base versus strict and 1.00 for base versus lenient. Second, the same 72 packets were converted into score-blinded packet files that removed original scores, expected outcomes, source paths and manual failure flags. Two codebook-based coding passes then applied fresh scores to the packets. They reached 0.97 exact inter-coder status agreement and 0.98 weighted inter-coder agreement; against the base harness allocation, the weaker coder still reached 0.85 exact agreement and 0.92 weighted agreement. The two inter-coder status disagreements both concerned decision-support review gates; base-coder mismatches also reveal where stricter human coding demotes deliberately thin stress or ablation packets. This does not replace a larger external annotation study, but it directly tests whether the proposed status categories can be applied from packet evidence rather than from the author's original labels.
 
 \section{Implications and Limitations}
 

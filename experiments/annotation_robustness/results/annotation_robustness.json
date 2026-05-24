@@ -1,10 +1,10 @@
 {
-  "all_policy_status_stable": 60,
-  "lenient_status_stable": 62,
-  "mean_score_delta_lenient": 0.5967741935483871,
-  "mean_score_delta_strict": 1.1290322580645162,
+  "all_policy_status_stable": 70,
+  "lenient_status_stable": 72,
+  "mean_score_delta_lenient": 0.5694444444444444,
+  "mean_score_delta_strict": 1.1666666666666667,
   "policy_count": 3,
-  "recoded_evaluations": 124,
+  "recoded_evaluations": 144,
   "rows": [
     {
       "base": {
@@ -1094,6 +1094,29 @@
         "disposition": "none",
         "total_score": 11
       },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "canada-vavilov-standard-of-review",
+      "source_path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "normative_material_screening_output",
@@ -1103,6 +1126,29 @@
       },
       "scenario_id": "eu-gdpr-article15-access-rights",
       "source_path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "germany-right-to-be-forgotten-review",
+      "source_path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
       "strict": {
         "allowed_status": "normative_material_screening_output",
         "claim_supported": true,
@@ -1154,6 +1200,98 @@
         "claim_supported": true,
         "disposition": "none",
         "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "canada-vavilov-standard-of-review-counter-material-suppressed",
+      "source_path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-counter-material-suppressed.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+      "source_path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "canada-vavilov-standard-of-review-missing-high-authority",
+      "source_path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-missing-high-authority.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "canada-vavilov-standard-of-review-unverified-source-tags",
+      "source_path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-unverified-source-tags.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
       }
     },
     {
@@ -1241,6 +1379,98 @@
       },
       "scenario_id": "eu-gdpr-article15-access-rights-unverified-source-tags",
       "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-unverified-source-tags.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "germany-right-to-be-forgotten-review-counter-material-suppressed",
+      "source_path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-counter-material-suppressed.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 12
+      },
+      "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
+      "source_path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": false,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "germany-right-to-be-forgotten-review-missing-high-authority",
+      "source_path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-missing-high-authority.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "germany-right-to-be-forgotten-review-unverified-source-tags",
+      "source_path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-unverified-source-tags.json",
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
@@ -1433,8 +1663,8 @@
       }
     }
   ],
-  "scenario_count": 62,
-  "strict_status_stable": 60,
+  "scenario_count": 72,
+  "strict_status_stable": 70,
   "weighted_status_agreement_base_lenient": 1.0,
-  "weighted_status_agreement_base_strict": 0.9796387520525451
+  "weighted_status_agreement_base_strict": 0.9830866807610994
 }

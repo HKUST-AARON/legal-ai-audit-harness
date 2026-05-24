@@ -15,7 +15,6 @@
     "reliance_gate": "internal_only",
     "review_status": "not_required"
   },
-  "source_path": "examples/scenarios/professional_research_support.json",
   "system_role": "disclosed_assistance_tool",
   "upstream_metrics": {
     "f1": 0.59,

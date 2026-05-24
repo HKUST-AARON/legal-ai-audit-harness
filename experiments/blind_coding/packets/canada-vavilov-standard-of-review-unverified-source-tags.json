@@ -1,0 +1,149 @@
+{
+  "authority_sets": {
+    "counter_or_limiting": [
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "dunsmuir-contextual-standard-selection-as-current-default"
+    ],
+    "retrieved": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67",
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "retrieved_counter_or_limiting": [
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "retrieved_high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "retrieved_invalid_treatments": []
+  },
+  "claimed_status": "normative_material_screening_output",
+  "deployment_context": "Issue-defined Canadian administrative-law authority packet for standard-of-review screening after Vavilov. Ablation: unverified source tags.",
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "2019 SCC 65",
+        "source_id": "vavilov-2019-scc-65",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-1"
+      },
+      {
+        "locator": "2019 SCC 66",
+        "source_id": "bell-canada-2019-scc-66",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-2"
+      },
+      {
+        "locator": "2019 SCC 67",
+        "source_id": "canada-post-2019-scc-67",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-3"
+      },
+      {
+        "locator": "2008 SCC 9",
+        "source_id": "dunsmuir-2008-scc-9",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-4"
+      },
+      {
+        "locator": "2019 SCC 65",
+        "source_id": "vavilov-statutory-appeal-limits",
+        "source_tag": "needs_verification",
+        "supports_claim": true,
+        "unit_id": "unit-5"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "Vavilov is the central current Supreme Court authority for Canadian administrative-law standard-of-review analysis.",
+        "id": "unit-1",
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "source_ids": [
+          "vavilov-2019-scc-65"
+        ]
+      },
+      {
+        "claim": "Bell Canada is a companion decision that should be visible with Vavilov in the administrative-law trilogy.",
+        "id": "unit-2",
+        "locators": [
+          "2019 SCC 66"
+        ],
+        "source_ids": [
+          "bell-canada-2019-scc-66"
+        ]
+      },
+      {
+        "claim": "Canada Post is a companion decision that should be visible with Vavilov in the administrative-law trilogy.",
+        "id": "unit-3",
+        "locators": [
+          "2019 SCC 67"
+        ],
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ]
+      },
+      {
+        "claim": "Dunsmuir should be visible as historical framework material rather than silently treated as the current default method.",
+        "id": "unit-4",
+        "locators": [
+          "2008 SCC 9",
+          "2019 SCC 65"
+        ],
+        "source_ids": [
+          "dunsmuir-2008-scc-9",
+          "vavilov-2019-scc-65"
+        ]
+      },
+      {
+        "claim": "Vavilov's statutory appeal and correctness-exception rules are limiting materials for a simple reasonableness-only summary.",
+        "id": "unit-5",
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "source_ids": [
+          "vavilov-statutory-appeal-limits"
+        ]
+      }
+    ],
+    "source_collection": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json"
+  },
+  "jurisdiction_profile": "common_law",
+  "packet_id": "canada-vavilov-standard-of-review-unverified-source-tags",
+  "review_gate": {
+    "attorney_review_required": true,
+    "human_authorization": false,
+    "irreversible_action": false,
+    "jurisdiction_assumptions": [
+      "canadian_administrative_law",
+      "common_law"
+    ],
+    "reliance_gate": "attorney_review",
+    "review_status": "completed"
+  },
+  "upstream_metrics": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "upstream_output": {}
+}

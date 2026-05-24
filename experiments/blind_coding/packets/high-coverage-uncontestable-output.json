@@ -71,7 +71,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "examples/scenarios/high_coverage_uncontestable_output.json",
   "upstream_metrics": {
     "f1": 0.92,
     "precision": 0.92,

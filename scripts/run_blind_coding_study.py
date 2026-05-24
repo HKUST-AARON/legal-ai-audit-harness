@@ -17,6 +17,16 @@ BASE_DIR = ROOT / "experiments" / "blind_coding"
 PACKETS = BASE_DIR / "packets"
 ANNOTATIONS = BASE_DIR / "annotations"
 RESULTS = BASE_DIR / "results"
+SOURCE_DIRS = [
+    ROOT / "examples" / "scenarios",
+    ROOT / "experiments" / "real_cases" / "scenarios",
+    ROOT / "experiments" / "public_system_outputs" / "scenarios",
+    ROOT / "experiments" / "ai_outputs" / "scenarios",
+    ROOT / "experiments" / "issue_public_outputs" / "scenarios",
+    ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios",
+    ROOT / "experiments" / "issue_gold_sets" / "scenarios",
+    ROOT / "experiments" / "issue_ablations" / "scenarios",
+]
 
 
 def main() -> int:
@@ -29,6 +39,7 @@ def main() -> int:
     rows = []
     for packet in packets:
         packet_rows = []
+        base_status = _base_allowed_status(packet)
         for coder in coders:
             annotation = coder["annotations"].get(packet["packet_id"])
             if annotation is None:
@@ -45,7 +56,7 @@ def main() -> int:
                     "missing_gates": result.missing_gates,
                 }
             )
-        rows.append({"packet_id": packet["packet_id"], "annotations": packet_rows})
+        rows.append({"packet_id": packet["packet_id"], "base_allowed_status": base_status, "annotations": packet_rows})
     payload = _payload(rows, coders)
     (RESULTS / "blind_coding_study.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
     (RESULTS / "blind_coding_study.md").write_text(_format_report(payload) + "\n", encoding="utf-8")
@@ -68,6 +79,20 @@ def _load_coder(path: Path) -> dict:
     payload = json.loads(path.read_text(encoding="utf-8"))
     annotations = {item["packet_id"]: item for item in payload["annotations"]}
     return {"coder_id": payload["coder_id"], "annotations": annotations}
+
+
+def _base_allowed_status(packet: dict) -> str:
+    scenario = _source_scenario(packet["packet_id"])
+    return evaluate_scenario(scenario).allowed_status
+
+
+def _source_scenario(packet_id: str) -> dict:
+    for directory in SOURCE_DIRS:
+        for path in sorted(directory.glob("*.json")):
+            scenario = json.loads(path.read_text(encoding="utf-8"))
+            if scenario["id"] == packet_id:
+                return scenario
+    raise SystemExit(f"Cannot find source scenario for {packet_id}")
 
 
 def _scenario_from_annotation(packet: dict, annotation: dict, coder_id: str) -> dict:
@@ -123,12 +148,29 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
         for row in rows
         if len({annotation["allowed_status"] for annotation in row["annotations"]}) > 1
     ]
+    base_statuses = [row["base_allowed_status"] for row in rows]
+    base_status_agreement = {}
+    for coder_id in coder_ids:
+        coder_statuses = status_lists[coder_id]
+        mismatches = [
+            row["packet_id"]
+            for row, base_status, coder_status in zip(rows, base_statuses, coder_statuses)
+            if base_status != coder_status
+        ]
+        base_status_agreement[coder_id] = {
+            "exact_status_agreement": _exact_agreement(base_statuses, coder_statuses),
+            "weighted_status_agreement": _weighted_agreement(base_statuses, coder_statuses),
+            "match_count": len(rows) - len(mismatches),
+            "mismatch_count": len(mismatches),
+            "mismatches": mismatches,
+        }
     return {
         "packet_count": len(rows),
         "coder_count": len(coders),
         "coder_ids": coder_ids,
         "pairwise_status": pairwise_status,
         "pairwise_dimensions": pairwise_dimensions,
+        "base_status_agreement": base_status_agreement,
         "status_disagreements": high_disagreement,
         "status_disagreement_count": len(high_disagreement),
         "mean_total_score": {
@@ -189,6 +231,20 @@ def _format_report(payload: dict) -> str:
         lines.append(
             f"| {item['left']} | {item['right']} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} |"
         )
+    lines.extend(
+        [
+            "",
+            "## Base Status Agreement",
+            "",
+            "| Coder | Exact base agreement | Weighted base agreement | Matches | Mismatches |",
+            "| --- | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for coder_id in payload["coder_ids"]:
+        item = payload["base_status_agreement"][coder_id]
+        lines.append(
+            f"| {coder_id} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} | {item['match_count']} | {item['mismatch_count']} |"
+        )
     lines.extend(["", "## Mean Total Score", "", "| Coder | Mean total score |", "| --- | ---: |"])
     for coder_id, score in payload["mean_total_score"].items():
         lines.append(f"| {coder_id} | {score:.2f} |")
@@ -203,8 +259,8 @@ def _format_report(payload: dict) -> str:
             "",
             "## Packet Results",
             "",
-            "| Packet | " + " | ".join(payload["coder_ids"]) + " |",
-            "| --- | " + " | ".join("---" for _ in payload["coder_ids"]) + " |",
+            "| Packet | Base | " + " | ".join(payload["coder_ids"]) + " |",
+            "| --- | --- | " + " | ".join("---" for _ in payload["coder_ids"]) + " |",
         ]
     )
     for row in payload["rows"]:
@@ -212,7 +268,7 @@ def _format_report(payload: dict) -> str:
             next(annotation for annotation in row["annotations"] if annotation["coder_id"] == coder_id)["allowed_status"]
             for coder_id in payload["coder_ids"]
         ]
-        lines.append("| " + " | ".join([row["packet_id"], *statuses]) + " |")
+        lines.append("| " + " | ".join([row["packet_id"], row["base_allowed_status"], *statuses]) + " |")
     return "\n".join(lines)
 
 

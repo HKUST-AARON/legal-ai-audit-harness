@@ -1,12 +1,12 @@
 # Annotation Robustness Study
 
-Base scenarios: 62
-Strict/lenient recoded evaluations: 124
-Strict status stable: 60/62
-Lenient status stable: 62/62
-Stable under all coding policies: 60/62
-Mean score delta, strict: 1.13
-Mean score delta, lenient: 0.60
+Base scenarios: 72
+Strict/lenient recoded evaluations: 144
+Strict status stable: 70/72
+Lenient status stable: 72/72
+Stable under all coding policies: 70/72
+Mean score delta, strict: 1.17
+Mean score delta, lenient: 0.57
 Weighted status agreement, base vs strict: 0.98
 Weighted status agreement, base vs lenient: 1.00
 
@@ -61,13 +61,23 @@ Weighted status agreement, base vs lenient: 1.00
 | issue-public-output-eu-official-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | issue-public-output-uk-tna-fairchild-mesothelioma | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | issue-public-output-us-courtlistener-loper-bright | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| canada-vavilov-standard-of-review | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | eu-gdpr-article15-access-rights | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| germany-right-to-be-forgotten-review | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | uk-mesothelioma-causation-after-fairchild | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | us-agency-deference-after-loper-bright | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| canada-vavilov-standard-of-review-counter-material-suppressed | reference_information | reference_information | reference_information | 10 | 8 | 10 |
+| canada-vavilov-standard-of-review-decision-reason-without-adoption | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 12 | 10 | 12 |
+| canada-vavilov-standard-of-review-missing-high-authority | reference_information | reference_information | reference_information | 10 | 9 | 11 |
+| canada-vavilov-standard-of-review-unverified-source-tags | reference_information | reference_information | reference_information | 10 | 9 | 11 |
 | eu-gdpr-article15-access-rights-counter-material-suppressed | reference_information | reference_information | reference_information | 10 | 8 | 10 |
 | eu-gdpr-article15-access-rights-decision-reason-without-adoption | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 12 | 10 | 12 |
 | eu-gdpr-article15-access-rights-missing-high-authority | reference_information | reference_information | reference_information | 10 | 9 | 11 |
 | eu-gdpr-article15-access-rights-unverified-source-tags | reference_information | reference_information | reference_information | 10 | 9 | 11 |
+| germany-right-to-be-forgotten-review-counter-material-suppressed | reference_information | reference_information | reference_information | 10 | 8 | 10 |
+| germany-right-to-be-forgotten-review-decision-reason-without-adoption | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 12 | 10 | 12 |
+| germany-right-to-be-forgotten-review-missing-high-authority | reference_information | reference_information | reference_information | 10 | 9 | 11 |
+| germany-right-to-be-forgotten-review-unverified-source-tags | reference_information | reference_information | reference_information | 10 | 9 | 11 |
 | uk-mesothelioma-causation-after-fairchild-counter-material-suppressed | reference_information | reference_information | reference_information | 10 | 8 | 10 |
 | uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 12 | 10 | 12 |
 | uk-mesothelioma-causation-after-fairchild-missing-high-authority | reference_information | reference_information | reference_information | 10 | 9 | 11 |

@@ -131,7 +131,6 @@
     "reliance_gate": "attorney_review",
     "review_status": "completed"
   },
-  "source_path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-counter-material-suppressed.json",
   "upstream_metrics": {
     "f1": 0.8889,
     "precision": 1.0,
