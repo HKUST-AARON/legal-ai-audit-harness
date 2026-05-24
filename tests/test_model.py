@@ -445,7 +445,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 14)
+        self.assertEqual(report["suite_count"], 15)
         self.assertEqual(report["scenario_files"], 230)
         self.assertEqual(report["validation_units"]["total"], 609)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
@@ -461,9 +461,12 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["threshold_sensitivity_evaluations"], 1150)
         self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 1150)
         self.assertEqual(report["source_text_anchor_evaluations"], 30)
+        self.assertEqual(report["model_output_transcript_evaluations"], 50)
         self.assertEqual(report["validation_units"]["source_text_anchor_checks"], 30)
         self.assertEqual(report["validation_units"]["source_text_anchor_verified"], 30)
-        self.assertEqual(report["total_evaluation_rows"], 2709)
+        self.assertEqual(report["validation_units"]["model_output_transcript_locator_checks"], 50)
+        self.assertEqual(report["validation_units"]["model_output_transcript_locators_verified"], 50)
+        self.assertEqual(report["total_evaluation_rows"], 2759)
         self.assertEqual(report["expected_passed"], 230)
         self.assertEqual(report["expected_total"], 230)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
@@ -475,6 +478,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 21)
         self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
+        self.assertEqual(report["model_output_transcript_verification"]["locators_verified"], 50)
+        self.assertTrue(report["model_output_transcript_verification"]["all_locators_verified"])
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(
@@ -491,6 +496,23 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["records_with_text_snapshot"], 30)
         verified = [item for item in report["items"] if item["verified"]]
         self.assertTrue(all(item["snapshot_sha256"] for item in verified))
+
+    def test_model_output_transcript_verification(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/verify_model_output_transcripts.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "ai_outputs" / "results" / "model_output_transcript_verification.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["scenario_count"], 10)
+        self.assertEqual(report["scenario_sections_verified"], 10)
+        self.assertEqual(report["output_unit_count"], 40)
+        self.assertEqual(report["locator_count"], 50)
+        self.assertEqual(report["locators_verified"], 50)
+        self.assertTrue(report["all_locators_verified"])
 
     def test_annotation_robustness_report_shape(self):
         completed = subprocess.run(

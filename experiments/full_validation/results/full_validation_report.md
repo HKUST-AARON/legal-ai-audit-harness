@@ -1,13 +1,14 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 14
+Validation suites: 15
 Scenario files: 230
 Base embedded records/items: 609 (10 stress scenarios, 120 public metadata records, 60 public-system records, 225 public retrieval records, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 460
 Score-blinded coding-pass evaluations: 460
 Full-threshold sensitivity evaluations: 1150
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
-Derived robustness evaluations: 2100
+Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
+Derived robustness evaluations: 2150
 Expected outcomes passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, source_attribution_gap: 95, summary_distortion: 21, unauthorized_action: 10
@@ -28,6 +29,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Mixed-authority public source-screening packets | mixed-authority construct test | 5 curated issue packets | 5 | 5/5 | 11.00 | 1.00 | 0 | normative_material_screening_output: 5 |
 | Issue-defined ablations | negative-control construct test | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
+| Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
@@ -45,6 +47,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Mixed-authority public source-screening packets:** Tests normative material screening with mixed statute/case/source packets rather than single-endpoint public search results.
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
 - **Public source-text anchors:** Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.
+- **Model-output transcript anchors:** Checks that raw model-output scenario locators are anchored in the committed transcript sections.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 

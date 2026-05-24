@@ -1,0 +1,370 @@
+{
+  "all_locators_verified": true,
+  "locator_count": 50,
+  "locators_verified": 50,
+  "output_unit_count": 40,
+  "rows": [
+    {
+      "locator_count": 5,
+      "locator_rows": [
+        {
+          "locator": "Article 15(1)(c)",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "C-154/21",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Article 12(5)",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Article 15(4)",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Article 4(9)",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 5,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-01",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-eu-01",
+      "section_found": true
+    },
+    {
+      "locator_count": 5,
+      "locator_rows": [
+        {
+          "locator": "Article 15(3)",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "C-487/21",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "C-307/22",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Article 15(4)",
+          "unit_id": "unit-4",
+          "verified": true
+        },
+        {
+          "locator": "Article 12(5)",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 5,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-02",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-eu-02",
+      "section_found": true
+    },
+    {
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Article 12(5)",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "Article 15(4)",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "C-487/21",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "C-154/21",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-03",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-eu-03",
+      "section_found": true
+    },
+    {
+      "locator_count": 6,
+      "locator_rows": [
+        {
+          "locator": "Article 15(1)(c)",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "C-154/21",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "Article 15(3)",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "C-487/21",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Article 15(4)",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Article 12(5)",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 6,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-04",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-eu-04",
+      "section_found": true
+    },
+    {
+      "locator_count": 6,
+      "locator_rows": [
+        {
+          "locator": "[2002] UKHL 22",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "[2006] UKHL 20",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Compensation Act 2006, s 3",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "[2011] UKSC 10",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "[2011] EWCA Civ 1242",
+          "unit_id": "unit-4",
+          "verified": true
+        },
+        {
+          "locator": "[2016] EWCA Civ 86",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 6,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-uk-01",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-uk-01",
+      "section_found": true
+    },
+    {
+      "locator_count": 5,
+      "locator_rows": [
+        {
+          "locator": "[2002] UKHL 22",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "[2006] UKHL 20",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Compensation Act 2006, s 3",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "[2011] UKSC 10",
+          "unit_id": "unit-4",
+          "verified": true
+        },
+        {
+          "locator": "[2012] UKSC 14",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 5,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-uk-02",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-uk-02",
+      "section_found": true
+    },
+    {
+      "locator_count": 5,
+      "locator_rows": [
+        {
+          "locator": "[2011] UKSC 10",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "[2002] UKHL 22",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "[2006] UKHL 20",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Compensation Act 2006, s 3",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "[1956] AC 613",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 5,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-uk-03",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-uk-03",
+      "section_found": true
+    },
+    {
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Loper Bright",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "5 U.S.C. 706",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "323 U.S. 134",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Kisor v. Wilkie",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-us-01",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-us-01",
+      "section_found": true
+    },
+    {
+      "locator_count": 5,
+      "locator_rows": [
+        {
+          "locator": "Loper Bright",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "467 U.S. 837",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "5 U.S.C. 706",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "323 U.S. 134",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "588 U.S. 558",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 5,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-us-02",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-us-02",
+      "section_found": true
+    },
+    {
+      "locator_count": 5,
+      "locator_rows": [
+        {
+          "locator": "Loper Bright",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "Chevron",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "323 U.S. 134",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "588 U.S. 558",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "APA",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 5,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-us-03",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "codex55-us-03",
+      "section_found": true
+    }
+  ],
+  "scenario_count": 10,
+  "scenario_sections_verified": 10
+}

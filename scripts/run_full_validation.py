@@ -137,6 +137,7 @@ def main() -> int:
     _run([sys.executable, "scripts/build_model_output_adversarial.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
+    _run([sys.executable, "scripts/verify_model_output_transcripts.py"])
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
 
     rows = []
@@ -162,6 +163,12 @@ def main() -> int:
         )
     )
     rows.append(_source_text_row(source_text_payload))
+    transcript_payload = json.loads(
+        (ROOT / "experiments" / "ai_outputs" / "results" / "model_output_transcript_verification.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_model_transcript_row(transcript_payload))
 
     _run(
         [
@@ -219,6 +226,8 @@ def main() -> int:
             "threshold_sensitivity_evaluations": threshold_evaluations,
             "source_text_anchor_checks": source_text_payload["support_item_count"],
             "source_text_anchor_verified": source_text_payload["support_items_verified"],
+            "model_output_transcript_locator_checks": transcript_payload["locator_count"],
+            "model_output_transcript_locators_verified": transcript_payload["locators_verified"],
         }
     )
     payload = {
@@ -228,8 +237,10 @@ def main() -> int:
         "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
         "threshold_sensitivity_evaluations": threshold_evaluations,
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
+        "model_output_transcript_evaluations": transcript_payload["locator_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
+        + transcript_payload["locator_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
@@ -264,6 +275,14 @@ def main() -> int:
             "support_item_count": source_text_payload["support_item_count"],
             "support_items_verified": source_text_payload["support_items_verified"],
             "verified_ratio": source_text_payload["verified_ratio"],
+        },
+        "model_output_transcript_verification": {
+            "scenario_count": transcript_payload["scenario_count"],
+            "scenario_sections_verified": transcript_payload["scenario_sections_verified"],
+            "output_unit_count": transcript_payload["output_unit_count"],
+            "locator_count": transcript_payload["locator_count"],
+            "locators_verified": transcript_payload["locators_verified"],
+            "all_locators_verified": transcript_payload["all_locators_verified"],
         },
         "suites": rows,
     }
@@ -452,6 +471,26 @@ def _source_text_row(payload: dict) -> dict:
     }
 
 
+def _model_transcript_row(payload: dict) -> dict:
+    return {
+        "id": "model_output_transcript_verification",
+        "label": "Model-output transcript anchors",
+        "evidence_class": "raw-output provenance check",
+        "validation_units": f"{payload['locator_count']} raw transcript locator checks",
+        "scenario_count": payload["locator_count"],
+        "rule_pass": f"{payload['locators_verified']}/{payload['locator_count']} verified",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "scenario_sections_verified": payload["scenario_sections_verified"],
+            "output_units": payload["output_unit_count"],
+            "all_locators_verified": payload["all_locators_verified"],
+        },
+        "finding": "Checks that raw model-output scenario locators are anchored in the committed transcript sections.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -474,6 +513,7 @@ def _format_report(payload: dict) -> str:
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
+        f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
