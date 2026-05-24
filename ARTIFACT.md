@@ -23,16 +23,17 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 20 validation suites
+- 21 validation suites
 - 230 scenario files
 - 609 embedded records or output items
-- 59,466 total evaluation rows
+- 62,456 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 185 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 288/288 gate-ablation evaluations passed
 - 176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations
 - 217/217 jurisdiction-profile checks and 138/138 profile mutations passed
+- 2,990/2,990 status-certificate replay checks passed over 230 certificates
 - 230/230 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
 - 50/50 raw model-output transcript locators verified
@@ -62,4 +63,4 @@ The expected manuscript build is 33 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status, not legal merits. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, repair-frontier, jurisdiction-profile, recoding and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal, repair-path diagnosis, profile mismatch and coding uncertainty.
+The artifact evaluates legal-output procedural status, not legal merits. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, repair-frontier, jurisdiction-profile, status-certificate, recoding and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal, repair-path diagnosis, profile mismatch, replayed derivation checks and coding uncertainty.

@@ -144,6 +144,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
     _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
     _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
+    _run([sys.executable, "scripts/run_status_certificate_validation.py"])
 
     rows = []
     for suite in SUITES:
@@ -204,6 +205,12 @@ def main() -> int:
         )
     )
     rows.append(_jurisdiction_profile_row(jurisdiction_profile_payload))
+    status_certificate_payload = json.loads(
+        (ROOT / "experiments" / "status_certificates" / "results" / "status_certificate_validation.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_status_certificate_row(status_certificate_payload))
 
     _run(
         [
@@ -272,6 +279,8 @@ def main() -> int:
             "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
             "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
             + jurisdiction_profile_payload["counterfactual_evaluation_count"],
+            "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
+            "status_certificates_verified": status_certificate_payload["verified_certificate_count"],
         }
     )
     payload = {
@@ -290,6 +299,7 @@ def main() -> int:
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
         + jurisdiction_profile_payload["counterfactual_evaluation_count"],
+        "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
@@ -301,6 +311,7 @@ def main() -> int:
         + repair_frontier_payload["counterfactual_evaluation_count"]
         + jurisdiction_profile_payload["profile_check_count"]
         + jurisdiction_profile_payload["counterfactual_evaluation_count"]
+        + status_certificate_payload["replay_check_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
@@ -383,6 +394,13 @@ def main() -> int:
             "generic_profile_preserved": jurisdiction_profile_payload["generic_profile_preserved"],
             "missing_assumption_downgraded": jurisdiction_profile_payload["missing_assumption_downgraded"],
             "mismatched_profile_downgraded": jurisdiction_profile_payload["mismatched_profile_downgraded"],
+        },
+        "status_certificate": {
+            "certificate_count": status_certificate_payload["certificate_count"],
+            "verified_certificate_count": status_certificate_payload["verified_certificate_count"],
+            "replay_check_count": status_certificate_payload["replay_check_count"],
+            "passed_check_count": status_certificate_payload["passed_check_count"],
+            "cap_or_failure_transition_count": status_certificate_payload["cap_or_failure_transition_count"],
         },
         "suites": rows,
     }
@@ -685,6 +703,25 @@ def _jurisdiction_profile_row(payload: dict) -> dict:
     }
 
 
+def _status_certificate_row(payload: dict) -> dict:
+    return {
+        "id": "status_certificate",
+        "label": "Status certificate replay",
+        "evidence_class": "derivation-certificate check",
+        "validation_units": f"{payload['replay_check_count']} replay checks over {payload['certificate_count']} certificates",
+        "scenario_count": payload["replay_check_count"],
+        "rule_pass": f"{payload['passed_check_count']}/{payload['replay_check_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "verified_certificates": payload["verified_certificate_count"],
+            "cap_or_failure_transitions": payload["cap_or_failure_transition_count"],
+        },
+        "finding": "Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -714,6 +751,7 @@ def _format_report(payload: dict) -> str:
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
+        f"Status certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

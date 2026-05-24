@@ -1,8 +1,8 @@
 {
-  "check_count": 58,
+  "check_count": 69,
   "checks": [
     {
-      "expected": "- 20 validation suites",
+      "expected": "- 21 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 59,466 total evaluation rows",
+      "expected": "- 62,456 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -52,6 +52,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "- 2,990/2,990 status-certificate replay checks passed over 230 certificates",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "- 230/230 scenario-regression expectations passed",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -82,7 +87,7 @@
       "path": "README.md"
     },
     {
-      "expected": "185 metric-separation evaluations, 2,000 metric statistical resamples, 288 gate-ablation evaluations, 2,236 repair-frontier evaluations and 355 jurisdiction-profile checks",
+      "expected": "185 metric-separation evaluations, 2,000 metric statistical resamples, 288 gate-ablation evaluations, 2,236 repair-frontier evaluations, 355 jurisdiction-profile checks and 2,990 status-certificate replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -112,6 +117,11 @@
       "path": "README.md"
     },
     {
+      "expected": "| Status certificate replay | 2990 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "python scripts/run_gate_ablation_analysis.py",
       "passed": true,
       "path": "README.md"
@@ -123,6 +133,11 @@
     },
     {
       "expected": "python scripts/run_jurisdiction_profile_analysis.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_status_certificate_validation.py",
       "passed": true,
       "path": "README.md"
     },
@@ -147,6 +162,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Status certificate replay",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "bootstrap/permutation robustness",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -163,6 +183,11 @@
     },
     {
       "expected": "jurisdiction-profile layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "status-certificate layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -187,6 +212,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "230/230 status certificates verified, 2,990/2,990 replay checks",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_gate_ablation_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -202,6 +232,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "python scripts/run_status_certificate_validation.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "230 scenario packets with 609 embedded records or outputs",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -213,6 +248,16 @@
     },
     {
       "expected": "2,000 metric bootstrap/permutation resamples",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "2,990 status-certificate replay checks",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "230/230 status certificates",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -257,7 +302,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 20",
+      "expected": "Status certificate replay & 2,990 checks & 2,990/2,990",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Validation suites: 21",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -287,6 +337,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Status certificate replay checks: 2990/2990 passed over 230 certificates",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -294,5 +349,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 58
+  "passed_count": 69
 }

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import random
 import sys
 from pathlib import Path
@@ -203,15 +204,14 @@ def _bootstrap(rows: list[dict]) -> dict:
 
 
 def _permutation(rows: list[dict]) -> dict:
-    rng = random.Random(RNG_SEED)
     observed = abs(_point_biserial(rows, "recall"))
+    observed_cmp = round(observed, 12)
     recalls = [row["recall"] for row in rows]
     labels = [1 if row["qualified"] else 0 for row in rows]
     more_extreme = 0
-    for _ in range(RESAMPLE_ITERATIONS):
-        shuffled = labels[:]
-        rng.shuffle(shuffled)
-        if abs(_point_biserial_vectors(recalls, shuffled)) >= observed:
+    for iteration in range(RESAMPLE_ITERATIONS):
+        shuffled = _deterministic_permutation(labels, iteration)
+        if round(abs(_point_biserial_vectors(recalls, shuffled)), 12) >= observed_cmp:
             more_extreme += 1
     return {
         "iterations": RESAMPLE_ITERATIONS,
@@ -220,6 +220,14 @@ def _permutation(rows: list[dict]) -> dict:
         "observed_abs": observed,
         "two_sided_p": (more_extreme + 1) / (RESAMPLE_ITERATIONS + 1),
     }
+
+
+def _deterministic_permutation(values: list[int], iteration: int) -> list[int]:
+    order = sorted(
+        range(len(values)),
+        key=lambda index: hashlib.sha256(f"{RNG_SEED}:{iteration}:{index}".encode("utf-8")).hexdigest(),
+    )
+    return [values[index] for index in order]
 
 
 def _interval(values: list[float]) -> dict[str, float]:
