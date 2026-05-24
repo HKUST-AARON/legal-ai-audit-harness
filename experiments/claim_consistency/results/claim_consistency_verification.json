@@ -1,8 +1,8 @@
 {
-  "check_count": 30,
+  "check_count": 40,
   "checks": [
     {
-      "expected": "- 18 validation suites",
+      "expected": "- 19 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 54,875 total evaluation rows",
+      "expected": "- 57,111 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -33,6 +33,11 @@
     },
     {
       "expected": "- 288/288 gate-ablation evaluations passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -67,7 +72,7 @@
       "path": "README.md"
     },
     {
-      "expected": "185 metric-separation evaluations and 288 gate-ablation evaluations",
+      "expected": "185 metric-separation evaluations, 288 gate-ablation evaluations and 2,236 repair-frontier evaluations",
       "passed": true,
       "path": "README.md"
     },
@@ -82,7 +87,17 @@
       "path": "README.md"
     },
     {
+      "expected": "| Blocked-claim repair frontiers | 2236 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "python scripts/run_gate_ablation_analysis.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_repair_frontier_analysis.py",
       "passed": true,
       "path": "README.md"
     },
@@ -92,7 +107,17 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Blocked-claim repair frontiers",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "gate-ablation layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "repair-frontier layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -102,7 +127,17 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_gate_ablation_analysis.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_repair_frontier_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -112,7 +147,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "51,643 formal invariant checks, 185 metric-separation evaluations and 288 gate-ablation evaluations",
+      "expected": "51,643 formal invariant checks, 185 metric-separation evaluations, 288 gate-ablation evaluations and 2,236 repair-frontier counterfactuals",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -127,12 +162,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "across 176 blocked high-status claims",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Qualified-output gate ablations & 288 ablations & 288/288",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 18",
+      "expected": "Blocked-claim repair frontiers & 2,236 counterfactuals & 176/176",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Validation suites: 19",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -147,6 +192,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Repair frontier evaluations: 176/176 blocked claims repairable across 2236 counterfactual repairs",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -154,5 +204,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 30
+  "passed_count": 40
 }

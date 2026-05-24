@@ -207,6 +207,28 @@
     "scenario_sections_verified": 10
   },
   "recoded_evaluations": 460,
+  "repair_frontier": {
+    "blocked_claim_count": 176,
+    "counterfactual_evaluation_count": 2236,
+    "minimal_repair_gate_frequency": {
+      "audit_vector_completion": 33,
+      "authority_packet_completion": 65,
+      "decision_adoption_completion": 15,
+      "failure_flag_resolution": 3,
+      "review_contestability_completion": 20,
+      "role_cap_completion": 20,
+      "source_binding_completion": 133
+    },
+    "minimal_repair_size_distribution": {
+      "1": 118,
+      "2": 44,
+      "3": 13,
+      "4": 1
+    },
+    "repairable_count": 176,
+    "unrepairable_count": 0
+  },
+  "repair_frontier_evaluations": 2236,
   "scenario_files": 230,
   "source_text_anchor_evaluations": 30,
   "source_text_verification": {
@@ -216,7 +238,7 @@
     "support_items_verified": 30,
     "verified_ratio": 1.0
   },
-  "suite_count": 18,
+  "suite_count": 19,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -523,6 +545,24 @@
       "validation_units": "288 ablations over 46 qualified packets"
     },
     {
+      "evidence_class": "counterfactual repair-necessity check",
+      "finding": "Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.",
+      "high_upstream_but_blocked": null,
+      "id": "repair_frontier",
+      "label": "Blocked-claim repair frontiers",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "176/176 repairable",
+      "scenario_count": 2236,
+      "status_distribution": {
+        "1": 118,
+        "2": 44,
+        "3": 13,
+        "4": 1
+      },
+      "validation_units": "2236 repair counterfactuals over 176 blocked claims"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -635,7 +675,7 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 54875,
+  "total_evaluation_rows": 57111,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
@@ -654,6 +694,7 @@
     "public_retrieval_records": 225,
     "public_system_records": 60,
     "raw_model_outputs": 10,
+    "repair_frontier_evaluations": 2236,
     "source_bound_model_outputs": 10,
     "source_text_anchor_checks": 30,
     "source_text_anchor_verified": 30,

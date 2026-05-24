@@ -142,6 +142,7 @@ def main() -> int:
     _run([sys.executable, "scripts/verify_formal_invariants.py"])
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
+    _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
 
     rows = []
     for suite in SUITES:
@@ -190,6 +191,12 @@ def main() -> int:
         )
     )
     rows.append(_gate_ablation_row(gate_ablation_payload))
+    repair_frontier_payload = json.loads(
+        (ROOT / "experiments" / "repair_frontiers" / "results" / "repair_frontier_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_repair_frontier_row(repair_frontier_payload))
 
     _run(
         [
@@ -253,6 +260,7 @@ def main() -> int:
             "formal_invariant_passed": invariant_payload["passed_checks"],
             "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
+            "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         }
     )
     payload = {
@@ -266,12 +274,14 @@ def main() -> int:
         "formal_invariant_evaluations": invariant_payload["total_checks"],
         "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
+        "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
         + invariant_payload["total_checks"]
         + metric_separation_payload["metric_scenario_count"]
         + gate_ablation_payload["ablation_count"]
+        + repair_frontier_payload["counterfactual_evaluation_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
@@ -334,6 +344,14 @@ def main() -> int:
             "passed_count": gate_ablation_payload["passed_count"],
             "failed_count": gate_ablation_payload["failed_count"],
             "by_ablation": gate_ablation_payload["by_ablation"],
+        },
+        "repair_frontier": {
+            "blocked_claim_count": repair_frontier_payload["blocked_claim_count"],
+            "counterfactual_evaluation_count": repair_frontier_payload["counterfactual_evaluation_count"],
+            "repairable_count": repair_frontier_payload["repairable_count"],
+            "unrepairable_count": repair_frontier_payload["unrepairable_count"],
+            "minimal_repair_size_distribution": repair_frontier_payload["minimal_repair_size_distribution"],
+            "minimal_repair_gate_frequency": repair_frontier_payload["minimal_repair_gate_frequency"],
         },
         "suites": rows,
     }
@@ -599,6 +617,22 @@ def _gate_ablation_row(payload: dict) -> dict:
     }
 
 
+def _repair_frontier_row(payload: dict) -> dict:
+    return {
+        "id": "repair_frontier",
+        "label": "Blocked-claim repair frontiers",
+        "evidence_class": "counterfactual repair-necessity check",
+        "validation_units": f"{payload['counterfactual_evaluation_count']} repair counterfactuals over {payload['blocked_claim_count']} blocked claims",
+        "scenario_count": payload["counterfactual_evaluation_count"],
+        "rule_pass": f"{payload['repairable_count']}/{payload['blocked_claim_count']} repairable",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": payload["minimal_repair_size_distribution"],
+        "finding": "Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -625,6 +659,7 @@ def _format_report(payload: dict) -> str:
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
+        f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
