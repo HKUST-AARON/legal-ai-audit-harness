@@ -26,7 +26,64 @@
   },
   "claimed_status": "decision_support_reason",
   "deployment_context": "Authority recommendation adopted into an institutional decision after reasoned human review.",
-  "evidence_packet": {},
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "contract-clause-a:text",
+        "source_id": "contract-clause-a",
+        "source_tag": "user_provided_verified",
+        "supports_claim": true,
+        "unit_id": "u1"
+      },
+      {
+        "locator": "mandatory-law-b:rule",
+        "source_id": "mandatory-law-b",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "u1"
+      },
+      {
+        "locator": "public-policy-c:exception",
+        "source_id": "public-policy-exception-c",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "u2"
+      },
+      {
+        "locator": "contrary-award-d:holding",
+        "source_id": "contrary-award-d",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "u2"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "The adopted recommendation relies on the contract clause and mandatory law.",
+        "id": "u1",
+        "locators": [
+          "contract-clause-a:text",
+          "mandatory-law-b:rule"
+        ],
+        "source_ids": [
+          "contract-clause-a",
+          "mandatory-law-b"
+        ]
+      },
+      {
+        "claim": "The decision record addresses the public-policy exception and contrary award.",
+        "id": "u2",
+        "locators": [
+          "public-policy-c:exception",
+          "contrary-award-d:holding"
+        ],
+        "source_ids": [
+          "public-policy-exception-c",
+          "contrary-award-d"
+        ]
+      }
+    ]
+  },
   "jurisdiction_profile": "arbitral",
   "packet_id": "decision-support-ready",
   "review_gate": {

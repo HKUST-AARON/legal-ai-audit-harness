@@ -107,17 +107,17 @@ def evaluate_scenario(scenario: dict[str, Any], policy: StatusPolicy | None = No
     allowed = _allowed_status(scenario, scores, total, missing_gates, policy)
     allowed = _cap_by_system_role(allowed, system_role, missing_gates)
     metrics = _scenario_metrics(scenario)
-    failure_flags = _derived_failure_flags(scenario, metrics)
+    claimed = scenario.get("claimed_status", Status.REFERENCE_INFORMATION.value)
+    if claimed not in STATUS_RANK:
+        raise ValueError(f"Unknown claimed_status: {claimed}")
+    target_rank = max(STATUS_RANK[claimed], STATUS_RANK[allowed])
+    failure_flags = _derived_failure_flags(scenario, metrics, target_rank)
     disposition = _disposition(failure_flags)
 
     if disposition == "withdrawal":
         allowed = Status.NO_EXTERNAL_LEGAL_EFFECT.value
     elif disposition in {"suspension", "downgrade"} and STATUS_RANK[allowed] > STATUS_RANK[Status.REFERENCE_INFORMATION.value]:
         allowed = Status.REFERENCE_INFORMATION.value
-
-    claimed = scenario.get("claimed_status", Status.REFERENCE_INFORMATION.value)
-    if claimed not in STATUS_RANK:
-        raise ValueError(f"Unknown claimed_status: {claimed}")
 
     expected_allowed = scenario.get("expected_allowed_status")
     expected_disposition = scenario.get("expected_disposition")
@@ -333,9 +333,11 @@ def _procedural_source_tag_coverage(evidence_packet: dict[str, Any]) -> float | 
     return len(tagged) / len(links)
 
 
-def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | None]) -> list[str]:
+def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | None], target_rank: int) -> list[str]:
     flags = list(scenario.get("failure_flags", []))
-    claimed_rank = STATUS_RANK.get(scenario.get("claimed_status", Status.REFERENCE_INFORMATION.value), 1)
+    external_screening_claimed = target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value]
+    if external_screening_claimed:
+        flags.extend(_required_external_evidence_flags(scenario))
     if scenario.get("authority_sets"):
         if metrics["authority_coverage"] is not None and metrics["authority_coverage"] < 1:
             flags.append("authority_omission")
@@ -352,17 +354,41 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
             flags.append("summary_distortion")
         if metrics["evidence_coverage"] is not None and metrics["evidence_coverage"] < 1:
             flags.append("summary_distortion")
-        if claimed_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and metrics["source_tag_coverage"] is not None and metrics["source_tag_coverage"] < 1:
+        if external_screening_claimed and metrics["source_tag_coverage"] is not None and metrics["source_tag_coverage"] < 1:
             flags.append("source_attribution_gap")
-        if claimed_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and _has_nonprocedural_source_tags(scenario["evidence_packet"]):
+        if external_screening_claimed and _has_nonprocedural_source_tags(scenario["evidence_packet"]):
             flags.append("source_attribution_gap")
-    flags.extend(_source_binding_validation_flags(scenario, claimed_rank))
-    flags.extend(_review_gate_flags(scenario, claimed_rank))
+    flags.extend(_source_binding_validation_flags(scenario, target_rank))
+    flags.extend(_review_gate_flags(scenario, target_rank))
     return flags
 
 
-def _source_binding_validation_flags(scenario: dict[str, Any], claimed_rank: int) -> list[str]:
-    if claimed_rank < STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value]:
+def _required_external_evidence_flags(scenario: dict[str, Any]) -> list[str]:
+    flags: list[str] = []
+    authority_sets = scenario.get("authority_sets")
+    if not isinstance(authority_sets, dict) or not authority_sets:
+        flags.append("authority_omission")
+        flags.append("counter_material_suppression")
+    else:
+        if "high_authority" not in authority_sets or "retrieved_high_authority" not in authority_sets:
+            flags.append("authority_omission")
+        if "counter_or_limiting" not in authority_sets or "retrieved_counter_or_limiting" not in authority_sets:
+            flags.append("counter_material_suppression")
+        elif not authority_sets.get("counter_or_limiting") and scenario.get("counter_material_complete") is not True:
+            flags.append("counter_material_suppression")
+
+    evidence_packet = scenario.get("evidence_packet")
+    if not isinstance(evidence_packet, dict) or not evidence_packet.get("output_units") or not evidence_packet.get("output_links"):
+        flags.append("source_attribution_gap")
+
+    gate = scenario.get("review_gate")
+    if not isinstance(gate, dict) or not gate:
+        flags.append("contestation_failure")
+    return flags
+
+
+def _source_binding_validation_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:
+    if target_rank < STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value]:
         return []
     validation = scenario.get("source_binding_validation")
     if not isinstance(validation, dict):
@@ -384,19 +410,19 @@ def _source_binding_validation_flags(scenario: dict[str, Any], claimed_rank: int
     return flags
 
 
-def _review_gate_flags(scenario: dict[str, Any], claimed_rank: int) -> list[str]:
+def _review_gate_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:
     gate = scenario.get("review_gate", {})
     if not gate:
         return []
     flags: list[str] = []
     if gate.get("irreversible_action") is True and gate.get("human_authorization") is not True:
         flags.append("unauthorized_action")
-    if claimed_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and not gate.get("jurisdiction_assumptions"):
+    if target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and not gate.get("jurisdiction_assumptions"):
         flags.append("jurisdiction_assumption_gap")
     review_required = gate.get("attorney_review_required") is True
     review_incomplete = gate.get("review_status") not in {"completed", "not_required"}
     protected_reliance = gate.get("reliance_gate") in {"external_reliance", "filing", "sending", "execution", "authorized_adoption"}
-    if review_required and review_incomplete and (protected_reliance or claimed_rank >= STATUS_RANK[Status.DECISION_SUPPORT_REASON.value]):
+    if review_required and review_incomplete and (protected_reliance or target_rank >= STATUS_RANK[Status.DECISION_SUPPORT_REASON.value]):
         flags.append("review_gate_failure")
     return flags
 

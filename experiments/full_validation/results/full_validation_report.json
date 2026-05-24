@@ -62,12 +62,19 @@
     "contestation_failure": 1,
     "counter_material_suppression": 27,
     "invalid_authority": 1,
-    "source_attribution_gap": 95,
+    "source_attribution_gap": 97,
     "summary_distortion": 21,
     "unauthorized_action": 10
   },
   "expected_passed": 230,
   "expected_total": 230,
+  "formal_invariant_evaluations": 51641,
+  "formal_invariant_verification": {
+    "all_passed": true,
+    "check_count": 8,
+    "passed_checks": 51641,
+    "total_checks": 51641
+  },
   "high_upstream_but_blocked": 128,
   "model_output_transcript_evaluations": 50,
   "model_output_transcript_verification": {
@@ -88,7 +95,7 @@
     "support_items_verified": 30,
     "verified_ratio": 1.0
   },
-  "suite_count": 15,
+  "suite_count": 16,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -96,6 +103,7 @@
         "contestation_failure": 1,
         "counter_material_suppression": 1,
         "invalid_authority": 1,
+        "source_attribution_gap": 2,
         "summary_distortion": 1
       },
       "evidence_class": "construct test",
@@ -333,6 +341,28 @@
       "validation_units": "50 raw transcript locator checks"
     },
     {
+      "evidence_class": "exhaustive model-property check",
+      "finding": "Exhaustively tests monotonicity, evidence-packet necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.",
+      "high_upstream_but_blocked": null,
+      "id": "formal_invariant_verification",
+      "label": "Formal invariant verification",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "51641/51641 passed",
+      "scenario_count": 51641,
+      "status_distribution": {
+        "counter_material_gate_necessity": 0,
+        "decision_adoption_necessity": 0,
+        "evidence_packet_necessity": 0,
+        "failure_cap_absorption": 0,
+        "gate_non_substitutability": 0,
+        "gated_monotonicity": 0,
+        "metric_non_equivalence": 0,
+        "role_cap_dominance": 0
+      },
+      "validation_units": "51641 generated audit-policy states"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -445,12 +475,14 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 2759,
+  "total_evaluation_rows": 54400,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
     "blind_coding_packets": 230,
     "evidence_ladder_model_outputs": 70,
+    "formal_invariant_checks": 51641,
+    "formal_invariant_passed": 51641,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,

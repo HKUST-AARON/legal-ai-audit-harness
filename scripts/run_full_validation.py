@@ -139,6 +139,7 @@ def main() -> int:
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
     _run([sys.executable, "scripts/verify_model_output_transcripts.py"])
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
+    _run([sys.executable, "scripts/verify_formal_invariants.py"])
 
     rows = []
     for suite in SUITES:
@@ -169,6 +170,12 @@ def main() -> int:
         )
     )
     rows.append(_model_transcript_row(transcript_payload))
+    invariant_payload = json.loads(
+        (ROOT / "experiments" / "formal_invariants" / "results" / "formal_invariant_verification.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_formal_invariant_row(invariant_payload))
 
     _run(
         [
@@ -228,6 +235,8 @@ def main() -> int:
             "source_text_anchor_verified": source_text_payload["support_items_verified"],
             "model_output_transcript_locator_checks": transcript_payload["locator_count"],
             "model_output_transcript_locators_verified": transcript_payload["locators_verified"],
+            "formal_invariant_checks": invariant_payload["total_checks"],
+            "formal_invariant_passed": invariant_payload["passed_checks"],
         }
     )
     payload = {
@@ -238,9 +247,11 @@ def main() -> int:
         "threshold_sensitivity_evaluations": threshold_evaluations,
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
         "model_output_transcript_evaluations": transcript_payload["locator_count"],
+        "formal_invariant_evaluations": invariant_payload["total_checks"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
+        + invariant_payload["total_checks"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
@@ -283,6 +294,12 @@ def main() -> int:
             "locator_count": transcript_payload["locator_count"],
             "locators_verified": transcript_payload["locators_verified"],
             "all_locators_verified": transcript_payload["all_locators_verified"],
+        },
+        "formal_invariant_verification": {
+            "check_count": invariant_payload["check_count"],
+            "total_checks": invariant_payload["total_checks"],
+            "passed_checks": invariant_payload["passed_checks"],
+            "all_passed": invariant_payload["all_passed"],
         },
         "suites": rows,
     }
@@ -491,6 +508,22 @@ def _model_transcript_row(payload: dict) -> dict:
     }
 
 
+def _formal_invariant_row(payload: dict) -> dict:
+    return {
+        "id": "formal_invariant_verification",
+        "label": "Formal invariant verification",
+        "evidence_class": "exhaustive model-property check",
+        "validation_units": f"{payload['total_checks']} generated audit-policy states",
+        "scenario_count": payload["total_checks"],
+        "rule_pass": f"{payload['passed_checks']}/{payload['total_checks']} passed",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {check["id"]: check["failed"] for check in payload["checks"]},
+        "finding": "Exhaustively tests monotonicity, evidence-packet necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -514,6 +547,7 @@ def _format_report(payload: dict) -> str:
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
+        f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Expected outcomes passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

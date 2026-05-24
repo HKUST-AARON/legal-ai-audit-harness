@@ -109,6 +109,29 @@ class AuditModelTest(unittest.TestCase):
         self.assertAlmostEqual(result.source_tag_coverage, 1.0)
         self.assertAlmostEqual(result.procedural_source_tag_coverage, 0.0)
 
+    def test_normative_status_requires_evidence_packet(self):
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario.pop("evidence_packet")
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertIn("source_attribution_gap", result.failure_flags)
+
+    def test_normative_status_requires_counter_material_set(self):
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["authority_sets"].pop("counter_or_limiting")
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "suspension")
+        self.assertIn("counter_material_suppression", result.failure_flags)
+
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["authority_sets"]["counter_or_limiting"] = []
+        scenario["authority_sets"]["retrieved_counter_or_limiting"] = []
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertIn("counter_material_suppression", result.failure_flags)
+
     def test_review_gate_blocks_unreviewed_external_reliance(self):
         scenario = deepcopy(load("decision_support_ready.json"))
         scenario["review_gate"]["review_status"] = "pending"
@@ -445,7 +468,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 15)
+        self.assertEqual(report["suite_count"], 16)
         self.assertEqual(report["scenario_files"], 230)
         self.assertEqual(report["validation_units"]["total"], 609)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
@@ -462,11 +485,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 1150)
         self.assertEqual(report["source_text_anchor_evaluations"], 30)
         self.assertEqual(report["model_output_transcript_evaluations"], 50)
+        self.assertEqual(report["formal_invariant_evaluations"], 51641)
         self.assertEqual(report["validation_units"]["source_text_anchor_checks"], 30)
         self.assertEqual(report["validation_units"]["source_text_anchor_verified"], 30)
         self.assertEqual(report["validation_units"]["model_output_transcript_locator_checks"], 50)
         self.assertEqual(report["validation_units"]["model_output_transcript_locators_verified"], 50)
-        self.assertEqual(report["total_evaluation_rows"], 2759)
+        self.assertEqual(report["validation_units"]["formal_invariant_checks"], 51641)
+        self.assertEqual(report["validation_units"]["formal_invariant_passed"], 51641)
+        self.assertEqual(report["total_evaluation_rows"], 54400)
         self.assertEqual(report["expected_passed"], 230)
         self.assertEqual(report["expected_total"], 230)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
@@ -474,12 +500,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertIn("base_status_agreement", report["blind_coding"])
         self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 230)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
-        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 95)
+        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 97)
         self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 21)
         self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
         self.assertEqual(report["model_output_transcript_verification"]["locators_verified"], 50)
         self.assertTrue(report["model_output_transcript_verification"]["all_locators_verified"])
+        self.assertEqual(report["formal_invariant_verification"]["passed_checks"], 51641)
+        self.assertTrue(report["formal_invariant_verification"]["all_passed"])
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(
@@ -513,6 +541,31 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["locator_count"], 50)
         self.assertEqual(report["locators_verified"], 50)
         self.assertTrue(report["all_locators_verified"])
+
+    def test_formal_invariant_verification(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/verify_formal_invariants.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "formal_invariants" / "results" / "formal_invariant_verification.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["check_count"], 8)
+        self.assertEqual(report["total_checks"], 51641)
+        self.assertEqual(report["passed_checks"], 51641)
+        self.assertTrue(report["all_passed"])
+        self.assertEqual({check["id"] for check in report["checks"]}, {
+            "gated_monotonicity",
+            "gate_non_substitutability",
+            "evidence_packet_necessity",
+            "counter_material_gate_necessity",
+            "decision_adoption_necessity",
+            "role_cap_dominance",
+            "failure_cap_absorption",
+            "metric_non_equivalence",
+        })
 
     def test_annotation_robustness_report_shape(self):
         completed = subprocess.run(

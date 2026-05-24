@@ -1,0 +1,64 @@
+{
+  "all_passed": true,
+  "check_count": 8,
+  "checks": [
+    {
+      "checks": 46656,
+      "failed": 0,
+      "failures": [],
+      "id": "gated_monotonicity",
+      "passed": 46656
+    },
+    {
+      "checks": 665,
+      "failed": 0,
+      "failures": [],
+      "id": "gate_non_substitutability",
+      "passed": 665
+    },
+    {
+      "checks": 4,
+      "failed": 0,
+      "failures": [],
+      "id": "evidence_packet_necessity",
+      "passed": 4
+    },
+    {
+      "checks": 4,
+      "failed": 0,
+      "failures": [],
+      "id": "counter_material_gate_necessity",
+      "passed": 4
+    },
+    {
+      "checks": 654,
+      "failed": 0,
+      "failures": [],
+      "id": "decision_adoption_necessity",
+      "passed": 654
+    },
+    {
+      "checks": 3645,
+      "failed": 0,
+      "failures": [],
+      "id": "role_cap_dominance",
+      "passed": 3645
+    },
+    {
+      "checks": 11,
+      "failed": 0,
+      "failures": [],
+      "id": "failure_cap_absorption",
+      "passed": 11
+    },
+    {
+      "checks": 2,
+      "failed": 0,
+      "failures": [],
+      "id": "metric_non_equivalence",
+      "passed": 2
+    }
+  ],
+  "passed_checks": 51641,
+  "total_checks": 51641
+}

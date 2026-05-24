@@ -26,7 +26,55 @@
   },
   "claimed_status": "normative_material_screening_output",
   "deployment_context": "Civil-law legal retrieval system recommending code provisions, high-court decisions and doctrinal materials for a statutory interpretation issue.",
-  "evidence_packet": {},
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "code-article-1:text",
+        "source_id": "code-article-1",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "u1"
+      },
+      {
+        "locator": "special-statute-2:text",
+        "source_id": "special-statute-2",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "u1"
+      },
+      {
+        "locator": "commentary-a:interpretation",
+        "source_id": "competing-commentary-a",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "u2"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "The output identifies the code article and special statute as high-authority materials.",
+        "id": "u1",
+        "locators": [
+          "code-article-1:text",
+          "special-statute-2:text"
+        ],
+        "source_ids": [
+          "code-article-1",
+          "special-statute-2"
+        ]
+      },
+      {
+        "claim": "The output surfaces one competing commentary as counter-material.",
+        "id": "u2",
+        "locators": [
+          "commentary-a:interpretation"
+        ],
+        "source_ids": [
+          "competing-commentary-a"
+        ]
+      }
+    ]
+  },
   "jurisdiction_profile": "civil_law",
   "packet_id": "civil-law-statutory-interpretation",
   "review_gate": {

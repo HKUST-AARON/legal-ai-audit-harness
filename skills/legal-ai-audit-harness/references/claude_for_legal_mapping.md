@@ -10,5 +10,6 @@ This harness adapts legal-workflow patterns from `anthropics/claude-for-legal` w
 | Filing, sending, execution, and external reliance require explicit gates. | `review_gate.reliance_gate`, `review_status`, and `human_authorization`. |
 | Consequential AI classifications should be per system or use case, not at company level. | Each scenario is an output-specific audit unit; no global obligation table is hardcoded. |
 | Policy drift should be reviewed before a sweep is accepted. | Reports are written as artifacts; adoption is separate from generation and remains a human responsibility. |
+| High model quality does not remove procedural gates. | Source support, counter-material handling, contestability and adoption logs are enforced above upstream model performance. |
 
 Keep the harness above the upstream system. It evaluates whether a legal-output evidence packet is reconstructable, contestable, source-tagged and review-gated; it does not evaluate provider internals.

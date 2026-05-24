@@ -26,7 +26,64 @@
   },
   "claimed_status": "decision_support_reason",
   "deployment_context": "ODR recommendation used only after prior authorization, appeal notice, source trace and human-review override.",
-  "evidence_packet": {},
+  "evidence_packet": {
+    "output_links": [
+      {
+        "locator": "consumer-statute-a:section",
+        "source_id": "consumer-statute-a",
+        "source_tag": "official_source",
+        "supports_claim": true,
+        "unit_id": "u1"
+      },
+      {
+        "locator": "platform-rule-b:term",
+        "source_id": "platform-rule-b",
+        "source_tag": "settled",
+        "supports_claim": true,
+        "unit_id": "u1"
+      },
+      {
+        "locator": "exception-policy-c:exception",
+        "source_id": "exception-policy-c",
+        "source_tag": "settled",
+        "supports_claim": true,
+        "unit_id": "u2"
+      },
+      {
+        "locator": "appeal-decision-d:outcome",
+        "source_id": "appeal-decision-d",
+        "source_tag": "tool_verified",
+        "supports_claim": true,
+        "unit_id": "u2"
+      }
+    ],
+    "output_units": [
+      {
+        "claim": "The recommendation identifies the consumer statute and platform rule as governing materials.",
+        "id": "u1",
+        "locators": [
+          "consumer-statute-a:section",
+          "platform-rule-b:term"
+        ],
+        "source_ids": [
+          "consumer-statute-a",
+          "platform-rule-b"
+        ]
+      },
+      {
+        "claim": "The recommendation presents the exception policy and appeal decision as review materials.",
+        "id": "u2",
+        "locators": [
+          "exception-policy-c:exception",
+          "appeal-decision-d:outcome"
+        ],
+        "source_ids": [
+          "exception-policy-c",
+          "appeal-decision-d"
+        ]
+      }
+    ]
+  },
   "jurisdiction_profile": "odr",
   "packet_id": "odr-authorized-review",
   "review_gate": {

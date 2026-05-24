@@ -19,7 +19,8 @@
           "expected_passed": true,
           "failure_flags": [
             "counter_material_suppression",
-            "invalid_authority"
+            "invalid_authority",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [],
@@ -44,15 +45,15 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -62,7 +63,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -73,15 +74,15 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -91,7 +92,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -102,15 +103,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -120,7 +121,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -195,15 +196,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -213,7 +214,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -262,7 +263,8 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
-            "authority_omission"
+            "authority_omission",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
@@ -293,6 +295,8 @@
           "expected_disposition": "withdrawal",
           "expected_passed": true,
           "failure_flags": [
+            "authority_omission",
+            "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
           ],
@@ -342,7 +346,8 @@
           "expected_passed": true,
           "failure_flags": [
             "counter_material_suppression",
-            "invalid_authority"
+            "invalid_authority",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [
@@ -369,15 +374,15 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -387,7 +392,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -398,15 +403,15 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -416,7 +421,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -427,15 +432,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -445,7 +450,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -520,15 +525,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -538,7 +543,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -587,7 +592,8 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
-            "authority_omission"
+            "authority_omission",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
@@ -618,6 +624,8 @@
           "expected_disposition": "withdrawal",
           "expected_passed": true,
           "failure_flags": [
+            "authority_omission",
+            "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
           ],
@@ -667,7 +675,8 @@
           "expected_passed": true,
           "failure_flags": [
             "counter_material_suppression",
-            "invalid_authority"
+            "invalid_authority",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [
@@ -694,15 +703,15 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -712,7 +721,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -723,15 +732,15 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -741,7 +750,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -752,15 +761,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -770,7 +779,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -845,15 +854,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -863,7 +872,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -912,7 +921,8 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
-            "authority_omission"
+            "authority_omission",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
@@ -943,6 +953,8 @@
           "expected_disposition": "withdrawal",
           "expected_passed": true,
           "failure_flags": [
+            "authority_omission",
+            "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
           ],
@@ -992,7 +1004,8 @@
           "expected_passed": true,
           "failure_flags": [
             "counter_material_suppression",
-            "invalid_authority"
+            "invalid_authority",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.3333333333333333,
           "missing_gates": [
@@ -1019,8 +1032,8 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": false,
@@ -1029,7 +1042,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "civil-law-statutory-interpretation",
           "scores": {
             "H": 2,
@@ -1039,7 +1052,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -1050,8 +1063,8 @@
           "claimed_status": "normative_material_screening_output",
           "counter_authority_recall": 0.5,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "normative_material_screening_output",
           "expected_disposition": "none",
           "expected_passed": false,
@@ -1060,7 +1073,7 @@
           "missing_gates": [
             "total_score>=11"
           ],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "court-authority-report",
           "scores": {
             "H": 2,
@@ -1070,7 +1083,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "auditable_procedural_tool",
           "total_score": 10
         },
@@ -1081,15 +1094,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "decision-support-ready",
           "scores": {
             "H": 2,
@@ -1099,7 +1112,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -1174,15 +1187,15 @@
           "claimed_status": "decision_support_reason",
           "counter_authority_recall": 1.0,
           "disposition": "none",
-          "evidence_coverage": null,
-          "evidence_fidelity": null,
+          "evidence_coverage": 1.0,
+          "evidence_fidelity": 1.0,
           "expected_allowed_status": "decision_support_reason",
           "expected_disposition": "none",
           "expected_passed": true,
           "failure_flags": [],
           "invalid_authority_rate": 0.0,
           "missing_gates": [],
-          "procedural_source_tag_coverage": null,
+          "procedural_source_tag_coverage": 1.0,
           "scenario_id": "odr-authorized-review",
           "scores": {
             "H": 2,
@@ -1192,7 +1205,7 @@
             "S": 2,
             "T": 2
           },
-          "source_tag_coverage": null,
+          "source_tag_coverage": 1.0,
           "system_role": "authorized_decision_support_tool",
           "total_score": 12
         },
@@ -1241,7 +1254,8 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
-            "authority_omission"
+            "authority_omission",
+            "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
           "missing_gates": [
@@ -1274,6 +1288,8 @@
           "expected_disposition": "withdrawal",
           "expected_passed": true,
           "failure_flags": [
+            "authority_omission",
+            "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
           ],

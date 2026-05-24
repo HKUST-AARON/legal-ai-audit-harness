@@ -43,3 +43,5 @@ Profile: `canada`
 
 - `H`: Constitution, federal/provincial statutes, regulations, Supreme Court of Canada decisions, appellate decisions, trial decisions, persuasive authorities.
 - `K`: contrary provincial appellate authority, Charter constraints, distinguishing precedent, statutory amendments, later treatment.
+
+Jurisdiction labels do not substitute for source locators, counter-material sets or contestability evidence.

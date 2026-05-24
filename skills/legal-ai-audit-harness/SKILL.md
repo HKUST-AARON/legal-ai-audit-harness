@@ -49,7 +49,7 @@ Score each dimension from `0` to `2`:
    - `authorized_decision_support_tool`
    - `unaccountable_external_disposition`
 5. Select or define the jurisdiction profile before scoring `H` and `K`.
-6. Prepare a scenario JSON file with scores, evidence, authority sets, upstream metrics, optional `system_role`, optional `upstream_output`, optional `evidence_packet`, and optional `review_gate`.
+6. Prepare a scenario JSON file with scores, evidence, authority sets, upstream metrics, optional `system_role`, and optional `upstream_output`. For `normative_material_screening_output` or `decision_support_reason`, `authority_sets`, `evidence_packet`, `review_gate`, source locators and counter-material fields are mandatory; otherwise the harness will cap or downgrade the output.
 7. Run the harness from the repository root:
 
 ```bash
@@ -62,6 +62,7 @@ python scripts/build_model_output_evidence_ladder.py
 python scripts/collect_issue_public_outputs.py
 python scripts/collect_public_retrieval_benchmark.py
 python scripts/verify_source_text_anchors.py
+python scripts/verify_formal_invariants.py
 python scripts/build_blind_coding_packets.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
@@ -103,8 +104,8 @@ Report both halves separately: (a) what upstream outputs were captured, and (b) 
 
 - `reference_information`: `S >= 1` and `Q >= 1`
 - `professional_support_output`: `S, Q, L >= 1`
-- `normative_material_screening_output`: all six dimensions `>= 1` and total score `>= 9`
-- `decision_support_reason`: `S, Q, H, K >= 1`, `T = L = 2`, completed authorized adoption, human authorization, jurisdiction assumptions, adoption reasons and contestation record
+- `normative_material_screening_output`: all six dimensions `>= 1`, total score `>= 9`, required authority set, output evidence packet, review gate and counter-material declaration
+- `decision_support_reason`: `S, Q, H, K >= 1`, `T = L = 2`, required authority set and evidence packet, completed authorized adoption, human authorization, jurisdiction assumptions, adoption reasons and contestation record
 - `no_external_legal_effect`: missing gates or withdrawal-level failures
 
 System roles cap status:
