@@ -188,6 +188,26 @@ class AuditModelTest(unittest.TestCase):
         self.assertIn("civil-law-statutory-interpretation", completed.stdout)
         self.assertIn("high-coverage-uncontestable-output", completed.stdout)
 
+    def test_metric_separation_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_metric_separation_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Metric Separation Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "metric_separation" / "results" / "metric_separation_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["metric_scenario_count"], 185)
+        recall_test = next(row for row in payload["threshold_tests"] if row["label"] == "recall>=0.8")
+        self.assertLess(recall_test["precision"], 0.3)
+        self.assertEqual(payload["gate_cascade"][-1]["false_positive"], 0)
+
     def test_real_case_fixture_shape(self):
         real_scenarios = ROOT / "experiments" / "real_cases" / "scenarios"
         for path in sorted(real_scenarios.glob("*.json")):
@@ -477,7 +497,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 16)
+        self.assertEqual(report["suite_count"], 17)
         self.assertEqual(report["scenario_files"], 230)
         self.assertEqual(report["validation_units"]["total"], 609)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
@@ -501,7 +521,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["model_output_transcript_locators_verified"], 50)
         self.assertEqual(report["validation_units"]["formal_invariant_checks"], 51643)
         self.assertEqual(report["validation_units"]["formal_invariant_passed"], 51643)
-        self.assertEqual(report["total_evaluation_rows"], 54402)
+        self.assertEqual(report["metric_separation_evaluations"], 185)
+        self.assertEqual(report["validation_units"]["metric_separation_evaluations"], 185)
+        self.assertEqual(report["total_evaluation_rows"], 54587)
         self.assertEqual(report["expected_passed"], 230)
         self.assertEqual(report["expected_total"], 230)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
@@ -517,6 +539,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertTrue(report["model_output_transcript_verification"]["all_locators_verified"])
         self.assertEqual(report["formal_invariant_verification"]["passed_checks"], 51643)
         self.assertTrue(report["formal_invariant_verification"]["all_passed"])
+        self.assertEqual(report["metric_separation"]["metric_scenario_count"], 185)
+        self.assertEqual(report["metric_separation"]["high_recall_blocked"]["count"], 136)
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(

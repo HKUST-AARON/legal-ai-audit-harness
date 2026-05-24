@@ -140,6 +140,7 @@ def main() -> int:
     _run([sys.executable, "scripts/verify_model_output_transcripts.py"])
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
     _run([sys.executable, "scripts/verify_formal_invariants.py"])
+    _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
 
     rows = []
     for suite in SUITES:
@@ -176,6 +177,12 @@ def main() -> int:
         )
     )
     rows.append(_formal_invariant_row(invariant_payload))
+    metric_separation_payload = json.loads(
+        (ROOT / "experiments" / "metric_separation" / "results" / "metric_separation_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_metric_separation_row(metric_separation_payload))
 
     _run(
         [
@@ -237,6 +244,7 @@ def main() -> int:
             "model_output_transcript_locators_verified": transcript_payload["locators_verified"],
             "formal_invariant_checks": invariant_payload["total_checks"],
             "formal_invariant_passed": invariant_payload["passed_checks"],
+            "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
         }
     )
     payload = {
@@ -248,10 +256,12 @@ def main() -> int:
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
         "model_output_transcript_evaluations": transcript_payload["locator_count"],
         "formal_invariant_evaluations": invariant_payload["total_checks"],
+        "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
         + invariant_payload["total_checks"]
+        + metric_separation_payload["metric_scenario_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
@@ -300,6 +310,13 @@ def main() -> int:
             "total_checks": invariant_payload["total_checks"],
             "passed_checks": invariant_payload["passed_checks"],
             "all_passed": invariant_payload["all_passed"],
+        },
+        "metric_separation": {
+            "metric_scenario_count": metric_separation_payload["metric_scenario_count"],
+            "qualified_count": metric_separation_payload["qualified_count"],
+            "recall_point_biserial": metric_separation_payload["point_biserial"]["recall"],
+            "high_recall_blocked": metric_separation_payload["high_recall_blocked"],
+            "gate_cascade": metric_separation_payload["gate_cascade"],
         },
         "suites": rows,
     }
@@ -524,6 +541,28 @@ def _formal_invariant_row(payload: dict) -> dict:
     }
 
 
+def _metric_separation_row(payload: dict) -> dict:
+    recall_test = next(row for row in payload["threshold_tests"] if row["label"] == "recall>=0.8")
+    final_gate = payload["gate_cascade"][-1]
+    return {
+        "id": "metric_separation",
+        "label": "Metric separation analysis",
+        "evidence_class": "retrieval/status non-equivalence check",
+        "validation_units": f"{payload['metric_scenario_count']} upstream-metric scenario packets",
+        "scenario_count": payload["metric_scenario_count"],
+        "rule_pass": f"recall-threshold precision {recall_test['precision']:.2f}; full gate precision {final_gate['precision']:.2f}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "recall_point_biserial": round(payload["point_biserial"]["recall"], 2),
+            "high_recall_blocked_rate": round(payload["high_recall_blocked"]["rate"], 2),
+            "full_gate_specificity": round(final_gate["specificity"], 2),
+        },
+        "finding": "Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -548,6 +587,7 @@ def _format_report(payload: dict) -> str:
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
+        f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

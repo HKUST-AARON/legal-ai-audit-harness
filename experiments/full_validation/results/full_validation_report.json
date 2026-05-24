@@ -76,6 +76,83 @@
     "total_checks": 51643
   },
   "high_upstream_but_blocked": 128,
+  "metric_separation": {
+    "gate_cascade": [
+      {
+        "false_negative": 0,
+        "false_positive": 136,
+        "label": "recall>=0.8",
+        "precision": 0.24861878453038674,
+        "recall": 1.0,
+        "specificity": 0.02857142857142857,
+        "true_negative": 4,
+        "true_positive": 45
+      },
+      {
+        "false_negative": 0,
+        "false_positive": 104,
+        "label": "+ score candidate",
+        "precision": 0.30201342281879195,
+        "recall": 1.0,
+        "specificity": 0.2571428571428571,
+        "true_negative": 36,
+        "true_positive": 45
+      },
+      {
+        "false_negative": 0,
+        "false_positive": 28,
+        "label": "+ source bound",
+        "precision": 0.6164383561643836,
+        "recall": 1.0,
+        "specificity": 0.8,
+        "true_negative": 112,
+        "true_positive": 45
+      },
+      {
+        "false_negative": 0,
+        "false_positive": 18,
+        "label": "+ review role",
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "specificity": 0.8714285714285714,
+        "true_negative": 122,
+        "true_positive": 45
+      },
+      {
+        "false_negative": 0,
+        "false_positive": 0,
+        "label": "+ no failure cap",
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "true_negative": 140,
+        "true_positive": 45
+      }
+    ],
+    "high_recall_blocked": {
+      "count": 136,
+      "denominator": 181,
+      "failure_flags": {
+        "authority_omission": 5,
+        "contestation_failure": 1,
+        "counter_material_suppression": 25,
+        "invalid_authority": 1,
+        "source_attribution_gap": 97,
+        "summary_distortion": 21,
+        "unauthorized_action": 10
+      },
+      "rate": 0.7513812154696132,
+      "status_distribution": {
+        "no_external_legal_effect": 31,
+        "professional_support_output": 10,
+        "reference_information": 95
+      }
+    },
+    "metric_scenario_count": 185,
+    "qualified_count": 45,
+    "recall_point_biserial": 0.046010491460766016
+  },
+  "metric_separation_evaluations": 185,
   "model_output_transcript_evaluations": 50,
   "model_output_transcript_verification": {
     "all_locators_verified": true,
@@ -95,7 +172,7 @@
     "support_items_verified": 30,
     "verified_ratio": 1.0
   },
-  "suite_count": 16,
+  "suite_count": 17,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -364,6 +441,23 @@
       "validation_units": "51643 generated audit-policy states"
     },
     {
+      "evidence_class": "retrieval/status non-equivalence check",
+      "finding": "Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.",
+      "high_upstream_but_blocked": null,
+      "id": "metric_separation",
+      "label": "Metric separation analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "recall-threshold precision 0.25; full gate precision 1.00",
+      "scenario_count": 185,
+      "status_distribution": {
+        "full_gate_specificity": 1.0,
+        "high_recall_blocked_rate": 0.75,
+        "recall_point_biserial": 0.05
+      },
+      "validation_units": "185 upstream-metric scenario packets"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -476,7 +570,7 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 54402,
+  "total_evaluation_rows": 54587,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
@@ -487,6 +581,7 @@
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
+    "metric_separation_evaluations": 185,
     "model_output_transcript_locator_checks": 50,
     "model_output_transcript_locators_verified": 50,
     "public_metadata_records": 120,

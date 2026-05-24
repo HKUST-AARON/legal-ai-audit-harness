@@ -41,6 +41,7 @@ python scripts/collect_public_retrieval_benchmark.py
 python scripts/build_model_output_repairs.py
 python scripts/build_blind_coding_packets.py
 python scripts/verify_formal_invariants.py
+python scripts/run_metric_separation_analysis.py
 python scripts/run_blind_coding_study.py
 python scripts/run_annotation_robustness.py
 python scripts/run_full_validation.py
@@ -160,13 +161,14 @@ Current coverage:
 | Public source-text anchors | 30 | Checks manifest support terms against extracted public source text snapshots; current result is 30/30 verified across 30 records with snapshots. |
 | Model-output transcript anchors | 50 | Checks that every raw model-output scenario locator is anchored in the committed transcript section. |
 | Formal invariant verification | 51643 | Exhaustively checks monotonicity, evidence-packet necessity, authority-set necessity, counter-material gate necessity, adoption necessity, role caps, failure caps and metric non-equivalence over generated audit-policy states. |
+| Metric separation analysis | 185 | Tests whether upstream precision, recall and F1 predict procedural qualification across all packets with complete upstream metrics. |
 | Mixed-authority public source-screening packets | 5 | Tests normative material screening with source-bound statute, case and public-source packets. |
 | Issue-defined ablations | 20 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
 | Annotation robustness recoding | 460 | Re-scores all 230 scenario packets under strict and lenient coding policies to test status stability. |
 | Score-blinded dual coding | 460 | Two coding passes score all 230 packets without original scores or expected outcomes, then compare coder-coder and base-coder status agreement. |
 | Full-threshold sensitivity | 1150 | Re-evaluates all 230 scenario packets under normative thresholds 8-12. |
 
-The current full validation report covers 230 scenario files containing 609 embedded records/items, 30 public source-text anchor checks, 50 raw model-output transcript locator checks and 51,643 formal invariant checks, plus strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the endpoint-matched public retrieval benchmark, source-supported model-output repair layer, model-output evidence ladder, public source-text anchor layer, transcript-anchor layer, formal-invariant layer, adversarial repair layer, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, source-support interventions, external source anchors, negative controls, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and reports both inter-coder and base-coder agreement.
+The current full validation report covers 230 scenario files containing 609 embedded records/items, 30 public source-text anchor checks, 50 raw model-output transcript locator checks, 51,643 formal invariant checks and 185 metric-separation evaluations, plus strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. Expected outcomes are scenario-regression checks: they verify rule conformance and artifact integrity, while the endpoint-matched public retrieval benchmark, source-supported model-output repair layer, model-output evidence ladder, public source-text anchor layer, transcript-anchor layer, formal-invariant layer, metric-separation layer, adversarial repair layer, full-threshold sensitivity, robustness and blind-coding layers test whether status allocation survives real public search outputs, source-support interventions, external source anchors, negative controls, upstream metric thresholds, threshold changes and plausible coding disagreement. The dual-coding layer is not a substitute for future external human annotation, but it separates packet evidence from original scenario scores and expected outcomes and reports both inter-coder and base-coder agreement.
 
 ## Jurisdiction Profiles
 

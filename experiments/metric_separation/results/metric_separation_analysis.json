@@ -1,0 +1,114 @@
+{
+  "gate_cascade": [
+    {
+      "false_negative": 0,
+      "false_positive": 136,
+      "label": "recall>=0.8",
+      "precision": 0.24861878453038674,
+      "recall": 1.0,
+      "specificity": 0.02857142857142857,
+      "true_negative": 4,
+      "true_positive": 45
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 104,
+      "label": "+ score candidate",
+      "precision": 0.30201342281879195,
+      "recall": 1.0,
+      "specificity": 0.2571428571428571,
+      "true_negative": 36,
+      "true_positive": 45
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 28,
+      "label": "+ source bound",
+      "precision": 0.6164383561643836,
+      "recall": 1.0,
+      "specificity": 0.8,
+      "true_negative": 112,
+      "true_positive": 45
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 18,
+      "label": "+ review role",
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "specificity": 0.8714285714285714,
+      "true_negative": 122,
+      "true_positive": 45
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 0,
+      "label": "+ no failure cap",
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "true_negative": 140,
+      "true_positive": 45
+    }
+  ],
+  "high_recall_blocked": {
+    "count": 136,
+    "denominator": 181,
+    "failure_flags": {
+      "authority_omission": 5,
+      "contestation_failure": 1,
+      "counter_material_suppression": 25,
+      "invalid_authority": 1,
+      "source_attribution_gap": 97,
+      "summary_distortion": 21,
+      "unauthorized_action": 10
+    },
+    "rate": 0.7513812154696132,
+    "status_distribution": {
+      "no_external_legal_effect": 31,
+      "professional_support_output": 10,
+      "reference_information": 95
+    }
+  },
+  "metric_scenario_count": 185,
+  "point_biserial": {
+    "f1": 0.07937466315340556,
+    "precision": 0.07105330644567431,
+    "recall": 0.04601049146076604
+  },
+  "qualified_count": 45,
+  "scenario_count": 230,
+  "threshold_tests": [
+    {
+      "false_negative": 0,
+      "false_positive": 138,
+      "label": "precision>=0.8",
+      "precision": 0.2459016393442623,
+      "recall": 1.0,
+      "specificity": 0.014285714285714285,
+      "true_negative": 2,
+      "true_positive": 45
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 136,
+      "label": "recall>=0.8",
+      "precision": 0.24861878453038674,
+      "recall": 1.0,
+      "specificity": 0.02857142857142857,
+      "true_negative": 4,
+      "true_positive": 45
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 138,
+      "label": "f1>=0.8",
+      "precision": 0.2459016393442623,
+      "recall": 1.0,
+      "specificity": 0.014285714285714285,
+      "true_negative": 2,
+      "true_positive": 45
+    }
+  ],
+  "upstream_threshold": 0.8
+}
