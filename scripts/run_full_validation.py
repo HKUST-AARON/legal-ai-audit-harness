@@ -393,6 +393,8 @@ def main() -> int:
             "ranking_visibility_window_checks": ranking_visibility_payload["window_check_count"],
             "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
             "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
+            "status_certificate_proof_obligations": status_certificate_payload["proof_obligation_count"],
+            "status_certificate_proof_obligations_passed": status_certificate_payload["passed_proof_obligation_count"],
             "status_certificates_verified": status_certificate_payload["verified_certificate_count"],
             "policy_constants_replay_checks": policy_constants_payload["check_count"],
             "policy_constants_replay_passed": policy_constants_payload["passed_check_count"],
@@ -429,6 +431,7 @@ def main() -> int:
         "ranking_visibility_window_checks": ranking_visibility_payload["window_check_count"],
         "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
         "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
+        "status_certificate_proof_obligations": status_certificate_payload["proof_obligation_count"],
         "policy_constants_replay_checks": policy_constants_payload["check_count"],
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
@@ -450,6 +453,7 @@ def main() -> int:
         + ranking_visibility_payload["window_check_count"]
         + ranking_visibility_payload["rank_order_counterfactual_count"]
         + status_certificate_payload["replay_check_count"]
+        + status_certificate_payload["proof_obligation_count"]
         + policy_constants_payload["check_count"]
         + metamorphic_payload["metamorphic_evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
@@ -622,6 +626,9 @@ def main() -> int:
             "verified_certificate_count": status_certificate_payload["verified_certificate_count"],
             "replay_check_count": status_certificate_payload["replay_check_count"],
             "passed_check_count": status_certificate_payload["passed_check_count"],
+            "proof_obligation_count": status_certificate_payload["proof_obligation_count"],
+            "passed_proof_obligation_count": status_certificate_payload["passed_proof_obligation_count"],
+            "failed_proof_obligation_count": status_certificate_payload["failed_proof_obligation_count"],
             "cap_or_failure_transition_count": status_certificate_payload["cap_or_failure_transition_count"],
         },
         "policy_constants_replay": {
@@ -1143,19 +1150,21 @@ def _ranking_visibility_row(payload: dict) -> dict:
 def _status_certificate_row(payload: dict) -> dict:
     return {
         "id": "status_certificate",
-        "label": "Status certificate replay",
-        "evidence_class": "derivation-certificate check",
-        "validation_units": f"{payload['replay_check_count']} replay checks over {payload['certificate_count']} certificates",
-        "scenario_count": payload["replay_check_count"],
-        "rule_pass": f"{payload['passed_check_count']}/{payload['replay_check_count']}",
+        "label": "Proof-carrying status certificates",
+        "evidence_class": "proof-carrying certificate replay",
+        "validation_units": f"{payload['replay_check_count']} replay checks and {payload['proof_obligation_count']} proof obligations over {payload['certificate_count']} certificates",
+        "scenario_count": payload["replay_check_count"] + payload["proof_obligation_count"],
+        "rule_pass": f"{payload['passed_check_count']}/{payload['replay_check_count']} checks; {payload['passed_proof_obligation_count']}/{payload['proof_obligation_count']} obligations",
         "mean_audit_score": None,
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
         "status_distribution": {
             "verified_certificates": payload["verified_certificate_count"],
+            "proof_obligations": payload["proof_obligation_count"],
+            "proof_obligations_passed": payload["passed_proof_obligation_count"],
             "cap_or_failure_transitions": payload["cap_or_failure_transition_count"],
         },
-        "finding": "Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.",
+        "finding": "Generates proof-carrying status certificates for every scenario and replays scenario hash, policy hash, score gate, role cap, failure cap, metric bundle, proof obligations and derivation hash.",
     }
 
 
@@ -1279,7 +1288,8 @@ def _format_report(payload: dict) -> str:
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
         f"Ranking-visibility checks: {payload['ranking_visibility']['window_check_count']} rank-window checks over {payload['ranking_visibility']['visibility_check_count']} high-status claims; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['front_window_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}; median first counter rank {payload['ranking_visibility']['median_first_counter_rank']:.1f}",
-        f"Status certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
+        f"Proof-carrying certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
+        f"Status certificate proof obligations: {payload['status_certificate']['passed_proof_obligation_count']}/{payload['status_certificate']['proof_obligation_count']} passed",
         f"Policy-constants replay checks: {payload['policy_constants_replay']['passed_check_count']}/{payload['policy_constants_replay']['check_count']} passed over {payload['policy_constants_replay']['scenario_count']} packets",
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",

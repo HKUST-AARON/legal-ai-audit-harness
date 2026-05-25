@@ -1,5 +1,5 @@
 {
-  "check_count": 532,
+  "check_count": 538,
   "checks": [
     {
       "expected": "- 31 validation suites",
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 136,615 total evaluation rows",
+      "expected": "- 141,535 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -92,7 +92,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 3,198/3,198 status-certificate replay checks passed over 246 certificates",
+      "expected": "- 4,182/4,182 status-certificate replay checks and 3,936/3,936 proof obligations passed over 246 proof-carrying certificates",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -137,7 +137,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 3,198 status-certificate replay checks and 4,182 policy-constants replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 4,182 status-certificate replay checks, 3,936 certificate proof obligations and 4,182 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -222,7 +222,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Status certificate replay | 3198 |",
+      "expected": "| Proof-carrying status certificates | 8118 |",
       "passed": true,
       "path": "README.md"
     },
@@ -248,6 +248,21 @@
     },
     {
       "expected": "| Out-of-sample holdout validation | 126 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "The benchmark freezes 22 public search outputs",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "all 22 real search outputs remain `reference_information`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "mean high-authority recall of 0.23",
       "passed": true,
       "path": "README.md"
     },
@@ -357,7 +372,7 @@
       "path": "docs/paper_mapping.md"
     },
     {
-      "expected": "Status certificate replay",
+      "expected": "Proof-carrying status certificates",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -522,7 +537,7 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "246/246 status certificates verified, 3,198/3,198 replay checks",
+      "expected": "246/246 proof-carrying status certificates verified, 4,182/4,182 replay checks, 3,936/3,936 proof obligations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -647,7 +662,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "135,936 derived robustness checks",
+      "expected": "140,856 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -687,7 +702,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "3,198 status-certificate replay checks",
+      "expected": "4,182 status-certificate replay checks",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "3,936 certificate proof obligations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -732,7 +752,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "246/246 status certificates",
+      "expected": "246/246 proof-carrying status certificates",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -902,7 +922,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Status certificate replay & 3,198 checks & 3,198/3,198",
+      "expected": "Proof-carrying status certificates & 4,182 checks / 3,936 obligations & 4,182/4,182; 3,936/3,936",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1052,7 +1072,17 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Status certificate replay checks: 3198/3198 passed over 246 certificates",
+      "expected": "Proof-carrying certificate replay checks: 4182/4182 passed over 246 certificates",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Proof-carrying status certificates",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Status certificate proof obligations: 3936/3936 passed",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1102,12 +1132,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 36 pages",
+      "expected": "The expected manuscript build is 35 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 246)",
+      "expected": "abstract word count 150-250 (actual 243)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2664,5 +2694,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 532
+  "passed_count": 538
 }

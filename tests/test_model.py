@@ -469,9 +469,116 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(payload["certificate_count"], 246)
         self.assertEqual(payload["verified_certificate_count"], 246)
-        self.assertEqual(payload["replay_check_count"], 3198)
-        self.assertEqual(payload["passed_check_count"], 3198)
+        self.assertEqual(payload["replay_check_count"], 4182)
+        self.assertEqual(payload["passed_check_count"], 4182)
+        self.assertEqual(payload["proof_obligation_count"], 3936)
+        self.assertEqual(payload["passed_proof_obligation_count"], 3936)
+        first_certificate = json.loads(
+            (ROOT / "experiments" / "status_certificates" / "results" / "status_certificates.jsonl")
+            .read_text(encoding="utf-8")
+            .splitlines()[0]
+        )
+        self.assertIn("policy_sha256", first_certificate)
+        self.assertIn("derivation_sha256", first_certificate)
+        self.assertEqual(first_certificate["proof_obligation_count"], 16)
+        obligation_ids = {item["id"] for item in first_certificate["proof_obligations"]}
+        self.assertIn("allowed_status_exact_derivation", obligation_ids)
+        self.assertNotIn("transition_explained", obligation_ids)
+        self.assertTrue(all(item["passed"] for item in first_certificate["proof_obligations"]))
         self.assertFalse(payload["failures"])
+
+    def test_status_certificate_verify_existing_catches_tampering(self):
+        subprocess.run(
+            [sys.executable, "scripts/run_status_certificate_validation.py"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        certificates_path = ROOT / "experiments" / "status_certificates" / "results" / "status_certificates.jsonl"
+        original = certificates_path.read_text(encoding="utf-8")
+        lines = original.splitlines()
+        first = json.loads(lines[0])
+        first["proof_obligations"][0]["passed"] = False
+        lines[0] = json.dumps(first, sort_keys=True)
+        certificates_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        try:
+            completed = subprocess.run(
+                [sys.executable, "scripts/run_status_certificate_validation.py", "--verify-existing"],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(completed.returncode, 0)
+            payload = json.loads(
+                (ROOT / "experiments" / "status_certificates" / "results" / "status_certificate_validation.json")
+                .read_text(encoding="utf-8")
+            )
+            self.assertEqual(payload["failed_proof_obligation_count"], 1)
+            self.assertIn("proof_obligations", payload["failures"][0]["failed_checks"])
+        finally:
+            certificates_path.write_text(original, encoding="utf-8")
+            subprocess.run(
+                [sys.executable, "scripts/run_status_certificate_validation.py"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+
+    def test_status_certificate_verify_existing_checks_certificate_set(self):
+        subprocess.run(
+            [sys.executable, "scripts/run_status_certificate_validation.py"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        certificates_path = ROOT / "experiments" / "status_certificates" / "results" / "status_certificates.jsonl"
+        original = certificates_path.read_text(encoding="utf-8")
+        lines = original.splitlines()
+        try:
+            certificates_path.write_text("\n".join(lines[:-1]) + "\n", encoding="utf-8")
+            completed = subprocess.run(
+                [sys.executable, "scripts/run_status_certificate_validation.py", "--verify-existing"],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(completed.returncode, 0)
+            payload = json.loads(
+                (ROOT / "experiments" / "status_certificates" / "results" / "status_certificate_validation.json")
+                .read_text(encoding="utf-8")
+            )
+            self.assertEqual(len(payload["missing_certificate_paths"]), 1)
+            self.assertIn("missing_certificate_paths", payload["failures"][0]["failed_checks"])
+
+            certificates_path.write_text(original + lines[0] + "\n", encoding="utf-8")
+            completed = subprocess.run(
+                [sys.executable, "scripts/run_status_certificate_validation.py", "--verify-existing"],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(completed.returncode, 0)
+            payload = json.loads(
+                (ROOT / "experiments" / "status_certificates" / "results" / "status_certificate_validation.json")
+                .read_text(encoding="utf-8")
+            )
+            self.assertEqual(len(payload["duplicate_certificate_paths"]), 1)
+            self.assertIn("duplicate_certificate_paths", payload["failures"][0]["failed_checks"])
+        finally:
+            certificates_path.write_text(original, encoding="utf-8")
+            subprocess.run(
+                [sys.executable, "scripts/run_status_certificate_validation.py"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
 
     def test_policy_constants_replay_runs(self):
         completed = subprocess.run(
@@ -950,8 +1057,11 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["ranking_visibility_window_checks"], 884)
         self.assertEqual(report["ranking_visibility_counterfactuals"], 76)
         self.assertEqual(report["validation_units"]["ranking_visibility_counterfactuals"], 76)
-        self.assertEqual(report["status_certificate_replay_checks"], 3198)
-        self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 3198)
+        self.assertEqual(report["status_certificate_replay_checks"], 4182)
+        self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 4182)
+        self.assertEqual(report["status_certificate_proof_obligations"], 3936)
+        self.assertEqual(report["validation_units"]["status_certificate_proof_obligations"], 3936)
+        self.assertEqual(report["validation_units"]["status_certificate_proof_obligations_passed"], 3936)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
         self.assertEqual(report["policy_constants_replay_checks"], 4182)
         self.assertEqual(report["validation_units"]["policy_constants_replay_checks"], 4182)
@@ -965,7 +1075,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 136615)
+        self.assertEqual(report["total_evaluation_rows"], 141535)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -1046,8 +1156,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["ranking_visibility"]["median_first_counter_rank"], 3.0)
         self.assertEqual(report["status_certificate"]["certificate_count"], 246)
         self.assertEqual(report["status_certificate"]["verified_certificate_count"], 246)
-        self.assertEqual(report["status_certificate"]["replay_check_count"], 3198)
-        self.assertEqual(report["status_certificate"]["passed_check_count"], 3198)
+        self.assertEqual(report["status_certificate"]["replay_check_count"], 4182)
+        self.assertEqual(report["status_certificate"]["passed_check_count"], 4182)
+        self.assertEqual(report["status_certificate"]["proof_obligation_count"], 3936)
+        self.assertEqual(report["status_certificate"]["passed_proof_obligation_count"], 3936)
         self.assertEqual(report["policy_constants_replay"]["scenario_count"], 246)
         self.assertEqual(report["policy_constants_replay"]["verified_scenario_count"], 246)
         self.assertEqual(report["policy_constants_replay"]["check_count"], 4182)

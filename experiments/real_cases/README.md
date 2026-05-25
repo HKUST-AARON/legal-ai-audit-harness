@@ -1,6 +1,6 @@
 # Real Case Source-Integrity Experiment
 
-This experiment tests the harness above any upstream search, retrieval, generation, agent, database, or manual review stack. It asks whether a legal-output evidence packet can be reconstructed from public case metadata across jurisdictions. It is a public metadata evidence-packet validation, not a real case-recommendation or merits evaluation.
+This experiment tests the harness above any upstream search, retrieval, generation, agent, database, or manual review stack. It asks whether a legal-output evidence packet can be reconstructed from public case metadata across jurisdictions.
 
 Run:
 
@@ -31,5 +31,4 @@ Scope:
 
 - The experiment uses public metadata, citations, docket numbers, court labels, dates, URLs and source collection labels.
 - It does not copy full case texts into the scenario evidence packets.
-- It does not evaluate legal merits, doctrinal correctness, ranking quality or any upstream implementation.
-- Each output link is tagged as `public_metadata`, and each generated scenario uses a `not_for_merits_reliance` review gate. These scenarios are expected to reach `professional_support_output`, not `normative_material_screening_output`, because they do not define issue-specific ranking or counter-material gold sets.
+- Each output link is tagged as `public_metadata`, and each generated scenario uses a `not_for_merits_reliance` review gate. These scenarios are expected to reach `professional_support_output` because they supply source reconstruction without issue-specific ranking or counter-material gold sets.

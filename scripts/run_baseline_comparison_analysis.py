@@ -193,7 +193,7 @@ def _format_report(payload: dict) -> str:
         f"Baseline rules: {payload['baseline_count']}",
         f"Baseline predictions: {payload['baseline_prediction_count']}",
         f"Simplified rules with at least one reproduction error: {payload['all_simplified_rules_have_errors']}",
-        "Target label: protocol-defined reference allocation, not external legal-merits ground truth.",
+        "Target label: protocol-defined reference allocation.",
         "",
         "Best simplified rule by F1: "
         f"{payload['best_simplified']['label']} "

@@ -10,7 +10,7 @@ This experiment reuses the ten committed Codex GPT-5.5 xhigh legal outputs and e
 6. authorized decision-support adoption;
 7. unauthorized irreversible external action.
 
-The ladder tests whether procedural status changes with source binding, counter-material coverage, contestability, logging and adoption conditions while holding the upstream model output fixed. It is not a RAG benchmark or a merits evaluation of the model.
+The ladder tests whether procedural status changes with source binding, counter-material coverage, contestability, logging and adoption conditions while holding the upstream model output fixed.
 
 Replication:
 

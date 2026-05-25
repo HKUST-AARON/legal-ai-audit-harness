@@ -3,7 +3,7 @@
 Seed: `20260523`
 Sample size per jurisdiction: `20`
 
-This public metadata evidence-packet validation tests whether a provider-agnostic legal-output evidence packet can be constructed from committed public case metadata snapshots. It does not evaluate legal merits, doctrinal correctness, ranking quality, or any upstream retrieval/generation architecture. Metadata-only packets are capped at professional-support status because they do not define issue-specific counter-material gold sets.
+This public metadata evidence-packet validation tests whether a provider-agnostic legal-output evidence packet can be constructed from committed public case metadata snapshots. Metadata-only packets are capped at professional-support status because they supply source reconstruction without issue-specific counter-material gold sets.
 
 | Jurisdiction | Candidate records | Sampled records | Manifest | Scenario |
 | --- | ---: | ---: | --- | --- |

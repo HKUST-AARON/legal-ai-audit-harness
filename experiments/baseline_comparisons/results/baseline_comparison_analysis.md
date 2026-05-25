@@ -5,7 +5,7 @@ Qualified packets under the full audit model: 54
 Baseline rules: 12
 Baseline predictions: 2772
 Simplified rules with at least one reproduction error: True
-Target label: protocol-defined reference allocation, not external legal-merits ground truth.
+Target label: protocol-defined reference allocation.
 
 Best simplified rule by F1: Source-bound score candidate with review gate (precision 0.59, recall 1.00, false positives 38, false negatives 0)
 Lowest-false-positive simplified rule: Source-bound score candidate with review gate (false positives 38, false negatives 0)

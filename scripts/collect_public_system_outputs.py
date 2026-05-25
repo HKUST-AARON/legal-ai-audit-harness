@@ -239,7 +239,7 @@ def write_summary(path: Path, summaries: list[dict], top_k: int) -> None:
         "",
         f"Top-k records per jurisdiction: `{top_k}`",
         "",
-        "This pilot freezes ordered outputs from public legal retrieval or listing systems and converts the visible records into provider-agnostic evidence packets. It tests output reconstructability, source tagging and audit status allocation. It does not evaluate legal merits, doctrinal correctness, issue-specific ranking quality, or any upstream search/generation architecture.",
+        "This pilot freezes ordered outputs from public legal retrieval or listing systems and converts the visible records into provider-agnostic evidence packets. It tests output reconstructability, source tagging and audit status allocation for real upstream legal-output streams.",
         "",
         "| Jurisdiction | Candidate records | Output records | Manifest | Scenario |",
         "| --- | ---: | ---: | --- | --- |",
