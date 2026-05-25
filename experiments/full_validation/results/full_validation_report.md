@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 28
+Validation suites: 29
 Scenario files: 246
 Base embedded records/items: 679 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 492
@@ -21,8 +21,9 @@ Repair frontier evaluations: 184/184 blocked claims repairable across 4474 count
 Jurisdiction-profile evaluations: 233/233 profile checks supported; 162/162 counterfactual mutations passed
 Ranking-visibility checks: 884 rank-window checks over 230 high-status claims; 76/76 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 183/217; drifted top-3 counter visible 0/76; median first counter rank 3.0
 Status certificate replay checks: 3198/3198 passed over 246 certificates
+Policy-constants replay checks: 4182/4182 passed over 246 packets
 Metamorphic policy tests: 1134/1134 passed over 246 packets
-Derived robustness evaluations: 131399
+Derived robustness evaluations: 135581
 Scenario-regression expectations passed: 246/246
 High-upstream-performance but procedurally blocked scenarios: 622
 Blocked reason distribution: authority_omission: 59, contestation_failure: 55, counter_material_suppression: 135, invalid_authority: 1, jurisdiction_assumption_gap: 54, ranking_drift: 9, source_attribution_gap: 213, summary_distortion: 129, unauthorized_action: 10
@@ -56,6 +57,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Jurisdiction-profile mutations | cross-profile gate check | 395 profile checks and counterfactuals | 395 | 233/233 profile checks; 162/162 mutations | n/a | n/a | n/a | generic_preserved: 54, mismatch_downgraded: 54, missing_downgraded: 54 |
 | Ranking-visibility diagnostics | rank-salience counterfactual check | 884 rank-window checks over 230 high-status claims plus 76 rank-order counterfactuals | 960 | 76/76 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 76, downgraded: 76, front_window_counter_not_visible: 34, front_window_counter_visible: 183, mean_reciprocal_first_counter_rank: 0.43, median_first_counter_rank: 3.0, rank_intervention_applied: 76 |
 | Status certificate replay | derivation-certificate check | 3198 replay checks over 246 certificates | 3198 | 3198/3198 | n/a | n/a | n/a | cap_or_failure_transitions: 158, verified_certificates: 246 |
+| Policy-constants replay | second implementation check | 4182 replay checks over 246 packets | 4182 | 4182/4182 | n/a | n/a | n/a | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 42, professional_support_output: 23, reference_information: 137 |
 | Metamorphic policy tests | expected-label-free policy-invariant validation | 1134 transformations over 246 packets | 1134 | 1134/1134 | n/a | n/a | n/a | back_office_role_cap: 246, benign_source_append_preserves_high_status: 54, claim_escalation_nonpromotion: 246, review_gate_removal_blocks_high_status: 54, score_and_role_inflation_without_adoption: 234, source_tag_deproceduralization_blocks_high_status: 54, upstream_metric_inflation_invariance: 246 |
 | Annotation robustness recoding | coding robustness | 492 strict/lenient recoded evaluations | 246 | 234/246 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Annotation uncertainty Monte Carlo | score-noise robustness | 61500 score-perturbed evaluations | 61500 | 0.933 sample stability; 0.924 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 143, exact_stable_scenarios: 102, high_status_stable_scenarios: 183, mean_status_rank_shift: 0.086 |
@@ -87,6 +89,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Jurisdiction-profile mutations:** Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.
 - **Ranking-visibility diagnostics:** Computes a rank-window visibility curve for counter-material salience and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.
 - **Status certificate replay:** Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.
+- **Policy-constants replay:** Recomputes score candidates, role caps, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.
 - **Metamorphic policy tests:** Applies claim escalation, metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation to primary scenario packets without using expected labels.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Annotation uncertainty Monte Carlo:** Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.

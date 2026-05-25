@@ -1,8 +1,8 @@
 {
-  "check_count": 406,
+  "check_count": 466,
   "checks": [
     {
-      "expected": "- 28 validation suites",
+      "expected": "- 29 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 132,078 total evaluation rows",
+      "expected": "- 136,260 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -87,6 +87,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "- 4,182/4,182 policy-constants replay checks passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "- 61,500 annotation-uncertainty perturbations with 0.933 sample stability",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -117,7 +122,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals and 3,198 status-certificate replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 3,198 status-certificate replay checks and 4,182 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -187,6 +192,11 @@
       "path": "README.md"
     },
     {
+      "expected": "| Policy-constants replay | 4182 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "| Annotation uncertainty Monte Carlo | 61500 |",
       "passed": true,
       "path": "README.md"
@@ -218,6 +228,11 @@
     },
     {
       "expected": "python scripts/run_status_certificate_validation.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_policy_constants_replay.py",
       "passed": true,
       "path": "README.md"
     },
@@ -287,6 +302,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Policy-constants replay",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Annotation uncertainty Monte Carlo",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -343,6 +363,11 @@
     },
     {
       "expected": "status-certificate layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "policy-constants replay layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -412,6 +437,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "4,182/4,182 policy-constants replay checks",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "61,500 annotation-uncertainty perturbations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -457,6 +487,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "python scripts/run_policy_constants_replay.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_metamorphic_policy_tests.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -487,12 +522,17 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "policy-constants replay file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "246 scenario packets with 679 embedded records or outputs",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "131,399 derived robustness checks",
+      "expected": "135,581 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -702,6 +742,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Policy-constants replay & 4,182 checks & 4,182/4,182",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Baseline rule comparison & 2,772 predictions & Best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -727,7 +772,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 28",
+      "expected": "Validation suites: 29",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -807,6 +852,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Policy-constants replay checks: 4182/4182 passed over 246 packets",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -852,7 +902,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 240)",
+      "expected": "abstract word count 150-250 (actual 242)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -937,6 +987,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `28 validation suites`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -988,6 +1043,51 @@
     },
     {
       "expected": "absence of stale claim `130,265`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `132,078`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `131,399`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `135,276`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `3,198/3,198 declarative`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `declarative policy replay checks`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `independent declarative`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy file`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy specification`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `independent replay from a declarative policy file`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -1172,6 +1272,11 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `28 validation suites`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "README.md"
@@ -1223,6 +1328,51 @@
     },
     {
       "expected": "absence of stale claim `130,265`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `132,078`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `131,399`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `135,276`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `3,198/3,198 declarative`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `declarative policy replay checks`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `independent declarative`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy file`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy specification`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `independent replay from a declarative policy file`",
       "passed": true,
       "path": "README.md"
     },
@@ -1407,6 +1557,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `28 validation suites`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -1458,6 +1613,51 @@
     },
     {
       "expected": "absence of stale claim `130,265`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `132,078`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `131,399`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `135,276`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `3,198/3,198 declarative`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `declarative policy replay checks`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `independent declarative`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy file`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy specification`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `independent replay from a declarative policy file`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -1642,6 +1842,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `28 validation suites`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -1693,6 +1898,51 @@
     },
     {
       "expected": "absence of stale claim `130,265`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `132,078`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `131,399`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `135,276`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `3,198/3,198 declarative`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `declarative policy replay checks`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `independent declarative`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy file`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy specification`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `independent replay from a declarative policy file`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1877,6 +2127,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `28 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1928,6 +2183,51 @@
     },
     {
       "expected": "absence of stale claim `130,265`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `132,078`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `131,399`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `135,276`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `3,198/3,198 declarative`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `declarative policy replay checks`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `independent declarative`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy file`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `from a declarative policy specification`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `independent replay from a declarative policy file`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2034,5 +2334,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 406
+  "passed_count": 466
 }

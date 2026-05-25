@@ -421,6 +421,72 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["passed_check_count"], 3198)
         self.assertFalse(payload["failures"])
 
+    def test_policy_constants_replay_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_status_certificate_validation.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_policy_constants_replay.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertNotIn("audit_harness.model", (ROOT / "scripts" / "run_policy_constants_replay.py").read_text(encoding="utf-8"))
+        payload = json.loads((ROOT / "experiments" / "policy_constants_replay" / "results" / "policy_constants_replay.json").read_text(encoding="utf-8"))
+        self.assertEqual(payload["scenario_count"], 246)
+        self.assertEqual(payload["certificate_count"], 246)
+        self.assertEqual(payload["verified_scenario_count"], 246)
+        self.assertEqual(payload["check_count"], 4182)
+        self.assertEqual(payload["passed_check_count"], 4182)
+        self.assertEqual(payload["failed_check_count"], 0)
+        self.assertEqual(payload["cap_or_failure_transition_count"], 158)
+        self.assertEqual(payload["policy_path"], "policy/legal_output_policy.json")
+        self.assertFalse(payload["failures"])
+
+    def test_policy_constants_replay_catches_certificate_drift(self):
+        subprocess.run(
+            [sys.executable, "scripts/run_status_certificate_validation.py"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        certificates_path = ROOT / "experiments" / "status_certificates" / "results" / "status_certificates.jsonl"
+        original = certificates_path.read_text(encoding="utf-8")
+        lines = original.splitlines()
+        first = json.loads(lines[0])
+        first["claimed_status"] = "decision_support_reason"
+        lines[0] = json.dumps(first, sort_keys=True)
+        certificates_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        try:
+            completed = subprocess.run(
+                [sys.executable, "scripts/run_policy_constants_replay.py"],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(completed.returncode, 0)
+            payload = json.loads((ROOT / "experiments" / "policy_constants_replay" / "results" / "policy_constants_replay.json").read_text(encoding="utf-8"))
+            self.assertEqual(payload["failed_check_count"], 1)
+            self.assertEqual(payload["failures"][0]["failed_checks"], ["claimed_status"])
+        finally:
+            certificates_path.write_text(original, encoding="utf-8")
+            subprocess.run(
+                [sys.executable, "scripts/run_policy_constants_replay.py"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+
     def test_annotation_uncertainty_analysis_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/run_annotation_uncertainty_analysis.py"],
@@ -781,7 +847,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 28)
+        self.assertEqual(report["suite_count"], 29)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -835,10 +901,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
+        self.assertEqual(report["policy_constants_replay_checks"], 4182)
+        self.assertEqual(report["validation_units"]["policy_constants_replay_checks"], 4182)
+        self.assertEqual(report["validation_units"]["policy_constants_replay_passed"], 4182)
         self.assertEqual(report["metamorphic_policy_evaluations"], 1134)
         self.assertEqual(report["validation_units"]["metamorphic_policy_evaluations"], 1134)
         self.assertEqual(report["validation_units"]["metamorphic_policy_passed"], 1134)
-        self.assertEqual(report["total_evaluation_rows"], 132078)
+        self.assertEqual(report["total_evaluation_rows"], 136260)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -911,6 +980,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate"]["verified_certificate_count"], 246)
         self.assertEqual(report["status_certificate"]["replay_check_count"], 3198)
         self.assertEqual(report["status_certificate"]["passed_check_count"], 3198)
+        self.assertEqual(report["policy_constants_replay"]["scenario_count"], 246)
+        self.assertEqual(report["policy_constants_replay"]["verified_scenario_count"], 246)
+        self.assertEqual(report["policy_constants_replay"]["check_count"], 4182)
+        self.assertEqual(report["policy_constants_replay"]["passed_check_count"], 4182)
+        self.assertEqual(report["policy_constants_replay"]["failed_check_count"], 0)
+        self.assertEqual(report["policy_constants_replay"]["cap_or_failure_transition_count"], 158)
+        self.assertEqual(report["policy_constants_replay"]["policy_path"], "policy/legal_output_policy.json")
         self.assertEqual(report["metamorphic_policy"]["scenario_count"], 246)
         self.assertEqual(report["metamorphic_policy"]["metamorphic_evaluation_count"], 1134)
         self.assertEqual(report["metamorphic_policy"]["passed_count"], 1134)

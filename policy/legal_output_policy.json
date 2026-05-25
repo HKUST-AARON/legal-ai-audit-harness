@@ -1,0 +1,84 @@
+{
+  "dimensions": ["S", "Q", "H", "K", "T", "L"],
+  "thresholds": {
+    "normative_material_screening_output": 9,
+    "decision_support_reason": 10
+  },
+  "status_rank": {
+    "no_external_legal_effect": 0,
+    "reference_information": 1,
+    "professional_support_output": 2,
+    "normative_material_screening_output": 3,
+    "decision_support_reason": 4
+  },
+  "system_role_caps": {
+    "back_office_tool": "reference_information",
+    "disclosed_assistance_tool": "professional_support_output",
+    "auditable_procedural_tool": "normative_material_screening_output",
+    "authorized_decision_support_tool": "decision_support_reason",
+    "unaccountable_external_disposition": "no_external_legal_effect"
+  },
+  "role_inference": {
+    "irreversible_without_authorization": "unaccountable_external_disposition",
+    "authorized_adoption": "authorized_decision_support_tool",
+    "procedural_reliance_gates": ["attorney_review", "external_reliance", "filing", "sending", "execution"],
+    "procedural_reliance_role": "auditable_procedural_tool",
+    "professional_reliance_gates": ["internal_research", "not_for_merits_reliance"],
+    "professional_reliance_role": "disclosed_assistance_tool",
+    "default_role": "back_office_tool"
+  },
+  "source_tags": [
+    "tool_verified",
+    "official_source",
+    "public_metadata",
+    "user_provided",
+    "user_provided_verified",
+    "settled",
+    "needs_verification",
+    "pinpoint_needs_verification",
+    "web_search_verify"
+  ],
+  "procedural_source_tags": ["tool_verified", "official_source", "user_provided_verified", "settled"],
+  "profile_assumption_aliases": {
+    "common_law": [
+      "common_law",
+      "canadian_administrative_law",
+      "england_and_wales_tort_law",
+      "united_states_federal_administrative_law"
+    ],
+    "civil_law": [
+      "civil_law",
+      "european_union_data_protection_law",
+      "european_union_fundamental_rights",
+      "german_constitutional_law"
+    ],
+    "administrative": [
+      "administrative",
+      "canadian_administrative_law",
+      "united_states_federal_administrative_law"
+    ],
+    "arbitral": ["arbitral"],
+    "odr": ["odr"]
+  },
+  "flag_dispositions": {
+    "authority_omission": "suspension",
+    "counter_material_suppression": "suspension",
+    "invalid_authority": "suspension",
+    "ranking_drift": "suspension",
+    "source_attribution_gap": "downgrade",
+    "jurisdiction_assumption_gap": "downgrade",
+    "review_gate_failure": "downgrade",
+    "unauthorized_action": "withdrawal",
+    "summary_distortion": "withdrawal",
+    "automation_dependence": "downgrade",
+    "contestation_failure": "downgrade"
+  },
+  "disposition_rank": {
+    "none": 0,
+    "warning": 1,
+    "downgrade": 2,
+    "suspension": 3,
+    "withdrawal": 4
+  },
+  "rank_salience_window": 3
+}

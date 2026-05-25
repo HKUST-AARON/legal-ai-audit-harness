@@ -160,6 +160,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
     _run([sys.executable, "scripts/run_ranking_visibility_analysis.py"])
     _run([sys.executable, "scripts/run_status_certificate_validation.py"])
+    _run([sys.executable, "scripts/run_policy_constants_replay.py"])
     _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
 
     rows = []
@@ -281,6 +282,12 @@ def main() -> int:
         )
     )
     rows.append(_status_certificate_row(status_certificate_payload))
+    policy_constants_payload = json.loads(
+        (ROOT / "experiments" / "policy_constants_replay" / "results" / "policy_constants_replay.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_policy_constants_row(policy_constants_payload))
     metamorphic_payload = json.loads(
         (ROOT / "experiments" / "metamorphic_policy" / "results" / "metamorphic_policy_tests.json").read_text(
             encoding="utf-8"
@@ -373,6 +380,8 @@ def main() -> int:
             "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
             "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
             "status_certificates_verified": status_certificate_payload["verified_certificate_count"],
+            "policy_constants_replay_checks": policy_constants_payload["check_count"],
+            "policy_constants_replay_passed": policy_constants_payload["passed_check_count"],
             "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
             "metamorphic_policy_passed": metamorphic_payload["passed_count"],
         }
@@ -401,6 +410,7 @@ def main() -> int:
         "ranking_visibility_window_checks": ranking_visibility_payload["window_check_count"],
         "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
         "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
+        "policy_constants_replay_checks": policy_constants_payload["check_count"],
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
@@ -417,6 +427,7 @@ def main() -> int:
         + ranking_visibility_payload["window_check_count"]
         + ranking_visibility_payload["rank_order_counterfactual_count"]
         + status_certificate_payload["replay_check_count"]
+        + policy_constants_payload["check_count"]
         + metamorphic_payload["metamorphic_evaluation_count"]
         + robustness_payload["recoded_evaluations"]
         + uncertainty_payload["evaluation_count"]
@@ -570,6 +581,16 @@ def main() -> int:
             "replay_check_count": status_certificate_payload["replay_check_count"],
             "passed_check_count": status_certificate_payload["passed_check_count"],
             "cap_or_failure_transition_count": status_certificate_payload["cap_or_failure_transition_count"],
+        },
+        "policy_constants_replay": {
+            "scenario_count": policy_constants_payload["scenario_count"],
+            "verified_scenario_count": policy_constants_payload["verified_scenario_count"],
+            "check_count": policy_constants_payload["check_count"],
+            "passed_check_count": policy_constants_payload["passed_check_count"],
+            "failed_check_count": policy_constants_payload["failed_check_count"],
+            "cap_or_failure_transition_count": policy_constants_payload["cap_or_failure_transition_count"],
+            "status_distribution": policy_constants_payload["status_distribution"],
+            "policy_path": policy_constants_payload["policy_path"],
         },
         "metamorphic_policy": {
             "scenario_count": metamorphic_payload["scenario_count"],
@@ -1062,6 +1083,22 @@ def _metamorphic_policy_row(payload: dict) -> dict:
     }
 
 
+def _policy_constants_row(payload: dict) -> dict:
+    return {
+        "id": "policy_constants_replay",
+        "label": "Policy-constants replay",
+        "evidence_class": "second implementation check",
+        "validation_units": f"{payload['check_count']} replay checks over {payload['scenario_count']} packets",
+        "scenario_count": payload["check_count"],
+        "rule_pass": f"{payload['passed_check_count']}/{payload['check_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": payload["status_distribution"],
+        "finding": "Recomputes score candidates, role caps, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -1099,6 +1136,7 @@ def _format_report(payload: dict) -> str:
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
         f"Ranking-visibility checks: {payload['ranking_visibility']['window_check_count']} rank-window checks over {payload['ranking_visibility']['visibility_check_count']} high-status claims; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['front_window_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}; median first counter rank {payload['ranking_visibility']['median_first_counter_rank']:.1f}",
         f"Status certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
+        f"Policy-constants replay checks: {payload['policy_constants_replay']['passed_check_count']}/{payload['policy_constants_replay']['check_count']} passed over {payload['policy_constants_replay']['scenario_count']} packets",
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
