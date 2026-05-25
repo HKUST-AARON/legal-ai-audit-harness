@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(ROOT := Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from audit_harness.model import DIMENSIONS, STATUS_RANK, evaluate_scenario
+from audit_harness.model import DIMENSIONS, RANK_SALIENCE_WINDOW, STATUS_RANK, evaluate_scenario
 from run_full_validation import SUITES
 
 
@@ -102,6 +102,7 @@ def _interventions_for(target: str) -> list[tuple[str, callable]]:
         ("audit_vector_completion", _complete_audit_vector),
         ("authority_packet_completion", _complete_authority_packet),
         ("source_binding_completion", _complete_source_binding),
+        ("rank_salience_completion", _complete_rank_salience),
         ("review_contestability_completion", _complete_review_contestability),
         ("role_cap_completion", _complete_role_cap),
         ("failure_flag_resolution", _clear_failure_flags),
@@ -152,6 +153,30 @@ def _complete_authority_packet(scenario: dict, target: str) -> None:
     scenario["counter_material_complete"] = True
 
 
+def _complete_rank_salience(scenario: dict, target: str) -> None:
+    authority_sets = scenario.get("authority_sets", {})
+    counter = list(authority_sets.get("retrieved_counter_or_limiting") or [])
+    if not counter:
+        return
+    target_source = counter[0]
+    units = scenario.get("evidence_packet", {}).get("output_units", [])
+    if any(target_source in set(unit.get("source_ids", [])) for unit in units[:RANK_SALIENCE_WINDOW]):
+        return
+    insert_at = min(RANK_SALIENCE_WINDOW - 1, len(units))
+    for index, unit in enumerate(units):
+        if target_source in set(unit.get("source_ids", [])):
+            units.insert(insert_at, units.pop(index))
+            _refresh_output_ranks(units)
+            return
+
+
+def _refresh_output_ranks(units: list[dict]) -> None:
+    if not any("output_rank" in unit for unit in units):
+        return
+    for rank, unit in enumerate(units, start=1):
+        unit["output_rank"] = rank
+
+
 def _complete_source_binding(scenario: dict, target: str) -> None:
     packet = scenario.setdefault("evidence_packet", {})
     units = packet.setdefault("output_units", [])
@@ -165,6 +190,22 @@ def _complete_source_binding(scenario: dict, target: str) -> None:
                 "locators": ["repair-locator-1"],
             }
         )
+    existing_sources = {source_id for unit in units for source_id in unit.get("source_ids", [])}
+    authority_sets = scenario.get("authority_sets", {})
+    required_sources = list(authority_sets.get("retrieved_high_authority") or []) + list(
+        authority_sets.get("retrieved_counter_or_limiting") or []
+    )
+    for source_id in required_sources:
+        if source_id in existing_sources:
+            continue
+        unit = {
+            "id": f"repair-unit-{len(units) + 1}",
+            "claim": "Repair-frontier source-bound authority unit.",
+            "source_ids": [source_id],
+            "locators": [f"{source_id}-locator"],
+        }
+        units.append(unit)
+        existing_sources.add(source_id)
     for index, unit in enumerate(units, start=1):
         unit.setdefault("id", f"repair-unit-{index}")
         if not unit.get("source_ids"):
@@ -196,6 +237,22 @@ def _complete_source_binding(scenario: dict, target: str) -> None:
             unit["locators"].append(link["locator"])
         link["supports_claim"] = True
         link["source_tag"] = "official_source"
+    linked_pairs = {(link.get("unit_id"), link.get("source_id")) for link in links}
+    for unit in units:
+        for source_id in unit.get("source_ids", []):
+            pair = (unit["id"], source_id)
+            if pair in linked_pairs:
+                continue
+            links.append(
+                {
+                    "unit_id": unit["id"],
+                    "source_id": source_id,
+                    "locator": unit["locators"][0],
+                    "supports_claim": True,
+                    "source_tag": "official_source",
+                }
+            )
+            linked_pairs.add(pair)
     scenario["source_binding_validation"] = {
         "all_links_source_bound": True,
         "high_authority_complete": True,

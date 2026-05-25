@@ -5,7 +5,7 @@ Scenario-regression expectations passed: 10/10
 Mean audit score: 9.00
 Mean upstream recall: 1.00
 High-upstream-performance but procedurally blocked scenarios: 10
-Blocked reason distribution: source_attribution_gap: 10
+Blocked reason distribution: ranking_drift: 1, source_attribution_gap: 10
 
 ## Allowed Status Distribution
 
@@ -18,7 +18,7 @@ Blocked reason distribution: source_attribution_gap: 10
 | Scenario | Profile | Claimed | Allowed | Score | Upstream recall | CAR | Authority coverage | Evidence fidelity | Source tags | Procedural tags | Disposition |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | codex55-eu-01 | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
-| codex55-eu-02 | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| codex55-eu-02 | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
 | codex55-eu-03 | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
 | codex55-eu-04 | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
 | codex55-uk-01 | common_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |

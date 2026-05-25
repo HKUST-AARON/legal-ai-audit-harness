@@ -83,16 +83,16 @@
         "locators": ["1 BvR 276/17"]
       },
       {
-        "id": "unit-3",
-        "claim": "Google Spain is a Court of Justice authority that should be visible for EU right-to-be-forgotten analysis.",
-        "source_ids": ["google-spain-c-131-12"],
-        "locators": ["Case C-131/12"]
-      },
-      {
         "id": "unit-4",
         "claim": "EU Charter and Basic Law materials are limiting materials because review depends on whether the relevant law is fully harmonized or open to domestic constitutional standards.",
         "source_ids": ["charter-articles-7-8-11-16", "basic-law-personality-expression-balance"],
         "locators": ["Articles 7, 8, 11 and 16 CFR", "Articles 1, 2 and 5 GG"]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Google Spain is a Court of Justice authority that should be visible for EU right-to-be-forgotten analysis.",
+        "source_ids": ["google-spain-c-131-12"],
+        "locators": ["Case C-131/12"]
       }
     ],
     "output_links": [

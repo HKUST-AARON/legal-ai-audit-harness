@@ -13,9 +13,9 @@
     "retrieved": [
       "gdpr-art-15",
       "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-15-4",
       "cjeu-c-487-21-crif",
-      "gdpr-art-12-5",
-      "gdpr-art-15-4"
+      "gdpr-art-12-5"
     ],
     "retrieved_counter_or_limiting": [
       "gdpr-art-12-5",
@@ -47,22 +47,22 @@
         "unit_id": "rank-02"
       },
       {
-        "locator": "Case C-487/21",
-        "source_id": "cjeu-c-487-21-crif",
+        "locator": "GDPR Article 15(4)",
+        "source_id": "gdpr-art-15-4",
         "source_tag": "official_source",
         "supports_claim": true,
         "unit_id": "rank-03"
       },
       {
-        "locator": "GDPR Article 12(5)",
-        "source_id": "gdpr-art-12-5",
+        "locator": "Case C-487/21",
+        "source_id": "cjeu-c-487-21-crif",
         "source_tag": "official_source",
         "supports_claim": true,
         "unit_id": "rank-04"
       },
       {
-        "locator": "GDPR Article 15(4)",
-        "source_id": "gdpr-art-15-4",
+        "locator": "GDPR Article 12(5)",
+        "source_id": "gdpr-art-12-5",
         "source_tag": "official_source",
         "supports_claim": true,
         "unit_id": "rank-05"
@@ -92,36 +92,36 @@
         ]
       },
       {
-        "claim": "Issue-specific public output rank 3 makes this material visible: \u00d6sterreichische Datenschutzbeh\u00f6rde and CRIF",
+        "claim": "Issue-specific public output rank 3 makes this material visible: Regulation (EU) 2016/679 Article 15(4)",
         "id": "rank-03",
+        "locators": [
+          "GDPR Article 15(4)"
+        ],
+        "output_rank": 3,
+        "source_ids": [
+          "gdpr-art-15-4"
+        ]
+      },
+      {
+        "claim": "Issue-specific public output rank 4 makes this material visible: \u00d6sterreichische Datenschutzbeh\u00f6rde and CRIF",
+        "id": "rank-04",
         "locators": [
           "Case C-487/21"
         ],
-        "output_rank": 3,
+        "output_rank": 4,
         "source_ids": [
           "cjeu-c-487-21-crif"
         ]
       },
       {
-        "claim": "Issue-specific public output rank 4 makes this material visible: Regulation (EU) 2016/679 Article 12(5)",
-        "id": "rank-04",
+        "claim": "Issue-specific public output rank 5 makes this material visible: Regulation (EU) 2016/679 Article 12(5)",
+        "id": "rank-05",
         "locators": [
           "GDPR Article 12(5)"
         ],
-        "output_rank": 4,
-        "source_ids": [
-          "gdpr-art-12-5"
-        ]
-      },
-      {
-        "claim": "Issue-specific public output rank 5 makes this material visible: Regulation (EU) 2016/679 Article 15(4)",
-        "id": "rank-05",
-        "locators": [
-          "GDPR Article 15(4)"
-        ],
         "output_rank": 5,
         "source_ids": [
-          "gdpr-art-15-4"
+          "gdpr-art-12-5"
         ]
       }
     ],

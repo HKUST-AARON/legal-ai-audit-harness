@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -60,11 +62,14 @@ def _checks(payload: dict) -> list[dict]:
         "jurisdiction_mutations_passed": jurisdiction["passed_count"],
         "jurisdiction_qualified": jurisdiction["qualified_status_count"],
         "ranking": units["ranking_visibility_checks"],
+        "ranking_window": units["ranking_visibility_window_checks"],
         "ranking_counterfactuals": units["ranking_visibility_counterfactuals"],
         "ranking_passed": ranking["rank_order_passed_count"],
         "ranking_eligible": ranking["eligible_packet_count"],
+        "ranking_front_window": ranking["front_window_packet_count"],
         "ranking_visible": ranking["front_window_counter_visible"],
         "ranking_drifted_visible": ranking["counterfactual_front_window_counter_visible"],
+        "ranking_median": ranking["median_first_counter_rank"],
         "certificate_checks": units["status_certificate_replay_checks"],
         "certificate_count": certificate["certificate_count"],
         "certificates_verified": certificate["verified_certificate_count"],
@@ -77,6 +82,7 @@ def _checks(payload: dict) -> list[dict]:
         "transcript_total": units["model_output_transcript_locator_checks"],
         "metric_high_recall_blocked": metric["high_recall_blocked"]["count"],
         "metric_high_recall_total": metric["high_recall_blocked"]["denominator"],
+        "pdf_pages": _pdf_page_count(ROOT / "manuscript" / "ai_law_case_recommendation_verifiability.pdf"),
     }
     expectations = [
         ("ARTIFACT.md", f"- {values['suite_count']} validation suites"),
@@ -89,22 +95,22 @@ def _checks(payload: dict) -> list[dict]:
         ("ARTIFACT.md", f"- {values['gate_passed']}/{values['gate']} gate-ablation evaluations passed"),
         ("ARTIFACT.md", f"- {values['repairable']}/{values['blocked_claims']} blocked procedural claims repairable across {_comma(values['repair'])} repair-frontier evaluations"),
         ("ARTIFACT.md", f"- {values['jurisdiction_supported']}/{values['jurisdiction_profile_checks']} jurisdiction-profile checks and {values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']} profile mutations passed"),
-        ("ARTIFACT.md", f"- {values['ranking']} ranking-visibility diagnostic checks"),
+        ("ARTIFACT.md", f"- {values['ranking_window']} rank-window visibility checks over {values['ranking']} high-status claims"),
         ("ARTIFACT.md", f"- {values['ranking_passed']}/{values['ranking_counterfactuals']} rank-order visibility counterfactuals downgraded with coverage preserved"),
         ("ARTIFACT.md", f"- {_comma(values['certificate_passed'])}/{_comma(values['certificate_checks'])} status-certificate replay checks passed over {values['certificate_count']} certificates"),
         ("ARTIFACT.md", f"- {values['expected_passed']}/{values['expected_total']} scenario-regression expectations passed"),
         ("ARTIFACT.md", f"- {values['source_verified']}/{values['source_total']} public source-text anchors verified"),
         ("ARTIFACT.md", f"- {values['transcript_verified']}/{values['transcript_total']} raw model-output transcript locators verified"),
-        ("ARTIFACT.md", "The expected manuscript build is 33 pages"),
+        ("ARTIFACT.md", f"The expected manuscript build is {values['pdf_pages']} pages"),
         ("README.md", f"230 scenario files containing {values['embedded']} embedded records/items"),
         ("README.md", f"{_comma(values['formal'])} formal invariant checks"),
-        ("README.md", f"{values['metric']} metric-separation evaluations, {_comma(values['metric_resamples'])} metric statistical resamples, {values['gate']} gate-ablation evaluations, {_comma(values['repair'])} repair-frontier evaluations, {values['jurisdiction']} jurisdiction-profile checks, {values['ranking']} ranking-visibility diagnostic checks, {values['ranking_counterfactuals']} rank-order counterfactuals and {_comma(values['certificate_checks'])} status-certificate replay checks"),
+        ("README.md", f"{values['metric']} metric-separation evaluations, {_comma(values['metric_resamples'])} metric statistical resamples, {values['gate']} gate-ablation evaluations, {_comma(values['repair'])} repair-frontier evaluations, {values['jurisdiction']} jurisdiction-profile checks, {values['ranking_window']} rank-window visibility checks, {values['ranking_counterfactuals']} rank-order counterfactuals and {_comma(values['certificate_checks'])} status-certificate replay checks"),
         ("README.md", f"| Metric separation analysis | {values['metric']} |"),
         ("README.md", f"| Metric statistical robustness | {values['metric_resamples']} |"),
         ("README.md", f"| Qualified-output gate ablations | {values['gate']} |"),
         ("README.md", f"| Blocked-claim repair frontiers | {values['repair']} |"),
         ("README.md", f"| Jurisdiction-profile mutations | {values['jurisdiction']} |"),
-        ("README.md", f"| Ranking-visibility diagnostics | {values['ranking']} |"),
+        ("README.md", f"| Ranking-visibility diagnostics | {values['ranking_window']} |"),
         ("README.md", f"| Status certificate replay | {values['certificate_checks']} |"),
         ("README.md", "python scripts/run_gate_ablation_analysis.py"),
         ("README.md", "python scripts/run_repair_frontier_analysis.py"),
@@ -127,7 +133,7 @@ def _checks(payload: dict) -> list[dict]:
         ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['metric_bootstrap'])} metric bootstrap resamples, {_comma(values['metric_permutation'])} metric permutation shuffles"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['repairable']}/{values['blocked_claims']} blocked procedural claims repairable across {_comma(values['repair'])} repair-frontier evaluations"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['jurisdiction_supported']}/{values['jurisdiction_profile_checks']} jurisdiction-profile checks, {values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']} profile mutations"),
-        ("skills/legal-ai-audit-harness/SKILL.md", f"{values['ranking']} ranking-visibility diagnostic checks"),
+        ("skills/legal-ai-audit-harness/SKILL.md", f"{values['ranking_window']} rank-window visibility checks over {values['ranking']} high-status claims"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['ranking_passed']}/{values['ranking_counterfactuals']} rank-order counterfactuals"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['certificates_verified']}/{values['certificate_count']} status certificates verified, {_comma(values['certificate_passed'])}/{_comma(values['certificate_checks'])} replay checks"),
         ("skills/legal-ai-audit-harness/SKILL.md", "python scripts/run_gate_ablation_analysis.py"),
@@ -145,14 +151,15 @@ def _checks(payload: dict) -> list[dict]:
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"across {values['blocked_claims']} blocked high-status claims"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['jurisdiction_supported']}/{values['jurisdiction_profile_checks']} profile checks"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']} profile mutations"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['ranking']} ranking-visibility diagnostic checks"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['ranking_window']} rank-window visibility checks"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['ranking_counterfactuals']} rank-order visibility counterfactuals"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"top-3 counter-material visibility was {values['ranking_visible']}/{values['ranking_eligible']}"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"top-3 counter-material visibility was {values['ranking_visible']}/{values['ranking_front_window']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"drifted top-3 counter-material visibility was {values['ranking_drifted_visible']}/{values['ranking_counterfactuals']}"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"median first counter-material rank was {values['ranking_median']:.1f}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Qualified-output gate ablations & {values['gate']} ablations & {values['gate_passed']}/{values['gate']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Blocked-claim repair frontiers & {_comma(values['repair'])} counterfactuals & {values['repairable']}/{values['blocked_claims']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Jurisdiction-profile mutations & {values['jurisdiction']} checks & {values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']}"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Ranking-visibility diagnostics & {values['ranking']} checks / {values['ranking_counterfactuals']} counterfactuals & {values['ranking_passed']}/{values['ranking_counterfactuals']}"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Ranking-visibility diagnostics & {values['ranking_window']} window checks / {values['ranking_counterfactuals']} counterfactuals & {values['ranking_passed']}/{values['ranking_counterfactuals']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Status certificate replay & {_comma(values['certificate_checks'])} checks & {_comma(values['certificate_passed'])}/{_comma(values['certificate_checks'])}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Validation suites: {values['suite_count']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Scenario files: {values['scenario_files']}"),
@@ -160,7 +167,7 @@ def _checks(payload: dict) -> list[dict]:
         ("experiments/full_validation/results/full_validation_report.md", f"Gate ablation evaluations: {values['gate_passed']}/{values['gate']} passed over {values['qualified']} qualified packets"),
         ("experiments/full_validation/results/full_validation_report.md", f"Repair frontier evaluations: {values['repairable']}/{values['blocked_claims']} blocked claims repairable across {values['repair']} counterfactual repairs"),
         ("experiments/full_validation/results/full_validation_report.md", f"Jurisdiction-profile evaluations: {values['jurisdiction_supported']}/{values['jurisdiction_profile_checks']} profile checks supported; {values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']} counterfactual mutations passed"),
-        ("experiments/full_validation/results/full_validation_report.md", f"Ranking-visibility checks: {values['ranking']} high-status diagnostics; {values['ranking_passed']}/{values['ranking_counterfactuals']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {values['ranking_visible']}/{values['ranking_eligible']}; drifted top-3 counter visible {values['ranking_drifted_visible']}/{values['ranking_counterfactuals']}"),
+        ("experiments/full_validation/results/full_validation_report.md", f"Ranking-visibility checks: {values['ranking_window']} rank-window checks over {values['ranking']} high-status claims; {values['ranking_passed']}/{values['ranking_counterfactuals']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {values['ranking_visible']}/{values['ranking_front_window']}; drifted top-3 counter visible {values['ranking_drifted_visible']}/{values['ranking_counterfactuals']}; median first counter rank {values['ranking_median']:.1f}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Status certificate replay checks: {values['certificate_passed']}/{values['certificate_checks']} passed over {values['certificate_count']} certificates"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metric separation evaluations: {values['metric']} upstream-metric scenario packets; high-recall blocked outputs {values['metric_high_recall_blocked']}/{values['metric_high_recall_total']}"),
     ]
@@ -168,11 +175,56 @@ def _checks(payload: dict) -> list[dict]:
     for path, expected in expectations:
         text = (ROOT / path).read_text(encoding="utf-8")
         checks.append({"path": path, "expected": expected, "passed": expected in text})
+    checks.extend(_forbidden_checks())
+    return checks
+
+
+def _forbidden_checks() -> list[dict]:
+    forbidden = [
+        "62,497",
+        "62,641",
+        "64,996",
+        "2,236",
+        "3,886",
+        "174 rank-window",
+        "46 high-status packets",
+        "214 high-status packets",
+        "11/11 rank-order",
+        "11 rank-order visibility counterfactuals",
+        "top-3 counter-material visibility was 31/41",
+        "33 pages",
+    ]
+    paths = [
+        "ARTIFACT.md",
+        "README.md",
+        "docs/paper_mapping.md",
+        "skills/legal-ai-audit-harness/SKILL.md",
+        "manuscript/ai_law_case_recommendation_verifiability.tex",
+    ]
+    checks = []
+    for path in paths:
+        text = (ROOT / path).read_text(encoding="utf-8")
+        for item in forbidden:
+            checks.append({"path": path, "expected": f"absence of stale claim `{item}`", "passed": item not in text})
     return checks
 
 
 def _comma(value: int) -> str:
     return f"{value:,}"
+
+
+def _pdf_page_count(path: Path) -> int:
+    completed = subprocess.run(["pdfinfo", str(path)], check=False, capture_output=True, text=True)
+    if completed.returncode == 0:
+        for line in completed.stdout.splitlines():
+            if line.startswith("Pages:"):
+                return int(line.split(":", 1)[1].strip())
+    log = path.with_suffix(".log")
+    if log.exists():
+        match = re.search(r"Output written on .+ \((\d+) pages", log.read_text(encoding="utf-8", errors="ignore"))
+        if match:
+            return int(match.group(1))
+    return 0
 
 
 def _format_report(payload: dict) -> str:

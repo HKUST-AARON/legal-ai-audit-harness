@@ -1,18 +1,76 @@
 # Ranking Visibility Analysis
 
-Eligible high-status packets: 41
-Ranking-visibility diagnostics: 41 high-status packets
-Rank-order counterfactuals: 11/11 downgraded with coverage preserved
-Counter-material visible in top 3: 31/41
-Counter-material outside top 3: 10/41
-Counterfactual top-window counter-material visible: 0/11
-Rank-order interventions applied: 11/41
+Eligible high-status claims: 214
+Ranking-visibility diagnostics: 214 high-status claims and 820 rank-window checks
+First counter-material rank distribution: 1: 14, 2: 56, 3: 102, 4: 9
+Median first counter-material rank: 3.0; mean reciprocal rank: 0.43
+Baseline rank-drift caps: 9/214
+Rank-order counterfactuals: 70/70 downgraded with coverage preserved
+Counter-material visible in top 3: 167/201
+Counter-material outside top 3: 34/201
+Counterfactual top-window counter-material visible: 0/70
+Rank-order interventions applied: 70/214
+
+| Window | Eligible packets | Counter visible | Counter not visible | Visible ratio |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 214 | 14 | 200 | 0.07 |
+| 2 | 207 | 70 | 137 | 0.34 |
+| 3 | 201 | 167 | 34 | 0.83 |
+| 4 | 198 | 173 | 25 | 0.87 |
 
 | Scenario | Suite | Base | Drifted | CAR preserved | Authority preserved | Top-window counter | Drifted top-window counter |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
-| issue-public-output-eu-official-gdpr-article15 | issue_public_outputs | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| civil-law-statutory-interpretation | stress_tests | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| court-authority-report | stress_tests | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| decision-support-ready | stress_tests | decision_support_reason | n/a | n/a | n/a | False | False |
+| grounded-output-summary | stress_tests | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| high-coverage-uncontestable-output | stress_tests | no_external_legal_effect | n/a | n/a | n/a | False | False |
+| odr-authorized-review | stress_tests | decision_support_reason | n/a | n/a | n/a | False | False |
+| issue-public-output-eu-official-gdpr-article15 | issue_public_outputs | normative_material_screening_output | reference_information | True | True | True | False |
+| issue-public-output-uk-tna-fairchild-mesothelioma | issue_public_outputs | reference_information | n/a | n/a | n/a | False | False |
+| issue-public-output-us-courtlistener-loper-bright | issue_public_outputs | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-canada-vavilov-standard-of-review-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-canada-vavilov-standard-of-review-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-canada-vavilov-standard-of-review-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-canada-vavilov-standard-of-review-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-canada-vavilov-standard-of-review-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-canada-vavilov-standard-of-review-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-eu-gdpr-article15-access-rights-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-eu-gdpr-article15-access-rights-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-eu-gdpr-article15-access-rights-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-eu-gdpr-article15-access-rights-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-eu-gdpr-article15-access-rights-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-eu-gdpr-article15-access-rights-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-germany-right-to-be-forgotten-review-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-germany-right-to-be-forgotten-review-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-germany-right-to-be-forgotten-review-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-germany-right-to-be-forgotten-review-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-germany-right-to-be-forgotten-review-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-germany-right-to-be-forgotten-review-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-uk-mesothelioma-causation-after-fairchild-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-us-agency-deference-after-loper-bright-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-us-agency-deference-after-loper-bright-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-us-agency-deference-after-loper-bright-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-us-agency-deference-after-loper-bright-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-us-agency-deference-after-loper-bright-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| public-retrieval-us-agency-deference-after-loper-bright-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| codex55-eu-01 | ai_outputs | reference_information | reference_information | True | True | True | False |
+| codex55-eu-02 | ai_outputs | reference_information | n/a | n/a | n/a | False | False |
+| codex55-eu-03 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |
+| codex55-eu-04 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |
+| codex55-uk-01 | ai_outputs | reference_information | reference_information | True | True | True | False |
+| codex55-uk-02 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |
+| codex55-uk-03 | ai_outputs | reference_information | reference_information | True | True | True | False |
+| codex55-us-01 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |
+| codex55-us-02 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |
+| codex55-us-03 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |
 | source-bound-codex55-eu-01 | model_output_repairs | normative_material_screening_output | reference_information | True | True | True | False |
-| source-bound-codex55-eu-02 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-02 | model_output_repairs | normative_material_screening_output | reference_information | True | True | True | False |
 | source-bound-codex55-eu-03 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | source-bound-codex55-eu-04 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | source-bound-codex55-uk-01 | model_output_repairs | normative_material_screening_output | reference_information | True | True | True | False |
@@ -23,31 +81,156 @@ Rank-order interventions applied: 11/41
 | source-bound-codex55-us-03 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-eu-01--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | reference_information | True | True | True | False |
 | evidence-ladder-codex55-eu-01--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | reference_information | True | True | True | False |
-| evidence-ladder-codex55-eu-02--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | False | False |
-| evidence-ladder-codex55-eu-02--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| evidence-ladder-codex55-eu-01--raw-unverified | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-01--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-01--source-bound-no-counter | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-01--source-bound-no-logging | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-01--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| evidence-ladder-codex55-eu-02--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-02--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-02--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | False | False |
+| evidence-ladder-codex55-eu-02--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-02--source-bound-no-counter | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-02--source-bound-no-logging | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-eu-02--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
 | evidence-ladder-codex55-eu-03--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-eu-03--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-03--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-03--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-03--source-bound-no-counter | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-03--source-bound-no-logging | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-03--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-eu-04--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-eu-04--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-04--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-04--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-04--source-bound-no-counter | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-04--source-bound-no-logging | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-eu-04--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-uk-01--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | reference_information | True | True | True | False |
 | evidence-ladder-codex55-uk-01--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-01--raw-unverified | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-01--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-01--source-bound-no-counter | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-01--source-bound-no-logging | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-01--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
 | evidence-ladder-codex55-uk-02--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-uk-02--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-uk-02--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-uk-02--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-uk-02--source-bound-no-counter | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-uk-02--source-bound-no-logging | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-uk-02--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-uk-03--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | reference_information | True | True | True | False |
 | evidence-ladder-codex55-uk-03--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-03--raw-unverified | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-03--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-03--source-bound-no-counter | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-03--source-bound-no-logging | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |
+| evidence-ladder-codex55-uk-03--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
 | evidence-ladder-codex55-us-01--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-us-01--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-01--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-01--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-01--source-bound-no-counter | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-01--source-bound-no-logging | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-01--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-us-02--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-us-02--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-02--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-02--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-02--source-bound-no-counter | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-02--source-bound-no-logging | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-02--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-us-03--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-us-03--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | n/a | n/a | n/a | True | True |
-| canada-vavilov-standard-of-review | issue_gold_sets | normative_material_screening_output | n/a | n/a | n/a | False | False |
-| eu-gdpr-article15-access-rights | issue_gold_sets | normative_material_screening_output | n/a | n/a | n/a | False | False |
-| germany-right-to-be-forgotten-review | issue_gold_sets | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| evidence-ladder-codex55-us-03--raw-unverified | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-03--source-bound-no-contestability | model_output_evidence_ladder | professional_support_output | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-03--source-bound-no-counter | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-03--source-bound-no-logging | model_output_evidence_ladder | reference_information | n/a | n/a | n/a | True | True |
+| evidence-ladder-codex55-us-03--unauthorized-external-action | model_output_evidence_ladder | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-01--contradictory-claim | model_output_adversarial | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| source-bound-codex55-eu-01--counter-material-omission | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-eu-01--missing-output-link | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-eu-01--out-of-manifest-source | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-eu-01--unsupported-claim | model_output_adversarial | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| source-bound-codex55-eu-01--wrong-locator | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-eu-02--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-02--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-02--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-02--out-of-manifest-source | model_output_adversarial | reference_information | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-02--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-02--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | False | False |
+| source-bound-codex55-eu-03--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-03--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-03--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-03--out-of-manifest-source | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-eu-03--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-03--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-04--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-04--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-04--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-04--out-of-manifest-source | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-04--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-eu-04--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-01--contradictory-claim | model_output_adversarial | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| source-bound-codex55-uk-01--counter-material-omission | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-01--missing-output-link | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-01--out-of-manifest-source | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-01--unsupported-claim | model_output_adversarial | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| source-bound-codex55-uk-01--wrong-locator | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-02--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-02--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-02--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-02--out-of-manifest-source | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-02--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-02--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-uk-03--contradictory-claim | model_output_adversarial | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| source-bound-codex55-uk-03--counter-material-omission | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-03--missing-output-link | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-03--out-of-manifest-source | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-uk-03--unsupported-claim | model_output_adversarial | no_external_legal_effect | no_external_legal_effect | True | True | True | False |
+| source-bound-codex55-uk-03--wrong-locator | model_output_adversarial | reference_information | reference_information | True | True | True | False |
+| source-bound-codex55-us-01--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-01--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-01--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-01--out-of-manifest-source | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-01--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-01--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-02--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-02--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-02--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-02--out-of-manifest-source | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-02--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-02--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-03--contradictory-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-03--counter-material-omission | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-03--missing-output-link | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-03--out-of-manifest-source | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-03--unsupported-claim | model_output_adversarial | no_external_legal_effect | n/a | n/a | n/a | True | True |
+| source-bound-codex55-us-03--wrong-locator | model_output_adversarial | reference_information | n/a | n/a | n/a | True | True |
+| canada-vavilov-standard-of-review | issue_gold_sets | normative_material_screening_output | reference_information | True | True | True | False |
+| eu-gdpr-article15-access-rights | issue_gold_sets | normative_material_screening_output | reference_information | True | True | True | False |
+| germany-right-to-be-forgotten-review | issue_gold_sets | normative_material_screening_output | reference_information | True | True | True | False |
 | uk-mesothelioma-causation-after-fairchild | issue_gold_sets | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | us-agency-deference-after-loper-bright | issue_gold_sets | normative_material_screening_output | reference_information | True | True | True | False |
-| canada-vavilov-standard-of-review-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | n/a | n/a | n/a | False | False |
-| eu-gdpr-article15-access-rights-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | n/a | n/a | n/a | False | False |
-| germany-right-to-be-forgotten-review-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | n/a | n/a | n/a | False | False |
+| canada-vavilov-standard-of-review-counter-material-suppressed | issue_ablations | reference_information | reference_information | True | True | True | False |
+| canada-vavilov-standard-of-review-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | reference_information | True | True | True | False |
+| canada-vavilov-standard-of-review-missing-high-authority | issue_ablations | reference_information | n/a | n/a | n/a | True | True |
+| canada-vavilov-standard-of-review-unverified-source-tags | issue_ablations | reference_information | reference_information | True | True | True | False |
+| eu-gdpr-article15-access-rights-counter-material-suppressed | issue_ablations | reference_information | reference_information | True | True | True | False |
+| eu-gdpr-article15-access-rights-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | reference_information | True | True | True | False |
+| eu-gdpr-article15-access-rights-missing-high-authority | issue_ablations | reference_information | n/a | n/a | n/a | True | True |
+| eu-gdpr-article15-access-rights-unverified-source-tags | issue_ablations | reference_information | reference_information | True | True | True | False |
+| germany-right-to-be-forgotten-review-counter-material-suppressed | issue_ablations | reference_information | reference_information | True | True | True | False |
+| germany-right-to-be-forgotten-review-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | reference_information | True | True | True | False |
+| germany-right-to-be-forgotten-review-missing-high-authority | issue_ablations | reference_information | n/a | n/a | n/a | True | True |
+| germany-right-to-be-forgotten-review-unverified-source-tags | issue_ablations | reference_information | reference_information | True | True | True | False |
+| uk-mesothelioma-causation-after-fairchild-counter-material-suppressed | issue_ablations | reference_information | n/a | n/a | n/a | True | True |
 | uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| uk-mesothelioma-causation-after-fairchild-missing-high-authority | issue_ablations | reference_information | n/a | n/a | n/a | True | True |
+| uk-mesothelioma-causation-after-fairchild-unverified-source-tags | issue_ablations | reference_information | n/a | n/a | n/a | True | True |
+| us-agency-deference-after-loper-bright-counter-material-suppressed | issue_ablations | reference_information | reference_information | True | True | True | False |
 | us-agency-deference-after-loper-bright-decision-reason-without-adoption | issue_ablations | normative_material_screening_output | reference_information | True | True | True | False |
+| us-agency-deference-after-loper-bright-missing-high-authority | issue_ablations | reference_information | n/a | n/a | n/a | False | False |
+| us-agency-deference-after-loper-bright-unverified-source-tags | issue_ablations | reference_information | reference_information | True | True | True | False |

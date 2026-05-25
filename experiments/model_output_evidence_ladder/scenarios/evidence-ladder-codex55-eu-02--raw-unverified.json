@@ -171,7 +171,7 @@
   },
   "failure_flags": [],
   "expected_allowed_status": "reference_information",
-  "expected_disposition": "downgrade",
+  "expected_disposition": "suspension",
   "evidence_ladder_step": {
     "source_model_output": "codex55-eu-02",
     "step": "raw-unverified",

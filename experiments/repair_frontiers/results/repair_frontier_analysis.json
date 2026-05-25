@@ -1,20 +1,21 @@
 {
   "blocked_claim_count": 176,
-  "counterfactual_evaluation_count": 2236,
+  "counterfactual_evaluation_count": 4418,
   "minimal_repair_gate_frequency": {
     "audit_vector_completion": 33,
     "authority_packet_completion": 65,
     "decision_adoption_completion": 15,
     "failure_flag_resolution": 3,
+    "rank_salience_completion": 37,
     "review_contestability_completion": 20,
     "role_cap_completion": 20,
-    "source_binding_completion": 133
+    "source_binding_completion": 146
   },
   "minimal_repair_size_distribution": {
-    "1": 118,
-    "2": 44,
-    "3": 13,
-    "4": 1
+    "1": 100,
+    "2": 34,
+    "3": 39,
+    "4": 3
   },
   "repairable_count": 176,
   "results": [
@@ -26,9 +27,9 @@
         "invalid_authority",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 98,
       "full_repair_status": null,
-      "minimal_repair_size": 3,
+      "minimal_repair_size": 4,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
@@ -36,7 +37,8 @@
           "gates": [
             "audit_vector_completion",
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -52,7 +54,7 @@
         "contestation_failure",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -78,7 +80,7 @@
         "authority_omission",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -106,7 +108,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 56,
+      "counterfactual_evaluations": 98,
       "full_repair_status": null,
       "minimal_repair_size": 4,
       "minimal_repairs": [
@@ -134,16 +136,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -160,16 +163,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -185,15 +189,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -209,15 +215,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -232,15 +240,17 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -256,15 +266,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -280,15 +292,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -303,15 +317,17 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -327,7 +343,7 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -351,7 +367,7 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -375,7 +391,7 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -399,7 +415,7 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -423,7 +439,7 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -447,7 +463,7 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -472,16 +488,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -498,16 +515,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -524,16 +542,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -550,16 +569,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -576,16 +596,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -602,16 +623,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -627,15 +649,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -651,15 +675,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -675,15 +701,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -699,15 +727,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -723,15 +753,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -747,15 +779,17 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -772,16 +806,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -798,16 +833,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -824,16 +860,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -850,7 +887,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -876,16 +913,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -902,16 +940,17 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -926,7 +965,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -954,19 +993,21 @@
     },
     {
       "base_allowed_status": "reference_information",
-      "base_disposition": "downgrade",
+      "base_disposition": "suspension",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "source_binding_completion",
+            "rank_salience_completion",
             "review_contestability_completion"
           ]
         },
@@ -975,6 +1016,7 @@
           "disposition": "none",
           "gates": [
             "source_binding_completion",
+            "rank_salience_completion",
             "role_cap_completion"
           ]
         }
@@ -990,7 +1032,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1022,7 +1064,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1054,7 +1096,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1086,7 +1128,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1118,7 +1160,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1150,7 +1192,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1182,7 +1224,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1214,7 +1256,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1246,7 +1288,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1276,7 +1318,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1300,7 +1342,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1322,7 +1364,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1345,7 +1387,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1364,19 +1406,21 @@
     },
     {
       "base_allowed_status": "reference_information",
-      "base_disposition": "downgrade",
+      "base_disposition": "suspension",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 2,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
             "source_binding_completion",
+            "rank_salience_completion",
             "review_contestability_completion"
           ]
         },
@@ -1385,6 +1429,7 @@
           "disposition": "none",
           "gates": [
             "source_binding_completion",
+            "rank_salience_completion",
             "role_cap_completion"
           ]
         }
@@ -1398,7 +1443,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1422,7 +1467,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1444,7 +1489,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1467,7 +1512,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1490,7 +1535,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1520,7 +1565,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1544,7 +1589,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1566,7 +1611,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1589,7 +1634,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1612,7 +1657,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1642,7 +1687,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1666,7 +1711,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1688,7 +1733,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1711,7 +1756,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1734,7 +1779,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1764,7 +1809,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1788,7 +1833,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1810,7 +1855,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1833,7 +1878,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1856,7 +1901,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1886,7 +1931,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1910,7 +1955,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -1932,7 +1977,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1955,7 +2000,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -1978,7 +2023,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2008,7 +2053,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2032,7 +2077,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2054,7 +2099,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2077,7 +2122,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2100,7 +2145,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2130,7 +2175,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2154,7 +2199,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2176,7 +2221,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2199,7 +2244,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2222,7 +2267,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2252,7 +2297,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2276,7 +2321,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2298,7 +2343,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2321,7 +2366,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2344,7 +2389,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2374,7 +2419,7 @@
       "base_allowed_status": "professional_support_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2398,7 +2443,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 21,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
       "minimal_repair_size": 2,
       "minimal_repairs": [
@@ -2420,7 +2465,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2443,7 +2488,7 @@
       "base_failure_flags": [
         "unauthorized_action"
       ],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2467,7 +2512,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2491,7 +2536,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -2516,7 +2561,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2539,7 +2584,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2563,7 +2608,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2586,7 +2631,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2607,18 +2652,20 @@
       "base_allowed_status": "no_external_legal_effect",
       "base_disposition": "withdrawal",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -2632,11 +2679,12 @@
       "base_disposition": "suspension",
       "base_failure_flags": [
         "counter_material_suppression",
+        "ranking_drift",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 98,
       "full_repair_status": null,
-      "minimal_repair_size": 3,
+      "minimal_repair_size": 4,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
@@ -2644,7 +2692,8 @@
           "gates": [
             "audit_vector_completion",
             "authority_packet_completion",
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -2655,19 +2704,21 @@
     },
     {
       "base_allowed_status": "reference_information",
-      "base_disposition": "downgrade",
+      "base_disposition": "suspension",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -2678,19 +2729,21 @@
     },
     {
       "base_allowed_status": "reference_information",
-      "base_disposition": "downgrade",
+      "base_disposition": "suspension",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -2703,18 +2756,20 @@
       "base_allowed_status": "no_external_legal_effect",
       "base_disposition": "withdrawal",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -2725,19 +2780,21 @@
     },
     {
       "base_allowed_status": "reference_information",
-      "base_disposition": "downgrade",
+      "base_disposition": "suspension",
       "base_failure_flags": [
+        "ranking_drift",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "source_binding_completion"
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -2753,7 +2810,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2777,7 +2834,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -2802,7 +2859,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2825,7 +2882,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2849,7 +2906,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2872,7 +2929,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2896,7 +2953,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2920,7 +2977,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -2945,7 +3002,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2968,7 +3025,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -2992,7 +3049,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3015,7 +3072,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3039,7 +3096,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3063,7 +3120,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -3088,7 +3145,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3111,7 +3168,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3135,7 +3192,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3158,7 +3215,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3182,7 +3239,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3206,7 +3263,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -3231,7 +3288,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3254,7 +3311,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3278,7 +3335,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3301,7 +3358,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3325,7 +3382,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3349,7 +3406,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -3374,7 +3431,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3397,7 +3454,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3421,7 +3478,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3444,7 +3501,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3468,7 +3525,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3492,7 +3549,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -3517,7 +3574,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3540,7 +3597,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3564,7 +3621,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3587,7 +3644,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3611,7 +3668,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3635,7 +3692,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -3660,7 +3717,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3683,7 +3740,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3707,7 +3764,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3730,7 +3787,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3754,7 +3811,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3778,7 +3835,7 @@
         "counter_material_suppression",
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 41,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
       "minimal_repair_size": 3,
       "minimal_repairs": [
@@ -3803,7 +3860,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3826,7 +3883,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3850,7 +3907,7 @@
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3873,7 +3930,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3896,7 +3953,7 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3917,7 +3974,7 @@
       "base_allowed_status": "normative_material_screening_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3940,7 +3997,7 @@
       "base_failure_flags": [
         "authority_omission"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3963,7 +4020,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -3986,7 +4043,7 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4007,7 +4064,7 @@
       "base_allowed_status": "normative_material_screening_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4030,7 +4087,7 @@
       "base_failure_flags": [
         "authority_omission"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4053,7 +4110,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4076,7 +4133,7 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4097,7 +4154,7 @@
       "base_allowed_status": "normative_material_screening_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4120,7 +4177,7 @@
       "base_failure_flags": [
         "authority_omission"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4143,7 +4200,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4166,7 +4223,7 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4187,7 +4244,7 @@
       "base_allowed_status": "normative_material_screening_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4210,7 +4267,7 @@
       "base_failure_flags": [
         "authority_omission"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4233,7 +4290,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4256,7 +4313,7 @@
       "base_failure_flags": [
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4277,7 +4334,7 @@
       "base_allowed_status": "normative_material_screening_output",
       "base_disposition": "none",
       "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "counterfactual_evaluations": 8,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [
@@ -4298,17 +4355,20 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "suspension",
       "base_failure_flags": [
-        "authority_omission"
+        "authority_omission",
+        "ranking_drift"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 63,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 3,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "authority_packet_completion"
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
           ]
         }
       ],
@@ -4323,7 +4383,7 @@
       "base_failure_flags": [
         "source_attribution_gap"
       ],
-      "counterfactual_evaluations": 6,
+      "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
       "minimal_repairs": [

@@ -55,5 +55,5 @@
   },
   "failure_flags": [],
   "expected_allowed_status": "reference_information",
-  "expected_disposition": "downgrade"
+  "expected_disposition": "suspension"
 }

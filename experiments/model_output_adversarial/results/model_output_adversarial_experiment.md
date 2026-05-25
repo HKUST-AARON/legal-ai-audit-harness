@@ -5,7 +5,7 @@ Scenario-regression expectations passed: 60/60
 Mean audit score: 8.83
 Mean upstream recall: 1.00
 High-upstream-performance but procedurally blocked scenarios: 60
-Blocked reason distribution: counter_material_suppression: 10, source_attribution_gap: 60, summary_distortion: 20
+Blocked reason distribution: counter_material_suppression: 10, ranking_drift: 6, source_attribution_gap: 60, summary_distortion: 20
 
 ## Allowed Status Distribution
 
@@ -26,10 +26,10 @@ Blocked reason distribution: counter_material_suppression: 10, source_attributio
 | source-bound-codex55-eu-01--wrong-locator | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
 | source-bound-codex55-eu-02--contradictory-claim | civil_law | normative_material_screening_output | no_external_legal_effect | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | withdrawal |
 | source-bound-codex55-eu-02--counter-material-omission | civil_law | normative_material_screening_output | reference_information | 8 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
-| source-bound-codex55-eu-02--missing-output-link | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
-| source-bound-codex55-eu-02--out-of-manifest-source | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-codex55-eu-02--missing-output-link | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
+| source-bound-codex55-eu-02--out-of-manifest-source | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
 | source-bound-codex55-eu-02--unsupported-claim | civil_law | normative_material_screening_output | no_external_legal_effect | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | withdrawal |
-| source-bound-codex55-eu-02--wrong-locator | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-codex55-eu-02--wrong-locator | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
 | source-bound-codex55-eu-03--contradictory-claim | civil_law | normative_material_screening_output | no_external_legal_effect | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | withdrawal |
 | source-bound-codex55-eu-03--counter-material-omission | civil_law | normative_material_screening_output | reference_information | 8 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
 | source-bound-codex55-eu-03--missing-output-link | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |

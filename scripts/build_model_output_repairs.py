@@ -2,10 +2,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from audit_harness.model import RANK_SALIENCE_WINDOW
+
 SOURCE = ROOT / "experiments" / "ai_outputs" / "scenarios"
 OUT = ROOT / "experiments" / "model_output_repairs" / "scenarios"
 RESULTS = ROOT / "experiments" / "model_output_repairs" / "results"
@@ -61,12 +66,33 @@ def repair(scenario: dict) -> dict:
         "human_authorization": False,
     }
     if validation["all_links_source_bound"]:
+        if promote_counter_material_salience(repaired):
+            repaired["deployment_context"] += " Rank salience repair moves an existing limiting material into the review window."
         repaired["expected_allowed_status"] = "normative_material_screening_output"
         repaired["expected_disposition"] = "none"
     else:
         repaired["expected_allowed_status"] = "reference_information"
         repaired["expected_disposition"] = "downgrade"
     return repaired
+
+
+def promote_counter_material_salience(scenario: dict) -> bool:
+    authority_sets = scenario.get("authority_sets", {})
+    counter = set(authority_sets.get("retrieved_counter_or_limiting") or authority_sets.get("counter_or_limiting") or [])
+    units = scenario.get("evidence_packet", {}).get("output_units", [])
+    if not counter or len(units) < RANK_SALIENCE_WINDOW:
+        return False
+    if any(counter & set(unit.get("source_ids", [])) for unit in units[:RANK_SALIENCE_WINDOW]):
+        return False
+    for index, unit in enumerate(units[RANK_SALIENCE_WINDOW:], start=RANK_SALIENCE_WINDOW):
+        if counter & set(unit.get("source_ids", [])):
+            units.insert(RANK_SALIENCE_WINDOW - 1, units.pop(index))
+            has_output_rank = any("output_rank" in item for item in units)
+            for rank, item in enumerate(units, start=1):
+                if has_output_rank:
+                    item["output_rank"] = rank
+            return True
+    return False
 
 
 def validate_source_binding(scenario: dict, manifest_path: Path) -> dict:

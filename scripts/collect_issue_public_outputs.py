@@ -168,9 +168,9 @@ def build_eu(downloads: Path, refresh: bool) -> tuple[dict, dict]:
     urls = [
         ("gdpr-art-15", "Regulation (EU) 2016/679 Article 15", "GDPR Article 15", "https://www.legislation.gov.uk/eur/2016/679/article/15/data.html", "eu_gdpr_article15.html"),
         ("cjeu-c-154-21-osterreichische-post", "RW v Österreichische Post AG", "Case C-154/21", "https://curia.europa.eu/juris/liste.jsf?language=en&num=C-154/21", "eu_curia_c154.html"),
+        ("gdpr-art-15-4", "Regulation (EU) 2016/679 Article 15(4)", "GDPR Article 15(4)", "https://www.legislation.gov.uk/eur/2016/679/article/15/data.html", "eu_gdpr_article15.html"),
         ("cjeu-c-487-21-crif", "Österreichische Datenschutzbehörde and CRIF", "Case C-487/21", "https://curia.europa.eu/juris/liste.jsf?language=en&num=C-487/21", "eu_curia_c487.html"),
         ("gdpr-art-12-5", "Regulation (EU) 2016/679 Article 12(5)", "GDPR Article 12(5)", "https://www.legislation.gov.uk/eur/2016/679/article/12/data.html", "eu_gdpr_article12.html"),
-        ("gdpr-art-15-4", "Regulation (EU) 2016/679 Article 15(4)", "GDPR Article 15(4)", "https://www.legislation.gov.uk/eur/2016/679/article/15/data.html", "eu_gdpr_article15.html"),
     ]
     for _, _, _, url, filename in urls:
         fetch(url, downloads / filename, refresh)

@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from audit_harness.model import RANK_SALIENCE_WINDOW
 from scripts.build_model_output_repairs import repair, source_collection_for
 
 SOURCE = ROOT / "experiments" / "ai_outputs" / "scenarios"
@@ -33,7 +34,11 @@ def main() -> int:
                 repaired["expected_disposition"] = "withdrawal"
             else:
                 repaired["expected_allowed_status"] = "reference_information"
-                repaired["expected_disposition"] = "suspension" if attack == "counter_material_omission" else "downgrade"
+                repaired["expected_disposition"] = (
+                    "suspension"
+                    if attack == "counter_material_omission" or counter_material_below_salience_window(repaired)
+                    else "downgrade"
+                )
             (OUT / f"{repaired['id']}.json").write_text(
                 json.dumps(repaired, indent=2, ensure_ascii=False),
                 encoding="utf-8",
@@ -136,6 +141,19 @@ def first_contradiction_pattern(scenario: dict, source_id: str) -> str:
         if patterns:
             return patterns[0]
     return "the cited authority does not support this proposition"
+
+
+def counter_material_below_salience_window(scenario: dict) -> bool:
+    authority_sets = scenario.get("authority_sets", {})
+    counter = set(authority_sets.get("counter_or_limiting") or [])
+    retrieved = set(authority_sets.get("retrieved_counter_or_limiting") or [])
+    units = scenario.get("evidence_packet", {}).get("output_units", [])
+    if not counter or not retrieved or len(units) < RANK_SALIENCE_WINDOW:
+        return False
+    visible = set()
+    for unit in units[:RANK_SALIENCE_WINDOW]:
+        visible.update(unit.get("source_ids") or [])
+    return not bool(visible & counter)
 
 
 if __name__ == "__main__":

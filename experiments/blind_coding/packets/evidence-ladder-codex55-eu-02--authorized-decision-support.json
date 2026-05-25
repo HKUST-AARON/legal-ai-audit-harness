@@ -34,7 +34,7 @@
     "retrieved_invalid_treatments": []
   },
   "claimed_status": "decision_support_reason",
-  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15(3) copy of personal data. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15(3) copy of personal data. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence. Rank salience repair moves an existing limiting material into the review window.",
   "evidence_packet": {
     "output_links": [
       {
@@ -174,16 +174,6 @@
         ]
       },
       {
-        "claim": "C-307/22 FT concerns the first free copy and medical-record personal data.",
-        "id": "unit-3",
-        "locators": [
-          "C-307/22"
-        ],
-        "source_ids": [
-          "cjeu-c-307-22-ft"
-        ]
-      },
-      {
         "claim": "Article 15(4) and Article 12(5) limit the access response.",
         "id": "unit-4",
         "locators": [
@@ -193,6 +183,16 @@
         "source_ids": [
           "gdpr-art-15-4",
           "gdpr-art-12-5"
+        ]
+      },
+      {
+        "claim": "C-307/22 FT concerns the first free copy and medical-record personal data.",
+        "id": "unit-3",
+        "locators": [
+          "C-307/22"
+        ],
+        "source_ids": [
+          "cjeu-c-307-22-ft"
         ]
       }
     ],

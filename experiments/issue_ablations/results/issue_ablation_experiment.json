@@ -634,7 +634,8 @@
       "expected_disposition": "suspension",
       "expected_passed": true,
       "failure_flags": [
-        "authority_omission"
+        "authority_omission",
+        "ranking_drift"
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
@@ -697,6 +698,7 @@
     "blocked_reason_distribution": {
       "authority_omission": 4,
       "counter_material_suppression": 4,
+      "ranking_drift": 1,
       "source_attribution_gap": 5
     },
     "expected_passed": 20,

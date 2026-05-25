@@ -379,7 +379,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
@@ -396,7 +396,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
@@ -1339,7 +1339,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
@@ -1356,7 +1356,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [
             "system_role:disclosed_assistance_tool->max:professional_support_output"
           ],
@@ -6103,7 +6103,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [],
           "scores": {
             "H": 2,
@@ -6118,7 +6118,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [],
           "scores": {
             "H": 2,
@@ -6139,7 +6139,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [],
           "scores": {
             "H": 2,
@@ -6154,7 +6154,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [],
           "scores": {
             "H": 2,
@@ -6211,7 +6211,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_a",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [],
           "scores": {
             "H": 2,
@@ -6226,7 +6226,7 @@
         {
           "allowed_status": "reference_information",
           "coder_id": "coder_b",
-          "disposition": "downgrade",
+          "disposition": "suspension",
           "missing_gates": [],
           "scores": {
             "H": 2,

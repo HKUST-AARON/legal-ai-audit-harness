@@ -6,6 +6,7 @@ from typing import Any
 
 
 DIMENSIONS = ("S", "Q", "H", "K", "T", "L")
+RANK_SALIENCE_WINDOW = 3
 SOURCE_TAGS = {
     "tool_verified",
     "official_source",
@@ -390,9 +391,32 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
             flags.append("source_attribution_gap")
         if external_screening_claimed and _has_nonprocedural_source_tags(scenario["evidence_packet"]):
             flags.append("source_attribution_gap")
+        if external_screening_claimed and _counter_material_below_salience_window(scenario):
+            flags.append("ranking_drift")
     flags.extend(_source_binding_validation_flags(scenario, target_rank))
     flags.extend(_review_gate_flags(scenario, target_rank))
     return flags
+
+
+def _counter_material_below_salience_window(scenario: dict[str, Any]) -> bool:
+    authority_sets = scenario.get("authority_sets", {})
+    counter_material = set(authority_sets.get("counter_or_limiting") or [])
+    retrieved_counter_material = set(authority_sets.get("retrieved_counter_or_limiting") or [])
+    if not counter_material or not retrieved_counter_material:
+        return False
+    units = _ranked_output_units(scenario.get("evidence_packet", {}).get("output_units") or [])
+    if len(units) < RANK_SALIENCE_WINDOW:
+        return False
+    visible_sources: set[str] = set()
+    for unit in units[:RANK_SALIENCE_WINDOW]:
+        visible_sources.update(unit.get("source_ids") or [])
+    return not bool(visible_sources & counter_material)
+
+
+def _ranked_output_units(units: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    if any("output_rank" in unit for unit in units):
+        return sorted(units, key=lambda unit: unit.get("output_rank", len(units) + 1))
+    return units
 
 
 def _required_external_evidence_flags(scenario: dict[str, Any]) -> list[str]:

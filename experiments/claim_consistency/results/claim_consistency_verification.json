@@ -1,5 +1,5 @@
 {
-  "check_count": 84,
+  "check_count": 145,
   "checks": [
     {
       "expected": "- 22 validation suites",
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 62,497 total evaluation rows",
+      "expected": "- 65,528 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -42,7 +42,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations",
+      "expected": "- 176/176 blocked procedural claims repairable across 4,418 repair-frontier evaluations",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -52,12 +52,12 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 41 ranking-visibility diagnostic checks",
+      "expected": "- 820 rank-window visibility checks over 214 high-status claims",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 11/11 rank-order visibility counterfactuals downgraded with coverage preserved",
+      "expected": "- 70/70 rank-order visibility counterfactuals downgraded with coverage preserved",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -82,7 +82,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "The expected manuscript build is 33 pages",
+      "expected": "The expected manuscript build is 34 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -97,7 +97,7 @@
       "path": "README.md"
     },
     {
-      "expected": "185 metric-separation evaluations, 2,000 metric statistical resamples, 288 gate-ablation evaluations, 2,236 repair-frontier evaluations, 355 jurisdiction-profile checks, 41 ranking-visibility diagnostic checks, 11 rank-order counterfactuals and 2,990 status-certificate replay checks",
+      "expected": "185 metric-separation evaluations, 2,000 metric statistical resamples, 288 gate-ablation evaluations, 4,418 repair-frontier evaluations, 355 jurisdiction-profile checks, 820 rank-window visibility checks, 70 rank-order counterfactuals and 2,990 status-certificate replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -117,7 +117,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Blocked-claim repair frontiers | 2236 |",
+      "expected": "| Blocked-claim repair frontiers | 4418 |",
       "passed": true,
       "path": "README.md"
     },
@@ -127,7 +127,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Ranking-visibility diagnostics | 41 |",
+      "expected": "| Ranking-visibility diagnostics | 820 |",
       "passed": true,
       "path": "README.md"
     },
@@ -232,7 +232,7 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations",
+      "expected": "176/176 blocked procedural claims repairable across 4,418 repair-frontier evaluations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -242,12 +242,12 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "41 ranking-visibility diagnostic checks",
+      "expected": "820 rank-window visibility checks over 214 high-status claims",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "11/11 rank-order counterfactuals",
+      "expected": "70/70 rank-order counterfactuals",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -332,22 +332,27 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "41 ranking-visibility diagnostic checks",
+      "expected": "820 rank-window visibility checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "11 rank-order visibility counterfactuals",
+      "expected": "70 rank-order visibility counterfactuals",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "top-3 counter-material visibility was 31/41",
+      "expected": "top-3 counter-material visibility was 167/201",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "drifted top-3 counter-material visibility was 0/11",
+      "expected": "drifted top-3 counter-material visibility was 0/70",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "median first counter-material rank was 3.0",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -357,7 +362,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Blocked-claim repair frontiers & 2,236 counterfactuals & 176/176",
+      "expected": "Blocked-claim repair frontiers & 4,418 counterfactuals & 176/176",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -367,7 +372,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Ranking-visibility diagnostics & 41 checks / 11 counterfactuals & 11/11",
+      "expected": "Ranking-visibility diagnostics & 820 window checks / 70 counterfactuals & 70/70",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -397,7 +402,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Repair frontier evaluations: 176/176 blocked claims repairable across 2236 counterfactual repairs",
+      "expected": "Repair frontier evaluations: 176/176 blocked claims repairable across 4418 counterfactual repairs",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -407,7 +412,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Ranking-visibility checks: 41 high-status diagnostics; 11/11 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 31/41; drifted top-3 counter visible 0/11",
+      "expected": "Ranking-visibility checks: 820 rank-window checks over 214 high-status claims; 70/70 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 167/201; drifted top-3 counter visible 0/70; median first counter rank 3.0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -420,9 +425,309 @@
       "expected": "Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "absence of stale claim `62,497`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `62,641`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `2,236`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `3,886`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `174 rank-window`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `46 high-status packets`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `214 high-status packets`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `11/11 rank-order`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `11 rank-order visibility counterfactuals`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `top-3 counter-material visibility was 31/41`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `33 pages`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `62,497`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `62,641`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `2,236`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `3,886`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `174 rank-window`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `46 high-status packets`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `214 high-status packets`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `11/11 rank-order`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `11 rank-order visibility counterfactuals`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `top-3 counter-material visibility was 31/41`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `33 pages`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `62,497`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `62,641`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `2,236`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `3,886`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `174 rank-window`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `46 high-status packets`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `214 high-status packets`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `11/11 rank-order`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `11 rank-order visibility counterfactuals`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `top-3 counter-material visibility was 31/41`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `33 pages`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `62,497`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `62,641`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `2,236`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `3,886`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `174 rank-window`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `46 high-status packets`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `214 high-status packets`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `11/11 rank-order`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `11 rank-order visibility counterfactuals`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `top-3 counter-material visibility was 31/41`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `33 pages`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `62,497`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `62,641`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `2,236`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `3,886`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `174 rank-window`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `46 high-status packets`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `214 high-status packets`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `11/11 rank-order`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `11 rank-order visibility counterfactuals`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `top-3 counter-material visibility was 31/41`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `33 pages`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     }
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 84
+  "passed_count": 145
 }

@@ -17,9 +17,9 @@
         "median": 0.751412429378531
       },
       "recall_point_biserial": {
-        "high": 0.13951661164838006,
-        "low": -0.08227279255606186,
-        "median": 0.04851331018008224
+        "high": 0.13951661164837972,
+        "low": -0.08227279255606221,
+        "median": 0.048513310180082266
       },
       "recall_threshold_precision": {
         "high": 0.31666666666666665,
@@ -90,6 +90,7 @@
       "contestation_failure": 1,
       "counter_material_suppression": 25,
       "invalid_authority": 1,
+      "ranking_drift": 9,
       "source_attribution_gap": 97,
       "summary_distortion": 21,
       "unauthorized_action": 10
@@ -105,14 +106,14 @@
   "permutation": {
     "iterations": 1000,
     "metric": "recall_point_biserial",
-    "observed_abs": 0.04601049146076604,
+    "observed_abs": 0.046010491460766016,
     "seed": 10506,
     "two_sided_p": 0.5384615384615384
   },
   "point_biserial": {
-    "f1": 0.07937466315340556,
-    "precision": 0.07105330644567431,
-    "recall": 0.04601049146076604
+    "f1": 0.07937466315340543,
+    "precision": 0.07105330644567424,
+    "recall": 0.046010491460766016
   },
   "qualified_count": 45,
   "scenario_count": 230,

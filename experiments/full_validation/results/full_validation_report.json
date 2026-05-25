@@ -62,6 +62,7 @@
     "contestation_failure": 1,
     "counter_material_suppression": 27,
     "invalid_authority": 1,
+    "ranking_drift": 9,
     "source_attribution_gap": 97,
     "summary_distortion": 21,
     "unauthorized_action": 10
@@ -223,6 +224,7 @@
         "contestation_failure": 1,
         "counter_material_suppression": 25,
         "invalid_authority": 1,
+        "ranking_drift": 9,
         "source_attribution_gap": 97,
         "summary_distortion": 21,
         "unauthorized_action": 10
@@ -258,41 +260,83 @@
   },
   "ranking_visibility": {
     "counterfactual_front_window_counter_visible": 0,
-    "coverage_preserved_count": 11,
-    "downgraded_count": 11,
-    "eligible_packet_count": 41,
-    "front_window_counter_not_visible": 10,
-    "front_window_counter_visible": 31,
-    "rank_intervention_applied_count": 11,
-    "rank_order_counterfactual_count": 11,
-    "rank_order_passed_count": 11,
-    "visibility_check_count": 41
+    "coverage_preserved_count": 70,
+    "downgraded_count": 70,
+    "eligible_packet_count": 214,
+    "first_counter_rank_distribution": {
+      "1": 14,
+      "2": 56,
+      "3": 102,
+      "4": 9
+    },
+    "front_window_counter_not_visible": 34,
+    "front_window_counter_visible": 167,
+    "front_window_packet_count": 201,
+    "mean_reciprocal_first_counter_rank": 0.43232044198895025,
+    "median_first_counter_rank": 3.0,
+    "rank_intervention_applied_count": 70,
+    "rank_order_counterfactual_count": 70,
+    "rank_order_passed_count": 70,
+    "visibility_check_count": 214,
+    "window_check_count": 820,
+    "window_sensitivity": [
+      {
+        "counter_not_visible_count": 200,
+        "counter_visible_count": 14,
+        "eligible_packet_count": 214,
+        "visible_ratio": 0.06542056074766354,
+        "window_size": 1
+      },
+      {
+        "counter_not_visible_count": 137,
+        "counter_visible_count": 70,
+        "eligible_packet_count": 207,
+        "visible_ratio": 0.33816425120772947,
+        "window_size": 2
+      },
+      {
+        "counter_not_visible_count": 34,
+        "counter_visible_count": 167,
+        "eligible_packet_count": 201,
+        "visible_ratio": 0.8308457711442786,
+        "window_size": 3
+      },
+      {
+        "counter_not_visible_count": 25,
+        "counter_visible_count": 173,
+        "eligible_packet_count": 198,
+        "visible_ratio": 0.8737373737373737,
+        "window_size": 4
+      }
+    ]
   },
-  "ranking_visibility_checks": 41,
-  "ranking_visibility_counterfactuals": 11,
+  "ranking_visibility_checks": 214,
+  "ranking_visibility_counterfactuals": 70,
+  "ranking_visibility_window_checks": 820,
   "recoded_evaluations": 460,
   "repair_frontier": {
     "blocked_claim_count": 176,
-    "counterfactual_evaluation_count": 2236,
+    "counterfactual_evaluation_count": 4418,
     "minimal_repair_gate_frequency": {
       "audit_vector_completion": 33,
       "authority_packet_completion": 65,
       "decision_adoption_completion": 15,
       "failure_flag_resolution": 3,
+      "rank_salience_completion": 37,
       "review_contestability_completion": 20,
       "role_cap_completion": 20,
-      "source_binding_completion": 133
+      "source_binding_completion": 146
     },
     "minimal_repair_size_distribution": {
-      "1": 118,
-      "2": 44,
-      "3": 13,
-      "4": 1
+      "1": 100,
+      "2": 34,
+      "3": 39,
+      "4": 3
     },
     "repairable_count": 176,
     "unrepairable_count": 0
   },
-  "repair_frontier_evaluations": 2236,
+  "repair_frontier_evaluations": 4418,
   "scenario_files": 230,
   "source_text_anchor_evaluations": 30,
   "source_text_verification": {
@@ -408,6 +452,7 @@
     },
     {
       "blocked_reason_distribution": {
+        "ranking_drift": 1,
         "source_attribution_gap": 10
       },
       "evidence_class": "model-output audit",
@@ -428,7 +473,7 @@
       "blocked_reason_distribution": {},
       "evidence_class": "model-output intervention",
       "expected_passed": 10,
-      "finding": "Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.",
+      "finding": "Tests whether model-output variants can qualify after manifest, locator, issue-set, rank-salience and hashed source-support evidence validation.",
       "high_upstream_but_blocked": 0,
       "id": "model_output_repairs",
       "label": "Source-supported model-output repairs",
@@ -443,12 +488,13 @@
     {
       "blocked_reason_distribution": {
         "counter_material_suppression": 10,
+        "ranking_drift": 1,
         "source_attribution_gap": 20,
         "unauthorized_action": 10
       },
       "evidence_class": "controlled model-output intervention",
       "expected_passed": 70,
-      "finding": "Tests the same model outputs across raw, source-bound, counter-material, contestability, logging, authorized-adoption and unauthorized-action conditions.",
+      "finding": "Tests model-output variants across raw, source-bound, counter-material, rank-salience, contestability, logging, authorized-adoption and unauthorized-action conditions.",
       "high_upstream_but_blocked": 40,
       "id": "model_output_evidence_ladder",
       "label": "Model-output evidence ladder",
@@ -467,6 +513,7 @@
     {
       "blocked_reason_distribution": {
         "counter_material_suppression": 10,
+        "ranking_drift": 6,
         "source_attribution_gap": 60,
         "summary_distortion": 20
       },
@@ -505,6 +552,7 @@
       "blocked_reason_distribution": {
         "authority_omission": 4,
         "counter_material_suppression": 4,
+        "ranking_drift": 1,
         "source_attribution_gap": 5
       },
       "evidence_class": "negative-control construct test",
@@ -625,14 +673,14 @@
       "mean_audit_score": null,
       "mean_upstream_recall": null,
       "rule_pass": "176/176 repairable",
-      "scenario_count": 2236,
+      "scenario_count": 4418,
       "status_distribution": {
-        "1": 118,
-        "2": 44,
-        "3": 13,
-        "4": 1
+        "1": 100,
+        "2": 34,
+        "3": 39,
+        "4": 3
       },
-      "validation_units": "2236 repair counterfactuals over 176 blocked claims"
+      "validation_units": "4418 repair counterfactuals over 176 blocked claims"
     },
     {
       "evidence_class": "cross-profile gate check",
@@ -653,23 +701,25 @@
     },
     {
       "evidence_class": "rank-salience counterfactual check",
-      "finding": "Diagnoses top-window counter-material visibility and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.",
+      "finding": "Computes a rank-window visibility curve for counter-material salience and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.",
       "high_upstream_but_blocked": null,
       "id": "ranking_visibility",
       "label": "Ranking-visibility diagnostics",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "11/11 rank-order",
-      "scenario_count": 41,
+      "rule_pass": "70/70 rank-order",
+      "scenario_count": 890,
       "status_distribution": {
         "counterfactual_front_window_counter_visible": 0,
-        "coverage_preserved": 11,
-        "downgraded": 11,
-        "front_window_counter_not_visible": 10,
-        "front_window_counter_visible": 31,
-        "rank_intervention_applied": 11
+        "coverage_preserved": 70,
+        "downgraded": 70,
+        "front_window_counter_not_visible": 34,
+        "front_window_counter_visible": 167,
+        "mean_reciprocal_first_counter_rank": 0.43,
+        "median_first_counter_rank": 3.0,
+        "rank_intervention_applied": 70
       },
-      "validation_units": "41 high-status diagnostics including 11 rank-order counterfactuals"
+      "validation_units": "820 rank-window checks over 214 high-status claims plus 70 rank-order counterfactuals"
     },
     {
       "evidence_class": "derivation-certificate check",
@@ -800,7 +850,7 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 62497,
+  "total_evaluation_rows": 65528,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
@@ -820,10 +870,11 @@
     "public_metadata_records": 120,
     "public_retrieval_records": 225,
     "public_system_records": 60,
-    "ranking_visibility_checks": 41,
-    "ranking_visibility_counterfactuals": 11,
+    "ranking_visibility_checks": 214,
+    "ranking_visibility_counterfactuals": 70,
+    "ranking_visibility_window_checks": 820,
     "raw_model_outputs": 10,
-    "repair_frontier_evaluations": 2236,
+    "repair_frontier_evaluations": 4418,
     "source_bound_model_outputs": 10,
     "source_text_anchor_checks": 30,
     "source_text_anchor_verified": 30,

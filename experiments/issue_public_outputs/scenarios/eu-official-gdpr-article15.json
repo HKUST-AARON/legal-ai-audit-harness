@@ -52,9 +52,9 @@
     "retrieved": [
       "gdpr-art-15",
       "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-15-4",
       "cjeu-c-487-21-crif",
-      "gdpr-art-12-5",
-      "gdpr-art-15-4"
+      "gdpr-art-12-5"
     ]
   },
   "counter_material_complete": true,
@@ -90,34 +90,34 @@
       },
       {
         "id": "rank-03",
-        "claim": "Issue-specific public output rank 3 makes this material visible: Österreichische Datenschutzbehörde and CRIF",
+        "claim": "Issue-specific public output rank 3 makes this material visible: Regulation (EU) 2016/679 Article 15(4)",
+        "source_ids": [
+          "gdpr-art-15-4"
+        ],
+        "locators": [
+          "GDPR Article 15(4)"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Issue-specific public output rank 4 makes this material visible: Österreichische Datenschutzbehörde and CRIF",
         "source_ids": [
           "cjeu-c-487-21-crif"
         ],
         "locators": [
           "Case C-487/21"
         ],
-        "output_rank": 3
+        "output_rank": 4
       },
       {
-        "id": "rank-04",
-        "claim": "Issue-specific public output rank 4 makes this material visible: Regulation (EU) 2016/679 Article 12(5)",
+        "id": "rank-05",
+        "claim": "Issue-specific public output rank 5 makes this material visible: Regulation (EU) 2016/679 Article 12(5)",
         "source_ids": [
           "gdpr-art-12-5"
         ],
         "locators": [
           "GDPR Article 12(5)"
-        ],
-        "output_rank": 4
-      },
-      {
-        "id": "rank-05",
-        "claim": "Issue-specific public output rank 5 makes this material visible: Regulation (EU) 2016/679 Article 15(4)",
-        "source_ids": [
-          "gdpr-art-15-4"
-        ],
-        "locators": [
-          "GDPR Article 15(4)"
         ],
         "output_rank": 5
       }
@@ -139,22 +139,22 @@
       },
       {
         "unit_id": "rank-03",
+        "source_id": "gdpr-art-15-4",
+        "locator": "GDPR Article 15(4)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
         "source_id": "cjeu-c-487-21-crif",
         "locator": "Case C-487/21",
         "supports_claim": true,
         "source_tag": "official_source"
       },
       {
-        "unit_id": "rank-04",
+        "unit_id": "rank-05",
         "source_id": "gdpr-art-12-5",
         "locator": "GDPR Article 12(5)",
-        "supports_claim": true,
-        "source_tag": "official_source"
-      },
-      {
-        "unit_id": "rank-05",
-        "source_id": "gdpr-art-15-4",
-        "locator": "GDPR Article 15(4)",
         "supports_claim": true,
         "source_tag": "official_source"
       }

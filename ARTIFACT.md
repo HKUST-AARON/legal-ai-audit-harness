@@ -26,15 +26,15 @@ Expected aggregate output:
 - 22 validation suites
 - 230 scenario files
 - 609 embedded records or output items
-- 62,497 total evaluation rows
+- 65,528 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 185 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 288/288 gate-ablation evaluations passed
-- 176/176 blocked procedural claims repairable across 2,236 repair-frontier evaluations
+- 176/176 blocked procedural claims repairable across 4,418 repair-frontier evaluations
 - 217/217 jurisdiction-profile checks and 138/138 profile mutations passed
-- 41 ranking-visibility diagnostic checks
-- 11/11 rank-order visibility counterfactuals downgraded with coverage preserved
+- 820 rank-window visibility checks over 214 high-status claims
+- 70/70 rank-order visibility counterfactuals downgraded with coverage preserved
 - 2,990/2,990 status-certificate replay checks passed over 230 certificates
 - 230/230 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
@@ -61,7 +61,7 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 33 pages in the current local format.
+The expected manuscript build is 34 pages in the current local format.
 
 ## Interpretation
 

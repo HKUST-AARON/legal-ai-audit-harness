@@ -1229,14 +1229,14 @@
       "base": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 10
       },
       "scenario_id": "codex55-eu-02",
@@ -1244,7 +1244,7 @@
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       }
     },
@@ -1873,14 +1873,14 @@
       "base": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-eu-02--raw-unverified",
@@ -1888,7 +1888,7 @@
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       }
     },
@@ -3460,14 +3460,14 @@
       "base": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 11
       },
       "scenario_id": "source-bound-codex55-eu-02--missing-output-link",
@@ -3475,7 +3475,7 @@
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       }
     },
@@ -3483,14 +3483,14 @@
       "base": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 11
       },
       "scenario_id": "source-bound-codex55-eu-02--out-of-manifest-source",
@@ -3498,7 +3498,7 @@
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       }
     },
@@ -3529,14 +3529,14 @@
       "base": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 11
       },
       "scenario_id": "source-bound-codex55-eu-02--wrong-locator",
@@ -3544,7 +3544,7 @@
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "downgrade",
+        "disposition": "suspension",
         "total_score": 9
       }
     },

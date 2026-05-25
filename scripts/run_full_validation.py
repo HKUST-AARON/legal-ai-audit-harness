@@ -81,7 +81,7 @@ SUITES = [
         "json_out": ROOT / "experiments" / "model_output_repairs" / "results" / "model_output_repair_experiment.json",
         "unit_label": "source-supported model-output variants",
         "evidence_class": "model-output intervention",
-        "finding": "Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.",
+        "finding": "Tests whether model-output variants can qualify after manifest, locator, issue-set, rank-salience and hashed source-support evidence validation.",
     },
     {
         "id": "model_output_evidence_ladder",
@@ -91,7 +91,7 @@ SUITES = [
         "json_out": ROOT / "experiments" / "model_output_evidence_ladder" / "results" / "model_output_evidence_ladder_experiment.json",
         "unit_label": "evidence-ladder model-output variants",
         "evidence_class": "controlled model-output intervention",
-        "finding": "Tests the same model outputs across raw, source-bound, counter-material, contestability, logging, authorized-adoption and unauthorized-action conditions.",
+        "finding": "Tests model-output variants across raw, source-bound, counter-material, rank-salience, contestability, logging, authorized-adoption and unauthorized-action conditions.",
     },
     {
         "id": "model_output_adversarial",
@@ -287,6 +287,7 @@ def main() -> int:
             "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
             + jurisdiction_profile_payload["counterfactual_evaluation_count"],
             "ranking_visibility_checks": ranking_visibility_payload["visibility_check_count"],
+            "ranking_visibility_window_checks": ranking_visibility_payload["window_check_count"],
             "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
             "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
             "status_certificates_verified": status_certificate_payload["verified_certificate_count"],
@@ -309,6 +310,7 @@ def main() -> int:
         "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
         + jurisdiction_profile_payload["counterfactual_evaluation_count"],
         "ranking_visibility_checks": ranking_visibility_payload["visibility_check_count"],
+        "ranking_visibility_window_checks": ranking_visibility_payload["window_check_count"],
         "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
         "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
         "total_evaluation_rows": base_validation_units
@@ -322,7 +324,8 @@ def main() -> int:
         + repair_frontier_payload["counterfactual_evaluation_count"]
         + jurisdiction_profile_payload["profile_check_count"]
         + jurisdiction_profile_payload["counterfactual_evaluation_count"]
-        + ranking_visibility_payload["visibility_check_count"]
+        + ranking_visibility_payload["window_check_count"]
+        + ranking_visibility_payload["rank_order_counterfactual_count"]
         + status_certificate_payload["replay_check_count"]
         + robustness_payload["recoded_evaluations"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
@@ -410,8 +413,14 @@ def main() -> int:
         "ranking_visibility": {
             "eligible_packet_count": ranking_visibility_payload["eligible_packet_count"],
             "visibility_check_count": ranking_visibility_payload["visibility_check_count"],
+            "window_check_count": ranking_visibility_payload["window_check_count"],
+            "window_sensitivity": ranking_visibility_payload["window_sensitivity"],
+            "first_counter_rank_distribution": ranking_visibility_payload["first_counter_rank_distribution"],
+            "median_first_counter_rank": ranking_visibility_payload["median_first_counter_rank"],
+            "mean_reciprocal_first_counter_rank": ranking_visibility_payload["mean_reciprocal_first_counter_rank"],
             "rank_order_counterfactual_count": ranking_visibility_payload["rank_order_counterfactual_count"],
             "rank_order_passed_count": ranking_visibility_payload["rank_order_passed_count"],
+            "front_window_packet_count": ranking_visibility_payload["front_window_packet_count"],
             "front_window_counter_visible": ranking_visibility_payload["front_window_counter_visible"],
             "front_window_counter_not_visible": ranking_visibility_payload["front_window_counter_not_visible"],
             "counterfactual_front_window_counter_visible": ranking_visibility_payload[
@@ -734,8 +743,8 @@ def _ranking_visibility_row(payload: dict) -> dict:
         "id": "ranking_visibility",
         "label": "Ranking-visibility diagnostics",
         "evidence_class": "rank-salience counterfactual check",
-        "validation_units": f"{payload['visibility_check_count']} high-status diagnostics including {payload['rank_order_counterfactual_count']} rank-order counterfactuals",
-        "scenario_count": payload["visibility_check_count"],
+        "validation_units": f"{payload['window_check_count']} rank-window checks over {payload['visibility_check_count']} high-status claims plus {payload['rank_order_counterfactual_count']} rank-order counterfactuals",
+        "scenario_count": payload["window_check_count"] + payload["rank_order_counterfactual_count"],
         "rule_pass": f"{payload['rank_order_passed_count']}/{payload['rank_order_counterfactual_count']} rank-order",
         "mean_audit_score": None,
         "mean_upstream_recall": None,
@@ -747,8 +756,10 @@ def _ranking_visibility_row(payload: dict) -> dict:
             "rank_intervention_applied": payload["rank_intervention_applied_count"],
             "coverage_preserved": payload["coverage_preserved_count"],
             "downgraded": payload["downgraded_count"],
+            "median_first_counter_rank": payload["median_first_counter_rank"],
+            "mean_reciprocal_first_counter_rank": round(payload["mean_reciprocal_first_counter_rank"], 2),
         },
-        "finding": "Diagnoses top-window counter-material visibility and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.",
+        "finding": "Computes a rank-window visibility curve for counter-material salience and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.",
     }
 
 
@@ -800,7 +811,7 @@ def _format_report(payload: dict) -> str:
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
-        f"Ranking-visibility checks: {payload['ranking_visibility']['visibility_check_count']} high-status diagnostics; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['eligible_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}",
+        f"Ranking-visibility checks: {payload['ranking_visibility']['window_check_count']} rank-window checks over {payload['ranking_visibility']['visibility_check_count']} high-status claims; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['front_window_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}; median first counter rank {payload['ranking_visibility']['median_first_counter_rank']:.1f}",
         f"Status certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",

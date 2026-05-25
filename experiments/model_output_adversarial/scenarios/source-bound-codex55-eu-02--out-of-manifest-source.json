@@ -171,7 +171,7 @@
   },
   "failure_flags": [],
   "expected_allowed_status": "reference_information",
-  "expected_disposition": "downgrade",
+  "expected_disposition": "suspension",
   "adversarial_intervention": {
     "attack": "manifest_membership_gap",
     "source": "codex55-eu-02",

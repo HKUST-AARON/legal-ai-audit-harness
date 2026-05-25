@@ -5,7 +5,7 @@ Scenario-regression expectations passed: 70/70
 Mean audit score: 10.57
 Mean upstream recall: 1.00
 High-upstream-performance but procedurally blocked scenarios: 40
-Blocked reason distribution: counter_material_suppression: 10, source_attribution_gap: 20, unauthorized_action: 10
+Blocked reason distribution: counter_material_suppression: 10, ranking_drift: 1, source_attribution_gap: 20, unauthorized_action: 10
 
 ## Allowed Status Distribution
 
@@ -30,7 +30,7 @@ Blocked reason distribution: counter_material_suppression: 10, source_attributio
 | evidence-ladder-codex55-eu-01--unauthorized-external-action | civil_law | decision_support_reason | no_external_legal_effect | 12 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | withdrawal |
 | evidence-ladder-codex55-eu-02--authorized-decision-support | civil_law | decision_support_reason | decision_support_reason | 12 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
 | evidence-ladder-codex55-eu-02--contestable-screening | civil_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
-| evidence-ladder-codex55-eu-02--raw-unverified | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| evidence-ladder-codex55-eu-02--raw-unverified | civil_law | normative_material_screening_output | reference_information | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | suspension |
 | evidence-ladder-codex55-eu-02--source-bound-no-contestability | civil_law | normative_material_screening_output | professional_support_output | 9 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
 | evidence-ladder-codex55-eu-02--source-bound-no-counter | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
 | evidence-ladder-codex55-eu-02--source-bound-no-logging | civil_law | normative_material_screening_output | reference_information | 10 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |

@@ -1,13 +1,17 @@
 from __future__ import annotations
 
 import json
+import sys
 from copy import deepcopy
 from pathlib import Path
 
-from build_model_output_repairs import repair
-
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from audit_harness.model import RANK_SALIENCE_WINDOW
+from build_model_output_repairs import repair
+
 SOURCE = ROOT / "experiments" / "ai_outputs" / "scenarios"
 OUT = ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios"
 RESULTS = ROOT / "experiments" / "model_output_evidence_ladder" / "results"
@@ -45,13 +49,14 @@ def ladder(raw: dict) -> list[dict]:
 
 def raw_unverified(raw: dict) -> dict:
     scenario = deepcopy(raw)
+    disposition = "suspension" if counter_material_below_salience_window(raw) else "downgrade"
     return with_step(
         scenario,
         raw,
         "raw-unverified",
         "Unverified model output keeps nonprocedural source tags and pending review.",
         "reference_information",
-        "downgrade",
+        disposition,
     )
 
 
@@ -180,6 +185,19 @@ def with_step(scenario: dict, raw: dict, step: str, purpose: str, expected_statu
     scenario["expected_allowed_status"] = expected_status
     scenario["expected_disposition"] = expected_disposition
     return scenario
+
+
+def counter_material_below_salience_window(scenario: dict) -> bool:
+    authority_sets = scenario.get("authority_sets", {})
+    counter = set(authority_sets.get("counter_or_limiting") or [])
+    retrieved = set(authority_sets.get("retrieved_counter_or_limiting") or [])
+    units = scenario.get("evidence_packet", {}).get("output_units", [])
+    if not counter or not retrieved or len(units) < RANK_SALIENCE_WINDOW:
+        return False
+    visible = set()
+    for unit in units[:RANK_SALIENCE_WINDOW]:
+        visible.update(unit.get("source_ids") or [])
+    return not bool(visible & counter)
 
 
 if __name__ == "__main__":

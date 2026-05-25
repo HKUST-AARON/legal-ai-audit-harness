@@ -12,14 +12,14 @@ Formal invariant checks: 51643/51643 passed
 Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Gate ablation evaluations: 288/288 passed over 46 qualified packets
-Repair frontier evaluations: 176/176 blocked claims repairable across 2236 counterfactual repairs
+Repair frontier evaluations: 176/176 blocked claims repairable across 4418 counterfactual repairs
 Jurisdiction-profile evaluations: 217/217 profile checks supported; 138/138 counterfactual mutations passed
-Ranking-visibility checks: 41 high-status diagnostics; 11/11 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 31/41; drifted top-3 counter visible 0/11
+Ranking-visibility checks: 820 rank-window checks over 214 high-status claims; 70/70 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 167/201; drifted top-3 counter visible 0/70; median first counter rank 3.0
 Status certificate replay checks: 2990/2990 passed over 230 certificates
-Derived robustness evaluations: 61888
+Derived robustness evaluations: 64919
 Scenario-regression expectations passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
-Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
+Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
 Annotation robustness: 218/230 stable across base, strict and lenient coding policies
 Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement
 
@@ -41,9 +41,9 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
 | Metric separation analysis | retrieval/status non-equivalence check | 185 upstream-metric scenario packets | 185 | recall-threshold precision 0.25; full gate precision 1.00 | n/a | n/a | n/a | full_gate_specificity: 1.0, high_recall_blocked_rate: 0.75, recall_point_biserial: 0.05 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 288 ablations over 46 qualified packets | 288 | 288/288 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
-| Blocked-claim repair frontiers | counterfactual repair-necessity check | 2236 repair counterfactuals over 176 blocked claims | 2236 | 176/176 repairable | n/a | n/a | n/a | 1: 118, 2: 44, 3: 13, 4: 1 |
+| Blocked-claim repair frontiers | counterfactual repair-necessity check | 4418 repair counterfactuals over 176 blocked claims | 4418 | 176/176 repairable | n/a | n/a | n/a | 1: 100, 2: 34, 3: 39, 4: 3 |
 | Jurisdiction-profile mutations | cross-profile gate check | 355 profile checks and counterfactuals | 355 | 217/217 profile checks; 138/138 mutations | n/a | n/a | n/a | generic_preserved: 46, mismatch_downgraded: 46, missing_downgraded: 46 |
-| Ranking-visibility diagnostics | rank-salience counterfactual check | 41 high-status diagnostics including 11 rank-order counterfactuals | 41 | 11/11 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 11, downgraded: 11, front_window_counter_not_visible: 10, front_window_counter_visible: 31, rank_intervention_applied: 11 |
+| Ranking-visibility diagnostics | rank-salience counterfactual check | 820 rank-window checks over 214 high-status claims plus 70 rank-order counterfactuals | 890 | 70/70 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 70, downgraded: 70, front_window_counter_not_visible: 34, front_window_counter_visible: 167, mean_reciprocal_first_counter_rank: 0.43, median_first_counter_rank: 3.0, rank_intervention_applied: 70 |
 | Status certificate replay | derivation-certificate check | 2990 replay checks over 230 certificates | 2990 | 2990/2990 | n/a | n/a | n/a | cap_or_failure_transitions: 150, verified_certificates: 230 |
 | Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
@@ -56,8 +56,8 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Issue-specific public output/source packets:** Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.
 - **Endpoint-matched public retrieval benchmark:** Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.
 - **Raw Codex GPT-5.5 xhigh outputs:** Tests whether strong authority coverage without source binding remains procedurally capped.
-- **Source-supported model-output repairs:** Tests whether the same model outputs can qualify after manifest, locator, issue-set and hashed source-support evidence validation.
-- **Model-output evidence ladder:** Tests the same model outputs across raw, source-bound, counter-material, contestability, logging, authorized-adoption and unauthorized-action conditions.
+- **Source-supported model-output repairs:** Tests whether model-output variants can qualify after manifest, locator, issue-set, rank-salience and hashed source-support evidence validation.
+- **Model-output evidence ladder:** Tests model-output variants across raw, source-bound, counter-material, rank-salience, contestability, logging, authorized-adoption and unauthorized-action conditions.
 - **Adversarial source-support repairs:** Tests whether source-support repair gates reject locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions.
 - **Mixed-authority public source-screening packets:** Tests normative material screening with mixed statute/case/source packets rather than single-endpoint public search results.
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
@@ -68,7 +68,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
 - **Blocked-claim repair frontiers:** Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.
 - **Jurisdiction-profile mutations:** Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.
-- **Ranking-visibility diagnostics:** Diagnoses top-window counter-material visibility and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.
+- **Ranking-visibility diagnostics:** Computes a rank-window visibility curve for counter-material salience and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.
 - **Status certificate replay:** Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.

@@ -90,16 +90,6 @@
         ]
       },
       {
-        "id": "unit-3",
-        "claim": "Canada Post is a companion decision that should be visible with Vavilov in the administrative-law trilogy.",
-        "source_ids": [
-          "canada-post-2019-scc-67"
-        ],
-        "locators": [
-          "2019 SCC 67"
-        ]
-      },
-      {
         "id": "unit-4",
         "claim": "Dunsmuir should be visible as historical framework material rather than silently treated as the current default method.",
         "source_ids": [
@@ -109,6 +99,16 @@
         "locators": [
           "2008 SCC 9",
           "2019 SCC 65"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Canada Post is a companion decision that should be visible with Vavilov in the administrative-law trilogy.",
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ],
+        "locators": [
+          "2019 SCC 67"
         ]
       },
       {

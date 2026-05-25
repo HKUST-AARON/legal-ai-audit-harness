@@ -319,13 +319,14 @@
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "downgrade",
+      "disposition": "suspension",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
       "expected_allowed_status": "reference_information",
-      "expected_disposition": "downgrade",
+      "expected_disposition": "suspension",
       "expected_passed": true,
       "failure_flags": [
+        "ranking_drift",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -2466,6 +2467,7 @@
   "summary": {
     "blocked_reason_distribution": {
       "counter_material_suppression": 10,
+      "ranking_drift": 1,
       "source_attribution_gap": 20,
       "unauthorized_action": 10
     },

@@ -132,6 +132,74 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.allowed_status, "reference_information")
         self.assertIn("counter_material_suppression", result.failure_flags)
 
+    def test_normative_status_requires_counter_material_rank_salience(self):
+        scenario = deepcopy(load("court_authority_report.json"))
+        units = scenario["evidence_packet"]["output_units"]
+        counter_unit = units.pop(1)
+        units.insert(
+            0,
+            {
+                "id": "rank-padding-1",
+                "claim": "A front-window high-authority proposition.",
+                "source_ids": ["binding-precedent-a"],
+                "locators": ["[2024] 1 AC 1"],
+            },
+        )
+        units.insert(
+            1,
+            {
+                "id": "rank-padding-2",
+                "claim": "A second front-window high-authority proposition.",
+                "source_ids": ["statute-b"],
+                "locators": ["Statute B s. 12"],
+            },
+        )
+        units.append(counter_unit)
+        scenario["evidence_packet"]["output_links"].extend(
+            [
+                {
+                    "unit_id": "rank-padding-1",
+                    "source_id": "binding-precedent-a",
+                    "locator": "[2024] 1 AC 1",
+                    "supports_claim": True,
+                    "source_tag": "official_source",
+                },
+                {
+                    "unit_id": "rank-padding-2",
+                    "source_id": "statute-b",
+                    "locator": "Statute B s. 12",
+                    "supports_claim": True,
+                    "source_tag": "official_source",
+                },
+            ]
+        )
+
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "suspension")
+        self.assertIn("ranking_drift", result.failure_flags)
+
+        units.insert(2, units.pop())
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "normative_material_screening_output")
+        self.assertNotIn("ranking_drift", result.failure_flags)
+
+        ranked = deepcopy(scenario)
+        ranked_units = ranked["evidence_packet"]["output_units"]
+        ranked_units.insert(0, ranked_units.pop(2))
+        for unit in ranked_units:
+            if unit["id"] == counter_unit["id"]:
+                unit["output_rank"] = 4
+            elif unit["id"] == "rank-padding-1":
+                unit["output_rank"] = 2
+            elif unit["id"] == "rank-padding-2":
+                unit["output_rank"] = 3
+            else:
+                unit["output_rank"] = 1
+        result = evaluate_scenario(ranked)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertIn("ranking_drift", result.failure_flags)
+
     def test_normative_status_requires_high_authority_set(self):
         scenario = deepcopy(load("court_authority_report.json"))
         scenario["authority_sets"]["high_authority"] = []
@@ -248,7 +316,7 @@ class AuditModelTest(unittest.TestCase):
             )
         )
         self.assertEqual(payload["blocked_claim_count"], 176)
-        self.assertEqual(payload["counterfactual_evaluation_count"], 2236)
+        self.assertEqual(payload["counterfactual_evaluation_count"], 4418)
         self.assertEqual(payload["repairable_count"], payload["blocked_claim_count"])
         self.assertFalse(payload["unrepairable"])
 
@@ -289,16 +357,24 @@ class AuditModelTest(unittest.TestCase):
                 encoding="utf-8"
             )
         )
-        self.assertEqual(payload["eligible_packet_count"], 41)
-        self.assertEqual(payload["visibility_check_count"], 41)
-        self.assertEqual(payload["rank_order_counterfactual_count"], 11)
-        self.assertEqual(payload["rank_order_passed_count"], 11)
-        self.assertEqual(payload["downgraded_count"], 11)
-        self.assertEqual(payload["coverage_preserved_count"], 11)
-        self.assertEqual(payload["front_window_counter_visible"], 31)
-        self.assertEqual(payload["front_window_counter_not_visible"], 10)
+        self.assertEqual(payload["eligible_packet_count"], 214)
+        self.assertEqual(payload["visibility_check_count"], 214)
+        self.assertEqual(payload["window_check_count"], 820)
+        self.assertEqual(payload["window_sensitivity"][0]["counter_visible_count"], 14)
+        self.assertEqual(payload["window_sensitivity"][1]["counter_visible_count"], 70)
+        self.assertEqual(payload["window_sensitivity"][2]["counter_visible_count"], 167)
+        self.assertEqual(payload["window_sensitivity"][3]["counter_visible_count"], 173)
+        self.assertEqual(payload["first_counter_rank_distribution"], {"1": 14, "2": 56, "3": 102, "4": 9})
+        self.assertEqual(payload["median_first_counter_rank"], 3.0)
+        self.assertEqual(payload["rank_order_counterfactual_count"], 70)
+        self.assertEqual(payload["rank_order_passed_count"], 70)
+        self.assertEqual(payload["downgraded_count"], 70)
+        self.assertEqual(payload["coverage_preserved_count"], 70)
+        self.assertEqual(payload["front_window_packet_count"], 201)
+        self.assertEqual(payload["front_window_counter_visible"], 167)
+        self.assertEqual(payload["front_window_counter_not_visible"], 34)
         self.assertEqual(payload["counterfactual_front_window_counter_visible"], 0)
-        self.assertEqual(payload["rank_intervention_applied_count"], 11)
+        self.assertEqual(payload["rank_intervention_applied_count"], 70)
         self.assertFalse(payload["failures"])
 
     def test_status_certificate_validation_runs(self):
@@ -421,7 +497,8 @@ class AuditModelTest(unittest.TestCase):
             result = evaluate_scenario(scenario)
             self.assertEqual(result.claimed_status, "normative_material_screening_output", path.name)
             self.assertEqual(result.allowed_status, "reference_information", path.name)
-            self.assertEqual(result.disposition, "downgrade", path.name)
+            expected_disposition = "suspension" if path.name == "codex55_eu_02.json" else "downgrade"
+            self.assertEqual(result.disposition, expected_disposition, path.name)
             self.assertFalse(result.claim_supported, path.name)
             self.assertAlmostEqual(result.procedural_source_tag_coverage, 0.0, msg=path.name)
             self.assertGreaterEqual(scenario["upstream_metrics"]["recall"], 0.9, path.name)
@@ -566,7 +643,7 @@ class AuditModelTest(unittest.TestCase):
                 "reference_information": 30,
             },
         )
-        self.assertEqual(dispositions, {"downgrade": 10, "none": 40, "suspension": 10, "withdrawal": 10})
+        self.assertEqual(dispositions, {"downgrade": 9, "none": 40, "suspension": 11, "withdrawal": 10})
         self.assertEqual(
             steps,
             {
@@ -659,18 +736,20 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["metric_statistical_resamples"], 2000)
         self.assertEqual(report["gate_ablation_evaluations"], 288)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 288)
-        self.assertEqual(report["repair_frontier_evaluations"], 2236)
-        self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 2236)
+        self.assertEqual(report["repair_frontier_evaluations"], 4418)
+        self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 4418)
         self.assertEqual(report["jurisdiction_profile_evaluations"], 355)
         self.assertEqual(report["validation_units"]["jurisdiction_profile_evaluations"], 355)
-        self.assertEqual(report["ranking_visibility_checks"], 41)
-        self.assertEqual(report["validation_units"]["ranking_visibility_checks"], 41)
-        self.assertEqual(report["ranking_visibility_counterfactuals"], 11)
-        self.assertEqual(report["validation_units"]["ranking_visibility_counterfactuals"], 11)
+        self.assertEqual(report["ranking_visibility_checks"], 214)
+        self.assertEqual(report["validation_units"]["ranking_visibility_checks"], 214)
+        self.assertEqual(report["ranking_visibility_window_checks"], 820)
+        self.assertEqual(report["validation_units"]["ranking_visibility_window_checks"], 820)
+        self.assertEqual(report["ranking_visibility_counterfactuals"], 70)
+        self.assertEqual(report["validation_units"]["ranking_visibility_counterfactuals"], 70)
         self.assertEqual(report["status_certificate_replay_checks"], 2990)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 2990)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 230)
-        self.assertEqual(report["total_evaluation_rows"], 62497)
+        self.assertEqual(report["total_evaluation_rows"], 65528)
         self.assertEqual(report["expected_passed"], 230)
         self.assertEqual(report["expected_total"], 230)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
@@ -697,16 +776,19 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["jurisdiction_profile"]["profile_check_count"], 217)
         self.assertEqual(report["jurisdiction_profile"]["profile_supported_count"], 217)
         self.assertEqual(report["jurisdiction_profile"]["passed_count"], 138)
-        self.assertEqual(report["ranking_visibility"]["eligible_packet_count"], 41)
-        self.assertEqual(report["ranking_visibility"]["visibility_check_count"], 41)
-        self.assertEqual(report["ranking_visibility"]["rank_order_counterfactual_count"], 11)
-        self.assertEqual(report["ranking_visibility"]["rank_order_passed_count"], 11)
-        self.assertEqual(report["ranking_visibility"]["downgraded_count"], 11)
-        self.assertEqual(report["ranking_visibility"]["coverage_preserved_count"], 11)
-        self.assertEqual(report["ranking_visibility"]["front_window_counter_visible"], 31)
-        self.assertEqual(report["ranking_visibility"]["front_window_counter_not_visible"], 10)
+        self.assertEqual(report["ranking_visibility"]["eligible_packet_count"], 214)
+        self.assertEqual(report["ranking_visibility"]["visibility_check_count"], 214)
+        self.assertEqual(report["ranking_visibility"]["window_check_count"], 820)
+        self.assertEqual(report["ranking_visibility"]["rank_order_counterfactual_count"], 70)
+        self.assertEqual(report["ranking_visibility"]["rank_order_passed_count"], 70)
+        self.assertEqual(report["ranking_visibility"]["downgraded_count"], 70)
+        self.assertEqual(report["ranking_visibility"]["coverage_preserved_count"], 70)
+        self.assertEqual(report["ranking_visibility"]["front_window_packet_count"], 201)
+        self.assertEqual(report["ranking_visibility"]["front_window_counter_visible"], 167)
+        self.assertEqual(report["ranking_visibility"]["front_window_counter_not_visible"], 34)
         self.assertEqual(report["ranking_visibility"]["counterfactual_front_window_counter_visible"], 0)
-        self.assertEqual(report["ranking_visibility"]["rank_intervention_applied_count"], 11)
+        self.assertEqual(report["ranking_visibility"]["rank_intervention_applied_count"], 70)
+        self.assertEqual(report["ranking_visibility"]["median_first_counter_rank"], 3.0)
         self.assertEqual(report["status_certificate"]["certificate_count"], 230)
         self.assertEqual(report["status_certificate"]["verified_certificate_count"], 230)
         self.assertEqual(report["status_certificate"]["replay_check_count"], 2990)

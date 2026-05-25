@@ -94,16 +94,6 @@
         ]
       },
       {
-        "claim": "Case C-487/21 is high authority on the right to a faithful and intelligible copy of personal data under Article 15(3).",
-        "id": "unit-3",
-        "locators": [
-          "Case C-487/21"
-        ],
-        "source_ids": [
-          "cjeu-c-487-21-crif"
-        ]
-      },
-      {
         "claim": "Article 12(5) and Article 15(4) are limiting materials for manifestly unfounded or excessive requests and the rights and freedoms of others.",
         "id": "unit-4",
         "locators": [
@@ -113,6 +103,16 @@
         "source_ids": [
           "gdpr-art-12-5",
           "gdpr-art-15-4"
+        ]
+      },
+      {
+        "claim": "Case C-487/21 is high authority on the right to a faithful and intelligible copy of personal data under Article 15(3).",
+        "id": "unit-3",
+        "locators": [
+          "Case C-487/21"
+        ],
+        "source_ids": [
+          "cjeu-c-487-21-crif"
         ]
       }
     ],

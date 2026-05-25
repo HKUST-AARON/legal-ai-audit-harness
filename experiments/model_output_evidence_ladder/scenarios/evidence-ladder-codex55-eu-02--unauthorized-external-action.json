@@ -2,7 +2,7 @@
   "id": "evidence-ladder-codex55-eu-02--unauthorized-external-action",
   "claimed_status": "decision_support_reason",
   "jurisdiction_profile": "civil_law",
-  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15(3) copy of personal data. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15(3) copy of personal data. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence. Rank salience repair moves an existing limiting material into the review window.",
   "scores": {
     "S": {
       "score": 2,
@@ -99,16 +99,6 @@
         ]
       },
       {
-        "id": "unit-3",
-        "claim": "C-307/22 FT concerns the first free copy and medical-record personal data.",
-        "source_ids": [
-          "cjeu-c-307-22-ft"
-        ],
-        "locators": [
-          "C-307/22"
-        ]
-      },
-      {
         "id": "unit-4",
         "claim": "Article 15(4) and Article 12(5) limit the access response.",
         "source_ids": [
@@ -118,6 +108,16 @@
         "locators": [
           "Article 15(4)",
           "Article 12(5)"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "C-307/22 FT concerns the first free copy and medical-record personal data.",
+        "source_ids": [
+          "cjeu-c-307-22-ft"
+        ],
+        "locators": [
+          "C-307/22"
         ]
       }
     ],
