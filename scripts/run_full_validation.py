@@ -187,6 +187,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_certificate_tamper_analysis.py"])
     _run([sys.executable, "scripts/run_policy_constants_replay.py"])
     _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
+    _run([sys.executable, "scripts/run_policy_mutation_analysis.py"])
     _run([sys.executable, "scripts/run_model_identity_invariance.py"])
     _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
     _run([sys.executable, "scripts/run_query_portfolio_frontier.py"])
@@ -358,6 +359,12 @@ def main() -> int:
         )
     )
     rows.append(_metamorphic_policy_row(metamorphic_payload))
+    policy_mutation_payload = json.loads(
+        (ROOT / "experiments" / "policy_mutations" / "results" / "policy_mutation_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_policy_mutation_row(policy_mutation_payload))
     model_identity_payload = json.loads(
         (
             ROOT
@@ -485,6 +492,8 @@ def main() -> int:
             "policy_constants_replay_passed": policy_constants_payload["passed_check_count"],
             "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
             "metamorphic_policy_passed": metamorphic_payload["passed_count"],
+            "policy_mutation_evaluations": policy_mutation_payload["evaluation_count"],
+            "policy_mutants_killed": policy_mutation_payload["killed_mutant_count"],
             "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
             "model_identity_invariance_passed": model_identity_payload["passed_count"],
             "query_perturbation_variants": query_perturbation_payload["query_variant_count"],
@@ -536,6 +545,7 @@ def main() -> int:
         "certificate_tamper_evaluations": certificate_tamper_payload["tamper_case_count"],
         "policy_constants_replay_checks": policy_constants_payload["check_count"],
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
+        "policy_mutation_evaluations": policy_mutation_payload["evaluation_count"],
         "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"],
@@ -567,6 +577,7 @@ def main() -> int:
         + certificate_tamper_payload["tamper_case_count"]
         + policy_constants_payload["check_count"]
         + metamorphic_payload["metamorphic_evaluation_count"]
+        + policy_mutation_payload["evaluation_count"]
         + model_identity_payload["evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"]
@@ -800,6 +811,19 @@ def main() -> int:
             "passed_count": metamorphic_payload["passed_count"],
             "failed_count": metamorphic_payload["failed_count"],
             "by_relation": metamorphic_payload["by_relation"],
+        },
+        "policy_mutations": {
+            "scenario_count": policy_mutation_payload["scenario_count"],
+            "qualified_scenario_count": policy_mutation_payload["qualified_scenario_count"],
+            "decision_scenario_count": policy_mutation_payload["decision_scenario_count"],
+            "mutant_count": policy_mutation_payload["mutant_count"],
+            "killed_mutant_count": policy_mutation_payload["killed_mutant_count"],
+            "survived_mutant_count": policy_mutation_payload["survived_mutant_count"],
+            "evaluation_count": policy_mutation_payload["evaluation_count"],
+            "classification_error_count": policy_mutation_payload["classification_error_count"],
+            "invalid_promotion_count": policy_mutation_payload["invalid_promotion_count"],
+            "false_negative_count": policy_mutation_payload["false_negative_count"],
+            "mutants": policy_mutation_payload["mutants"],
         },
         "model_identity_invariance": {
             "scenario_count": model_identity_payload["scenario_count"],
@@ -1571,6 +1595,28 @@ def _metamorphic_policy_row(payload: dict) -> dict:
     }
 
 
+def _policy_mutation_row(payload: dict) -> dict:
+    return {
+        "id": "policy_mutations",
+        "label": "Policy mutation analysis",
+        "evidence_class": "policy-mutant killing",
+        "validation_units": (
+            f"{payload['evaluation_count']} mutation evaluations over {payload['mutant_count']} policy mutants"
+        ),
+        "scenario_count": payload["evaluation_count"],
+        "rule_pass": f"{payload['killed_mutant_count']}/{payload['mutant_count']} killed",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "classification_errors": payload["classification_error_count"],
+            "invalid_promotions": payload["invalid_promotion_count"],
+            "false_negatives": payload["false_negative_count"],
+        },
+        "finding": "Applies gate-removal and status-conferring policy mutants across committed packets; every mutant is killed because removing a required gate, ignoring a cap, or treating metrics, source labels, review labels, total score or model identity as status produces a wrong allocation.",
+    }
+
+
 def _model_identity_invariance_row(payload: dict) -> dict:
     return {
         "id": "model_identity_invariance",
@@ -1702,6 +1748,7 @@ def _format_report(payload: dict) -> str:
         f"Certificate tamper-resistance: {payload['certificate_tamper']['rejected_count']}/{payload['certificate_tamper']['tamper_case_count']} tamper cases rejected across {payload['certificate_tamper']['tamper_family_count']} families",
         f"Policy-constants replay checks: {payload['policy_constants_replay']['passed_check_count']}/{payload['policy_constants_replay']['check_count']} passed over {payload['policy_constants_replay']['scenario_count']} packets",
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
+        f"Policy mutation analysis: {payload['policy_mutations']['killed_mutant_count']}/{payload['policy_mutations']['mutant_count']} mutants killed across {payload['policy_mutations']['evaluation_count']} evaluations; invalid promotions {payload['policy_mutations']['invalid_promotion_count']}; false negatives {payload['policy_mutations']['false_negative_count']}",
         f"Model-identity invariance: {payload['model_identity_invariance']['passed_count']}/{payload['model_identity_invariance']['evaluation_count']} identity substitutions passed over {payload['model_identity_invariance']['scenario_count']} packets and {payload['model_identity_invariance']['identity_profile_count']} identity profiles; status changes {payload['model_identity_invariance']['status_changed_count']}; disposition changes {payload['model_identity_invariance']['disposition_changed_count']}",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",
         f"Query-portfolio frontier: {payload['query_portfolio']['portfolio_count']} portfolios plus {payload['query_portfolio']['issue_group_count']} group summaries across {payload['query_portfolio']['issue_group_count']} issue groups; qualified portfolios {payload['query_portfolio']['qualified_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full high-authority portfolios {payload['query_portfolio']['full_high_authority_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full counter-material portfolios {payload['query_portfolio']['full_counter_material_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}",

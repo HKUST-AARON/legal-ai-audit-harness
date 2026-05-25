@@ -1,8 +1,8 @@
 {
-  "check_count": 816,
+  "check_count": 832,
   "checks": [
     {
-      "expected": "- 38 validation suites",
+      "expected": "- 39 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 3,660,548 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
+      "expected": "- 3,663,659 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -78,6 +78,11 @@
     },
     {
       "expected": "- 1,233/1,233 metamorphic policy tests passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 15/15 policy mutants killed across 3,111 mutation evaluations",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -187,7 +192,7 @@
       "path": "README.md"
     },
     {
-      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,831 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
+      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,831 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -283,6 +288,11 @@
     },
     {
       "expected": "| Metamorphic policy tests | 1233 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Policy mutation analysis | 3111 |",
       "passed": true,
       "path": "README.md"
     },
@@ -433,6 +443,11 @@
     },
     {
       "expected": "python scripts/run_metamorphic_policy_tests.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_policy_mutation_analysis.py",
       "passed": true,
       "path": "README.md"
     },
@@ -607,6 +622,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "policy-mutation layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "query-perturbation layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -718,6 +738,11 @@
     },
     {
       "expected": "1,233/1,233 metamorphic policy tests",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "15/15 policy mutants killed across 3,111 mutation evaluations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -892,6 +917,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "python scripts/run_policy_mutation_analysis.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_query_perturbation_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -932,6 +962,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "policy-mutation file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "query-perturbation file",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -952,7 +987,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "3,660,548 validation operations",
+      "expected": "3,663,659 validation operations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1262,6 +1297,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Policy mutation analysis & 3,111 evaluations & 15/15 killed",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Model-identity invariance & 1,320 substitutions & 1,320/1,320; 0 status changes",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1293,6 +1333,11 @@
     },
     {
       "expected": "All 1,233 metamorphic tests passed",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "The policy-mutation layer killed 15/15 mutants across 3,111 evaluations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1352,7 +1397,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 38",
+      "expected": "Validation suites: 39",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1423,6 +1468,16 @@
     },
     {
       "expected": "Metamorphic policy tests | expected-label-free policy-invariant validation | 1233 transformations over 264 packets | 1233 | 1233/1233",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Policy mutation analysis: 15/15 mutants killed across 3111 evaluations; invalid promotions 2264; false negatives 2",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Policy mutation analysis | policy-mutant killing | 3111 mutation evaluations over 15 policy mutants | 3111 | 15/15 killed",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1687,6 +1742,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `3,660,548`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `4 theories`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -2187,6 +2247,11 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `3,660,548`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `4 theories`",
       "passed": true,
       "path": "README.md"
@@ -2687,6 +2752,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `3,660,548`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `4 theories`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -3187,6 +3257,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `3,660,548`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `4 theories`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -3683,6 +3758,11 @@
     },
     {
       "expected": "absence of stale claim `3,658,964`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `3,660,548`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -4084,5 +4164,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 816
+  "passed_count": 832
 }

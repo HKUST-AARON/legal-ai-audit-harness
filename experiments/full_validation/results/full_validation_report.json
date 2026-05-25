@@ -933,6 +933,576 @@
     "verified_scenario_count": 264
   },
   "policy_constants_replay_checks": 4752,
+  "policy_mutation_evaluations": 3111,
+  "policy_mutations": {
+    "classification_error_count": 2266,
+    "decision_scenario_count": 12,
+    "evaluation_count": 3111,
+    "false_negative_count": 2,
+    "invalid_promotion_count": 2264,
+    "killed_mutant_count": 15,
+    "mutant_count": 15,
+    "mutants": [
+      {
+        "classification_error_count": 153,
+        "description": "Policy treats authority and counter-material coverage as screening status.",
+        "evaluation_count": 264,
+        "examples": [
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "high-coverage-uncontestable-output"
+          },
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "unverifiable-legal-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q03"
+          }
+        ],
+        "false_negative_count": 2,
+        "invalid_promotion_count": 151,
+        "killed": true,
+        "kind": "status_conferring",
+        "mutant": "authority_material_confers_screening"
+      },
+      {
+        "classification_error_count": 12,
+        "description": "Policy treats decision support as complete without adoption reasons or contestation logging.",
+        "evaluation_count": 12,
+        "examples": [
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "odr-authorized-review"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "normative_material_screening_output",
+            "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 12,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_adoption_gate_for_decision"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy stops requiring counter-material coverage.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_counter_material_gate"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy no longer requires a source-linked evidence packet.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_evidence_packet_gate"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy stops requiring high-authority material coverage.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_high_authority_gate"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy ignores missing jurisdiction assumptions.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_jurisdiction_assumption_gate"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy accepts nonprocedural source tags as if they were verified.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_procedural_source_tag_gate"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy allows high status without a review and contestability gate.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "drop_review_gate"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy ignores failure-cap dispositions.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "ignore_failure_caps"
+      },
+      {
+        "classification_error_count": 63,
+        "description": "Policy ignores system-role caps.",
+        "evaluation_count": 63,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "civil-law-statutory-interpretation"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "court-authority-report"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "decision-support-ready"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "grounded-output-summary"
+          },
+          {
+            "mutant_status": "decision_support_reason",
+            "reference_status": "reference_information",
+            "scenario_id": "odr-authorized-review"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 63,
+        "killed": true,
+        "kind": "gate_removal",
+        "mutant": "ignore_role_caps"
+      },
+      {
+        "classification_error_count": 154,
+        "description": "Policy treats recall at or above 0.8 as screening status.",
+        "evaluation_count": 219,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "high-coverage-uncontestable-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "suspended-authority-omission"
+          },
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "unverifiable-legal-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "holdout-raw-canada-vavilov-01"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 154,
+        "killed": true,
+        "kind": "status_conferring",
+        "mutant": "metric_recall_confers_screening"
+      },
+      {
+        "classification_error_count": 1005,
+        "description": "Policy treats provider, model or engine identity as screening status.",
+        "evaluation_count": 1320,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 1005,
+        "killed": true,
+        "kind": "status_conferring",
+        "mutant": "model_identity_confers_screening"
+      },
+      {
+        "classification_error_count": 159,
+        "description": "Policy treats review posture and role readiness as screening status.",
+        "evaluation_count": 264,
+        "examples": [
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "administrative-guidance-conflict"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "high-coverage-uncontestable-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "suspended-authority-omission"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "unverifiable-legal-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "issue-public-output-uk-tna-fairchild-mesothelioma"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 159,
+        "killed": true,
+        "kind": "status_conferring",
+        "mutant": "review_label_confers_screening"
+      },
+      {
+        "classification_error_count": 94,
+        "description": "Policy treats source-bound evidence as screening status.",
+        "evaluation_count": 264,
+        "examples": [
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "high-coverage-uncontestable-output"
+          },
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "unverifiable-legal-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "professional_support_output",
+            "scenario_id": "public-system-output-canada"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "professional_support_output",
+            "scenario_id": "public-system-output-mainland_china"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "professional_support_output",
+            "scenario_id": "public-system-output-united_kingdom"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 94,
+        "killed": true,
+        "kind": "status_conferring",
+        "mutant": "source_binding_confers_screening"
+      },
+      {
+        "classification_error_count": 185,
+        "description": "Policy treats total score at or above 9 as screening status.",
+        "evaluation_count": 264,
+        "examples": [
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "high-coverage-uncontestable-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "reference_information",
+            "scenario_id": "suspended-authority-omission"
+          },
+          {
+            "mutant_status": "reference_information",
+            "reference_status": "no_external_legal_effect",
+            "scenario_id": "unverifiable-legal-output"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "professional_support_output",
+            "scenario_id": "real-cases-canada"
+          },
+          {
+            "mutant_status": "normative_material_screening_output",
+            "reference_status": "professional_support_output",
+            "scenario_id": "real-cases-hong_kong"
+          }
+        ],
+        "false_negative_count": 0,
+        "invalid_promotion_count": 185,
+        "killed": true,
+        "kind": "status_conferring",
+        "mutant": "total_score_confers_screening"
+      }
+    ],
+    "qualified_scenario_count": 63,
+    "scenario_count": 264,
+    "survived_mutant_count": 0
+  },
   "query_perturbation": {
     "authority_coverage_unstable_group_count": 3,
     "counter_recall_unstable_group_count": 0,
@@ -1326,7 +1896,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 38,
+  "suite_count": 39,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1940,6 +2510,23 @@
       "validation_units": "1233 transformations over 264 packets"
     },
     {
+      "evidence_class": "policy-mutant killing",
+      "finding": "Applies gate-removal and status-conferring policy mutants across committed packets; every mutant is killed because removing a required gate, ignoring a cap, or treating metrics, source labels, review labels, total score or model identity as status produces a wrong allocation.",
+      "high_upstream_but_blocked": null,
+      "id": "policy_mutations",
+      "label": "Policy mutation analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "15/15 killed",
+      "scenario_count": 3111,
+      "status_distribution": {
+        "classification_errors": 2266,
+        "false_negatives": 2,
+        "invalid_promotions": 2264
+      },
+      "validation_units": "3111 mutation evaluations over 15 policy mutants"
+    },
+    {
       "evidence_class": "identity-substitution invariance check",
       "finding": "Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.",
       "high_upstream_but_blocked": null,
@@ -2144,7 +2731,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 3660548,
+  "total_evaluation_rows": 3663659,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -2181,6 +2768,8 @@
     "model_output_transcript_locators_verified": 50,
     "policy_constants_replay_checks": 4752,
     "policy_constants_replay_passed": 4752,
+    "policy_mutants_killed": 15,
+    "policy_mutation_evaluations": 3111,
     "public_metadata_records": 120,
     "public_retrieval_records": 169,
     "public_system_records": 60,

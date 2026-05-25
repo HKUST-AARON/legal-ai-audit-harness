@@ -1117,7 +1117,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 38)
+        self.assertEqual(report["suite_count"], 39)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1203,6 +1203,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metamorphic_policy_evaluations"], 1233)
         self.assertEqual(report["validation_units"]["metamorphic_policy_evaluations"], 1233)
         self.assertEqual(report["validation_units"]["metamorphic_policy_passed"], 1233)
+        self.assertEqual(report["policy_mutation_evaluations"], 3111)
+        self.assertEqual(report["validation_units"]["policy_mutation_evaluations"], 3111)
+        self.assertEqual(report["validation_units"]["policy_mutants_killed"], 15)
         self.assertEqual(report["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_passed"], 1320)
@@ -1212,7 +1215,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 3660548)
+        self.assertEqual(report["total_evaluation_rows"], 3663659)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1371,6 +1374,16 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 63)
+        self.assertEqual(report["policy_mutations"]["scenario_count"], 264)
+        self.assertEqual(report["policy_mutations"]["qualified_scenario_count"], 63)
+        self.assertEqual(report["policy_mutations"]["decision_scenario_count"], 12)
+        self.assertEqual(report["policy_mutations"]["mutant_count"], 15)
+        self.assertEqual(report["policy_mutations"]["killed_mutant_count"], 15)
+        self.assertEqual(report["policy_mutations"]["survived_mutant_count"], 0)
+        self.assertEqual(report["policy_mutations"]["evaluation_count"], 3111)
+        self.assertEqual(report["policy_mutations"]["classification_error_count"], 2266)
+        self.assertEqual(report["policy_mutations"]["invalid_promotion_count"], 2264)
+        self.assertEqual(report["policy_mutations"]["false_negative_count"], 2)
         self.assertEqual(report["model_identity_invariance"]["scenario_count"], 264)
         self.assertEqual(report["model_identity_invariance"]["identity_profile_count"], 5)
         self.assertEqual(report["model_identity_invariance"]["evaluation_count"], 1320)
@@ -1485,6 +1498,32 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 63)
+
+    def test_policy_mutation_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_policy_mutation_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "policy_mutations" / "results" / "policy_mutation_analysis.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["scenario_count"], 264)
+        self.assertEqual(report["qualified_scenario_count"], 63)
+        self.assertEqual(report["decision_scenario_count"], 12)
+        self.assertEqual(report["mutant_count"], 15)
+        self.assertEqual(report["killed_mutant_count"], 15)
+        self.assertEqual(report["survived_mutant_count"], 0)
+        self.assertEqual(report["evaluation_count"], 3111)
+        self.assertEqual(report["invalid_promotion_count"], 2264)
+        self.assertEqual(report["false_negative_count"], 2)
+        mutants = {mutant["mutant"]: mutant for mutant in report["mutants"]}
+        self.assertEqual(mutants["drop_evidence_packet_gate"]["invalid_promotion_count"], 63)
+        self.assertEqual(mutants["drop_adoption_gate_for_decision"]["invalid_promotion_count"], 12)
+        self.assertEqual(mutants["metric_recall_confers_screening"]["evaluation_count"], 219)
+        self.assertEqual(mutants["model_identity_confers_screening"]["evaluation_count"], 1320)
+        self.assertTrue(all(mutant["killed"] for mutant in mutants.values()))
 
     def test_model_identity_invariance_runs(self):
         completed = subprocess.run(
