@@ -236,7 +236,7 @@
     "qualified_scenario_count": 54
   },
   "gate_ablation_evaluations": 336,
-  "high_upstream_but_blocked": 622,
+  "high_upstream_but_blocked": 624,
   "jurisdiction_profile": {
     "counterfactual_evaluation_count": 162,
     "generic_profile_preserved": 54,
@@ -432,6 +432,21 @@
     "verified_scenario_count": 246
   },
   "policy_constants_replay_checks": 4182,
+  "query_perturbation": {
+    "authority_coverage_unstable_group_count": 3,
+    "counter_recall_unstable_group_count": 0,
+    "high_upstream_but_blocked": 2,
+    "issue_group_count": 5,
+    "max_authority_coverage_gap": 0.5,
+    "max_counter_recall_gap": 0.0,
+    "mean_pairwise_record_overlap": 0.392484681984682,
+    "min_pairwise_record_overlap": 0.0,
+    "query_variant_count": 30,
+    "record_set_unstable_group_count": 4,
+    "status_stable_group_count": 5,
+    "top_result_unstable_group_count": 4
+  },
+  "query_perturbation_evaluations": 35,
   "ranking_visibility": {
     "counterfactual_front_window_counter_visible": 0,
     "coverage_preserved_count": 76,
@@ -549,7 +564,7 @@
     "verified_certificate_count": 246
   },
   "status_certificate_replay_checks": 3198,
-  "suite_count": 29,
+  "suite_count": 30,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1057,6 +1072,26 @@
       "validation_units": "1134 transformations over 246 packets"
     },
     {
+      "evidence_class": "public-retrieval query-sensitivity diagnostic",
+      "finding": "Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.",
+      "high_upstream_but_blocked": 2,
+      "id": "query_perturbation",
+      "label": "Query-perturbation stability",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "5/5 status-stable groups",
+      "scenario_count": 30,
+      "status_distribution": {
+        "authority_unstable_groups": 3,
+        "counter_recall_unstable_groups": 0,
+        "mean_record_overlap": 0.39,
+        "min_record_overlap": 0.0,
+        "record_set_unstable_groups": 4,
+        "top_result_unstable_groups": 4
+      },
+      "validation_units": "30 query variants across 5 issue groups"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -1193,7 +1228,7 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 136260,
+  "total_evaluation_rows": 136295,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
@@ -1222,6 +1257,8 @@
     "public_metadata_records": 120,
     "public_retrieval_records": 169,
     "public_system_records": 60,
+    "query_perturbation_groups": 5,
+    "query_perturbation_variants": 30,
     "ranking_visibility_checks": 230,
     "ranking_visibility_counterfactuals": 76,
     "ranking_visibility_window_checks": 884,

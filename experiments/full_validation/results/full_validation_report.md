@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 29
+Validation suites: 30
 Scenario files: 246
 Base embedded records/items: 679 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 492
@@ -23,9 +23,10 @@ Ranking-visibility checks: 884 rank-window checks over 230 high-status claims; 7
 Status certificate replay checks: 3198/3198 passed over 246 certificates
 Policy-constants replay checks: 4182/4182 passed over 246 packets
 Metamorphic policy tests: 1134/1134 passed over 246 packets
-Derived robustness evaluations: 135581
+Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
+Derived robustness evaluations: 135616
 Scenario-regression expectations passed: 246/246
-High-upstream-performance but procedurally blocked scenarios: 622
+High-upstream-performance but procedurally blocked scenarios: 624
 Blocked reason distribution: authority_omission: 59, contestation_failure: 55, counter_material_suppression: 135, invalid_authority: 1, jurisdiction_assumption_gap: 54, ranking_drift: 9, source_attribution_gap: 213, summary_distortion: 129, unauthorized_action: 10
 Annotation robustness: 234/246 stable across base, strict and lenient coding policies
 Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143
@@ -59,6 +60,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Status certificate replay | derivation-certificate check | 3198 replay checks over 246 certificates | 3198 | 3198/3198 | n/a | n/a | n/a | cap_or_failure_transitions: 158, verified_certificates: 246 |
 | Policy-constants replay | second implementation check | 4182 replay checks over 246 packets | 4182 | 4182/4182 | n/a | n/a | n/a | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 42, professional_support_output: 23, reference_information: 137 |
 | Metamorphic policy tests | expected-label-free policy-invariant validation | 1134 transformations over 246 packets | 1134 | 1134/1134 | n/a | n/a | n/a | back_office_role_cap: 246, benign_source_append_preserves_high_status: 54, claim_escalation_nonpromotion: 246, review_gate_removal_blocks_high_status: 54, score_and_role_inflation_without_adoption: 234, source_tag_deproceduralization_blocks_high_status: 54, upstream_metric_inflation_invariance: 246 |
+| Query-perturbation stability | public-retrieval query-sensitivity diagnostic | 30 query variants across 5 issue groups | 30 | 5/5 status-stable groups | n/a | n/a | 2 | authority_unstable_groups: 3, counter_recall_unstable_groups: 0, mean_record_overlap: 0.39, min_record_overlap: 0.0, record_set_unstable_groups: 4, top_result_unstable_groups: 4 |
 | Annotation robustness recoding | coding robustness | 492 strict/lenient recoded evaluations | 246 | 234/246 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Annotation uncertainty Monte Carlo | score-noise robustness | 61500 score-perturbed evaluations | 61500 | 0.933 sample stability; 0.924 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 143, exact_stable_scenarios: 102, high_status_stable_scenarios: 183, mean_status_rank_shift: 0.086 |
 | Score-blinded dual coding | codebook reproducibility | 222 packets x 2 coding passes | 222 | 0.99 coder kappa; 0.92 min base kappa | n/a | n/a | n/a | coder_cohen_kappa: 0.99, coder_exact_status_agreement: 0.99, coder_quadratic_weighted_kappa: 0.96, coder_weighted_status_agreement: 0.99, min_base_cohen_kappa: 0.92, min_base_exact_status_agreement: 0.95, min_base_quadratic_weighted_kappa: 0.9, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
@@ -91,6 +93,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Status certificate replay:** Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.
 - **Policy-constants replay:** Recomputes score candidates, role caps, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.
 - **Metamorphic policy tests:** Applies claim escalation, metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation to primary scenario packets without using expected labels.
+- **Query-perturbation stability:** Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Annotation uncertainty Monte Carlo:** Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.
 - **Score-blinded dual coding:** Tests chance-corrected score-blinded coder reliability and how far status assignments track the base harness allocation.

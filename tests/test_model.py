@@ -400,6 +400,32 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["rank_intervention_applied_count"], 76)
         self.assertFalse(payload["failures"])
 
+    def test_query_perturbation_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_query_perturbation_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Query Perturbation Stability Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "query_perturbation" / "results" / "query_perturbation_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["issue_group_count"], 5)
+        self.assertEqual(payload["query_variant_count"], 30)
+        self.assertEqual(payload["status_stable_group_count"], 5)
+        self.assertEqual(payload["authority_coverage_unstable_group_count"], 3)
+        self.assertEqual(payload["counter_recall_unstable_group_count"], 0)
+        self.assertEqual(payload["record_set_unstable_group_count"], 4)
+        self.assertEqual(payload["top_result_unstable_group_count"], 4)
+        self.assertEqual(payload["high_upstream_but_blocked"], 2)
+        self.assertAlmostEqual(payload["max_authority_coverage_gap"], 0.5)
+        self.assertAlmostEqual(payload["max_counter_recall_gap"], 0.0)
+
     def test_status_certificate_validation_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/run_status_certificate_validation.py"],
@@ -847,7 +873,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 29)
+        self.assertEqual(report["suite_count"], 30)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -907,7 +933,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metamorphic_policy_evaluations"], 1134)
         self.assertEqual(report["validation_units"]["metamorphic_policy_evaluations"], 1134)
         self.assertEqual(report["validation_units"]["metamorphic_policy_passed"], 1134)
-        self.assertEqual(report["total_evaluation_rows"], 136260)
+        self.assertEqual(report["query_perturbation_evaluations"], 35)
+        self.assertEqual(report["validation_units"]["query_perturbation_variants"], 30)
+        self.assertEqual(report["validation_units"]["query_perturbation_groups"], 5)
+        self.assertEqual(report["total_evaluation_rows"], 136295)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -998,6 +1027,12 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 54)
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 54)
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 54)
+        self.assertEqual(report["query_perturbation"]["issue_group_count"], 5)
+        self.assertEqual(report["query_perturbation"]["query_variant_count"], 30)
+        self.assertEqual(report["query_perturbation"]["status_stable_group_count"], 5)
+        self.assertEqual(report["query_perturbation"]["authority_coverage_unstable_group_count"], 3)
+        self.assertEqual(report["query_perturbation"]["record_set_unstable_group_count"], 4)
+        self.assertEqual(report["query_perturbation"]["high_upstream_but_blocked"], 2)
 
     def test_source_chain_attacks_run(self):
         completed = subprocess.run(

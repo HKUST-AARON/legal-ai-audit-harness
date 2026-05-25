@@ -162,6 +162,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_status_certificate_validation.py"])
     _run([sys.executable, "scripts/run_policy_constants_replay.py"])
     _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
+    _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
 
     rows = []
     for suite in SUITES:
@@ -294,6 +295,12 @@ def main() -> int:
         )
     )
     rows.append(_metamorphic_policy_row(metamorphic_payload))
+    query_perturbation_payload = json.loads(
+        (ROOT / "experiments" / "query_perturbation" / "results" / "query_perturbation_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_query_perturbation_row(query_perturbation_payload))
 
     _run(
         [
@@ -384,6 +391,8 @@ def main() -> int:
             "policy_constants_replay_passed": policy_constants_payload["passed_check_count"],
             "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
             "metamorphic_policy_passed": metamorphic_payload["passed_count"],
+            "query_perturbation_variants": query_perturbation_payload["query_variant_count"],
+            "query_perturbation_groups": query_perturbation_payload["issue_group_count"],
         }
     )
     payload = {
@@ -412,6 +421,8 @@ def main() -> int:
         "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
         "policy_constants_replay_checks": policy_constants_payload["check_count"],
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
+        "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
+        + query_perturbation_payload["issue_group_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
@@ -429,6 +440,8 @@ def main() -> int:
         + status_certificate_payload["replay_check_count"]
         + policy_constants_payload["check_count"]
         + metamorphic_payload["metamorphic_evaluation_count"]
+        + query_perturbation_payload["query_variant_count"]
+        + query_perturbation_payload["issue_group_count"]
         + robustness_payload["recoded_evaluations"]
         + uncertainty_payload["evaluation_count"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
@@ -598,6 +611,22 @@ def main() -> int:
             "passed_count": metamorphic_payload["passed_count"],
             "failed_count": metamorphic_payload["failed_count"],
             "by_relation": metamorphic_payload["by_relation"],
+        },
+        "query_perturbation": {
+            "issue_group_count": query_perturbation_payload["issue_group_count"],
+            "query_variant_count": query_perturbation_payload["query_variant_count"],
+            "status_stable_group_count": query_perturbation_payload["status_stable_group_count"],
+            "authority_coverage_unstable_group_count": query_perturbation_payload[
+                "authority_coverage_unstable_group_count"
+            ],
+            "counter_recall_unstable_group_count": query_perturbation_payload["counter_recall_unstable_group_count"],
+            "record_set_unstable_group_count": query_perturbation_payload["record_set_unstable_group_count"],
+            "top_result_unstable_group_count": query_perturbation_payload["top_result_unstable_group_count"],
+            "max_authority_coverage_gap": query_perturbation_payload["max_authority_coverage_gap"],
+            "max_counter_recall_gap": query_perturbation_payload["max_counter_recall_gap"],
+            "mean_pairwise_record_overlap": query_perturbation_payload["mean_pairwise_record_overlap"],
+            "min_pairwise_record_overlap": query_perturbation_payload["min_pairwise_record_overlap"],
+            "high_upstream_but_blocked": query_perturbation_payload["high_upstream_but_blocked"],
         },
         "suites": rows,
     }
@@ -1083,6 +1112,29 @@ def _metamorphic_policy_row(payload: dict) -> dict:
     }
 
 
+def _query_perturbation_row(payload: dict) -> dict:
+    return {
+        "id": "query_perturbation",
+        "label": "Query-perturbation stability",
+        "evidence_class": "public-retrieval query-sensitivity diagnostic",
+        "validation_units": f"{payload['query_variant_count']} query variants across {payload['issue_group_count']} issue groups",
+        "scenario_count": payload["query_variant_count"],
+        "rule_pass": f"{payload['status_stable_group_count']}/{payload['issue_group_count']} status-stable groups",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": payload["high_upstream_but_blocked"],
+        "status_distribution": {
+            "authority_unstable_groups": payload["authority_coverage_unstable_group_count"],
+            "counter_recall_unstable_groups": payload["counter_recall_unstable_group_count"],
+            "record_set_unstable_groups": payload["record_set_unstable_group_count"],
+            "top_result_unstable_groups": payload["top_result_unstable_group_count"],
+            "mean_record_overlap": round(payload["mean_pairwise_record_overlap"], 2),
+            "min_record_overlap": round(payload["min_pairwise_record_overlap"], 2),
+        },
+        "finding": "Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.",
+    }
+
+
 def _policy_constants_row(payload: dict) -> dict:
     return {
         "id": "policy_constants_replay",
@@ -1138,6 +1190,7 @@ def _format_report(payload: dict) -> str:
         f"Status certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
         f"Policy-constants replay checks: {payload['policy_constants_replay']['passed_check_count']}/{payload['policy_constants_replay']['check_count']} passed over {payload['policy_constants_replay']['scenario_count']} packets",
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
+        f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

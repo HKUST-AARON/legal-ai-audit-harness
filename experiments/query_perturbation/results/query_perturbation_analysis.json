@@ -1,0 +1,1088 @@
+{
+  "authority_coverage_unstable_group_count": 3,
+  "counter_recall_unstable_group_count": 0,
+  "groups": [
+    {
+      "authority_coverage_gap": 0.33333333333333337,
+      "authority_coverage_range": [
+        0.6666666666666666,
+        1.0
+      ],
+      "counter_recall_gap": 0.0,
+      "counter_recall_range": [
+        0.0,
+        0.0
+      ],
+      "distinct_top_result_count": 3,
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": 2,
+      "mean_pairwise_record_overlap": 0.5185869685869686,
+      "min_pairwise_record_overlap": 0.25,
+      "qualified_variant_count": 0,
+      "queries": [
+        "Vavilov Dunsmuir standard of review",
+        "Vavilov Bell Canada Canada Post standard of review",
+        "reasonableness review Vavilov Dunsmuir",
+        "statutory appeal Vavilov correctness reasonableness",
+        "administrative law standard of review Vavilov",
+        "Dunsmuir Vavilov reasonableness correctness"
+      ],
+      "status_distribution": {
+        "reference_information": 6
+      },
+      "status_stable": true,
+      "upstream_recall_gap": 0.33333333333333337,
+      "upstream_recall_range": [
+        0.6666666666666666,
+        1.0
+      ],
+      "variant_count": 6
+    },
+    {
+      "authority_coverage_gap": 0.3333333333333333,
+      "authority_coverage_range": [
+        0.0,
+        0.3333333333333333
+      ],
+      "counter_recall_gap": 0.0,
+      "counter_recall_range": [
+        0.0,
+        0.0
+      ],
+      "distinct_top_result_count": 6,
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": 0,
+      "mean_pairwise_record_overlap": 0.0,
+      "min_pairwise_record_overlap": 0.0,
+      "qualified_variant_count": 0,
+      "queries": [
+        "C-154/21 GDPR Article 15 recipients",
+        "C-487/21 GDPR Article 15 copy",
+        "C-131/12 Google Spain data protection",
+        "C-579/21 Article 15 access personal data",
+        "C-300/21 GDPR damage access",
+        "C-307/22 GDPR medical records access"
+      ],
+      "status_distribution": {
+        "reference_information": 6
+      },
+      "status_stable": true,
+      "upstream_recall_gap": 0.3333333333333333,
+      "upstream_recall_range": [
+        0.0,
+        0.3333333333333333
+      ],
+      "variant_count": 6
+    },
+    {
+      "authority_coverage_gap": 0.0,
+      "authority_coverage_range": [
+        0.0,
+        0.0
+      ],
+      "counter_recall_gap": 0.0,
+      "counter_recall_range": [
+        0.0,
+        0.0
+      ],
+      "distinct_top_result_count": 1,
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": 0,
+      "mean_pairwise_record_overlap": 1.0,
+      "min_pairwise_record_overlap": 1.0,
+      "qualified_variant_count": 0,
+      "queries": [
+        "Recht auf Vergessen I II BVerfG",
+        "1 BvR 16/13 Recht auf Vergessen",
+        "1 BvR 276/17 Recht auf Vergessen",
+        "Google Spain C-131/12 Recht auf Vergessen",
+        "Datenschutz Grundrechte Recht auf Vergessen",
+        "Bundesverfassungsgericht Recht auf Vergessen Charta Grundgesetz"
+      ],
+      "status_distribution": {
+        "reference_information": 6
+      },
+      "status_stable": true,
+      "upstream_recall_gap": 0.0,
+      "upstream_recall_range": [
+        0.0,
+        0.0
+      ],
+      "variant_count": 6
+    },
+    {
+      "authority_coverage_gap": 0.0,
+      "authority_coverage_range": [
+        0.0,
+        0.0
+      ],
+      "counter_recall_gap": 0.0,
+      "counter_recall_range": [
+        0.0,
+        0.0
+      ],
+      "distinct_top_result_count": 3,
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": 0,
+      "mean_pairwise_record_overlap": 0.33387973137973137,
+      "min_pairwise_record_overlap": 0.125,
+      "qualified_variant_count": 0,
+      "queries": [
+        "Fairchild Barker Sienkiewicz mesothelioma",
+        "mesothelioma causation Fairchild Barker Compensation Act",
+        "material increase in risk mesothelioma Fairchild",
+        "Sienkiewicz Greif Barker Corus Fairchild",
+        "mesothelioma damages causation House of Lords Fairchild",
+        "Compensation Act 2006 section 3 Barker mesothelioma"
+      ],
+      "status_distribution": {
+        "reference_information": 6
+      },
+      "status_stable": true,
+      "upstream_recall_gap": 0.0,
+      "upstream_recall_range": [
+        0.0,
+        0.0
+      ],
+      "variant_count": 6
+    },
+    {
+      "authority_coverage_gap": 0.5,
+      "authority_coverage_range": [
+        0.0,
+        0.5
+      ],
+      "counter_recall_gap": 0.0,
+      "counter_recall_range": [
+        0.0,
+        0.0
+      ],
+      "distinct_top_result_count": 3,
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": 0,
+      "mean_pairwise_record_overlap": 0.10995670995670996,
+      "min_pairwise_record_overlap": 0.0,
+      "qualified_variant_count": 0,
+      "queries": [
+        "Loper Bright Chevron Skidmore Kisor",
+        "agency deference after Loper Bright Chevron",
+        "Chevron overruled Skidmore APA 706",
+        "Loper Bright independent judgment 5 USC 706",
+        "judicial review agency statutory interpretation after Loper Bright",
+        "Kisor Skidmore Chevron Loper"
+      ],
+      "status_distribution": {
+        "reference_information": 6
+      },
+      "status_stable": true,
+      "upstream_recall_gap": 0.5,
+      "upstream_recall_range": [
+        0.0,
+        0.5
+      ],
+      "variant_count": 6
+    }
+  ],
+  "high_upstream_but_blocked": 2,
+  "holdout_variants": 8,
+  "issue_group_count": 5,
+  "max_authority_coverage_gap": 0.5,
+  "max_counter_recall_gap": 0.0,
+  "mean_pairwise_record_overlap": 0.392484681984682,
+  "min_pairwise_record_overlap": 0.0,
+  "public_retrieval_variants": 22,
+  "query_variant_count": 30,
+  "record_set_unstable_group_count": 4,
+  "rows": [
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.6666666666666666,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q01.json",
+      "query": "Vavilov Dunsmuir standard of review",
+      "record_count": 10,
+      "retrieved_ids": [
+        "canada-post-2019-scc-67",
+        "canada-search-auer-v-auer",
+        "canada-search-bell-canada-et-al-v-attorney-general-of-canada",
+        "canada-search-law-society-of-saskatchewan-v-abrametz",
+        "canada-search-mason-v-canada-citizenship-and-immigration",
+        "canada-search-minister-of-citizenship-and-immigration-v-alexander-vavilov",
+        "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "canada-search-yatar-v-td-insurance-meloche-monnex",
+        "vavilov-2019-scc-65"
+      ],
+      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q01",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "vavilov-2019-scc-65",
+      "total_score": 9,
+      "upstream_recall": 0.6666666666666666
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.6666666666666666,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q02.json",
+      "query": "Vavilov Bell Canada Canada Post standard of review",
+      "record_count": 10,
+      "retrieved_ids": [
+        "canada-post-2019-scc-67",
+        "canada-search-commission-scolaire-francophone-des-territoires-du-nord-oues",
+        "canada-search-dorsey-v-canada-attorney-general",
+        "canada-search-ontario-attorney-general-v-restoule",
+        "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "canada-search-piekut-v-canada-national-revenue",
+        "canada-search-r-v-mcgregor",
+        "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "canada-search-telus-communications-inc-v-federation-of-canadian-municipali",
+        "vavilov-2019-scc-65"
+      ],
+      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q02",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "canada-post-2019-scc-67",
+      "total_score": 9,
+      "upstream_recall": 0.6666666666666666
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 1.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": true,
+      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q03.json",
+      "query": "reasonableness review Vavilov Dunsmuir",
+      "record_count": 10,
+      "retrieved_ids": [
+        "bell-canada-2019-scc-66",
+        "canada-post-2019-scc-67",
+        "canada-search-auer-v-auer",
+        "canada-search-law-society-of-saskatchewan-v-abrametz",
+        "canada-search-mason-v-canada-citizenship-and-immigration",
+        "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "canada-search-yatar-v-td-insurance-meloche-monnex",
+        "canada-search-york-region-district-school-board-v-elementary-teachers-fede",
+        "vavilov-2019-scc-65"
+      ],
+      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q03",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "vavilov-2019-scc-65",
+      "total_score": 10,
+      "upstream_recall": 1.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.6666666666666666,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q04.json",
+      "query": "statutory appeal Vavilov correctness reasonableness",
+      "record_count": 10,
+      "retrieved_ids": [
+        "canada-post-2019-scc-67",
+        "canada-search-auer-v-auer",
+        "canada-search-dow-chemical-canada-ulc-v-canada",
+        "canada-search-mason-v-canada-citizenship-and-immigration",
+        "canada-search-ontario-attorney-general-v-ontario-information-and-privacy-c",
+        "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "canada-search-transalta-generation-partnership-v-alberta",
+        "canada-search-york-region-district-school-board-v-elementary-teachers-fede",
+        "vavilov-2019-scc-65"
+      ],
+      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q04",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "canada-search-mason-v-canada-citizenship-and-immigration",
+      "total_score": 9,
+      "upstream_recall": 0.6666666666666666
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.3333333333333333,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q01.json",
+      "query": "C-154/21 GDPR Article 15 recipients",
+      "record_count": 1,
+      "retrieved_ids": [
+        "cjeu-c-154-21-osterreichische-post"
+      ],
+      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q01",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "cjeu-c-154-21-osterreichische-post",
+      "total_score": 9,
+      "upstream_recall": 0.3333333333333333
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.3333333333333333,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q02.json",
+      "query": "C-487/21 GDPR Article 15 copy",
+      "record_count": 1,
+      "retrieved_ids": [
+        "cjeu-c-487-21-crif"
+      ],
+      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q02",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "cjeu-c-487-21-crif",
+      "total_score": 9,
+      "upstream_recall": 0.3333333333333333
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q03.json",
+      "query": "C-131/12 Google Spain data protection",
+      "record_count": 1,
+      "retrieved_ids": [
+        "eu-search-judgment-of-the-court-grand-chamber-13-may-2014-google-spain"
+      ],
+      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q03",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "eu-search-judgment-of-the-court-grand-chamber-13-may-2014-google-spain",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q04.json",
+      "query": "C-579/21 Article 15 access personal data",
+      "record_count": 1,
+      "retrieved_ids": [
+        "eu-search-c-579-21"
+      ],
+      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q04",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "eu-search-c-579-21",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q01.json",
+      "query": "Recht auf Vergessen I II BVerfG",
+      "record_count": 10,
+      "retrieved_ids": [
+        "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+      ],
+      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q01",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q02.json",
+      "query": "1 BvR 16/13 Recht auf Vergessen",
+      "record_count": 10,
+      "retrieved_ids": [
+        "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+      ],
+      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q02",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q03.json",
+      "query": "1 BvR 276/17 Recht auf Vergessen",
+      "record_count": 10,
+      "retrieved_ids": [
+        "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+      ],
+      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q03",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q04.json",
+      "query": "Google Spain C-131/12 Recht auf Vergessen",
+      "record_count": 10,
+      "retrieved_ids": [
+        "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+      ],
+      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q04",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q01.json",
+      "query": "Fairchild Barker Sienkiewicz mesothelioma",
+      "record_count": 10,
+      "retrieved_ids": [
+        "uk-search-bannister-estate-of-v-freemans-public-ltd-company-rev-1",
+        "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "uk-search-heneghan-v-manchester-dry-docks-ltd-ors",
+        "uk-search-lugay-v-london-borough-of-hammersmith-and-fulham",
+        "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+        "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic",
+        "uk-search-the-department-for-communities-and-local-government-v-blackm"
+      ],
+      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q02.json",
+      "query": "mesothelioma causation Fairchild Barker Compensation Act",
+      "record_count": 9,
+      "retrieved_ids": [
+        "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+        "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre",
+        "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "uk-search-davies-v-frimley-health-nhs-foundation-trust",
+        "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+        "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic"
+      ],
+      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q03.json",
+      "query": "material increase in risk mesothelioma Fairchild",
+      "record_count": 10,
+      "retrieved_ids": [
+        "uk-search-alexander-johnstone-v-fawcett-s-garage-newbury-limited",
+        "uk-search-alexander-joseph-johnstone-v-fawcett-s-garage-newbury-limite",
+        "uk-search-anne-edith-powell-v-university-hospitals-sussex-nhs-foundati",
+        "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+        "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "uk-search-simon-coram-v-d-r-dunthorn-son-ltd",
+        "uk-search-steven-dilks-v-secretary-of-state-for-energy-and-climate-cha",
+        "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-"
+      ],
+      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q04.json",
+      "query": "Sienkiewicz Greif Barker Corus Fairchild",
+      "record_count": 9,
+      "retrieved_ids": [
+        "uk-search-bannister-estate-of-v-freemans-public-ltd-company-rev-1",
+        "uk-search-dowdall-v-william-kenyon-sons-ltd-ors",
+        "uk-search-heneghan-v-manchester-dry-docks-ltd-ors",
+        "uk-search-lugay-v-london-borough-of-hammersmith-and-fulham",
+        "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-",
+        "uk-search-the-department-for-communities-and-local-government-v-blackm",
+        "uk-search-zurich-insurance-plc-uk-branch-v-international-energy-group-"
+      ],
+      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q06.json",
+      "query": "mesothelioma damages causation House of Lords Fairchild",
+      "record_count": 10,
+      "retrieved_ids": [
+        "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+        "uk-search-christine-devall-ors-v-english-electric-company-limited",
+        "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "uk-search-davies-v-frimley-health-nhs-foundation-trust",
+        "uk-search-lxlp-v-st-george-s-university-hospitals-nhs-foundation-trust",
+        "uk-search-manuel-mathieu-v-tony-martin-hinds-anor",
+        "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "uk-search-simon-coram-v-d-r-dunthorn-son-ltd",
+        "uk-search-teresa-evans-v-the-secretary-of-state-for-health-and-social-"
+      ],
+      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "uk-search-christine-devall-ors-v-english-electric-company-limited",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.5,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q01.json",
+      "query": "Loper Bright Chevron Skidmore Kisor",
+      "record_count": 3,
+      "retrieved_ids": [
+        "loper-bright-603-us-369",
+        "us-search-state-of-texas-v-epa",
+        "us-search-varian-medical-systems-inc-and-subsidiaries"
+      ],
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q01",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "loper-bright-603-us-369",
+      "total_score": 9,
+      "upstream_recall": 0.5
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.5,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q02.json",
+      "query": "agency deference after Loper Bright Chevron",
+      "record_count": 9,
+      "retrieved_ids": [
+        "loper-bright-603-us-369",
+        "us-search-bruckner-truck-sales-v-guzman",
+        "us-search-eng-v-united-states-environmental-protection-agency",
+        "us-search-ex-parte-theratrue-alabama-llc-petition-for-writ-of-certiora",
+        "us-search-loper-bright-enterprises-inc-v-gina-raimondo",
+        "us-search-loper-bright-enterprises-inc-v-wilbur-l-ross-jr",
+        "us-search-saul-aguilar-sanchez-v-merrick-garland",
+        "us-search-savage-v-n-c-dep-t-of-transp",
+        "us-search-united-states-v-yafa"
+      ],
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q02",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "loper-bright-603-us-369",
+      "total_score": 9,
+      "upstream_recall": 0.5
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q03.json",
+      "query": "Chevron overruled Skidmore APA 706",
+      "record_count": 9,
+      "retrieved_ids": [
+        "us-search-clifford-v-united-states-coast-guard",
+        "us-search-kalshiex-llc-v-commodity-futures-trading-commission",
+        "us-search-michael-lissack-v-cmsnr-irs",
+        "us-search-new-jersey-v-bessent-village-of-scarsdale-v-irs",
+        "us-search-northern-new-mexico-stockman-s-v-united-states-fish",
+        "us-search-restaurant-law-center-v-labr",
+        "us-search-struniak-v-lynch",
+        "us-search-turtle-island-restoration-network-v-united-states-department",
+        "us-search-united-states-department-of-state-v-picur"
+      ],
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q03",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "us-search-restaurant-law-center-v-labr",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q04.json",
+      "query": "Loper Bright independent judgment 5 USC 706",
+      "record_count": 1,
+      "retrieved_ids": [
+        "us-search-center-for-biological-diversity-v-lee-zeldin"
+      ],
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q04",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "us-search-center-for-biological-diversity-v-lee-zeldin",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.5,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
+      "query": "judicial review agency statutory interpretation after Loper Bright",
+      "record_count": 9,
+      "retrieved_ids": [
+        "loper-bright-603-us-369",
+        "us-search-center-for-biological-diversity-v-united-states-environmenta",
+        "us-search-computer-world-services-corporation-v-united-states",
+        "us-search-florida-agency-for-health-care-administration-v-administrato",
+        "us-search-liberty-petroleum-corp-v-ndic-et-al",
+        "us-search-loper-bright-enterprises-inc-v-gina-raimondo",
+        "us-search-loper-bright-enterprises-inc-v-wilbur-l-ross-jr",
+        "us-search-savage-v-n-c-dep-t-of-transp",
+        "us-search-waterkeeper-alliance-v-united-states-environmental-protectio"
+      ],
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+      "suite": "public_retrieval_benchmark",
+      "top_result": "loper-bright-603-us-369",
+      "total_score": 9,
+      "upstream_recall": 0.5
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.6666666666666666,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q05.json",
+      "query": "administrative law standard of review Vavilov",
+      "record_count": 10,
+      "retrieved_ids": [
+        "canada-post-2019-scc-67",
+        "canada-search-auer-v-auer",
+        "canada-search-dow-chemical-canada-ulc-v-canada",
+        "canada-search-law-society-of-saskatchewan-v-abrametz",
+        "canada-search-mason-v-canada-citizenship-and-immigration",
+        "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "canada-search-transalta-generation-partnership-v-alberta",
+        "canada-search-york-region-district-school-board-v-elementary-teachers-fede",
+        "vavilov-2019-scc-65"
+      ],
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q05",
+      "suite": "holdout_validation",
+      "top_result": "canada-search-mason-v-canada-citizenship-and-immigration",
+      "total_score": 9,
+      "upstream_recall": 0.6666666666666666
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 1.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "group_id": "canada-vavilov-standard-of-review",
+      "high_upstream_but_blocked": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q06.json",
+      "query": "Dunsmuir Vavilov reasonableness correctness",
+      "record_count": 10,
+      "retrieved_ids": [
+        "bell-canada-2019-scc-66",
+        "canada-post-2019-scc-67",
+        "canada-search-auer-v-auer",
+        "canada-search-law-society-of-saskatchewan-v-abrametz",
+        "canada-search-mason-v-canada-citizenship-and-immigration",
+        "canada-search-pepa-v-canada-citizenship-and-immigration",
+        "canada-search-society-of-composers-authors-and-music-publishers-of-canada-",
+        "canada-search-yatar-v-td-insurance-meloche-monnex",
+        "canada-search-york-region-district-school-board-v-elementary-teachers-fede",
+        "vavilov-2019-scc-65"
+      ],
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q06",
+      "suite": "holdout_validation",
+      "top_result": "vavilov-2019-scc-65",
+      "total_score": 10,
+      "upstream_recall": 1.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q05.json",
+      "query": "C-300/21 GDPR damage access",
+      "record_count": 1,
+      "retrieved_ids": [
+        "eu-search-c-300-21"
+      ],
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q05",
+      "suite": "holdout_validation",
+      "top_result": "eu-search-c-300-21",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.3333333333333333,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "eu-gdpr-article15-access-rights",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q06.json",
+      "query": "C-307/22 GDPR medical records access",
+      "record_count": 1,
+      "retrieved_ids": [
+        "cjeu-c-307-22-ft"
+      ],
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q06",
+      "suite": "holdout_validation",
+      "top_result": "cjeu-c-307-22-ft",
+      "total_score": 9,
+      "upstream_recall": 0.3333333333333333
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q05.json",
+      "query": "Datenschutz Grundrechte Recht auf Vergessen",
+      "record_count": 10,
+      "retrieved_ids": [
+        "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+      ],
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q05",
+      "suite": "holdout_validation",
+      "top_result": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "germany-right-to-be-forgotten-review",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q06.json",
+      "query": "Bundesverfassungsgericht Recht auf Vergessen Charta Grundgesetz",
+      "record_count": 10,
+      "retrieved_ids": [
+        "germany-search-europ-ischer-gerichtshof-c-396-26",
+        "germany-search-europ-ischer-gerichtshof-c-397-26",
+        "germany-search-europ-ischer-gerichtshof-c-398-26",
+        "germany-search-europ-ischer-gerichtshof-c-399-26",
+        "germany-search-europ-ischer-gerichtshof-c-400-26",
+        "germany-search-europ-ischer-gerichtshof-c-401-26",
+        "germany-search-europ-ischer-gerichtshof-c-402-26",
+        "germany-search-europ-ischer-gerichtshof-c-404-26",
+        "germany-search-europ-ischer-gerichtshof-c-405-26",
+        "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26"
+      ],
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q06",
+      "suite": "holdout_validation",
+      "top_result": "germany-search-oberverwaltungsgericht-nordrhein-westfalen-4-b-46-26",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.0,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "group_id": "uk-mesothelioma-causation-after-fairchild",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json",
+      "query": "Compensation Act 2006 section 3 Barker mesothelioma",
+      "record_count": 9,
+      "retrieved_ids": [
+        "uk-search-aviva-insurance-limited-v-the-secretary-of-state-for-work-an",
+        "uk-search-aviva-insurance-ltd-anor-r-on-the-application-of-v-the-secre",
+        "uk-search-avonwick-holdings-ltd-v-azitio-holdings-ltd-ors",
+        "uk-search-cnz-v-royal-bath-hospitals-nhs-foundation-trust-anor",
+        "uk-search-davies-v-frimley-health-nhs-foundation-trust",
+        "uk-search-michael-holmes-v-poeton-holdings-limited",
+        "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+        "uk-search-sharon-alexandra-ness-v-carillion-capital-projects-limited-o",
+        "uk-search-the-asbestos-victims-support-groups-forum-uk-r-on-the-applic"
+      ],
+      "scenario_id": "holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
+      "suite": "holdout_validation",
+      "top_result": "uk-search-shaikh-abdul-rehman-ors-v-secretary-of-state-for-health-and-",
+      "total_score": 9,
+      "upstream_recall": 0.0
+    },
+    {
+      "allowed_status": "reference_information",
+      "authority_coverage": 0.5,
+      "counter_authority_recall": 0.0,
+      "disposition": "suspension",
+      "failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "group_id": "us-agency-deference-after-loper-bright",
+      "high_upstream_but_blocked": false,
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-us-agency-deference-after-loper-bright-q05.json",
+      "query": "Kisor Skidmore Chevron Loper",
+      "record_count": 3,
+      "retrieved_ids": [
+        "loper-bright-603-us-369",
+        "us-search-state-of-texas-v-epa",
+        "us-search-varian-medical-systems-inc-and-subsidiaries"
+      ],
+      "scenario_id": "holdout-public-retrieval-us-agency-deference-after-loper-bright-q05",
+      "suite": "holdout_validation",
+      "top_result": "loper-bright-603-us-369",
+      "total_score": 9,
+      "upstream_recall": 0.5
+    }
+  ],
+  "scenario_count": 30,
+  "status_stable_group_count": 5,
+  "top_result_unstable_group_count": 4
+}
