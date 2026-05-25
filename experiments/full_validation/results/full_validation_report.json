@@ -671,6 +671,359 @@
     "witness_count": 390
   },
   "high_upstream_but_blocked": 2362,
+  "issue_family_generalization": {
+    "best_trained_rule_holdout_false_negative": 0,
+    "best_trained_rule_holdout_false_positive": 38,
+    "folds": [
+      {
+        "best_trained_rule": "source_score_review",
+        "best_trained_rule_holdout": {
+          "denominator": 67,
+          "f1": 0.8648648648648648,
+          "false_negative": 0,
+          "false_positive": 5,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.7619047619047619,
+          "recall": 1.0,
+          "specificity": 0.9019607843137255
+        },
+        "best_trained_rule_training": {
+          "denominator": 175,
+          "f1": 0.717948717948718,
+          "false_negative": 0,
+          "false_positive": 33,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.56,
+          "recall": 1.0,
+          "specificity": 0.7518796992481203
+        },
+        "full_protocol": {
+          "denominator": 67,
+          "f1": 1.0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "id": "full_audit_gate",
+          "label": "Full audit gate function",
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0
+        },
+        "holdout_prediction_count": 843,
+        "holdout_qualified_count": 16,
+        "holdout_scenario_count": 67,
+        "issue_family": "us_agency_deference",
+        "lowest_fp_rule": "source_score_review",
+        "lowest_fp_rule_holdout": {
+          "denominator": 67,
+          "f1": 0.8648648648648648,
+          "false_negative": 0,
+          "false_positive": 5,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.7619047619047619,
+          "recall": 1.0,
+          "specificity": 0.9019607843137255
+        },
+        "lowest_fp_rule_training": {
+          "denominator": 175,
+          "f1": 0.717948717948718,
+          "false_negative": 0,
+          "false_positive": 33,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.56,
+          "recall": 1.0,
+          "specificity": 0.7518796992481203
+        },
+        "simplified_rule_count": 12,
+        "simplified_rules_with_holdout_error": 12,
+        "training_prediction_count": 2171,
+        "training_scenario_count": 175
+      },
+      {
+        "best_trained_rule": "source_score_review",
+        "best_trained_rule_holdout": {
+          "denominator": 67,
+          "f1": 0.7441860465116279,
+          "false_negative": 0,
+          "false_positive": 11,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.5925925925925926,
+          "recall": 1.0,
+          "specificity": 0.7843137254901961
+        },
+        "best_trained_rule_training": {
+          "denominator": 175,
+          "f1": 0.7567567567567568,
+          "false_negative": 0,
+          "false_positive": 27,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6086956521739131,
+          "recall": 1.0,
+          "specificity": 0.7969924812030075
+        },
+        "full_protocol": {
+          "denominator": 67,
+          "f1": 1.0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "id": "full_audit_gate",
+          "label": "Full audit gate function",
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0
+        },
+        "holdout_prediction_count": 843,
+        "holdout_qualified_count": 16,
+        "holdout_scenario_count": 67,
+        "issue_family": "uk_mesothelioma",
+        "lowest_fp_rule": "source_score_review",
+        "lowest_fp_rule_holdout": {
+          "denominator": 67,
+          "f1": 0.7441860465116279,
+          "false_negative": 0,
+          "false_positive": 11,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.5925925925925926,
+          "recall": 1.0,
+          "specificity": 0.7843137254901961
+        },
+        "lowest_fp_rule_training": {
+          "denominator": 175,
+          "f1": 0.7567567567567568,
+          "false_negative": 0,
+          "false_positive": 27,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6086956521739131,
+          "recall": 1.0,
+          "specificity": 0.7969924812030075
+        },
+        "simplified_rule_count": 12,
+        "simplified_rules_with_holdout_error": 12,
+        "training_prediction_count": 2171,
+        "training_scenario_count": 175
+      },
+      {
+        "best_trained_rule": "source_score_review",
+        "best_trained_rule_holdout": {
+          "denominator": 82,
+          "f1": 0.7692307692307693,
+          "false_negative": 0,
+          "false_positive": 12,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.625,
+          "recall": 1.0,
+          "specificity": 0.8064516129032258
+        },
+        "best_trained_rule_training": {
+          "denominator": 160,
+          "f1": 0.7450980392156863,
+          "false_negative": 0,
+          "false_positive": 26,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.59375,
+          "recall": 1.0,
+          "specificity": 0.7868852459016393
+        },
+        "full_protocol": {
+          "denominator": 82,
+          "f1": 1.0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "id": "full_audit_gate",
+          "label": "Full audit gate function",
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0
+        },
+        "holdout_prediction_count": 1038,
+        "holdout_qualified_count": 20,
+        "holdout_scenario_count": 82,
+        "issue_family": "eu_gdpr_article15",
+        "lowest_fp_rule": "source_score_review",
+        "lowest_fp_rule_holdout": {
+          "denominator": 82,
+          "f1": 0.7692307692307693,
+          "false_negative": 0,
+          "false_positive": 12,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.625,
+          "recall": 1.0,
+          "specificity": 0.8064516129032258
+        },
+        "lowest_fp_rule_training": {
+          "denominator": 160,
+          "f1": 0.7450980392156863,
+          "false_negative": 0,
+          "false_positive": 26,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.59375,
+          "recall": 1.0,
+          "specificity": 0.7868852459016393
+        },
+        "simplified_rule_count": 12,
+        "simplified_rules_with_holdout_error": 12,
+        "training_prediction_count": 1976,
+        "training_scenario_count": 160
+      },
+      {
+        "best_trained_rule": "source_score_review",
+        "best_trained_rule_holdout": {
+          "denominator": 13,
+          "f1": 0.42857142857142855,
+          "false_negative": 0,
+          "false_positive": 8,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.2727272727272727,
+          "recall": 1.0,
+          "specificity": 0.2
+        },
+        "best_trained_rule_training": {
+          "denominator": 229,
+          "f1": 0.7857142857142858,
+          "false_negative": 0,
+          "false_positive": 30,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6470588235294118,
+          "recall": 1.0,
+          "specificity": 0.8275862068965517
+        },
+        "full_protocol": {
+          "denominator": 13,
+          "f1": 1.0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "id": "full_audit_gate",
+          "label": "Full audit gate function",
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0
+        },
+        "holdout_prediction_count": 145,
+        "holdout_qualified_count": 3,
+        "holdout_scenario_count": 13,
+        "issue_family": "canada_vavilov",
+        "lowest_fp_rule": "source_score_review",
+        "lowest_fp_rule_holdout": {
+          "denominator": 13,
+          "f1": 0.42857142857142855,
+          "false_negative": 0,
+          "false_positive": 8,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.2727272727272727,
+          "recall": 1.0,
+          "specificity": 0.2
+        },
+        "lowest_fp_rule_training": {
+          "denominator": 229,
+          "f1": 0.7857142857142858,
+          "false_negative": 0,
+          "false_positive": 30,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6470588235294118,
+          "recall": 1.0,
+          "specificity": 0.8275862068965517
+        },
+        "simplified_rule_count": 12,
+        "simplified_rules_with_holdout_error": 12,
+        "training_prediction_count": 2869,
+        "training_scenario_count": 229
+      },
+      {
+        "best_trained_rule": "source_score_review",
+        "best_trained_rule_holdout": {
+          "denominator": 13,
+          "f1": 0.7499999999999999,
+          "false_negative": 0,
+          "false_positive": 2,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6,
+          "recall": 1.0,
+          "specificity": 0.8
+        },
+        "best_trained_rule_training": {
+          "denominator": 229,
+          "f1": 0.7534246575342465,
+          "false_negative": 0,
+          "false_positive": 36,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6043956043956044,
+          "recall": 1.0,
+          "specificity": 0.7931034482758621
+        },
+        "full_protocol": {
+          "denominator": 13,
+          "f1": 1.0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "id": "full_audit_gate",
+          "label": "Full audit gate function",
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0
+        },
+        "holdout_prediction_count": 145,
+        "holdout_qualified_count": 3,
+        "holdout_scenario_count": 13,
+        "issue_family": "germany_rtbf",
+        "lowest_fp_rule": "source_score_review",
+        "lowest_fp_rule_holdout": {
+          "denominator": 13,
+          "f1": 0.7499999999999999,
+          "false_negative": 0,
+          "false_positive": 2,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6,
+          "recall": 1.0,
+          "specificity": 0.8
+        },
+        "lowest_fp_rule_training": {
+          "denominator": 229,
+          "f1": 0.7534246575342465,
+          "false_negative": 0,
+          "false_positive": 36,
+          "id": "source_score_review",
+          "label": "Source-bound score candidate with review gate",
+          "precision": 0.6043956043956044,
+          "recall": 1.0,
+          "specificity": 0.7931034482758621
+        },
+        "simplified_rule_count": 12,
+        "simplified_rules_with_holdout_error": 12,
+        "training_prediction_count": 2869,
+        "training_scenario_count": 229
+      }
+    ],
+    "folds_with_best_trained_rule_error": 5,
+    "folds_with_lowest_fp_rule_error": 5,
+    "full_protocol_holdout_false_negative": 0,
+    "full_protocol_holdout_false_positive": 0,
+    "holdout_prediction_count": 3014,
+    "issue_family_count": 5,
+    "lowest_fp_rule_holdout_false_negative": 0,
+    "lowest_fp_rule_holdout_false_positive": 38,
+    "qualified_count": 58,
+    "scenario_count": 242,
+    "training_prediction_count": 12056
+  },
+  "issue_family_generalization_evaluations": 3014,
   "jurisdiction_profile": {
     "counterfactual_evaluation_count": 189,
     "generic_profile_preserved": 63,
@@ -2000,7 +2353,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 42,
+  "suite_count": 43,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -2449,6 +2802,26 @@
       "validation_units": "3252 baseline predictions over 13 rules"
     },
     {
+      "evidence_class": "cross-issue substitute-rule holdout",
+      "finding": "Holds out each issue family, selects simplified substitute rules on the remaining issue families, and verifies that trained simplified rules still over-admit holdout packets while the full protocol records zero holdout false positives and false negatives.",
+      "high_upstream_but_blocked": null,
+      "id": "issue_family_generalization",
+      "label": "Issue-family leave-one-out generalization",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "full protocol FP/FN 0/0; best trained simplified FP 38",
+      "scenario_count": 3014,
+      "status_distribution": {
+        "best_trained_rule_holdout_false_positive": 38,
+        "folds_with_best_trained_rule_error": 5,
+        "issue_families": 5,
+        "lowest_fp_rule_holdout_false_positive": 38,
+        "qualified_packets": 58,
+        "scenario_packets": 242
+      },
+      "validation_units": "3014 holdout baseline predictions over 5 issue families"
+    },
+    {
       "evidence_class": "counterfactual gate-necessity check",
       "finding": "Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.",
       "high_upstream_but_blocked": null,
@@ -2893,7 +3266,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 7867915,
+  "total_evaluation_rows": 7870929,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -2921,6 +3294,7 @@
     "gate_contrast_witnesses_passed": 390,
     "holdout_records": 126,
     "issue_ablations": 20,
+    "issue_family_generalization_predictions": 3014,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
     "jurisdiction_profile_evaluations": 440,

@@ -1220,9 +1220,39 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(statuses["reference_information"], 16)
         self.assertEqual(statuses["normative_material_screening_output"], 8)
 
+    def test_issue_family_generalization_shape(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_issue_family_generalization.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads(
+            (ROOT / "experiments" / "issue_family_generalization" / "results" / "issue_family_generalization.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(report["issue_family_count"], 5)
+        self.assertEqual(report["scenario_count"], 242)
+        self.assertEqual(report["qualified_count"], 58)
+        self.assertEqual(report["holdout_prediction_count"], 3014)
+        self.assertEqual(report["full_protocol_holdout_false_positive"], 0)
+        self.assertEqual(report["full_protocol_holdout_false_negative"], 0)
+        self.assertEqual(report["best_trained_rule_holdout_false_positive"], 38)
+        self.assertEqual(report["best_trained_rule_holdout_false_negative"], 0)
+        self.assertEqual(report["folds_with_best_trained_rule_error"], 5)
+        self.assertTrue(
+            all(
+                fold["simplified_rules_with_holdout_error"] == fold["simplified_rule_count"]
+                for fold in report["folds"]
+            )
+        )
+
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 42)
+        self.assertEqual(report["suite_count"], 43)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1272,6 +1302,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["metric_statistical_resamples"], 2000)
         self.assertEqual(report["baseline_comparison_evaluations"], 3252)
         self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 3252)
+        self.assertEqual(report["issue_family_generalization_evaluations"], 3014)
+        self.assertEqual(report["validation_units"]["issue_family_generalization_predictions"], 3014)
         self.assertEqual(report["gate_ablation_evaluations"], 390)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 390)
         self.assertEqual(report["gate_contrast_witness_evaluations"], 390)
@@ -1335,7 +1367,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 7867915)
+        self.assertEqual(report["total_evaluation_rows"], 7870929)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1450,6 +1482,15 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["baseline_comparison"]["best_simplified"]["false_positive"], 38)
         self.assertEqual(report["baseline_comparison"]["full_gate"]["false_positive"], 0)
         self.assertTrue(report["baseline_comparison"]["all_simplified_rules_have_errors"])
+        self.assertEqual(report["issue_family_generalization"]["issue_family_count"], 5)
+        self.assertEqual(report["issue_family_generalization"]["scenario_count"], 242)
+        self.assertEqual(report["issue_family_generalization"]["qualified_count"], 58)
+        self.assertEqual(report["issue_family_generalization"]["holdout_prediction_count"], 3014)
+        self.assertEqual(report["issue_family_generalization"]["full_protocol_holdout_false_positive"], 0)
+        self.assertEqual(report["issue_family_generalization"]["full_protocol_holdout_false_negative"], 0)
+        self.assertEqual(report["issue_family_generalization"]["best_trained_rule_holdout_false_positive"], 38)
+        self.assertEqual(report["issue_family_generalization"]["best_trained_rule_holdout_false_negative"], 0)
+        self.assertEqual(report["issue_family_generalization"]["folds_with_best_trained_rule_error"], 5)
         self.assertEqual(report["gate_ablation"]["ablation_count"], 390)
         self.assertEqual(report["gate_ablation"]["passed_count"], 390)
         self.assertEqual(report["gate_contrast_witnesses"]["qualified_scenario_count"], 63)

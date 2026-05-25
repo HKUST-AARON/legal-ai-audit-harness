@@ -178,6 +178,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_status_lattice_analysis.py"])
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
     _run([sys.executable, "scripts/run_baseline_comparison_analysis.py"])
+    _run([sys.executable, "scripts/run_issue_family_generalization.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
     _run([sys.executable, "scripts/run_gate_contrast_witness_analysis.py"])
     _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
@@ -300,6 +301,16 @@ def main() -> int:
         )
     )
     rows.append(_baseline_comparison_row(baseline_comparison_payload))
+    issue_family_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "issue_family_generalization"
+            / "results"
+            / "issue_family_generalization.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_issue_family_generalization_row(issue_family_payload))
     gate_ablation_payload = json.loads(
         (ROOT / "experiments" / "gate_ablations" / "results" / "gate_ablation_analysis.json").read_text(
             encoding="utf-8"
@@ -498,6 +509,7 @@ def main() -> int:
             "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
             + metric_separation_payload["permutation"]["iterations"],
             "baseline_comparison_predictions": baseline_comparison_payload["baseline_prediction_count"],
+            "issue_family_generalization_predictions": issue_family_payload["holdout_prediction_count"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
             "gate_contrast_witnesses": gate_contrast_payload["witness_count"],
             "gate_contrast_witnesses_passed": gate_contrast_payload["passed_count"],
@@ -571,6 +583,7 @@ def main() -> int:
         "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"],
         "baseline_comparison_evaluations": baseline_comparison_payload["baseline_prediction_count"],
+        "issue_family_generalization_evaluations": issue_family_payload["holdout_prediction_count"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
         "gate_contrast_witness_evaluations": gate_contrast_payload["witness_count"],
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
@@ -607,6 +620,7 @@ def main() -> int:
         + metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"]
         + baseline_comparison_payload["baseline_prediction_count"]
+        + issue_family_payload["holdout_prediction_count"]
         + gate_ablation_payload["ablation_count"]
         + gate_contrast_payload["witness_count"]
         + repair_frontier_payload["counterfactual_evaluation_count"]
@@ -766,6 +780,26 @@ def main() -> int:
             "lowest_false_positive_simplified": baseline_comparison_payload["lowest_false_positive_simplified"],
             "all_simplified_rules_have_errors": baseline_comparison_payload["all_simplified_rules_have_errors"],
             "full_gate": baseline_comparison_payload["full_gate"],
+        },
+        "issue_family_generalization": {
+            "issue_family_count": issue_family_payload["issue_family_count"],
+            "scenario_count": issue_family_payload["scenario_count"],
+            "qualified_count": issue_family_payload["qualified_count"],
+            "holdout_prediction_count": issue_family_payload["holdout_prediction_count"],
+            "training_prediction_count": issue_family_payload["training_prediction_count"],
+            "full_protocol_holdout_false_positive": issue_family_payload["full_protocol_holdout_false_positive"],
+            "full_protocol_holdout_false_negative": issue_family_payload["full_protocol_holdout_false_negative"],
+            "best_trained_rule_holdout_false_positive": issue_family_payload[
+                "best_trained_rule_holdout_false_positive"
+            ],
+            "best_trained_rule_holdout_false_negative": issue_family_payload[
+                "best_trained_rule_holdout_false_negative"
+            ],
+            "lowest_fp_rule_holdout_false_positive": issue_family_payload["lowest_fp_rule_holdout_false_positive"],
+            "lowest_fp_rule_holdout_false_negative": issue_family_payload["lowest_fp_rule_holdout_false_negative"],
+            "folds_with_best_trained_rule_error": issue_family_payload["folds_with_best_trained_rule_error"],
+            "folds_with_lowest_fp_rule_error": issue_family_payload["folds_with_lowest_fp_rule_error"],
+            "folds": issue_family_payload["folds"],
         },
         "gate_ablation": {
             "qualified_scenario_count": gate_ablation_payload["qualified_scenario_count"],
@@ -1547,6 +1581,33 @@ def _baseline_comparison_row(payload: dict) -> dict:
     }
 
 
+def _issue_family_generalization_row(payload: dict) -> dict:
+    return {
+        "id": "issue_family_generalization",
+        "label": "Issue-family leave-one-out generalization",
+        "evidence_class": "cross-issue substitute-rule holdout",
+        "validation_units": f"{payload['holdout_prediction_count']} holdout baseline predictions over {payload['issue_family_count']} issue families",
+        "scenario_count": payload["holdout_prediction_count"],
+        "rule_pass": (
+            f"full protocol FP/FN {payload['full_protocol_holdout_false_positive']}/"
+            f"{payload['full_protocol_holdout_false_negative']}; best trained simplified FP "
+            f"{payload['best_trained_rule_holdout_false_positive']}"
+        ),
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "issue_families": payload["issue_family_count"],
+            "scenario_packets": payload["scenario_count"],
+            "qualified_packets": payload["qualified_count"],
+            "best_trained_rule_holdout_false_positive": payload["best_trained_rule_holdout_false_positive"],
+            "lowest_fp_rule_holdout_false_positive": payload["lowest_fp_rule_holdout_false_positive"],
+            "folds_with_best_trained_rule_error": payload["folds_with_best_trained_rule_error"],
+        },
+        "finding": "Holds out each issue family, selects simplified substitute rules on the remaining issue families, and verifies that trained simplified rules still over-admit holdout packets while the full protocol records zero holdout false positives and false negatives.",
+    }
+
+
 def _gate_ablation_row(payload: dict) -> dict:
     return {
         "id": "gate_ablation",
@@ -1918,6 +1979,7 @@ def _format_report(payload: dict) -> str:
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
         f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; reference rule false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
+        f"Issue-family generalization: {payload['issue_family_generalization']['holdout_prediction_count']} holdout predictions over {payload['issue_family_generalization']['issue_family_count']} issue families; full protocol FP/FN {payload['issue_family_generalization']['full_protocol_holdout_false_positive']}/{payload['issue_family_generalization']['full_protocol_holdout_false_negative']}; best trained simplified FP {payload['issue_family_generalization']['best_trained_rule_holdout_false_positive']}; best trained simplified rule erred in {payload['issue_family_generalization']['folds_with_best_trained_rule_error']}/{payload['issue_family_generalization']['issue_family_count']} folds",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Gate-contrast witness pairs: {payload['gate_contrast_witnesses']['passed_count']}/{payload['gate_contrast_witnesses']['witness_count']} passed; score/metric/role preserved {payload['gate_contrast_witnesses']['score_metric_role_preserved_count']}/{payload['gate_contrast_witnesses']['witness_count']}; status separated {payload['gate_contrast_witnesses']['status_separated_count']}/{payload['gate_contrast_witnesses']['witness_count']}",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
