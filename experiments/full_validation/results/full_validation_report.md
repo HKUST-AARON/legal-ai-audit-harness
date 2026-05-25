@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 44
+Validation suites: 45
 Scenario files: 264
 Base embedded records/items: 697 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 9 cross-engine raw outputs, 9 cross-engine source-supported outputs, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 528
@@ -37,7 +37,8 @@ Workflow portability analysis: 2904/2904 passed; architecture invariance 1320/13
 Model-identity invariance: 1320/1320 identity substitutions passed over 264 packets and 5 identity profiles; status changes 0; disposition changes 0
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 7912424
+Threat-model coverage: 32/32 checks passed across 8 validity threats and 30 evidence layers
+Derived robustness evaluations: 7912456
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2362
 Blocked reason distribution: authority_omission: 1013, contestation_failure: 103, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1186, summary_distortion: 1533, unauthorized_action: 10
@@ -91,6 +92,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Annotation robustness recoding | coding robustness | 528 strict/lenient recoded evaluations | 264 | 262/264 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 1.0 |
 | Annotation uncertainty Monte Carlo | score-noise robustness | 66000 score-perturbed evaluations | 66000 | 0.937 sample stability; 0.916 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 151, exact_stable_scenarios: 112, high_status_stable_scenarios: 203, mean_status_rank_shift: 0.085 |
 | Score-blinded dual coding | codebook reproducibility | 240 packets x 2 coding passes | 240 | 0.99 coder kappa; 0.37 weakest base-dimension kappa (Q); 0.87 min base-dimension exact; 0.13 max score drift | n/a | n/a | n/a | base_dimension_max_mean_absolute_delta: 0.13, base_dimension_min_exact_agreement: 0.87, base_dimension_min_kappa: 0.37, base_dimension_min_kappa_coder: coder_a, base_dimension_min_kappa_dimension: Q, base_dimension_min_kappa_exact_agreement: 0.97, base_dimension_min_pabak: 0.81, coder_cohen_kappa: 0.99, coder_exact_status_agreement: 0.99, coder_quadratic_weighted_kappa: 0.96, coder_weighted_status_agreement: 0.99, min_base_cohen_kappa: 0.92, min_base_exact_status_agreement: 0.95, min_base_quadratic_weighted_kappa: 0.9, min_base_weighted_status_agreement: 0.98, minimum_dimension_kappa: 0.93, minimum_failure_flag_exact_agreement: 0.97, minimum_missing_gate_exact_agreement: 0.98, status_disagreements: 2 |
+| Threat-model coverage analysis | validity-threat coverage map | 32 evidence-layer coverage checks across 8 validity threats | 32 | 32/32 | n/a | n/a | n/a | evidence_layers: 30, failed_threats: 0, passed_threats: 8 |
 
 ## Substitute-Theory Falsification
 
@@ -149,6 +151,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Annotation uncertainty Monte Carlo:** Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.
 - **Score-blinded dual coding:** Tests score-blinded coder reliability, base-status tracking and dimension-level score calibration under class imbalance.
+- **Threat-model coverage analysis:** Maps construct, internal, source-chain, external, architecture, policy, provenance and annotation validity threats to committed evidence layers; every threat has at least four layers and three evidence roles.
 
 ## Full-Threshold Sensitivity
 

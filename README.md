@@ -213,6 +213,7 @@ Current coverage:
 | Model-identity invariance | 1320 | Substitutes five model identity profiles across all 264 packets; current result is 1320/1320 invariant with 0 status changes and 0 disposition changes. |
 | Query-perturbation stability | 35 | Compares 30 issue-equivalent public-search query variants across 5 issue groups; current result is 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups. |
 | Query-portfolio frontier | 320 | Enumerates all 315 non-empty query portfolios plus 5 group frontier summaries across the same 5 issue groups; current result is 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios. |
+| Threat-model coverage | 32 | Maps 8 validity threats to 30 committed evidence layers; current result is 32/32 coverage checks passed. |
 | Mixed-authority public source-screening packets | 5 | Tests normative material screening with source-bound statute, case and public-source packets. |
 | Issue-defined ablations | 20 | Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps. |
 | Annotation robustness recoding | 528 | Re-scores all 264 scenario packets under strict and lenient coding policies to test status stability. |
@@ -221,6 +222,8 @@ Current coverage:
 | Full-threshold sensitivity | 1320 | Re-evaluates all 264 scenario packets under normative thresholds 8-12. |
 
 The current full validation report covers 264 scenario files containing 697 embedded records/items, 30 public source-text anchor checks, 50 raw model-output transcript locator checks, 36 cross-engine transcript locator checks, 51,646 formal invariant checks, 466,560 high-status claim-attempt states, 3,499,200 status-lattice cover edges, 3,732,480 status-lattice substitute-rule predictions, 219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 3,014 issue-family holdout predictions, 42,192 policy-family robustness evaluations, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 2,904 workflow-portability checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks, plus 66,000 score-uncertainty perturbations, strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. The matrix tests a single rule: procedural status follows the reconstructable legal-material chain. Its substitute-theory table falsifies performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency; the full protocol records 0 false positives and 0 false negatives against those substitutes. Public retrieval, holdout, model-output, cross-engine, source-supported repair, evidence ladder, public source-text anchors, transcript anchors, formal invariants, status-lattice exhaustion, metric separation, baseline comparison, issue-family generalization, policy-family robustness, gate ablation, gate-contrast witnesses, source-chain attacks, contestation challenges, proof-carrying certificates, certificate tamper-resistance, policy-constants replay, metamorphic policy checks, policy-mutation killing, review-provenance falsification, claim-anchor falsification, workflow portability, model-identity invariance, query perturbation, query portfolios, repair frontiers, jurisdiction profiles, ranking visibility, adversarial repairs, annotation uncertainty, threshold sensitivity, robustness and blind coding all test whether that chain survives the conditions required for procedural use.
+
+The threat-model coverage layer adds 32 threat-model coverage checks across 8 validity threats, linking construct, internal, source-chain, external, architecture, policy, provenance and annotation validity to independent evidence layers.
 
 The review-provenance layer can also be run directly:
 
@@ -244,6 +247,12 @@ The policy-family robustness layer can also be run directly:
 
 ```bash
 python scripts/run_policy_family_robustness.py
+```
+
+The threat-model coverage layer can also be run directly:
+
+```bash
+python scripts/run_threat_model_coverage_analysis.py
 ```
 
 After running the full matrix, `python scripts/verify_claim_consistency.py` checks that the manuscript, README, artifact guide, skill and generated reports still state the same headline counts as `full_validation_report.json`.

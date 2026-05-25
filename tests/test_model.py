@@ -1280,7 +1280,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 44)
+        self.assertEqual(report["suite_count"], 45)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1399,7 +1399,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 7913121)
+        self.assertEqual(report["threat_model_coverage_evaluations"], 32)
+        self.assertEqual(report["validation_units"]["validity_threats"], 8)
+        self.assertEqual(report["validation_units"]["threat_model_coverage_checks"], 32)
+        self.assertEqual(report["validation_units"]["threat_model_coverage_passed"], 32)
+        self.assertEqual(report["threat_model_coverage"]["evidence_layer_count"], 30)
+        self.assertTrue(report["threat_model_coverage"]["all_passed"])
+        self.assertEqual(report["total_evaluation_rows"], 7913153)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",

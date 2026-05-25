@@ -485,6 +485,17 @@ def main() -> int:
             )
         )
         rows.append(_blind_coding_row(blind_coding_payload))
+    _run([sys.executable, "scripts/run_threat_model_coverage_analysis.py"])
+    threat_model_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "threat_model_coverage"
+            / "results"
+            / "threat_model_coverage_analysis.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_threat_model_coverage_row(threat_model_payload))
 
     validation_units = _validation_units()
     base_validation_units = validation_units["total"]
@@ -566,6 +577,9 @@ def main() -> int:
             "query_portfolio_evaluations": query_portfolio_payload["portfolio_count"]
             + query_portfolio_payload["issue_group_count"],
             "query_portfolios": query_portfolio_payload["portfolio_count"],
+            "validity_threats": threat_model_payload["threat_count"],
+            "threat_model_coverage_checks": threat_model_payload["coverage_check_count"],
+            "threat_model_coverage_passed": threat_model_payload["passed_check_count"],
         }
     )
     substitute_theory_payload = _substitute_theory_results(
@@ -621,6 +635,7 @@ def main() -> int:
         + query_perturbation_payload["issue_group_count"],
         "query_portfolio_evaluations": query_portfolio_payload["portfolio_count"]
         + query_portfolio_payload["issue_group_count"],
+        "threat_model_coverage_evaluations": threat_model_payload["coverage_check_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
@@ -658,6 +673,7 @@ def main() -> int:
         + query_perturbation_payload["issue_group_count"]
         + query_portfolio_payload["portfolio_count"]
         + query_portfolio_payload["issue_group_count"]
+        + threat_model_payload["coverage_check_count"]
         + robustness_payload["recoded_evaluations"]
         + uncertainty_payload["evaluation_count"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
@@ -1051,6 +1067,18 @@ def main() -> int:
             "query_expansion_repairs_counter_material": query_portfolio_payload[
                 "query_expansion_repairs_counter_material"
             ],
+        },
+        "threat_model_coverage": {
+            "threat_count": threat_model_payload["threat_count"],
+            "evidence_layer_count": threat_model_payload["evidence_layer_count"],
+            "coverage_check_count": threat_model_payload["coverage_check_count"],
+            "passed_check_count": threat_model_payload["passed_check_count"],
+            "failed_check_count": threat_model_payload["failed_check_count"],
+            "passed_threat_count": threat_model_payload["passed_threat_count"],
+            "minimum_layers_per_threat": threat_model_payload["minimum_layers_per_threat"],
+            "minimum_roles_per_threat": threat_model_payload["minimum_roles_per_threat"],
+            "all_passed": threat_model_payload["all_passed"],
+            "threats": threat_model_payload["threats"],
         },
         "substitute_theory_falsification": substitute_theory_payload,
         "suites": rows,
@@ -1992,6 +2020,29 @@ def _query_portfolio_row(payload: dict) -> dict:
     }
 
 
+def _threat_model_coverage_row(payload: dict) -> dict:
+    return {
+        "id": "threat_model_coverage",
+        "label": "Threat-model coverage analysis",
+        "evidence_class": "validity-threat coverage map",
+        "validation_units": (
+            f"{payload['coverage_check_count']} evidence-layer coverage checks across "
+            f"{payload['threat_count']} validity threats"
+        ),
+        "scenario_count": payload["coverage_check_count"],
+        "rule_pass": f"{payload['passed_check_count']}/{payload['coverage_check_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "passed_threats": payload["passed_threat_count"],
+            "failed_threats": payload["failed_threat_count"],
+            "evidence_layers": payload["evidence_layer_count"],
+        },
+        "finding": "Maps construct, internal, source-chain, external, architecture, policy, provenance and annotation validity threats to committed evidence layers; every threat has at least four layers and three evidence roles.",
+    }
+
+
 def _policy_constants_row(payload: dict) -> dict:
     return {
         "id": "policy_constants_replay",
@@ -2063,6 +2114,7 @@ def _format_report(payload: dict) -> str:
         f"Model-identity invariance: {payload['model_identity_invariance']['passed_count']}/{payload['model_identity_invariance']['evaluation_count']} identity substitutions passed over {payload['model_identity_invariance']['scenario_count']} packets and {payload['model_identity_invariance']['identity_profile_count']} identity profiles; status changes {payload['model_identity_invariance']['status_changed_count']}; disposition changes {payload['model_identity_invariance']['disposition_changed_count']}",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",
         f"Query-portfolio frontier: {payload['query_portfolio']['portfolio_count']} portfolios plus {payload['query_portfolio']['issue_group_count']} group summaries across {payload['query_portfolio']['issue_group_count']} issue groups; qualified portfolios {payload['query_portfolio']['qualified_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full high-authority portfolios {payload['query_portfolio']['full_high_authority_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full counter-material portfolios {payload['query_portfolio']['full_counter_material_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}",
+        f"Threat-model coverage: {payload['threat_model_coverage']['passed_check_count']}/{payload['threat_model_coverage']['coverage_check_count']} checks passed across {payload['threat_model_coverage']['threat_count']} validity threats and {payload['threat_model_coverage']['evidence_layer_count']} evidence layers",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

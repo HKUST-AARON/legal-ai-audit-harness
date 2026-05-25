@@ -5223,7 +5223,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 44,
+  "suite_count": 45,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -6075,8 +6075,559 @@
         "status_disagreements": 2
       },
       "validation_units": "240 packets x 2 coding passes"
+    },
+    {
+      "evidence_class": "validity-threat coverage map",
+      "finding": "Maps construct, internal, source-chain, external, architecture, policy, provenance and annotation validity threats to committed evidence layers; every threat has at least four layers and three evidence roles.",
+      "high_upstream_but_blocked": null,
+      "id": "threat_model_coverage",
+      "label": "Threat-model coverage analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "32/32",
+      "scenario_count": 32,
+      "status_distribution": {
+        "evidence_layers": 30,
+        "failed_threats": 0,
+        "passed_threats": 8
+      },
+      "validation_units": "32 evidence-layer coverage checks across 8 validity threats"
     }
   ],
+  "threat_model_coverage": {
+    "all_passed": true,
+    "coverage_check_count": 32,
+    "evidence_layer_count": 30,
+    "failed_check_count": 0,
+    "minimum_layers_per_threat": 4,
+    "minimum_roles_per_threat": 3,
+    "passed_check_count": 32,
+    "passed_threat_count": 8,
+    "threat_count": 8,
+    "threats": [
+      {
+        "checks": [
+          {
+            "layer_id": "metric_separation",
+            "passed": true,
+            "path": "experiments/metric_separation/results/metric_separation_analysis.json",
+            "roles": [
+              "construct",
+              "substitute"
+            ],
+            "threat_id": "construct_status_not_retrieval"
+          },
+          {
+            "layer_id": "baseline_comparison",
+            "passed": true,
+            "path": "experiments/baseline_comparisons/results/baseline_comparison_analysis.json",
+            "roles": [
+              "construct",
+              "substitute"
+            ],
+            "threat_id": "construct_status_not_retrieval"
+          },
+          {
+            "layer_id": "status_lattice",
+            "passed": true,
+            "path": "experiments/status_lattice/results/status_lattice_analysis.json",
+            "roles": [
+              "formal",
+              "substitute"
+            ],
+            "threat_id": "construct_status_not_retrieval"
+          },
+          {
+            "layer_id": "gate_contrast_witnesses",
+            "passed": true,
+            "path": "experiments/gate_contrast_witnesses/results/gate_contrast_witness_analysis.json",
+            "roles": [
+              "construct",
+              "negative_control"
+            ],
+            "threat_id": "construct_status_not_retrieval"
+          }
+        ],
+        "evidence_layers": [
+          "metric_separation",
+          "baseline_comparison",
+          "status_lattice",
+          "gate_contrast_witnesses"
+        ],
+        "failed_checks": 0,
+        "id": "construct_status_not_retrieval",
+        "label": "Construct validity: procedural status is not retrieval success",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 4,
+        "roles": [
+          "construct",
+          "formal",
+          "negative_control",
+          "substitute"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "formal_invariants",
+            "passed": true,
+            "path": "experiments/formal_invariants/results/formal_invariant_verification.json",
+            "roles": [
+              "formal",
+              "replay"
+            ],
+            "threat_id": "expected_label_circularity"
+          },
+          {
+            "layer_id": "metamorphic_policy",
+            "passed": true,
+            "path": "experiments/metamorphic_policy/results/metamorphic_policy_tests.json",
+            "roles": [
+              "label_free",
+              "invariant"
+            ],
+            "threat_id": "expected_label_circularity"
+          },
+          {
+            "layer_id": "policy_constants_replay",
+            "passed": true,
+            "path": "experiments/policy_constants_replay/results/policy_constants_replay.json",
+            "roles": [
+              "replay",
+              "second_implementation"
+            ],
+            "threat_id": "expected_label_circularity"
+          },
+          {
+            "layer_id": "status_certificates",
+            "passed": true,
+            "path": "experiments/status_certificates/results/status_certificate_validation.json",
+            "roles": [
+              "certificate",
+              "replay"
+            ],
+            "threat_id": "expected_label_circularity"
+          }
+        ],
+        "evidence_layers": [
+          "formal_invariants",
+          "metamorphic_policy",
+          "policy_constants_replay",
+          "status_certificates"
+        ],
+        "failed_checks": 0,
+        "id": "expected_label_circularity",
+        "label": "Internal validity: status is not authored expected-label bias",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "certificate",
+          "formal",
+          "invariant",
+          "label_free",
+          "replay",
+          "second_implementation"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "source_chain_attacks",
+            "passed": true,
+            "path": "experiments/source_chain_attacks/results/source_chain_attack_experiment.json",
+            "roles": [
+              "source_chain",
+              "negative_control"
+            ],
+            "threat_id": "source_chain_validity"
+          },
+          {
+            "layer_id": "claim_anchor",
+            "passed": true,
+            "path": "experiments/claim_anchor_analysis/results/claim_anchor_analysis.json",
+            "roles": [
+              "source_chain",
+              "claim_level"
+            ],
+            "threat_id": "source_chain_validity"
+          },
+          {
+            "layer_id": "source_text_verification",
+            "passed": true,
+            "path": "experiments/source_text_verification/results/source_text_anchor_verification.json",
+            "roles": [
+              "external_source",
+              "anchor"
+            ],
+            "threat_id": "source_chain_validity"
+          },
+          {
+            "layer_id": "model_output_adversarial",
+            "passed": true,
+            "path": "experiments/model_output_adversarial/results/model_output_adversarial_experiment.json",
+            "roles": [
+              "model_output",
+              "negative_control"
+            ],
+            "threat_id": "source_chain_validity"
+          }
+        ],
+        "evidence_layers": [
+          "source_chain_attacks",
+          "claim_anchor",
+          "source_text_verification",
+          "model_output_adversarial"
+        ],
+        "failed_checks": 0,
+        "id": "source_chain_validity",
+        "label": "Source-chain validity: citations and locators are not decorative",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "anchor",
+          "claim_level",
+          "external_source",
+          "model_output",
+          "negative_control",
+          "source_chain"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "real_cases",
+            "passed": true,
+            "path": "experiments/real_cases/results/real_case_experiment.json",
+            "roles": [
+              "public",
+              "external"
+            ],
+            "threat_id": "external_public_outputs"
+          },
+          {
+            "layer_id": "public_system_outputs",
+            "passed": true,
+            "path": "experiments/public_system_outputs/results/public_system_output_experiment.json",
+            "roles": [
+              "public",
+              "external"
+            ],
+            "threat_id": "external_public_outputs"
+          },
+          {
+            "layer_id": "public_retrieval_benchmark",
+            "passed": true,
+            "path": "experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.json",
+            "roles": [
+              "public",
+              "retrieval"
+            ],
+            "threat_id": "external_public_outputs"
+          },
+          {
+            "layer_id": "holdout_validation",
+            "passed": true,
+            "path": "experiments/holdout_validation/results/holdout_validation.json",
+            "roles": [
+              "holdout",
+              "external"
+            ],
+            "threat_id": "external_public_outputs"
+          }
+        ],
+        "evidence_layers": [
+          "real_cases",
+          "public_system_outputs",
+          "public_retrieval_benchmark",
+          "holdout_validation"
+        ],
+        "failed_checks": 0,
+        "id": "external_public_outputs",
+        "label": "External validity: the rule is not limited to constructed examples",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 4,
+        "roles": [
+          "external",
+          "holdout",
+          "public",
+          "retrieval"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "cross_engine_model_outputs",
+            "passed": true,
+            "path": "experiments/cross_engine_model_outputs/results/cross_engine_model_output_experiment.json",
+            "roles": [
+              "model_output",
+              "cross_engine"
+            ],
+            "threat_id": "model_architecture_identity"
+          },
+          {
+            "layer_id": "cross_engine_model_repairs",
+            "passed": true,
+            "path": "experiments/cross_engine_model_repairs/results/cross_engine_model_repair_experiment.json",
+            "roles": [
+              "model_output",
+              "intervention"
+            ],
+            "threat_id": "model_architecture_identity"
+          },
+          {
+            "layer_id": "model_identity_invariance",
+            "passed": true,
+            "path": "experiments/model_identity_invariance/results/model_identity_invariance.json",
+            "roles": [
+              "identity",
+              "invariant"
+            ],
+            "threat_id": "model_architecture_identity"
+          },
+          {
+            "layer_id": "workflow_portability",
+            "passed": true,
+            "path": "experiments/workflow_portability/results/workflow_portability_analysis.json",
+            "roles": [
+              "architecture",
+              "portability"
+            ],
+            "threat_id": "model_architecture_identity"
+          }
+        ],
+        "evidence_layers": [
+          "cross_engine_model_outputs",
+          "cross_engine_model_repairs",
+          "model_identity_invariance",
+          "workflow_portability"
+        ],
+        "failed_checks": 0,
+        "id": "model_architecture_identity",
+        "label": "Architecture validity: provider identity does not confer status",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 7,
+        "roles": [
+          "architecture",
+          "cross_engine",
+          "identity",
+          "intervention",
+          "invariant",
+          "model_output",
+          "portability"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "policy_family_robustness",
+            "passed": true,
+            "path": "experiments/policy_family_robustness/results/policy_family_robustness.json",
+            "roles": [
+              "policy",
+              "robustness"
+            ],
+            "threat_id": "policy_discretion"
+          },
+          {
+            "layer_id": "policy_mutations",
+            "passed": true,
+            "path": "experiments/policy_mutations/results/policy_mutation_analysis.json",
+            "roles": [
+              "policy",
+              "negative_control"
+            ],
+            "threat_id": "policy_discretion"
+          },
+          {
+            "layer_id": "gate_ablations",
+            "passed": true,
+            "path": "experiments/gate_ablations/results/gate_ablation_analysis.json",
+            "roles": [
+              "gate",
+              "necessity"
+            ],
+            "threat_id": "policy_discretion"
+          },
+          {
+            "layer_id": "status_lattice",
+            "passed": true,
+            "path": "experiments/status_lattice/results/status_lattice_analysis.json",
+            "roles": [
+              "formal",
+              "substitute"
+            ],
+            "threat_id": "policy_discretion"
+          }
+        ],
+        "evidence_layers": [
+          "policy_family_robustness",
+          "policy_mutations",
+          "gate_ablations",
+          "status_lattice"
+        ],
+        "failed_checks": 0,
+        "id": "policy_discretion",
+        "label": "Policy validity: thresholds and gate settings do not drive the core result",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 7,
+        "roles": [
+          "formal",
+          "gate",
+          "necessity",
+          "negative_control",
+          "policy",
+          "robustness",
+          "substitute"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "contestation_challenges",
+            "passed": true,
+            "path": "experiments/contestation_challenges/results/contestation_challenge_experiment.json",
+            "roles": [
+              "contestability",
+              "challenge"
+            ],
+            "threat_id": "contestability_provenance"
+          },
+          {
+            "layer_id": "review_provenance",
+            "passed": true,
+            "path": "experiments/review_provenance/results/review_provenance_analysis.json",
+            "roles": [
+              "provenance",
+              "review"
+            ],
+            "threat_id": "contestability_provenance"
+          },
+          {
+            "layer_id": "repair_frontiers",
+            "passed": true,
+            "path": "experiments/repair_frontiers/results/repair_frontier_analysis.json",
+            "roles": [
+              "repair",
+              "diagnostic"
+            ],
+            "threat_id": "contestability_provenance"
+          },
+          {
+            "layer_id": "status_certificates",
+            "passed": true,
+            "path": "experiments/status_certificates/results/status_certificate_validation.json",
+            "roles": [
+              "certificate",
+              "replay"
+            ],
+            "threat_id": "contestability_provenance"
+          }
+        ],
+        "evidence_layers": [
+          "contestation_challenges",
+          "review_provenance",
+          "repair_frontiers",
+          "status_certificates"
+        ],
+        "failed_checks": 0,
+        "id": "contestability_provenance",
+        "label": "Provenance validity: review and challenge records are operational",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 8,
+        "roles": [
+          "certificate",
+          "challenge",
+          "contestability",
+          "diagnostic",
+          "provenance",
+          "repair",
+          "replay",
+          "review"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "layer_id": "annotation_robustness",
+            "passed": true,
+            "path": "experiments/annotation_robustness/results/annotation_robustness.json",
+            "roles": [
+              "coding",
+              "robustness"
+            ],
+            "threat_id": "annotation_coding_validity"
+          },
+          {
+            "layer_id": "annotation_uncertainty",
+            "passed": true,
+            "path": "experiments/annotation_uncertainty/results/annotation_uncertainty.json",
+            "roles": [
+              "coding",
+              "uncertainty"
+            ],
+            "threat_id": "annotation_coding_validity"
+          },
+          {
+            "layer_id": "blind_coding",
+            "passed": true,
+            "path": "experiments/blind_coding/results/blind_coding_study.json",
+            "roles": [
+              "coding",
+              "reproducibility"
+            ],
+            "threat_id": "annotation_coding_validity"
+          },
+          {
+            "layer_id": "ranking_visibility",
+            "passed": true,
+            "path": "experiments/ranking_visibility/results/ranking_visibility_analysis.json",
+            "roles": [
+              "ranking",
+              "salience"
+            ],
+            "threat_id": "annotation_coding_validity"
+          }
+        ],
+        "evidence_layers": [
+          "annotation_robustness",
+          "annotation_uncertainty",
+          "blind_coding",
+          "ranking_visibility"
+        ],
+        "failed_checks": 0,
+        "id": "annotation_coding_validity",
+        "label": "Annotation validity: status is stable under coding uncertainty",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "coding",
+          "ranking",
+          "reproducibility",
+          "robustness",
+          "salience",
+          "uncertainty"
+        ]
+      }
+    ]
+  },
+  "threat_model_coverage_evaluations": 32,
   "threshold_sensitivity": {
     "default_policy": {
       "decision_threshold": 10,
@@ -6156,7 +6707,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 7913121,
+  "total_evaluation_rows": 7913153,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -6232,8 +6783,11 @@
     "status_lattice_states": 466560,
     "status_lattice_substitution_predictions": 3732480,
     "stress_scenarios": 10,
+    "threat_model_coverage_checks": 32,
+    "threat_model_coverage_passed": 32,
     "threshold_sensitivity_evaluations": 1320,
     "total": 697,
+    "validity_threats": 8,
     "workflow_architecture_invariance_evaluations": 1320,
     "workflow_decision_dependency_checks": 264,
     "workflow_entitlement_cap_checks": 1056,
