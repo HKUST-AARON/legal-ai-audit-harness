@@ -54,6 +54,8 @@ The resulting framework has two dimensions. The output-effect dimension classifi
 
 The contributions are three. First, the article names and formalizes normative material screening as a distinct procedural object in AI and Law. Second, it gives that object an explicit status function: output effect, role cap, audit vector, mandatory gates and failure caps jointly decide the maximum procedural status. Third, it supplies an executable validation matrix: 264 scenario packets, 697 embedded records or outputs, and 7,913,121 validation operations across public retrieval, single-model and cross-engine transcripts, source-grounding repairs, adversarial source-chain attacks, claim-anchor falsification, workflow-portability checks, issue-family holdouts, policy-family robustness, gate ablations, policy-mutation tests, review-provenance tests, formal invariants, finite-state status-lattice exhaustion, proof certificates, policy replay, model-identity substitution and coding-uncertainty analysis. The matrix is built to defeat six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency. Each substitute fails once the legal-material chain is tested.
 
+To make the artifact interpretable as well as large, the evaluation includes a worked evidence ladder: the same Loper Bright output moves from reference information, to normative material screening, to decision-support reason, or to no external legal effect solely as source bindings, contestability, adoption and authorization records change.
+
 AI-based case recommendation is the core case because it sits at the boundary between legal information retrieval and legal reasoning. Case recommendation systems are central to case-based reasoning and legal information retrieval, both long-standing areas of AI and Law research \citep{ashley1992,rissland1995,vanopijnen2017}. They are also procedurally sensitive. In common-law precedent search, civil-law court-decision databases, administrative adjudication systems, arbitral award repositories and ODR platforms, ranking and omission can affect the legal materials available for argument. The framework is therefore jurisdiction-parameterized rather than jurisdiction-neutral: each legal system supplies its own authority hierarchy, while the verifiability problem remains shared.
 
 \section{Related Work and Gap}
@@ -650,6 +652,29 @@ The certificate layer makes procedural status proof-carrying. Each packet record
 The policy-constants replay layer is the independent executable specification. It reads \texttt{policy/legal\_output\_policy.json} for thresholds, status ranks, role caps, protected reliance gates, source-tag classes, jurisdiction-profile aliases and failure dispositions; then it recomputes score candidates, inferred roles, missing gates, metrics, failure flags, failure caps and final status without importing the harness model. It verified 264/264 packets and 4,752/4,752 replay checks. The status allocation must therefore be reproducible both as a proof-carrying certificate and as a second implementation parameterized by the same JSON constants.
 
 The final layers test coding stability. Strict and lenient recoding preserved status for 262/264 packets, with weighted agreement of 1.00 against the strict pass and 0.98 against the lenient pass. Fixed-seed Monte Carlo perturbation of all six audit scores produced 66,000 perturbed evaluations, 0.937 sample-level status stability and 0.916 high-status stability among qualified packets. Score-blinded dual coding of 240 non-holdout packets reached 0.99 inter-coder exact agreement, 0.99 Cohen's kappa and 0.96 quadratic weighted kappa; the weakest dimension-level kappa was 0.93. Base-score calibration was tracked separately: the weakest base-dimension kappa was 0.37 for $Q$ under class imbalance, with 0.97 exact agreement. The coding result supports the same rule as the formal and adversarial layers: status is stable when the legal-material chain is stable, and instability concentrates at the intended threshold gates.
+
+\subsection{Worked application: Loper Bright evidence ladder}
+
+The model-output evidence ladder shows how the protocol treats one concrete case-recommendation task. The raw output \texttt{codex55-us-03} answered how legal research should treat \textit{Skidmore} and \textit{Kisor} after \textit{Loper Bright}. It named \textit{Loper Bright}, APA section 706, \textit{Skidmore}, \textit{Chevron} and \textit{Kisor}; the committed scenario records upstream precision 0.95, recall 1.00 and F1 0.97. On ordinary retrieval terms, this looks strong. Under the status protocol, the raw answer remains reference information because the citations are not yet procedurally source-bound, the review gate is pending and no contestability channel is recorded.
+
+The same visible answer qualifies differently when the legal-material chain changes. Once each output unit is linked to issue-manifest sources, locators, hashed support evidence and procedural source tags, and once review and contestability are completed, the output becomes normative material screening. If an authorized adopter then records human authorization, adoption reasons and a contestation record, the same source-bound chain may become a decision-support reason. If, however, the same chain is pushed into an irreversible external action without human authorization under an unaccountable external-disposition role, the output is withdrawn to no external legal effect. The answer's semantic content is not what moves it across statuses; the procedural record does.
+
+\begin{table}[htbp]
+\centering
+\caption{Worked evidence ladder for \textit{Loper Bright} output \texttt{codex55-us-03}}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.1cm}p{3.6cm}p{3.0cm}Y}
+\toprule
+Variant & Changed artefact & Allowed status & Interpretation \\
+\midrule
+Raw unverified & Named authorities and high retrieval metrics; no procedural source bindings or contestability channel. & Reference information & Recall 1.00 and F1 0.97 do not create screening status. \\
+Contestable screening & Manifest locators, hashed support evidence, procedural source tags, completed review and contestability channel. & Normative material screening output & The authority set becomes reconstructable and challengeable, but no decision adoption is recorded. \\
+Authorized decision support & Human authorization, adoption reasons, contestation record and authorized decision-support role. & Decision-support reason & A screening output can enter reasons only through accountable adoption. \\
+Unauthorized external action & Same source-bound chain, but irreversible external use without human authorization under an unaccountable role. & No external legal effect & Authorization and role caps can defeat an otherwise complete source chain. \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \section{Implications}
 

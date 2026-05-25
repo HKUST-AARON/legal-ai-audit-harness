@@ -1,5 +1,5 @@
 {
-  "check_count": 1048,
+  "check_count": 1051,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -33,6 +33,21 @@
     },
     {
       "expected": "VQ4 & Results are brittle to coding, architecture, contestation or certificate manipulation",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Worked application: Loper Bright evidence ladder",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Recall 1.00 and F1 0.97 do not create screening status",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "A screening output can enter reasons only through accountable adoption",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2032,7 +2047,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 37 pages",
+      "expected": "The expected manuscript build is 38 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -5244,5 +5259,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1048
+  "passed_count": 1051
 }
