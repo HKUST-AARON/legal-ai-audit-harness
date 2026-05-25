@@ -1,41 +1,78 @@
 {
+  "base_dimension_max_mean_absolute_delta": 0.13963963963963963,
+  "base_dimension_min_exact_agreement": 0.8603603603603603,
+  "base_dimension_min_kappa": 0.3737658674189008,
+  "base_dimension_min_kappa_coder": "coder_a",
+  "base_dimension_min_kappa_dimension": "Q",
+  "base_dimension_min_kappa_exact_agreement": 0.963963963963964,
+  "base_dimension_min_pabak": 0.7905405405405406,
   "base_status_agreement": {
     "coder_a": {
       "cohen_kappa": 0.9359266266876182,
       "dimension_agreement": {
         "H": {
+          "coder_equal_count": 201,
+          "coder_higher_count": 2,
+          "coder_lower_count": 19,
           "cohen_kappa": 0.6664997496244366,
           "exact_agreement": 0.9054054054054054,
+          "mean_absolute_delta": 0.0945945945945946,
+          "pabak": 0.8581081081081081,
           "quadratic_weighted_kappa": 0.7403364152835024,
           "weighted_agreement": 0.9527027027027027
         },
         "K": {
+          "coder_equal_count": 209,
+          "coder_higher_count": 13,
+          "coder_lower_count": 0,
           "cohen_kappa": 0.86175512550297,
           "exact_agreement": 0.9414414414414415,
+          "mean_absolute_delta": 0.05855855855855856,
+          "pabak": 0.9121621621621623,
           "quadratic_weighted_kappa": 0.8989141856392294,
           "weighted_agreement": 0.9707207207207207
         },
         "L": {
+          "coder_equal_count": 191,
+          "coder_higher_count": 1,
+          "coder_lower_count": 30,
           "cohen_kappa": 0.66953181272509,
           "exact_agreement": 0.8603603603603603,
+          "mean_absolute_delta": 0.13963963963963963,
+          "pabak": 0.7905405405405406,
           "quadratic_weighted_kappa": 0.7135603096645301,
           "weighted_agreement": 0.9301801801801802
         },
         "Q": {
+          "coder_equal_count": 214,
+          "coder_higher_count": 1,
+          "coder_lower_count": 7,
           "cohen_kappa": 0.3737658674189008,
           "exact_agreement": 0.963963963963964,
+          "mean_absolute_delta": 0.036036036036036036,
+          "pabak": 0.945945945945946,
           "quadratic_weighted_kappa": 0.48847926267281105,
           "weighted_agreement": 0.9819819819819819
         },
         "S": {
+          "coder_equal_count": 210,
+          "coder_higher_count": 0,
+          "coder_lower_count": 12,
           "cohen_kappa": 0.8906448832149747,
           "exact_agreement": 0.9459459459459459,
+          "mean_absolute_delta": 0.05405405405405406,
+          "pabak": 0.9189189189189189,
           "quadratic_weighted_kappa": 0.895668520404167,
           "weighted_agreement": 0.972972972972973
         },
         "T": {
+          "coder_equal_count": 192,
+          "coder_higher_count": 2,
+          "coder_lower_count": 28,
           "cohen_kappa": 0.7419804741980475,
           "exact_agreement": 0.8648648648648649,
+          "mean_absolute_delta": 0.13513513513513514,
+          "pabak": 0.7972972972972974,
           "quadratic_weighted_kappa": 0.7842984842596192,
           "weighted_agreement": 0.9324324324324325
         }
@@ -61,38 +98,68 @@
       "cohen_kappa": 0.9211367673179394,
       "dimension_agreement": {
         "H": {
+          "coder_equal_count": 206,
+          "coder_higher_count": 1,
+          "coder_lower_count": 15,
           "cohen_kappa": 0.746719908727895,
           "exact_agreement": 0.9279279279279279,
+          "mean_absolute_delta": 0.07207207207207207,
+          "pabak": 0.8918918918918919,
           "quadratic_weighted_kappa": 0.7738155883851249,
           "weighted_agreement": 0.963963963963964
         },
         "K": {
+          "coder_equal_count": 209,
+          "coder_higher_count": 13,
+          "coder_lower_count": 0,
           "cohen_kappa": 0.86175512550297,
           "exact_agreement": 0.9414414414414415,
+          "mean_absolute_delta": 0.05855855855855856,
+          "pabak": 0.9121621621621623,
           "quadratic_weighted_kappa": 0.8989141856392294,
           "weighted_agreement": 0.9707207207207207
         },
         "L": {
+          "coder_equal_count": 191,
+          "coder_higher_count": 1,
+          "coder_lower_count": 30,
           "cohen_kappa": 0.66953181272509,
           "exact_agreement": 0.8603603603603603,
+          "mean_absolute_delta": 0.13963963963963963,
+          "pabak": 0.7905405405405406,
           "quadratic_weighted_kappa": 0.7135603096645301,
           "weighted_agreement": 0.9301801801801802
         },
         "Q": {
+          "coder_equal_count": 214,
+          "coder_higher_count": 1,
+          "coder_lower_count": 7,
           "cohen_kappa": 0.3737658674189008,
           "exact_agreement": 0.963963963963964,
+          "mean_absolute_delta": 0.036036036036036036,
+          "pabak": 0.945945945945946,
           "quadratic_weighted_kappa": 0.48847926267281105,
           "weighted_agreement": 0.9819819819819819
         },
         "S": {
+          "coder_equal_count": 210,
+          "coder_higher_count": 0,
+          "coder_lower_count": 12,
           "cohen_kappa": 0.8906448832149747,
           "exact_agreement": 0.9459459459459459,
+          "mean_absolute_delta": 0.05405405405405406,
+          "pabak": 0.9189189189189189,
           "quadratic_weighted_kappa": 0.895668520404167,
           "weighted_agreement": 0.972972972972973
         },
         "T": {
+          "coder_equal_count": 192,
+          "coder_higher_count": 2,
+          "coder_lower_count": 28,
           "cohen_kappa": 0.7419804741980475,
           "exact_agreement": 0.8648648648648649,
+          "mean_absolute_delta": 0.13513513513513514,
+          "pabak": 0.7972972972972974,
           "quadratic_weighted_kappa": 0.7842984842596192,
           "weighted_agreement": 0.9324324324324325
         }

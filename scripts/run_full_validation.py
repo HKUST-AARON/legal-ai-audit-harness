@@ -523,6 +523,13 @@ def main() -> int:
             "minimum_missing_gate_exact_agreement": blind_coding_payload["minimum_missing_gate_exact_agreement"],
             "minimum_missing_gate_jaccard": blind_coding_payload["minimum_missing_gate_jaccard"],
             "base_status_agreement": blind_coding_payload["base_status_agreement"],
+            "base_dimension_min_kappa": blind_coding_payload["base_dimension_min_kappa"],
+            "base_dimension_min_kappa_dimension": blind_coding_payload["base_dimension_min_kappa_dimension"],
+            "base_dimension_min_kappa_coder": blind_coding_payload["base_dimension_min_kappa_coder"],
+            "base_dimension_min_kappa_exact_agreement": blind_coding_payload["base_dimension_min_kappa_exact_agreement"],
+            "base_dimension_min_exact_agreement": blind_coding_payload["base_dimension_min_exact_agreement"],
+            "base_dimension_min_pabak": blind_coding_payload["base_dimension_min_pabak"],
+            "base_dimension_max_mean_absolute_delta": blind_coding_payload["base_dimension_max_mean_absolute_delta"],
         },
         "threshold_sensitivity": threshold_sensitivity,
         "source_text_verification": {
@@ -916,7 +923,13 @@ def _blind_coding_row(payload: dict) -> dict:
         "evidence_class": "codebook reproducibility",
         "validation_units": f"{payload['packet_count']} packets x {payload['coder_count']} coding passes",
         "scenario_count": payload["packet_count"],
-        "rule_pass": f"{first_pair['cohen_kappa']:.2f} coder kappa; {base_kappa:.2f} min base kappa",
+        "rule_pass": (
+            f"{first_pair['cohen_kappa']:.2f} coder kappa; "
+            f"{payload['base_dimension_min_kappa']:.2f} weakest base-dimension kappa "
+            f"({payload['base_dimension_min_kappa_dimension']}); "
+            f"{payload['base_dimension_min_exact_agreement']:.2f} min base-dimension exact; "
+            f"{payload['base_dimension_max_mean_absolute_delta']:.2f} max score drift"
+        ),
         "mean_audit_score": None,
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
@@ -928,13 +941,20 @@ def _blind_coding_row(payload: dict) -> dict:
             "minimum_dimension_kappa": round(payload["minimum_dimension_kappa"], 2),
             "minimum_failure_flag_exact_agreement": round(payload["minimum_failure_flag_exact_agreement"], 2),
             "minimum_missing_gate_exact_agreement": round(payload["minimum_missing_gate_exact_agreement"], 2),
+            "base_dimension_min_kappa": round(payload["base_dimension_min_kappa"], 2),
+            "base_dimension_min_kappa_dimension": payload["base_dimension_min_kappa_dimension"],
+            "base_dimension_min_kappa_coder": payload["base_dimension_min_kappa_coder"],
+            "base_dimension_min_kappa_exact_agreement": round(payload["base_dimension_min_kappa_exact_agreement"], 2),
+            "base_dimension_min_exact_agreement": round(payload["base_dimension_min_exact_agreement"], 2),
+            "base_dimension_min_pabak": round(payload["base_dimension_min_pabak"], 2),
+            "base_dimension_max_mean_absolute_delta": round(payload["base_dimension_max_mean_absolute_delta"], 2),
             "min_base_exact_status_agreement": round(base_exact, 2),
             "min_base_weighted_status_agreement": round(base_weighted, 2),
             "min_base_cohen_kappa": round(base_kappa, 2),
             "min_base_quadratic_weighted_kappa": round(base_weighted_kappa, 2),
             "status_disagreements": payload["status_disagreement_count"],
         },
-        "finding": "Tests chance-corrected score-blinded coder reliability and how far status assignments track the base harness allocation.",
+        "finding": "Tests score-blinded coder reliability, base-status tracking and dimension-level score calibration under class imbalance.",
     }
 
 
@@ -1348,6 +1368,12 @@ def _blind_coding_summary(payload: dict) -> str:
         f"{payload['blind_coding']['minimum_dimension_kappa']:.2f} minimum dimension kappa, "
         f"{payload['blind_coding']['minimum_failure_flag_exact_agreement']:.2f} minimum derived failure-flag exact agreement, "
         f"{payload['blind_coding']['minimum_missing_gate_exact_agreement']:.2f} minimum derived missing-gate exact agreement, "
+        f"{payload['blind_coding']['base_dimension_min_kappa']:.2f} minimum base-dimension kappa "
+        f"({payload['blind_coding']['base_dimension_min_kappa_dimension']}, "
+        f"{payload['blind_coding']['base_dimension_min_kappa_exact_agreement']:.2f} exact), "
+        f"{payload['blind_coding']['base_dimension_min_exact_agreement']:.2f} minimum base-dimension exact agreement, "
+        f"{payload['blind_coding']['base_dimension_min_pabak']:.2f} minimum base-dimension PABAK, "
+        f"{payload['blind_coding']['base_dimension_max_mean_absolute_delta']:.2f} maximum base-dimension mean absolute delta, "
         f"{base_exact:.2f} minimum base-coder exact agreement, "
         f"{base_weighted:.2f} minimum base-coder weighted agreement, "
         f"{base_kappa:.2f} minimum base-coder kappa, "

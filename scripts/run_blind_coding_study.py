@@ -177,6 +177,15 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
             "mismatch_count": len(mismatches),
             "mismatches": mismatches,
         }
+    base_dimension_summaries = [
+        {"coder_id": coder_id, "dimension": dimension, **stats}
+        for coder_id, item in base_status_agreement.items()
+        for dimension, stats in item["dimension_agreement"].items()
+    ]
+    base_dimension_worst_kappa = min(
+        base_dimension_summaries,
+        key=lambda item: (item["cohen_kappa"], item["coder_id"], item["dimension"]),
+    )
     dimension_min_kappa = {
         dimension: min(
             item["dimension_agreement"][dimension]["cohen_kappa"]
@@ -203,6 +212,13 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
         "minimum_missing_gate_exact_agreement": min(item["missing_gate_exact_agreement"] for item in gate_agreements),
         "minimum_missing_gate_jaccard": min(item["missing_gate_mean_jaccard"] for item in gate_agreements),
         "base_status_agreement": base_status_agreement,
+        "base_dimension_min_kappa": base_dimension_worst_kappa["cohen_kappa"],
+        "base_dimension_min_kappa_dimension": base_dimension_worst_kappa["dimension"],
+        "base_dimension_min_kappa_coder": base_dimension_worst_kappa["coder_id"],
+        "base_dimension_min_kappa_exact_agreement": base_dimension_worst_kappa["exact_agreement"],
+        "base_dimension_min_exact_agreement": min(item["exact_agreement"] for item in base_dimension_summaries),
+        "base_dimension_min_pabak": min(item["pabak"] for item in base_dimension_summaries),
+        "base_dimension_max_mean_absolute_delta": max(item["mean_absolute_delta"] for item in base_dimension_summaries),
         "status_disagreements": high_disagreement,
         "status_disagreement_count": len(high_disagreement),
         "mean_total_score": {
@@ -252,6 +268,11 @@ def _base_dimension_agreement(rows: list[dict], coder_id: str) -> dict[str, dict
             "weighted_agreement": _score_weighted_agreement(base_values, coder_values),
             "cohen_kappa": _nominal_kappa(base_values, coder_values, [0, 1, 2]),
             "quadratic_weighted_kappa": _ordinal_kappa(base_values, coder_values, {0: 0, 1: 1, 2: 2}),
+            "pabak": _pabak(base_values, coder_values),
+            "mean_absolute_delta": mean(abs(base - coder) for base, coder in zip(base_values, coder_values)),
+            "coder_lower_count": sum(coder < base for base, coder in zip(base_values, coder_values)),
+            "coder_higher_count": sum(coder > base for base, coder in zip(base_values, coder_values)),
+            "coder_equal_count": sum(coder == base for base, coder in zip(base_values, coder_values)),
         }
     return agreement
 
@@ -316,6 +337,10 @@ def _score_weighted_agreement(left: list[int], right: list[int]) -> float:
     return 1 - mean(abs(a - b) / 2 for a, b in zip(left, right))
 
 
+def _pabak(left: list, right: list, category_count: int = 3) -> float:
+    return (category_count * _exact_agreement(left, right) - 1) / (category_count - 1)
+
+
 def _nominal_kappa(left: list, right: list, labels: list) -> float:
     total = len(left)
     if total == 0:
@@ -357,6 +382,10 @@ def _format_report(payload: dict) -> str:
         f"Minimum dimension kappa: {payload['minimum_dimension_kappa']:.2f}",
         f"Minimum derived failure-flag exact agreement: {payload['minimum_failure_flag_exact_agreement']:.2f}",
         f"Minimum derived missing-gate exact agreement: {payload['minimum_missing_gate_exact_agreement']:.2f}",
+        f"Base dimension minimum kappa: {payload['base_dimension_min_kappa']:.2f} ({payload['base_dimension_min_kappa_dimension']}, exact {payload['base_dimension_min_kappa_exact_agreement']:.2f})",
+        f"Base dimension minimum exact agreement: {payload['base_dimension_min_exact_agreement']:.2f}",
+        f"Base dimension minimum PABAK: {payload['base_dimension_min_pabak']:.2f}",
+        f"Base dimension maximum mean absolute delta: {payload['base_dimension_max_mean_absolute_delta']:.2f}",
         "",
         "## Pairwise Status Agreement",
         "",
@@ -410,6 +439,21 @@ def _format_report(payload: dict) -> str:
         lines.append(
             f"| {coder_id} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} | {item['cohen_kappa']:.2f} | {item['quadratic_weighted_kappa']:.2f} | {item['match_count']} | {item['mismatch_count']} |"
         )
+    lines.extend(
+        [
+            "",
+            "## Base Dimension Calibration",
+            "",
+            "| Coder | Dimension | Exact | Cohen's kappa | PABAK | Mean absolute delta | Lower | Higher | Equal |",
+            "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for coder_id in payload["coder_ids"]:
+        for dimension in DIMENSIONS:
+            stats = payload["base_status_agreement"][coder_id]["dimension_agreement"][dimension]
+            lines.append(
+                f"| {coder_id} | {dimension} | {stats['exact_agreement']:.2f} | {stats['cohen_kappa']:.2f} | {stats['pabak']:.2f} | {stats['mean_absolute_delta']:.2f} | {stats['coder_lower_count']} | {stats['coder_higher_count']} | {stats['coder_equal_count']} |"
+            )
     lines.extend(["", "## Mean Total Score", "", "| Coder | Mean total score |", "| --- | ---: |"])
     for coder_id, score in payload["mean_total_score"].items():
         lines.append(f"| {coder_id} | {score:.2f} |")

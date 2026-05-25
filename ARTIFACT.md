@@ -44,7 +44,7 @@ Expected aggregate output:
 - 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups
 - 315 query portfolios plus 5 group frontier summaries across 5 issue groups; 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios
 - 61,500 annotation-uncertainty perturbations with 0.933 sample stability
-- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97 and minimum derived missing-gate exact agreement 0.98
+- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.86, minimum three-category PABAK 0.79 and maximum mean absolute score drift 0.14
 - 246/246 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
 - 50/50 raw model-output transcript locators verified

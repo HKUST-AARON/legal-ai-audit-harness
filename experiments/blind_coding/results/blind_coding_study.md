@@ -6,6 +6,10 @@ Status disagreements: 2
 Minimum dimension kappa: 0.93
 Minimum derived failure-flag exact agreement: 0.97
 Minimum derived missing-gate exact agreement: 0.98
+Base dimension minimum kappa: 0.37 (Q, exact 0.96)
+Base dimension minimum exact agreement: 0.86
+Base dimension minimum PABAK: 0.79
+Base dimension maximum mean absolute delta: 0.14
 
 ## Pairwise Status Agreement
 
@@ -36,6 +40,23 @@ Minimum derived missing-gate exact agreement: 0.98
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | coder_a | 0.96 | 0.98 | 0.94 | 0.93 | 213 | 9 |
 | coder_b | 0.95 | 0.97 | 0.92 | 0.90 | 211 | 11 |
+
+## Base Dimension Calibration
+
+| Coder | Dimension | Exact | Cohen's kappa | PABAK | Mean absolute delta | Lower | Higher | Equal |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| coder_a | S | 0.95 | 0.89 | 0.92 | 0.05 | 12 | 0 | 210 |
+| coder_a | Q | 0.96 | 0.37 | 0.95 | 0.04 | 7 | 1 | 214 |
+| coder_a | H | 0.91 | 0.67 | 0.86 | 0.09 | 19 | 2 | 201 |
+| coder_a | K | 0.94 | 0.86 | 0.91 | 0.06 | 0 | 13 | 209 |
+| coder_a | T | 0.86 | 0.74 | 0.80 | 0.14 | 28 | 2 | 192 |
+| coder_a | L | 0.86 | 0.67 | 0.79 | 0.14 | 30 | 1 | 191 |
+| coder_b | S | 0.95 | 0.89 | 0.92 | 0.05 | 12 | 0 | 210 |
+| coder_b | Q | 0.96 | 0.37 | 0.95 | 0.04 | 7 | 1 | 214 |
+| coder_b | H | 0.93 | 0.75 | 0.89 | 0.07 | 15 | 1 | 206 |
+| coder_b | K | 0.94 | 0.86 | 0.91 | 0.06 | 0 | 13 | 209 |
+| coder_b | T | 0.86 | 0.74 | 0.80 | 0.14 | 28 | 2 | 192 |
+| coder_b | L | 0.86 | 0.67 | 0.79 | 0.14 | 30 | 1 | 191 |
 
 ## Mean Total Score
 

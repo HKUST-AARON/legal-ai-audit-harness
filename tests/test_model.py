@@ -8,13 +8,14 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
-from audit_harness.model import STATUS_RANK, evaluate_scenario
+from audit_harness.model import DIMENSIONS, STATUS_RANK, evaluate_scenario
 
 
 ROOT = Path(__file__).resolve().parents[1]
 SCENARIOS = ROOT / "examples" / "scenarios"
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_model_output_repairs import matched_source_support, repair
+from run_blind_coding_study import _base_dimension_agreement, _pabak, _payload
 
 
 def load(name: str) -> dict:
@@ -977,6 +978,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertGreaterEqual(report["blind_coding"]["minimum_dimension_kappa"], 0.9)
         self.assertGreaterEqual(report["blind_coding"]["minimum_failure_flag_exact_agreement"], 0.95)
         self.assertGreaterEqual(report["blind_coding"]["minimum_missing_gate_exact_agreement"], 0.95)
+        self.assertGreaterEqual(report["blind_coding"]["base_dimension_min_exact_agreement"], 0.85)
+        self.assertGreaterEqual(report["blind_coding"]["base_dimension_min_pabak"], 0.7)
+        self.assertLessEqual(report["blind_coding"]["base_dimension_max_mean_absolute_delta"], 0.15)
+        self.assertIn(report["blind_coding"]["base_dimension_min_kappa_dimension"], DIMENSIONS)
+        self.assertGreaterEqual(report["blind_coding"]["base_dimension_min_kappa"], 0.0)
+        self.assertLessEqual(report["blind_coding"]["base_dimension_min_kappa"], 1.0)
+        self.assertGreaterEqual(report["blind_coding"]["base_dimension_min_kappa_exact_agreement"], 0.9)
         self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 246)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
         self.assertEqual(report["blocked_reason_distribution"]["authority_omission"], 59)
@@ -1239,6 +1247,58 @@ class AuditModelTest(unittest.TestCase):
         self.assertGreaterEqual(report["weighted_status_agreement_base_strict"], 0.9)
         self.assertGreaterEqual(report["all_policy_status_stable"], 210)
 
+    def test_blind_coding_calibration_formula(self):
+        self.assertAlmostEqual(_pabak([0, 1, 2, 2], [0, 1, 1, 2]), (3 * 0.75 - 1) / 2)
+
+        rows = []
+        for index, (base_s, coder_a_s) in enumerate([(0, 0), (1, 0), (1, 2), (2, 2)], 1):
+            base_scores = {dimension: 1 for dimension in DIMENSIONS}
+            coder_a_scores = {dimension: 1 for dimension in DIMENSIONS}
+            coder_b_scores = {dimension: 1 for dimension in DIMENSIONS}
+            base_scores["S"] = base_s
+            coder_a_scores["S"] = coder_a_s
+            coder_b_scores["S"] = base_s
+            rows.append(
+                {
+                    "packet_id": f"fixture-{index}",
+                    "base_allowed_status": "reference_information",
+                    "base_scores": base_scores,
+                    "annotations": [
+                        {
+                            "coder_id": "coder_a",
+                            "scores": coder_a_scores,
+                            "total_score": sum(coder_a_scores.values()),
+                            "allowed_status": "reference_information",
+                            "missing_gates": [],
+                            "failure_flags": [],
+                        },
+                        {
+                            "coder_id": "coder_b",
+                            "scores": coder_b_scores,
+                            "total_score": sum(coder_b_scores.values()),
+                            "allowed_status": "reference_information",
+                            "missing_gates": [],
+                            "failure_flags": [],
+                        },
+                    ],
+                }
+            )
+
+        stats = _base_dimension_agreement(rows, "coder_a")["S"]
+        self.assertAlmostEqual(stats["exact_agreement"], 0.5)
+        self.assertAlmostEqual(stats["pabak"], 0.25)
+        self.assertAlmostEqual(stats["mean_absolute_delta"], 0.5)
+        self.assertEqual(stats["coder_lower_count"], 1)
+        self.assertEqual(stats["coder_higher_count"], 1)
+        self.assertEqual(stats["coder_equal_count"], 2)
+
+        payload = _payload(rows, [{"coder_id": "coder_a"}, {"coder_id": "coder_b"}])
+        self.assertEqual(payload["base_dimension_min_kappa_dimension"], "S")
+        self.assertEqual(payload["base_dimension_min_kappa_coder"], "coder_a")
+        self.assertAlmostEqual(payload["base_dimension_min_exact_agreement"], 0.5)
+        self.assertAlmostEqual(payload["base_dimension_min_pabak"], 0.25)
+        self.assertAlmostEqual(payload["base_dimension_max_mean_absolute_delta"], 0.5)
+
     def test_blind_coding_study_report_shape(self):
         subprocess.run(
             [sys.executable, "scripts/build_model_output_adversarial.py"],
@@ -1273,6 +1333,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertGreaterEqual(report["minimum_dimension_exact_agreement"], 0.95)
         self.assertGreaterEqual(report["minimum_failure_flag_exact_agreement"], 0.95)
         self.assertGreaterEqual(report["minimum_missing_gate_exact_agreement"], 0.95)
+        self.assertGreaterEqual(report["base_dimension_min_exact_agreement"], 0.85)
+        self.assertGreaterEqual(report["base_dimension_min_pabak"], 0.7)
+        self.assertLessEqual(report["base_dimension_max_mean_absolute_delta"], 0.15)
+        self.assertIn(report["base_dimension_min_kappa_dimension"], DIMENSIONS)
+        self.assertGreaterEqual(report["base_dimension_min_kappa"], 0.0)
+        self.assertLessEqual(report["base_dimension_min_kappa"], 1.0)
+        self.assertGreaterEqual(report["base_dimension_min_kappa_exact_agreement"], 0.9)
         self.assertIn("gate_agreement", report["pairwise_dimensions"][0])
         self.assertGreaterEqual(report["dimension_min_kappa"]["H"], 0.9)
         base_agreements = report["base_status_agreement"].values()
