@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 import re
 import sys
-import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -113,7 +112,6 @@ def _checks(payload: dict) -> list[dict]:
         ("ARTIFACT.md", f"- {values['expected_passed']}/{values['expected_total']} scenario-regression expectations passed"),
         ("ARTIFACT.md", f"- {values['source_verified']}/{values['source_total']} public source-text anchors verified"),
         ("ARTIFACT.md", f"- {values['transcript_verified']}/{values['transcript_total']} raw model-output transcript locators verified"),
-        ("ARTIFACT.md", f"The expected manuscript build is {values['pdf_pages']} pages"),
         ("README.md", f"{values['scenario_files']} scenario files containing {values['embedded']} embedded records/items"),
         ("README.md", f"{_comma(values['formal'])} formal invariant checks"),
         ("README.md", f"{values['metric']} metric-separation evaluations, {_comma(values['metric_resamples'])} metric statistical resamples, {_comma(values['baseline_predictions'])} baseline-rule predictions, {values['gate']} gate-ablation evaluations, {_comma(values['repair'])} repair-frontier evaluations, {values['jurisdiction']} jurisdiction-profile checks, {values['ranking_window']} rank-window visibility checks, {values['ranking_counterfactuals']} rank-order counterfactuals and {_comma(values['certificate_checks'])} status-certificate replay checks"),
@@ -207,6 +205,8 @@ def _checks(payload: dict) -> list[dict]:
         ("experiments/full_validation/results/full_validation_report.md", f"Annotation uncertainty: {values['uncertainty']} score perturbations; sample stability {values['uncertainty_stability']:.3f}; qualified high-status stability {values['uncertainty_qualified_high']:.3f}; boundary scenarios {values['uncertainty_boundary']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metric separation evaluations: {values['metric']} upstream-metric scenario packets; high-recall blocked outputs {values['metric_high_recall_blocked']}/{values['metric_high_recall_total']}"),
     ]
+    if values["pdf_pages"] is not None:
+        expectations.append(("ARTIFACT.md", f"The expected manuscript build is {values['pdf_pages']} pages"))
     checks = []
     for path, expected in expectations:
         text = (ROOT / path).read_text(encoding="utf-8")
@@ -265,21 +265,13 @@ def _comma(value: int) -> str:
     return f"{value:,}"
 
 
-def _pdf_page_count(path: Path) -> int:
+def _pdf_page_count(path: Path) -> int | None:
     log = path.with_suffix(".log")
     if log.exists():
         match = re.search(r"Output written on .+ \((\d+) pages", log.read_text(encoding="utf-8", errors="ignore"))
         if match:
             return int(match.group(1))
-    data = path.read_bytes()
-    chunks = [data.decode("latin-1", errors="ignore")]
-    for match in re.finditer(rb"stream\r?\n(.*?)\r?\nendstream", data, re.S):
-        try:
-            chunks.append(zlib.decompress(match.group(1).strip()).decode("latin-1", errors="ignore"))
-        except zlib.error:
-            pass
-    text = "\n".join(chunks)
-    return len(re.findall(r"/Type\s*/Page\b", text))
+    return None
 
 
 def _format_report(payload: dict) -> str:

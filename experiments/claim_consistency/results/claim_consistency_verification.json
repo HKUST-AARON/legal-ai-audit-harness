@@ -92,11 +92,6 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "The expected manuscript build is 34 pages",
-      "passed": true,
-      "path": "ARTIFACT.md"
-    },
-    {
       "expected": "246 scenario files containing 679 embedded records/items",
       "passed": true,
       "path": "README.md"
@@ -555,6 +550,11 @@
       "expected": "Metric separation evaluations: 201 upstream-metric scenario packets; high-recall blocked outputs 144/197",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "The expected manuscript build is 34 pages",
+      "passed": true,
+      "path": "ARTIFACT.md"
     },
     {
       "expected": "absence of stale claim `62,497`",
