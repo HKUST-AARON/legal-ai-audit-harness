@@ -186,6 +186,7 @@
       "expected_passed": true,
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "invalid_authority_rate": 0.0,
@@ -366,7 +367,7 @@
       "contestation_failure": 1,
       "counter_material_suppression": 1,
       "invalid_authority": 1,
-      "source_attribution_gap": 2,
+      "source_attribution_gap": 3,
       "summary_distortion": 1
     },
     "expected_passed": 10,

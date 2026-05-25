@@ -12,7 +12,7 @@ from audit_harness.model import DIMENSIONS, STATUS_RANK, SYSTEM_ROLE_CAPS, evalu
 
 RESULTS = ROOT / "experiments" / "status_lattice" / "results"
 ROLES = tuple(SYSTEM_ROLE_CAPS)
-GATES = ("evidence", "procedural_source", "high_authority", "counter_material", "review", "adoption")
+GATES = ("evidence", "claim_anchor", "procedural_source", "high_authority", "counter_material", "review", "adoption")
 
 
 def main() -> int:
@@ -97,6 +97,7 @@ def _scenario(key: tuple) -> dict:
             "output_units": [
                 {
                     "id": "u1",
+                    **({"claim": "Status-lattice source-bound legal proposition."} if gate["claim_anchor"] else {}),
                     "source_ids": scenario["authority_sets"]["retrieved"],
                     "locators": [f"{source}:1" for source in scenario["authority_sets"]["retrieved"]],
                 }
@@ -144,7 +145,7 @@ def _cover_edge_diagnostics(status_by_key: dict[tuple, str]) -> dict:
 
 
 def _necessity(status_by_key: dict[tuple, str]) -> dict:
-    required_for_high = ("evidence", "procedural_source", "high_authority", "counter_material", "review")
+    required_for_high = ("evidence", "claim_anchor", "procedural_source", "high_authority", "counter_material", "review")
     failures = []
     checks = 0
     for key, status in status_by_key.items():
@@ -195,9 +196,10 @@ def _substitution_rules(status_by_key: dict[tuple, str]) -> list[dict]:
         "complete_vector_and_score": lambda key: all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
         "role_ready_and_score": lambda key: key[1] in {"auditable_procedural_tool", "authorized_decision_support_tool"} and sum(key[0]) >= 9,
         "source_bound_score": lambda key: _gates(key, "evidence", "procedural_source") and all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
-        "source_authority_score": lambda key: _gates(key, "evidence", "procedural_source", "high_authority") and all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
-        "source_authority_counter_score": lambda key: _gates(key, "evidence", "procedural_source", "high_authority", "counter_material") and all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
-        "full_screening_predicate": lambda key: _gates(key, "evidence", "procedural_source", "high_authority", "counter_material", "review")
+        "claim_anchored_source_score": lambda key: _gates(key, "evidence", "claim_anchor", "procedural_source") and all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
+        "source_authority_score": lambda key: _gates(key, "evidence", "claim_anchor", "procedural_source", "high_authority") and all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
+        "source_authority_counter_score": lambda key: _gates(key, "evidence", "claim_anchor", "procedural_source", "high_authority", "counter_material") and all(score >= 1 for score in key[0]) and sum(key[0]) >= 9,
+        "full_screening_predicate": lambda key: _gates(key, "evidence", "claim_anchor", "procedural_source", "high_authority", "counter_material", "review")
         and key[1] in {"auditable_procedural_tool", "authorized_decision_support_tool"}
         and all(score >= 1 for score in key[0])
         and sum(key[0]) >= 9,

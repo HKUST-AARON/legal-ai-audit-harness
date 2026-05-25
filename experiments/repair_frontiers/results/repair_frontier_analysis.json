@@ -52,6 +52,7 @@
       "base_disposition": "withdrawal",
       "base_failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "counterfactual_evaluations": 98,

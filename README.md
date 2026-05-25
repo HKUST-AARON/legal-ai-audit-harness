@@ -54,6 +54,7 @@ python scripts/run_certificate_tamper_analysis.py
 python scripts/run_policy_constants_replay.py
 python scripts/run_metamorphic_policy_tests.py
 python scripts/run_policy_mutation_analysis.py
+python scripts/run_claim_anchor_analysis.py
 python scripts/run_model_identity_invariance.py
 python scripts/run_query_perturbation_analysis.py
 python scripts/run_query_portfolio_frontier.py
@@ -108,7 +109,7 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
       { "unit_id": "unit-1", "source_id": "binding-precedent-a", "locator": "para 3", "supports_claim": true, "source_tag": "tool_verified" }
     ],
     "output_units": [
-      { "id": "unit-1", "source_ids": ["binding-precedent-a"], "locators": ["para 3"] }
+      { "id": "unit-1", "claim": "The cited precedent controls the issue.", "source_ids": ["binding-precedent-a"], "locators": ["para 3"] }
     ]
   },
   "review_gate": {
@@ -132,7 +133,7 @@ legal-ai-audit run examples/scenarios --out reports/sample_report.md
 | --- | --- |
 | `reference_information` | `S >= 1` and `Q >= 1` |
 | `professional_support_output` | `S, Q, L >= 1` |
-| `normative_material_screening_output` | all six dimensions `>= 1`, total score `>= 9`, nonempty high-authority set, `retrieved_high_authority`, `counter_or_limiting` and `retrieved_counter_or_limiting` fields, nonempty counter-materials unless `counter_material_complete=true`, output evidence packet with output units and source links, review gate with jurisdiction assumptions and a contestability channel, and no active failure cap |
+| `normative_material_screening_output` | all six dimensions `>= 1`, total score `>= 9`, nonempty high-authority set, `retrieved_high_authority`, `counter_or_limiting` and `retrieved_counter_or_limiting` fields, nonempty counter-materials unless `counter_material_complete=true`, output evidence packet with material claim text, output units and source links, review gate with jurisdiction assumptions and a contestability channel, and no active failure cap |
 | `decision_support_reason` | all normative-screening gates, total score `>= 10`, `T = L = 2`, completed review, `authorized_adoption`, human authorization, recorded jurisdiction assumptions, adoption reasons, and contestation record |
 | `no_external_legal_effect` | withdrawal-level failure, unaccountable external disposition, or rights-affecting use without authorization, review, contestability or accountability |
 
@@ -184,8 +185,8 @@ Current coverage:
 | Public source-text anchors | 30 | Checks manifest support terms against extracted public source text snapshots; current result is 30/30 verified across 30 records with snapshots. |
 | Model-output transcript anchors | 50 | Checks that every raw model-output scenario locator is anchored in the committed transcript section. |
 | Cross-engine transcript anchors | 36 | Checks raw-output locators against committed transcripts across three model engines and three issue families. |
-| Formal invariant verification | 51644 | Exhaustively checks monotonicity, evidence-packet necessity, authority-set necessity, counter-material gate necessity, contestability-channel necessity, adoption necessity, role caps, failure caps and metric non-equivalence over generated audit-policy states. |
-| Status-lattice exhaustion | 3500902 | Exhausts 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions; current result is 851/851 high-status necessity checks and 851/851 gate-ablation drops passed. |
+| Formal invariant verification | 51646 | Exhaustively checks monotonicity, evidence-packet necessity, claim-anchor necessity, authority-set necessity, counter-material gate necessity, contestability-channel necessity, adoption necessity, role caps, failure caps and metric non-equivalence over generated audit-policy states. |
+| Status-lattice exhaustion | 7700278 | Exhausts 466,560 high-status claim-attempt states, 3,499,200 cover edges and 3,732,480 substitute-rule predictions; current result is 1019/1019 high-status necessity checks and 1019/1019 gate-ablation drops passed. |
 | Metric separation analysis | 219 | Tests whether upstream precision, recall and F1 predict procedural qualification across all packets with complete upstream metrics. |
 | Metric statistical robustness | 2000 | Bootstraps key metric/status separation estimates and permutes recall-status association. |
 | Baseline rule comparison | 3252 | Compares recall, F1, total-score, source-bound, authority-material and review-gate substitutes against the protocol-defined reference allocation over 13 alternative status rules. |
@@ -203,6 +204,7 @@ Current coverage:
 | Metamorphic policy tests | 1233 | Applies claim escalation, upstream-metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation without using expected labels; current result is 1233/1233 passed. |
 | Policy mutation analysis | 3111 | Runs 15 gate-removal and status-conferring policy mutants over committed packets; current result is 15/15 killed with 2,264 invalid promotions and 2 false negatives. |
 | Review-provenance analysis | 627 | Adds review and adoption labels to incomplete packets and removes review, contestability, jurisdiction, authorization, adoption-reason or contestation-record fields from qualified packets; current result is 627/627 passed. |
+| Claim-anchor analysis | 1080 | Removes material proposition text, link-to-claim bindings, support attestations and locators from every qualified packet; current result is 1080/1080 passed over 250 output units and 290 output links. |
 | Model-identity invariance | 1320 | Substitutes five model identity profiles across all 264 packets; current result is 1320/1320 invariant with 0 status changes and 0 disposition changes. |
 | Query-perturbation stability | 35 | Compares 30 issue-equivalent public-search query variants across 5 issue groups; current result is 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups. |
 | Query-portfolio frontier | 320 | Enumerates all 315 non-empty query portfolios plus 5 group frontier summaries across the same 5 issue groups; current result is 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios. |
@@ -213,12 +215,18 @@ Current coverage:
 | Score-blinded dual coding | 480 | Two coding passes score 240 non-holdout packets without original scores or expected outcomes, then compare status, inter-coder dimension, post-evaluation gate and base-dimension calibration metrics. |
 | Full-threshold sensitivity | 1320 | Re-evaluates all 264 scenario packets under normative thresholds 8-12. |
 
-The current full validation report covers 264 scenario files containing 697 embedded records/items, 30 public source-text anchor checks, 50 raw model-output transcript locator checks, 36 cross-engine transcript locator checks, 51,644 formal invariant checks, 233,280 high-status claim-attempt states, 1,632,960 status-lattice cover edges, 1,632,960 status-lattice substitute-rule predictions, 219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks, plus 66,000 score-uncertainty perturbations, strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. The matrix tests a single rule: procedural status follows the reconstructable legal-material chain. Its substitute-theory table falsifies performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency; the full protocol records 0 false positives and 0 false negatives against those substitutes. Public retrieval, holdout, model-output, cross-engine, source-supported repair, evidence ladder, public source-text anchors, transcript anchors, formal invariants, status-lattice exhaustion, metric separation, baseline comparison, gate ablation, gate-contrast witnesses, source-chain attacks, contestation challenges, proof-carrying certificates, certificate tamper-resistance, policy-constants replay, metamorphic policy checks, policy-mutation killing, review-provenance falsification, model-identity invariance, query perturbation, query portfolios, repair frontiers, jurisdiction profiles, ranking visibility, adversarial repairs, annotation uncertainty, threshold sensitivity, robustness and blind coding all test whether that chain survives the conditions required for procedural use.
+The current full validation report covers 264 scenario files containing 697 embedded records/items, 30 public source-text anchor checks, 50 raw model-output transcript locator checks, 36 cross-engine transcript locator checks, 51,646 formal invariant checks, 466,560 high-status claim-attempt states, 3,499,200 status-lattice cover edges, 3,732,480 status-lattice substitute-rule predictions, 219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks, plus 66,000 score-uncertainty perturbations, strict/lenient recoding, score-blinded codebook coding and full-threshold sensitivity checks. The matrix tests a single rule: procedural status follows the reconstructable legal-material chain. Its substitute-theory table falsifies performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency; the full protocol records 0 false positives and 0 false negatives against those substitutes. Public retrieval, holdout, model-output, cross-engine, source-supported repair, evidence ladder, public source-text anchors, transcript anchors, formal invariants, status-lattice exhaustion, metric separation, baseline comparison, gate ablation, gate-contrast witnesses, source-chain attacks, contestation challenges, proof-carrying certificates, certificate tamper-resistance, policy-constants replay, metamorphic policy checks, policy-mutation killing, review-provenance falsification, claim-anchor falsification, model-identity invariance, query perturbation, query portfolios, repair frontiers, jurisdiction profiles, ranking visibility, adversarial repairs, annotation uncertainty, threshold sensitivity, robustness and blind coding all test whether that chain survives the conditions required for procedural use.
 
 The review-provenance layer can also be run directly:
 
 ```bash
 python scripts/run_review_provenance_analysis.py
+```
+
+The claim-anchor layer can also be run directly:
+
+```bash
+python scripts/run_claim_anchor_analysis.py
 ```
 
 After running the full matrix, `python scripts/verify_claim_consistency.py` checks that the manuscript, README, artifact guide, skill and generated reports still state the same headline counts as `full_validation_report.json`.
@@ -229,7 +237,7 @@ Profiles in `examples/jurisdiction_profiles/` parameterize `H` and `K` for diffe
 
 ## Output Evidence Auditing
 
-Scenarios can include an `evidence_packet` object with output-to-source mappings. This sits above any upstream implementation. The harness reports structural evidence fidelity, evidence coverage, source-tag coverage, and procedural-source-tag coverage. Unsupported output units are withdrawal-level failures when they claim external procedural status; missing or nonprocedural source tags downgrade external status because reviewers cannot tell whether a citation was tool-verified, officially sourced, user-verified, public metadata, or still needs verification.
+Scenarios can include an `evidence_packet` object with output-to-source mappings. This sits above any upstream implementation. For external procedural status, each output unit must state the material claim being anchored, and each output link must bind back to an output unit. The harness reports structural evidence fidelity, evidence coverage, source-tag coverage, and procedural-source-tag coverage. Unsupported output units are withdrawal-level failures when they claim external procedural status; missing material claim text, missing link-to-claim bindings or nonprocedural source tags downgrade external status because reviewers cannot tell what proposition a citation is supposed to support or whether it was tool-verified, officially sourced, user-verified, public metadata, or still needs verification.
 
 The source-text anchor verifier adds an external check for issue-manifest support. It uses committed public source snapshots by default and only refreshes public pages when `--refresh` is supplied:
 

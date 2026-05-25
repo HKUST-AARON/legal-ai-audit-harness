@@ -208,6 +208,7 @@ def _complete_source_binding(scenario: dict, target: str) -> None:
         existing_sources.add(source_id)
     for index, unit in enumerate(units, start=1):
         unit.setdefault("id", f"repair-unit-{index}")
+        unit.setdefault("claim", "Repair-frontier source-bound legal proposition.")
         if not unit.get("source_ids"):
             unit["source_ids"] = [f"repair-source-{index}"]
         if not unit.get("locators"):

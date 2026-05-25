@@ -168,6 +168,7 @@
           "expected_passed": true,
           "failure_flags": [
             "contestation_failure",
+            "source_attribution_gap",
             "summary_distortion"
           ],
           "invalid_authority_rate": 0.0,
@@ -498,6 +499,7 @@
           "expected_passed": true,
           "failure_flags": [
             "contestation_failure",
+            "source_attribution_gap",
             "summary_distortion"
           ],
           "invalid_authority_rate": 0.0,
@@ -828,6 +830,7 @@
           "expected_passed": true,
           "failure_flags": [
             "contestation_failure",
+            "source_attribution_gap",
             "summary_distortion"
           ],
           "invalid_authority_rate": 0.0,
@@ -1162,6 +1165,7 @@
           "expected_passed": true,
           "failure_flags": [
             "contestation_failure",
+            "source_attribution_gap",
             "summary_distortion"
           ],
           "invalid_authority_rate": 0.0,

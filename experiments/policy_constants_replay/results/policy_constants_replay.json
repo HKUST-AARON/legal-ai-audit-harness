@@ -236,6 +236,7 @@
       "failure_cap": "no_external_legal_effect",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "jurisdiction_profile": "common_law",

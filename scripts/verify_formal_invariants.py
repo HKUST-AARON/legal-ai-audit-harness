@@ -18,6 +18,7 @@ def main() -> int:
         _check_gated_monotonicity(),
         _check_gate_non_substitutability(),
         _check_evidence_packet_necessity(),
+        _check_claim_anchor_necessity(),
         _check_authority_gate_necessity(),
         _check_counter_material_gate_necessity(),
         _check_contestability_channel_necessity(),
@@ -99,6 +100,25 @@ def _check_evidence_packet_necessity() -> dict:
         if STATUS_RANK[result.allowed_status] >= STATUS_RANK["normative_material_screening_output"]:
             failures.append({"missing": field, "status": result.allowed_status, "flags": result.failure_flags})
     return _check("evidence_packet_necessity", len(cases), failures)
+
+
+def _check_claim_anchor_necessity() -> dict:
+    cases = []
+
+    scenario = _scenario((2, 2, 2, 2, 2, 2), "authorized_decision_support_tool")
+    scenario["evidence_packet"]["output_units"][0].pop("claim", None)
+    cases.append(("missing_output_unit_claim", scenario))
+
+    scenario = _scenario((2, 2, 2, 2, 2, 2), "authorized_decision_support_tool")
+    scenario["evidence_packet"]["output_links"][0].pop("unit_id", None)
+    cases.append(("missing_output_link_unit_id", scenario))
+
+    failures = []
+    for label, scenario in cases:
+        result = evaluate_scenario(scenario)
+        if STATUS_RANK[result.allowed_status] >= STATUS_RANK["normative_material_screening_output"]:
+            failures.append({"case": label, "status": result.allowed_status, "flags": result.failure_flags})
+    return _check("claim_anchor_necessity", len(cases), failures)
 
 
 def _check_authority_gate_necessity() -> dict:
@@ -310,6 +330,7 @@ def _scenario(vector: tuple[int, ...], role: str, extra: dict | None = None) -> 
             "output_units": [
                 {
                     "id": "u1",
+                    "claim": "Formal invariant source-bound legal proposition.",
                     "source_ids": ["authority-a", "counter-a"],
                     "locators": ["authority-a:1", "counter-a:1"],
                 }

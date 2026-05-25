@@ -11884,6 +11884,7 @@
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -11908,6 +11909,7 @@
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -11932,6 +11934,7 @@
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -11956,6 +11959,7 @@
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -11980,6 +11984,7 @@
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -12004,6 +12009,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -12029,6 +12035,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -12054,6 +12061,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -12079,6 +12087,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,
@@ -12104,6 +12113,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "contestation_failure",
+        "source_attribution_gap",
         "summary_distortion"
       ],
       "false_negative": false,

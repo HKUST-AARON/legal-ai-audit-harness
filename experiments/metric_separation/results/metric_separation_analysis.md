@@ -45,5 +45,5 @@ Recall point-biserial permutation p-value: 0.354.
 
 High-recall outputs blocked below normative screening: 153/215 (0.71).
 
-Failure flags: authority_omission: 5, contestation_failure: 40, counter_material_suppression: 25, invalid_authority: 1, ranking_drift: 12, source_attribution_gap: 114, summary_distortion: 21, unauthorized_action: 10
+Failure flags: authority_omission: 5, contestation_failure: 40, counter_material_suppression: 25, invalid_authority: 1, ranking_drift: 12, source_attribution_gap: 115, summary_distortion: 21, unauthorized_action: 10
 Status distribution: no_external_legal_effect: 31, reference_information: 122

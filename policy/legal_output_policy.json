@@ -31,6 +31,7 @@
     "protected_reliance_gates": ["attorney_review", "external_reliance", "filing", "sending", "execution", "authorized_adoption"],
     "contestability_channel_required_for": ["normative_material_screening_output", "decision_support_reason"]
   },
+  "claim_anchor_required_for": ["normative_material_screening_output", "decision_support_reason"],
   "source_tags": [
     "tool_verified",
     "official_source",

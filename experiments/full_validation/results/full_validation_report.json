@@ -367,7 +367,7 @@
     "invalid_authority": 1,
     "jurisdiction_assumption_gap": 63,
     "ranking_drift": 12,
-    "source_attribution_gap": 1185,
+    "source_attribution_gap": 1186,
     "summary_distortion": 1533,
     "unauthorized_action": 10
   },
@@ -506,6 +506,23 @@
     "tamper_family_count": 25
   },
   "certificate_tamper_evaluations": 5811,
+  "claim_anchor": {
+    "claim_text_absence_blocked_count": 250,
+    "claim_text_absence_evaluation_count": 250,
+    "evaluation_count": 1080,
+    "failed_count": 0,
+    "link_unit_binding_absence_blocked_count": 290,
+    "link_unit_binding_absence_evaluation_count": 290,
+    "locator_absence_evaluation_count": 250,
+    "locator_absence_withdrawn_count": 250,
+    "output_link_count": 290,
+    "output_unit_count": 250,
+    "passed_count": 1080,
+    "scenario_count": 63,
+    "support_attestation_absence_evaluation_count": 290,
+    "support_attestation_absence_withdrawn_count": 290
+  },
+  "claim_anchor_evaluations": 1080,
   "contestation_challenge_evaluations": 315,
   "contestation_challenges": {
     "blocked_reason_distribution": {
@@ -538,12 +555,12 @@
   },
   "expected_passed": 264,
   "expected_total": 264,
-  "formal_invariant_evaluations": 51644,
+  "formal_invariant_evaluations": 51646,
   "formal_invariant_verification": {
     "all_passed": true,
-    "check_count": 10,
-    "passed_checks": 51644,
-    "total_checks": 51644
+    "check_count": 11,
+    "passed_checks": 51646,
+    "total_checks": 51646
   },
   "gate_ablation": {
     "ablation_count": 390,
@@ -799,7 +816,7 @@
         "counter_material_suppression": 25,
         "invalid_authority": 1,
         "ranking_drift": 12,
-        "source_attribution_gap": 114,
+        "source_attribution_gap": 115,
         "summary_distortion": 21,
         "unauthorized_action": 10
       },
@@ -1730,10 +1747,10 @@
   "status_certificate_replay_checks": 6072,
   "status_lattice": {
     "cover_edge_diagnostics": {
-      "checks": 1632960,
-      "demotions": 10368,
-      "promotions": 100917,
-      "stable": 1521675
+      "checks": 3499200,
+      "demotions": 20736,
+      "promotions": 195525,
+      "stable": 3282939
     },
     "decision_status_count": 11,
     "gate_ablation": {
@@ -1742,6 +1759,11 @@
           "checks": 11,
           "failed": 0,
           "passed": 11
+        },
+        "claim_anchor": {
+          "checks": 168,
+          "failed": 0,
+          "passed": 168
         },
         "counter_material": {
           "checks": 168,
@@ -1769,21 +1791,21 @@
           "passed": 168
         }
       },
-      "checks": 851,
+      "checks": 1019,
       "failed": 0,
-      "passed": 851
+      "passed": 1019
     },
-    "gate_count": 6,
+    "gate_count": 7,
     "high_status_count": 168,
     "necessity": {
-      "checks": 851,
+      "checks": 1019,
       "failed": 0,
       "failures": [],
-      "passed": 851
+      "passed": 1019
     },
     "role_count": 5,
     "score_vector_count": 729,
-    "state_count": 233280,
+    "state_count": 466560,
     "substitution_checks": {
       "best_partial_false_positive": 672,
       "best_partial_rule": "source_authority_counter_score",
@@ -1797,29 +1819,38 @@
     "substitution_rules": [
       {
         "false_negative": 0,
-        "false_positive": 24792,
-        "precision": 0.0067,
+        "false_positive": 49752,
+        "precision": 0.0034,
         "recall": 1.0,
         "rule": "total_score_at_least_9",
-        "true_negative": 208320,
+        "true_negative": 416640,
         "true_positive": 168
       },
       {
         "false_negative": 0,
-        "false_positive": 13272,
-        "precision": 0.0125,
+        "false_positive": 26712,
+        "precision": 0.0063,
         "recall": 1.0,
         "rule": "complete_vector_and_score",
-        "true_negative": 219840,
+        "true_negative": 439680,
         "true_positive": 168
       },
       {
         "false_negative": 0,
-        "false_positive": 9816,
-        "precision": 0.0168,
+        "false_positive": 19800,
+        "precision": 0.0084,
         "recall": 1.0,
         "rule": "role_ready_and_score",
-        "true_negative": 223296,
+        "true_negative": 446592,
+        "true_positive": 168
+      },
+      {
+        "false_negative": 0,
+        "false_positive": 6552,
+        "precision": 0.025,
+        "recall": 1.0,
+        "rule": "source_bound_score",
+        "true_negative": 459840,
         "true_positive": 168
       },
       {
@@ -1827,8 +1858,8 @@
         "false_positive": 3192,
         "precision": 0.05,
         "recall": 1.0,
-        "rule": "source_bound_score",
-        "true_negative": 229920,
+        "rule": "claim_anchored_source_score",
+        "true_negative": 463200,
         "true_positive": 168
       },
       {
@@ -1837,7 +1868,7 @@
         "precision": 0.1,
         "recall": 1.0,
         "rule": "source_authority_score",
-        "true_negative": 231600,
+        "true_negative": 464880,
         "true_positive": 168
       },
       {
@@ -1846,7 +1877,7 @@
         "precision": 0.2,
         "recall": 1.0,
         "rule": "source_authority_counter_score",
-        "true_negative": 232440,
+        "true_negative": 465720,
         "true_positive": 168
       },
       {
@@ -1855,16 +1886,16 @@
         "precision": 1.0,
         "recall": 1.0,
         "rule": "full_screening_predicate",
-        "true_negative": 233112,
+        "true_negative": 466392,
         "true_positive": 168
       }
     ]
   },
-  "status_lattice_cover_edges": 1632960,
-  "status_lattice_evaluations": 233280,
-  "status_lattice_gate_ablation_checks": 851,
-  "status_lattice_necessity_checks": 851,
-  "status_lattice_substitution_predictions": 1632960,
+  "status_lattice_cover_edges": 3499200,
+  "status_lattice_evaluations": 466560,
+  "status_lattice_gate_ablation_checks": 1019,
+  "status_lattice_necessity_checks": 1019,
+  "status_lattice_substitution_predictions": 3732480,
   "substitute_theory_falsification": [
     {
       "additional_evidence": "153/215 high-recall outputs were blocked below normative screening",
@@ -1890,8 +1921,8 @@
       "full_protocol_false_positive": 0,
       "id": "source_label_sufficiency",
       "lattice_false_negative": 0,
-      "lattice_false_positive": 3192,
-      "lattice_precision": 0.05,
+      "lattice_false_positive": 6552,
+      "lattice_precision": 0.025,
       "lattice_recall": 1.0,
       "scenario_false_negative": 0,
       "scenario_false_positive": 72,
@@ -1924,8 +1955,8 @@
       "full_protocol_false_positive": 0,
       "id": "review_label_sufficiency",
       "lattice_false_negative": 0,
-      "lattice_false_positive": 9816,
-      "lattice_precision": 0.0168,
+      "lattice_false_positive": 19800,
+      "lattice_precision": 0.0084,
       "lattice_recall": 1.0,
       "scenario_false_negative": 0,
       "scenario_false_positive": 149,
@@ -1941,8 +1972,8 @@
       "full_protocol_false_positive": 0,
       "id": "score_sufficiency",
       "lattice_false_negative": 0,
-      "lattice_false_positive": 24792,
-      "lattice_precision": 0.0067,
+      "lattice_false_positive": 49752,
+      "lattice_precision": 0.0034,
       "lattice_recall": 1.0,
       "scenario_false_negative": 0,
       "scenario_false_positive": 183,
@@ -1969,7 +2000,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 40,
+  "suite_count": 41,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1977,7 +2008,7 @@
         "contestation_failure": 1,
         "counter_material_suppression": 1,
         "invalid_authority": 1,
-        "source_attribution_gap": 2,
+        "source_attribution_gap": 3,
         "summary_distortion": 1
       },
       "evidence_class": "construct test",
@@ -2346,10 +2377,11 @@
       "label": "Formal invariant verification",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "51644/51644 passed",
-      "scenario_count": 51644,
+      "rule_pass": "51646/51646 passed",
+      "scenario_count": 51646,
       "status_distribution": {
         "authority_gate_necessity": 0,
+        "claim_anchor_necessity": 0,
         "contestability_channel_necessity": 0,
         "counter_material_gate_necessity": 0,
         "decision_adoption_necessity": 0,
@@ -2360,7 +2392,7 @@
         "metric_non_equivalence": 0,
         "role_cap_dominance": 0
       },
-      "validation_units": "51644 generated audit-policy states"
+      "validation_units": "51646 generated audit-policy states"
     },
     {
       "evidence_class": "finite status-lattice characterization",
@@ -2370,15 +2402,15 @@
       "label": "Status-lattice exhaustion",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "851/851 necessity; 851/851 ablations",
-      "scenario_count": 3500902,
+      "rule_pass": "1019/1019 necessity; 1019/1019 ablations",
+      "scenario_count": 7700278,
       "status_distribution": {
         "best_partial_rule_false_positive": 672,
         "decision_status_states": 11,
         "full_predicate_false_positive": 0,
         "high_status_states": 168
       },
-      "validation_units": "233280 high-status claim-attempt states, 1632960 cover edges and 1632960 substitute-rule predictions"
+      "validation_units": "466560 high-status claim-attempt states, 3499200 cover edges and 3732480 substitute-rule predictions"
     },
     {
       "evidence_class": "retrieval/status non-equivalence check",
@@ -2621,6 +2653,24 @@
       "validation_units": "627 provenance evaluations over 264 packets"
     },
     {
+      "evidence_class": "claim-level source-anchor falsification",
+      "finding": "Removes material proposition text, link-to-claim bindings, support attestations and locators from every qualified packet; high status survives only when each material output unit remains bound to a specific source anchor.",
+      "high_upstream_but_blocked": null,
+      "id": "claim_anchor",
+      "label": "Claim-anchor analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "1080/1080",
+      "scenario_count": 1080,
+      "status_distribution": {
+        "claim_text_absence_blocked": 250,
+        "link_unit_binding_absence_blocked": 290,
+        "locator_absence_withdrawn": 250,
+        "support_attestation_absence_withdrawn": 290
+      },
+      "validation_units": "1080 claim-anchor mutations over 250 units and 290 links"
+    },
+    {
       "evidence_class": "identity-substitution invariance check",
       "finding": "Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.",
       "high_upstream_but_blocked": null,
@@ -2825,7 +2875,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 3664553,
+  "total_evaluation_rows": 7865011,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -2834,6 +2884,10 @@
     "blind_coding_packets": 240,
     "certificate_tamper_cases": 5811,
     "certificate_tamper_rejected": 5811,
+    "claim_anchor_evaluations": 1080,
+    "claim_anchor_output_links": 290,
+    "claim_anchor_output_units": 250,
+    "claim_anchor_passed": 1080,
     "contestation_challenge_passed": 315,
     "contestation_challenge_variants": 315,
     "cross_engine_count": 3,
@@ -2842,8 +2896,8 @@
     "cross_engine_transcript_locator_checks": 36,
     "cross_engine_transcript_locators_verified": 36,
     "evidence_ladder_model_outputs": 70,
-    "formal_invariant_checks": 51644,
-    "formal_invariant_passed": 51644,
+    "formal_invariant_checks": 51646,
+    "formal_invariant_passed": 51646,
     "gate_ablation_evaluations": 390,
     "gate_contrast_witnesses": 390,
     "gate_contrast_witnesses_passed": 390,
@@ -2887,11 +2941,11 @@
     "status_certificate_proof_obligations_passed": 4488,
     "status_certificate_replay_checks": 6072,
     "status_certificates_verified": 264,
-    "status_lattice_cover_edges": 1632960,
-    "status_lattice_gate_ablation_checks": 851,
-    "status_lattice_necessity_checks": 851,
-    "status_lattice_states": 233280,
-    "status_lattice_substitution_predictions": 1632960,
+    "status_lattice_cover_edges": 3499200,
+    "status_lattice_gate_ablation_checks": 1019,
+    "status_lattice_necessity_checks": 1019,
+    "status_lattice_states": 466560,
+    "status_lattice_substitution_predictions": 3732480,
     "stress_scenarios": 10,
     "threshold_sensitivity_evaluations": 1320,
     "total": 697

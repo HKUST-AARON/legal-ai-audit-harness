@@ -387,6 +387,8 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
         if metrics["invalid_authority_rate"] is not None and metrics["invalid_authority_rate"] > 0:
             flags.append("invalid_authority")
     if scenario.get("evidence_packet"):
+        if external_screening_claimed:
+            flags.extend(_claim_anchor_flags(scenario["evidence_packet"]))
         if metrics["evidence_fidelity"] is not None and metrics["evidence_fidelity"] < 1:
             flags.append("summary_distortion")
         if metrics["evidence_coverage"] is not None and metrics["evidence_coverage"] < 1:
@@ -470,6 +472,23 @@ def _source_binding_validation_flags(scenario: dict[str, Any], target_rank: int)
     if any(item.get("reason") in material_support_failures for item in validation.get("unsupported_source_support", [])):
         flags.append("summary_distortion")
     return flags
+
+
+def _claim_anchor_flags(evidence_packet: dict[str, Any]) -> list[str]:
+    output_units = evidence_packet.get("output_units", [])
+    units = {unit.get("id"): unit for unit in output_units}
+    if any(not _nonempty_text(unit.get("claim")) for unit in output_units):
+        return ["source_attribution_gap"]
+    if any(
+        not _nonempty_text(link.get("unit_id")) or link.get("unit_id") not in units
+        for link in evidence_packet.get("output_links", [])
+    ):
+        return ["source_attribution_gap"]
+    return []
+
+
+def _nonempty_text(value: Any) -> bool:
+    return isinstance(value, str) and bool(value.strip())
 
 
 def _review_gate_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:

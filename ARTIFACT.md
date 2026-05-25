@@ -23,13 +23,13 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 40 validation suites
+- 41 validation suites
 - 264 scenario files
 - 697 embedded records or output items
-- 3,664,553 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
-- 51,644/51,644 formal invariant checks passed
-- 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions
-- 851/851 status-lattice high-status necessity checks and 851/851 gate-ablation drops passed
+- 7,865,011 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
+- 51,646/51,646 formal invariant checks passed
+- 466,560 high-status claim-attempt states, 3,499,200 cover edges and 3,732,480 substitute-rule predictions
+- 1019/1019 status-lattice high-status necessity checks and 1019/1019 gate-ablation drops passed
 - 219 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 3,252 baseline-rule predictions across 13 alternative status rules
@@ -41,6 +41,7 @@ Expected aggregate output:
 - 1,233/1,233 metamorphic policy tests passed
 - 15/15 policy mutants killed across 3,111 mutation evaluations
 - 627/627 review-provenance checks passed: 402/402 review/adoption placebos blocked, 189/189 high-status provenance defects blocked and 36/36 decision-provenance defects demoted
+- 1,080/1,080 claim-anchor mutations passed across 250 output units and 290 output links
 - 193/193 blocked procedural claims repairable across 5,097 repair-frontier evaluations
 - 251/251 jurisdiction-profile checks and 189/189 profile mutations passed
 - 956 rank-window visibility checks over 248 high-status claims
@@ -79,8 +80,8 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 34 pages in the current local format.
+The expected manuscript build is 35 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, policy-mutation, review-provenance, model-identity invariance, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, killed gate-removal and status-conferring policy mutants, review/adoption label falsification without a contestability-channel record, identity-label substitution under a fixed legal-material chain, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.
+The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, claim-anchored, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, policy-mutation, review-provenance, claim-anchor, model-identity invariance, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, killed gate-removal and status-conferring policy mutants, review/adoption label falsification without a contestability-channel record, claim-level source-anchor falsification, identity-label substitution under a fixed legal-material chain, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.

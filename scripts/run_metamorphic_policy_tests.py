@@ -213,7 +213,7 @@ def _benign_source_append(scenario: dict) -> dict:
     units.append(
         {
             "id": unit_id,
-            "text": "Additional procedurally verified source note.",
+            "claim": "Additional procedurally verified source note.",
             "source_ids": [source_id],
             "locators": [locator],
             "output_rank": len(units) + 100,

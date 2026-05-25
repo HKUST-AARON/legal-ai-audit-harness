@@ -118,6 +118,21 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.disposition, "downgrade")
         self.assertIn("source_attribution_gap", result.failure_flags)
 
+    def test_normative_status_requires_claim_anchors(self):
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["evidence_packet"]["output_units"][0].pop("claim", None)
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertIn("source_attribution_gap", result.failure_flags)
+
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["evidence_packet"]["output_links"][0].pop("unit_id", None)
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertIn("source_attribution_gap", result.failure_flags)
+
     def test_normative_status_requires_counter_material_set(self):
         scenario = deepcopy(load("court_authority_report.json"))
         scenario["authority_sets"].pop("counter_or_limiting")
@@ -809,6 +824,32 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["decision_provenance_demoted_count"], 36)
         self.assertEqual(payload["failed_count"], 0)
 
+    def test_claim_anchor_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_claim_anchor_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Claim-Anchor Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "claim_anchor_analysis" / "results" / "claim_anchor_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["scenario_count"], 63)
+        self.assertEqual(payload["output_unit_count"], 250)
+        self.assertEqual(payload["output_link_count"], 290)
+        self.assertEqual(payload["evaluation_count"], 1080)
+        self.assertEqual(payload["passed_count"], 1080)
+        self.assertEqual(payload["claim_text_absence_blocked_count"], 250)
+        self.assertEqual(payload["link_unit_binding_absence_blocked_count"], 290)
+        self.assertEqual(payload["support_attestation_absence_withdrawn_count"], 290)
+        self.assertEqual(payload["locator_absence_withdrawn_count"], 250)
+        self.assertEqual(payload["failed_count"], 0)
+
     def test_claim_consistency_verification_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/verify_claim_consistency.py"],
@@ -1147,7 +1188,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 40)
+        self.assertEqual(report["suite_count"], 41)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1172,25 +1213,25 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 1320)
         self.assertEqual(report["source_text_anchor_evaluations"], 30)
         self.assertEqual(report["model_output_transcript_evaluations"], 50)
-        self.assertEqual(report["formal_invariant_evaluations"], 51644)
-        self.assertEqual(report["status_lattice_evaluations"], 233280)
-        self.assertEqual(report["status_lattice_cover_edges"], 1632960)
-        self.assertEqual(report["status_lattice_necessity_checks"], 851)
-        self.assertEqual(report["status_lattice_gate_ablation_checks"], 851)
-        self.assertEqual(report["status_lattice_substitution_predictions"], 1632960)
+        self.assertEqual(report["formal_invariant_evaluations"], 51646)
+        self.assertEqual(report["status_lattice_evaluations"], 466560)
+        self.assertEqual(report["status_lattice_cover_edges"], 3499200)
+        self.assertEqual(report["status_lattice_necessity_checks"], 1019)
+        self.assertEqual(report["status_lattice_gate_ablation_checks"], 1019)
+        self.assertEqual(report["status_lattice_substitution_predictions"], 3732480)
         self.assertEqual(report["validation_units"]["source_text_anchor_checks"], 30)
         self.assertEqual(report["validation_units"]["source_text_anchor_verified"], 30)
         self.assertEqual(report["validation_units"]["model_output_transcript_locator_checks"], 50)
         self.assertEqual(report["validation_units"]["model_output_transcript_locators_verified"], 50)
         self.assertEqual(report["cross_engine_transcript_verification"]["locators_verified"], 36)
         self.assertTrue(report["cross_engine_transcript_verification"]["all_locators_verified"])
-        self.assertEqual(report["validation_units"]["formal_invariant_checks"], 51644)
-        self.assertEqual(report["validation_units"]["formal_invariant_passed"], 51644)
-        self.assertEqual(report["validation_units"]["status_lattice_states"], 233280)
-        self.assertEqual(report["validation_units"]["status_lattice_cover_edges"], 1632960)
-        self.assertEqual(report["validation_units"]["status_lattice_necessity_checks"], 851)
-        self.assertEqual(report["validation_units"]["status_lattice_gate_ablation_checks"], 851)
-        self.assertEqual(report["validation_units"]["status_lattice_substitution_predictions"], 1632960)
+        self.assertEqual(report["validation_units"]["formal_invariant_checks"], 51646)
+        self.assertEqual(report["validation_units"]["formal_invariant_passed"], 51646)
+        self.assertEqual(report["validation_units"]["status_lattice_states"], 466560)
+        self.assertEqual(report["validation_units"]["status_lattice_cover_edges"], 3499200)
+        self.assertEqual(report["validation_units"]["status_lattice_necessity_checks"], 1019)
+        self.assertEqual(report["validation_units"]["status_lattice_gate_ablation_checks"], 1019)
+        self.assertEqual(report["validation_units"]["status_lattice_substitution_predictions"], 3732480)
         self.assertEqual(report["metric_separation_evaluations"], 219)
         self.assertEqual(report["validation_units"]["metric_separation_evaluations"], 219)
         self.assertEqual(report["metric_statistical_resamples"], 2000)
@@ -1239,6 +1280,11 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["review_provenance_evaluations"], 627)
         self.assertEqual(report["validation_units"]["review_provenance_evaluations"], 627)
         self.assertEqual(report["validation_units"]["review_provenance_passed"], 627)
+        self.assertEqual(report["claim_anchor_evaluations"], 1080)
+        self.assertEqual(report["validation_units"]["claim_anchor_evaluations"], 1080)
+        self.assertEqual(report["validation_units"]["claim_anchor_passed"], 1080)
+        self.assertEqual(report["validation_units"]["claim_anchor_output_units"], 250)
+        self.assertEqual(report["validation_units"]["claim_anchor_output_links"], 290)
         self.assertEqual(report["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_passed"], 1320)
@@ -1248,7 +1294,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 3664553)
+        self.assertEqual(report["total_evaluation_rows"], 7865011)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1260,13 +1306,15 @@ class AuditModelTest(unittest.TestCase):
         })
         self.assertEqual(substitute_rows["performance_sufficiency"]["scenario_false_positive"], 153)
         self.assertEqual(substitute_rows["source_label_sufficiency"]["scenario_false_positive"], 72)
+        self.assertEqual(substitute_rows["source_label_sufficiency"]["lattice_false_positive"], 6552)
         self.assertEqual(substitute_rows["authority_material_sufficiency"]["scenario_false_positive"], 150)
         self.assertEqual(substitute_rows["authority_material_sufficiency"]["lattice_false_positive"], 672)
         self.assertEqual(substitute_rows["review_label_sufficiency"]["scenario_false_positive"], 149)
+        self.assertEqual(substitute_rows["review_label_sufficiency"]["lattice_false_positive"], 19800)
         self.assertEqual(substitute_rows["score_sufficiency"]["scenario_false_positive"], 183)
         self.assertEqual(substitute_rows["model_identity_sufficiency"]["scenario_false_positive"], 1005)
         self.assertAlmostEqual(substitute_rows["model_identity_sufficiency"]["scenario_precision"], 315 / 1320)
-        self.assertEqual(substitute_rows["score_sufficiency"]["lattice_false_positive"], 24792)
+        self.assertEqual(substitute_rows["score_sufficiency"]["lattice_false_positive"], 49752)
         self.assertTrue(all(row["falsified"] for row in substitute_rows.values()))
         self.assertTrue(all(row["full_protocol_false_positive"] == 0 for row in substitute_rows.values()))
         self.assertEqual(report["expected_passed"], 264)
@@ -1294,25 +1342,34 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["blocked_reason_distribution"]["contestation_failure"], 103)
         self.assertEqual(report["blocked_reason_distribution"]["counter_material_suppression"], 1098)
         self.assertEqual(report["blocked_reason_distribution"]["jurisdiction_assumption_gap"], 63)
-        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 1185)
+        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 1186)
         self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 1533)
         self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
         self.assertEqual(report["model_output_transcript_verification"]["locators_verified"], 50)
         self.assertTrue(report["model_output_transcript_verification"]["all_locators_verified"])
-        self.assertEqual(report["formal_invariant_verification"]["passed_checks"], 51644)
+        self.assertEqual(report["formal_invariant_verification"]["passed_checks"], 51646)
         self.assertTrue(report["formal_invariant_verification"]["all_passed"])
-        self.assertEqual(report["status_lattice"]["state_count"], 233280)
+        self.assertEqual(report["claim_anchor"]["scenario_count"], 63)
+        self.assertEqual(report["claim_anchor"]["evaluation_count"], 1080)
+        self.assertEqual(report["claim_anchor"]["passed_count"], 1080)
+        self.assertEqual(report["claim_anchor"]["output_unit_count"], 250)
+        self.assertEqual(report["claim_anchor"]["output_link_count"], 290)
+        self.assertEqual(report["claim_anchor"]["claim_text_absence_blocked_count"], 250)
+        self.assertEqual(report["claim_anchor"]["link_unit_binding_absence_blocked_count"], 290)
+        self.assertEqual(report["claim_anchor"]["support_attestation_absence_withdrawn_count"], 290)
+        self.assertEqual(report["claim_anchor"]["locator_absence_withdrawn_count"], 250)
+        self.assertEqual(report["status_lattice"]["state_count"], 466560)
         self.assertEqual(report["status_lattice"]["score_vector_count"], 729)
         self.assertEqual(report["status_lattice"]["role_count"], 5)
-        self.assertEqual(report["status_lattice"]["gate_count"], 6)
+        self.assertEqual(report["status_lattice"]["gate_count"], 7)
         self.assertEqual(report["status_lattice"]["high_status_count"], 168)
         self.assertEqual(report["status_lattice"]["decision_status_count"], 11)
-        self.assertEqual(report["status_lattice"]["cover_edge_diagnostics"]["checks"], 1632960)
-        self.assertEqual(report["status_lattice"]["necessity"]["passed"], 851)
-        self.assertEqual(report["status_lattice"]["necessity"]["checks"], 851)
-        self.assertEqual(report["status_lattice"]["gate_ablation"]["passed"], 851)
-        self.assertEqual(report["status_lattice"]["gate_ablation"]["checks"], 851)
+        self.assertEqual(report["status_lattice"]["cover_edge_diagnostics"]["checks"], 3499200)
+        self.assertEqual(report["status_lattice"]["necessity"]["passed"], 1019)
+        self.assertEqual(report["status_lattice"]["necessity"]["checks"], 1019)
+        self.assertEqual(report["status_lattice"]["gate_ablation"]["passed"], 1019)
+        self.assertEqual(report["status_lattice"]["gate_ablation"]["checks"], 1019)
         self.assertEqual(report["status_lattice"]["substitution_checks"]["passed"], 2)
         self.assertEqual(report["status_lattice"]["substitution_checks"]["failed"], 0)
         self.assertEqual(report["status_lattice"]["substitution_checks"]["best_partial_rule"], "source_authority_counter_score")
@@ -1320,6 +1377,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_lattice"]["substitution_checks"]["full_predicate_false_positive"], 0)
         self.assertEqual(report["status_lattice"]["substitution_checks"]["full_predicate_false_negative"], 0)
         substitution = {row["rule"]: row for row in report["status_lattice"]["substitution_rules"]}
+        self.assertEqual(substitution["source_bound_score"]["false_positive"], 6552)
+        self.assertEqual(substitution["role_ready_and_score"]["false_positive"], 19800)
+        self.assertEqual(substitution["total_score_at_least_9"]["false_positive"], 49752)
+        self.assertEqual(substitution["claim_anchored_source_score"]["false_positive"], 3192)
         self.assertEqual(substitution["source_authority_counter_score"]["false_positive"], 672)
         self.assertEqual(substitution["full_screening_predicate"]["false_positive"], 0)
         self.assertEqual(substitution["full_screening_predicate"]["false_negative"], 0)
@@ -1637,14 +1698,15 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "formal_invariants" / "results" / "formal_invariant_verification.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["check_count"], 10)
-        self.assertEqual(report["total_checks"], 51644)
-        self.assertEqual(report["passed_checks"], 51644)
+        self.assertEqual(report["check_count"], 11)
+        self.assertEqual(report["total_checks"], 51646)
+        self.assertEqual(report["passed_checks"], 51646)
         self.assertTrue(report["all_passed"])
         self.assertEqual({check["id"] for check in report["checks"]}, {
             "gated_monotonicity",
             "gate_non_substitutability",
             "evidence_packet_necessity",
+            "claim_anchor_necessity",
             "authority_gate_necessity",
             "counter_material_gate_necessity",
             "contestability_channel_necessity",

@@ -1,8 +1,8 @@
 {
-  "check_count": 887,
+  "check_count": 951,
   "checks": [
     {
-      "expected": "- 40 validation suites",
+      "expected": "- 41 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,22 +17,22 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 3,664,553 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
+      "expected": "- 7,865,011 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 51,644/51,644 formal invariant checks passed",
+      "expected": "- 51,646/51,646 formal invariant checks passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions",
+      "expected": "- 466,560 high-status claim-attempt states, 3,499,200 cover edges and 3,732,480 substitute-rule predictions",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 851/851 status-lattice high-status necessity checks and 851/851 gate-ablation drops passed",
+      "expected": "- 1019/1019 status-lattice high-status necessity checks and 1019/1019 gate-ablation drops passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -88,6 +88,11 @@
     },
     {
       "expected": "- 627/627 review-provenance checks passed: 402/402 review/adoption placebos blocked, 189/189 high-status provenance defects blocked and 36/36 decision-provenance defects demoted",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 1,080/1,080 claim-anchor mutations passed across 250 output units and 290 output links",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -187,17 +192,17 @@
       "path": "README.md"
     },
     {
-      "expected": "51,644 formal invariant checks",
+      "expected": "51,646 formal invariant checks",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "233,280 high-status claim-attempt states, 1,632,960 status-lattice cover edges, 1,632,960 status-lattice substitute-rule predictions",
+      "expected": "466,560 high-status claim-attempt states, 3,499,200 status-lattice cover edges, 3,732,480 status-lattice substitute-rule predictions",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
+      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -257,7 +262,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Status-lattice exhaustion | 3500902 |",
+      "expected": "| Status-lattice exhaustion | 7700278 |",
       "passed": true,
       "path": "README.md"
     },
@@ -308,6 +313,21 @@
     },
     {
       "expected": "python scripts/run_review_provenance_analysis.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Claim-anchor analysis | 1080 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "1,080 claim-anchor mutations",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_claim_anchor_analysis.py",
       "passed": true,
       "path": "README.md"
     },
@@ -587,6 +607,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Claim-anchor analysis",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Out-of-sample holdout validation",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -692,6 +717,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "claim-anchor layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "annotation-uncertainty layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -732,17 +762,17 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "233,280 high-status claim-attempt states, 1,632,960 status-lattice cover edges, 1,632,960 status-lattice substitute-rule predictions",
+      "expected": "466,560 high-status claim-attempt states, 3,499,200 status-lattice cover edges, 3,732,480 status-lattice substitute-rule predictions",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "851/851 status-lattice high-status necessity checks",
+      "expected": "1019/1019 status-lattice high-status necessity checks",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "851/851 status-lattice gate-ablation drops",
+      "expected": "1019/1019 status-lattice gate-ablation drops",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -783,6 +813,21 @@
     },
     {
       "expected": "review-provenance file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "1,080/1,080 claim-anchor mutations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_claim_anchor_analysis.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "claim-anchor file",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1027,7 +1072,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "3,664,553 validation operations",
+      "expected": "7,865,011 validation operations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1042,27 +1087,27 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "233,280 claim-attempt states",
+      "expected": "466,560 claim-attempt states",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "1,632,960 cover edges",
+      "expected": "3,499,200 cover edges",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "1,632,960 substitute-rule predictions",
+      "expected": "3,732,480 substitute-rule predictions",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "851/851 high-status necessity checks",
+      "expected": "1019/1019 high-status necessity checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "851/851 gate-ablation drops",
+      "expected": "1019/1019 gate-ablation drops",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1102,7 +1147,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "source-label sufficiency produced 72 scenario false positives and 3,192 lattice false positives",
+      "expected": "source-label sufficiency produced 72 scenario false positives and 6,552 lattice false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1112,12 +1157,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "review-label sufficiency produced 149 scenario false positives and 9,816 lattice false positives",
+      "expected": "review-label sufficiency produced 149 scenario false positives and 19,800 lattice false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "score sufficiency produced 183 scenario false positives and 24,792 lattice false positives",
+      "expected": "score sufficiency produced 183 scenario false positives and 49,752 lattice false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1272,7 +1317,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Status-lattice exhaustion & 233,280 claim-attempt states / 1,632,960 edges & 851/851; 851/851",
+      "expected": "Status-lattice exhaustion & 466,560 claim-attempt states / 3,499,200 edges & 1019/1019; 1019/1019",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1363,6 +1408,21 @@
     },
     {
       "expected": "36/36 decision-provenance defects",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Claim-anchor analysis & 1,080 mutations & 1,080/1,080",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "The claim-anchor layer ran 1,080 mutations",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Removing proposition text or link-to-claim bindings downgraded 250/250 and 290/290 cases",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1462,7 +1522,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 40",
+      "expected": "Validation suites: 41",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1472,12 +1532,12 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Status-lattice exhaustion: 233280 high-status claim-attempt states, 1632960 cover edges, 851/851 necessity checks and 851/851 gate-ablation drops",
+      "expected": "Status-lattice exhaustion: 466560 high-status claim-attempt states, 3499200 cover edges, 1019/1019 necessity checks and 1019/1019 gate-ablation drops",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Status-lattice exhaustion | finite status-lattice characterization | 233280 high-status claim-attempt states, 1632960 cover edges and 1632960 substitute-rule predictions | 3500902 | 851/851 necessity; 851/851 ablations",
+      "expected": "Status-lattice exhaustion | finite status-lattice characterization | 466560 high-status claim-attempt states, 3499200 cover edges and 3732480 substitute-rule predictions | 7700278 | 1019/1019 necessity; 1019/1019 ablations",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1553,6 +1613,16 @@
     },
     {
       "expected": "Review-provenance analysis | human-review and adoption-record falsification | 627 provenance evaluations over 264 packets | 627 | 627/627",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Claim-anchor analysis: 1080/1080 passed over 250 output units and 290 output links; claim-text removals blocked 250/250; link-to-claim removals blocked 290/290; support-attestation removals withdrawn 290/290; locator removals withdrawn 250/250",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Claim-anchor analysis | claim-level source-anchor falsification | 1080 claim-anchor mutations over 250 units and 290 links | 1080 | 1080/1080",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1652,7 +1722,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Source-label sufficiency | 72 | 0 | 0.47 | 1.00 | 3192 | 0 | 0 | 0",
+      "expected": "Source-label sufficiency | 72 | 0 | 0.47 | 1.00 | 6552 | 0 | 0 | 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1662,12 +1732,12 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Review-label sufficiency | 149 | 0 | 0.30 | 1.00 | 9816 | 0 | 0 | 0",
+      "expected": "Review-label sufficiency | 149 | 0 | 0.30 | 1.00 | 19800 | 0 | 0 | 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Score sufficiency | 183 | 0 | 0.26 | 1.00 | 24792 | 0 | 0 | 0",
+      "expected": "Score sufficiency | 183 | 0 | 0.26 | 1.00 | 49752 | 0 | 0 | 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1702,12 +1772,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 34 pages",
+      "expected": "The expected manuscript build is 35 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 214)",
+      "expected": "abstract word count 150-250 (actual 216)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1817,6 +1887,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `40 validation suites`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `3,658,964`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -1832,12 +1907,57 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `3,664,553`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `51,643/51,643`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `51,644/51,644`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `51643`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `51644`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `233,280`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `1,632,960`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `851/851`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `3,192 lattice false positives`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `9,816 lattice false positives`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `24,792 lattice false positives`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -2362,6 +2482,11 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `40 validation suites`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `3,658,964`",
       "passed": true,
       "path": "README.md"
@@ -2377,12 +2502,57 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `3,664,553`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `51,643/51,643`",
       "passed": true,
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `51,644/51,644`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `51643`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `51644`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `233,280`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `1,632,960`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `851/851`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `3,192 lattice false positives`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `9,816 lattice false positives`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `24,792 lattice false positives`",
       "passed": true,
       "path": "README.md"
     },
@@ -2907,6 +3077,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `40 validation suites`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `3,658,964`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -2922,12 +3097,57 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `3,664,553`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `51,643/51,643`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `51,644/51,644`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `51643`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `51644`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `233,280`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `1,632,960`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `851/851`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `3,192 lattice false positives`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `9,816 lattice false positives`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `24,792 lattice false positives`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -3452,6 +3672,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `40 validation suites`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `3,658,964`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -3467,12 +3692,57 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `3,664,553`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `51,643/51,643`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `51,644/51,644`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `51643`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `51644`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `233,280`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `1,632,960`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `851/851`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `3,192 lattice false positives`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `9,816 lattice false positives`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `24,792 lattice false positives`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -3997,6 +4267,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `40 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `3,658,964`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -4012,12 +4287,57 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `3,664,553`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `51,643/51,643`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `51,644/51,644`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `51643`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `51644`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `233,280`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `1,632,960`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `851/851`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `3,192 lattice false positives`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `9,816 lattice false positives`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `24,792 lattice false positives`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -4439,5 +4759,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 887
+  "passed_count": 951
 }

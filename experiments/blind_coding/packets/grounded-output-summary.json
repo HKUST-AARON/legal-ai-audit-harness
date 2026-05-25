@@ -41,6 +41,7 @@
     ],
     "output_units": [
       {
+        "claim": "The output identifies the binding precedent as the leading authority.",
         "id": "unit-1",
         "locators": [
           "para 12-15"
@@ -50,6 +51,7 @@
         ]
       },
       {
+        "claim": "The output identifies the limiting precedent as relevant counter-material.",
         "id": "unit-2",
         "locators": [
           "para 8-10"

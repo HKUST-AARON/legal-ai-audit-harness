@@ -1,6 +1,6 @@
 # Formal Invariant Verification
 
-Checks: 51644/51644
+Checks: 51646/51646
 All passed: True
 
 | Invariant | Checks | Passed | Failed |
@@ -8,6 +8,7 @@ All passed: True
 | gated_monotonicity | 46656 | 46656 | 0 |
 | gate_non_substitutability | 665 | 665 | 0 |
 | evidence_packet_necessity | 4 | 4 | 0 |
+| claim_anchor_necessity | 2 | 2 | 0 |
 | authority_gate_necessity | 2 | 2 | 0 |
 | counter_material_gate_necessity | 4 | 4 | 0 |
 | contestability_channel_necessity | 1 | 1 | 0 |

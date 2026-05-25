@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 40
+Validation suites: 41
 Scenario files: 264
 Base embedded records/items: 697 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 9 cross-engine raw outputs, 9 cross-engine source-supported outputs, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 528
@@ -13,8 +13,8 @@ Contestation challenge variants: 315/315 passed; valid challenges blocked 252/25
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
 Cross-engine transcript locator checks: 36/36 verified across 3 engines and 3 issues
-Formal invariant checks: 51644/51644 passed
-Status-lattice exhaustion: 233280 high-status claim-attempt states, 1632960 cover edges, 851/851 necessity checks and 851/851 gate-ablation drops
+Formal invariant checks: 51646/51646 passed
+Status-lattice exhaustion: 466560 high-status claim-attempt states, 3499200 cover edges, 1019/1019 necessity checks and 1019/1019 gate-ablation drops
 Metric separation evaluations: 219 upstream-metric scenario packets; high-recall blocked outputs 153/215
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Baseline rule comparisons: 3252 predictions across 13 rules; best simplified false positives 38; reference rule false positives 0
@@ -30,13 +30,14 @@ Policy-constants replay checks: 4752/4752 passed over 264 packets
 Metamorphic policy tests: 1233/1233 passed over 264 packets
 Policy mutation analysis: 15/15 mutants killed across 3111 evaluations; invalid promotions 2264; false negatives 2
 Review-provenance analysis: 627/627 passed; review/adoption placebos blocked 402/402; high-status provenance defects blocked 189/189; decision provenance defects demoted 36/36
+Claim-anchor analysis: 1080/1080 passed over 250 output units and 290 output links; claim-text removals blocked 250/250; link-to-claim removals blocked 290/290; support-attestation removals withdrawn 290/290; locator removals withdrawn 250/250
 Model-identity invariance: 1320/1320 identity substitutions passed over 264 packets and 5 identity profiles; status changes 0; disposition changes 0
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 3663856
+Derived robustness evaluations: 7864314
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2362
-Blocked reason distribution: authority_omission: 1013, contestation_failure: 103, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1185, summary_distortion: 1533, unauthorized_action: 10
+Blocked reason distribution: authority_omission: 1013, contestation_failure: 103, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1186, summary_distortion: 1533, unauthorized_action: 10
 Annotation robustness: 262/264 stable across base, strict and lenient coding policies
 Annotation uncertainty: 66000 score perturbations; sample stability 0.937; qualified high-status stability 0.916; boundary scenarios 151
 Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.93 minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.37 minimum base-dimension kappa (Q, 0.97 exact), 0.87 minimum base-dimension exact agreement, 0.81 minimum base-dimension PABAK, 0.13 maximum base-dimension mean absolute delta, 0.95 minimum base-coder exact agreement, 0.98 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa
@@ -62,8 +63,8 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Cross-engine transcript anchors | identity-neutral raw-output provenance check | 36 cross-engine transcript locator checks | 36 | 36/36 verified | n/a | n/a | n/a | all_locators_verified: True, engines: 3, issues: 3, scenario_sections_verified: 9 |
-| Formal invariant verification | exhaustive model-property check | 51644 generated audit-policy states | 51644 | 51644/51644 passed | n/a | n/a | n/a | authority_gate_necessity: 0, contestability_channel_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
-| Status-lattice exhaustion | finite status-lattice characterization | 233280 high-status claim-attempt states, 1632960 cover edges and 1632960 substitute-rule predictions | 3500902 | 851/851 necessity; 851/851 ablations | n/a | n/a | n/a | best_partial_rule_false_positive: 672, decision_status_states: 11, full_predicate_false_positive: 0, high_status_states: 168 |
+| Formal invariant verification | exhaustive model-property check | 51646 generated audit-policy states | 51646 | 51646/51646 passed | n/a | n/a | n/a | authority_gate_necessity: 0, claim_anchor_necessity: 0, contestability_channel_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
+| Status-lattice exhaustion | finite status-lattice characterization | 466560 high-status claim-attempt states, 3499200 cover edges and 3732480 substitute-rule predictions | 7700278 | 1019/1019 necessity; 1019/1019 ablations | n/a | n/a | n/a | best_partial_rule_false_positive: 672, decision_status_states: 11, full_predicate_false_positive: 0, high_status_states: 168 |
 | Metric separation analysis | retrieval/status non-equivalence check | 219 upstream-metric scenario packets | 219 | recall-threshold precision 0.29; reference gate FP 0 | n/a | n/a | n/a | high_recall_blocked_rate: 0.71, recall_point_biserial: 0.06, reference_gate_false_positive: 0 |
 | Baseline rule comparison | alternative-policy comparison | 3252 baseline predictions over 13 rules | 3252 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.62, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 390 ablations over 63 qualified packets | 390 | 390/390 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
@@ -77,6 +78,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Metamorphic policy tests | expected-label-free policy-invariant validation | 1233 transformations over 264 packets | 1233 | 1233/1233 | n/a | n/a | n/a | back_office_role_cap: 264, benign_source_append_preserves_high_status: 63, claim_escalation_nonpromotion: 264, review_gate_removal_blocks_high_status: 63, score_and_role_inflation_without_adoption: 252, source_tag_deproceduralization_blocks_high_status: 63, upstream_metric_inflation_invariance: 264 |
 | Policy mutation analysis | policy-mutant killing | 3111 mutation evaluations over 15 policy mutants | 3111 | 15/15 killed | n/a | n/a | n/a | classification_errors: 2266, false_negatives: 2, invalid_promotions: 2264 |
 | Review-provenance analysis | human-review and adoption-record falsification | 627 provenance evaluations over 264 packets | 627 | 627/627 | n/a | n/a | n/a | decision_provenance_defects_demoted: 36, high_status_provenance_defects_blocked: 189, review_adoption_placebos_blocked: 402 |
+| Claim-anchor analysis | claim-level source-anchor falsification | 1080 claim-anchor mutations over 250 units and 290 links | 1080 | 1080/1080 | n/a | n/a | n/a | claim_text_absence_blocked: 250, link_unit_binding_absence_blocked: 290, locator_absence_withdrawn: 250, support_attestation_absence_withdrawn: 290 |
 | Model-identity invariance | identity-substitution invariance check | 1320 identity mutations over 264 packets and 5 model identities | 1320 | 1320/1320 | n/a | n/a | n/a | disposition_changes: 0, identity_profiles: 5, status_changes: 0 |
 | Query-perturbation stability | public-retrieval query-sensitivity diagnostic | 30 query variants across 5 issue groups | 30 | 5/5 status-stable groups | n/a | n/a | 2 | authority_unstable_groups: 3, counter_recall_unstable_groups: 0, mean_record_overlap: 0.39, min_record_overlap: 0.0, record_set_unstable_groups: 4, top_result_unstable_groups: 4 |
 | Query-portfolio frontier | public-retrieval query-expansion frontier | 315 query portfolios plus 5 group frontier summaries | 320 | 0/315 portfolios qualified | n/a | n/a | n/a | full_counter_material_portfolios: 0, full_high_authority_portfolios: 56, full_screening_material_portfolios: 0, groups_counter_repaired: 0, groups_high_repaired: 1, max_authority_coverage: 1.0, max_counter_recall: 0.0 |
@@ -89,10 +91,10 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Substitute theory | Scenario false positives | Scenario false negatives | Scenario precision | Scenario recall | Lattice false positives | Lattice false negatives | Full protocol false positives | Full protocol false negatives | Additional evidence |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | Performance sufficiency | 153 | 0 | 0.29 | 1.00 | n/a | n/a | 0 | 0 | 153/215 high-recall outputs were blocked below normative screening |
-| Source-label sufficiency | 72 | 0 | 0.47 | 1.00 | 3192 | 0 | 0 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
+| Source-label sufficiency | 72 | 0 | 0.47 | 1.00 | 6552 | 0 | 0 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
 | Authority-material sufficiency | 150 | 2 | 0.29 | 0.97 | 672 | 0 | 0 | 0 | Authority and counter-material coverage without source-chain, role and contestability gates over-admit outputs |
-| Review-label sufficiency | 149 | 0 | 0.30 | 1.00 | 9816 | 0 | 0 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
-| Score sufficiency | 183 | 0 | 0.26 | 1.00 | 24792 | 0 | 0 | 0 | High total score cannot substitute for missing legal-material predicates |
+| Review-label sufficiency | 149 | 0 | 0.30 | 1.00 | 19800 | 0 | 0 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
+| Score sufficiency | 183 | 0 | 0.26 | 1.00 | 49752 | 0 | 0 | 0 | High total score cannot substitute for missing legal-material predicates |
 | Model-identity sufficiency | 1005 | 0 | 0.24 | 1.00 | n/a | n/a | 0 | 0 | 1005/1320 identity-labelled rows would be over-admitted; identity substitution produced 0 status changes |
 
 ## Findings
@@ -131,6 +133,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Metamorphic policy tests:** Applies claim escalation, metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation to primary scenario packets without using expected labels.
 - **Policy mutation analysis:** Applies gate-removal and status-conferring policy mutants across committed packets; every mutant is killed because removing a required gate, ignoring a cap, or treating metrics, source labels, review labels, total score or model identity as status produces a wrong allocation.
 - **Review-provenance analysis:** Adds review and adoption labels to incomplete packets and removes review, contestability, jurisdiction, authorization, adoption-reason or contestation-record fields from qualified packets; status follows provenance records only when the legal-material chain is complete.
+- **Claim-anchor analysis:** Removes material proposition text, link-to-claim bindings, support attestations and locators from every qualified packet; high status survives only when each material output unit remains bound to a specific source anchor.
 - **Model-identity invariance:** Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.
 - **Query-perturbation stability:** Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.
 - **Query-portfolio frontier:** Enumerates all non-empty query portfolios over issue-equivalent public retrieval variants to test whether frozen query expansion recovers high-authority and counter-material coverage.

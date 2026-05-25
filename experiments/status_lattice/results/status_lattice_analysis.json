@@ -1,9 +1,9 @@
 {
   "cover_edge_diagnostics": {
-    "checks": 1632960,
-    "demotions": 10368,
-    "promotions": 100917,
-    "stable": 1521675
+    "checks": 3499200,
+    "demotions": 20736,
+    "promotions": 195525,
+    "stable": 3282939
   },
   "decision_status_count": 11,
   "gate_ablation": {
@@ -12,6 +12,11 @@
         "checks": 11,
         "failed": 0,
         "passed": 11
+      },
+      "claim_anchor": {
+        "checks": 168,
+        "failed": 0,
+        "passed": 168
       },
       "counter_material": {
         "checks": 168,
@@ -39,27 +44,27 @@
         "passed": 168
       }
     },
-    "checks": 851,
+    "checks": 1019,
     "failed": 0,
-    "passed": 851
+    "passed": 1019
   },
-  "gate_count": 6,
+  "gate_count": 7,
   "high_status_count": 168,
   "necessity": {
-    "checks": 851,
+    "checks": 1019,
     "failed": 0,
     "failures": [],
-    "passed": 851
+    "passed": 1019
   },
   "role_count": 5,
   "score_vector_count": 729,
-  "state_count": 233280,
+  "state_count": 466560,
   "status_distribution": {
     "decision_support_reason": 11,
-    "no_external_legal_effect": 160704,
+    "no_external_legal_effect": 321408,
     "normative_material_screening_output": 157,
     "professional_support_output": 1128,
-    "reference_information": 71280
+    "reference_information": 143856
   },
   "substitution_checks": {
     "best_partial_false_positive": 672,
@@ -74,29 +79,38 @@
   "substitution_rules": [
     {
       "false_negative": 0,
-      "false_positive": 24792,
-      "precision": 0.0067,
+      "false_positive": 49752,
+      "precision": 0.0034,
       "recall": 1.0,
       "rule": "total_score_at_least_9",
-      "true_negative": 208320,
+      "true_negative": 416640,
       "true_positive": 168
     },
     {
       "false_negative": 0,
-      "false_positive": 13272,
-      "precision": 0.0125,
+      "false_positive": 26712,
+      "precision": 0.0063,
       "recall": 1.0,
       "rule": "complete_vector_and_score",
-      "true_negative": 219840,
+      "true_negative": 439680,
       "true_positive": 168
     },
     {
       "false_negative": 0,
-      "false_positive": 9816,
-      "precision": 0.0168,
+      "false_positive": 19800,
+      "precision": 0.0084,
       "recall": 1.0,
       "rule": "role_ready_and_score",
-      "true_negative": 223296,
+      "true_negative": 446592,
+      "true_positive": 168
+    },
+    {
+      "false_negative": 0,
+      "false_positive": 6552,
+      "precision": 0.025,
+      "recall": 1.0,
+      "rule": "source_bound_score",
+      "true_negative": 459840,
       "true_positive": 168
     },
     {
@@ -104,8 +118,8 @@
       "false_positive": 3192,
       "precision": 0.05,
       "recall": 1.0,
-      "rule": "source_bound_score",
-      "true_negative": 229920,
+      "rule": "claim_anchored_source_score",
+      "true_negative": 463200,
       "true_positive": 168
     },
     {
@@ -114,7 +128,7 @@
       "precision": 0.1,
       "recall": 1.0,
       "rule": "source_authority_score",
-      "true_negative": 231600,
+      "true_negative": 464880,
       "true_positive": 168
     },
     {
@@ -123,7 +137,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "rule": "source_authority_counter_score",
-      "true_negative": 232440,
+      "true_negative": 465720,
       "true_positive": 168
     },
     {
@@ -132,7 +146,7 @@
       "precision": 1.0,
       "recall": 1.0,
       "rule": "full_screening_predicate",
-      "true_negative": 233112,
+      "true_negative": 466392,
       "true_positive": 168
     }
   ]

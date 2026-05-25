@@ -189,6 +189,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
     _run([sys.executable, "scripts/run_policy_mutation_analysis.py"])
     _run([sys.executable, "scripts/run_review_provenance_analysis.py"])
+    _run([sys.executable, "scripts/run_claim_anchor_analysis.py"])
     _run([sys.executable, "scripts/run_model_identity_invariance.py"])
     _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
     _run([sys.executable, "scripts/run_query_portfolio_frontier.py"])
@@ -372,6 +373,12 @@ def main() -> int:
         )
     )
     rows.append(_review_provenance_row(review_provenance_payload))
+    claim_anchor_payload = json.loads(
+        (ROOT / "experiments" / "claim_anchor_analysis" / "results" / "claim_anchor_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_claim_anchor_row(claim_anchor_payload))
     model_identity_payload = json.loads(
         (
             ROOT
@@ -503,6 +510,10 @@ def main() -> int:
             "policy_mutants_killed": policy_mutation_payload["killed_mutant_count"],
             "review_provenance_evaluations": review_provenance_payload["evaluation_count"],
             "review_provenance_passed": review_provenance_payload["passed_count"],
+            "claim_anchor_evaluations": claim_anchor_payload["evaluation_count"],
+            "claim_anchor_passed": claim_anchor_payload["passed_count"],
+            "claim_anchor_output_units": claim_anchor_payload["output_unit_count"],
+            "claim_anchor_output_links": claim_anchor_payload["output_link_count"],
             "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
             "model_identity_invariance_passed": model_identity_payload["passed_count"],
             "query_perturbation_variants": query_perturbation_payload["query_variant_count"],
@@ -556,6 +567,7 @@ def main() -> int:
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
         "policy_mutation_evaluations": policy_mutation_payload["evaluation_count"],
         "review_provenance_evaluations": review_provenance_payload["evaluation_count"],
+        "claim_anchor_evaluations": claim_anchor_payload["evaluation_count"],
         "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"],
@@ -589,6 +601,7 @@ def main() -> int:
         + metamorphic_payload["metamorphic_evaluation_count"]
         + policy_mutation_payload["evaluation_count"]
         + review_provenance_payload["evaluation_count"]
+        + claim_anchor_payload["evaluation_count"]
         + model_identity_payload["evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"]
@@ -853,6 +866,26 @@ def main() -> int:
             "decision_provenance_check_count": review_provenance_payload["decision_provenance_check_count"],
             "decision_provenance_demoted_count": review_provenance_payload["decision_provenance_demoted_count"],
             "by_relation": review_provenance_payload["by_relation"],
+        },
+        "claim_anchor": {
+            "scenario_count": claim_anchor_payload["scenario_count"],
+            "output_unit_count": claim_anchor_payload["output_unit_count"],
+            "output_link_count": claim_anchor_payload["output_link_count"],
+            "evaluation_count": claim_anchor_payload["evaluation_count"],
+            "passed_count": claim_anchor_payload["passed_count"],
+            "failed_count": claim_anchor_payload["failed_count"],
+            "claim_text_absence_blocked_count": claim_anchor_payload["claim_text_absence_blocked_count"],
+            "claim_text_absence_evaluation_count": claim_anchor_payload["claim_text_absence_evaluation_count"],
+            "link_unit_binding_absence_blocked_count": claim_anchor_payload["link_unit_binding_absence_blocked_count"],
+            "link_unit_binding_absence_evaluation_count": claim_anchor_payload["link_unit_binding_absence_evaluation_count"],
+            "support_attestation_absence_withdrawn_count": claim_anchor_payload[
+                "support_attestation_absence_withdrawn_count"
+            ],
+            "support_attestation_absence_evaluation_count": claim_anchor_payload[
+                "support_attestation_absence_evaluation_count"
+            ],
+            "locator_absence_withdrawn_count": claim_anchor_payload["locator_absence_withdrawn_count"],
+            "locator_absence_evaluation_count": claim_anchor_payload["locator_absence_evaluation_count"],
         },
         "model_identity_invariance": {
             "scenario_count": model_identity_payload["scenario_count"],
@@ -1668,6 +1701,30 @@ def _review_provenance_row(payload: dict) -> dict:
     }
 
 
+def _claim_anchor_row(payload: dict) -> dict:
+    return {
+        "id": "claim_anchor",
+        "label": "Claim-anchor analysis",
+        "evidence_class": "claim-level source-anchor falsification",
+        "validation_units": (
+            f"{payload['evaluation_count']} claim-anchor mutations over {payload['output_unit_count']} units and "
+            f"{payload['output_link_count']} links"
+        ),
+        "scenario_count": payload["evaluation_count"],
+        "rule_pass": f"{payload['passed_count']}/{payload['evaluation_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "claim_text_absence_blocked": payload["claim_text_absence_blocked_count"],
+            "link_unit_binding_absence_blocked": payload["link_unit_binding_absence_blocked_count"],
+            "support_attestation_absence_withdrawn": payload["support_attestation_absence_withdrawn_count"],
+            "locator_absence_withdrawn": payload["locator_absence_withdrawn_count"],
+        },
+        "finding": "Removes material proposition text, link-to-claim bindings, support attestations and locators from every qualified packet; high status survives only when each material output unit remains bound to a specific source anchor.",
+    }
+
+
 def _model_identity_invariance_row(payload: dict) -> dict:
     return {
         "id": "model_identity_invariance",
@@ -1801,6 +1858,7 @@ def _format_report(payload: dict) -> str:
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
         f"Policy mutation analysis: {payload['policy_mutations']['killed_mutant_count']}/{payload['policy_mutations']['mutant_count']} mutants killed across {payload['policy_mutations']['evaluation_count']} evaluations; invalid promotions {payload['policy_mutations']['invalid_promotion_count']}; false negatives {payload['policy_mutations']['false_negative_count']}",
         f"Review-provenance analysis: {payload['review_provenance']['passed_count']}/{payload['review_provenance']['evaluation_count']} passed; review/adoption placebos blocked {payload['review_provenance']['placebo_blocked_count']}/{payload['review_provenance']['placebo_evaluation_count']}; high-status provenance defects blocked {payload['review_provenance']['high_status_provenance_blocked_count']}/{payload['review_provenance']['high_status_provenance_check_count']}; decision provenance defects demoted {payload['review_provenance']['decision_provenance_demoted_count']}/{payload['review_provenance']['decision_provenance_check_count']}",
+        f"Claim-anchor analysis: {payload['claim_anchor']['passed_count']}/{payload['claim_anchor']['evaluation_count']} passed over {payload['claim_anchor']['output_unit_count']} output units and {payload['claim_anchor']['output_link_count']} output links; claim-text removals blocked {payload['claim_anchor']['claim_text_absence_blocked_count']}/{payload['claim_anchor']['claim_text_absence_evaluation_count']}; link-to-claim removals blocked {payload['claim_anchor']['link_unit_binding_absence_blocked_count']}/{payload['claim_anchor']['link_unit_binding_absence_evaluation_count']}; support-attestation removals withdrawn {payload['claim_anchor']['support_attestation_absence_withdrawn_count']}/{payload['claim_anchor']['support_attestation_absence_evaluation_count']}; locator removals withdrawn {payload['claim_anchor']['locator_absence_withdrawn_count']}/{payload['claim_anchor']['locator_absence_evaluation_count']}",
         f"Model-identity invariance: {payload['model_identity_invariance']['passed_count']}/{payload['model_identity_invariance']['evaluation_count']} identity substitutions passed over {payload['model_identity_invariance']['scenario_count']} packets and {payload['model_identity_invariance']['identity_profile_count']} identity profiles; status changes {payload['model_identity_invariance']['status_changed_count']}; disposition changes {payload['model_identity_invariance']['disposition_changed_count']}",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",
         f"Query-portfolio frontier: {payload['query_portfolio']['portfolio_count']} portfolios plus {payload['query_portfolio']['issue_group_count']} group summaries across {payload['query_portfolio']['issue_group_count']} issue groups; qualified portfolios {payload['query_portfolio']['qualified_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full high-authority portfolios {payload['query_portfolio']['full_high_authority_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full counter-material portfolios {payload['query_portfolio']['full_counter_material_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}",

@@ -63,6 +63,7 @@
     "output_units": [
       {
         "id": "unit-1",
+        "claim": "The output identifies the binding precedent as the leading authority.",
         "source_ids": [
           "binding-precedent-a"
         ],
@@ -72,6 +73,7 @@
       },
       {
         "id": "unit-2",
+        "claim": "The output identifies the limiting precedent as relevant counter-material.",
         "source_ids": [
           "limiting-precedent-b"
         ],

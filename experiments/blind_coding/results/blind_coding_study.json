@@ -5952,6 +5952,7 @@
           "disposition": "withdrawal",
           "failure_flags": [
             "contestation_failure",
+            "source_attribution_gap",
             "summary_distortion"
           ],
           "missing_gates": [
@@ -5973,6 +5974,7 @@
           "disposition": "withdrawal",
           "failure_flags": [
             "contestation_failure",
+            "source_attribution_gap",
             "summary_distortion"
           ],
           "missing_gates": [
