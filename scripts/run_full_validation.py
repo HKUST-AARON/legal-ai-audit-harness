@@ -163,6 +163,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_policy_constants_replay.py"])
     _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
     _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
+    _run([sys.executable, "scripts/run_query_portfolio_frontier.py"])
 
     rows = []
     for suite in SUITES:
@@ -301,6 +302,12 @@ def main() -> int:
         )
     )
     rows.append(_query_perturbation_row(query_perturbation_payload))
+    query_portfolio_payload = json.loads(
+        (ROOT / "experiments" / "query_portfolios" / "results" / "query_portfolio_frontier.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_query_portfolio_row(query_portfolio_payload))
 
     _run(
         [
@@ -393,6 +400,9 @@ def main() -> int:
             "metamorphic_policy_passed": metamorphic_payload["passed_count"],
             "query_perturbation_variants": query_perturbation_payload["query_variant_count"],
             "query_perturbation_groups": query_perturbation_payload["issue_group_count"],
+            "query_portfolio_evaluations": query_portfolio_payload["portfolio_count"]
+            + query_portfolio_payload["issue_group_count"],
+            "query_portfolios": query_portfolio_payload["portfolio_count"],
         }
     )
     payload = {
@@ -423,6 +433,8 @@ def main() -> int:
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"],
+        "query_portfolio_evaluations": query_portfolio_payload["portfolio_count"]
+        + query_portfolio_payload["issue_group_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
@@ -442,6 +454,8 @@ def main() -> int:
         + metamorphic_payload["metamorphic_evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"]
+        + query_portfolio_payload["portfolio_count"]
+        + query_portfolio_payload["issue_group_count"]
         + robustness_payload["recoded_evaluations"]
         + uncertainty_payload["evaluation_count"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
@@ -627,6 +641,27 @@ def main() -> int:
             "mean_pairwise_record_overlap": query_perturbation_payload["mean_pairwise_record_overlap"],
             "min_pairwise_record_overlap": query_perturbation_payload["min_pairwise_record_overlap"],
             "high_upstream_but_blocked": query_perturbation_payload["high_upstream_but_blocked"],
+        },
+        "query_portfolio": {
+            "issue_group_count": query_portfolio_payload["issue_group_count"],
+            "query_variant_count": query_portfolio_payload["query_variant_count"],
+            "portfolio_count": query_portfolio_payload["portfolio_count"],
+            "qualified_portfolio_count": query_portfolio_payload["qualified_portfolio_count"],
+            "full_high_authority_portfolio_count": query_portfolio_payload["full_high_authority_portfolio_count"],
+            "full_counter_material_portfolio_count": query_portfolio_payload["full_counter_material_portfolio_count"],
+            "full_screening_material_portfolio_count": query_portfolio_payload[
+                "full_screening_material_portfolio_count"
+            ],
+            "mean_authority_coverage": query_portfolio_payload["mean_authority_coverage"],
+            "max_authority_coverage": query_portfolio_payload["max_authority_coverage"],
+            "mean_counter_recall": query_portfolio_payload["mean_counter_recall"],
+            "max_counter_recall": query_portfolio_payload["max_counter_recall"],
+            "query_expansion_repairs_any_high_authority": query_portfolio_payload[
+                "query_expansion_repairs_any_high_authority"
+            ],
+            "query_expansion_repairs_counter_material": query_portfolio_payload[
+                "query_expansion_repairs_counter_material"
+            ],
         },
         "suites": rows,
     }
@@ -1135,6 +1170,32 @@ def _query_perturbation_row(payload: dict) -> dict:
     }
 
 
+def _query_portfolio_row(payload: dict) -> dict:
+    return {
+        "id": "query_portfolio",
+        "label": "Query-portfolio frontier",
+        "evidence_class": "public-retrieval query-expansion frontier",
+        "validation_units": (
+            f"{payload['portfolio_count']} query portfolios plus {payload['issue_group_count']} group frontier summaries"
+        ),
+        "scenario_count": payload["portfolio_count"] + payload["issue_group_count"],
+        "rule_pass": f"{payload['qualified_portfolio_count']}/{payload['portfolio_count']} portfolios qualified",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "full_high_authority_portfolios": payload["full_high_authority_portfolio_count"],
+            "full_counter_material_portfolios": payload["full_counter_material_portfolio_count"],
+            "full_screening_material_portfolios": payload["full_screening_material_portfolio_count"],
+            "max_authority_coverage": round(payload["max_authority_coverage"], 2),
+            "max_counter_recall": round(payload["max_counter_recall"], 2),
+            "groups_high_repaired": payload["query_expansion_repairs_any_high_authority"],
+            "groups_counter_repaired": payload["query_expansion_repairs_counter_material"],
+        },
+        "finding": "Enumerates all non-empty query portfolios over issue-equivalent public retrieval variants to test whether frozen query expansion recovers high-authority and counter-material coverage.",
+    }
+
+
 def _policy_constants_row(payload: dict) -> dict:
     return {
         "id": "policy_constants_replay",
@@ -1191,6 +1252,7 @@ def _format_report(payload: dict) -> str:
         f"Policy-constants replay checks: {payload['policy_constants_replay']['passed_check_count']}/{payload['policy_constants_replay']['check_count']} passed over {payload['policy_constants_replay']['scenario_count']} packets",
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",
+        f"Query-portfolio frontier: {payload['query_portfolio']['portfolio_count']} portfolios plus {payload['query_portfolio']['issue_group_count']} group summaries across {payload['query_portfolio']['issue_group_count']} issue groups; qualified portfolios {payload['query_portfolio']['qualified_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full high-authority portfolios {payload['query_portfolio']['full_high_authority_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full counter-material portfolios {payload['query_portfolio']['full_counter_material_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

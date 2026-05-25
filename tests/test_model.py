@@ -426,6 +426,31 @@ class AuditModelTest(unittest.TestCase):
         self.assertAlmostEqual(payload["max_authority_coverage_gap"], 0.5)
         self.assertAlmostEqual(payload["max_counter_recall_gap"], 0.0)
 
+    def test_query_portfolio_frontier_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_query_portfolio_frontier.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Query Portfolio Frontier", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "query_portfolios" / "results" / "query_portfolio_frontier.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["issue_group_count"], 5)
+        self.assertEqual(payload["query_variant_count"], 30)
+        self.assertEqual(payload["portfolio_count"], 315)
+        self.assertEqual(payload["qualified_portfolio_count"], 0)
+        self.assertEqual(payload["full_high_authority_portfolio_count"], 56)
+        self.assertEqual(payload["full_counter_material_portfolio_count"], 0)
+        self.assertEqual(payload["full_screening_material_portfolio_count"], 0)
+        self.assertEqual(payload["query_expansion_repairs_any_high_authority"], 1)
+        self.assertEqual(payload["query_expansion_repairs_counter_material"], 0)
+
     def test_status_certificate_validation_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/run_status_certificate_validation.py"],
@@ -873,7 +898,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 30)
+        self.assertEqual(report["suite_count"], 31)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -936,7 +961,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_perturbation_evaluations"], 35)
         self.assertEqual(report["validation_units"]["query_perturbation_variants"], 30)
         self.assertEqual(report["validation_units"]["query_perturbation_groups"], 5)
-        self.assertEqual(report["total_evaluation_rows"], 136295)
+        self.assertEqual(report["query_portfolio_evaluations"], 320)
+        self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
+        self.assertEqual(report["validation_units"]["query_portfolios"], 315)
+        self.assertEqual(report["total_evaluation_rows"], 136615)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -1033,6 +1061,12 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_perturbation"]["authority_coverage_unstable_group_count"], 3)
         self.assertEqual(report["query_perturbation"]["record_set_unstable_group_count"], 4)
         self.assertEqual(report["query_perturbation"]["high_upstream_but_blocked"], 2)
+        self.assertEqual(report["query_portfolio"]["issue_group_count"], 5)
+        self.assertEqual(report["query_portfolio"]["portfolio_count"], 315)
+        self.assertEqual(report["query_portfolio"]["qualified_portfolio_count"], 0)
+        self.assertEqual(report["query_portfolio"]["full_high_authority_portfolio_count"], 56)
+        self.assertEqual(report["query_portfolio"]["full_counter_material_portfolio_count"], 0)
+        self.assertEqual(report["query_portfolio"]["query_expansion_repairs_any_high_authority"], 1)
 
     def test_source_chain_attacks_run(self):
         completed = subprocess.run(

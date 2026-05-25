@@ -447,6 +447,22 @@
     "top_result_unstable_group_count": 4
   },
   "query_perturbation_evaluations": 35,
+  "query_portfolio": {
+    "full_counter_material_portfolio_count": 0,
+    "full_high_authority_portfolio_count": 56,
+    "full_screening_material_portfolio_count": 0,
+    "issue_group_count": 5,
+    "max_authority_coverage": 1.0,
+    "max_counter_recall": 0.0,
+    "mean_authority_coverage": 0.38095238095238093,
+    "mean_counter_recall": 0.0,
+    "portfolio_count": 315,
+    "qualified_portfolio_count": 0,
+    "query_expansion_repairs_any_high_authority": 1,
+    "query_expansion_repairs_counter_material": 0,
+    "query_variant_count": 30
+  },
+  "query_portfolio_evaluations": 320,
   "ranking_visibility": {
     "counterfactual_front_window_counter_visible": 0,
     "coverage_preserved_count": 76,
@@ -564,7 +580,7 @@
     "verified_certificate_count": 246
   },
   "status_certificate_replay_checks": 3198,
-  "suite_count": 30,
+  "suite_count": 31,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1092,6 +1108,27 @@
       "validation_units": "30 query variants across 5 issue groups"
     },
     {
+      "evidence_class": "public-retrieval query-expansion frontier",
+      "finding": "Enumerates all non-empty query portfolios over issue-equivalent public retrieval variants to test whether frozen query expansion recovers high-authority and counter-material coverage.",
+      "high_upstream_but_blocked": null,
+      "id": "query_portfolio",
+      "label": "Query-portfolio frontier",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "0/315 portfolios qualified",
+      "scenario_count": 320,
+      "status_distribution": {
+        "full_counter_material_portfolios": 0,
+        "full_high_authority_portfolios": 56,
+        "full_screening_material_portfolios": 0,
+        "groups_counter_repaired": 0,
+        "groups_high_repaired": 1,
+        "max_authority_coverage": 1.0,
+        "max_counter_recall": 0.0
+      },
+      "validation_units": "315 query portfolios plus 5 group frontier summaries"
+    },
+    {
       "evidence_class": "coding robustness",
       "finding": "Tests whether status allocation survives strict and lenient recoding of the same evidence packets.",
       "high_upstream_but_blocked": null,
@@ -1228,7 +1265,7 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 136295,
+  "total_evaluation_rows": 136615,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
@@ -1259,6 +1296,8 @@
     "public_system_records": 60,
     "query_perturbation_groups": 5,
     "query_perturbation_variants": 30,
+    "query_portfolio_evaluations": 320,
+    "query_portfolios": 315,
     "ranking_visibility_checks": 230,
     "ranking_visibility_counterfactuals": 76,
     "ranking_visibility_window_checks": 884,

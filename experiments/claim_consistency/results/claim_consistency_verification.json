@@ -1,8 +1,8 @@
 {
-  "check_count": 495,
+  "check_count": 522,
   "checks": [
     {
-      "expected": "- 30 validation suites",
+      "expected": "- 31 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 136,295 total evaluation rows",
+      "expected": "- 136,615 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -63,6 +63,11 @@
     },
     {
       "expected": "- 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 315 query portfolios plus 5 group frontier summaries across 5 issue groups; 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -127,7 +132,12 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 3,198 status-certificate replay checks and 4,182 policy-constants replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 3,198 status-certificate replay checks and 4,182 policy-constants replay checks",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries",
       "passed": true,
       "path": "README.md"
     },
@@ -173,6 +183,16 @@
     },
     {
       "expected": "| Query-perturbation stability | 35 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Query-portfolio frontier | 320 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_query_portfolio_frontier.py",
       "passed": true,
       "path": "README.md"
     },
@@ -292,6 +312,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Query-portfolio frontier",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Metric bootstrap/permutation robustness",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -372,6 +397,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "query-portfolio layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "repair-frontier layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -428,6 +458,11 @@
     },
     {
       "expected": "30 query-perturbation variants across 5 issue groups",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "315 query portfolios plus 5 group frontier summaries across 5 issue groups",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -532,6 +567,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "python scripts/run_query_portfolio_frontier.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/build_source_chain_attacks.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -562,6 +602,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "query-portfolio file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "policy-constants replay file",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -572,7 +617,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "135,616 derived robustness checks",
+      "expected": "135,936 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -622,12 +667,37 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "315 query portfolios plus 5 group frontier summaries across the same public retrieval variants",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "authority coverage was unstable in 3/5 groups",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "mean pairwise record overlap was 0.39",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "315 non-empty query portfolios",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "56/315 portfolios recovered full high-authority coverage",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "0/315 recovered full counter-material coverage",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Within this frozen five-issue public-retrieval matrix",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -777,6 +847,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Query-portfolio frontier & 315 portfolios / 5 groups & 0/315 qualified",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "All 1,134 metamorphic tests passed",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -832,7 +907,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 30",
+      "expected": "Validation suites: 31",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -902,6 +977,16 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Query-portfolio frontier | public-retrieval query-expansion frontier | 315 query portfolios plus 5 group frontier summaries | 320 | 0/315 portfolios qualified",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Repair frontier evaluations: 184/184 blocked claims repairable across 4474 counterfactual repairs",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -967,12 +1052,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 35 pages",
+      "expected": "The expected manuscript build is 36 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 244)",
+      "expected": "abstract word count 150-250 (actual 246)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1137,12 +1222,22 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `135,616`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `3,198/3,198 declarative`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
       "expected": "absence of stale claim `136,260`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `136,295`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -1437,12 +1532,22 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `135,616`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `3,198/3,198 declarative`",
       "passed": true,
       "path": "README.md"
     },
     {
       "expected": "absence of stale claim `136,260`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `136,295`",
       "passed": true,
       "path": "README.md"
     },
@@ -1737,12 +1842,22 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `135,616`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `3,198/3,198 declarative`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
     {
       "expected": "absence of stale claim `136,260`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `136,295`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -2037,12 +2152,22 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `135,616`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `3,198/3,198 declarative`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
       "expected": "absence of stale claim `136,260`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `136,295`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -2337,12 +2462,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `135,616`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `3,198/3,198 declarative`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "absence of stale claim `136,260`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `136,295`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2479,5 +2614,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 495
+  "passed_count": 522
 }
