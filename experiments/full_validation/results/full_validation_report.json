@@ -154,13 +154,13 @@
   },
   "blind_coding_evaluations": 444,
   "blocked_reason_distribution": {
-    "authority_omission": 5,
+    "authority_omission": 59,
     "contestation_failure": 1,
-    "counter_material_suppression": 27,
+    "counter_material_suppression": 81,
     "invalid_authority": 1,
     "ranking_drift": 9,
-    "source_attribution_gap": 105,
-    "summary_distortion": 21,
+    "source_attribution_gap": 159,
+    "summary_distortion": 129,
     "unauthorized_action": 10
   },
   "expected_passed": 246,
@@ -216,7 +216,7 @@
     "qualified_scenario_count": 54
   },
   "gate_ablation_evaluations": 336,
-  "high_upstream_but_blocked": 136,
+  "high_upstream_but_blocked": 406,
   "jurisdiction_profile": {
     "counterfactual_evaluation_count": 162,
     "generic_profile_preserved": 54,
@@ -424,6 +424,22 @@
   },
   "repair_frontier_evaluations": 4474,
   "scenario_files": 246,
+  "source_chain_attack_evaluations": 270,
+  "source_chain_attacks": {
+    "blocked_reason_distribution": {
+      "authority_omission": 54,
+      "counter_material_suppression": 54,
+      "source_attribution_gap": 54,
+      "summary_distortion": 108
+    },
+    "expected_passed": 270,
+    "high_upstream_but_blocked": 270,
+    "scenario_count": 270,
+    "status_distribution": {
+      "no_external_legal_effect": 108,
+      "reference_information": 162
+    }
+  },
   "source_text_anchor_evaluations": 30,
   "source_text_verification": {
     "record_count": 30,
@@ -440,7 +456,7 @@
     "verified_certificate_count": 246
   },
   "status_certificate_replay_checks": 3198,
-  "suite_count": 25,
+  "suite_count": 26,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -675,6 +691,28 @@
         "reference_information": 15
       },
       "validation_units": "20 issue-packet ablations"
+    },
+    {
+      "blocked_reason_distribution": {
+        "authority_omission": 54,
+        "counter_material_suppression": 54,
+        "source_attribution_gap": 54,
+        "summary_distortion": 108
+      },
+      "evidence_class": "whole-matrix source-chain negative control",
+      "finding": "Mutates locators, output-source links, procedural source tags, high-authority recall and counter-material recall across every qualified packet; all attacked variants must downgrade or withdraw despite high scores and high upstream recall.",
+      "high_upstream_but_blocked": 270,
+      "id": "source_chain_attacks",
+      "label": "Qualified-output source-chain attacks",
+      "mean_audit_score": 11.277777777777779,
+      "mean_upstream_recall": 0.9890740740740741,
+      "rule_pass": "270/270",
+      "scenario_count": 270,
+      "status_distribution": {
+        "no_external_legal_effect": 108,
+        "reference_information": 162
+      },
+      "validation_units": "270 attack variants over qualified packets"
     },
     {
       "evidence_class": "external source-grounding check",
@@ -999,7 +1037,7 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 130404,
+  "total_evaluation_rows": 130674,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
@@ -1028,6 +1066,8 @@
     "raw_model_outputs": 10,
     "repair_frontier_evaluations": 4474,
     "source_bound_model_outputs": 10,
+    "source_chain_attack_passed": 270,
+    "source_chain_attack_variants": 270,
     "source_text_anchor_checks": 30,
     "source_text_anchor_verified": 30,
     "status_certificate_replay_checks": 3198,

@@ -1,0 +1,141 @@
+{
+  "id": "odr-authorized-review--source-chain-nonprocedural-source-tags",
+  "claimed_status": "decision_support_reason",
+  "jurisdiction_profile": "odr",
+  "deployment_context": "ODR recommendation used only after prior authorization, appeal notice, source trace and human-review override.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Platform rules, consumer law sources and terms are versioned and linked."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Claim facts, rule filters, policy version and model version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Consumer statute overrides, platform rules and terms of service are distinguished."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Exception policies, appeal decisions and human-review overrides are surfaced."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "The party can inspect, appeal and obtain a recorded response."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "Responsible reviewer, adopted materials and reasons are recorded."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "consumer-statute-a",
+      "platform-rule-b"
+    ],
+    "retrieved_high_authority": [
+      "consumer-statute-a",
+      "platform-rule-b"
+    ],
+    "counter_or_limiting": [
+      "exception-policy-c",
+      "appeal-decision-d"
+    ],
+    "retrieved_counter_or_limiting": [
+      "exception-policy-c",
+      "appeal-decision-d"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "consumer-statute-a",
+      "platform-rule-b",
+      "exception-policy-c",
+      "appeal-decision-d"
+    ]
+  },
+  "evidence_packet": {
+    "output_units": [
+      {
+        "id": "u1",
+        "claim": "The recommendation identifies the consumer statute and platform rule as governing materials.",
+        "source_ids": [
+          "consumer-statute-a",
+          "platform-rule-b"
+        ],
+        "locators": [
+          "consumer-statute-a:section",
+          "platform-rule-b:term"
+        ]
+      },
+      {
+        "id": "u2",
+        "claim": "The recommendation presents the exception policy and appeal decision as review materials.",
+        "source_ids": [
+          "exception-policy-c",
+          "appeal-decision-d"
+        ],
+        "locators": [
+          "exception-policy-c:exception",
+          "appeal-decision-d:outcome"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "u1",
+        "source_id": "consumer-statute-a",
+        "locator": "consumer-statute-a:section",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "u1",
+        "source_id": "platform-rule-b",
+        "locator": "platform-rule-b:term",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "u2",
+        "source_id": "exception-policy-c",
+        "locator": "exception-policy-c:exception",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "u2",
+        "source_id": "appeal-decision-d",
+        "locator": "appeal-decision-d:outcome",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 0.88,
+    "recall": 0.91,
+    "f1": 0.89
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "downgrade",
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "authorized_adoption",
+    "jurisdiction_assumptions": [
+      "odr"
+    ],
+    "irreversible_action": false,
+    "human_authorization": true,
+    "adoption_reasons_recorded": true,
+    "contestation_recorded": true
+  },
+  "source_chain_attack": {
+    "attack": "nonprocedural_source_tags",
+    "source": "odr-authorized-review",
+    "base_allowed_status": "decision_support_reason",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

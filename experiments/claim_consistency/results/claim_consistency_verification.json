@@ -1,8 +1,8 @@
 {
-  "check_count": 304,
+  "check_count": 328,
   "checks": [
     {
-      "expected": "- 25 validation suites",
+      "expected": "- 26 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 130,404 total evaluation rows",
+      "expected": "- 130,674 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -43,6 +43,11 @@
     },
     {
       "expected": "- 336/336 gate-ablation evaluations passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 270/270 source-chain attack variants passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -102,7 +107,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals and 3,198 status-certificate replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals and 3,198 status-certificate replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -128,6 +133,11 @@
     },
     {
       "expected": "| Qualified-output gate ablations | 336 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Qualified-output source-chain attacks | 270 |",
       "passed": true,
       "path": "README.md"
     },
@@ -187,7 +197,17 @@
       "path": "README.md"
     },
     {
+      "expected": "python scripts/build_source_chain_attacks.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "Qualified-output gate ablations",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "Qualified-output source-chain attacks",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -247,6 +267,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "source-chain attack layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "repair-frontier layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -278,6 +303,11 @@
     },
     {
       "expected": "336/336 gate-ablation evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "270/270 source-chain attack variants",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -362,7 +392,22 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "python scripts/build_source_chain_attacks.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "source-chain attack file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "246 scenario packets with 679 embedded records or outputs",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "129,995 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -507,6 +552,21 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Source-chain attacks & 270 variants & 270/270",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "All 270 attacked variants lost high status",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "162 were capped at reference information and 108 were withdrawn",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Blocked-claim repair frontiers & 4,474 counterfactuals & 184/184",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -552,7 +612,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 25",
+      "expected": "Validation suites: 26",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -573,6 +633,16 @@
     },
     {
       "expected": "Gate ablation evaluations: 336/336 passed over 54 qualified packets",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Source-chain attack variants: 270/270 passed; high-upstream attacked variants blocked 270/270",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Qualified-output source-chain attacks | whole-matrix source-chain negative control | 270 attack variants over qualified packets | 270 | 270/270",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -637,12 +707,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 34 pages",
+      "expected": "The expected manuscript build is 35 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 232)",
+      "expected": "abstract word count 150-250 (actual 236)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -742,7 +812,17 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `129,725`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `126,953`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `130,404`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -917,7 +997,17 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `129,725`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `126,953`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `130,404`",
       "passed": true,
       "path": "README.md"
     },
@@ -1092,7 +1182,17 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `129,725`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `126,953`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `130,404`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -1267,7 +1367,17 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `129,725`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `126,953`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `130,404`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1442,7 +1552,17 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `129,725`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `126,953`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `130,404`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1524,5 +1644,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 304
+  "passed_count": 328
 }

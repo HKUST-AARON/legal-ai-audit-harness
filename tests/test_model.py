@@ -781,7 +781,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 25)
+        self.assertEqual(report["suite_count"], 26)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -816,6 +816,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 2772)
         self.assertEqual(report["gate_ablation_evaluations"], 336)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 336)
+        self.assertEqual(report["source_chain_attack_evaluations"], 270)
+        self.assertEqual(report["validation_units"]["source_chain_attack_variants"], 270)
+        self.assertEqual(report["validation_units"]["source_chain_attack_passed"], 270)
         self.assertEqual(report["repair_frontier_evaluations"], 4474)
         self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 4474)
         self.assertEqual(report["jurisdiction_profile_evaluations"], 395)
@@ -829,7 +832,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
-        self.assertEqual(report["total_evaluation_rows"], 130404)
+        self.assertEqual(report["total_evaluation_rows"], 130674)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -841,8 +844,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertIn("base_status_agreement", report["blind_coding"])
         self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 246)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
-        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 105)
-        self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 21)
+        self.assertEqual(report["blocked_reason_distribution"]["authority_omission"], 59)
+        self.assertEqual(report["blocked_reason_distribution"]["counter_material_suppression"], 81)
+        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 159)
+        self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 129)
         self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
         self.assertEqual(report["model_output_transcript_verification"]["locators_verified"], 50)
@@ -860,6 +865,11 @@ class AuditModelTest(unittest.TestCase):
         self.assertTrue(report["baseline_comparison"]["all_simplified_rules_have_errors"])
         self.assertEqual(report["gate_ablation"]["ablation_count"], 336)
         self.assertEqual(report["gate_ablation"]["passed_count"], 336)
+        self.assertEqual(report["source_chain_attacks"]["scenario_count"], 270)
+        self.assertEqual(report["source_chain_attacks"]["expected_passed"], 270)
+        self.assertEqual(report["source_chain_attacks"]["high_upstream_but_blocked"], 270)
+        self.assertEqual(report["source_chain_attacks"]["status_distribution"]["reference_information"], 162)
+        self.assertEqual(report["source_chain_attacks"]["status_distribution"]["no_external_legal_effect"], 108)
         self.assertEqual(report["repair_frontier"]["blocked_claim_count"], 184)
         self.assertEqual(report["repair_frontier"]["repairable_count"], 184)
         self.assertEqual(report["jurisdiction_profile"]["profile_check_count"], 233)
@@ -882,6 +892,40 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate"]["verified_certificate_count"], 246)
         self.assertEqual(report["status_certificate"]["replay_check_count"], 3198)
         self.assertEqual(report["status_certificate"]["passed_check_count"], 3198)
+
+    def test_source_chain_attacks_run(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/build_source_chain_attacks.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        completed = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "audit_harness.cli",
+                "experiment",
+                "experiments/source_chain_attacks/scenarios",
+                "--out",
+                "experiments/source_chain_attacks/results/source_chain_attack_experiment.md",
+                "--json-out",
+                "experiments/source_chain_attacks/results/source_chain_attack_experiment.json",
+            ],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "source_chain_attacks" / "results" / "source_chain_attack_experiment.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["summary"]["scenario_count"], 270)
+        self.assertEqual(report["summary"]["expected_passed"], 270)
+        self.assertEqual(report["summary"]["high_upstream_but_blocked"], 270)
+        statuses = {item["allowed_status"] for item in report["results"]}
+        self.assertEqual(statuses, {"reference_information", "no_external_legal_effect"})
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(

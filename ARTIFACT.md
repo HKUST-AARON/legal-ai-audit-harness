@@ -23,15 +23,16 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 25 validation suites
+- 26 validation suites
 - 246 scenario files
 - 679 embedded records or output items
-- 130,404 total evaluation rows
+- 130,674 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 2,772 baseline-rule predictions across 12 alternative status rules
 - 336/336 gate-ablation evaluations passed
+- 270/270 source-chain attack variants passed
 - 184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations
 - 233/233 jurisdiction-profile checks and 162/162 profile mutations passed
 - 884 rank-window visibility checks over 230 high-status claims
@@ -63,7 +64,7 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 34 pages in the current local format.
+The expected manuscript build is 35 pages in the current local format.
 
 ## Interpretation
 
