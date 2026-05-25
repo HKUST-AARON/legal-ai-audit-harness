@@ -225,16 +225,6 @@
   "metric_separation": {
     "bootstrap": {
       "confidence_interval": {
-        "full_gate_precision": {
-          "high": 1.0,
-          "low": 1.0,
-          "median": 1.0
-        },
-        "full_gate_specificity": {
-          "high": 1.0,
-          "low": 1.0,
-          "median": 1.0
-        },
         "high_recall_blocked_rate": {
           "high": 0.7938144329896907,
           "low": 0.6666666666666666,
@@ -744,30 +734,30 @@
       "label": "Metric separation analysis",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "recall-threshold precision 0.27; full gate precision 1.00",
+      "rule_pass": "recall-threshold precision 0.27; reference gate FP 0",
       "scenario_count": 201,
       "status_distribution": {
-        "full_gate_specificity": 1.0,
         "high_recall_blocked_rate": 0.73,
-        "recall_point_biserial": 0.06
+        "recall_point_biserial": 0.06,
+        "reference_gate_false_positive": 0
       },
       "validation_units": "201 upstream-metric scenario packets"
     },
     {
       "evidence_class": "alternative-policy comparison",
-      "finding": "Compares the full audit gate against recall, F1, total-score, source-bound and review-gate substitutes, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
+      "finding": "Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
       "high_upstream_but_blocked": null,
       "id": "baseline_comparison",
       "label": "Baseline rule comparison",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "best simplified FP 38; full gate FP 0",
+      "rule_pass": "best simplified FP 38; reference rule FP 0",
       "scenario_count": 2772,
       "status_distribution": {
         "best_simplified_precision": 0.59,
         "best_simplified_recall": 1.0,
-        "full_gate_precision": 1.0,
-        "full_gate_specificity": 1.0,
+        "reference_rule_false_negative": 0,
+        "reference_rule_false_positive": 0,
         "simplified_rules_with_errors": 1
       },
       "validation_units": "2772 baseline predictions over 12 rules"

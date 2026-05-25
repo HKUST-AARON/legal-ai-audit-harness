@@ -172,7 +172,7 @@ Current coverage:
 | Formal invariant verification | 51643 | Exhaustively checks monotonicity, evidence-packet necessity, authority-set necessity, counter-material gate necessity, adoption necessity, role caps, failure caps and metric non-equivalence over generated audit-policy states. |
 | Metric separation analysis | 201 | Tests whether upstream precision, recall and F1 predict procedural qualification across all packets with complete upstream metrics. |
 | Metric statistical robustness | 2000 | Bootstraps key metric/status separation estimates and permutes recall-status association. |
-| Baseline rule comparison | 2772 | Compares the full audit gate with recall, F1, total-score, source-bound and review-gate substitutes over 12 alternative status rules. |
+| Baseline rule comparison | 2772 | Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation over 12 alternative status rules. |
 | Qualified-output gate ablations | 336 | Removes procedural gates from all qualified packets and checks that status falls below the corresponding procedural level. |
 | Blocked-claim repair frontiers | 4474 | Computes the minimal artifact-gate families needed to upgrade each blocked normative-screening or decision-support claim. |
 | Jurisdiction-profile mutations | 395 | Checks high-status profile support and mutates qualified packets to test missing or mismatched jurisdiction assumptions. |

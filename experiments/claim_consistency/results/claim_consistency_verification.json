@@ -1,5 +1,5 @@
 {
-  "check_count": 251,
+  "check_count": 291,
   "checks": [
     {
       "expected": "- 25 validation suites",
@@ -487,7 +487,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Baseline rule comparison & 2,772 predictions & Best simplified false positives 38; full gate false positives 0",
+      "expected": "Baseline rule comparison & 2,772 predictions & Best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -512,7 +512,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Baseline rule comparisons: 2772 predictions across 12 rules; best simplified false positives 38; full gate false positives 0",
+      "expected": "Baseline rule comparisons: 2772 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -550,6 +550,31 @@
       "expected": "Metric separation evaluations: 201 upstream-metric scenario packets; high-recall blocked outputs 144/197",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "8 & 10 & 0 & 0 & decision 12; screening 42; professional 23; reference 137; no effect 32",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "9 & 10 & 0 & 0 & decision 12; screening 42; professional 23; reference 137; no effect 32",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "10 & 11 & 0 & 0 & decision 12; screening 42; professional 23; reference 137; no effect 32",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "11 & 12 & 2 & 2 & decision 12; screening 40; professional 25; reference 137; no effect 32",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "12 & 13 & 49 & 49 & decision 0; screening 17; professional 60; reference 137; no effect 32",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "The expected manuscript build is 34 pages",
@@ -697,6 +722,41 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `screening 34`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `screening 32`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `reference 129`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `professional 52`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate precision`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate false positives`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate FP`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "README.md"
@@ -837,6 +897,41 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `screening 34`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `screening 32`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `reference 129`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `professional 52`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate precision`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate false positives`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate FP`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -977,6 +1072,41 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `screening 34`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `screening 32`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `reference 129`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `professional 52`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate precision`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate false positives`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate FP`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -1117,6 +1247,41 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `screening 34`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `screening 32`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `reference 129`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `professional 52`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate precision`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate false positives`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `full gate FP`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1253,11 +1418,46 @@
     },
     {
       "expected": "absence of stale claim `30 public retrieval outputs`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `screening 34`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `screening 32`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `reference 129`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `professional 52`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `full gate precision`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `full gate false positives`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `full gate FP`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     }
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 251
+  "passed_count": 291
 }

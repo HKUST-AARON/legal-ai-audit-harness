@@ -37,8 +37,6 @@ Recall point-biserial permutation p-value: 0.434.
 
 | Metric | 2.5% | Median | 97.5% |
 | --- | ---: | ---: | ---: |
-| full_gate_precision | 1.00 | 1.00 | 1.00 |
-| full_gate_specificity | 1.00 | 1.00 | 1.00 |
 | high_recall_blocked_rate | 0.67 | 0.73 | 0.79 |
 | recall_point_biserial | -0.07 | 0.06 | 0.15 |
 | recall_threshold_precision | 0.21 | 0.27 | 0.33 |

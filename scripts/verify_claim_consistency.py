@@ -40,6 +40,7 @@ def _checks(payload: dict) -> list[dict]:
     ranking = payload["ranking_visibility"]
     certificate = payload["status_certificate"]
     uncertainty = payload["annotation_uncertainty"]
+    threshold_sensitivity = payload["threshold_sensitivity"]
     values = {
         "suite_count": payload["suite_count"],
         "scenario_files": payload["scenario_files"],
@@ -191,12 +192,12 @@ def _checks(payload: dict) -> list[dict]:
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Jurisdiction-profile mutations & {values['jurisdiction']} checks & {values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Ranking-visibility diagnostics & {values['ranking_window']} window checks / {values['ranking_counterfactuals']} counterfactuals & {values['ranking_passed']}/{values['ranking_counterfactuals']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Status certificate replay & {_comma(values['certificate_checks'])} checks & {_comma(values['certificate_passed'])}/{_comma(values['certificate_checks'])}"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Baseline rule comparison & {_comma(values['baseline_predictions'])} predictions & Best simplified false positives {values['baseline_best_fp']}; full gate false positives {values['baseline_full_fp']}"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Baseline rule comparison & {_comma(values['baseline_predictions'])} predictions & Best simplified false positives {values['baseline_best_fp']}; reference rule false positives {values['baseline_full_fp']}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Annotation uncertainty & {_comma(values['uncertainty'])} perturbations & {values['uncertainty_stability']:.3f} sample stability; {values['uncertainty_qualified_high']:.3f} qualified high-status stability"),
         ("experiments/full_validation/results/full_validation_report.md", f"Validation suites: {values['suite_count']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Scenario files: {values['scenario_files']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metric statistical resamples: {values['metric_bootstrap']} bootstrap resamples and {values['metric_permutation']} permutation shuffles"),
-        ("experiments/full_validation/results/full_validation_report.md", f"Baseline rule comparisons: {values['baseline_predictions']} predictions across {values['baseline_count']} rules; best simplified false positives {values['baseline_best_fp']}; full gate false positives {values['baseline_full_fp']}"),
+        ("experiments/full_validation/results/full_validation_report.md", f"Baseline rule comparisons: {values['baseline_predictions']} predictions across {values['baseline_count']} rules; best simplified false positives {values['baseline_best_fp']}; reference rule false positives {values['baseline_full_fp']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Gate ablation evaluations: {values['gate_passed']}/{values['gate']} passed over {values['qualified']} qualified packets"),
         ("experiments/full_validation/results/full_validation_report.md", f"Repair frontier evaluations: {values['repairable']}/{values['blocked_claims']} blocked claims repairable across {values['repair']} counterfactual repairs"),
         ("experiments/full_validation/results/full_validation_report.md", f"Jurisdiction-profile evaluations: {values['jurisdiction_supported']}/{values['jurisdiction_profile_checks']} profile checks supported; {values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']} counterfactual mutations passed"),
@@ -205,6 +206,17 @@ def _checks(payload: dict) -> list[dict]:
         ("experiments/full_validation/results/full_validation_report.md", f"Annotation uncertainty: {values['uncertainty']} score perturbations; sample stability {values['uncertainty_stability']:.3f}; qualified high-status stability {values['uncertainty_qualified_high']:.3f}; boundary scenarios {values['uncertainty_boundary']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metric separation evaluations: {values['metric']} upstream-metric scenario packets; high-recall blocked outputs {values['metric_high_recall_blocked']}/{values['metric_high_recall_total']}"),
     ]
+    for run in threshold_sensitivity["runs"]:
+        expectations.append(
+            (
+                "manuscript/ai_law_case_recommendation_verifiability.tex",
+                (
+                    f"{run['normative_threshold']} & {run['decision_threshold']} & "
+                    f"{run['status_flips_from_default']} & {run['demotions_from_default']} & "
+                    f"{_threshold_distribution(run['status_distribution'])}"
+                ),
+            )
+        )
     if values["pdf_pages"] is not None:
         expectations.append(("ARTIFACT.md", f"The expected manuscript build is {values['pdf_pages']} pages"))
     checks = []
@@ -245,6 +257,13 @@ def _forbidden_checks() -> list[dict]:
         "70/70 rank-order",
         "225 returned records",
         "30 public retrieval outputs",
+        "screening 34",
+        "screening 32",
+        "reference 129",
+        "professional 52",
+        "full gate precision",
+        "full gate false positives",
+        "full gate FP",
     ]
     paths = [
         "ARTIFACT.md",
@@ -263,6 +282,16 @@ def _forbidden_checks() -> list[dict]:
 
 def _comma(value: int) -> str:
     return f"{value:,}"
+
+
+def _threshold_distribution(distribution: dict[str, int]) -> str:
+    return (
+        f"decision {distribution.get('decision_support_reason', 0)}; "
+        f"screening {distribution.get('normative_material_screening_output', 0)}; "
+        f"professional {distribution.get('professional_support_output', 0)}; "
+        f"reference {distribution.get('reference_information', 0)}; "
+        f"no effect {distribution.get('no_external_legal_effect', 0)}"
+    )
 
 
 def _pdf_page_count(path: Path) -> int | None:

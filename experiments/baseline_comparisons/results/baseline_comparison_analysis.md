@@ -4,12 +4,13 @@ Scenario packets: 246
 Qualified packets under the full audit model: 54
 Baseline rules: 12
 Baseline predictions: 2772
-Simplified rules with at least one error: True
+Simplified rules with at least one reproduction error: True
+Target label: protocol-defined reference allocation, not external legal-merits ground truth.
 
 Best simplified rule by F1: Source-bound score candidate with review gate (precision 0.59, recall 1.00, false positives 38, false negatives 0)
 Lowest-false-positive simplified rule: Source-bound score candidate with review gate (false positives 38, false negatives 0)
 
-| Rule | Denom. | Precision | Recall | Specificity | F1 | FP | FN |
+| Rule | Denom. | Precision | Recall | Specificity | F1 | Reproduction FP | Reproduction FN |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Recall >= 0.8 | 201 | 0.27 | 1.00 | 0.03 | 0.42 | 144 | 0 |
 | F1 >= 0.8 | 201 | 0.27 | 1.00 | 0.01 | 0.42 | 146 | 0 |
@@ -22,4 +23,4 @@ Lowest-false-positive simplified rule: Source-bound score candidate with review 
 | Source-bound score candidate with counter-material | 246 | 0.52 | 0.96 | 0.75 | 0.68 | 48 | 2 |
 | Source-bound score candidate with review gate | 246 | 0.59 | 1.00 | 0.80 | 0.74 | 38 | 0 |
 | Source-bound evidence, counter-material and review gate | 246 | 0.47 | 0.96 | 0.70 | 0.63 | 58 | 2 |
-| Full audit gate function | 246 | 1.00 | 1.00 | 1.00 | 1.00 | 0 | 0 |
+| Full audit gate reference allocation | 246 | 1.00 | 1.00 | 1.00 | 1.00 | 0 | 0 |

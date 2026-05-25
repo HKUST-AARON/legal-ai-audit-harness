@@ -743,14 +743,14 @@ def _metric_separation_row(payload: dict) -> dict:
         "evidence_class": "retrieval/status non-equivalence check",
         "validation_units": f"{payload['metric_scenario_count']} upstream-metric scenario packets",
         "scenario_count": payload["metric_scenario_count"],
-        "rule_pass": f"recall-threshold precision {recall_test['precision']:.2f}; full gate precision {final_gate['precision']:.2f}",
+        "rule_pass": f"recall-threshold precision {recall_test['precision']:.2f}; reference gate FP {final_gate['false_positive']}",
         "mean_audit_score": None,
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
         "status_distribution": {
             "recall_point_biserial": round(payload["point_biserial"]["recall"], 2),
             "high_recall_blocked_rate": round(payload["high_recall_blocked"]["rate"], 2),
-            "full_gate_specificity": round(final_gate["specificity"], 2),
+            "reference_gate_false_positive": final_gate["false_positive"],
         },
         "finding": "Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.",
     }
@@ -765,7 +765,7 @@ def _baseline_comparison_row(payload: dict) -> dict:
         "evidence_class": "alternative-policy comparison",
         "validation_units": f"{payload['baseline_prediction_count']} baseline predictions over {payload['baseline_count']} rules",
         "scenario_count": payload["baseline_prediction_count"],
-        "rule_pass": f"best simplified FP {best['false_positive']}; full gate FP {full['false_positive']}",
+        "rule_pass": f"best simplified FP {best['false_positive']}; reference rule FP {full['false_positive']}",
         "mean_audit_score": None,
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
@@ -773,10 +773,10 @@ def _baseline_comparison_row(payload: dict) -> dict:
             "simplified_rules_with_errors": int(payload["all_simplified_rules_have_errors"]),
             "best_simplified_precision": round(best["precision"], 2),
             "best_simplified_recall": round(best["recall"], 2),
-            "full_gate_precision": round(full["precision"], 2),
-            "full_gate_specificity": round(full["specificity"], 2),
+            "reference_rule_false_positive": full["false_positive"],
+            "reference_rule_false_negative": full["false_negative"],
         },
-        "finding": "Compares the full audit gate against recall, F1, total-score, source-bound and review-gate substitutes, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
+        "finding": "Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
     }
 
 
@@ -908,7 +908,7 @@ def _format_report(payload: dict) -> str:
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
-        f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; full gate false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
+        f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; reference rule false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",

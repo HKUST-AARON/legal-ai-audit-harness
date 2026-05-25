@@ -183,13 +183,10 @@ def _bootstrap(rows: list[dict]) -> dict:
     for _ in range(RESAMPLE_ITERATIONS):
         sample = [rows[rng.randrange(len(rows))] for _ in rows]
         recall_test = _confusion_row(sample, f"recall>={THRESHOLD}", lambda row: row["recall"] >= THRESHOLD)
-        final_gate = _gate_cascade(sample)[-1]
         samples.append(
             {
                 "recall_point_biserial": _point_biserial(sample, "recall"),
                 "recall_threshold_precision": recall_test["precision"],
-                "full_gate_precision": final_gate["precision"],
-                "full_gate_specificity": final_gate["specificity"],
                 "high_recall_blocked_rate": _high_recall_blocked(sample)["rate"],
             }
         )

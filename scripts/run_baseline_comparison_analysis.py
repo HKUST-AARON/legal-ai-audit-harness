@@ -192,7 +192,8 @@ def _format_report(payload: dict) -> str:
         f"Qualified packets under the full audit model: {payload['qualified_count']}",
         f"Baseline rules: {payload['baseline_count']}",
         f"Baseline predictions: {payload['baseline_prediction_count']}",
-        f"Simplified rules with at least one error: {payload['all_simplified_rules_have_errors']}",
+        f"Simplified rules with at least one reproduction error: {payload['all_simplified_rules_have_errors']}",
+        "Target label: protocol-defined reference allocation, not external legal-merits ground truth.",
         "",
         "Best simplified rule by F1: "
         f"{payload['best_simplified']['label']} "
@@ -205,12 +206,13 @@ def _format_report(payload: dict) -> str:
         f"(false positives {payload['lowest_false_positive_simplified']['false_positive']}, "
         f"false negatives {payload['lowest_false_positive_simplified']['false_negative']})",
         "",
-        "| Rule | Denom. | Precision | Recall | Specificity | F1 | FP | FN |",
+        "| Rule | Denom. | Precision | Recall | Specificity | F1 | Reproduction FP | Reproduction FN |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for row in payload["baselines"]:
+        label = "Full audit gate reference allocation" if row["id"] == "full_audit_gate" else row["label"]
         lines.append(
-            f"| {row['label']} | {row['denominator']} | {row['precision']:.2f} | "
+            f"| {label} | {row['denominator']} | {row['precision']:.2f} | "
             f"{row['recall']:.2f} | {row['specificity']:.2f} | {row['f1']:.2f} | "
             f"{row['false_positive']} | {row['false_negative']} |"
         )
