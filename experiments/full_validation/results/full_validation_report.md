@@ -74,6 +74,15 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Annotation uncertainty Monte Carlo | score-noise robustness | 61500 score-perturbed evaluations | 61500 | 0.933 sample stability; 0.924 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 143, exact_stable_scenarios: 102, high_status_stable_scenarios: 183, mean_status_rank_shift: 0.086 |
 | Score-blinded dual coding | codebook reproducibility | 222 packets x 2 coding passes | 222 | 0.99 coder kappa; 0.37 weakest base-dimension kappa (Q); 0.86 min base-dimension exact; 0.14 max score drift | n/a | n/a | n/a | base_dimension_max_mean_absolute_delta: 0.14, base_dimension_min_exact_agreement: 0.86, base_dimension_min_kappa: 0.37, base_dimension_min_kappa_coder: coder_a, base_dimension_min_kappa_dimension: Q, base_dimension_min_kappa_exact_agreement: 0.96, base_dimension_min_pabak: 0.79, coder_cohen_kappa: 0.99, coder_exact_status_agreement: 0.99, coder_quadratic_weighted_kappa: 0.96, coder_weighted_status_agreement: 0.99, min_base_cohen_kappa: 0.92, min_base_exact_status_agreement: 0.95, min_base_quadratic_weighted_kappa: 0.9, min_base_weighted_status_agreement: 0.97, minimum_dimension_kappa: 0.93, minimum_failure_flag_exact_agreement: 0.97, minimum_missing_gate_exact_agreement: 0.98, status_disagreements: 2 |
 
+## Substitute-Theory Falsification
+
+| Substitute theory | Scenario false positives | Scenario precision | Lattice false positives | Full protocol false positives | Additional evidence |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Performance sufficiency | 144 | 0.27 | n/a | 0 | 144/197 high-recall outputs were blocked below normative screening |
+| Source-label sufficiency | 72 | 0.43 | 3192 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
+| Review-label sufficiency | 149 | 0.27 | 9816 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
+| Score sufficiency | 174 | 0.24 | 24792 | 0 | High total score cannot substitute for missing legal-material predicates |
+
 ## Findings
 
 - **Protocol stress scenarios:** Tests downgrade, withdrawal, decision-support and high-recall-but-blocked behavior.

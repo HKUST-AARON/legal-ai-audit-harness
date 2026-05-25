@@ -1203,6 +1203,20 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
         self.assertEqual(report["total_evaluation_rows"], 3651560)
+        substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
+        self.assertEqual(set(substitute_rows), {
+            "performance_sufficiency",
+            "source_label_sufficiency",
+            "review_label_sufficiency",
+            "score_sufficiency",
+        })
+        self.assertEqual(substitute_rows["performance_sufficiency"]["scenario_false_positive"], 144)
+        self.assertEqual(substitute_rows["source_label_sufficiency"]["scenario_false_positive"], 72)
+        self.assertEqual(substitute_rows["review_label_sufficiency"]["scenario_false_positive"], 149)
+        self.assertEqual(substitute_rows["score_sufficiency"]["scenario_false_positive"], 174)
+        self.assertEqual(substitute_rows["score_sufficiency"]["lattice_false_positive"], 24792)
+        self.assertTrue(all(row["falsified"] for row in substitute_rows.values()))
+        self.assertTrue(all(row["full_protocol_false_positive"] == 0 for row in substitute_rows.values()))
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)

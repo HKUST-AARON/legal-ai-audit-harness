@@ -33,6 +33,7 @@ Expected aggregate output:
 - 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 2,772 baseline-rule predictions across 12 alternative status rules
+- a substitute-theory falsification summary for performance, source-label, review-label and score sufficiency, with 0 full-protocol false positives
 - 336/336 gate-ablation evaluations passed
 - 336/336 gate-contrast witness pairs passed with 336/336 score/metric/role preservation and 336/336 status separation
 - 1,674/1,674 source-chain attack variants passed

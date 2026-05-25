@@ -446,6 +446,11 @@ def main() -> int:
             "query_portfolios": query_portfolio_payload["portfolio_count"],
         }
     )
+    substitute_theory_payload = _substitute_theory_results(
+        metric_separation_payload,
+        baseline_comparison_payload,
+        status_lattice_payload,
+    )
     payload = {
         "suite_count": len(rows),
         "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
@@ -770,6 +775,7 @@ def main() -> int:
                 "query_expansion_repairs_counter_material"
             ],
         },
+        "substitute_theory_falsification": substitute_theory_payload,
         "suites": rows,
     }
     (RESULTS / "full_validation_report.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
@@ -821,6 +827,81 @@ def _output_unit_count(path: Path) -> int:
         scenario = json.loads(scenario_path.read_text(encoding="utf-8"))
         total += len(scenario.get("evidence_packet", {}).get("output_units", []))
     return total
+
+
+def _baseline_by_id(payload: dict, baseline_id: str) -> dict:
+    for baseline in payload["baselines"]:
+        if baseline["id"] == baseline_id:
+            return baseline
+    raise KeyError(baseline_id)
+
+
+def _lattice_rule(payload: dict, rule_id: str) -> dict:
+    for rule in payload["substitution_rules"]:
+        if rule["rule"] == rule_id:
+            return rule
+    raise KeyError(rule_id)
+
+
+def _substitute_theory_results(metric_payload: dict, baseline_payload: dict, lattice_payload: dict) -> list[dict]:
+    full_gate = baseline_payload["full_gate"]
+    theories = [
+        {
+            "id": "performance_sufficiency",
+            "theory": "Performance sufficiency",
+            "substitute": "Recall/F1/precision thresholds confer procedural status",
+            "scenario_rule": _baseline_by_id(baseline_payload, "recall_threshold"),
+            "lattice_rule": None,
+            "additional_evidence": f"{metric_payload['high_recall_blocked']['count']}/{metric_payload['high_recall_blocked']['denominator']} high-recall outputs were blocked below normative screening",
+        },
+        {
+            "id": "source_label_sufficiency",
+            "theory": "Source-label sufficiency",
+            "substitute": "Source-bound evidence alone confers procedural status",
+            "scenario_rule": _baseline_by_id(baseline_payload, "source_bound_only"),
+            "lattice_rule": _lattice_rule(lattice_payload, "source_bound_score"),
+            "additional_evidence": "Source links without authority, counter-material and contestability gates over-admit outputs",
+        },
+        {
+            "id": "review_label_sufficiency",
+            "theory": "Review-label sufficiency",
+            "substitute": "Review posture or role readiness confers procedural status",
+            "scenario_rule": _baseline_by_id(baseline_payload, "review_ready_only"),
+            "lattice_rule": _lattice_rule(lattice_payload, "role_ready_and_score"),
+            "additional_evidence": "Review labels without source-chain and failure-cap gates over-admit outputs",
+        },
+        {
+            "id": "score_sufficiency",
+            "theory": "Score sufficiency",
+            "substitute": "Total audit score confers procedural status",
+            "scenario_rule": _baseline_by_id(baseline_payload, "total_score_only"),
+            "lattice_rule": _lattice_rule(lattice_payload, "total_score_at_least_9"),
+            "additional_evidence": "High total score cannot substitute for missing legal-material predicates",
+        },
+    ]
+    rows = []
+    for theory in theories:
+        scenario_rule = theory["scenario_rule"]
+        lattice_rule = theory["lattice_rule"]
+        rows.append(
+            {
+                "id": theory["id"],
+                "theory": theory["theory"],
+                "substitute": theory["substitute"],
+                "scenario_false_positive": scenario_rule["false_positive"],
+                "scenario_false_negative": scenario_rule["false_negative"],
+                "scenario_precision": scenario_rule["precision"],
+                "scenario_recall": scenario_rule["recall"],
+                "lattice_false_positive": None if lattice_rule is None else lattice_rule["false_positive"],
+                "lattice_precision": None if lattice_rule is None else lattice_rule["precision"],
+                "full_protocol_false_positive": full_gate["false_positive"],
+                "full_protocol_false_negative": full_gate["false_negative"],
+                "falsified": scenario_rule["false_positive"] > 0
+                or (lattice_rule is not None and lattice_rule["false_positive"] > 0),
+                "additional_evidence": theory["additional_evidence"],
+            }
+        )
+    return rows
 
 
 def _threshold_sensitivity(scenarios: list[dict]) -> dict:
@@ -1472,6 +1553,31 @@ def _format_report(payload: dict) -> str:
                     _metric(row["mean_upstream_recall"]),
                     "n/a" if row["high_upstream_but_blocked"] is None else str(row["high_upstream_but_blocked"]),
                     status_distribution,
+                ]
+            )
+            + " |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Substitute-Theory Falsification",
+            "",
+            "| Substitute theory | Scenario false positives | Scenario precision | Lattice false positives | Full protocol false positives | Additional evidence |",
+            "| --- | ---: | ---: | ---: | ---: | --- |",
+        ]
+    )
+    for row in payload["substitute_theory_falsification"]:
+        lattice_fp = "n/a" if row["lattice_false_positive"] is None else str(row["lattice_false_positive"])
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    row["theory"],
+                    str(row["scenario_false_positive"]),
+                    _metric(row["scenario_precision"]),
+                    lattice_fp,
+                    str(row["full_protocol_false_positive"]),
+                    row["additional_evidence"],
                 ]
             )
             + " |"

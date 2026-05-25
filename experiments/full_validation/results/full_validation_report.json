@@ -1127,6 +1127,68 @@
   "status_lattice_gate_ablation_checks": 851,
   "status_lattice_necessity_checks": 851,
   "status_lattice_substitution_predictions": 1632960,
+  "substitute_theory_falsification": [
+    {
+      "additional_evidence": "144/197 high-recall outputs were blocked below normative screening",
+      "falsified": true,
+      "full_protocol_false_negative": 0,
+      "full_protocol_false_positive": 0,
+      "id": "performance_sufficiency",
+      "lattice_false_positive": null,
+      "lattice_precision": null,
+      "scenario_false_negative": 0,
+      "scenario_false_positive": 144,
+      "scenario_precision": 0.26903553299492383,
+      "scenario_recall": 1.0,
+      "substitute": "Recall/F1/precision thresholds confer procedural status",
+      "theory": "Performance sufficiency"
+    },
+    {
+      "additional_evidence": "Source links without authority, counter-material and contestability gates over-admit outputs",
+      "falsified": true,
+      "full_protocol_false_negative": 0,
+      "full_protocol_false_positive": 0,
+      "id": "source_label_sufficiency",
+      "lattice_false_positive": 3192,
+      "lattice_precision": 0.05,
+      "scenario_false_negative": 0,
+      "scenario_false_positive": 72,
+      "scenario_precision": 0.42857142857142855,
+      "scenario_recall": 1.0,
+      "substitute": "Source-bound evidence alone confers procedural status",
+      "theory": "Source-label sufficiency"
+    },
+    {
+      "additional_evidence": "Review labels without source-chain and failure-cap gates over-admit outputs",
+      "falsified": true,
+      "full_protocol_false_negative": 0,
+      "full_protocol_false_positive": 0,
+      "id": "review_label_sufficiency",
+      "lattice_false_positive": 9816,
+      "lattice_precision": 0.0168,
+      "scenario_false_negative": 0,
+      "scenario_false_positive": 149,
+      "scenario_precision": 0.2660098522167488,
+      "scenario_recall": 1.0,
+      "substitute": "Review posture or role readiness confers procedural status",
+      "theory": "Review-label sufficiency"
+    },
+    {
+      "additional_evidence": "High total score cannot substitute for missing legal-material predicates",
+      "falsified": true,
+      "full_protocol_false_negative": 0,
+      "full_protocol_false_positive": 0,
+      "id": "score_sufficiency",
+      "lattice_false_positive": 24792,
+      "lattice_precision": 0.0067,
+      "scenario_false_negative": 0,
+      "scenario_false_positive": 174,
+      "scenario_precision": 0.23684210526315788,
+      "scenario_recall": 1.0,
+      "substitute": "Total audit score confers procedural status",
+      "theory": "Score sufficiency"
+    }
+  ],
   "suite_count": 34,
   "suites": [
     {

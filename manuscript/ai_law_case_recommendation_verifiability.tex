@@ -400,7 +400,7 @@ The rules above are implemented as an executable audit harness and proof-carryin
 
 The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, role evidence, audit vector, jurisdiction profile, upstream metrics and evidence packet. Authority sets, review gates and counter-material declarations are mandatory for screening and decision-support claims; missing fields trigger caps. The runner computes status without reading the expected outcome and emits metrics, dispositions and proof certificates.
 
-The complete evaluation matrix tests one rule: procedural status follows the legal-material chain. It contains 246 scenario packets with 679 embedded records or outputs and 3,651,560 validation operations across public-output, model-output, invariant, status-lattice, adversarial, ablation, replay, certificate, query, ranking and coding-robustness layers. The design is falsification-oriented. Public-output and holdout layers test whether real upstream outputs carry reconstructable legal-material chains. Model-output and repair layers test whether the same fluent authority recommendations change status when source support, counter-material salience and adoption gates change. Metric, baseline, invariant and lattice layers test whether recall, F1, total score, source binding, review posture or partial gate predicates can reproduce the protocol. Attack, challenge, replay and tamper layers test whether any missing or altered link breaks qualification.
+The complete evaluation matrix adjudicates one rule: procedural status follows the legal-material chain. It contains 246 scenario packets with 679 embedded records or outputs and 3,651,560 validation operations across public-output, model-output, invariant, status-lattice, adversarial, ablation, replay, certificate, query, ranking and coding-robustness layers. Public-output and holdout layers test real upstream outputs. Model-output and repair layers test whether the same fluent authority recommendations change status when source support, counter-material salience and adoption gates change. Metric, baseline, invariant and lattice layers test four rival theories--performance sufficiency, source-label sufficiency, review-label sufficiency and score sufficiency. Attack, challenge, replay and tamper layers test whether any broken link destroys qualification.
 
 \begin{table}[htbp]
 \centering
@@ -433,7 +433,7 @@ Status allocation is separately replayable & Policy-constants replay & A second 
 \end{tabularx}
 \end{table}
 
-The target variable is procedural allocation. A positive packet is one that the full protocol qualifies for normative screening or decision support after applying score gates, evidence-packet gates, role caps and failure caps. Baseline, metric, ablation, source-anchor, adversarial and coding layers test whether that allocation survives simpler substitutes and varied artefacts.
+The target variable is procedural allocation. A positive packet is one that the full protocol qualifies for normative screening or decision support after applying score gates, evidence-packet gates, role caps and failure caps. The generated report emits a substitute-theory falsification table. Recall-threshold performance produced 144 false positives; source-label sufficiency produced 72 scenario false positives and 3,192 lattice false positives; review-label sufficiency produced 149 and 9,816; score sufficiency produced 174 and 24,792. The full protocol produced zero false positives in the same comparison.
 
 \begin{table}[htbp]
 \centering
