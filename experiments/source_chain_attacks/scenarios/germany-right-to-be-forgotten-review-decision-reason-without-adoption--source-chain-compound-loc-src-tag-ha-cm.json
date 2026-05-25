@@ -1,0 +1,172 @@
+{
+  "id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption--source-chain-compound-loc-src-tag-ha-cm",
+  "claimed_status": "decision_support_reason",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Issue-defined German constitutional-law authority packet for fundamental-rights review where domestic law interacts with EU law. Ablation: decision reason without adoption.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "The source manifest links each authority to public constitutional, EU or public-translation source pages."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The issue statement, source collection and output identifier are fixed in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The packet distinguishes Federal Constitutional Court decisions, Court of Justice authority, constitutional text and EU Charter materials."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "The gold set includes both German constitutional and EU fundamental-rights review materials so that either side cannot be omitted."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect all authority roles and challenge the inclusion, label or omission of each item."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The output packet is fully logged, but the review gate does not record authorized institutional adoption."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+      "google-spain-c-131-12"
+    ],
+    "retrieved_high_authority": [
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+      "google-spain-c-131-12"
+    ],
+    "counter_or_limiting": [
+      "charter-articles-7-8-11-16",
+      "basic-law-personality-expression-balance"
+    ],
+    "retrieved_counter_or_limiting": [
+      "basic-law-personality-expression-balance"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "basic-law-only-review-for-fully-harmonized-eu-law",
+      "eu-charter-only-review-for-open-domestic-law"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+      "google-spain-c-131-12",
+      "basic-law-personality-expression-balance"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "Right to be Forgotten I is high authority for German fundamental-rights review where domestic law is not fully determined by EU law.",
+        "source_ids": [
+          "bverfg-right-to-be-forgotten-i-1-bvr-16-13"
+        ],
+        "locators": [
+          "1 BvR 16/13"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "Right to be Forgotten II is high authority for applying Union fundamental rights in fully harmonized EU-law settings.",
+        "source_ids": [
+          "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+        ],
+        "locators": [
+          "1 BvR 276/17"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "EU Charter and Basic Law materials are limiting materials because review depends on whether the relevant law is fully harmonized or open to domestic constitutional standards.",
+        "source_ids": [
+          "charter-articles-7-8-11-16",
+          "basic-law-personality-expression-balance"
+        ],
+        "locators": [
+          "Articles 7, 8, 11 and 16 CFR",
+          "Articles 1, 2 and 5 GG"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Google Spain is a Court of Justice authority that should be visible for EU right-to-be-forgotten analysis.",
+        "source_ids": [
+          "google-spain-c-131-12"
+        ],
+        "locators": [
+          "Case C-131/12"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "__nonmanifest_source__",
+        "locator": "__wrong_locator__",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+        "locator": "1 BvR 276/17",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "google-spain-c-131-12",
+        "locator": "Case C-131/12",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "charter-articles-7-8-11-16",
+        "locator": "Articles 7, 8, 11 and 16 CFR",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "basic-law-personality-expression-balance",
+        "locator": "Articles 1, 2 and 5 GG",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "german_constitutional_law",
+      "european_union_fundamental_rights",
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "counter_material_complete": true,
+  "source_chain_attack": {
+    "attack": "locator_mismatch+source_id_mismatch+nonprocedural_source_tags+high_authority_omission+counter_material_omission",
+    "source": "germany-right-to-be-forgotten-review-decision-reason-without-adoption",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

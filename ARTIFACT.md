@@ -26,13 +26,13 @@ Expected aggregate output:
 - 32 validation suites
 - 246 scenario files
 - 679 embedded records or output items
-- 148,180 total evaluation rows
+- 149,584 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
 - 2,772 baseline-rule predictions across 12 alternative status rules
 - 336/336 gate-ablation evaluations passed
-- 270/270 source-chain attack variants passed
+- 1,674/1,674 source-chain attack variants passed
 - 270/270 contestation challenge variants passed
 - 1,134/1,134 metamorphic policy tests passed
 - 184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations

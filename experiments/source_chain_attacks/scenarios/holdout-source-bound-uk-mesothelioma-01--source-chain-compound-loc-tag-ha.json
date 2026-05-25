@@ -1,0 +1,274 @@
+{
+  "id": "holdout-source-bound-uk-mesothelioma-01--source-chain-compound-loc-tag-ha",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Out-of-sample source-bound repair packet scored after policy freeze.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source-support validator checked each output link against the issue manifest, locator, hashed manifest source-support evidence and procedural source tag."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The prompt, model capture, repair layer and output identifier are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority coverage is recomputed against the issue-defined high-authority set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter/limiting material coverage is recomputed against the issue-defined counter-material set."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect, challenge and supplement every source-supported output unit only if all links validate."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The repaired output is logged for audit, but no authorized decision-maker adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "retrieved_high_authority": [
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "retrieved_counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "barker-2006-ukhl-20",
+      "sienkiewicz-2011-uksc-10",
+      "compensation-act-2006-s3"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "claim": "Fairchild v Glenhaven Funeral Services Ltd is relevant because it addresses fairchild and material increase.",
+        "source_ids": [
+          "fairchild-2002-ukhl-22"
+        ],
+        "locators": [
+          "[2002] UKHL 22"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "unit-02",
+        "claim": "Barker v Corus (UK) plc is relevant because it addresses barker and proportionate liability.",
+        "source_ids": [
+          "barker-2006-ukhl-20"
+        ],
+        "locators": [
+          "[2006] UKHL 20"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "unit-03",
+        "claim": "Sienkiewicz v Greif (UK) Ltd is relevant because it addresses sienkiewicz and mesothelioma.",
+        "source_ids": [
+          "sienkiewicz-2011-uksc-10"
+        ],
+        "locators": [
+          "[2011] UKSC 10"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "unit-04",
+        "claim": "Compensation Act 2006 section 3 is relevant because it addresses compensation act and section 3.",
+        "source_ids": [
+          "compensation-act-2006-s3"
+        ],
+        "locators": [
+          "Compensation Act 2006, s. 3"
+        ],
+        "output_rank": 4
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-01",
+        "source_id": "fairchild-2002-ukhl-22",
+        "locator": "__wrong_locator__",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "fairchild-2002-ukhl-22-support-1",
+            "locator": "[2002] UKHL 22",
+            "matched_terms": [
+              "fairchild"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "fairchild"
+        ]
+      },
+      {
+        "unit_id": "unit-02",
+        "source_id": "barker-2006-ukhl-20",
+        "locator": "[2006] UKHL 20",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "barker-2006-ukhl-20-support-1",
+            "locator": "[2006] UKHL 20",
+            "matched_terms": [
+              "barker",
+              "proportionate liability"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "barker",
+          "proportionate liability"
+        ]
+      },
+      {
+        "unit_id": "unit-03",
+        "source_id": "sienkiewicz-2011-uksc-10",
+        "locator": "[2011] UKSC 10",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "sienkiewicz-2011-uksc-10-support-1",
+            "locator": "[2011] UKSC 10",
+            "matched_terms": [
+              "sienkiewicz",
+              "mesothelioma"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "mesothelioma",
+          "sienkiewicz"
+        ]
+      },
+      {
+        "unit_id": "unit-04",
+        "source_id": "compensation-act-2006-s3",
+        "locator": "Compensation Act 2006, s. 3",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "compensation-act-2006-s3-support-1",
+            "locator": "Compensation Act 2006, s. 3",
+            "matched_terms": [
+              "compensation act",
+              "section 3"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "compensation act",
+          "section 3"
+        ]
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "england_and_wales_tort_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "source_binding_validation": {
+    "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+    "manifest_records": 8,
+    "output_links": 4,
+    "missing_source_ids": [],
+    "missing_output_links": [],
+    "unsupported_locators": [],
+    "unsupported_claims": [],
+    "unsupported_source_support": [],
+    "source_support_by_link": {
+      "unit-01::fairchild-2002-ukhl-22": [
+        {
+          "support_id": "fairchild-2002-ukhl-22-support-1",
+          "locator": "[2002] UKHL 22",
+          "matched_terms": [
+            "fairchild"
+          ]
+        }
+      ],
+      "unit-02::barker-2006-ukhl-20": [
+        {
+          "support_id": "barker-2006-ukhl-20-support-1",
+          "locator": "[2006] UKHL 20",
+          "matched_terms": [
+            "barker",
+            "proportionate liability"
+          ]
+        }
+      ],
+      "unit-03::sienkiewicz-2011-uksc-10": [
+        {
+          "support_id": "sienkiewicz-2011-uksc-10-support-1",
+          "locator": "[2011] UKSC 10",
+          "matched_terms": [
+            "sienkiewicz",
+            "mesothelioma"
+          ]
+        }
+      ],
+      "unit-04::compensation-act-2006-s3": [
+        {
+          "support_id": "compensation-act-2006-s3-support-1",
+          "locator": "Compensation Act 2006, s. 3",
+          "matched_terms": [
+            "compensation act",
+            "section 3"
+          ]
+        }
+      ]
+    },
+    "all_links_source_bound": true,
+    "high_authority_complete": true,
+    "counter_material_complete": true,
+    "claim_support_complete": true,
+    "source_support_complete": true,
+    "source_tag_assignment": "assigned_after_holdout_manifest_locator_issue_set_and_source_support_validation"
+  },
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "source_chain_attack": {
+    "attack": "locator_mismatch+nonprocedural_source_tags+high_authority_omission",
+    "source": "holdout-source-bound-uk-mesothelioma-01",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

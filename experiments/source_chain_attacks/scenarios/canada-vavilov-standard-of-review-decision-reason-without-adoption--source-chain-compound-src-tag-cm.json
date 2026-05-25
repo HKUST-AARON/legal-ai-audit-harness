@@ -1,0 +1,182 @@
+{
+  "id": "canada-vavilov-standard-of-review-decision-reason-without-adoption--source-chain-compound-src-tag-cm",
+  "claimed_status": "decision_support_reason",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Issue-defined Canadian administrative-law authority packet for standard-of-review screening after Vavilov. Ablation: decision reason without adoption.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "The source manifest links each authority to public Supreme Court of Canada or CanLII source pages."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The issue statement, source collection and output identifier are fixed in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The packet distinguishes controlling Supreme Court precedent, companion cases, historical framework material and limiting rules."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "The gold set includes high-authority materials, historical/limiting materials and issue-specific exception material."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect all authority roles and challenge the inclusion, label or omission of each item."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The output packet is fully logged, but the review gate does not record authorized institutional adoption."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "retrieved_high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "counter_or_limiting": [
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "retrieved_counter_or_limiting": [
+      "vavilov-statutory-appeal-limits"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "dunsmuir-contextual-standard-selection-as-current-default"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67",
+      "vavilov-statutory-appeal-limits"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "Vavilov is the central current Supreme Court authority for Canadian administrative-law standard-of-review analysis.",
+        "source_ids": [
+          "vavilov-2019-scc-65"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "Bell Canada is a companion decision that should be visible with Vavilov in the administrative-law trilogy.",
+        "source_ids": [
+          "bell-canada-2019-scc-66"
+        ],
+        "locators": [
+          "2019 SCC 66"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "Dunsmuir should be visible as historical framework material rather than silently treated as the current default method.",
+        "source_ids": [
+          "dunsmuir-2008-scc-9",
+          "vavilov-2019-scc-65"
+        ],
+        "locators": [
+          "2008 SCC 9",
+          "2019 SCC 65"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Canada Post is a companion decision that should be visible with Vavilov in the administrative-law trilogy.",
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ],
+        "locators": [
+          "2019 SCC 67"
+        ]
+      },
+      {
+        "id": "unit-5",
+        "claim": "Vavilov's statutory appeal and correctness-exception rules are limiting materials for a simple reasonableness-only summary.",
+        "source_ids": [
+          "vavilov-statutory-appeal-limits"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "__nonmanifest_source__",
+        "locator": "2019 SCC 65",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "bell-canada-2019-scc-66",
+        "locator": "2019 SCC 66",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "canada-post-2019-scc-67",
+        "locator": "2019 SCC 67",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "dunsmuir-2008-scc-9",
+        "locator": "2008 SCC 9",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-5",
+        "source_id": "vavilov-statutory-appeal-limits",
+        "locator": "2019 SCC 65",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "canadian_administrative_law",
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "counter_material_complete": true,
+  "source_chain_attack": {
+    "attack": "source_id_mismatch+nonprocedural_source_tags+counter_material_omission",
+    "source": "canada-vavilov-standard-of-review-decision-reason-without-adoption",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

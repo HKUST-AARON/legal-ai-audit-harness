@@ -1,0 +1,324 @@
+{
+  "id": "evidence-ladder-codex55-eu-01--authorized-decision-support--source-chain-compound-src-ha-cm",
+  "claimed_status": "decision_support_reason",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation on GDPR Article 15 recipient identity. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source-support validator checked each output link against the issue manifest, locator, hashed manifest source-support evidence and procedural source tag."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The prompt, model capture, repair layer and output identifier are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority coverage is recomputed against the issue-defined high-authority set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter/limiting material coverage is recomputed against the issue-defined counter-material set."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect, challenge and supplement every source-supported output unit only if all links validate."
+    },
+    "L": {
+      "score": 2,
+      "evidence": "The repaired output is logged for audit, but no authorized decision-maker adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "retrieved_high_authority": [
+      "cjeu-c-154-21-osterreichische-post"
+    ],
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-15-4"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "recipient-categories-only-as-default-under-article-15-1-c"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-15-4",
+      "gdpr-art-4-9",
+      "edpb-guidelines-01-2022"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 0.93,
+    "recall": 1.0,
+    "f1": 0.96
+  },
+  "upstream_output": {
+    "provider": "codex",
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh",
+    "capture_mode": "no_browse_no_tools",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-eu-01"
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "GDPR Article 15(1)(c) governs recipients or categories of recipients.",
+        "source_ids": [
+          "gdpr-art-15"
+        ],
+        "locators": [
+          "Article 15(1)(c)"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "C-154/21 requires specific recipients where identifiable and no limit applies.",
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ],
+        "locators": [
+          "C-154/21"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Article 12(5) and Article 15(4) supply limits.",
+        "source_ids": [
+          "gdpr-art-12-5",
+          "gdpr-art-15-4"
+        ],
+        "locators": [
+          "Article 12(5)",
+          "Article 15(4)"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "Article 4(9) contains a public-authority carve-out.",
+        "source_ids": [
+          "gdpr-art-4-9"
+        ],
+        "locators": [
+          "Article 4(9)"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "__nonmanifest_source__",
+        "locator": "Article 15(1)(c)",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "gdpr-art-15-support-1",
+            "locator": "GDPR Article 15",
+            "matched_terms": [
+              "article 15",
+              "recipients"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "article 15",
+          "recipients"
+        ]
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "locator": "C-154/21",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "cjeu-c-154-21-osterreichische-post-support-1",
+            "locator": "Case C-154/21",
+            "matched_terms": [
+              "c-154/21",
+              "recipients"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "c-154/21",
+          "recipients"
+        ]
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "gdpr-art-12-5",
+        "locator": "Article 12(5)",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "gdpr-art-12-5-support-1",
+            "locator": "GDPR Article 12(5)",
+            "matched_terms": [
+              "article 12(5)",
+              "limits"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "article 12(5)",
+          "limits"
+        ]
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "gdpr-art-15-4",
+        "locator": "Article 15(4)",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "gdpr-art-15-4-support-1",
+            "locator": "GDPR Article 15(4)",
+            "matched_terms": [
+              "article 15(4)"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "article 15(4)"
+        ]
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "gdpr-art-4-9",
+        "locator": "Article 4(9)",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "gdpr-art-4-9-support-1",
+            "locator": "GDPR Article 4(9)",
+            "matched_terms": [
+              "article 4(9)",
+              "public-authority"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "article 4(9)",
+          "public-authority"
+        ]
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "authorized_adoption",
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": true,
+    "adoption_reasons_recorded": true,
+    "contestation_recorded": true
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "system_role": "authorized_decision_support_tool",
+  "source_binding_validation": {
+    "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
+    "manifest_records": 7,
+    "output_links": 5,
+    "missing_source_ids": [],
+    "missing_output_links": [],
+    "unsupported_locators": [],
+    "unsupported_claims": [],
+    "unsupported_source_support": [],
+    "source_support_by_link": {
+      "unit-1::gdpr-art-15": [
+        {
+          "support_id": "gdpr-art-15-support-1",
+          "locator": "GDPR Article 15",
+          "matched_terms": [
+            "article 15",
+            "recipients"
+          ]
+        }
+      ],
+      "unit-2::cjeu-c-154-21-osterreichische-post": [
+        {
+          "support_id": "cjeu-c-154-21-osterreichische-post-support-1",
+          "locator": "Case C-154/21",
+          "matched_terms": [
+            "c-154/21",
+            "recipients"
+          ]
+        }
+      ],
+      "unit-3::gdpr-art-12-5": [
+        {
+          "support_id": "gdpr-art-12-5-support-1",
+          "locator": "GDPR Article 12(5)",
+          "matched_terms": [
+            "article 12(5)",
+            "limits"
+          ]
+        }
+      ],
+      "unit-3::gdpr-art-15-4": [
+        {
+          "support_id": "gdpr-art-15-4-support-1",
+          "locator": "GDPR Article 15(4)",
+          "matched_terms": [
+            "article 15(4)"
+          ]
+        }
+      ],
+      "unit-4::gdpr-art-4-9": [
+        {
+          "support_id": "gdpr-art-4-9-support-1",
+          "locator": "GDPR Article 4(9)",
+          "matched_terms": [
+            "article 4(9)",
+            "public-authority"
+          ]
+        }
+      ]
+    },
+    "all_links_source_bound": true,
+    "high_authority_complete": true,
+    "counter_material_complete": true,
+    "claim_support_complete": true,
+    "source_support_complete": true,
+    "source_tag_assignment": "assigned_after_manifest_locator_issue_set_and_source_support_validation",
+    "assigned_procedural_source_tags": 5
+  },
+  "evidence_ladder_step": {
+    "source_model_output": "codex55-eu-01",
+    "step": "authorized-decision-support",
+    "purpose": "The same source-bound output is adopted through a complete human authorization and contestation gate."
+  },
+  "counter_material_complete": true,
+  "source_chain_attack": {
+    "attack": "source_id_mismatch+high_authority_omission+counter_material_omission",
+    "source": "evidence-ladder-codex55-eu-01--authorized-decision-support",
+    "base_allowed_status": "decision_support_reason",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

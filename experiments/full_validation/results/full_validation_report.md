@@ -7,8 +7,8 @@ Strict/lenient recoded evaluations: 492
 Annotation-uncertainty perturbations: 61500
 Score-blinded coding-pass evaluations: 444
 Full-threshold sensitivity evaluations: 1230
-Source-chain attack variants: 270/270 passed; high-upstream attacked variants blocked 270/270
-Source-chain attack dispositions: downgrade 54, suspension 108, withdrawal 108
+Source-chain attack variants: 1674/1674 passed; high-upstream attacked variants blocked 1674/1674
+Source-chain attack dispositions: downgrade 54, suspension 324, withdrawal 1296
 Contestation challenge variants: 270/270 passed; valid challenges blocked 216/216; unsupported controls preserved 54/54
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
@@ -27,10 +27,10 @@ Policy-constants replay checks: 4182/4182 passed over 246 packets
 Metamorphic policy tests: 1134/1134 passed over 246 packets
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 147501
+Derived robustness evaluations: 148905
 Scenario-regression expectations passed: 246/246
-High-upstream-performance but procedurally blocked scenarios: 624
-Blocked reason distribution: authority_omission: 59, contestation_failure: 55, counter_material_suppression: 135, invalid_authority: 1, jurisdiction_assumption_gap: 54, ranking_drift: 9, source_attribution_gap: 213, summary_distortion: 129, unauthorized_action: 10
+High-upstream-performance but procedurally blocked scenarios: 2028
+Blocked reason distribution: authority_omission: 869, contestation_failure: 55, counter_material_suppression: 945, invalid_authority: 1, jurisdiction_assumption_gap: 54, ranking_drift: 9, source_attribution_gap: 1023, summary_distortion: 1317, unauthorized_action: 10
 Annotation robustness: 234/246 stable across base, strict and lenient coding policies
 Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143
 Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.93 minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.37 minimum base-dimension kappa (Q, 0.96 exact), 0.86 minimum base-dimension exact agreement, 0.79 minimum base-dimension PABAK, 0.14 maximum base-dimension mean absolute delta, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa
@@ -49,7 +49,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Adversarial source-support repairs | negative-control model-output validation | 60 adversarial source-support variants | 60 | 60/60 | 8.83 | 1.00 | 60 | no_external_legal_effect: 20, reference_information: 40 |
 | Mixed-authority public source-screening packets | mixed-authority construct test | 5 curated issue packets | 5 | 5/5 | 11.00 | 1.00 | 0 | normative_material_screening_output: 5 |
 | Issue-defined ablations | negative-control construct test | 20 issue-packet ablations | 20 | 20/20 | 10.50 | 0.92 | 13 | normative_material_screening_output: 5, reference_information: 15 |
-| Qualified-output source-chain attacks | whole-matrix source-chain negative control | 270 attack variants over qualified packets | 270 | 270/270 | 11.28 | 0.99 | 270 | no_external_legal_effect: 108, reference_information: 162 |
+| Qualified-output source-chain attacks | whole-matrix source-chain negative control | 1674 attack variants over qualified packets | 1674 | 1674/1674 | 11.28 | 0.99 | 1674 | no_external_legal_effect: 1296, reference_information: 378 |
 | Dynamic contestation challenges | whole-matrix challenge-response validation | 270 challenge variants over qualified packets | 270 | 270/270 | 11.28 | 0.99 | 216 | decision_support_reason: 12, normative_material_screening_output: 42, reference_information: 216 |
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
@@ -84,7 +84,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Adversarial source-support repairs:** Tests whether source-support repair gates reject locator mismatches, unsupported claims, contradiction patterns, out-of-manifest sources, missing output links and counter-material omissions.
 - **Mixed-authority public source-screening packets:** Tests normative material screening with mixed statute/case/source packets rather than single-endpoint public search results.
 - **Issue-defined ablations:** Tests whether high-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger the expected caps.
-- **Qualified-output source-chain attacks:** Mutates locators, output-source links, procedural source tags, high-authority recall and counter-material recall across every qualified packet; all attacked variants must lose high status through downgrade, suspension or withdrawal despite high scores and high upstream recall.
+- **Qualified-output source-chain attacks:** Applies every nonempty combination of locator, output-source link, procedural source tag, high-authority recall and counter-material recall attacks across every qualified packet; all attacked variants must lose high status through downgrade, suspension or withdrawal despite high scores and high upstream recall.
 - **Dynamic contestation challenges:** Applies valid counter-material, source-verification, jurisdiction and contestability-channel challenges plus unsupported challenge controls across every qualified packet; valid challenges must block high status while unsupported challenges preserve it.
 - **Public source-text anchors:** Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.
 - **Model-output transcript anchors:** Checks that raw model-output scenario locators are anchored in the committed transcript sections.

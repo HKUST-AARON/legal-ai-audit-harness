@@ -1,0 +1,161 @@
+{
+  "id": "uk-mesothelioma-causation-after-fairchild--source-chain-compound-tag-ha",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Issue-defined English-law authority packet for mesothelioma causation and liability after Fairchild, Barker, the Compensation Act 2006 and Sienkiewicz.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "The source manifest links each authority to a public House of Lords, UK Supreme Court or legislation source."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The issue statement, source collection and output identifier are fixed in the manifest."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The packet distinguishes House of Lords precedent, UK Supreme Court precedent, governing statute and limiting/subsequent treatment."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "The gold set includes high-authority materials, limiting materials and an invalidated Barker-treatment label."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect all authority roles and challenge the inclusion, label or omission of each item."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The packet is logged as a reusable audit artifact, but no adjudicator has adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "retrieved_high_authority": [
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "retrieved_counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "barker-proportionate-liability-as-current-mesothelioma-rule"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "Fairchild is a high-authority source for the material-increase-in-risk exception in mesothelioma exposure cases.",
+        "source_ids": [
+          "fairchild-2002-ukhl-22"
+        ],
+        "locators": [
+          "[2002] UKHL 22"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "Barker is limiting/subsequent treatment that must be exposed rather than silently omitted.",
+        "source_ids": [
+          "barker-2006-ukhl-20"
+        ],
+        "locators": [
+          "[2006] UKHL 20"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Compensation Act 2006 section 3 is a governing statutory material for the post-Barker treatment of mesothelioma damages.",
+        "source_ids": [
+          "compensation-act-2006-s3"
+        ],
+        "locators": [
+          "Compensation Act 2006, s. 3"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "Sienkiewicz is later Supreme Court authority that must be visible in a current screening packet.",
+        "source_ids": [
+          "sienkiewicz-2011-uksc-10"
+        ],
+        "locators": [
+          "[2011] UKSC 10"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "fairchild-2002-ukhl-22",
+        "locator": "[2002] UKHL 22",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "barker-2006-ukhl-20",
+        "locator": "[2006] UKHL 20",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "compensation-act-2006-s3",
+        "locator": "Compensation Act 2006, s. 3",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "sienkiewicz-2011-uksc-10",
+        "locator": "[2011] UKSC 10",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "england_and_wales_tort_law",
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension",
+  "source_chain_attack": {
+    "attack": "nonprocedural_source_tags+high_authority_omission",
+    "source": "uk-mesothelioma-causation-after-fairchild",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

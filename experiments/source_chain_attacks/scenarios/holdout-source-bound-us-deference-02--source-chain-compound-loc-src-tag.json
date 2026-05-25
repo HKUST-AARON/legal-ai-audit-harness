@@ -1,0 +1,284 @@
+{
+  "id": "holdout-source-bound-us-deference-02--source-chain-compound-loc-src-tag",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Out-of-sample source-bound repair packet scored after policy freeze.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source-support validator checked each output link against the issue manifest, locator, hashed manifest source-support evidence and procedural source tag."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The prompt, model capture, repair layer and output identifier are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority coverage is recomputed against the issue-defined high-authority set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter/limiting material coverage is recomputed against the issue-defined counter-material set."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect, challenge and supplement every source-supported output unit only if all links validate."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The repaired output is logged for audit, but no authorized decision-maker adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_high_authority": [
+      "apa-5-usc-706",
+      "loper-bright-603-us-369",
+      "skidmore-323-us-134"
+    ],
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [
+      "kisor-588-us-558",
+      "skidmore-323-us-134"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "apa-5-usc-706",
+      "loper-bright-603-us-369",
+      "kisor-588-us-558",
+      "skidmore-323-us-134"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "claim": "Administrative Procedure Act judicial review provision is relevant because it addresses section 706 and reviewing court.",
+        "source_ids": [
+          "apa-5-usc-706"
+        ],
+        "locators": [
+          "5 U.S.C. 706"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "unit-02",
+        "claim": "Loper Bright Enterprises v. Raimondo is relevant because it addresses loper bright and overruled chevron.",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369 (2024)"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "unit-03",
+        "claim": "Kisor v. Wilkie is relevant because it addresses kisor and agency regulations.",
+        "source_ids": [
+          "kisor-588-us-558"
+        ],
+        "locators": [
+          "588 U.S. 558 (2019)"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "unit-04",
+        "claim": "Skidmore v. Swift & Co. is relevant because it addresses skidmore and persuasive.",
+        "source_ids": [
+          "skidmore-323-us-134"
+        ],
+        "locators": [
+          "323 U.S. 134 (1944)"
+        ],
+        "output_rank": 4
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-01",
+        "source_id": "__nonmanifest_source__",
+        "locator": "__wrong_locator__",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "apa-5-usc-706-support-1",
+            "locator": "5 U.S.C. 706",
+            "matched_terms": [
+              "section 706",
+              "reviewing court"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "reviewing court",
+          "section 706"
+        ]
+      },
+      {
+        "unit_id": "unit-02",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369 (2024)",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "loper-bright-603-us-369-support-1",
+            "locator": "603 U.S. 369 (2024)",
+            "matched_terms": [
+              "loper bright",
+              "overruled chevron"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "loper bright",
+          "overruled chevron"
+        ]
+      },
+      {
+        "unit_id": "unit-03",
+        "source_id": "kisor-588-us-558",
+        "locator": "588 U.S. 558 (2019)",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "kisor-588-us-558-support-1",
+            "locator": "588 U.S. 558 (2019)",
+            "matched_terms": [
+              "kisor",
+              "agency regulations",
+              "regulations"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "agency regulations",
+          "kisor",
+          "regulations"
+        ]
+      },
+      {
+        "unit_id": "unit-04",
+        "source_id": "skidmore-323-us-134",
+        "locator": "323 U.S. 134 (1944)",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "skidmore-323-us-134-support-1",
+            "locator": "323 U.S. 134 (1944)",
+            "matched_terms": [
+              "skidmore",
+              "persuasive"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "persuasive",
+          "skidmore"
+        ]
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "united_states_federal_administrative_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "source_binding_validation": {
+    "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+    "manifest_records": 5,
+    "output_links": 4,
+    "missing_source_ids": [],
+    "missing_output_links": [],
+    "unsupported_locators": [],
+    "unsupported_claims": [],
+    "unsupported_source_support": [],
+    "source_support_by_link": {
+      "unit-01::apa-5-usc-706": [
+        {
+          "support_id": "apa-5-usc-706-support-1",
+          "locator": "5 U.S.C. 706",
+          "matched_terms": [
+            "section 706",
+            "reviewing court"
+          ]
+        }
+      ],
+      "unit-02::loper-bright-603-us-369": [
+        {
+          "support_id": "loper-bright-603-us-369-support-1",
+          "locator": "603 U.S. 369 (2024)",
+          "matched_terms": [
+            "loper bright",
+            "overruled chevron"
+          ]
+        }
+      ],
+      "unit-03::kisor-588-us-558": [
+        {
+          "support_id": "kisor-588-us-558-support-1",
+          "locator": "588 U.S. 558 (2019)",
+          "matched_terms": [
+            "kisor",
+            "agency regulations",
+            "regulations"
+          ]
+        }
+      ],
+      "unit-04::skidmore-323-us-134": [
+        {
+          "support_id": "skidmore-323-us-134-support-1",
+          "locator": "323 U.S. 134 (1944)",
+          "matched_terms": [
+            "skidmore",
+            "persuasive"
+          ]
+        }
+      ]
+    },
+    "all_links_source_bound": true,
+    "high_authority_complete": true,
+    "counter_material_complete": true,
+    "claim_support_complete": true,
+    "source_support_complete": true,
+    "source_tag_assignment": "assigned_after_holdout_manifest_locator_issue_set_and_source_support_validation"
+  },
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "source_chain_attack": {
+    "attack": "locator_mismatch+source_id_mismatch+nonprocedural_source_tags",
+    "source": "holdout-source-bound-us-deference-02",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

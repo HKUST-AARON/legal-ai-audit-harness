@@ -1,0 +1,179 @@
+{
+  "id": "issue-public-output-eu-official-gdpr-article15--source-chain-compound-src-cm",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Legislation.gov.uk/CURIA public source packet for GDPR Article 15 access rights.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "Score assigned from score-visible public issue output packet."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "retrieved_high_authority": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "cjeu-c-487-21-crif"
+    ],
+    "counter_or_limiting": [
+      "gdpr-art-12-5",
+      "gdpr-art-15-4"
+    ],
+    "retrieved_counter_or_limiting": [
+      "gdpr-art-15-4"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "gdpr-art-15",
+      "cjeu-c-154-21-osterreichische-post",
+      "gdpr-art-15-4",
+      "cjeu-c-487-21-crif"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": null,
+    "recall": 1.0,
+    "f1": null
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_public_outputs/manifests/eu-official-gdpr-article15.json",
+    "output_units": [
+      {
+        "id": "rank-01",
+        "claim": "Issue-specific public output rank 1 makes this material visible: Regulation (EU) 2016/679 Article 15",
+        "source_ids": [
+          "gdpr-art-15"
+        ],
+        "locators": [
+          "GDPR Article 15"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "rank-02",
+        "claim": "Issue-specific public output rank 2 makes this material visible: RW v Österreichische Post AG",
+        "source_ids": [
+          "cjeu-c-154-21-osterreichische-post"
+        ],
+        "locators": [
+          "Case C-154/21"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "rank-03",
+        "claim": "Issue-specific public output rank 3 makes this material visible: Regulation (EU) 2016/679 Article 15(4)",
+        "source_ids": [
+          "gdpr-art-15-4"
+        ],
+        "locators": [
+          "GDPR Article 15(4)"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "rank-04",
+        "claim": "Issue-specific public output rank 4 makes this material visible: Österreichische Datenschutzbehörde and CRIF",
+        "source_ids": [
+          "cjeu-c-487-21-crif"
+        ],
+        "locators": [
+          "Case C-487/21"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "rank-05",
+        "claim": "Issue-specific public output rank 5 makes this material visible: Regulation (EU) 2016/679 Article 12(5)",
+        "source_ids": [
+          "gdpr-art-12-5"
+        ],
+        "locators": [
+          "GDPR Article 12(5)"
+        ],
+        "output_rank": 5
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "rank-01",
+        "source_id": "__nonmanifest_source__",
+        "locator": "GDPR Article 15",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-02",
+        "source_id": "cjeu-c-154-21-osterreichische-post",
+        "locator": "Case C-154/21",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-03",
+        "source_id": "gdpr-art-15-4",
+        "locator": "GDPR Article 15(4)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-04",
+        "source_id": "cjeu-c-487-21-crif",
+        "locator": "Case C-487/21",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "rank-05",
+        "source_id": "gdpr-art-12-5",
+        "locator": "GDPR Article 12(5)",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "civil_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "source_chain_attack": {
+    "attack": "source_id_mismatch+counter_material_omission",
+    "source": "issue-public-output-eu-official-gdpr-article15",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

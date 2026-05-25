@@ -1,0 +1,137 @@
+{
+  "id": "court-authority-report--source-chain-compound-loc-cm",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Court-facing authority report for a disputed legal issue.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "The output links each recommended authority to its source and records corpus boundaries, source database, jurisdiction, institution level and update date."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The issue, filters, source collection, run identifier and interface version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The output separates binding, precedential, persuasive, superseded, overruled and wrong-jurisdiction materials."
+    },
+    "K": {
+      "score": 1,
+      "evidence": "The output explains broad ranking factors and retrieves some limiting materials, but the omitted-material check is incomplete."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "Parties or reviewers can inspect the result list, submit additional authorities and challenge summary characterizations."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The system logs output ID, user, query, recommended materials and adoption action, but reasons are not structured."
+    }
+  },
+  "counter_authority": {
+    "known": [
+      "limiting-authority-a",
+      "contrary-authority-b"
+    ],
+    "retrieved": [
+      "limiting-authority-a"
+    ]
+  },
+  "authority_sets": {
+    "high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ],
+    "retrieved_high_authority": [
+      "binding-precedent-a",
+      "statute-b"
+    ],
+    "counter_or_limiting": [
+      "limiting-authority-a",
+      "contrary-authority-b"
+    ],
+    "retrieved_counter_or_limiting": [],
+    "invalid_or_superseded": [
+      "overruled-authority-c"
+    ],
+    "retrieved": [
+      "binding-precedent-a",
+      "statute-b"
+    ]
+  },
+  "evidence_packet": {
+    "output_units": [
+      {
+        "id": "u1",
+        "claim": "The report identifies binding precedent and the governing statute as high-authority materials.",
+        "source_ids": [
+          "binding-precedent-a",
+          "statute-b"
+        ],
+        "locators": [
+          "bp-a:holding",
+          "statute-b:section"
+        ]
+      },
+      {
+        "id": "u2",
+        "claim": "The report presents one limiting authority as counter-material.",
+        "source_ids": [
+          "limiting-authority-a"
+        ],
+        "locators": [
+          "limiting-a:analysis"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "u1",
+        "source_id": "binding-precedent-a",
+        "locator": "__wrong_locator__",
+        "supports_claim": true,
+        "source_tag": "tool_verified"
+      },
+      {
+        "unit_id": "u1",
+        "source_id": "statute-b",
+        "locator": "statute-b:section",
+        "supports_claim": true,
+        "source_tag": "official_source"
+      },
+      {
+        "unit_id": "u2",
+        "source_id": "limiting-authority-a",
+        "locator": "limiting-a:analysis",
+        "supports_claim": true,
+        "source_tag": "tool_verified"
+      }
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 0.88,
+    "recall": 0.83,
+    "f1": 0.85
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "common_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "counter_material_complete": true,
+  "source_chain_attack": {
+    "attack": "locator_mismatch+counter_material_omission",
+    "source": "court-authority-report",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

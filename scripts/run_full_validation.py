@@ -831,7 +831,7 @@ def _source_chain_attack_row(payload: dict) -> dict:
         "high_upstream_but_blocked": summary["high_upstream_but_blocked"],
         "blocked_reason_distribution": summary["blocked_reason_distribution"],
         "status_distribution": _status_distribution(payload["results"]),
-        "finding": "Mutates locators, output-source links, procedural source tags, high-authority recall and counter-material recall across every qualified packet; all attacked variants must lose high status through downgrade, suspension or withdrawal despite high scores and high upstream recall.",
+        "finding": "Applies every nonempty combination of locator, output-source link, procedural source tag, high-authority recall and counter-material recall attacks across every qualified packet; all attacked variants must lose high status through downgrade, suspension or withdrawal despite high scores and high upstream recall.",
     }
 
 

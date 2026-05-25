@@ -1,5 +1,5 @@
 {
-  "check_count": 608,
+  "check_count": 638,
   "checks": [
     {
       "expected": "- 32 validation suites",
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 148,180 total evaluation rows",
+      "expected": "- 149,584 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -47,7 +47,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 270/270 source-chain attack variants passed",
+      "expected": "- 1,674/1,674 source-chain attack variants passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -142,7 +142,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,412 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 1,674 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,412 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -177,7 +177,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Qualified-output source-chain attacks | 270 |",
+      "expected": "| Qualified-output source-chain attacks | 1674 |",
       "passed": true,
       "path": "README.md"
     },
@@ -507,7 +507,7 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "270/270 source-chain attack variants",
+      "expected": "1,674/1,674 source-chain attack variants",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -697,7 +697,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "147,501 derived robustness checks",
+      "expected": "148,905 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -892,22 +892,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Source-chain attacks & 270 variants & 270/270",
+      "expected": "Source-chain attacks & 1,674 variants & 1,674/1,674",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "All 270 attacked variants lost high status",
+      "expected": "All 1,674 attacked variants lost high status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "54 were downgraded, 108 were suspended and 108 were withdrawn",
+      "expected": "54 were downgraded, 324 were suspended and 1,296 were withdrawn",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "162 were capped at reference information and 108 were withdrawn",
+      "expected": "378 were capped at reference information and 1,296 were withdrawn",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1047,17 +1047,17 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Source-chain attack variants: 270/270 passed; high-upstream attacked variants blocked 270/270",
+      "expected": "Source-chain attack variants: 1674/1674 passed; high-upstream attacked variants blocked 1674/1674",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Source-chain attack dispositions: downgrade 54, suspension 108, withdrawal 108",
+      "expected": "Source-chain attack dispositions: downgrade 54, suspension 324, withdrawal 1296",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Qualified-output source-chain attacks | whole-matrix source-chain negative control | 270 attack variants over qualified packets | 270 | 270/270",
+      "expected": "Qualified-output source-chain attacks | whole-matrix source-chain negative control | 1674 attack variants over qualified packets | 1674 | 1674/1674",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1522,6 +1522,36 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `148,180`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `270 source-chain attack variants`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `270/270 source-chain attack variants`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `Source-chain attacks & 270 variants`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `All 270 attacked variants`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `8,118`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -1892,6 +1922,36 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `148,180`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `270 source-chain attack variants`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `270/270 source-chain attack variants`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `Source-chain attacks & 270 variants`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `All 270 attacked variants`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `8,118`",
       "passed": true,
       "path": "README.md"
@@ -2262,6 +2322,36 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `148,180`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `270 source-chain attack variants`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `270/270 source-chain attack variants`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `Source-chain attacks & 270 variants`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `All 270 attacked variants`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `8,118`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -2632,6 +2722,36 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `148,180`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `270 source-chain attack variants`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `270/270 source-chain attack variants`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `Source-chain attacks & 270 variants`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `All 270 attacked variants`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `8,118`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -2998,6 +3118,36 @@
     },
     {
       "expected": "absence of stale claim `146,271`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `148,180`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `270 source-chain attack variants`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `270/270 source-chain attack variants`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `Source-chain attacks & 270 variants`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `All 270 attacked variants`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -3044,5 +3194,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 608
+  "passed_count": 638
 }

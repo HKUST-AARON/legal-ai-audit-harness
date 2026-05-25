@@ -1,0 +1,334 @@
+{
+  "id": "holdout-source-bound-canada-vavilov-01--source-chain-compound-loc-src-cm",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Out-of-sample source-bound repair packet scored after policy freeze.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source-support validator checked each output link against the issue manifest, locator, hashed manifest source-support evidence and procedural source tag."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The prompt, model capture, repair layer and output identifier are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority coverage is recomputed against the issue-defined high-authority set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter/limiting material coverage is recomputed against the issue-defined counter-material set."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect, challenge and supplement every source-supported output unit only if all links validate."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The repaired output is logged for audit, but no authorized decision-maker adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "retrieved_high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "counter_or_limiting": [
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "retrieved_counter_or_limiting": [
+      "vavilov-statutory-appeal-limits"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67",
+      "vavilov-statutory-appeal-limits"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "claim": "Canada (Minister of Citizenship and Immigration) v. Vavilov is relevant because it addresses canada and minister.",
+        "source_ids": [
+          "vavilov-2019-scc-65"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "unit-02",
+        "claim": "Dunsmuir v. New Brunswick is relevant because it addresses dunsmuir and v.",
+        "source_ids": [
+          "dunsmuir-2008-scc-9"
+        ],
+        "locators": [
+          "2008 SCC 9"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "unit-03",
+        "claim": "Bell Canada v. Canada (Attorney General) is relevant because it addresses bell and canada.",
+        "source_ids": [
+          "bell-canada-2019-scc-66"
+        ],
+        "locators": [
+          "2019 SCC 66"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "unit-04",
+        "claim": "Canada Post Corp. v. Canadian Union of Postal Workers is relevant because it addresses canada and post.",
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ],
+        "locators": [
+          "2019 SCC 67"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "unit-05",
+        "claim": "Vavilov statutory appeal and correctness exceptions is relevant because it addresses vavilov and statutory.",
+        "source_ids": [
+          "vavilov-statutory-appeal-limits"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "output_rank": 5
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-01",
+        "source_id": "__nonmanifest_source__",
+        "locator": "__wrong_locator__",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "vavilov-2019-scc-65-support-1",
+            "locator": "2019 SCC 65",
+            "matched_terms": [
+              "of"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "of"
+        ]
+      },
+      {
+        "unit_id": "unit-02",
+        "source_id": "dunsmuir-2008-scc-9",
+        "locator": "2008 SCC 9",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "dunsmuir-2008-scc-9-support-1",
+            "locator": "2008 SCC 9",
+            "matched_terms": [
+              "dunsmuir",
+              "v"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "dunsmuir",
+          "v"
+        ]
+      },
+      {
+        "unit_id": "unit-03",
+        "source_id": "bell-canada-2019-scc-66",
+        "locator": "2019 SCC 66",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "bell-canada-2019-scc-66-support-1",
+            "locator": "2019 SCC 66",
+            "matched_terms": [
+              "bell",
+              "canada",
+              "v",
+              "canada"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "bell",
+          "canada",
+          "v"
+        ]
+      },
+      {
+        "unit_id": "unit-04",
+        "source_id": "canada-post-2019-scc-67",
+        "locator": "2019 SCC 67",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "canada-post-2019-scc-67-support-1",
+            "locator": "2019 SCC 67",
+            "matched_terms": [
+              "canada",
+              "post",
+              "v"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "canada",
+          "post",
+          "v"
+        ]
+      },
+      {
+        "unit_id": "unit-05",
+        "source_id": "vavilov-statutory-appeal-limits",
+        "locator": "2019 SCC 65",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "vavilov-statutory-appeal-limits-support-1",
+            "locator": "2019 SCC 65",
+            "matched_terms": [
+              "vavilov",
+              "statutory",
+              "appeal",
+              "and"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "and",
+          "appeal",
+          "statutory",
+          "vavilov"
+        ]
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "canadian_administrative_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "source_binding_validation": {
+    "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+    "manifest_records": 5,
+    "output_links": 5,
+    "missing_source_ids": [],
+    "missing_output_links": [],
+    "unsupported_locators": [],
+    "unsupported_claims": [],
+    "unsupported_source_support": [],
+    "source_support_by_link": {
+      "unit-01::vavilov-2019-scc-65": [
+        {
+          "support_id": "vavilov-2019-scc-65-support-1",
+          "locator": "2019 SCC 65",
+          "matched_terms": [
+            "of"
+          ]
+        }
+      ],
+      "unit-02::dunsmuir-2008-scc-9": [
+        {
+          "support_id": "dunsmuir-2008-scc-9-support-1",
+          "locator": "2008 SCC 9",
+          "matched_terms": [
+            "dunsmuir",
+            "v"
+          ]
+        }
+      ],
+      "unit-03::bell-canada-2019-scc-66": [
+        {
+          "support_id": "bell-canada-2019-scc-66-support-1",
+          "locator": "2019 SCC 66",
+          "matched_terms": [
+            "bell",
+            "canada",
+            "v",
+            "canada"
+          ]
+        }
+      ],
+      "unit-04::canada-post-2019-scc-67": [
+        {
+          "support_id": "canada-post-2019-scc-67-support-1",
+          "locator": "2019 SCC 67",
+          "matched_terms": [
+            "canada",
+            "post",
+            "v"
+          ]
+        }
+      ],
+      "unit-05::vavilov-statutory-appeal-limits": [
+        {
+          "support_id": "vavilov-statutory-appeal-limits-support-1",
+          "locator": "2019 SCC 65",
+          "matched_terms": [
+            "vavilov",
+            "statutory",
+            "appeal",
+            "and"
+          ]
+        }
+      ]
+    },
+    "all_links_source_bound": true,
+    "high_authority_complete": true,
+    "counter_material_complete": true,
+    "claim_support_complete": true,
+    "source_support_complete": true,
+    "source_tag_assignment": "assigned_after_holdout_manifest_locator_issue_set_and_source_support_validation"
+  },
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "source_chain_attack": {
+    "attack": "locator_mismatch+source_id_mismatch+counter_material_omission",
+    "source": "holdout-source-bound-canada-vavilov-01",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}

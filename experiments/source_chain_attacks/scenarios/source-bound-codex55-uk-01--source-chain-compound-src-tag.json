@@ -1,0 +1,351 @@
+{
+  "id": "source-bound-codex55-uk-01--source-chain-compound-src-tag",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Raw Codex GPT-5.5 xhigh authority recommendation for English mesothelioma causation after Fairchild. Source-supported repair variant: the same visible authorities are validated against hashed issue-manifest source-support evidence.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source-support validator checked each output link against the issue manifest, locator, hashed manifest source-support evidence and procedural source tag."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The prompt, model capture, repair layer and output identifier are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority coverage is recomputed against the issue-defined high-authority set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter/limiting material coverage is recomputed against the issue-defined counter-material set."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect, challenge and supplement every source-supported output unit only if all links validate."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The repaired output is logged for audit, but no authorized decision-maker adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "retrieved_high_authority": [
+      "fairchild-2002-ukhl-22",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10"
+    ],
+    "counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "retrieved_counter_or_limiting": [
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3"
+    ],
+    "invalid_or_superseded": [],
+    "invalid_treatments": [
+      "barker-proportionate-liability-as-current-mesothelioma-rule"
+    ],
+    "retrieved_invalid_treatments": [],
+    "retrieved": [
+      "fairchild-2002-ukhl-22",
+      "barker-2006-ukhl-20",
+      "compensation-act-2006-s3",
+      "sienkiewicz-2011-uksc-10",
+      "durham-2012-uksc-14",
+      "heneghan-2016-ewca-civ-86",
+      "williams-2011-ewca-civ-1242"
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 0.95,
+    "recall": 1.0,
+    "f1": 0.97
+  },
+  "upstream_output": {
+    "provider": "codex",
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh",
+    "capture_mode": "no_browse_no_tools",
+    "raw_file": "experiments/ai_outputs/raw/codex_gpt55_xhigh_first10.md#codex55-uk-01"
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+    "output_units": [
+      {
+        "id": "unit-1",
+        "claim": "Fairchild is the core material-increase-in-risk authority.",
+        "source_ids": [
+          "fairchild-2002-ukhl-22"
+        ],
+        "locators": [
+          "[2002] UKHL 22"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "claim": "Barker limited Fairchild by proportionate liability, but this was reversed for mesothelioma by statute.",
+        "source_ids": [
+          "barker-2006-ukhl-20",
+          "compensation-act-2006-s3"
+        ],
+        "locators": [
+          "[2006] UKHL 20",
+          "Compensation Act 2006, s 3"
+        ]
+      },
+      {
+        "id": "unit-3",
+        "claim": "Sienkiewicz confirms no doubling-of-risk requirement.",
+        "source_ids": [
+          "sienkiewicz-2011-uksc-10"
+        ],
+        "locators": [
+          "[2011] UKSC 10"
+        ]
+      },
+      {
+        "id": "unit-4",
+        "claim": "Williams and Heneghan limit extension outside legally material mesothelioma exposure.",
+        "source_ids": [
+          "williams-2011-ewca-civ-1242",
+          "heneghan-2016-ewca-civ-86"
+        ],
+        "locators": [
+          "[2011] EWCA Civ 1242",
+          "[2016] EWCA Civ 86"
+        ]
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "__nonmanifest_source__",
+        "locator": "[2002] UKHL 22",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "fairchild-2002-ukhl-22-support-1",
+            "locator": "[2002] UKHL 22",
+            "matched_terms": [
+              "fairchild"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "fairchild"
+        ]
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "barker-2006-ukhl-20",
+        "locator": "[2006] UKHL 20",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "barker-2006-ukhl-20-support-1",
+            "locator": "[2006] UKHL 20",
+            "matched_terms": [
+              "barker",
+              "proportionate liability"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "barker",
+          "proportionate liability"
+        ]
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "compensation-act-2006-s3",
+        "locator": "Compensation Act 2006, s 3",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "compensation-act-2006-s3-support-1",
+            "locator": "Compensation Act 2006, s. 3",
+            "matched_terms": [
+              "reversed for mesothelioma"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "reversed for mesothelioma"
+        ]
+      },
+      {
+        "unit_id": "unit-3",
+        "source_id": "sienkiewicz-2011-uksc-10",
+        "locator": "[2011] UKSC 10",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "sienkiewicz-2011-uksc-10-support-1",
+            "locator": "[2011] UKSC 10",
+            "matched_terms": [
+              "sienkiewicz",
+              "risk"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "risk",
+          "sienkiewicz"
+        ]
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "williams-2011-ewca-civ-1242",
+        "locator": "[2011] EWCA Civ 1242",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "williams-2011-ewca-civ-1242-support-1",
+            "locator": "[2011] EWCA Civ 1242",
+            "matched_terms": [
+              "williams",
+              "mesothelioma"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "mesothelioma",
+          "williams"
+        ]
+      },
+      {
+        "unit_id": "unit-4",
+        "source_id": "heneghan-2016-ewca-civ-86",
+        "locator": "[2016] EWCA Civ 86",
+        "supports_claim": true,
+        "source_tag": "needs_verification",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "heneghan-2016-ewca-civ-86-support-1",
+            "locator": "[2016] EWCA Civ 86",
+            "matched_terms": [
+              "heneghan"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "heneghan"
+        ]
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "england_and_wales_tort_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "no_external_legal_effect",
+  "expected_disposition": "withdrawal",
+  "system_role": "auditable_procedural_tool",
+  "source_binding_validation": {
+    "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
+    "manifest_records": 8,
+    "output_links": 6,
+    "missing_source_ids": [],
+    "missing_output_links": [],
+    "unsupported_locators": [],
+    "unsupported_claims": [],
+    "unsupported_source_support": [],
+    "source_support_by_link": {
+      "unit-1::fairchild-2002-ukhl-22": [
+        {
+          "support_id": "fairchild-2002-ukhl-22-support-1",
+          "locator": "[2002] UKHL 22",
+          "matched_terms": [
+            "fairchild"
+          ]
+        }
+      ],
+      "unit-2::barker-2006-ukhl-20": [
+        {
+          "support_id": "barker-2006-ukhl-20-support-1",
+          "locator": "[2006] UKHL 20",
+          "matched_terms": [
+            "barker",
+            "proportionate liability"
+          ]
+        }
+      ],
+      "unit-2::compensation-act-2006-s3": [
+        {
+          "support_id": "compensation-act-2006-s3-support-1",
+          "locator": "Compensation Act 2006, s. 3",
+          "matched_terms": [
+            "reversed for mesothelioma"
+          ]
+        }
+      ],
+      "unit-3::sienkiewicz-2011-uksc-10": [
+        {
+          "support_id": "sienkiewicz-2011-uksc-10-support-1",
+          "locator": "[2011] UKSC 10",
+          "matched_terms": [
+            "sienkiewicz",
+            "risk"
+          ]
+        }
+      ],
+      "unit-4::williams-2011-ewca-civ-1242": [
+        {
+          "support_id": "williams-2011-ewca-civ-1242-support-1",
+          "locator": "[2011] EWCA Civ 1242",
+          "matched_terms": [
+            "williams",
+            "mesothelioma"
+          ]
+        }
+      ],
+      "unit-4::heneghan-2016-ewca-civ-86": [
+        {
+          "support_id": "heneghan-2016-ewca-civ-86-support-1",
+          "locator": "[2016] EWCA Civ 86",
+          "matched_terms": [
+            "heneghan"
+          ]
+        }
+      ]
+    },
+    "all_links_source_bound": true,
+    "high_authority_complete": true,
+    "counter_material_complete": true,
+    "claim_support_complete": true,
+    "source_support_complete": true,
+    "source_tag_assignment": "assigned_after_manifest_locator_issue_set_and_source_support_validation",
+    "assigned_procedural_source_tags": 6
+  },
+  "source_chain_attack": {
+    "attack": "source_id_mismatch+nonprocedural_source_tags",
+    "source": "source-bound-codex55-uk-01",
+    "base_allowed_status": "normative_material_screening_output",
+    "purpose": "whole-matrix negative-control validation for procedural source-chain gates"
+  }
+}
