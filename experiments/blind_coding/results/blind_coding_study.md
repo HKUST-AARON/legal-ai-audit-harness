@@ -6,16 +6,16 @@ Status disagreements: 2
 
 ## Pairwise Status Agreement
 
-| Left | Right | Exact status agreement | Weighted status agreement |
-| --- | --- | ---: | ---: |
-| coder_a | coder_b | 0.99 | 0.99 |
+| Left | Right | Exact status agreement | Weighted status agreement | Cohen's kappa | Quadratic weighted kappa |
+| --- | --- | ---: | ---: | ---: | ---: |
+| coder_a | coder_b | 0.99 | 0.99 | 0.99 | 0.96 |
 
 ## Base Status Agreement
 
-| Coder | Exact base agreement | Weighted base agreement | Matches | Mismatches |
-| --- | ---: | ---: | ---: | ---: |
-| coder_a | 0.96 | 0.98 | 213 | 9 |
-| coder_b | 0.95 | 0.97 | 211 | 11 |
+| Coder | Exact base agreement | Weighted base agreement | Cohen's kappa | Quadratic weighted kappa | Matches | Mismatches |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| coder_a | 0.96 | 0.98 | 0.94 | 0.93 | 213 | 9 |
+| coder_b | 0.95 | 0.97 | 0.92 | 0.90 | 211 | 11 |
 
 ## Mean Total Score
 

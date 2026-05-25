@@ -98,6 +98,7 @@
   "blind_coding": {
     "base_status_agreement": {
       "coder_a": {
+        "cohen_kappa": 0.9359266266876182,
         "exact_status_agreement": 0.9594594594594594,
         "match_count": 213,
         "mismatch_count": 9,
@@ -112,9 +113,11 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
+        "quadratic_weighted_kappa": 0.9340320924955428,
         "weighted_status_agreement": 0.9808558558558559
       },
       "coder_b": {
+        "cohen_kappa": 0.9211367673179394,
         "exact_status_agreement": 0.9504504504504504,
         "match_count": 211,
         "mismatch_count": 11,
@@ -131,6 +134,7 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
+        "quadratic_weighted_kappa": 0.8953585093994344,
         "weighted_status_agreement": 0.9740990990990991
       }
     },
@@ -138,8 +142,10 @@
     "packet_count": 222,
     "pairwise_status": [
       {
+        "cohen_kappa": 0.9853126033741318,
         "exact_status_agreement": 0.990990990990991,
         "left": "coder_a",
+        "quadratic_weighted_kappa": 0.9614895339424078,
         "right": "coder_b",
         "weighted_status_agreement": 0.9932432432432432
       }
@@ -892,16 +898,22 @@
     },
     {
       "evidence_class": "codebook reproducibility",
-      "finding": "Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.",
+      "finding": "Tests chance-corrected score-blinded coder reliability and how far status assignments track the base harness allocation.",
       "high_upstream_but_blocked": null,
       "id": "blind_coding",
       "label": "Score-blinded dual coding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.99 coder agreement; 0.95 min base agreement",
+      "rule_pass": "0.99 coder kappa; 0.92 min base kappa",
       "scenario_count": 222,
       "status_distribution": {
+        "coder_cohen_kappa": 0.99,
+        "coder_exact_status_agreement": 0.99,
+        "coder_quadratic_weighted_kappa": 0.96,
         "coder_weighted_status_agreement": 0.99,
+        "min_base_cohen_kappa": 0.92,
+        "min_base_exact_status_agreement": 0.95,
+        "min_base_quadratic_weighted_kappa": 0.9,
         "min_base_weighted_status_agreement": 0.97,
         "status_disagreements": 2
       },

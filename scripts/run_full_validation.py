@@ -660,22 +660,30 @@ def _blind_coding_row(payload: dict) -> dict:
     first_pair = payload["pairwise_status"][0]
     base_exact = min(item["exact_status_agreement"] for item in payload["base_status_agreement"].values())
     base_weighted = min(item["weighted_status_agreement"] for item in payload["base_status_agreement"].values())
+    base_kappa = min(item["cohen_kappa"] for item in payload["base_status_agreement"].values())
+    base_weighted_kappa = min(item["quadratic_weighted_kappa"] for item in payload["base_status_agreement"].values())
     return {
         "id": "blind_coding",
         "label": "Score-blinded dual coding",
         "evidence_class": "codebook reproducibility",
         "validation_units": f"{payload['packet_count']} packets x {payload['coder_count']} coding passes",
         "scenario_count": payload["packet_count"],
-        "rule_pass": f"{first_pair['exact_status_agreement']:.2f} coder agreement; {base_exact:.2f} min base agreement",
+        "rule_pass": f"{first_pair['cohen_kappa']:.2f} coder kappa; {base_kappa:.2f} min base kappa",
         "mean_audit_score": None,
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
         "status_distribution": {
+            "coder_exact_status_agreement": round(first_pair["exact_status_agreement"], 2),
             "coder_weighted_status_agreement": round(first_pair["weighted_status_agreement"], 2),
+            "coder_cohen_kappa": round(first_pair["cohen_kappa"], 2),
+            "coder_quadratic_weighted_kappa": round(first_pair["quadratic_weighted_kappa"], 2),
+            "min_base_exact_status_agreement": round(base_exact, 2),
             "min_base_weighted_status_agreement": round(base_weighted, 2),
+            "min_base_cohen_kappa": round(base_kappa, 2),
+            "min_base_quadratic_weighted_kappa": round(base_weighted_kappa, 2),
             "status_disagreements": payload["status_disagreement_count"],
         },
-        "finding": "Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.",
+        "finding": "Tests chance-corrected score-blinded coder reliability and how far status assignments track the base harness allocation.",
     }
 
 
@@ -987,12 +995,18 @@ def _blind_coding_summary(payload: dict) -> str:
     first_pair = payload["blind_coding"]["pairwise_status"][0]
     base_exact = min(item["exact_status_agreement"] for item in payload["blind_coding"]["base_status_agreement"].values())
     base_weighted = min(item["weighted_status_agreement"] for item in payload["blind_coding"]["base_status_agreement"].values())
+    base_kappa = min(item["cohen_kappa"] for item in payload["blind_coding"]["base_status_agreement"].values())
+    base_weighted_kappa = min(item["quadratic_weighted_kappa"] for item in payload["blind_coding"]["base_status_agreement"].values())
     return (
         f"Score-blinded coding: {payload['blind_coding']['packet_count']} packets, "
         f"{payload['blind_coding']['coder_count']} coding passes, "
         f"{first_pair['exact_status_agreement']:.2f} coder-coder exact agreement, "
+        f"{first_pair['cohen_kappa']:.2f} coder-coder kappa, "
+        f"{first_pair['quadratic_weighted_kappa']:.2f} coder-coder weighted kappa, "
         f"{base_exact:.2f} minimum base-coder exact agreement, "
-        f"{base_weighted:.2f} minimum base-coder weighted agreement"
+        f"{base_weighted:.2f} minimum base-coder weighted agreement, "
+        f"{base_kappa:.2f} minimum base-coder kappa, "
+        f"{base_weighted_kappa:.2f} minimum base-coder weighted kappa"
     )
 
 

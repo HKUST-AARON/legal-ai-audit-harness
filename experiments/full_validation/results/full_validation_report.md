@@ -24,7 +24,7 @@ High-upstream-performance but procedurally blocked scenarios: 136
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 105, summary_distortion: 21, unauthorized_action: 10
 Annotation robustness: 234/246 stable across base, strict and lenient coding policies
 Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143
-Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement
+Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa
 
 | Suite | Evidence role | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -52,7 +52,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Status certificate replay | derivation-certificate check | 3198 replay checks over 246 certificates | 3198 | 3198/3198 | n/a | n/a | n/a | cap_or_failure_transitions: 158, verified_certificates: 246 |
 | Annotation robustness recoding | coding robustness | 492 strict/lenient recoded evaluations | 246 | 234/246 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
 | Annotation uncertainty Monte Carlo | score-noise robustness | 61500 score-perturbed evaluations | 61500 | 0.933 sample stability; 0.924 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 143, exact_stable_scenarios: 102, high_status_stable_scenarios: 183, mean_status_rank_shift: 0.086 |
-| Score-blinded dual coding | codebook reproducibility | 222 packets x 2 coding passes | 222 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
+| Score-blinded dual coding | codebook reproducibility | 222 packets x 2 coding passes | 222 | 0.99 coder kappa; 0.92 min base kappa | n/a | n/a | n/a | coder_cohen_kappa: 0.99, coder_exact_status_agreement: 0.99, coder_quadratic_weighted_kappa: 0.96, coder_weighted_status_agreement: 0.99, min_base_cohen_kappa: 0.92, min_base_exact_status_agreement: 0.95, min_base_quadratic_weighted_kappa: 0.9, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
 ## Findings
 
@@ -80,7 +80,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Status certificate replay:** Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
 - **Annotation uncertainty Monte Carlo:** Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.
-- **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
+- **Score-blinded dual coding:** Tests chance-corrected score-blinded coder reliability and how far status assignments track the base harness allocation.
 
 ## Full-Threshold Sensitivity
 

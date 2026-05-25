@@ -1,5 +1,5 @@
 {
-  "check_count": 300,
+  "check_count": 304,
   "checks": [
     {
       "expected": "- 25 validation suites",
@@ -537,6 +537,21 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Score-blinded dual coding & 222 packets, 2 passes & 0.99 coder kappa; 0.92 min base kappa",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "The passes reached 0.99 exact inter-coder agreement, 0.99 Cohen's kappa and 0.96 quadratic weighted kappa",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "the weaker coder reached 0.95 exact agreement, 0.97 weighted agreement, 0.92 kappa and 0.90 weighted kappa",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Validation suites: 25",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -583,6 +598,11 @@
     },
     {
       "expected": "Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1504,5 +1524,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 300
+  "passed_count": 304
 }

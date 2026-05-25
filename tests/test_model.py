@@ -985,9 +985,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["packet_count"], 222)
         self.assertEqual(report["coder_count"], 2)
         self.assertGreaterEqual(report["pairwise_status"][0]["exact_status_agreement"], 0.9)
+        self.assertGreaterEqual(report["pairwise_status"][0]["cohen_kappa"], 0.9)
+        self.assertGreaterEqual(report["pairwise_status"][0]["quadratic_weighted_kappa"], 0.9)
         base_agreements = report["base_status_agreement"].values()
         self.assertGreaterEqual(min(item["exact_status_agreement"] for item in base_agreements), 0.8)
         self.assertGreaterEqual(min(item["weighted_status_agreement"] for item in base_agreements), 0.9)
+        self.assertGreaterEqual(min(item["cohen_kappa"] for item in base_agreements), 0.85)
+        self.assertGreaterEqual(min(item["quadratic_weighted_kappa"] for item in base_agreements), 0.85)
 
     def test_cli_sensitivity_report(self):
         completed = subprocess.run(

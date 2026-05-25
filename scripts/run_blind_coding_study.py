@@ -137,6 +137,8 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
                     "right": right,
                     "exact_status_agreement": _exact_agreement(left_statuses, right_statuses),
                     "weighted_status_agreement": _weighted_agreement(left_statuses, right_statuses),
+                    "cohen_kappa": _cohen_kappa(left_statuses, right_statuses),
+                    "quadratic_weighted_kappa": _quadratic_weighted_kappa(left_statuses, right_statuses),
                 }
             )
             pairwise_dimensions.append(
@@ -163,6 +165,8 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
         base_status_agreement[coder_id] = {
             "exact_status_agreement": _exact_agreement(base_statuses, coder_statuses),
             "weighted_status_agreement": _weighted_agreement(base_statuses, coder_statuses),
+            "cohen_kappa": _cohen_kappa(base_statuses, coder_statuses),
+            "quadratic_weighted_kappa": _quadratic_weighted_kappa(base_statuses, coder_statuses),
             "match_count": len(rows) - len(mismatches),
             "mismatch_count": len(mismatches),
             "mismatches": mismatches,
@@ -217,6 +221,38 @@ def _weighted_agreement(left: list[str], right: list[str]) -> float:
     return 1 - mean(distances)
 
 
+def _cohen_kappa(left: list[str], right: list[str]) -> float:
+    labels = sorted(STATUS_RANK, key=STATUS_RANK.get)
+    total = len(left)
+    if total == 0:
+        return 1.0
+    observed = _exact_agreement(left, right)
+    expected = 0.0
+    for label in labels:
+        expected += (left.count(label) / total) * (right.count(label) / total)
+    if expected == 1.0:
+        return 1.0 if observed == 1.0 else 0.0
+    return (observed - expected) / (1 - expected)
+
+
+def _quadratic_weighted_kappa(left: list[str], right: list[str]) -> float:
+    labels = sorted(STATUS_RANK, key=STATUS_RANK.get)
+    total = len(left)
+    if total == 0:
+        return 1.0
+    max_rank = max(STATUS_RANK.values())
+    observed_disagreement = 0.0
+    expected_disagreement = 0.0
+    for a in labels:
+        for b in labels:
+            weight = ((STATUS_RANK[a] - STATUS_RANK[b]) / max_rank) ** 2
+            observed_disagreement += weight * sum(x == a and y == b for x, y in zip(left, right)) / total
+            expected_disagreement += weight * (left.count(a) / total) * (right.count(b) / total)
+    if expected_disagreement == 0.0:
+        return 1.0 if observed_disagreement == 0.0 else 0.0
+    return 1 - observed_disagreement / expected_disagreement
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Blind Coding Study",
@@ -227,26 +263,26 @@ def _format_report(payload: dict) -> str:
         "",
         "## Pairwise Status Agreement",
         "",
-        "| Left | Right | Exact status agreement | Weighted status agreement |",
-        "| --- | --- | ---: | ---: |",
+        "| Left | Right | Exact status agreement | Weighted status agreement | Cohen's kappa | Quadratic weighted kappa |",
+        "| --- | --- | ---: | ---: | ---: | ---: |",
     ]
     for item in payload["pairwise_status"]:
         lines.append(
-            f"| {item['left']} | {item['right']} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} |"
+            f"| {item['left']} | {item['right']} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} | {item['cohen_kappa']:.2f} | {item['quadratic_weighted_kappa']:.2f} |"
         )
     lines.extend(
         [
             "",
             "## Base Status Agreement",
             "",
-            "| Coder | Exact base agreement | Weighted base agreement | Matches | Mismatches |",
-            "| --- | ---: | ---: | ---: | ---: |",
+            "| Coder | Exact base agreement | Weighted base agreement | Cohen's kappa | Quadratic weighted kappa | Matches | Mismatches |",
+            "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
         ]
     )
     for coder_id in payload["coder_ids"]:
         item = payload["base_status_agreement"][coder_id]
         lines.append(
-            f"| {coder_id} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} | {item['match_count']} | {item['mismatch_count']} |"
+            f"| {coder_id} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} | {item['cohen_kappa']:.2f} | {item['quadratic_weighted_kappa']:.2f} | {item['match_count']} | {item['mismatch_count']} |"
         )
     lines.extend(["", "## Mean Total Score", "", "| Coder | Mean total score |", "| --- | ---: |"])
     for coder_id, score in payload["mean_total_score"].items():
