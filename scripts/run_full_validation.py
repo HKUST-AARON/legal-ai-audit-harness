@@ -179,6 +179,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
     _run([sys.executable, "scripts/run_baseline_comparison_analysis.py"])
     _run([sys.executable, "scripts/run_issue_family_generalization.py"])
+    _run([sys.executable, "scripts/run_policy_family_robustness.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
     _run([sys.executable, "scripts/run_gate_contrast_witness_analysis.py"])
     _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
@@ -311,6 +312,16 @@ def main() -> int:
         ).read_text(encoding="utf-8")
     )
     rows.append(_issue_family_generalization_row(issue_family_payload))
+    policy_family_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "policy_family_robustness"
+            / "results"
+            / "policy_family_robustness.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_policy_family_robustness_row(policy_family_payload))
     gate_ablation_payload = json.loads(
         (ROOT / "experiments" / "gate_ablations" / "results" / "gate_ablation_analysis.json").read_text(
             encoding="utf-8"
@@ -510,6 +521,9 @@ def main() -> int:
             + metric_separation_payload["permutation"]["iterations"],
             "baseline_comparison_predictions": baseline_comparison_payload["baseline_prediction_count"],
             "issue_family_generalization_predictions": issue_family_payload["holdout_prediction_count"],
+            "policy_family_status_evaluations": policy_family_payload["status_evaluation_count"],
+            "policy_family_baseline_predictions": policy_family_payload["baseline_prediction_count"],
+            "policy_family_robustness_evaluations": policy_family_payload["total_evaluation_count"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
             "gate_contrast_witnesses": gate_contrast_payload["witness_count"],
             "gate_contrast_witnesses_passed": gate_contrast_payload["passed_count"],
@@ -584,6 +598,7 @@ def main() -> int:
         + metric_separation_payload["permutation"]["iterations"],
         "baseline_comparison_evaluations": baseline_comparison_payload["baseline_prediction_count"],
         "issue_family_generalization_evaluations": issue_family_payload["holdout_prediction_count"],
+        "policy_family_robustness_evaluations": policy_family_payload["total_evaluation_count"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
         "gate_contrast_witness_evaluations": gate_contrast_payload["witness_count"],
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
@@ -621,6 +636,7 @@ def main() -> int:
         + metric_separation_payload["permutation"]["iterations"]
         + baseline_comparison_payload["baseline_prediction_count"]
         + issue_family_payload["holdout_prediction_count"]
+        + policy_family_payload["total_evaluation_count"]
         + gate_ablation_payload["ablation_count"]
         + gate_contrast_payload["witness_count"]
         + repair_frontier_payload["counterfactual_evaluation_count"]
@@ -800,6 +816,26 @@ def main() -> int:
             "folds_with_best_trained_rule_error": issue_family_payload["folds_with_best_trained_rule_error"],
             "folds_with_lowest_fp_rule_error": issue_family_payload["folds_with_lowest_fp_rule_error"],
             "folds": issue_family_payload["folds"],
+        },
+        "policy_family_robustness": {
+            "variant_count": policy_family_payload["variant_count"],
+            "scenario_count": policy_family_payload["scenario_count"],
+            "status_evaluation_count": policy_family_payload["status_evaluation_count"],
+            "baseline_prediction_count": policy_family_payload["baseline_prediction_count"],
+            "total_evaluation_count": policy_family_payload["total_evaluation_count"],
+            "total_status_promotions": policy_family_payload["total_status_promotions"],
+            "total_high_status_promotions": policy_family_payload["total_high_status_promotions"],
+            "total_high_status_demotions": policy_family_payload["total_high_status_demotions"],
+            "variants_with_simplified_errors": policy_family_payload["variants_with_simplified_errors"],
+            "best_simplified_false_positive_total": policy_family_payload[
+                "best_simplified_false_positive_total"
+            ],
+            "best_simplified_false_negative_total": policy_family_payload[
+                "best_simplified_false_negative_total"
+            ],
+            "full_protocol_false_positive_total": policy_family_payload["full_protocol_false_positive_total"],
+            "full_protocol_false_negative_total": policy_family_payload["full_protocol_false_negative_total"],
+            "rows": policy_family_payload["rows"],
         },
         "gate_ablation": {
             "qualified_scenario_count": gate_ablation_payload["qualified_scenario_count"],
@@ -1608,6 +1644,35 @@ def _issue_family_generalization_row(payload: dict) -> dict:
     }
 
 
+def _policy_family_robustness_row(payload: dict) -> dict:
+    return {
+        "id": "policy_family_robustness",
+        "label": "Policy-family robustness",
+        "evidence_class": "policy-variant robustness",
+        "validation_units": (
+            f"{payload['total_evaluation_count']} evaluations over {payload['variant_count']} policy variants"
+        ),
+        "scenario_count": payload["total_evaluation_count"],
+        "rule_pass": (
+            f"0 high-status promotions; {payload['variants_with_simplified_errors']}/"
+            f"{payload['variant_count']} variants with simplified-rule errors; best simplified FP "
+            f"{payload['best_simplified_false_positive_total']}"
+        ),
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "variants": payload["variant_count"],
+            "status_evaluations": payload["status_evaluation_count"],
+            "baseline_predictions": payload["baseline_prediction_count"],
+            "high_status_demotions": payload["total_high_status_demotions"],
+            "full_protocol_false_positive_total": payload["full_protocol_false_positive_total"],
+            "full_protocol_false_negative_total": payload["full_protocol_false_negative_total"],
+        },
+        "finding": "Varies thresholds, rank window, procedural source tags, role caps and failure severity; no policy variant promotes a below-screening packet to high status, while simplified substitutes fail in every variant.",
+    }
+
+
 def _gate_ablation_row(payload: dict) -> dict:
     return {
         "id": "gate_ablation",
@@ -1980,6 +2045,7 @@ def _format_report(payload: dict) -> str:
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
         f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; reference rule false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
         f"Issue-family generalization: {payload['issue_family_generalization']['holdout_prediction_count']} holdout predictions over {payload['issue_family_generalization']['issue_family_count']} issue families; full protocol FP/FN {payload['issue_family_generalization']['full_protocol_holdout_false_positive']}/{payload['issue_family_generalization']['full_protocol_holdout_false_negative']}; best trained simplified FP {payload['issue_family_generalization']['best_trained_rule_holdout_false_positive']}; best trained simplified rule erred in {payload['issue_family_generalization']['folds_with_best_trained_rule_error']}/{payload['issue_family_generalization']['issue_family_count']} folds",
+        f"Policy-family robustness: {payload['policy_family_robustness']['total_evaluation_count']} evaluations over {payload['policy_family_robustness']['variant_count']} variants; high-status promotions {payload['policy_family_robustness']['total_high_status_promotions']}; simplified-rule errors {payload['policy_family_robustness']['variants_with_simplified_errors']}/{payload['policy_family_robustness']['variant_count']} variants; best simplified FP {payload['policy_family_robustness']['best_simplified_false_positive_total']}; full protocol FP/FN {payload['policy_family_robustness']['full_protocol_false_positive_total']}/{payload['policy_family_robustness']['full_protocol_false_negative_total']}",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Gate-contrast witness pairs: {payload['gate_contrast_witnesses']['passed_count']}/{payload['gate_contrast_witnesses']['witness_count']} passed; score/metric/role preserved {payload['gate_contrast_witnesses']['score_metric_role_preserved_count']}/{payload['gate_contrast_witnesses']['witness_count']}; status separated {payload['gate_contrast_witnesses']['status_separated_count']}/{payload['gate_contrast_witnesses']['witness_count']}",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",

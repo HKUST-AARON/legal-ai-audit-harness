@@ -1250,9 +1250,37 @@ class AuditModelTest(unittest.TestCase):
             )
         )
 
+    def test_policy_family_robustness_shape(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_policy_family_robustness.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads(
+            (ROOT / "experiments" / "policy_family_robustness" / "results" / "policy_family_robustness.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(report["variant_count"], 12)
+        self.assertEqual(report["scenario_count"], 264)
+        self.assertEqual(report["status_evaluation_count"], 3168)
+        self.assertEqual(report["baseline_prediction_count"], 39024)
+        self.assertEqual(report["total_evaluation_count"], 42192)
+        self.assertEqual(report["total_status_promotions"], 0)
+        self.assertEqual(report["total_high_status_promotions"], 0)
+        self.assertEqual(report["total_high_status_demotions"], 42)
+        self.assertEqual(report["variants_with_simplified_errors"], 12)
+        self.assertEqual(report["best_simplified_false_positive_total"], 449)
+        self.assertEqual(report["best_simplified_false_negative_total"], 0)
+        self.assertEqual(report["full_protocol_false_positive_total"], 0)
+        self.assertEqual(report["full_protocol_false_negative_total"], 0)
+
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 43)
+        self.assertEqual(report["suite_count"], 44)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1304,6 +1332,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 3252)
         self.assertEqual(report["issue_family_generalization_evaluations"], 3014)
         self.assertEqual(report["validation_units"]["issue_family_generalization_predictions"], 3014)
+        self.assertEqual(report["policy_family_robustness_evaluations"], 42192)
+        self.assertEqual(report["validation_units"]["policy_family_status_evaluations"], 3168)
+        self.assertEqual(report["validation_units"]["policy_family_baseline_predictions"], 39024)
+        self.assertEqual(report["validation_units"]["policy_family_robustness_evaluations"], 42192)
         self.assertEqual(report["gate_ablation_evaluations"], 390)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 390)
         self.assertEqual(report["gate_contrast_witness_evaluations"], 390)
@@ -1367,7 +1399,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 7870929)
+        self.assertEqual(report["total_evaluation_rows"], 7913121)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1491,6 +1523,17 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["issue_family_generalization"]["best_trained_rule_holdout_false_positive"], 38)
         self.assertEqual(report["issue_family_generalization"]["best_trained_rule_holdout_false_negative"], 0)
         self.assertEqual(report["issue_family_generalization"]["folds_with_best_trained_rule_error"], 5)
+        self.assertEqual(report["policy_family_robustness"]["variant_count"], 12)
+        self.assertEqual(report["policy_family_robustness"]["scenario_count"], 264)
+        self.assertEqual(report["policy_family_robustness"]["status_evaluation_count"], 3168)
+        self.assertEqual(report["policy_family_robustness"]["baseline_prediction_count"], 39024)
+        self.assertEqual(report["policy_family_robustness"]["total_evaluation_count"], 42192)
+        self.assertEqual(report["policy_family_robustness"]["total_high_status_promotions"], 0)
+        self.assertEqual(report["policy_family_robustness"]["total_high_status_demotions"], 42)
+        self.assertEqual(report["policy_family_robustness"]["variants_with_simplified_errors"], 12)
+        self.assertEqual(report["policy_family_robustness"]["best_simplified_false_positive_total"], 449)
+        self.assertEqual(report["policy_family_robustness"]["full_protocol_false_positive_total"], 0)
+        self.assertEqual(report["policy_family_robustness"]["full_protocol_false_negative_total"], 0)
         self.assertEqual(report["gate_ablation"]["ablation_count"], 390)
         self.assertEqual(report["gate_ablation"]["passed_count"], 390)
         self.assertEqual(report["gate_contrast_witnesses"]["qualified_scenario_count"], 63)
