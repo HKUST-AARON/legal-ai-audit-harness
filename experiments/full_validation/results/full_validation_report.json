@@ -523,6 +523,925 @@
     "support_attestation_absence_withdrawn_count": 290
   },
   "claim_anchor_evaluations": 1080,
+  "construct_operationalization": {
+    "all_passed": true,
+    "construct_count": 10,
+    "constructs": [
+      {
+        "checks": [
+          {
+            "construct_id": "status_ordering",
+            "layer_id": "formal_invariants",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/formal_invariants/results/formal_invariant_verification.json",
+            "required": [
+              "total_checks",
+              "passed_checks"
+            ],
+            "roles": [
+              "formal",
+              "invariant"
+            ]
+          },
+          {
+            "construct_id": "status_ordering",
+            "layer_id": "status_lattice",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/status_lattice/results/status_lattice_analysis.json",
+            "required": [
+              "state_count",
+              "necessity",
+              "gate_ablation"
+            ],
+            "roles": [
+              "formal",
+              "substitute"
+            ]
+          },
+          {
+            "construct_id": "status_ordering",
+            "layer_id": "policy_constants_replay",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/policy_constants_replay/results/policy_constants_replay.json",
+            "required": [
+              "check_count",
+              "passed_check_count"
+            ],
+            "roles": [
+              "replay",
+              "second_implementation"
+            ]
+          },
+          {
+            "construct_id": "status_ordering",
+            "layer_id": "status_certificates",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/status_certificates/results/status_certificate_validation.json",
+            "required": [
+              "certificate_count",
+              "replay_check_count",
+              "proof_obligation_count"
+            ],
+            "roles": [
+              "certificate",
+              "replay"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "formal_invariants",
+          "status_lattice",
+          "policy_constants_replay",
+          "status_certificates"
+        ],
+        "failed_checks": 0,
+        "id": "status_ordering",
+        "label": "Procedural status ordering",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "certificate",
+          "formal",
+          "invariant",
+          "replay",
+          "second_implementation",
+          "substitute"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "role_and_failure_caps",
+            "layer_id": "formal_invariants",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/formal_invariants/results/formal_invariant_verification.json",
+            "required": [
+              "total_checks",
+              "passed_checks"
+            ],
+            "roles": [
+              "formal",
+              "invariant"
+            ]
+          },
+          {
+            "construct_id": "role_and_failure_caps",
+            "layer_id": "workflow_portability",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/workflow_portability/results/workflow_portability_analysis.json",
+            "required": [
+              "evaluation_count",
+              "passed_count"
+            ],
+            "roles": [
+              "architecture",
+              "portability"
+            ]
+          },
+          {
+            "construct_id": "role_and_failure_caps",
+            "layer_id": "policy_constants_replay",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/policy_constants_replay/results/policy_constants_replay.json",
+            "required": [
+              "check_count",
+              "passed_check_count"
+            ],
+            "roles": [
+              "replay",
+              "second_implementation"
+            ]
+          },
+          {
+            "construct_id": "role_and_failure_caps",
+            "layer_id": "policy_family_robustness",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/policy_family_robustness/results/policy_family_robustness.json",
+            "required": [
+              "total_evaluation_count",
+              "variants_with_simplified_errors"
+            ],
+            "roles": [
+              "policy",
+              "robustness"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "formal_invariants",
+          "workflow_portability",
+          "policy_constants_replay",
+          "policy_family_robustness"
+        ],
+        "failed_checks": 0,
+        "id": "role_and_failure_caps",
+        "label": "System-role and failure caps",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 8,
+        "roles": [
+          "architecture",
+          "formal",
+          "invariant",
+          "policy",
+          "portability",
+          "replay",
+          "robustness",
+          "second_implementation"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "audit_vector_operationalization",
+            "layer_id": "formal_invariants",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/formal_invariants/results/formal_invariant_verification.json",
+            "required": [
+              "total_checks",
+              "passed_checks"
+            ],
+            "roles": [
+              "formal",
+              "invariant"
+            ]
+          },
+          {
+            "construct_id": "audit_vector_operationalization",
+            "layer_id": "annotation_robustness",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/annotation_robustness/results/annotation_robustness.json",
+            "required": [
+              "recoded_evaluations",
+              "all_policy_status_stable"
+            ],
+            "roles": [
+              "coding",
+              "robustness"
+            ]
+          },
+          {
+            "construct_id": "audit_vector_operationalization",
+            "layer_id": "annotation_uncertainty",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/annotation_uncertainty/results/annotation_uncertainty.json",
+            "required": [
+              "evaluation_count",
+              "status_stability_rate"
+            ],
+            "roles": [
+              "coding",
+              "uncertainty"
+            ]
+          },
+          {
+            "construct_id": "audit_vector_operationalization",
+            "layer_id": "blind_coding",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/blind_coding/results/blind_coding_study.json",
+            "required": [
+              "packet_count",
+              "minimum_dimension_kappa"
+            ],
+            "roles": [
+              "coding",
+              "reproducibility"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "formal_invariants",
+          "annotation_robustness",
+          "annotation_uncertainty",
+          "blind_coding"
+        ],
+        "failed_checks": 0,
+        "id": "audit_vector_operationalization",
+        "label": "Six-part audit-vector coding",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "coding",
+          "formal",
+          "invariant",
+          "reproducibility",
+          "robustness",
+          "uncertainty"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "evidence_packet_source_chain",
+            "layer_id": "claim_anchor",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/claim_anchor_analysis/results/claim_anchor_analysis.json",
+            "required": [
+              "evaluation_count",
+              "passed_count"
+            ],
+            "roles": [
+              "claim_level",
+              "source_chain"
+            ]
+          },
+          {
+            "construct_id": "evidence_packet_source_chain",
+            "layer_id": "source_chain_attacks",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/source_chain_attacks/results/source_chain_attack_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "source_chain",
+              "negative_control"
+            ]
+          },
+          {
+            "construct_id": "evidence_packet_source_chain",
+            "layer_id": "source_text_verification",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/source_text_verification/results/source_text_anchor_verification.json",
+            "required": [
+              "support_item_count",
+              "support_items_verified"
+            ],
+            "roles": [
+              "external_source",
+              "anchor"
+            ]
+          },
+          {
+            "construct_id": "evidence_packet_source_chain",
+            "layer_id": "model_output_adversarial",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/model_output_adversarial/results/model_output_adversarial_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "model_output",
+              "negative_control"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "claim_anchor",
+          "source_chain_attacks",
+          "source_text_verification",
+          "model_output_adversarial"
+        ],
+        "failed_checks": 0,
+        "id": "evidence_packet_source_chain",
+        "label": "Output evidence packet and source chain",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "anchor",
+          "claim_level",
+          "external_source",
+          "model_output",
+          "negative_control",
+          "source_chain"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "authority_hierarchy_issue_sets",
+            "layer_id": "issue_gold_sets",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/issue_gold_sets/results/issue_gold_set_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "construct",
+              "public_source"
+            ]
+          },
+          {
+            "construct_id": "authority_hierarchy_issue_sets",
+            "layer_id": "issue_ablations",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/issue_ablations/results/issue_ablation_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "gate",
+              "negative_control"
+            ]
+          },
+          {
+            "construct_id": "authority_hierarchy_issue_sets",
+            "layer_id": "public_retrieval_benchmark",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/public_retrieval_benchmark/results/public_retrieval_benchmark.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "public",
+              "retrieval"
+            ]
+          },
+          {
+            "construct_id": "authority_hierarchy_issue_sets",
+            "layer_id": "jurisdiction_profiles",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/jurisdiction_profiles/results/jurisdiction_profile_analysis.json",
+            "required": [
+              "profile_check_count",
+              "passed_count"
+            ],
+            "roles": [
+              "jurisdiction",
+              "portability"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "issue_gold_sets",
+          "issue_ablations",
+          "public_retrieval_benchmark",
+          "jurisdiction_profiles"
+        ],
+        "failed_checks": 0,
+        "id": "authority_hierarchy_issue_sets",
+        "label": "Authority hierarchy and issue sets",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 8,
+        "roles": [
+          "construct",
+          "gate",
+          "jurisdiction",
+          "negative_control",
+          "portability",
+          "public",
+          "public_source",
+          "retrieval"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "counter_material_salience",
+            "layer_id": "ranking_visibility",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/ranking_visibility/results/ranking_visibility_analysis.json",
+            "required": [
+              "window_check_count",
+              "rank_order_passed_count"
+            ],
+            "roles": [
+              "ranking",
+              "salience"
+            ]
+          },
+          {
+            "construct_id": "counter_material_salience",
+            "layer_id": "gate_ablations",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/gate_ablations/results/gate_ablation_analysis.json",
+            "required": [
+              "ablation_count",
+              "passed_count"
+            ],
+            "roles": [
+              "gate",
+              "necessity"
+            ]
+          },
+          {
+            "construct_id": "counter_material_salience",
+            "layer_id": "contestation_challenges",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/contestation_challenges/results/contestation_challenge_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "contestability",
+              "challenge"
+            ]
+          },
+          {
+            "construct_id": "counter_material_salience",
+            "layer_id": "query_portfolios",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/query_portfolios/results/query_portfolio_frontier.json",
+            "required": [
+              "portfolio_count",
+              "qualified_portfolio_count"
+            ],
+            "roles": [
+              "retrieval",
+              "frontier"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "ranking_visibility",
+          "gate_ablations",
+          "contestation_challenges",
+          "query_portfolios"
+        ],
+        "failed_checks": 0,
+        "id": "counter_material_salience",
+        "label": "Counter-material and rank salience",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 8,
+        "roles": [
+          "challenge",
+          "contestability",
+          "frontier",
+          "gate",
+          "necessity",
+          "ranking",
+          "retrieval",
+          "salience"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "contestability_adoption",
+            "layer_id": "contestation_challenges",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/contestation_challenges/results/contestation_challenge_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "contestability",
+              "challenge"
+            ]
+          },
+          {
+            "construct_id": "contestability_adoption",
+            "layer_id": "review_provenance",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/review_provenance/results/review_provenance_analysis.json",
+            "required": [
+              "evaluation_count",
+              "passed_count"
+            ],
+            "roles": [
+              "provenance",
+              "review"
+            ]
+          },
+          {
+            "construct_id": "contestability_adoption",
+            "layer_id": "gate_contrast_witnesses",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/gate_contrast_witnesses/results/gate_contrast_witness_analysis.json",
+            "required": [
+              "witness_count",
+              "status_separated_count"
+            ],
+            "roles": [
+              "construct",
+              "negative_control"
+            ]
+          },
+          {
+            "construct_id": "contestability_adoption",
+            "layer_id": "status_certificates",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/status_certificates/results/status_certificate_validation.json",
+            "required": [
+              "certificate_count",
+              "replay_check_count",
+              "proof_obligation_count"
+            ],
+            "roles": [
+              "certificate",
+              "replay"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "contestation_challenges",
+          "review_provenance",
+          "gate_contrast_witnesses",
+          "status_certificates"
+        ],
+        "failed_checks": 0,
+        "id": "contestability_adoption",
+        "label": "Contestability and adoption record",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 8,
+        "roles": [
+          "certificate",
+          "challenge",
+          "construct",
+          "contestability",
+          "negative_control",
+          "provenance",
+          "replay",
+          "review"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "substitute_theory_separation",
+            "layer_id": "metric_separation",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/metric_separation/results/metric_separation_analysis.json",
+            "required": [
+              "metric_scenario_count",
+              "high_recall_blocked"
+            ],
+            "roles": [
+              "metric",
+              "substitute"
+            ]
+          },
+          {
+            "construct_id": "substitute_theory_separation",
+            "layer_id": "baseline_comparison",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/baseline_comparisons/results/baseline_comparison_analysis.json",
+            "required": [
+              "baseline_prediction_count",
+              "best_simplified"
+            ],
+            "roles": [
+              "baseline",
+              "substitute"
+            ]
+          },
+          {
+            "construct_id": "substitute_theory_separation",
+            "layer_id": "issue_family_generalization",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/issue_family_generalization/results/issue_family_generalization.json",
+            "required": [
+              "holdout_prediction_count",
+              "folds_with_best_trained_rule_error"
+            ],
+            "roles": [
+              "holdout",
+              "generalization"
+            ]
+          },
+          {
+            "construct_id": "substitute_theory_separation",
+            "layer_id": "policy_family_robustness",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/policy_family_robustness/results/policy_family_robustness.json",
+            "required": [
+              "total_evaluation_count",
+              "variants_with_simplified_errors"
+            ],
+            "roles": [
+              "policy",
+              "robustness"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "metric_separation",
+          "baseline_comparison",
+          "issue_family_generalization",
+          "policy_family_robustness"
+        ],
+        "failed_checks": 0,
+        "id": "substitute_theory_separation",
+        "label": "Substitute-theory separation",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 7,
+        "roles": [
+          "baseline",
+          "generalization",
+          "holdout",
+          "metric",
+          "policy",
+          "robustness",
+          "substitute"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "architecture_identity_portability",
+            "layer_id": "workflow_portability",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/workflow_portability/results/workflow_portability_analysis.json",
+            "required": [
+              "evaluation_count",
+              "passed_count"
+            ],
+            "roles": [
+              "architecture",
+              "portability"
+            ]
+          },
+          {
+            "construct_id": "architecture_identity_portability",
+            "layer_id": "model_identity_invariance",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/model_identity_invariance/results/model_identity_invariance.json",
+            "required": [
+              "evaluation_count",
+              "status_changed_count"
+            ],
+            "roles": [
+              "identity",
+              "invariant"
+            ]
+          },
+          {
+            "construct_id": "architecture_identity_portability",
+            "layer_id": "cross_engine_model_outputs",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/cross_engine_model_outputs/results/cross_engine_model_output_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "model_output",
+              "cross_engine"
+            ]
+          },
+          {
+            "construct_id": "architecture_identity_portability",
+            "layer_id": "cross_engine_model_repairs",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/cross_engine_model_repairs/results/cross_engine_model_repair_experiment.json",
+            "required": [
+              "summary.scenario_count",
+              "summary.expected_passed"
+            ],
+            "roles": [
+              "model_output",
+              "intervention"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "workflow_portability",
+          "model_identity_invariance",
+          "cross_engine_model_outputs",
+          "cross_engine_model_repairs"
+        ],
+        "failed_checks": 0,
+        "id": "architecture_identity_portability",
+        "label": "Architecture and identity portability",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 7,
+        "roles": [
+          "architecture",
+          "cross_engine",
+          "identity",
+          "intervention",
+          "invariant",
+          "model_output",
+          "portability"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "construct_id": "replication_and_tamper_resistance",
+            "layer_id": "status_certificates",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/status_certificates/results/status_certificate_validation.json",
+            "required": [
+              "certificate_count",
+              "replay_check_count",
+              "proof_obligation_count"
+            ],
+            "roles": [
+              "certificate",
+              "replay"
+            ]
+          },
+          {
+            "construct_id": "replication_and_tamper_resistance",
+            "layer_id": "certificate_tamper",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/certificate_tamper/results/certificate_tamper_analysis.json",
+            "required": [
+              "tamper_case_count",
+              "rejected_count"
+            ],
+            "roles": [
+              "certificate",
+              "negative_control"
+            ]
+          },
+          {
+            "construct_id": "replication_and_tamper_resistance",
+            "layer_id": "policy_constants_replay",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/policy_constants_replay/results/policy_constants_replay.json",
+            "required": [
+              "check_count",
+              "passed_check_count"
+            ],
+            "roles": [
+              "replay",
+              "second_implementation"
+            ]
+          },
+          {
+            "construct_id": "replication_and_tamper_resistance",
+            "layer_id": "metamorphic_policy",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/metamorphic_policy/results/metamorphic_policy_tests.json",
+            "required": [
+              "metamorphic_evaluation_count",
+              "passed_count"
+            ],
+            "roles": [
+              "label_free",
+              "invariant"
+            ]
+          }
+        ],
+        "evidence_layers": [
+          "status_certificates",
+          "certificate_tamper",
+          "policy_constants_replay",
+          "metamorphic_policy"
+        ],
+        "failed_checks": 0,
+        "id": "replication_and_tamper_resistance",
+        "label": "Replication and tamper resistance",
+        "layer_count": 4,
+        "passed": true,
+        "passed_checks": 4,
+        "role_count": 6,
+        "roles": [
+          "certificate",
+          "invariant",
+          "label_free",
+          "negative_control",
+          "replay",
+          "second_implementation"
+        ]
+      }
+    ],
+    "coverage_check_count": 40,
+    "evidence_layer_count": 31,
+    "failed_check_count": 0,
+    "failed_construct_count": 0,
+    "minimum_layers_per_construct": 4,
+    "minimum_roles_per_construct": 3,
+    "passed_check_count": 40,
+    "passed_construct_count": 10
+  },
+  "construct_operationalization_evaluations": 40,
   "contestation_challenge_evaluations": 315,
   "contestation_challenges": {
     "blocked_reason_distribution": {
@@ -5223,7 +6142,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 45,
+  "suite_count": 46,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -6077,6 +6996,23 @@
       "validation_units": "240 packets x 2 coding passes"
     },
     {
+      "evidence_class": "paper-construct coverage map",
+      "finding": "Maps the paper's core constructs to committed evidence layers; every construct has at least four evidence layers and three evidence roles.",
+      "high_upstream_but_blocked": null,
+      "id": "construct_operationalization",
+      "label": "Construct operationalization coverage",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "40/40",
+      "scenario_count": 40,
+      "status_distribution": {
+        "evidence_layers": 31,
+        "failed_constructs": 0,
+        "passed_constructs": 10
+      },
+      "validation_units": "40 evidence-layer coverage checks across 10 core constructs"
+    },
+    {
       "evidence_class": "validity-threat coverage map",
       "finding": "Maps construct, internal, source-chain, external, architecture, policy, provenance and annotation validity threats to committed evidence layers; every threat has at least four layers and three evidence roles.",
       "high_upstream_but_blocked": null,
@@ -6707,7 +7643,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 7913153,
+  "total_evaluation_rows": 7913193,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -6720,6 +7656,9 @@
     "claim_anchor_output_links": 290,
     "claim_anchor_output_units": 250,
     "claim_anchor_passed": 1080,
+    "construct_operationalization_checks": 40,
+    "construct_operationalization_passed": 40,
+    "constructs": 10,
     "contestation_challenge_passed": 315,
     "contestation_challenge_variants": 315,
     "cross_engine_count": 3,
