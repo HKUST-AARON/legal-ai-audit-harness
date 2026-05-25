@@ -997,7 +997,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "full screening predicate admitted 0 false positives",
+      "expected": "full screening predicate admitted 0 false positives and 0 false negatives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1577,7 +1577,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 210)",
+      "expected": "abstract word count 150-250 (actual 214)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },

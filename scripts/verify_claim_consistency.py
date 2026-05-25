@@ -89,6 +89,9 @@ def _checks(payload: dict) -> list[dict]:
         "status_lattice_full_fp": next(
             row for row in status_lattice["substitution_rules"] if row["rule"] == "full_screening_predicate"
         )["false_positive"],
+        "status_lattice_full_fn": next(
+            row for row in status_lattice["substitution_rules"] if row["rule"] == "full_screening_predicate"
+        )["false_negative"],
         "metric": units["metric_separation_evaluations"],
         "metric_resamples": units["metric_statistical_resamples"],
         "metric_bootstrap": metric["bootstrap"]["iterations"],
@@ -442,7 +445,7 @@ def _checks(payload: dict) -> list[dict]:
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['status_lattice_necessity_passed']}/{values['status_lattice_necessity']} high-status necessity checks"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['status_lattice_gate_ablation_passed']}/{values['status_lattice_gate_ablation']} gate-ablation drops"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"best partial substitute still admitted {values['status_lattice_best_partial_fp']} false positives"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"full screening predicate admitted {values['status_lattice_full_fp']} false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"full screening predicate admitted {values['status_lattice_full_fp']} false positives and {values['status_lattice_full_fn']} false negatives"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['metric_resamples'])} resamples"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['baseline_predictions'])} predictions"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Across {values['baseline_count']} simplified substitute rules"),
