@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 37
+Validation suites: 38
 Scenario files: 264
 Base embedded records/items: 697 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 9 cross-engine raw outputs, 9 cross-engine source-supported outputs, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 528
@@ -28,9 +28,10 @@ Status certificate proof obligations: 4488/4488 passed
 Certificate tamper-resistance: 5811/5811 tamper cases rejected across 25 families
 Policy-constants replay checks: 4752/4752 passed over 264 packets
 Metamorphic policy tests: 1233/1233 passed over 264 packets
+Model-identity invariance: 1320/1320 identity substitutions passed over 264 packets and 5 identity profiles; status changes 0; disposition changes 0
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 3658267
+Derived robustness evaluations: 3659587
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2352
 Blocked reason distribution: authority_omission: 1013, contestation_failure: 64, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1185, summary_distortion: 1533, unauthorized_action: 10
@@ -72,6 +73,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Certificate tamper-resistance | proof-certificate negative-control validation | 5811 tamper cases across 25 families | 5811 | 5811/5811 rejected | n/a | n/a | n/a | base_certificates: 264, missed_tamper_cases: 0, tamper_families: 25 |
 | Policy-constants replay | second implementation check | 4752 replay checks over 264 packets | 4752 | 4752/4752 | n/a | n/a | n/a | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 51, professional_support_output: 23, reference_information: 146 |
 | Metamorphic policy tests | expected-label-free policy-invariant validation | 1233 transformations over 264 packets | 1233 | 1233/1233 | n/a | n/a | n/a | back_office_role_cap: 264, benign_source_append_preserves_high_status: 63, claim_escalation_nonpromotion: 264, review_gate_removal_blocks_high_status: 63, score_and_role_inflation_without_adoption: 252, source_tag_deproceduralization_blocks_high_status: 63, upstream_metric_inflation_invariance: 264 |
+| Model-identity invariance | identity-substitution invariance check | 1320 identity mutations over 264 packets and 5 model identities | 1320 | 1320/1320 | n/a | n/a | n/a | disposition_changes: 0, identity_profiles: 5, status_changes: 0 |
 | Query-perturbation stability | public-retrieval query-sensitivity diagnostic | 30 query variants across 5 issue groups | 30 | 5/5 status-stable groups | n/a | n/a | 2 | authority_unstable_groups: 3, counter_recall_unstable_groups: 0, mean_record_overlap: 0.39, min_record_overlap: 0.0, record_set_unstable_groups: 4, top_result_unstable_groups: 4 |
 | Query-portfolio frontier | public-retrieval query-expansion frontier | 315 query portfolios plus 5 group frontier summaries | 320 | 0/315 portfolios qualified | n/a | n/a | n/a | full_counter_material_portfolios: 0, full_high_authority_portfolios: 56, full_screening_material_portfolios: 0, groups_counter_repaired: 0, groups_high_repaired: 1, max_authority_coverage: 1.0, max_counter_recall: 0.0 |
 | Annotation robustness recoding | coding robustness | 528 strict/lenient recoded evaluations | 264 | 252/264 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
@@ -121,6 +123,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Certificate tamper-resistance:** Mutates certificate identities, hashes, policy bodies, scores, roles, gates, status fields, caps, metric bundles, proof obligations and certificate-set structure; every tampered proof object must be rejected.
 - **Policy-constants replay:** Recomputes score candidates, role caps, protected reliance gates, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.
 - **Metamorphic policy tests:** Applies claim escalation, metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation to primary scenario packets without using expected labels.
+- **Model-identity invariance:** Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.
 - **Query-perturbation stability:** Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.
 - **Query-portfolio frontier:** Enumerates all non-empty query portfolios over issue-equivalent public retrieval variants to test whether frozen query expansion recovers high-authority and counter-material coverage.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.

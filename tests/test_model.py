@@ -1117,7 +1117,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 37)
+        self.assertEqual(report["suite_count"], 38)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1203,13 +1203,16 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metamorphic_policy_evaluations"], 1233)
         self.assertEqual(report["validation_units"]["metamorphic_policy_evaluations"], 1233)
         self.assertEqual(report["validation_units"]["metamorphic_policy_passed"], 1233)
+        self.assertEqual(report["model_identity_invariance_evaluations"], 1320)
+        self.assertEqual(report["validation_units"]["model_identity_invariance_evaluations"], 1320)
+        self.assertEqual(report["validation_units"]["model_identity_invariance_passed"], 1320)
         self.assertEqual(report["query_perturbation_evaluations"], 35)
         self.assertEqual(report["validation_units"]["query_perturbation_variants"], 30)
         self.assertEqual(report["validation_units"]["query_perturbation_groups"], 5)
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 3658964)
+        self.assertEqual(report["total_evaluation_rows"], 3660284)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1362,6 +1365,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["metamorphic_policy"]["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 63)
+        self.assertEqual(report["model_identity_invariance"]["scenario_count"], 264)
+        self.assertEqual(report["model_identity_invariance"]["identity_profile_count"], 5)
+        self.assertEqual(report["model_identity_invariance"]["evaluation_count"], 1320)
+        self.assertEqual(report["model_identity_invariance"]["passed_count"], 1320)
+        self.assertEqual(report["model_identity_invariance"]["failed_count"], 0)
+        self.assertEqual(report["model_identity_invariance"]["status_changed_count"], 0)
+        self.assertEqual(report["model_identity_invariance"]["disposition_changed_count"], 0)
+        self.assertEqual(len(report["model_identity_invariance"]["identity_profiles"]), 5)
         self.assertEqual(report["query_perturbation"]["issue_group_count"], 5)
         self.assertEqual(report["query_perturbation"]["query_variant_count"], 30)
         self.assertEqual(report["query_perturbation"]["status_stable_group_count"], 5)
@@ -1468,6 +1479,36 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 63)
         self.assertEqual(report["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 63)
+
+    def test_model_identity_invariance_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_model_identity_invariance.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "model_identity_invariance" / "results" / "model_identity_invariance.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["scenario_count"], 264)
+        self.assertEqual(report["identity_profile_count"], 5)
+        self.assertEqual(report["evaluation_count"], 1320)
+        self.assertEqual(report["passed_count"], 1320)
+        self.assertEqual(report["failed_count"], 0)
+        self.assertEqual(report["status_changed_count"], 0)
+        self.assertEqual(report["disposition_changed_count"], 0)
+        self.assertEqual(len(report["identity_profiles"]), 5)
+        self.assertEqual(len(report["rows"]), 1320)
+        self.assertEqual({row["identity_profile"] for row in report["rows"]}, {profile["profile_id"] for profile in report["identity_profiles"]})
+        self.assertTrue(all(row["changed_fields"] == [] for row in report["rows"]))
+        self.assertTrue(all(row["provider"] and row["model"] and row["engine"] for row in report["rows"]))
+        self.assertEqual(
+            {profile: bucket["count"] for profile, bucket in report["by_identity_profile"].items()},
+            {profile["profile_id"]: 264 for profile in report["identity_profiles"]},
+        )
+        self.assertEqual(sum(report["base_status_distribution_by_scenario"].values()), 264)
+        self.assertEqual(sum(report["row_weighted_base_status_distribution"].values()), 1320)
+        self.assertEqual(sum(report["row_weighted_mutated_status_distribution"].values()), 1320)
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(

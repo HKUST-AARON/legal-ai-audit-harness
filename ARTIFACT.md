@@ -23,10 +23,10 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 37 validation suites
+- 38 validation suites
 - 264 scenario files
 - 697 embedded records or output items
-- 3,658,964 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
+- 3,660,284 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
 - 51,643/51,643 formal invariant checks passed
 - 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions
 - 851/851 status-lattice high-status necessity checks and 851/851 gate-ablation drops passed
@@ -46,6 +46,7 @@ Expected aggregate output:
 - 6,072/6,072 status-certificate replay checks and 4,488/4,488 proof obligations passed over 264 proof-carrying certificates
 - 5,811/5,811 certificate tamper-resistance cases rejected across 25 families
 - 4,752/4,752 policy-constants replay checks passed
+- 1,320/1,320 model-identity substitutions passed with 0 status changes and 0 disposition changes
 - 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups
 - 315 query portfolios plus 5 group frontier summaries across 5 issue groups; 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios
 - 66,000 annotation-uncertainty perturbations with 0.930 sample stability
@@ -80,4 +81,4 @@ The expected manuscript build is 34 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.
+The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, model-identity invariance, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, identity-label substitution under a fixed legal-material chain, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.
