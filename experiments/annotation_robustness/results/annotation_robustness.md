@@ -1,11 +1,11 @@
 # Annotation Robustness Study
 
-Base scenarios: 230
-Strict/lenient recoded evaluations: 460
-Strict status stable: 228/230
-Lenient status stable: 220/230
-Stable under all coding policies: 218/230
-Mean score delta, strict: 0.78
+Base scenarios: 246
+Strict/lenient recoded evaluations: 492
+Strict status stable: 244/246
+Lenient status stable: 236/246
+Stable under all coding policies: 234/246
+Mean score delta, strict: 0.76
 Mean score delta, lenient: 0.87
 Weighted status agreement, base vs strict: 1.00
 Weighted status agreement, base vs lenient: 0.98
@@ -40,32 +40,48 @@ Weighted status agreement, base vs lenient: 0.98
 | public-retrieval-canada-vavilov-standard-of-review-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-canada-vavilov-standard-of-review-q03 | reference_information | reference_information | reference_information | 10 | 8 | 11 |
 | public-retrieval-canada-vavilov-standard-of-review-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-canada-vavilov-standard-of-review-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-canada-vavilov-standard-of-review-q06 | reference_information | reference_information | reference_information | 10 | 8 | 11 |
 | public-retrieval-eu-gdpr-article15-access-rights-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-eu-gdpr-article15-access-rights-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-eu-gdpr-article15-access-rights-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-eu-gdpr-article15-access-rights-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-eu-gdpr-article15-access-rights-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-eu-gdpr-article15-access-rights-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-germany-right-to-be-forgotten-review-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-germany-right-to-be-forgotten-review-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-germany-right-to-be-forgotten-review-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-germany-right-to-be-forgotten-review-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-germany-right-to-be-forgotten-review-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-germany-right-to-be-forgotten-review-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-us-agency-deference-after-loper-bright-q01 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-us-agency-deference-after-loper-bright-q02 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-us-agency-deference-after-loper-bright-q03 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-us-agency-deference-after-loper-bright-q04 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
-| public-retrieval-us-agency-deference-after-loper-bright-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
 | public-retrieval-us-agency-deference-after-loper-bright-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-canada-vavilov-standard-of-review-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-canada-vavilov-standard-of-review-q06 | reference_information | reference_information | reference_information | 10 | 8 | 11 |
+| holdout-public-retrieval-eu-gdpr-article15-access-rights-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-eu-gdpr-article15-access-rights-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-germany-right-to-be-forgotten-review-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-germany-right-to-be-forgotten-review-q06 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-public-retrieval-us-agency-deference-after-loper-bright-q05 | reference_information | reference_information | reference_information | 9 | 7 | 10 |
+| holdout-raw-canada-vavilov-01 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-eu-gdpr-01 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-eu-gdpr-02 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-germany-rtbf-01 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-uk-mesothelioma-01 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-uk-mesothelioma-02 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-us-deference-01 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-raw-us-deference-02 | reference_information | reference_information | reference_information | 9 | 9 | 11 |
+| holdout-source-bound-canada-vavilov-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-eu-gdpr-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-eu-gdpr-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-germany-rtbf-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-uk-mesothelioma-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-uk-mesothelioma-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-us-deference-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| holdout-source-bound-us-deference-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | codex55-eu-01 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-eu-02 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
 | codex55-eu-03 | reference_information | reference_information | reference_information | 9 | 9 | 10 |

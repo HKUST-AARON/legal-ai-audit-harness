@@ -1,9 +1,9 @@
 {
-  "id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
+  "id": "holdout-public-retrieval-us-agency-deference-after-loper-bright-q05",
   "claimed_status": "normative_material_screening_output",
   "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "common_law",
-  "deployment_context": "Public case_law_only output for query: Kisor Skidmore Chevron Loper",
+  "deployment_context": "Out-of-sample holdout packet. Public case_law_only output for query: Kisor Skidmore Chevron Loper",
   "benchmark_scope": "case_law_only",
   "mixed_authority_required_elsewhere": [
     "apa-5-usc-706"
@@ -63,7 +63,7 @@
     "f1": null
   },
   "evidence_packet": {
-    "source_collection": "experiments/public_retrieval_benchmark/manifests/us-agency-deference-after-loper-bright-q05.json",
+    "source_collection": "experiments/holdout_validation/manifests/us-agency-deference-after-loper-bright-q05.json",
     "output_units": [
       {
         "id": "rank-01",
@@ -150,7 +150,5 @@
     ],
     "irreversible_action": false,
     "human_authorization": false
-  },
-  "expected_allowed_status": "reference_information",
-  "expected_disposition": "suspension"
+  }
 }

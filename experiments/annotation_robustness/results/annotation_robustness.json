@@ -1,10 +1,10 @@
 {
-  "all_policy_status_stable": 218,
-  "lenient_status_stable": 220,
-  "mean_score_delta_lenient": 0.8652173913043478,
-  "mean_score_delta_strict": 0.782608695652174,
+  "all_policy_status_stable": 234,
+  "lenient_status_stable": 236,
+  "mean_score_delta_lenient": 0.8739837398373984,
+  "mean_score_delta_strict": 0.7642276422764228,
   "policy_count": 3,
-  "recoded_evaluations": 460,
+  "recoded_evaluations": 492,
   "rows": [
     {
       "base": {
@@ -611,52 +611,6 @@
         "disposition": "suspension",
         "total_score": 9
       },
-      "jurisdiction_profile": "common_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q05",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q05.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 7
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "jurisdiction_profile": "common_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 11
-      },
-      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q06",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q06.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 8
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 9
-      },
       "jurisdiction_profile": "civil_law",
       "lenient": {
         "allowed_status": "reference_information",
@@ -735,52 +689,6 @@
       },
       "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q04",
       "source_path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q04.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 7
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 9
-      },
-      "jurisdiction_profile": "civil_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q05",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q05.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 7
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 9
-      },
-      "jurisdiction_profile": "civil_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q06",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q06.json",
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
@@ -887,52 +795,6 @@
         "disposition": "suspension",
         "total_score": 9
       },
-      "jurisdiction_profile": "civil_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q05",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q05.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 7
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 9
-      },
-      "jurisdiction_profile": "civil_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q06",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q06.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 7
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 9
-      },
       "jurisdiction_profile": "common_law",
       "lenient": {
         "allowed_status": "reference_information",
@@ -1011,29 +873,6 @@
       },
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
       "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q04.json",
-      "strict": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 7
-      }
-    },
-    {
-      "base": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 9
-      },
-      "jurisdiction_profile": "common_law",
-      "lenient": {
-        "allowed_status": "reference_information",
-        "claim_supported": false,
-        "disposition": "suspension",
-        "total_score": 10
-      },
-      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q05.json",
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
@@ -1170,8 +1009,8 @@
         "disposition": "suspension",
         "total_score": 10
       },
-      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q05.json",
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+      "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
@@ -1193,13 +1032,542 @@
         "disposition": "suspension",
         "total_score": 10
       },
-      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
-      "source_path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q05",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q05.json",
       "strict": {
         "allowed_status": "reference_information",
         "claim_supported": false,
         "disposition": "suspension",
         "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q06",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q06.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 8
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q05",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q05.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q06",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q06.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q05",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q05.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q06",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q06.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "holdout-public-retrieval-us-agency-deference-after-loper-bright-q05",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-us-agency-deference-after-loper-bright-q05.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 7
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-canada-vavilov-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-canada-vavilov-01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-eu-gdpr-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-eu-gdpr-02",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-02.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-germany-rtbf-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-germany-rtbf-01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-uk-mesothelioma-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-uk-mesothelioma-02",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-02.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-us-deference-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-01.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-raw-us-deference-02",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-02.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-canada-vavilov-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-eu-gdpr-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-eu-gdpr-02",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-germany-rtbf-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-us-deference-01",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "holdout-source-bound-us-deference-02",
+      "source_path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
       }
     },
     {
@@ -5297,8 +5665,8 @@
       }
     }
   ],
-  "scenario_count": 230,
-  "strict_status_stable": 228,
-  "weighted_status_agreement_base_lenient": 0.9815246204514418,
-  "weighted_status_agreement_base_strict": 0.9961178158494388
+  "scenario_count": 246,
+  "strict_status_stable": 244,
+  "weighted_status_agreement_base_lenient": 0.9828415986608077,
+  "weighted_status_agreement_base_strict": 0.9964134190613655
 }

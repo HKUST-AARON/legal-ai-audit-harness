@@ -1,0 +1,155 @@
+{
+  "id": "holdout-raw-us-deference-02",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Out-of-sample raw model-style authority recommendation packet generated after the audit policy was frozen.",
+  "scores": {
+    "S": {
+      "score": 1,
+      "evidence": "Source names and locators are visible, but links are not procedurally source-bound."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Holdout prompt family, issue, packet id and output version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "High-authority materials are identified against a holdout issue set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter or limiting materials are visible in the output list."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected, but it has no party-facing contestation pathway."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The holdout output is logged, but not adopted as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "loper-bright-603-us-369",
+      "apa-5-usc-706",
+      "skidmore-323-us-134"
+    ],
+    "retrieved_high_authority": [
+      "apa-5-usc-706",
+      "loper-bright-603-us-369",
+      "skidmore-323-us-134"
+    ],
+    "counter_or_limiting": [
+      "skidmore-323-us-134",
+      "kisor-588-us-558"
+    ],
+    "retrieved_counter_or_limiting": [
+      "kisor-588-us-558",
+      "skidmore-323-us-134"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "apa-5-usc-706",
+      "loper-bright-603-us-369",
+      "kisor-588-us-558",
+      "skidmore-323-us-134"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "claim": "Administrative Procedure Act judicial review provision is relevant because it addresses section 706 and reviewing court.",
+        "source_ids": [
+          "apa-5-usc-706"
+        ],
+        "locators": [
+          "5 U.S.C. 706"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "unit-02",
+        "claim": "Loper Bright Enterprises v. Raimondo is relevant because it addresses loper bright and overruled chevron.",
+        "source_ids": [
+          "loper-bright-603-us-369"
+        ],
+        "locators": [
+          "603 U.S. 369 (2024)"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "unit-03",
+        "claim": "Kisor v. Wilkie is relevant because it addresses kisor and agency regulations.",
+        "source_ids": [
+          "kisor-588-us-558"
+        ],
+        "locators": [
+          "588 U.S. 558 (2019)"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "unit-04",
+        "claim": "Skidmore v. Swift & Co. is relevant because it addresses skidmore and persuasive.",
+        "source_ids": [
+          "skidmore-323-us-134"
+        ],
+        "locators": [
+          "323 U.S. 134 (1944)"
+        ],
+        "output_rank": 4
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-01",
+        "source_id": "apa-5-usc-706",
+        "locator": "5 U.S.C. 706",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-02",
+        "source_id": "loper-bright-603-us-369",
+        "locator": "603 U.S. 369 (2024)",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-03",
+        "source_id": "kisor-588-us-558",
+        "locator": "588 U.S. 558 (2019)",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-04",
+        "source_id": "skidmore-323-us-134",
+        "locator": "323 U.S. 134 (1944)",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "united_states_federal_administrative_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  }
+}

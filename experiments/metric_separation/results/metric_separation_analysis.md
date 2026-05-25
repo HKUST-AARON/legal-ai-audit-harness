@@ -1,51 +1,51 @@
 # Metric Separation Analysis
 
-Scenario packets: 230
-Scenario packets with upstream precision/recall/F1: 185
-Procedurally qualified outputs: 45
+Scenario packets: 246
+Scenario packets with upstream precision/recall/F1: 201
+Procedurally qualified outputs: 53
 
 ## Point-Biserial Correlation With Procedural Qualification
 
 | Metric | Correlation |
 | --- | ---: |
-| precision | 0.07 |
-| recall | 0.05 |
-| f1 | 0.08 |
+| precision | 0.12 |
+| recall | 0.06 |
+| f1 | 0.11 |
 
 ## Threshold Tests
 
 | Predictor | TP | FP | TN | FN | Precision | Recall | Specificity |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| precision>=0.8 | 45 | 138 | 2 | 0 | 0.25 | 1.00 | 0.01 |
-| recall>=0.8 | 45 | 136 | 4 | 0 | 0.25 | 1.00 | 0.03 |
-| f1>=0.8 | 45 | 138 | 2 | 0 | 0.25 | 1.00 | 0.01 |
+| precision>=0.8 | 53 | 146 | 2 | 0 | 0.27 | 1.00 | 0.01 |
+| recall>=0.8 | 53 | 144 | 4 | 0 | 0.27 | 1.00 | 0.03 |
+| f1>=0.8 | 53 | 146 | 2 | 0 | 0.27 | 1.00 | 0.01 |
 
 ## Gate Cascade
 
 | Predictor | TP | FP | TN | FN | Precision | Recall | Specificity |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| recall>=0.8 | 45 | 136 | 4 | 0 | 0.25 | 1.00 | 0.03 |
-| + score candidate | 45 | 104 | 36 | 0 | 0.30 | 1.00 | 0.26 |
-| + source bound | 45 | 28 | 112 | 0 | 0.62 | 1.00 | 0.80 |
-| + review role | 45 | 18 | 122 | 0 | 0.71 | 1.00 | 0.87 |
-| + no failure cap | 45 | 0 | 140 | 0 | 1.00 | 1.00 | 1.00 |
+| recall>=0.8 | 53 | 144 | 4 | 0 | 0.27 | 1.00 | 0.03 |
+| + score candidate | 53 | 112 | 36 | 0 | 0.32 | 1.00 | 0.24 |
+| + source bound | 53 | 28 | 120 | 0 | 0.65 | 1.00 | 0.81 |
+| + review role | 53 | 18 | 130 | 0 | 0.75 | 1.00 | 0.88 |
+| + no failure cap | 53 | 0 | 148 | 0 | 1.00 | 1.00 | 1.00 |
 
 ## Bootstrap and Permutation Robustness
 
 Bootstrap resamples: 1000 with seed 10506.
-Recall point-biserial permutation p-value: 0.538.
+Recall point-biserial permutation p-value: 0.434.
 
 | Metric | 2.5% | Median | 97.5% |
 | --- | ---: | ---: | ---: |
 | full_gate_precision | 1.00 | 1.00 | 1.00 |
 | full_gate_specificity | 1.00 | 1.00 | 1.00 |
-| high_recall_blocked_rate | 0.68 | 0.75 | 0.81 |
-| recall_point_biserial | -0.08 | 0.05 | 0.14 |
-| recall_threshold_precision | 0.19 | 0.25 | 0.32 |
+| high_recall_blocked_rate | 0.67 | 0.73 | 0.79 |
+| recall_point_biserial | -0.07 | 0.06 | 0.15 |
+| recall_threshold_precision | 0.21 | 0.27 | 0.33 |
 
 ## High-Recall Blocked Outputs
 
-High-recall outputs blocked below normative screening: 136/181 (0.75).
+High-recall outputs blocked below normative screening: 144/197 (0.73).
 
-Failure flags: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 25, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
-Status distribution: no_external_legal_effect: 31, professional_support_output: 10, reference_information: 95
+Failure flags: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 25, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 105, summary_distortion: 21, unauthorized_action: 10
+Status distribution: no_external_legal_effect: 31, professional_support_output: 10, reference_information: 103

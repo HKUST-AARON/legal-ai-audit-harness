@@ -1,27 +1,27 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 218,
-    "scenario_count": 230,
-    "weighted_status_agreement_base_lenient": 0.9815246204514418,
-    "weighted_status_agreement_base_strict": 0.9961178158494388
+    "all_policy_status_stable": 234,
+    "scenario_count": 246,
+    "weighted_status_agreement_base_lenient": 0.9828415986608077,
+    "weighted_status_agreement_base_strict": 0.9964134190613655
   },
   "annotation_uncertainty": {
-    "boundary_scenario_count": 127,
-    "evaluation_count": 57500,
-    "mean_status_rank_shift": 0.0816,
-    "qualified_high_status_stability_rate": 0.9278260869565218,
-    "qualified_status_stability_rate": 0.8759130434782609,
-    "scenario_count": 230,
-    "scenario_exact_stability_count": 101,
-    "scenario_high_stability_count": 175,
-    "status_stability_rate": 0.9355130434782609
+    "boundary_scenario_count": 143,
+    "evaluation_count": 61500,
+    "mean_status_rank_shift": 0.08635772357723577,
+    "qualified_high_status_stability_rate": 0.9239259259259259,
+    "qualified_status_stability_rate": 0.8833333333333333,
+    "scenario_count": 246,
+    "scenario_exact_stability_count": 102,
+    "scenario_high_stability_count": 183,
+    "status_stability_rate": 0.9325853658536586
   },
-  "annotation_uncertainty_evaluations": 57500,
+  "annotation_uncertainty_evaluations": 61500,
   "blind_coding": {
     "base_status_agreement": {
       "coder_a": {
-        "exact_status_agreement": 0.9608695652173913,
-        "match_count": 221,
+        "exact_status_agreement": 0.9594594594594594,
+        "match_count": 213,
         "mismatch_count": 9,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -34,11 +34,11 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "weighted_status_agreement": 0.9815217391304348
+        "weighted_status_agreement": 0.9808558558558559
       },
       "coder_b": {
-        "exact_status_agreement": 0.9521739130434783,
-        "match_count": 219,
+        "exact_status_agreement": 0.9504504504504504,
+        "match_count": 211,
         "mismatch_count": 11,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -53,34 +53,34 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "weighted_status_agreement": 0.975
+        "weighted_status_agreement": 0.9740990990990991
       }
     },
     "coder_count": 2,
-    "packet_count": 230,
+    "packet_count": 222,
     "pairwise_status": [
       {
-        "exact_status_agreement": 0.991304347826087,
+        "exact_status_agreement": 0.990990990990991,
         "left": "coder_a",
         "right": "coder_b",
-        "weighted_status_agreement": 0.9934782608695653
+        "weighted_status_agreement": 0.9932432432432432
       }
     ],
     "status_disagreement_count": 2
   },
-  "blind_coding_evaluations": 460,
+  "blind_coding_evaluations": 444,
   "blocked_reason_distribution": {
     "authority_omission": 5,
     "contestation_failure": 1,
     "counter_material_suppression": 27,
     "invalid_authority": 1,
     "ranking_drift": 9,
-    "source_attribution_gap": 97,
+    "source_attribution_gap": 105,
     "summary_distortion": 21,
     "unauthorized_action": 10
   },
-  "expected_passed": 230,
-  "expected_total": 230,
+  "expected_passed": 246,
+  "expected_total": 246,
   "formal_invariant_evaluations": 51643,
   "formal_invariant_verification": {
     "all_passed": true,
@@ -89,12 +89,12 @@
     "total_checks": 51643
   },
   "gate_ablation": {
-    "ablation_count": 288,
+    "ablation_count": 336,
     "by_ablation": {
       "missing_counter_material": {
         "failed": 0,
-        "passed": 46,
-        "total": 46
+        "passed": 54,
+        "total": 54
       },
       "missing_decision_adoption": {
         "failed": 0,
@@ -103,47 +103,47 @@
       },
       "missing_evidence_packet": {
         "failed": 0,
-        "passed": 46,
-        "total": 46
+        "passed": 54,
+        "total": 54
       },
       "missing_high_authority": {
         "failed": 0,
-        "passed": 46,
-        "total": 46
+        "passed": 54,
+        "total": 54
       },
       "missing_review_gate": {
         "failed": 0,
-        "passed": 46,
-        "total": 46
+        "passed": 54,
+        "total": 54
       },
       "nonprocedural_source_tags": {
         "failed": 0,
-        "passed": 46,
-        "total": 46
+        "passed": 54,
+        "total": 54
       },
       "professional_role_cap": {
         "failed": 0,
-        "passed": 46,
-        "total": 46
+        "passed": 54,
+        "total": 54
       }
     },
     "failed_count": 0,
-    "passed_count": 288,
-    "qualified_scenario_count": 46
+    "passed_count": 336,
+    "qualified_scenario_count": 54
   },
-  "gate_ablation_evaluations": 288,
-  "high_upstream_but_blocked": 128,
+  "gate_ablation_evaluations": 336,
+  "high_upstream_but_blocked": 136,
   "jurisdiction_profile": {
-    "counterfactual_evaluation_count": 138,
-    "generic_profile_preserved": 46,
-    "mismatched_profile_downgraded": 46,
-    "missing_assumption_downgraded": 46,
-    "passed_count": 138,
-    "profile_check_count": 217,
-    "profile_supported_count": 217,
-    "qualified_status_count": 46
+    "counterfactual_evaluation_count": 162,
+    "generic_profile_preserved": 54,
+    "mismatched_profile_downgraded": 54,
+    "missing_assumption_downgraded": 54,
+    "passed_count": 162,
+    "profile_check_count": 233,
+    "profile_supported_count": 233,
+    "qualified_status_count": 54
   },
-  "jurisdiction_profile_evaluations": 355,
+  "jurisdiction_profile_evaluations": 395,
   "metric_separation": {
     "bootstrap": {
       "confidence_interval": {
@@ -158,19 +158,19 @@
           "median": 1.0
         },
         "high_recall_blocked_rate": {
-          "high": 0.8076923076923077,
-          "low": 0.6833333333333333,
-          "median": 0.751412429378531
+          "high": 0.7938144329896907,
+          "low": 0.6666666666666666,
+          "median": 0.7323232323232324
         },
         "recall_point_biserial": {
-          "high": 0.13951661164837972,
-          "low": -0.08227279255606221,
-          "median": 0.048513310180082266
+          "high": 0.1463274940911336,
+          "low": -0.06866250203719752,
+          "median": 0.05662073838148104
         },
         "recall_threshold_precision": {
-          "high": 0.31666666666666665,
-          "low": 0.19230769230769232,
-          "median": 0.24725274725274726
+          "high": 0.3333333333333333,
+          "low": 0.20603015075376885,
+          "median": 0.26666666666666666
         }
       },
       "iterations": 1000,
@@ -179,43 +179,43 @@
     "gate_cascade": [
       {
         "false_negative": 0,
-        "false_positive": 136,
+        "false_positive": 144,
         "label": "recall>=0.8",
-        "precision": 0.24861878453038674,
+        "precision": 0.26903553299492383,
         "recall": 1.0,
-        "specificity": 0.02857142857142857,
+        "specificity": 0.02702702702702703,
         "true_negative": 4,
-        "true_positive": 45
+        "true_positive": 53
       },
       {
         "false_negative": 0,
-        "false_positive": 104,
+        "false_positive": 112,
         "label": "+ score candidate",
-        "precision": 0.30201342281879195,
+        "precision": 0.3212121212121212,
         "recall": 1.0,
-        "specificity": 0.2571428571428571,
+        "specificity": 0.24324324324324326,
         "true_negative": 36,
-        "true_positive": 45
+        "true_positive": 53
       },
       {
         "false_negative": 0,
         "false_positive": 28,
         "label": "+ source bound",
-        "precision": 0.6164383561643836,
+        "precision": 0.654320987654321,
         "recall": 1.0,
-        "specificity": 0.8,
-        "true_negative": 112,
-        "true_positive": 45
+        "specificity": 0.8108108108108109,
+        "true_negative": 120,
+        "true_positive": 53
       },
       {
         "false_negative": 0,
         "false_positive": 18,
         "label": "+ review role",
-        "precision": 0.7142857142857143,
+        "precision": 0.7464788732394366,
         "recall": 1.0,
-        "specificity": 0.8714285714285714,
-        "true_negative": 122,
-        "true_positive": 45
+        "specificity": 0.8783783783783784,
+        "true_negative": 130,
+        "true_positive": 53
       },
       {
         "false_negative": 0,
@@ -224,42 +224,42 @@
         "precision": 1.0,
         "recall": 1.0,
         "specificity": 1.0,
-        "true_negative": 140,
-        "true_positive": 45
+        "true_negative": 148,
+        "true_positive": 53
       }
     ],
     "high_recall_blocked": {
-      "count": 136,
-      "denominator": 181,
+      "count": 144,
+      "denominator": 197,
       "failure_flags": {
         "authority_omission": 5,
         "contestation_failure": 1,
         "counter_material_suppression": 25,
         "invalid_authority": 1,
         "ranking_drift": 9,
-        "source_attribution_gap": 97,
+        "source_attribution_gap": 105,
         "summary_distortion": 21,
         "unauthorized_action": 10
       },
-      "rate": 0.7513812154696132,
+      "rate": 0.7309644670050761,
       "status_distribution": {
         "no_external_legal_effect": 31,
         "professional_support_output": 10,
-        "reference_information": 95
+        "reference_information": 103
       }
     },
-    "metric_scenario_count": 185,
+    "metric_scenario_count": 201,
     "permutation": {
       "iterations": 1000,
       "metric": "recall_point_biserial",
-      "observed_abs": 0.046010491460766016,
+      "observed_abs": 0.055975602252872646,
       "seed": 10506,
-      "two_sided_p": 0.5384615384615384
+      "two_sided_p": 0.43356643356643354
     },
-    "qualified_count": 45,
-    "recall_point_biserial": 0.046010491460766016
+    "qualified_count": 53,
+    "recall_point_biserial": 0.055975602252872646
   },
-  "metric_separation_evaluations": 185,
+  "metric_separation_evaluations": 201,
   "metric_statistical_resamples": 2000,
   "model_output_transcript_evaluations": 50,
   "model_output_transcript_verification": {
@@ -272,63 +272,63 @@
   },
   "ranking_visibility": {
     "counterfactual_front_window_counter_visible": 0,
-    "coverage_preserved_count": 70,
-    "downgraded_count": 70,
-    "eligible_packet_count": 214,
+    "coverage_preserved_count": 76,
+    "downgraded_count": 76,
+    "eligible_packet_count": 230,
     "first_counter_rank_distribution": {
       "1": 14,
-      "2": 56,
-      "3": 102,
+      "2": 64,
+      "3": 110,
       "4": 9
     },
     "front_window_counter_not_visible": 34,
-    "front_window_counter_visible": 167,
-    "front_window_packet_count": 201,
-    "mean_reciprocal_first_counter_rank": 0.43232044198895025,
+    "front_window_counter_visible": 183,
+    "front_window_packet_count": 217,
+    "mean_reciprocal_first_counter_rank": 0.4310490693739425,
     "median_first_counter_rank": 3.0,
-    "rank_intervention_applied_count": 70,
-    "rank_order_counterfactual_count": 70,
-    "rank_order_passed_count": 70,
-    "visibility_check_count": 214,
-    "window_check_count": 820,
+    "rank_intervention_applied_count": 76,
+    "rank_order_counterfactual_count": 76,
+    "rank_order_passed_count": 76,
+    "visibility_check_count": 230,
+    "window_check_count": 884,
     "window_sensitivity": [
       {
-        "counter_not_visible_count": 200,
+        "counter_not_visible_count": 216,
         "counter_visible_count": 14,
-        "eligible_packet_count": 214,
-        "visible_ratio": 0.06542056074766354,
+        "eligible_packet_count": 230,
+        "visible_ratio": 0.06086956521739131,
         "window_size": 1
       },
       {
-        "counter_not_visible_count": 137,
-        "counter_visible_count": 70,
-        "eligible_packet_count": 207,
-        "visible_ratio": 0.33816425120772947,
+        "counter_not_visible_count": 145,
+        "counter_visible_count": 78,
+        "eligible_packet_count": 223,
+        "visible_ratio": 0.34977578475336324,
         "window_size": 2
       },
       {
         "counter_not_visible_count": 34,
-        "counter_visible_count": 167,
-        "eligible_packet_count": 201,
-        "visible_ratio": 0.8308457711442786,
+        "counter_visible_count": 183,
+        "eligible_packet_count": 217,
+        "visible_ratio": 0.8433179723502304,
         "window_size": 3
       },
       {
         "counter_not_visible_count": 25,
-        "counter_visible_count": 173,
-        "eligible_packet_count": 198,
-        "visible_ratio": 0.8737373737373737,
+        "counter_visible_count": 189,
+        "eligible_packet_count": 214,
+        "visible_ratio": 0.883177570093458,
         "window_size": 4
       }
     ]
   },
-  "ranking_visibility_checks": 214,
-  "ranking_visibility_counterfactuals": 70,
-  "ranking_visibility_window_checks": 820,
-  "recoded_evaluations": 460,
+  "ranking_visibility_checks": 230,
+  "ranking_visibility_counterfactuals": 76,
+  "ranking_visibility_window_checks": 884,
+  "recoded_evaluations": 492,
   "repair_frontier": {
-    "blocked_claim_count": 176,
-    "counterfactual_evaluation_count": 4418,
+    "blocked_claim_count": 184,
+    "counterfactual_evaluation_count": 4474,
     "minimal_repair_gate_frequency": {
       "audit_vector_completion": 33,
       "authority_packet_completion": 65,
@@ -337,19 +337,19 @@
       "rank_salience_completion": 37,
       "review_contestability_completion": 20,
       "role_cap_completion": 20,
-      "source_binding_completion": 146
+      "source_binding_completion": 154
     },
     "minimal_repair_size_distribution": {
-      "1": 100,
+      "1": 108,
       "2": 34,
       "3": 39,
       "4": 3
     },
-    "repairable_count": 176,
+    "repairable_count": 184,
     "unrepairable_count": 0
   },
-  "repair_frontier_evaluations": 4418,
-  "scenario_files": 230,
+  "repair_frontier_evaluations": 4474,
+  "scenario_files": 246,
   "source_text_anchor_evaluations": 30,
   "source_text_verification": {
     "record_count": 30,
@@ -359,14 +359,14 @@
     "verified_ratio": 1.0
   },
   "status_certificate": {
-    "cap_or_failure_transition_count": 150,
-    "certificate_count": 230,
-    "passed_check_count": 2990,
-    "replay_check_count": 2990,
-    "verified_certificate_count": 230
+    "cap_or_failure_transition_count": 158,
+    "certificate_count": 246,
+    "passed_check_count": 3198,
+    "replay_check_count": 3198,
+    "verified_certificate_count": 246
   },
-  "status_certificate_replay_checks": 2990,
-  "suite_count": 23,
+  "status_certificate_replay_checks": 3198,
+  "suite_count": 24,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -446,21 +446,41 @@
     },
     {
       "blocked_reason_distribution": {
-        "counter_material_suppression": 2
+        "counter_material_suppression": 1
       },
       "evidence_class": "endpoint-compatible public-output benchmark",
-      "expected_passed": 30,
+      "expected_passed": 22,
       "finding": "Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.",
-      "high_upstream_but_blocked": 2,
+      "high_upstream_but_blocked": 1,
       "id": "public_retrieval_benchmark",
       "label": "Endpoint-matched public retrieval benchmark",
-      "mean_audit_score": 9.066666666666666,
-      "mean_upstream_recall": 0.25555555555555554,
-      "scenario_count": 30,
+      "mean_audit_score": 9.045454545454545,
+      "mean_upstream_recall": 0.23484848484848483,
+      "scenario_count": 22,
       "status_distribution": {
-        "reference_information": 30
+        "reference_information": 22
       },
-      "validation_units": "225 public search result records"
+      "validation_units": "169 public search result records"
+    },
+    {
+      "blocked_reason_distribution": {
+        "counter_material_suppression": 1,
+        "source_attribution_gap": 8
+      },
+      "evidence_class": "frozen-protocol holdout validation",
+      "expected_passed": 24,
+      "finding": "Tests withheld public-retrieval packets, raw model-output packets and source-bound repair packets after freezing the scoring policy.",
+      "high_upstream_but_blocked": 9,
+      "id": "holdout_validation",
+      "label": "Out-of-sample holdout validation",
+      "mean_audit_score": 9.708333333333334,
+      "mean_upstream_recall": 0.7708333333333334,
+      "scenario_count": 24,
+      "status_distribution": {
+        "normative_material_screening_output": 8,
+        "reference_information": 16
+      },
+      "validation_units": "126 holdout output records/items"
     },
     {
       "blocked_reason_distribution": {
@@ -646,14 +666,14 @@
       "label": "Metric separation analysis",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "recall-threshold precision 0.25; full gate precision 1.00",
-      "scenario_count": 185,
+      "rule_pass": "recall-threshold precision 0.27; full gate precision 1.00",
+      "scenario_count": 201,
       "status_distribution": {
         "full_gate_specificity": 1.0,
-        "high_recall_blocked_rate": 0.75,
-        "recall_point_biserial": 0.05
+        "high_recall_blocked_rate": 0.73,
+        "recall_point_biserial": 0.06
       },
-      "validation_units": "185 upstream-metric scenario packets"
+      "validation_units": "201 upstream-metric scenario packets"
     },
     {
       "evidence_class": "counterfactual gate-necessity check",
@@ -663,8 +683,8 @@
       "label": "Qualified-output gate ablations",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "288/288",
-      "scenario_count": 288,
+      "rule_pass": "336/336",
+      "scenario_count": 336,
       "status_distribution": {
         "missing_counter_material": 0,
         "missing_decision_adoption": 0,
@@ -674,7 +694,7 @@
         "nonprocedural_source_tags": 0,
         "professional_role_cap": 0
       },
-      "validation_units": "288 ablations over 46 qualified packets"
+      "validation_units": "336 ablations over 54 qualified packets"
     },
     {
       "evidence_class": "counterfactual repair-necessity check",
@@ -684,15 +704,15 @@
       "label": "Blocked-claim repair frontiers",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "176/176 repairable",
-      "scenario_count": 4418,
+      "rule_pass": "184/184 repairable",
+      "scenario_count": 4474,
       "status_distribution": {
-        "1": 100,
+        "1": 108,
         "2": 34,
         "3": 39,
         "4": 3
       },
-      "validation_units": "4418 repair counterfactuals over 176 blocked claims"
+      "validation_units": "4474 repair counterfactuals over 184 blocked claims"
     },
     {
       "evidence_class": "cross-profile gate check",
@@ -702,14 +722,14 @@
       "label": "Jurisdiction-profile mutations",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "217/217 profile checks; 138/138 mutations",
-      "scenario_count": 355,
+      "rule_pass": "233/233 profile checks; 162/162 mutations",
+      "scenario_count": 395,
       "status_distribution": {
-        "generic_preserved": 46,
-        "mismatch_downgraded": 46,
-        "missing_downgraded": 46
+        "generic_preserved": 54,
+        "mismatch_downgraded": 54,
+        "missing_downgraded": 54
       },
-      "validation_units": "355 profile checks and counterfactuals"
+      "validation_units": "395 profile checks and counterfactuals"
     },
     {
       "evidence_class": "rank-salience counterfactual check",
@@ -719,19 +739,19 @@
       "label": "Ranking-visibility diagnostics",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "70/70 rank-order",
-      "scenario_count": 890,
+      "rule_pass": "76/76 rank-order",
+      "scenario_count": 960,
       "status_distribution": {
         "counterfactual_front_window_counter_visible": 0,
-        "coverage_preserved": 70,
-        "downgraded": 70,
+        "coverage_preserved": 76,
+        "downgraded": 76,
         "front_window_counter_not_visible": 34,
-        "front_window_counter_visible": 167,
+        "front_window_counter_visible": 183,
         "mean_reciprocal_first_counter_rank": 0.43,
         "median_first_counter_rank": 3.0,
-        "rank_intervention_applied": 70
+        "rank_intervention_applied": 76
       },
-      "validation_units": "820 rank-window checks over 214 high-status claims plus 70 rank-order counterfactuals"
+      "validation_units": "884 rank-window checks over 230 high-status claims plus 76 rank-order counterfactuals"
     },
     {
       "evidence_class": "derivation-certificate check",
@@ -741,13 +761,13 @@
       "label": "Status certificate replay",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "2990/2990",
-      "scenario_count": 2990,
+      "rule_pass": "3198/3198",
+      "scenario_count": 3198,
       "status_distribution": {
-        "cap_or_failure_transitions": 150,
-        "verified_certificates": 230
+        "cap_or_failure_transitions": 158,
+        "verified_certificates": 246
       },
-      "validation_units": "2990 replay checks over 230 certificates"
+      "validation_units": "3198 replay checks over 246 certificates"
     },
     {
       "evidence_class": "coding robustness",
@@ -757,13 +777,13 @@
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "218/230 stable across all policies",
-      "scenario_count": 230,
+      "rule_pass": "234/246 stable across all policies",
+      "scenario_count": 246,
       "status_distribution": {
         "base_vs_lenient_weighted_agreement": 0.98,
         "base_vs_strict_weighted_agreement": 1.0
       },
-      "validation_units": "460 strict/lenient recoded evaluations"
+      "validation_units": "492 strict/lenient recoded evaluations"
     },
     {
       "evidence_class": "score-noise robustness",
@@ -773,15 +793,15 @@
       "label": "Annotation uncertainty Monte Carlo",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.936 sample stability; 0.928 qualified high-status stability",
-      "scenario_count": 57500,
+      "rule_pass": "0.933 sample stability; 0.924 qualified high-status stability",
+      "scenario_count": 61500,
       "status_distribution": {
-        "boundary_scenarios": 127,
-        "exact_stable_scenarios": 101,
-        "high_status_stable_scenarios": 175,
-        "mean_status_rank_shift": 0.082
+        "boundary_scenarios": 143,
+        "exact_stable_scenarios": 102,
+        "high_status_stable_scenarios": 183,
+        "mean_status_rank_shift": 0.086
       },
-      "validation_units": "57500 score-perturbed evaluations"
+      "validation_units": "61500 score-perturbed evaluations"
     },
     {
       "evidence_class": "codebook reproducibility",
@@ -792,13 +812,13 @@
       "mean_audit_score": null,
       "mean_upstream_recall": null,
       "rule_pass": "0.99 coder agreement; 0.95 min base agreement",
-      "scenario_count": 230,
+      "scenario_count": 222,
       "status_distribution": {
         "coder_weighted_status_agreement": 0.99,
         "min_base_weighted_status_agreement": 0.97,
         "status_disagreements": 2
       },
-      "validation_units": "230 packets x 2 coding passes"
+      "validation_units": "222 packets x 2 coding passes"
     }
   ],
   "threshold_sensitivity": {
@@ -815,9 +835,9 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 34,
+          "normative_material_screening_output": 42,
           "professional_support_output": 23,
-          "reference_information": 129
+          "reference_information": 137
         },
         "status_flips_from_default": 0
       },
@@ -829,9 +849,9 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 34,
+          "normative_material_screening_output": 42,
           "professional_support_output": 23,
-          "reference_information": 129
+          "reference_information": 137
         },
         "status_flips_from_default": 0
       },
@@ -843,9 +863,9 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 34,
+          "normative_material_screening_output": 42,
           "professional_support_output": 23,
-          "reference_information": 129
+          "reference_information": 137
         },
         "status_flips_from_default": 0
       },
@@ -857,62 +877,63 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 32,
+          "normative_material_screening_output": 40,
           "professional_support_output": 25,
-          "reference_information": 129
+          "reference_information": 137
         },
         "status_flips_from_default": 2
       },
       {
         "decision_threshold": 13,
-        "demotions_from_default": 41,
+        "demotions_from_default": 49,
         "normative_threshold": 12,
         "promotions_from_default": 0,
         "status_distribution": {
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 17,
-          "professional_support_output": 52,
-          "reference_information": 129
+          "professional_support_output": 60,
+          "reference_information": 137
         },
-        "status_flips_from_default": 41
+        "status_flips_from_default": 49
       }
     ],
-    "scenario_count": 230
+    "scenario_count": 246
   },
-  "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 123028,
+  "threshold_sensitivity_evaluations": 1230,
+  "total_evaluation_rows": 127632,
   "validation_units": {
     "adversarial_model_outputs": 60,
-    "annotation_recodings": 460,
-    "annotation_uncertainty_evaluations": 57500,
-    "blind_coding_packets": 230,
+    "annotation_recodings": 492,
+    "annotation_uncertainty_evaluations": 61500,
+    "blind_coding_packets": 222,
     "evidence_ladder_model_outputs": 70,
     "formal_invariant_checks": 51643,
     "formal_invariant_passed": 51643,
-    "gate_ablation_evaluations": 288,
+    "gate_ablation_evaluations": 336,
+    "holdout_records": 126,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
-    "jurisdiction_profile_evaluations": 355,
-    "metric_separation_evaluations": 185,
+    "jurisdiction_profile_evaluations": 395,
+    "metric_separation_evaluations": 201,
     "metric_statistical_resamples": 2000,
     "model_output_transcript_locator_checks": 50,
     "model_output_transcript_locators_verified": 50,
     "public_metadata_records": 120,
-    "public_retrieval_records": 225,
+    "public_retrieval_records": 169,
     "public_system_records": 60,
-    "ranking_visibility_checks": 214,
-    "ranking_visibility_counterfactuals": 70,
-    "ranking_visibility_window_checks": 820,
+    "ranking_visibility_checks": 230,
+    "ranking_visibility_counterfactuals": 76,
+    "ranking_visibility_window_checks": 884,
     "raw_model_outputs": 10,
-    "repair_frontier_evaluations": 4418,
+    "repair_frontier_evaluations": 4474,
     "source_bound_model_outputs": 10,
     "source_text_anchor_checks": 30,
     "source_text_anchor_verified": 30,
-    "status_certificate_replay_checks": 2990,
-    "status_certificates_verified": 230,
+    "status_certificate_replay_checks": 3198,
+    "status_certificates_verified": 246,
     "stress_scenarios": 10,
-    "threshold_sensitivity_evaluations": 1150,
-    "total": 609
+    "threshold_sensitivity_evaluations": 1230,
+    "total": 679
   }
 }

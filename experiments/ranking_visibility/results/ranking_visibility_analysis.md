@@ -1,22 +1,22 @@
 # Ranking Visibility Analysis
 
-Eligible high-status claims: 214
-Ranking-visibility diagnostics: 214 high-status claims and 820 rank-window checks
-First counter-material rank distribution: 1: 14, 2: 56, 3: 102, 4: 9
+Eligible high-status claims: 230
+Ranking-visibility diagnostics: 230 high-status claims and 884 rank-window checks
+First counter-material rank distribution: 1: 14, 2: 64, 3: 110, 4: 9
 Median first counter-material rank: 3.0; mean reciprocal rank: 0.43
-Baseline rank-drift caps: 9/214
-Rank-order counterfactuals: 70/70 downgraded with coverage preserved
-Counter-material visible in top 3: 167/201
-Counter-material outside top 3: 34/201
-Counterfactual top-window counter-material visible: 0/70
-Rank-order interventions applied: 70/214
+Baseline rank-drift caps: 9/230
+Rank-order counterfactuals: 76/76 downgraded with coverage preserved
+Counter-material visible in top 3: 183/217
+Counter-material outside top 3: 34/217
+Counterfactual top-window counter-material visible: 0/76
+Rank-order interventions applied: 76/230
 
 | Window | Eligible packets | Counter visible | Counter not visible | Visible ratio |
 | ---: | ---: | ---: | ---: | ---: |
-| 1 | 214 | 14 | 200 | 0.07 |
-| 2 | 207 | 70 | 137 | 0.34 |
-| 3 | 201 | 167 | 34 | 0.83 |
-| 4 | 198 | 173 | 25 | 0.87 |
+| 1 | 230 | 14 | 216 | 0.06 |
+| 2 | 223 | 78 | 145 | 0.35 |
+| 3 | 217 | 183 | 34 | 0.84 |
+| 4 | 214 | 189 | 25 | 0.88 |
 
 | Scenario | Suite | Base | Drifted | CAR preserved | Authority preserved | Top-window counter | Drifted top-window counter |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
@@ -33,32 +33,48 @@ Rank-order interventions applied: 70/214
 | public-retrieval-canada-vavilov-standard-of-review-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-canada-vavilov-standard-of-review-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-canada-vavilov-standard-of-review-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-canada-vavilov-standard-of-review-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-canada-vavilov-standard-of-review-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-eu-gdpr-article15-access-rights-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-eu-gdpr-article15-access-rights-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-eu-gdpr-article15-access-rights-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-eu-gdpr-article15-access-rights-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-eu-gdpr-article15-access-rights-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-eu-gdpr-article15-access-rights-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-germany-right-to-be-forgotten-review-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-germany-right-to-be-forgotten-review-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-germany-right-to-be-forgotten-review-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-germany-right-to-be-forgotten-review-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-germany-right-to-be-forgotten-review-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-germany-right-to-be-forgotten-review-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-us-agency-deference-after-loper-bright-q01 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-us-agency-deference-after-loper-bright-q02 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-us-agency-deference-after-loper-bright-q03 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-us-agency-deference-after-loper-bright-q04 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
-| public-retrieval-us-agency-deference-after-loper-bright-q05 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
 | public-retrieval-us-agency-deference-after-loper-bright-q06 | public_retrieval_benchmark | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-canada-vavilov-standard-of-review-q05 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-canada-vavilov-standard-of-review-q06 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-eu-gdpr-article15-access-rights-q05 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-eu-gdpr-article15-access-rights-q06 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-germany-right-to-be-forgotten-review-q05 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-germany-right-to-be-forgotten-review-q06 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-public-retrieval-us-agency-deference-after-loper-bright-q05 | holdout_validation | reference_information | n/a | n/a | n/a | False | False |
+| holdout-raw-canada-vavilov-01 | holdout_validation | reference_information | reference_information | True | True | True | False |
+| holdout-raw-eu-gdpr-01 | holdout_validation | reference_information | reference_information | True | True | True | False |
+| holdout-raw-eu-gdpr-02 | holdout_validation | reference_information | reference_information | True | True | True | False |
+| holdout-raw-germany-rtbf-01 | holdout_validation | reference_information | n/a | n/a | n/a | True | True |
+| holdout-raw-uk-mesothelioma-01 | holdout_validation | reference_information | n/a | n/a | n/a | True | True |
+| holdout-raw-uk-mesothelioma-02 | holdout_validation | reference_information | n/a | n/a | n/a | True | True |
+| holdout-raw-us-deference-01 | holdout_validation | reference_information | n/a | n/a | n/a | True | True |
+| holdout-raw-us-deference-02 | holdout_validation | reference_information | n/a | n/a | n/a | True | True |
+| holdout-source-bound-canada-vavilov-01 | holdout_validation | normative_material_screening_output | reference_information | True | True | True | False |
+| holdout-source-bound-eu-gdpr-01 | holdout_validation | normative_material_screening_output | reference_information | True | True | True | False |
+| holdout-source-bound-eu-gdpr-02 | holdout_validation | normative_material_screening_output | reference_information | True | True | True | False |
+| holdout-source-bound-germany-rtbf-01 | holdout_validation | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| holdout-source-bound-uk-mesothelioma-01 | holdout_validation | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| holdout-source-bound-uk-mesothelioma-02 | holdout_validation | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| holdout-source-bound-us-deference-01 | holdout_validation | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| holdout-source-bound-us-deference-02 | holdout_validation | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | codex55-eu-01 | ai_outputs | reference_information | reference_information | True | True | True | False |
 | codex55-eu-02 | ai_outputs | reference_information | n/a | n/a | n/a | False | False |
 | codex55-eu-03 | ai_outputs | reference_information | n/a | n/a | n/a | True | True |

@@ -23,21 +23,21 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 23 validation suites
-- 230 scenario files
-- 609 embedded records or output items
-- 123,028 total evaluation rows
+- 24 validation suites
+- 246 scenario files
+- 679 embedded records or output items
+- 127,632 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
-- 185 metric-separation evaluations
+- 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
-- 288/288 gate-ablation evaluations passed
-- 176/176 blocked procedural claims repairable across 4,418 repair-frontier evaluations
-- 217/217 jurisdiction-profile checks and 138/138 profile mutations passed
-- 820 rank-window visibility checks over 214 high-status claims
-- 70/70 rank-order visibility counterfactuals downgraded with coverage preserved
-- 2,990/2,990 status-certificate replay checks passed over 230 certificates
-- 57,500 annotation-uncertainty perturbations with 0.936 sample stability
-- 230/230 scenario-regression expectations passed
+- 336/336 gate-ablation evaluations passed
+- 184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations
+- 233/233 jurisdiction-profile checks and 162/162 profile mutations passed
+- 884 rank-window visibility checks over 230 high-status claims
+- 76/76 rank-order visibility counterfactuals downgraded with coverage preserved
+- 3,198/3,198 status-certificate replay checks passed over 246 certificates
+- 61,500 annotation-uncertainty perturbations with 0.933 sample stability
+- 246/246 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
 - 50/50 raw model-output transcript locators verified
 

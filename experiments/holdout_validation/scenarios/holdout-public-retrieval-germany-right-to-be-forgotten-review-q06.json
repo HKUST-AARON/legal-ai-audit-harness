@@ -1,9 +1,9 @@
 {
-  "id": "public-retrieval-germany-right-to-be-forgotten-review-q06",
+  "id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q06",
   "claimed_status": "normative_material_screening_output",
   "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "civil_law",
-  "deployment_context": "Public case_law_only output for query: Bundesverfassungsgericht Recht auf Vergessen Charta Grundgesetz",
+  "deployment_context": "Out-of-sample holdout packet. Public case_law_only output for query: Bundesverfassungsgericht Recht auf Vergessen Charta Grundgesetz",
   "benchmark_scope": "case_law_only",
   "mixed_authority_required_elsewhere": [
     "google-spain-c-131-12",
@@ -67,7 +67,7 @@
     "f1": null
   },
   "evidence_packet": {
-    "source_collection": "experiments/public_retrieval_benchmark/manifests/germany-right-to-be-forgotten-review-q06.json",
+    "source_collection": "experiments/holdout_validation/manifests/germany-right-to-be-forgotten-review-q06.json",
     "output_units": [
       {
         "id": "rank-01",
@@ -262,7 +262,5 @@
     ],
     "irreversible_action": false,
     "human_authorization": false
-  },
-  "expected_allowed_status": "reference_information",
-  "expected_disposition": "suspension"
+  }
 }

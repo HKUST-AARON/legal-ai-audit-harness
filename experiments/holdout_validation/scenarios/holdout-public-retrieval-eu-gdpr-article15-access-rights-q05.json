@@ -1,9 +1,9 @@
 {
-  "id": "public-retrieval-eu-gdpr-article15-access-rights-q06",
+  "id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q05",
   "claimed_status": "normative_material_screening_output",
   "system_role": "auditable_procedural_tool",
   "jurisdiction_profile": "civil_law",
-  "deployment_context": "Public case_law_known_item output for query: C-307/22 GDPR medical records access",
+  "deployment_context": "Out-of-sample holdout packet. Public case_law_known_item output for query: C-300/21 GDPR damage access",
   "benchmark_scope": "case_law_known_item",
   "mixed_authority_required_elsewhere": [
     "gdpr-art-15",
@@ -42,35 +42,33 @@
       "cjeu-c-487-21-crif",
       "cjeu-c-307-22-ft"
     ],
-    "retrieved_high_authority": [
-      "cjeu-c-307-22-ft"
-    ],
+    "retrieved_high_authority": [],
     "counter_or_limiting": [
       "google-spain-c-131-12"
     ],
     "retrieved_counter_or_limiting": [],
     "invalid_or_superseded": [],
     "retrieved": [
-      "cjeu-c-307-22-ft"
+      "eu-search-c-300-21"
     ]
   },
   "counter_material_complete": true,
   "upstream_metrics": {
-    "precision": 1.0,
-    "recall": 0.3333333333333333,
+    "precision": 0.0,
+    "recall": 0.0,
     "f1": null
   },
   "evidence_packet": {
-    "source_collection": "experiments/public_retrieval_benchmark/manifests/eu-gdpr-article15-access-rights-q06.json",
+    "source_collection": "experiments/holdout_validation/manifests/eu-gdpr-article15-access-rights-q05.json",
     "output_units": [
       {
         "id": "rank-01",
-        "claim": "Public search rank 1 makes this material visible: Judgment - 26/10/2023 - FT (Copies du dossier médical) Case C-307/22 Reports of Cases published in the electronic Reports of Cases (Court Reports - general) Links to the texts",
+        "claim": "Public search rank 1 makes this material visible: Judgment - 04/05/2023 - Österreichische Post (Préjudice moral lié au traitement de données personnelles) Case C-300/21 Reports of Cases published in the electronic Reports of Cases",
         "source_ids": [
-          "cjeu-c-307-22-ft"
+          "eu-search-c-300-21"
         ],
         "locators": [
-          "Case C-307/22"
+          "Case C-300/21"
         ],
         "output_rank": 1
       }
@@ -78,8 +76,8 @@
     "output_links": [
       {
         "unit_id": "rank-01",
-        "source_id": "cjeu-c-307-22-ft",
-        "locator": "Case C-307/22",
+        "source_id": "eu-search-c-300-21",
+        "locator": "Case C-300/21",
         "supports_claim": true,
         "source_tag": "official_source"
       }
@@ -94,7 +92,5 @@
     ],
     "irreversible_action": false,
     "human_authorization": false
-  },
-  "expected_allowed_status": "reference_information",
-  "expected_disposition": "suspension"
+  }
 }

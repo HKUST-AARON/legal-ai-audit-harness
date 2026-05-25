@@ -1,6 +1,6 @@
 # Blind Coding Study
 
-Packets: 230
+Packets: 222
 Coding passes: 2 (coder_a, coder_b)
 Status disagreements: 2
 
@@ -14,15 +14,15 @@ Status disagreements: 2
 
 | Coder | Exact base agreement | Weighted base agreement | Matches | Mismatches |
 | --- | ---: | ---: | ---: | ---: |
-| coder_a | 0.96 | 0.98 | 221 | 9 |
-| coder_b | 0.95 | 0.97 | 219 | 11 |
+| coder_a | 0.96 | 0.98 | 213 | 9 |
+| coder_b | 0.95 | 0.97 | 211 | 11 |
 
 ## Mean Total Score
 
 | Coder | Mean total score |
 | --- | ---: |
-| coder_a | 9.31 |
-| coder_b | 9.33 |
+| coder_a | 9.34 |
+| coder_b | 9.35 |
 
 ## Status Disagreements
 
@@ -143,31 +143,23 @@ Status disagreements: 2
 | public-retrieval-canada-vavilov-standard-of-review-q02 | reference_information | reference_information | reference_information |
 | public-retrieval-canada-vavilov-standard-of-review-q03 | reference_information | reference_information | reference_information |
 | public-retrieval-canada-vavilov-standard-of-review-q04 | reference_information | reference_information | reference_information |
-| public-retrieval-canada-vavilov-standard-of-review-q05 | reference_information | reference_information | reference_information |
-| public-retrieval-canada-vavilov-standard-of-review-q06 | reference_information | reference_information | reference_information |
 | public-retrieval-eu-gdpr-article15-access-rights-q01 | reference_information | reference_information | reference_information |
 | public-retrieval-eu-gdpr-article15-access-rights-q02 | reference_information | reference_information | reference_information |
 | public-retrieval-eu-gdpr-article15-access-rights-q03 | reference_information | reference_information | reference_information |
 | public-retrieval-eu-gdpr-article15-access-rights-q04 | reference_information | reference_information | reference_information |
-| public-retrieval-eu-gdpr-article15-access-rights-q05 | reference_information | reference_information | reference_information |
-| public-retrieval-eu-gdpr-article15-access-rights-q06 | reference_information | reference_information | reference_information |
 | public-retrieval-germany-right-to-be-forgotten-review-q01 | reference_information | reference_information | reference_information |
 | public-retrieval-germany-right-to-be-forgotten-review-q02 | reference_information | reference_information | reference_information |
 | public-retrieval-germany-right-to-be-forgotten-review-q03 | reference_information | reference_information | reference_information |
 | public-retrieval-germany-right-to-be-forgotten-review-q04 | reference_information | reference_information | reference_information |
-| public-retrieval-germany-right-to-be-forgotten-review-q05 | reference_information | reference_information | reference_information |
-| public-retrieval-germany-right-to-be-forgotten-review-q06 | reference_information | reference_information | reference_information |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q01 | reference_information | reference_information | reference_information |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q02 | reference_information | reference_information | reference_information |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q03 | reference_information | reference_information | reference_information |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q04 | reference_information | reference_information | reference_information |
-| public-retrieval-uk-mesothelioma-causation-after-fairchild-q05 | reference_information | reference_information | reference_information |
 | public-retrieval-uk-mesothelioma-causation-after-fairchild-q06 | reference_information | reference_information | reference_information |
 | public-retrieval-us-agency-deference-after-loper-bright-q01 | reference_information | reference_information | reference_information |
 | public-retrieval-us-agency-deference-after-loper-bright-q02 | reference_information | reference_information | reference_information |
 | public-retrieval-us-agency-deference-after-loper-bright-q03 | reference_information | reference_information | reference_information |
 | public-retrieval-us-agency-deference-after-loper-bright-q04 | reference_information | reference_information | reference_information |
-| public-retrieval-us-agency-deference-after-loper-bright-q05 | reference_information | reference_information | reference_information |
 | public-retrieval-us-agency-deference-after-loper-bright-q06 | reference_information | reference_information | reference_information |
 | public-system-output-canada | professional_support_output | professional_support_output | professional_support_output |
 | public-system-output-germany | professional_support_output | professional_support_output | professional_support_output |

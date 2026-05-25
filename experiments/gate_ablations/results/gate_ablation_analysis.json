@@ -1,10 +1,10 @@
 {
-  "ablation_count": 288,
+  "ablation_count": 336,
   "by_ablation": {
     "missing_counter_material": {
       "failed": 0,
-      "passed": 46,
-      "total": 46
+      "passed": 54,
+      "total": 54
     },
     "missing_decision_adoption": {
       "failed": 0,
@@ -13,34 +13,34 @@
     },
     "missing_evidence_packet": {
       "failed": 0,
-      "passed": 46,
-      "total": 46
+      "passed": 54,
+      "total": 54
     },
     "missing_high_authority": {
       "failed": 0,
-      "passed": 46,
-      "total": 46
+      "passed": 54,
+      "total": 54
     },
     "missing_review_gate": {
       "failed": 0,
-      "passed": 46,
-      "total": 46
+      "passed": 54,
+      "total": 54
     },
     "nonprocedural_source_tags": {
       "failed": 0,
-      "passed": 46,
-      "total": 46
+      "passed": 54,
+      "total": 54
     },
     "professional_role_cap": {
       "failed": 0,
-      "passed": 46,
-      "total": 46
+      "passed": 54,
+      "total": 54
     }
   },
   "failed_count": 0,
   "failures": [],
-  "passed_count": 288,
-  "qualified_scenario_count": 46,
+  "passed_count": 336,
+  "qualified_scenario_count": 54,
   "results": [
     {
       "ablation": "missing_evidence_packet",
@@ -581,6 +581,678 @@
       "passed": true,
       "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
       "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "ablation": "missing_evidence_packet",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "ablation": "nonprocedural_source_tags",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "ablation": "missing_high_authority",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "ablation": "missing_counter_material",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "ablation": "missing_review_gate",
+      "allowed_status": "reference_information",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "contestation_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "ablation": "professional_role_cap",
+      "allowed_status": "professional_support_output",
+      "base_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [],
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
     },
     {
       "ablation": "missing_evidence_packet",
@@ -4085,7 +4757,7 @@
   ],
   "status_distribution": {
     "normative_material_screening_output": 12,
-    "professional_support_output": 46,
-    "reference_information": 230
+    "professional_support_output": 54,
+    "reference_information": 270
   }
 }

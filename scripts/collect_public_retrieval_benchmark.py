@@ -17,6 +17,16 @@ from collect_issue_public_outputs import map_uk_record, map_us_record
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ROOT / "experiments" / "public_retrieval_benchmark"
 TOP_K = 10
+HOLDOUT_SLUGS = {
+    "canada-vavilov-standard-of-review-q05",
+    "canada-vavilov-standard-of-review-q06",
+    "eu-gdpr-article15-access-rights-q05",
+    "eu-gdpr-article15-access-rights-q06",
+    "germany-right-to-be-forgotten-review-q05",
+    "germany-right-to-be-forgotten-review-q06",
+    "uk-mesothelioma-causation-after-fairchild-q05",
+    "us-agency-deference-after-loper-bright-q05",
+}
 
 US_ISSUE = {
     "id": "us-agency-deference-after-loper-bright",
@@ -134,11 +144,15 @@ def main() -> int:
     results = args.out / "results"
     for path in (downloads, manifests, scenarios, results):
         path.mkdir(parents=True, exist_ok=True)
+    for path in list(manifests.glob("*.json")) + list(scenarios.glob("*.json")):
+        path.unlink()
 
     rows = []
     for issue in (US_ISSUE, UK_ISSUE, CANADA_ISSUE, GERMANY_ISSUE, EU_ISSUE):
         for index, query in enumerate(issue["queries"], start=1):
             slug = f"{issue['id']}-q{index:02d}"
+            if slug in HOLDOUT_SLUGS:
+                continue
             records = collect(issue, query, slug, downloads, args.top_k, args.refresh)
             manifest = build_manifest(issue, query, slug, records, args.top_k)
             scenario = build_scenario(issue, query, slug, records)

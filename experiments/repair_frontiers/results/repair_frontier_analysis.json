@@ -1,6 +1,6 @@
 {
-  "blocked_claim_count": 176,
-  "counterfactual_evaluation_count": 4418,
+  "blocked_claim_count": 184,
+  "counterfactual_evaluation_count": 4474,
   "minimal_repair_gate_frequency": {
     "audit_vector_completion": 33,
     "authority_packet_completion": 65,
@@ -9,15 +9,15 @@
     "rank_salience_completion": 37,
     "review_contestability_completion": 20,
     "role_cap_completion": 20,
-    "source_binding_completion": 146
+    "source_binding_completion": 154
   },
   "minimal_repair_size_distribution": {
-    "1": 100,
+    "1": 108,
     "2": 34,
     "3": 39,
     "4": 3
   },
-  "repairable_count": 176,
+  "repairable_count": 184,
   "results": [
     {
       "base_allowed_status": "reference_information",
@@ -292,57 +292,6 @@
         "authority_omission",
         "counter_material_suppression"
       ],
-      "counterfactual_evaluations": 63,
-      "full_repair_status": null,
-      "minimal_repair_size": 3,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion",
-            "source_binding_completion",
-            "rank_salience_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q05.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q05",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "counter_material_suppression"
-      ],
-      "counterfactual_evaluations": 63,
-      "full_repair_status": null,
-      "minimal_repair_size": 3,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion",
-            "source_binding_completion",
-            "rank_salience_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q06.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q06",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "authority_omission",
-        "counter_material_suppression"
-      ],
       "counterfactual_evaluations": 7,
       "full_repair_status": null,
       "minimal_repair_size": 1,
@@ -430,54 +379,6 @@
       "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q04.json",
       "repairable": true,
       "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q04",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "authority_omission",
-        "counter_material_suppression"
-      ],
-      "counterfactual_evaluations": 7,
-      "full_repair_status": null,
-      "minimal_repair_size": 1,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q05.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q05",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "authority_omission",
-        "counter_material_suppression"
-      ],
-      "counterfactual_evaluations": 7,
-      "full_repair_status": null,
-      "minimal_repair_size": 1,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q06.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q06",
       "target_status": "normative_material_screening_output"
     },
     {
@@ -593,60 +494,6 @@
       "base_disposition": "suspension",
       "base_failure_flags": [
         "authority_omission",
-        "counter_material_suppression",
-        "source_attribution_gap"
-      ],
-      "counterfactual_evaluations": 63,
-      "full_repair_status": null,
-      "minimal_repair_size": 3,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion",
-            "source_binding_completion",
-            "rank_salience_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q05.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q05",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "authority_omission",
-        "counter_material_suppression",
-        "source_attribution_gap"
-      ],
-      "counterfactual_evaluations": 63,
-      "full_repair_status": null,
-      "minimal_repair_size": 3,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion",
-            "source_binding_completion",
-            "rank_salience_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q06.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q06",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "authority_omission",
         "counter_material_suppression"
       ],
       "counterfactual_evaluations": 63,
@@ -744,32 +591,6 @@
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q04.json",
       "repairable": true,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
-      "target_status": "normative_material_screening_output"
-    },
-    {
-      "base_allowed_status": "reference_information",
-      "base_disposition": "suspension",
-      "base_failure_flags": [
-        "authority_omission",
-        "counter_material_suppression"
-      ],
-      "counterfactual_evaluations": 63,
-      "full_repair_status": null,
-      "minimal_repair_size": 3,
-      "minimal_repairs": [
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "authority_packet_completion",
-            "source_binding_completion",
-            "rank_salience_completion"
-          ]
-        }
-      ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q05.json",
-      "repairable": true,
-      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
       "target_status": "normative_material_screening_output"
     },
     {
@@ -927,9 +748,108 @@
           ]
         }
       ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q05.json",
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
       "repairable": true,
-      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "counterfactual_evaluations": 63,
+      "full_repair_status": null,
+      "minimal_repair_size": 3,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q05.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q05",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "counter_material_suppression"
+      ],
+      "counterfactual_evaluations": 63,
+      "full_repair_status": null,
+      "minimal_repair_size": 3,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q06.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q06",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q05.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q05",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q06.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q06",
       "target_status": "normative_material_screening_output"
     },
     {
@@ -954,9 +874,273 @@
           ]
         }
       ],
-      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q05.json",
       "repairable": true,
-      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q05",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 63,
+      "full_repair_status": null,
+      "minimal_repair_size": 3,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q06.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q06",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "authority_omission",
+        "counter_material_suppression"
+      ],
+      "counterfactual_evaluations": 63,
+      "full_repair_status": null,
+      "minimal_repair_size": 3,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "suspension",
+      "base_failure_flags": [
+        "authority_omission",
+        "counter_material_suppression",
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 63,
+      "full_repair_status": null,
+      "minimal_repair_size": 3,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "authority_packet_completion",
+            "source_binding_completion",
+            "rank_salience_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-us-agency-deference-after-loper-bright-q05.json",
+      "repairable": true,
+      "scenario_id": "holdout-public-retrieval-us-agency-deference-after-loper-bright-q05",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-canada-vavilov-01.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-canada-vavilov-01",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-01.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-eu-gdpr-01",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-02.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-eu-gdpr-02",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-germany-rtbf-01.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-germany-rtbf-01",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-01.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-uk-mesothelioma-01",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-02.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-uk-mesothelioma-02",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-01.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-us-deference-01",
+      "target_status": "normative_material_screening_output"
+    },
+    {
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "source_attribution_gap"
+      ],
+      "counterfactual_evaluations": 7,
+      "full_repair_status": null,
+      "minimal_repair_size": 1,
+      "minimal_repairs": [
+        {
+          "allowed_status": "normative_material_screening_output",
+          "disposition": "none",
+          "gates": [
+            "source_binding_completion"
+          ]
+        }
+      ],
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-02.json",
+      "repairable": true,
+      "scenario_id": "holdout-raw-us-deference-02",
       "target_status": "normative_material_screening_output"
     },
     {
@@ -4403,7 +4587,7 @@
   ],
   "target_distribution": {
     "decision_support_reason": 15,
-    "normative_material_screening_output": 161
+    "normative_material_screening_output": 169
   },
   "unrepairable": [],
   "unrepairable_count": 0

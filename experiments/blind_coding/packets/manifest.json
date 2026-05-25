@@ -896,16 +896,6 @@
   },
   {
     "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q05",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-canada-vavilov-standard-of-review-q05.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q06",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-canada-vavilov-standard-of-review-q06.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
     "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q01",
     "packet_path": "experiments/blind_coding/packets/public-retrieval-eu-gdpr-article15-access-rights-q01.json"
   },
@@ -923,16 +913,6 @@
     "claimed_status": "normative_material_screening_output",
     "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q04",
     "packet_path": "experiments/blind_coding/packets/public-retrieval-eu-gdpr-article15-access-rights-q04.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q05",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-eu-gdpr-article15-access-rights-q05.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q06",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-eu-gdpr-article15-access-rights-q06.json"
   },
   {
     "claimed_status": "normative_material_screening_output",
@@ -956,16 +936,6 @@
   },
   {
     "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q05",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-germany-right-to-be-forgotten-review-q05.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q06",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-germany-right-to-be-forgotten-review-q06.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
     "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
     "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q01.json"
   },
@@ -983,11 +953,6 @@
     "claimed_status": "normative_material_screening_output",
     "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04",
     "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q04.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json"
   },
   {
     "claimed_status": "normative_material_screening_output",
@@ -1013,11 +978,6 @@
     "claimed_status": "normative_material_screening_output",
     "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04",
     "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q04.json"
-  },
-  {
-    "claimed_status": "normative_material_screening_output",
-    "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q05",
-    "packet_path": "experiments/blind_coding/packets/public-retrieval-us-agency-deference-after-loper-bright-q05.json"
   },
   {
     "claimed_status": "normative_material_screening_output",

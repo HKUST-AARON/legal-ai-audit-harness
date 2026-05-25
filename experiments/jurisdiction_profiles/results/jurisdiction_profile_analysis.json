@@ -1,10 +1,10 @@
 {
-  "counterfactual_evaluation_count": 138,
+  "counterfactual_evaluation_count": 162,
   "failed_count": 0,
   "failures": [],
-  "generic_profile_preserved": 46,
-  "mismatched_profile_downgraded": 46,
-  "missing_assumption_downgraded": 46,
+  "generic_profile_preserved": 54,
+  "mismatched_profile_downgraded": 54,
+  "missing_assumption_downgraded": 54,
   "mutations": [
     {
       "base_status": "normative_material_screening_output",
@@ -227,6 +227,302 @@
       "passed": true,
       "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
       "scenario_id": "issue-public-output-eu-official-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "scenario_id": "holdout-source-bound-us-deference-02"
     },
     {
       "base_status": "normative_material_screening_output",
@@ -1709,8 +2005,8 @@
       "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
     }
   ],
-  "passed_count": 138,
-  "profile_check_count": 217,
+  "passed_count": 162,
+  "profile_check_count": 233,
   "profile_checks": [
     {
       "jurisdiction_assumptions": [
@@ -1858,24 +2154,6 @@
     },
     {
       "jurisdiction_assumptions": [
-        "common_law"
-      ],
-      "jurisdiction_profile": "common_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q05.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q05"
-    },
-    {
-      "jurisdiction_assumptions": [
-        "common_law"
-      ],
-      "jurisdiction_profile": "common_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q06.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q06"
-    },
-    {
-      "jurisdiction_assumptions": [
         "civil_law"
       ],
       "jurisdiction_profile": "civil_law",
@@ -1915,24 +2193,6 @@
         "civil_law"
       ],
       "jurisdiction_profile": "civil_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q05.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q05"
-    },
-    {
-      "jurisdiction_assumptions": [
-        "civil_law"
-      ],
-      "jurisdiction_profile": "civil_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q06.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q06"
-    },
-    {
-      "jurisdiction_assumptions": [
-        "civil_law"
-      ],
-      "jurisdiction_profile": "civil_law",
       "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q01.json",
       "profile_supported": true,
       "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q01"
@@ -1963,24 +2223,6 @@
       "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q04.json",
       "profile_supported": true,
       "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q04"
-    },
-    {
-      "jurisdiction_assumptions": [
-        "civil_law"
-      ],
-      "jurisdiction_profile": "civil_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q05.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q05"
-    },
-    {
-      "jurisdiction_assumptions": [
-        "civil_law"
-      ],
-      "jurisdiction_profile": "civil_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q06.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q06"
     },
     {
       "jurisdiction_assumptions": [
@@ -2017,15 +2259,6 @@
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q04.json",
       "profile_supported": true,
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04"
-    },
-    {
-      "jurisdiction_assumptions": [
-        "common_law"
-      ],
-      "jurisdiction_profile": "common_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q05.json",
-      "profile_supported": true,
-      "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05"
     },
     {
       "jurisdiction_assumptions": [
@@ -2077,18 +2310,225 @@
         "common_law"
       ],
       "jurisdiction_profile": "common_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q05.json",
+      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
       "profile_supported": true,
-      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q05"
+      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06"
     },
     {
       "jurisdiction_assumptions": [
         "common_law"
       ],
       "jurisdiction_profile": "common_law",
-      "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q05.json",
       "profile_supported": true,
-      "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06"
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q05"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "common_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q06.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q06"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "civil_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q05.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q05"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "civil_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q06.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q06"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "civil_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q05.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q05"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "civil_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q06.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q06"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "common_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "common_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-us-agency-deference-after-loper-bright-q05.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-public-retrieval-us-agency-deference-after-loper-bright-q05"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "canadian_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-canada-vavilov-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-canada-vavilov-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-eu-gdpr-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-02.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-eu-gdpr-02"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "german_constitutional_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-germany-rtbf-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-germany-rtbf-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-uk-mesothelioma-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-02.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-uk-mesothelioma-02"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-us-deference-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-02.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-raw-us-deference-02"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "canadian_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-canada-vavilov-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-eu-gdpr-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-eu-gdpr-02"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "german_constitutional_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-germany-rtbf-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-us-deference-01"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
+      "profile_supported": true,
+      "scenario_id": "holdout-source-bound-us-deference-02"
     },
     {
       "jurisdiction_assumptions": [
@@ -3696,7 +4136,7 @@
       "scenario_id": "us-agency-deference-after-loper-bright-unverified-source-tags"
     }
   ],
-  "profile_supported_count": 217,
-  "qualified_status_count": 46,
+  "profile_supported_count": 233,
+  "qualified_status_count": 54,
   "unsupported_profile_checks": []
 }

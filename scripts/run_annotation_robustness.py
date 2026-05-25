@@ -18,6 +18,7 @@ SCENARIO_DIRS = [
     ROOT / "experiments" / "real_cases" / "scenarios",
     ROOT / "experiments" / "public_system_outputs" / "scenarios",
     ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios",
+    ROOT / "experiments" / "holdout_validation" / "scenarios",
     ROOT / "experiments" / "ai_outputs" / "scenarios",
     ROOT / "experiments" / "model_output_repairs" / "scenarios",
     ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios",

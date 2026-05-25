@@ -1,29 +1,29 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 23
-Scenario files: 230
-Base embedded records/items: 609 (10 stress scenarios, 120 public metadata records, 60 public-system records, 225 public retrieval records, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
-Strict/lenient recoded evaluations: 460
-Annotation-uncertainty perturbations: 57500
-Score-blinded coding-pass evaluations: 460
-Full-threshold sensitivity evaluations: 1150
+Validation suites: 24
+Scenario files: 246
+Base embedded records/items: 679 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
+Strict/lenient recoded evaluations: 492
+Annotation-uncertainty perturbations: 61500
+Score-blinded coding-pass evaluations: 444
+Full-threshold sensitivity evaluations: 1230
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
 Formal invariant checks: 51643/51643 passed
-Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181
+Metric separation evaluations: 201 upstream-metric scenario packets; high-recall blocked outputs 144/197
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
-Gate ablation evaluations: 288/288 passed over 46 qualified packets
-Repair frontier evaluations: 176/176 blocked claims repairable across 4418 counterfactual repairs
-Jurisdiction-profile evaluations: 217/217 profile checks supported; 138/138 counterfactual mutations passed
-Ranking-visibility checks: 820 rank-window checks over 214 high-status claims; 70/70 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 167/201; drifted top-3 counter visible 0/70; median first counter rank 3.0
-Status certificate replay checks: 2990/2990 passed over 230 certificates
-Derived robustness evaluations: 122419
-Scenario-regression expectations passed: 230/230
-High-upstream-performance but procedurally blocked scenarios: 128
-Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
-Annotation robustness: 218/230 stable across base, strict and lenient coding policies
-Annotation uncertainty: 57500 score perturbations; sample stability 0.936; qualified high-status stability 0.928; boundary scenarios 127
-Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement
+Gate ablation evaluations: 336/336 passed over 54 qualified packets
+Repair frontier evaluations: 184/184 blocked claims repairable across 4474 counterfactual repairs
+Jurisdiction-profile evaluations: 233/233 profile checks supported; 162/162 counterfactual mutations passed
+Ranking-visibility checks: 884 rank-window checks over 230 high-status claims; 76/76 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 183/217; drifted top-3 counter visible 0/76; median first counter rank 3.0
+Status certificate replay checks: 3198/3198 passed over 246 certificates
+Derived robustness evaluations: 126953
+Scenario-regression expectations passed: 246/246
+High-upstream-performance but procedurally blocked scenarios: 136
+Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 105, summary_distortion: 21, unauthorized_action: 10
+Annotation robustness: 234/246 stable across base, strict and lenient coding policies
+Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143
+Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement
 
 | Suite | Evidence role | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -31,7 +31,8 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Public legal-record metadata | public-source reconstruction | 120 public metadata records | 6 | 6/6 | 8.67 | n/a | 0 | professional_support_output: 6 |
 | Public legal-system outputs | public-output audit | 60 visible public-system records | 6 | 6/6 | 8.67 | n/a | 0 | professional_support_output: 6 |
 | Issue-specific public output/source packets | mixed public-output/source audit | 19 issue-specific public output/source records | 3 | 3/3 | 9.67 | 0.44 | 0 | normative_material_screening_output: 1, reference_information: 2 |
-| Endpoint-matched public retrieval benchmark | endpoint-compatible public-output benchmark | 225 public search result records | 30 | 30/30 | 9.07 | 0.26 | 2 | reference_information: 30 |
+| Endpoint-matched public retrieval benchmark | endpoint-compatible public-output benchmark | 169 public search result records | 22 | 22/22 | 9.05 | 0.23 | 1 | reference_information: 22 |
+| Out-of-sample holdout validation | frozen-protocol holdout validation | 126 holdout output records/items | 24 | 24/24 | 9.71 | 0.77 | 9 | normative_material_screening_output: 8, reference_information: 16 |
 | Raw Codex GPT-5.5 xhigh outputs | model-output audit | 10 raw model outputs | 10 | 10/10 | 9.00 | 1.00 | 10 | reference_information: 10 |
 | Source-supported model-output repairs | model-output intervention | 10 source-supported model-output variants | 10 | 10/10 | 11.00 | 1.00 | 0 | normative_material_screening_output: 10 |
 | Model-output evidence ladder | controlled model-output intervention | 70 evidence-ladder model-output variants | 70 | 70/70 | 10.57 | 1.00 | 40 | decision_support_reason: 10, no_external_legal_effect: 10, normative_material_screening_output: 10, professional_support_output: 10, reference_information: 30 |
@@ -41,15 +42,15 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
-| Metric separation analysis | retrieval/status non-equivalence check | 185 upstream-metric scenario packets | 185 | recall-threshold precision 0.25; full gate precision 1.00 | n/a | n/a | n/a | full_gate_specificity: 1.0, high_recall_blocked_rate: 0.75, recall_point_biserial: 0.05 |
-| Qualified-output gate ablations | counterfactual gate-necessity check | 288 ablations over 46 qualified packets | 288 | 288/288 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
-| Blocked-claim repair frontiers | counterfactual repair-necessity check | 4418 repair counterfactuals over 176 blocked claims | 4418 | 176/176 repairable | n/a | n/a | n/a | 1: 100, 2: 34, 3: 39, 4: 3 |
-| Jurisdiction-profile mutations | cross-profile gate check | 355 profile checks and counterfactuals | 355 | 217/217 profile checks; 138/138 mutations | n/a | n/a | n/a | generic_preserved: 46, mismatch_downgraded: 46, missing_downgraded: 46 |
-| Ranking-visibility diagnostics | rank-salience counterfactual check | 820 rank-window checks over 214 high-status claims plus 70 rank-order counterfactuals | 890 | 70/70 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 70, downgraded: 70, front_window_counter_not_visible: 34, front_window_counter_visible: 167, mean_reciprocal_first_counter_rank: 0.43, median_first_counter_rank: 3.0, rank_intervention_applied: 70 |
-| Status certificate replay | derivation-certificate check | 2990 replay checks over 230 certificates | 2990 | 2990/2990 | n/a | n/a | n/a | cap_or_failure_transitions: 150, verified_certificates: 230 |
-| Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
-| Annotation uncertainty Monte Carlo | score-noise robustness | 57500 score-perturbed evaluations | 57500 | 0.936 sample stability; 0.928 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 127, exact_stable_scenarios: 101, high_status_stable_scenarios: 175, mean_status_rank_shift: 0.082 |
-| Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
+| Metric separation analysis | retrieval/status non-equivalence check | 201 upstream-metric scenario packets | 201 | recall-threshold precision 0.27; full gate precision 1.00 | n/a | n/a | n/a | full_gate_specificity: 1.0, high_recall_blocked_rate: 0.73, recall_point_biserial: 0.06 |
+| Qualified-output gate ablations | counterfactual gate-necessity check | 336 ablations over 54 qualified packets | 336 | 336/336 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
+| Blocked-claim repair frontiers | counterfactual repair-necessity check | 4474 repair counterfactuals over 184 blocked claims | 4474 | 184/184 repairable | n/a | n/a | n/a | 1: 108, 2: 34, 3: 39, 4: 3 |
+| Jurisdiction-profile mutations | cross-profile gate check | 395 profile checks and counterfactuals | 395 | 233/233 profile checks; 162/162 mutations | n/a | n/a | n/a | generic_preserved: 54, mismatch_downgraded: 54, missing_downgraded: 54 |
+| Ranking-visibility diagnostics | rank-salience counterfactual check | 884 rank-window checks over 230 high-status claims plus 76 rank-order counterfactuals | 960 | 76/76 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 76, downgraded: 76, front_window_counter_not_visible: 34, front_window_counter_visible: 183, mean_reciprocal_first_counter_rank: 0.43, median_first_counter_rank: 3.0, rank_intervention_applied: 76 |
+| Status certificate replay | derivation-certificate check | 3198 replay checks over 246 certificates | 3198 | 3198/3198 | n/a | n/a | n/a | cap_or_failure_transitions: 158, verified_certificates: 246 |
+| Annotation robustness recoding | coding robustness | 492 strict/lenient recoded evaluations | 246 | 234/246 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
+| Annotation uncertainty Monte Carlo | score-noise robustness | 61500 score-perturbed evaluations | 61500 | 0.933 sample stability; 0.924 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 143, exact_stable_scenarios: 102, high_status_stable_scenarios: 183, mean_status_rank_shift: 0.086 |
+| Score-blinded dual coding | codebook reproducibility | 222 packets x 2 coding passes | 222 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
 ## Findings
 
@@ -58,6 +59,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Public legal-system outputs:** Tests ordered real upstream legal-output reconstruction.
 - **Issue-specific public output/source packets:** Tests public issue-search outputs and a source-bound public-source packet against high-authority and counter-material requirements.
 - **Endpoint-matched public retrieval benchmark:** Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.
+- **Out-of-sample holdout validation:** Tests withheld public-retrieval packets, raw model-output packets and source-bound repair packets after freezing the scoring policy.
 - **Raw Codex GPT-5.5 xhigh outputs:** Tests whether strong authority coverage without source binding remains procedurally capped.
 - **Source-supported model-output repairs:** Tests whether model-output variants can qualify after manifest, locator, issue-set, rank-salience and hashed source-support evidence validation.
 - **Model-output evidence ladder:** Tests model-output variants across raw, source-bound, counter-material, rank-salience, contestability, logging, authorized-adoption and unauthorized-action conditions.
@@ -79,12 +81,12 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 
 ## Full-Threshold Sensitivity
 
-All 230 scenario packets were re-evaluated under normative thresholds 8--12.
+All 246 scenario packets were re-evaluated under normative thresholds 8--12.
 
 | Normative threshold | Decision threshold | Status flips from default | Promotions | Demotions | Status distribution |
 | ---: | ---: | ---: | ---: | ---: | --- |
-| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 34, professional_support_output: 23, reference_information: 129 |
-| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 34, professional_support_output: 23, reference_information: 129 |
-| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 34, professional_support_output: 23, reference_information: 129 |
-| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 32, professional_support_output: 25, reference_information: 129 |
-| 12 | 13 | 41 | 0 | 41 | no_external_legal_effect: 32, normative_material_screening_output: 17, professional_support_output: 52, reference_information: 129 |
+| 8 | 10 | 0 | 0 | 0 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 42, professional_support_output: 23, reference_information: 137 |
+| 9 | 10 | 0 | 0 | 0 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 42, professional_support_output: 23, reference_information: 137 |
+| 10 | 11 | 0 | 0 | 0 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 42, professional_support_output: 23, reference_information: 137 |
+| 11 | 12 | 2 | 0 | 2 | decision_support_reason: 12, no_external_legal_effect: 32, normative_material_screening_output: 40, professional_support_output: 25, reference_information: 137 |
+| 12 | 13 | 49 | 0 | 49 | no_external_legal_effect: 32, normative_material_screening_output: 17, professional_support_output: 60, reference_information: 137 |

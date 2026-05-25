@@ -64,6 +64,16 @@ SUITES = [
         "finding": "Tests public case-law or known-item outputs against authority sets that the endpoint is capable of returning, while recording mixed-authority gaps separately.",
     },
     {
+        "id": "holdout_validation",
+        "label": "Out-of-sample holdout validation",
+        "path": ROOT / "experiments" / "holdout_validation" / "scenarios",
+        "out": ROOT / "experiments" / "holdout_validation" / "results" / "holdout_validation.md",
+        "json_out": ROOT / "experiments" / "holdout_validation" / "results" / "holdout_validation.json",
+        "unit_label": "holdout output records/items",
+        "evidence_class": "frozen-protocol holdout validation",
+        "finding": "Tests withheld public-retrieval packets, raw model-output packets and source-bound repair packets after freezing the scoring policy.",
+    },
+    {
         "id": "ai_outputs",
         "label": "Raw Codex GPT-5.5 xhigh outputs",
         "path": ROOT / "experiments" / "ai_outputs" / "scenarios",
@@ -132,6 +142,7 @@ def main() -> int:
     _run([sys.executable, "scripts/collect_public_system_outputs.py"])
     _run([sys.executable, "scripts/collect_issue_public_outputs.py"])
     _run([sys.executable, "scripts/collect_public_retrieval_benchmark.py"])
+    _run([sys.executable, "scripts/build_holdout_validation.py"])
     _run([sys.executable, "scripts/build_model_output_repairs.py"])
     _run([sys.executable, "scripts/build_model_output_evidence_ladder.py"])
     _run([sys.executable, "scripts/build_model_output_adversarial.py"])
@@ -486,6 +497,7 @@ def _validation_units() -> dict[str, int]:
         "public_metadata_records": _output_unit_count(ROOT / "experiments" / "real_cases" / "scenarios"),
         "public_system_records": _output_unit_count(ROOT / "experiments" / "public_system_outputs" / "scenarios"),
         "public_retrieval_records": _output_unit_count(ROOT / "experiments" / "public_retrieval_benchmark" / "scenarios"),
+        "holdout_records": _output_unit_count(ROOT / "experiments" / "holdout_validation" / "scenarios"),
         "raw_model_outputs": _scenario_count(ROOT / "experiments" / "ai_outputs" / "scenarios"),
         "source_bound_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_repairs" / "scenarios"),
         "evidence_ladder_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios"),
@@ -835,6 +847,7 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['public_metadata_records']} public metadata records, "
         f"{payload['validation_units']['public_system_records']} public-system records, "
         f"{payload['validation_units']['public_retrieval_records']} public retrieval records, "
+        f"{payload['validation_units']['holdout_records']} holdout records/items, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
         f"{payload['validation_units']['source_bound_model_outputs']} source-supported model-output variants, "
         f"{payload['validation_units']['evidence_ladder_model_outputs']} evidence-ladder model-output variants, "

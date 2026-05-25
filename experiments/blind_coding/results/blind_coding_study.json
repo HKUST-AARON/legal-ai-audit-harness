@@ -1,8 +1,8 @@
 {
   "base_status_agreement": {
     "coder_a": {
-      "exact_status_agreement": 0.9608695652173913,
-      "match_count": 221,
+      "exact_status_agreement": 0.9594594594594594,
+      "match_count": 213,
       "mismatch_count": 9,
       "mismatches": [
         "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -15,11 +15,11 @@
         "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
         "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
       ],
-      "weighted_status_agreement": 0.9815217391304348
+      "weighted_status_agreement": 0.9808558558558559
     },
     "coder_b": {
-      "exact_status_agreement": 0.9521739130434783,
-      "match_count": 219,
+      "exact_status_agreement": 0.9504504504504504,
+      "match_count": 211,
       "mismatch_count": 11,
       "mismatches": [
         "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -34,7 +34,7 @@
         "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
         "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
       ],
-      "weighted_status_agreement": 0.975
+      "weighted_status_agreement": 0.9740990990990991
     }
   },
   "coder_count": 2,
@@ -43,14 +43,14 @@
     "coder_b"
   ],
   "mean_total_score": {
-    "coder_a": 9.31304347826087,
-    "coder_b": 9.326086956521738
+    "coder_a": 9.337837837837839,
+    "coder_b": 9.35135135135135
   },
-  "packet_count": 230,
+  "packet_count": 222,
   "pairwise_dimensions": [
     {
       "dimension_agreement": {
-        "H": 0.9782608695652174,
+        "H": 0.9774774774774775,
         "K": 1.0,
         "L": 1.0,
         "Q": 1.0,
@@ -63,10 +63,10 @@
   ],
   "pairwise_status": [
     {
-      "exact_status_agreement": 0.991304347826087,
+      "exact_status_agreement": 0.990990990990991,
       "left": "coder_a",
       "right": "coder_b",
-      "weighted_status_agreement": 0.9934782608695653
+      "weighted_status_agreement": 0.9932432432432432
     }
   ],
   "rows": [
@@ -4308,78 +4308,6 @@
         }
       ],
       "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q05"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 2,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 10
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 2,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 10
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-canada-vavilov-standard-of-review-q06"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 9
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 9
-        }
-      ],
-      "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q01"
     },
     {
@@ -4489,78 +4417,6 @@
       ],
       "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q04"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 9
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 9
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q05"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 9
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 9
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q06"
     },
     {
       "annotations": [
@@ -4734,86 +4590,6 @@
           "scores": {
             "H": 1,
             "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 1,
-            "T": 1
-          },
-          "total_score": 8
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 1,
-            "T": 1
-          },
-          "total_score": 8
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q05"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 1,
-            "T": 1
-          },
-          "total_score": 8
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 2,
-            "Q": 2,
-            "S": 1,
-            "T": 1
-          },
-          "total_score": 8
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q06"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
             "L": 1,
             "Q": 2,
             "S": 2,
@@ -4961,46 +4737,6 @@
       ],
       "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 1,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 8
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 1,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 8
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q05"
     },
     {
       "annotations": [
@@ -5201,46 +4937,6 @@
       ],
       "base_allowed_status": "reference_information",
       "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q04"
-    },
-    {
-      "annotations": [
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_a",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 1,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 8
-        },
-        {
-          "allowed_status": "reference_information",
-          "coder_id": "coder_b",
-          "disposition": "suspension",
-          "missing_gates": [
-            "total_score>=9"
-          ],
-          "scores": {
-            "H": 1,
-            "K": 1,
-            "L": 1,
-            "Q": 2,
-            "S": 2,
-            "T": 1
-          },
-          "total_score": 8
-        }
-      ],
-      "base_allowed_status": "reference_information",
-      "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q05"
     },
     {
       "annotations": [

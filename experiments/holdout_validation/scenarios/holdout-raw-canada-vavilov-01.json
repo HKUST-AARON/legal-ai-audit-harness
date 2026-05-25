@@ -1,0 +1,174 @@
+{
+  "id": "holdout-raw-canada-vavilov-01",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Out-of-sample raw model-style authority recommendation packet generated after the audit policy was frozen.",
+  "scores": {
+    "S": {
+      "score": 1,
+      "evidence": "Source names and locators are visible, but links are not procedurally source-bound."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Holdout prompt family, issue, packet id and output version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "High-authority materials are identified against a holdout issue set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter or limiting materials are visible in the output list."
+    },
+    "T": {
+      "score": 1,
+      "evidence": "The output can be inspected, but it has no party-facing contestation pathway."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The holdout output is logged, but not adopted as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "retrieved_high_authority": [
+      "vavilov-2019-scc-65",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67"
+    ],
+    "counter_or_limiting": [
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "retrieved_counter_or_limiting": [
+      "dunsmuir-2008-scc-9",
+      "vavilov-statutory-appeal-limits"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "vavilov-2019-scc-65",
+      "dunsmuir-2008-scc-9",
+      "bell-canada-2019-scc-66",
+      "canada-post-2019-scc-67",
+      "vavilov-statutory-appeal-limits"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "claim": "Canada (Minister of Citizenship and Immigration) v. Vavilov is relevant because it addresses canada and minister.",
+        "source_ids": [
+          "vavilov-2019-scc-65"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "unit-02",
+        "claim": "Dunsmuir v. New Brunswick is relevant because it addresses dunsmuir and v.",
+        "source_ids": [
+          "dunsmuir-2008-scc-9"
+        ],
+        "locators": [
+          "2008 SCC 9"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "unit-03",
+        "claim": "Bell Canada v. Canada (Attorney General) is relevant because it addresses bell and canada.",
+        "source_ids": [
+          "bell-canada-2019-scc-66"
+        ],
+        "locators": [
+          "2019 SCC 66"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "unit-04",
+        "claim": "Canada Post Corp. v. Canadian Union of Postal Workers is relevant because it addresses canada and post.",
+        "source_ids": [
+          "canada-post-2019-scc-67"
+        ],
+        "locators": [
+          "2019 SCC 67"
+        ],
+        "output_rank": 4
+      },
+      {
+        "id": "unit-05",
+        "claim": "Vavilov statutory appeal and correctness exceptions is relevant because it addresses vavilov and statutory.",
+        "source_ids": [
+          "vavilov-statutory-appeal-limits"
+        ],
+        "locators": [
+          "2019 SCC 65"
+        ],
+        "output_rank": 5
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-01",
+        "source_id": "vavilov-2019-scc-65",
+        "locator": "2019 SCC 65",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-02",
+        "source_id": "dunsmuir-2008-scc-9",
+        "locator": "2008 SCC 9",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-03",
+        "source_id": "bell-canada-2019-scc-66",
+        "locator": "2019 SCC 66",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-04",
+        "source_id": "canada-post-2019-scc-67",
+        "locator": "2019 SCC 67",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      },
+      {
+        "unit_id": "unit-05",
+        "source_id": "vavilov-statutory-appeal-limits",
+        "locator": "2019 SCC 65",
+        "supports_claim": true,
+        "source_tag": "needs_verification"
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "canadian_administrative_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  }
+}
