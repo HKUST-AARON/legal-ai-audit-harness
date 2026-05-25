@@ -1,5 +1,5 @@
 {
-  "check_count": 291,
+  "check_count": 300,
   "checks": [
     {
       "expected": "- 25 validation suites",
@@ -377,7 +377,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Across 12 alternative status rules",
+      "expected": "Across 12 simplified substitute rules",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -387,12 +387,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "61,500 annotation-uncertainty perturbations",
+      "expected": "61,500 perturbations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "0.933 sample-level status stability",
+      "expected": "Sample-level status stability was 0.933",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -412,17 +412,57 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Across all 54 qualified packets",
+      "expected": "54 packets that reached normative screening or decision-support status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "336/336 counterfactual downgrades",
+      "expected": "All 336 ablations fell below",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "across 184 blocked high-status claims",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_A(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_E(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_P(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_C(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_J(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_T(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_D(o)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "B_F(o)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -580,6 +620,11 @@
       "expected": "The expected manuscript build is 34 pages",
       "passed": true,
       "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "abstract word count 150-250 (actual 232)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "absence of stale claim `62,497`",
@@ -1459,5 +1504,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 291
+  "passed_count": 300
 }

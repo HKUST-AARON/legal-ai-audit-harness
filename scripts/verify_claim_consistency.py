@@ -170,16 +170,24 @@ def _checks(payload: dict) -> list[dict]:
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['scenario_files']} scenario packets with {values['embedded']} embedded records or outputs"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['metric_resamples'])} metric bootstrap/permutation resamples"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['baseline_predictions'])} baseline-rule predictions"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Across {values['baseline_count']} alternative status rules"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Across {values['baseline_count']} simplified substitute rules"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"still produced {values['baseline_best_fp']} false positives"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['uncertainty'])} annotation-uncertainty perturbations"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['uncertainty_stability']:.3f} sample-level status stability"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['uncertainty'])} perturbations"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Sample-level status stability was {values['uncertainty_stability']:.3f}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"high-status stability was {values['uncertainty_qualified_high']:.3f}"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['certificate_checks'])} status-certificate replay checks"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['certificates_verified']}/{values['certificate_count']} status certificates"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Across all {values['qualified']} qualified packets"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['gate_passed']}/{values['gate']} counterfactual downgrades"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['qualified']} packets that reached normative screening or decision-support status"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"All {values['gate_passed']} ablations fell below"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"across {values['blocked_claims']} blocked high-status claims"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_A(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_E(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_P(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_C(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_J(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_T(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_D(o)"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "B_F(o)"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['jurisdiction_supported']}/{values['jurisdiction_profile_checks']} profile checks"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['jurisdiction_mutations_passed']}/{values['jurisdiction_mutations']} profile mutations"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['ranking_window']} rank-window visibility checks"),
@@ -223,6 +231,14 @@ def _checks(payload: dict) -> list[dict]:
     for path, expected in expectations:
         text = (ROOT / path).read_text(encoding="utf-8")
         checks.append({"path": path, "expected": expected, "passed": expected in text})
+    abstract_count = _abstract_word_count()
+    checks.append(
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": f"abstract word count 150-250 (actual {abstract_count})",
+            "passed": 150 <= abstract_count <= 250,
+        }
+    )
     checks.extend(_forbidden_checks())
     return checks
 
@@ -292,6 +308,16 @@ def _threshold_distribution(distribution: dict[str, int]) -> str:
         f"reference {distribution.get('reference_information', 0)}; "
         f"no effect {distribution.get('no_external_legal_effect', 0)}"
     )
+
+
+def _abstract_word_count() -> int:
+    text = (ROOT / "manuscript" / "ai_law_case_recommendation_verifiability.tex").read_text(encoding="utf-8")
+    match = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", text, re.DOTALL)
+    if not match:
+        return 0
+    abstract = re.sub(r"\\textit\{([^}]*)\}", r"\1", match.group(1))
+    abstract = re.sub(r"\\[a-zA-Z]+(?:\[[^\]]*\])?(?:\{[^}]*\})?", " ", abstract)
+    return len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", abstract))
 
 
 def _pdf_page_count(path: Path) -> int | None:
