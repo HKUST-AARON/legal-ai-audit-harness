@@ -498,6 +498,7 @@ def main() -> int:
         metric_separation_payload,
         baseline_comparison_payload,
         status_lattice_payload,
+        model_identity_payload,
     )
     payload = {
         "suite_count": len(rows),
@@ -918,8 +919,14 @@ def _lattice_rule(payload: dict, rule_id: str) -> dict:
     raise KeyError(rule_id)
 
 
-def _substitute_theory_results(metric_payload: dict, baseline_payload: dict, lattice_payload: dict) -> list[dict]:
+def _substitute_theory_results(
+    metric_payload: dict,
+    baseline_payload: dict,
+    lattice_payload: dict,
+    model_identity_payload: dict,
+) -> list[dict]:
     full_gate = baseline_payload["full_gate"]
+    identity_rule = _identity_label_sufficiency(model_identity_payload)
     theories = [
         {
             "id": "performance_sufficiency",
@@ -953,6 +960,18 @@ def _substitute_theory_results(metric_payload: dict, baseline_payload: dict, lat
             "lattice_rule": _lattice_rule(lattice_payload, "total_score_at_least_9"),
             "additional_evidence": "High total score cannot substitute for missing legal-material predicates",
         },
+        {
+            "id": "model_identity_sufficiency",
+            "theory": "Model-identity sufficiency",
+            "substitute": "Provider, model or claimed-capability labels confer procedural status",
+            "scenario_rule": identity_rule,
+            "lattice_rule": None,
+            "additional_evidence": (
+                f"{identity_rule['false_positive']}/{identity_rule['prediction_count']} "
+                "identity-labelled rows would be over-admitted; identity substitution produced "
+                f"{model_identity_payload['status_changed_count']} status changes"
+            ),
+        },
     ]
     rows = []
     for theory in theories:
@@ -977,6 +996,32 @@ def _substitute_theory_results(metric_payload: dict, baseline_payload: dict, lat
             }
         )
     return rows
+
+
+def _identity_label_sufficiency(payload: dict) -> dict:
+    true_positive = false_positive = true_negative = false_negative = 0
+    for row in payload["rows"]:
+        predicted_high = True
+        actual_high = STATUS_RANK[row["mutated_allowed_status"]] >= STATUS_RANK["normative_material_screening_output"]
+        if predicted_high and actual_high:
+            true_positive += 1
+        elif predicted_high and not actual_high:
+            false_positive += 1
+        elif not predicted_high and actual_high:
+            false_negative += 1
+        else:
+            true_negative += 1
+    precision = true_positive / (true_positive + false_positive) if true_positive + false_positive else 0.0
+    recall = true_positive / (true_positive + false_negative) if true_positive + false_negative else 0.0
+    return {
+        "prediction_count": len(payload["rows"]),
+        "true_positive": true_positive,
+        "false_positive": false_positive,
+        "true_negative": true_negative,
+        "false_negative": false_negative,
+        "precision": precision,
+        "recall": recall,
+    }
 
 
 def _threshold_sensitivity(scenarios: list[dict]) -> dict:

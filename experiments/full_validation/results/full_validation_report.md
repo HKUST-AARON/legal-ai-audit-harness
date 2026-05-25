@@ -88,6 +88,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Source-label sufficiency | 72 | 0.47 | 3192 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
 | Review-label sufficiency | 149 | 0.30 | 9816 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
 | Score sufficiency | 183 | 0.26 | 24792 | 0 | High total score cannot substitute for missing legal-material predicates |
+| Model-identity sufficiency | 1005 | 0.24 | n/a | 0 | 1005/1320 identity-labelled rows would be over-admitted; identity substitution produced 0 status changes |
 
 ## Findings
 

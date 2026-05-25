@@ -1,5 +1,5 @@
 {
-  "check_count": 736,
+  "check_count": 760,
   "checks": [
     {
       "expected": "- 38 validation suites",
@@ -48,6 +48,11 @@
     },
     {
       "expected": "- 2,988 baseline-rule predictions across 12 alternative status rules",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- a substitute-theory falsification summary for performance, source-label, review-label, score and model-identity sufficiency, with 0 full-protocol false positives",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -198,6 +203,16 @@
     },
     {
       "expected": "66,000 score-uncertainty perturbations",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Substitute-theory falsification | 5 theories |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "performance sufficiency, source-label sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
       "passed": true,
       "path": "README.md"
     },
@@ -462,6 +477,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "model-identity sufficiency would over-admit 1,005 identity-labelled rows",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Query-perturbation stability",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -692,6 +712,16 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "1,005 model-identity-sufficiency false positives with 0 full-protocol false positives",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "model-identity sufficiency falsification",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_model_identity_invariance.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -902,6 +932,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "five substitute theories: performance sufficiency, source-label sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "finite-state characterization of high-status claim attempts",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -958,6 +993,11 @@
     },
     {
       "expected": "still produced 38 false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "model-identity sufficiency produced 1,005 identity-substitution false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1422,6 +1462,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Model-identity sufficiency | 1005 | 0.24 | n/a | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "8 & 10 & 0 & 0 & decision 12; screening 51; professional 23; reference 146; no effect 32",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1562,6 +1607,21 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `4 theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `four substitute theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -2007,6 +2067,21 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `4 theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `four substitute theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "README.md"
@@ -2452,6 +2527,21 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `4 theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `four substitute theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -2897,6 +2987,21 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `4 theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `four substitute theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -3338,6 +3443,21 @@
     },
     {
       "expected": "absence of stale claim `3,658,964`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `4 theories`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `four substitute theories`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `four rival theories`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -3684,5 +3804,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 736
+  "passed_count": 760
 }

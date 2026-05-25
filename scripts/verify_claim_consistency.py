@@ -55,6 +55,7 @@ def _checks(payload: dict) -> list[dict]:
     cross_engine_raw = next(row for row in payload["suites"] if row["id"] == "cross_engine_model_outputs")
     cross_engine_repairs = next(row for row in payload["suites"] if row["id"] == "cross_engine_model_repairs")
     cross_engine_transcript = payload["cross_engine_transcript_verification"]
+    substitute_rows = {row["id"]: row for row in payload["substitute_theory_falsification"]}
     blind = payload["blind_coding"]
     blind_pair = blind["pairwise_status"][0]
     blind_base = list(blind["base_status_agreement"].values())
@@ -209,6 +210,9 @@ def _checks(payload: dict) -> list[dict]:
         "cross_engine_issues": cross_engine_transcript["issue_count"],
         "metric_high_recall_blocked": metric["high_recall_blocked"]["count"],
         "metric_high_recall_total": metric["high_recall_blocked"]["denominator"],
+        "substitute_theory_count": len(payload["substitute_theory_falsification"]),
+        "identity_substitute_fp": substitute_rows["model_identity_sufficiency"]["scenario_false_positive"],
+        "identity_substitute_precision": substitute_rows["model_identity_sufficiency"]["scenario_precision"],
         "pdf_pages": _pdf_page_count(ROOT / "manuscript" / "ai_law_case_recommendation_verifiability.pdf"),
     }
     expectations = [
@@ -222,6 +226,7 @@ def _checks(payload: dict) -> list[dict]:
         ("ARTIFACT.md", f"- {values['metric']} metric-separation evaluations"),
         ("ARTIFACT.md", f"- {_comma(values['metric_bootstrap'])} metric bootstrap resamples and {_comma(values['metric_permutation'])} metric permutation shuffles"),
         ("ARTIFACT.md", f"- {_comma(values['baseline_predictions'])} baseline-rule predictions across {values['baseline_count']} alternative status rules"),
+        ("ARTIFACT.md", "- a substitute-theory falsification summary for performance, source-label, review-label, score and model-identity sufficiency, with 0 full-protocol false positives"),
         ("ARTIFACT.md", f"- {values['gate_passed']}/{values['gate']} gate-ablation evaluations passed"),
         ("ARTIFACT.md", f"- {values['gate_contrast_passed']}/{values['gate_contrast']} gate-contrast witness pairs passed with {values['gate_contrast_preserved']}/{values['gate_contrast']} score/metric/role preservation and {values['gate_contrast_separated']}/{values['gate_contrast']} status separation"),
         ("ARTIFACT.md", f"- {_comma(values['source_chain_passed'])}/{_comma(values['source_chain'])} source-chain attack variants passed"),
@@ -252,6 +257,8 @@ def _checks(payload: dict) -> list[dict]:
         ("README.md", f"{_comma(values['identity_evaluations'])} model-identity substitutions"),
         ("README.md", f"{values['query_variants']} query-perturbation variants across {values['query_groups']} issue groups, {values['query_portfolios']} query portfolios plus {values['query_portfolio_groups']} group frontier summaries"),
         ("README.md", f"{_comma(values['uncertainty'])} score-uncertainty perturbations"),
+        ("README.md", f"| Substitute-theory falsification | {values['substitute_theory_count']} theories |"),
+        ("README.md", "performance sufficiency, source-label sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency"),
         ("README.md", f"| Metric separation analysis | {values['metric']} |"),
         ("README.md", f"| Cross-engine raw model outputs | {values['cross_engine_raw']} |"),
         ("README.md", f"| Cross-engine source-supported repairs | {values['cross_engine_repairs']} |"),
@@ -304,6 +311,7 @@ def _checks(payload: dict) -> list[dict]:
         ("docs/paper_mapping.md", "Dynamic contestation challenges"),
         ("docs/paper_mapping.md", "Metamorphic policy tests"),
         ("docs/paper_mapping.md", "model-identity invariance layer"),
+        ("docs/paper_mapping.md", f"model-identity sufficiency would over-admit {_comma(values['identity_substitute_fp'])} identity-labelled rows"),
         ("docs/paper_mapping.md", "Query-perturbation stability"),
         ("docs/paper_mapping.md", "Query-portfolio frontier"),
         ("docs/paper_mapping.md", "Metric bootstrap/permutation robustness"),
@@ -350,6 +358,8 @@ def _checks(payload: dict) -> list[dict]:
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['contestation_passed']}/{values['contestation']} contestation challenge variants"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['metamorphic_passed'])}/{_comma(values['metamorphic'])} metamorphic policy tests"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['identity_passed'])}/{_comma(values['identity_evaluations'])} model-identity substitutions with {values['identity_status_changed']} status changes and {values['identity_disposition_changed']} disposition changes"),
+        ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['identity_substitute_fp'])} model-identity-sufficiency false positives with 0 full-protocol false positives"),
+        ("skills/legal-ai-audit-harness/SKILL.md", "model-identity sufficiency falsification"),
         ("skills/legal-ai-audit-harness/SKILL.md", "python scripts/run_model_identity_invariance.py"),
         ("skills/legal-ai-audit-harness/SKILL.md", "model-identity invariance file"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['query_variants']} query-perturbation variants across {values['query_groups']} issue groups"),
@@ -392,6 +402,7 @@ def _checks(payload: dict) -> list[dict]:
         ("skills/legal-ai-audit-harness/SKILL.md", "policy-constants replay file"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['scenario_files']} scenario packets with {values['embedded']} embedded records or outputs"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['rows'])} validation operations"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "five substitute theories: performance sufficiency, source-label sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", "finite-state characterization of high-status claim attempts"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['status_lattice_states'])} claim-attempt states"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['status_lattice_cover_edges'])} cover edges"),
@@ -404,6 +415,7 @@ def _checks(payload: dict) -> list[dict]:
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['baseline_predictions'])} predictions"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Across {values['baseline_count']} simplified substitute rules"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"still produced {values['baseline_best_fp']} false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"model-identity sufficiency produced {_comma(values['identity_substitute_fp'])} identity-substitution false positives"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['uncertainty'])} perturbations"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['uncertainty_stability']:.3f} sample-level status stability"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['uncertainty_qualified_high']:.3f} high-status stability"),
@@ -496,6 +508,7 @@ def _checks(payload: dict) -> list[dict]:
         ("experiments/full_validation/results/full_validation_report.md", f"Annotation uncertainty: {values['uncertainty']} score perturbations; sample stability {values['uncertainty_stability']:.3f}; qualified high-status stability {values['uncertainty_qualified_high']:.3f}; boundary scenarios {values['uncertainty_boundary']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Score-blinded coding: {values['blind_packets']} packets, {values['blind_passes']} coding passes, {values['blind_exact']:.2f} coder-coder exact agreement, {values['blind_kappa']:.2f} coder-coder kappa, {values['blind_weighted_kappa']:.2f} coder-coder weighted kappa, {values['blind_min_dimension_kappa']:.2f} minimum dimension kappa, {values['blind_min_failure_flag_exact']:.2f} minimum derived failure-flag exact agreement, {values['blind_min_missing_gate_exact']:.2f} minimum derived missing-gate exact agreement, {values['blind_base_dimension_min_kappa']:.2f} minimum base-dimension kappa ({values['blind_base_dimension_min_kappa_dimension']}, {values['blind_base_dimension_min_kappa_exact']:.2f} exact), {values['blind_base_dimension_min_exact']:.2f} minimum base-dimension exact agreement, {values['blind_base_dimension_min_pabak']:.2f} minimum base-dimension PABAK, {values['blind_base_dimension_max_delta']:.2f} maximum base-dimension mean absolute delta, {values['blind_base_exact']:.2f} minimum base-coder exact agreement, {values['blind_base_weighted']:.2f} minimum base-coder weighted agreement, {values['blind_base_kappa']:.2f} minimum base-coder kappa, {values['blind_base_weighted_kappa']:.2f} minimum base-coder weighted kappa"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metric separation evaluations: {values['metric']} upstream-metric scenario packets; high-recall blocked outputs {values['metric_high_recall_blocked']}/{values['metric_high_recall_total']}"),
+        ("experiments/full_validation/results/full_validation_report.md", f"Model-identity sufficiency | {values['identity_substitute_fp']} | {values['identity_substitute_precision']:.2f} | n/a | 0"),
     ]
     for run in threshold_sensitivity["runs"]:
         expectations.append(
@@ -549,6 +562,9 @@ def _forbidden_checks() -> list[dict]:
         "32 validation suites",
         "37 validation suites",
         "3,658,964",
+        "4 theories",
+        "four substitute theories",
+        "four rival theories",
         "230 scenario files",
         "609 embedded records",
         "123,028",

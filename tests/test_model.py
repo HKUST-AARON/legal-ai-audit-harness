@@ -1219,11 +1219,14 @@ class AuditModelTest(unittest.TestCase):
             "source_label_sufficiency",
             "review_label_sufficiency",
             "score_sufficiency",
+            "model_identity_sufficiency",
         })
         self.assertEqual(substitute_rows["performance_sufficiency"]["scenario_false_positive"], 153)
         self.assertEqual(substitute_rows["source_label_sufficiency"]["scenario_false_positive"], 72)
         self.assertEqual(substitute_rows["review_label_sufficiency"]["scenario_false_positive"], 149)
         self.assertEqual(substitute_rows["score_sufficiency"]["scenario_false_positive"], 183)
+        self.assertEqual(substitute_rows["model_identity_sufficiency"]["scenario_false_positive"], 1005)
+        self.assertAlmostEqual(substitute_rows["model_identity_sufficiency"]["scenario_precision"], 315 / 1320)
         self.assertEqual(substitute_rows["score_sufficiency"]["lattice_false_positive"], 24792)
         self.assertTrue(all(row["falsified"] for row in substitute_rows.values()))
         self.assertTrue(all(row["full_protocol_false_positive"] == 0 for row in substitute_rows.values()))

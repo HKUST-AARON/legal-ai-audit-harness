@@ -1282,6 +1282,21 @@
       "scenario_recall": 1.0,
       "substitute": "Total audit score confers procedural status",
       "theory": "Score sufficiency"
+    },
+    {
+      "additional_evidence": "1005/1320 identity-labelled rows would be over-admitted; identity substitution produced 0 status changes",
+      "falsified": true,
+      "full_protocol_false_negative": 0,
+      "full_protocol_false_positive": 0,
+      "id": "model_identity_sufficiency",
+      "lattice_false_positive": null,
+      "lattice_precision": null,
+      "scenario_false_negative": 0,
+      "scenario_false_positive": 1005,
+      "scenario_precision": 0.23863636363636365,
+      "scenario_recall": 1.0,
+      "substitute": "Provider, model or claimed-capability labels confer procedural status",
+      "theory": "Model-identity sufficiency"
     }
   ],
   "suite_count": 38,
