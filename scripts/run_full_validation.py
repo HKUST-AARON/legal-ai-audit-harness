@@ -1187,7 +1187,7 @@ def _status_certificate_row(payload: dict) -> dict:
             "proof_obligations_passed": payload["passed_proof_obligation_count"],
             "cap_or_failure_transitions": payload["cap_or_failure_transition_count"],
         },
-        "finding": "Generates proof-carrying status certificates for every scenario and replays scenario hash, policy hash, score gate, role cap, failure cap, metric bundle, proof obligations and derivation hash.",
+        "finding": "Generates proof-carrying status certificates for every scenario and replays scenario identity, scenario hash, policy hash, policy body, jurisdiction profile, score gate, role cap, missing gates, failure cap, metric bundle, claim support, proof obligations and derivation hash.",
     }
 
 

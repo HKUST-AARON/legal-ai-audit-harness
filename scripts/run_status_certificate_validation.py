@@ -28,18 +28,23 @@ POLICY_PATH = ROOT / "policy" / "legal_output_policy.json"
 RESULTS = ROOT / "experiments" / "status_certificates" / "results"
 CERTIFICATES = RESULTS / "status_certificates.jsonl"
 CHECKS = (
+    "scenario_id",
     "scenario_hash",
     "policy_hash",
+    "policy",
     "claimed_status",
+    "jurisdiction_profile",
     "score_vector",
     "total_score",
     "score_candidate",
     "system_role",
     "role_cap",
+    "missing_gates",
     "failure_cap",
     "allowed_status",
     "failure_flags",
     "disposition",
+    "claim_supported",
     "expected_passed",
     "metric_bundle",
     "proof_obligations",
@@ -199,18 +204,23 @@ def _replay(certificate: dict) -> dict:
     result = evaluate_scenario(scenario)
     replay_certificate = _certificate(path)
     checks = {
+        "scenario_id": certificate["scenario_id"] == scenario["id"],
         "scenario_hash": certificate["scenario_sha256"] == _scenario_hash(scenario),
         "policy_hash": certificate["policy_sha256"] == _file_hash(POLICY_PATH),
+        "policy": certificate["policy"] == asdict(StatusPolicy()),
         "claimed_status": certificate["claimed_status"] == result.claimed_status,
+        "jurisdiction_profile": certificate["jurisdiction_profile"] == scenario.get("jurisdiction_profile", "unspecified"),
         "score_vector": certificate["score_vector"] == result.scores,
         "total_score": certificate["total_score"] == result.total_score,
         "score_candidate": certificate["score_candidate"] == _score_candidate(scenario, result.scores, result.total_score),
         "system_role": certificate["system_role"] == result.system_role,
         "role_cap": certificate["role_cap"] == SYSTEM_ROLE_CAPS[result.system_role],
+        "missing_gates": certificate["missing_gates"] == result.missing_gates,
         "failure_cap": certificate["failure_cap"] == _failure_cap(result.failure_flags, result.disposition),
         "allowed_status": certificate["allowed_status"] == result.allowed_status,
         "failure_flags": certificate["failure_flags"] == result.failure_flags,
         "disposition": certificate["disposition"] == result.disposition,
+        "claim_supported": certificate["claim_supported"] == result.claim_supported,
         "expected_passed": certificate["expected_passed"] == result.expected_passed,
         "metric_bundle": certificate["metric_bundle"] == {
             "counter_authority_recall": result.counter_authority_recall,

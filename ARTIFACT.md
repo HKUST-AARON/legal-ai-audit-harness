@@ -26,7 +26,7 @@ Expected aggregate output:
 - 32 validation suites
 - 246 scenario files
 - 679 embedded records or output items
-- 146,950 total evaluation rows
+- 148,180 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
@@ -39,7 +39,7 @@ Expected aggregate output:
 - 233/233 jurisdiction-profile checks and 162/162 profile mutations passed
 - 884 rank-window visibility checks over 230 high-status claims
 - 76/76 rank-order visibility counterfactuals downgraded with coverage preserved
-- 4,182/4,182 status-certificate replay checks and 3,936/3,936 proof obligations passed over 246 proof-carrying certificates
+- 5,412/5,412 status-certificate replay checks and 3,936/3,936 proof obligations passed over 246 proof-carrying certificates
 - 5,415/5,415 certificate tamper-resistance cases rejected across 25 families
 - 4,182/4,182 policy-constants replay checks passed
 - 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups

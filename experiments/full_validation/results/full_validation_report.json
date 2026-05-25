@@ -918,14 +918,14 @@
     "cap_or_failure_transition_count": 158,
     "certificate_count": 246,
     "failed_proof_obligation_count": 0,
-    "passed_check_count": 4182,
+    "passed_check_count": 5412,
     "passed_proof_obligation_count": 3936,
     "proof_obligation_count": 3936,
-    "replay_check_count": 4182,
+    "replay_check_count": 5412,
     "verified_certificate_count": 246
   },
   "status_certificate_proof_obligations": 3936,
-  "status_certificate_replay_checks": 4182,
+  "status_certificate_replay_checks": 5412,
   "suite_count": 32,
   "suites": [
     {
@@ -1379,21 +1379,21 @@
     },
     {
       "evidence_class": "proof-carrying certificate replay",
-      "finding": "Generates proof-carrying status certificates for every scenario and replays scenario hash, policy hash, score gate, role cap, failure cap, metric bundle, proof obligations and derivation hash.",
+      "finding": "Generates proof-carrying status certificates for every scenario and replays scenario identity, scenario hash, policy hash, policy body, jurisdiction profile, score gate, role cap, missing gates, failure cap, metric bundle, claim support, proof obligations and derivation hash.",
       "high_upstream_but_blocked": null,
       "id": "status_certificate",
       "label": "Proof-carrying status certificates",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "4182/4182 checks; 3936/3936 obligations",
-      "scenario_count": 8118,
+      "rule_pass": "5412/5412 checks; 3936/3936 obligations",
+      "scenario_count": 9348,
       "status_distribution": {
         "cap_or_failure_transitions": 158,
         "proof_obligations": 3936,
         "proof_obligations_passed": 3936,
         "verified_certificates": 246
       },
-      "validation_units": "4182 replay checks and 3936 proof obligations over 246 certificates"
+      "validation_units": "5412 replay checks and 3936 proof obligations over 246 certificates"
     },
     {
       "evidence_class": "proof-certificate negative-control validation",
@@ -1640,7 +1640,7 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 146950,
+  "total_evaluation_rows": 148180,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
@@ -1687,7 +1687,7 @@
     "source_text_anchor_verified": 30,
     "status_certificate_proof_obligations": 3936,
     "status_certificate_proof_obligations_passed": 3936,
-    "status_certificate_replay_checks": 4182,
+    "status_certificate_replay_checks": 5412,
     "status_certificates_verified": 246,
     "stress_scenarios": 10,
     "threshold_sensitivity_evaluations": 1230,

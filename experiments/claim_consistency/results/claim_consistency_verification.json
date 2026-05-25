@@ -1,5 +1,5 @@
 {
-  "check_count": 578,
+  "check_count": 608,
   "checks": [
     {
       "expected": "- 32 validation suites",
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 146,950 total evaluation rows",
+      "expected": "- 148,180 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -92,7 +92,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 4,182/4,182 status-certificate replay checks and 3,936/3,936 proof obligations passed over 246 proof-carrying certificates",
+      "expected": "- 5,412/5,412 status-certificate replay checks and 3,936/3,936 proof obligations passed over 246 proof-carrying certificates",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -142,7 +142,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 4,182 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,412 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -227,7 +227,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Proof-carrying status certificates | 8118 |",
+      "expected": "| Proof-carrying status certificates | 9348 |",
       "passed": true,
       "path": "README.md"
     },
@@ -562,7 +562,7 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "246/246 proof-carrying status certificates verified, 4,182/4,182 replay checks, 3,936/3,936 proof obligations",
+      "expected": "246/246 proof-carrying status certificates verified, 5,412/5,412 replay checks, 3,936/3,936 proof obligations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -697,7 +697,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "146,271 derived robustness checks",
+      "expected": "147,501 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -737,7 +737,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "4,182 status-certificate replay checks",
+      "expected": "5,412 status-certificate replay checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -962,7 +962,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Proof-carrying status certificates & 4,182 checks / 3,936 obligations & 4,182/4,182; 3,936/3,936",
+      "expected": "Proof-carrying status certificates & 5,412 checks / 3,936 obligations & 5,412/5,412; 3,936/3,936",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1117,7 +1117,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Proof-carrying certificate replay checks: 4182/4182 passed over 246 certificates",
+      "expected": "Proof-carrying certificate replay checks: 5412/5412 passed over 246 certificates",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1512,6 +1512,36 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `146,950`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `146,271`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8,118`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8118`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 status-certificate replay checks`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 checks / 3,936 obligations`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `2,709/2,709`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -1852,6 +1882,36 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `146,950`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `146,271`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8,118`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8118`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 status-certificate replay checks`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 checks / 3,936 obligations`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `2,709/2,709`",
       "passed": true,
       "path": "README.md"
@@ -2192,6 +2252,36 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `146,950`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `146,271`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8,118`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8118`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 status-certificate replay checks`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 checks / 3,936 obligations`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `2,709/2,709`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -2532,6 +2622,36 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `146,950`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `146,271`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8,118`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8118`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 status-certificate replay checks`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `4,182 checks / 3,936 obligations`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `2,709/2,709`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -2868,6 +2988,36 @@
     },
     {
       "expected": "absence of stale claim `143,565`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `146,950`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `146,271`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8,118`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8118`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `4,182 status-certificate replay checks`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `4,182 checks / 3,936 obligations`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2894,5 +3044,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 578
+  "passed_count": 608
 }
