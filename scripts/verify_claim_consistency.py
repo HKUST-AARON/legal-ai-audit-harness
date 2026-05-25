@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -214,17 +213,13 @@ def _comma(value: int) -> str:
 
 
 def _pdf_page_count(path: Path) -> int:
-    completed = subprocess.run(["pdfinfo", str(path)], check=False, capture_output=True, text=True)
-    if completed.returncode == 0:
-        for line in completed.stdout.splitlines():
-            if line.startswith("Pages:"):
-                return int(line.split(":", 1)[1].strip())
     log = path.with_suffix(".log")
     if log.exists():
         match = re.search(r"Output written on .+ \((\d+) pages", log.read_text(encoding="utf-8", errors="ignore"))
         if match:
             return int(match.group(1))
-    return 0
+    text = path.read_bytes().decode("latin-1", errors="ignore")
+    return len(re.findall(r"/Type\s*/Page\b", text))
 
 
 def _format_report(payload: dict) -> str:
