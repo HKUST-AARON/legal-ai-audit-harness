@@ -160,6 +160,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
     _run([sys.executable, "scripts/run_ranking_visibility_analysis.py"])
     _run([sys.executable, "scripts/run_status_certificate_validation.py"])
+    _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
 
     rows = []
     for suite in SUITES:
@@ -280,6 +281,12 @@ def main() -> int:
         )
     )
     rows.append(_status_certificate_row(status_certificate_payload))
+    metamorphic_payload = json.loads(
+        (ROOT / "experiments" / "metamorphic_policy" / "results" / "metamorphic_policy_tests.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_metamorphic_policy_row(metamorphic_payload))
 
     _run(
         [
@@ -366,6 +373,8 @@ def main() -> int:
             "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
             "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
             "status_certificates_verified": status_certificate_payload["verified_certificate_count"],
+            "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
+            "metamorphic_policy_passed": metamorphic_payload["passed_count"],
         }
     )
     payload = {
@@ -392,6 +401,7 @@ def main() -> int:
         "ranking_visibility_window_checks": ranking_visibility_payload["window_check_count"],
         "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
         "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
+        "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
@@ -407,6 +417,7 @@ def main() -> int:
         + ranking_visibility_payload["window_check_count"]
         + ranking_visibility_payload["rank_order_counterfactual_count"]
         + status_certificate_payload["replay_check_count"]
+        + metamorphic_payload["metamorphic_evaluation_count"]
         + robustness_payload["recoded_evaluations"]
         + uncertainty_payload["evaluation_count"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
@@ -419,6 +430,7 @@ def main() -> int:
             "high_upstream_but_blocked": source_chain_attack_payload["summary"]["high_upstream_but_blocked"],
             "blocked_reason_distribution": source_chain_attack_payload["summary"]["blocked_reason_distribution"],
             "status_distribution": _status_distribution(source_chain_attack_payload["results"]),
+            "disposition_distribution": _disposition_distribution(source_chain_attack_payload["results"]),
         },
         "contestation_challenges": {
             "scenario_count": contestation_challenge_payload["summary"]["scenario_count"],
@@ -559,6 +571,13 @@ def main() -> int:
             "passed_check_count": status_certificate_payload["passed_check_count"],
             "cap_or_failure_transition_count": status_certificate_payload["cap_or_failure_transition_count"],
         },
+        "metamorphic_policy": {
+            "scenario_count": metamorphic_payload["scenario_count"],
+            "metamorphic_evaluation_count": metamorphic_payload["metamorphic_evaluation_count"],
+            "passed_count": metamorphic_payload["passed_count"],
+            "failed_count": metamorphic_payload["failed_count"],
+            "by_relation": metamorphic_payload["by_relation"],
+        },
         "suites": rows,
     }
     (RESULTS / "full_validation_report.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
@@ -682,7 +701,7 @@ def _source_chain_attack_row(payload: dict) -> dict:
         "high_upstream_but_blocked": summary["high_upstream_but_blocked"],
         "blocked_reason_distribution": summary["blocked_reason_distribution"],
         "status_distribution": _status_distribution(payload["results"]),
-        "finding": "Mutates locators, output-source links, procedural source tags, high-authority recall and counter-material recall across every qualified packet; all attacked variants must downgrade or withdraw despite high scores and high upstream recall.",
+        "finding": "Mutates locators, output-source links, procedural source tags, high-authority recall and counter-material recall across every qualified packet; all attacked variants must lose high status through downgrade, suspension or withdrawal despite high scores and high upstream recall.",
     }
 
 
@@ -709,6 +728,14 @@ def _status_distribution(results: list[dict]) -> dict[str, int]:
     for result in results:
         status = result["allowed_status"]
         distribution[status] = distribution.get(status, 0) + 1
+    return distribution
+
+
+def _disposition_distribution(results: list[dict]) -> dict[str, int]:
+    distribution: dict[str, int] = {}
+    for result in results:
+        disposition = result["disposition"]
+        distribution[disposition] = distribution.get(disposition, 0) + 1
     return distribution
 
 
@@ -1016,6 +1043,25 @@ def _status_certificate_row(payload: dict) -> dict:
     }
 
 
+def _metamorphic_policy_row(payload: dict) -> dict:
+    return {
+        "id": "metamorphic_policy",
+        "label": "Metamorphic policy tests",
+        "evidence_class": "expected-label-free policy-invariant validation",
+        "validation_units": f"{payload['metamorphic_evaluation_count']} transformations over {payload['scenario_count']} packets",
+        "scenario_count": payload["metamorphic_evaluation_count"],
+        "rule_pass": f"{payload['passed_count']}/{payload['metamorphic_evaluation_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            relation: bucket["passed"]
+            for relation, bucket in sorted(payload["by_relation"].items())
+        },
+        "finding": "Applies claim escalation, metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation to primary scenario packets without using expected labels.",
+    }
+
+
 def _format_report(payload: dict) -> str:
     lines = [
         "# Full Legal AI Audit Harness Validation",
@@ -1040,6 +1086,7 @@ def _format_report(payload: dict) -> str:
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Source-chain attack variants: {payload['source_chain_attacks']['expected_passed']}/{payload['source_chain_attacks']['scenario_count']} passed; high-upstream attacked variants blocked {payload['source_chain_attacks']['high_upstream_but_blocked']}/{payload['source_chain_attacks']['scenario_count']}",
+        f"Source-chain attack dispositions: downgrade {payload['source_chain_attacks']['disposition_distribution'].get('downgrade', 0)}, suspension {payload['source_chain_attacks']['disposition_distribution'].get('suspension', 0)}, withdrawal {payload['source_chain_attacks']['disposition_distribution'].get('withdrawal', 0)}",
         f"Contestation challenge variants: {payload['contestation_challenges']['expected_passed']}/{payload['contestation_challenges']['scenario_count']} passed; valid challenges blocked {payload['contestation_challenges']['valid_challenges_blocked']}/216; unsupported controls preserved {payload['contestation_challenges']['unsupported_controls_preserved']}/54",
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
@@ -1052,6 +1099,7 @@ def _format_report(payload: dict) -> str:
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
         f"Ranking-visibility checks: {payload['ranking_visibility']['window_check_count']} rank-window checks over {payload['ranking_visibility']['visibility_check_count']} high-status claims; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['front_window_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}; median first counter rank {payload['ranking_visibility']['median_first_counter_rank']:.1f}",
         f"Status certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
+        f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
         f"Derived robustness evaluations: {payload['total_evaluation_rows'] - payload['validation_units']['total']}",
         f"Scenario-regression expectations passed: {payload['expected_passed']}/{payload['expected_total']}",
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",

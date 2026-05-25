@@ -781,7 +781,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 27)
+        self.assertEqual(report["suite_count"], 28)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -835,7 +835,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
-        self.assertEqual(report["total_evaluation_rows"], 130944)
+        self.assertEqual(report["metamorphic_policy_evaluations"], 1134)
+        self.assertEqual(report["validation_units"]["metamorphic_policy_evaluations"], 1134)
+        self.assertEqual(report["validation_units"]["metamorphic_policy_passed"], 1134)
+        self.assertEqual(report["total_evaluation_rows"], 132078)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -875,6 +878,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["source_chain_attacks"]["high_upstream_but_blocked"], 270)
         self.assertEqual(report["source_chain_attacks"]["status_distribution"]["reference_information"], 162)
         self.assertEqual(report["source_chain_attacks"]["status_distribution"]["no_external_legal_effect"], 108)
+        self.assertEqual(report["source_chain_attacks"]["disposition_distribution"]["downgrade"], 54)
+        self.assertEqual(report["source_chain_attacks"]["disposition_distribution"]["suspension"], 108)
+        self.assertEqual(report["source_chain_attacks"]["disposition_distribution"]["withdrawal"], 108)
         self.assertEqual(report["contestation_challenges"]["scenario_count"], 270)
         self.assertEqual(report["contestation_challenges"]["expected_passed"], 270)
         self.assertEqual(report["contestation_challenges"]["high_upstream_but_blocked"], 216)
@@ -905,6 +911,17 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate"]["verified_certificate_count"], 246)
         self.assertEqual(report["status_certificate"]["replay_check_count"], 3198)
         self.assertEqual(report["status_certificate"]["passed_check_count"], 3198)
+        self.assertEqual(report["metamorphic_policy"]["scenario_count"], 246)
+        self.assertEqual(report["metamorphic_policy"]["metamorphic_evaluation_count"], 1134)
+        self.assertEqual(report["metamorphic_policy"]["passed_count"], 1134)
+        self.assertEqual(report["metamorphic_policy"]["failed_count"], 0)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["claim_escalation_nonpromotion"]["passed"], 246)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["upstream_metric_inflation_invariance"]["passed"], 246)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["back_office_role_cap"]["passed"], 246)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["score_and_role_inflation_without_adoption"]["passed"], 234)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 54)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 54)
+        self.assertEqual(report["metamorphic_policy"]["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 54)
 
     def test_source_chain_attacks_run(self):
         completed = subprocess.run(
@@ -977,6 +994,28 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(len(valid), 216)
         self.assertTrue(all(STATUS_RANK[item["allowed_status"]] >= STATUS_RANK["normative_material_screening_output"] for item in unsupported))
         self.assertTrue(all(item["allowed_status"] == "reference_information" for item in valid))
+
+    def test_metamorphic_policy_tests_run(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_metamorphic_policy_tests.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "metamorphic_policy" / "results" / "metamorphic_policy_tests.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["scenario_count"], 246)
+        self.assertEqual(report["metamorphic_evaluation_count"], 1134)
+        self.assertEqual(report["passed_count"], 1134)
+        self.assertEqual(report["failed_count"], 0)
+        self.assertEqual(report["by_relation"]["claim_escalation_nonpromotion"]["passed"], 246)
+        self.assertEqual(report["by_relation"]["upstream_metric_inflation_invariance"]["passed"], 246)
+        self.assertEqual(report["by_relation"]["back_office_role_cap"]["passed"], 246)
+        self.assertEqual(report["by_relation"]["score_and_role_inflation_without_adoption"]["passed"], 234)
+        self.assertEqual(report["by_relation"]["source_tag_deproceduralization_blocks_high_status"]["passed"], 54)
+        self.assertEqual(report["by_relation"]["review_gate_removal_blocks_high_status"]["passed"], 54)
+        self.assertEqual(report["by_relation"]["benign_source_append_preserves_high_status"]["passed"], 54)
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(
