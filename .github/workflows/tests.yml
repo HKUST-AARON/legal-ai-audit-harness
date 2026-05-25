@@ -25,6 +25,7 @@ jobs:
       - run: python -m audit_harness.cli experiment experiments/public_system_outputs/scenarios
       - run: python scripts/run_repair_frontier_analysis.py
       - run: python scripts/run_jurisdiction_profile_analysis.py
+      - run: python scripts/run_ranking_visibility_analysis.py
       - run: python scripts/run_status_certificate_validation.py
       - run: python scripts/run_full_validation.py
       - run: python scripts/verify_claim_consistency.py

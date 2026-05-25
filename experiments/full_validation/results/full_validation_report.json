@@ -256,6 +256,20 @@
     "scenario_count": 10,
     "scenario_sections_verified": 10
   },
+  "ranking_visibility": {
+    "counterfactual_front_window_counter_visible": 0,
+    "coverage_preserved_count": 11,
+    "downgraded_count": 11,
+    "eligible_packet_count": 41,
+    "front_window_counter_not_visible": 10,
+    "front_window_counter_visible": 31,
+    "rank_intervention_applied_count": 11,
+    "rank_order_counterfactual_count": 11,
+    "rank_order_passed_count": 11,
+    "visibility_check_count": 41
+  },
+  "ranking_visibility_checks": 41,
+  "ranking_visibility_counterfactuals": 11,
   "recoded_evaluations": 460,
   "repair_frontier": {
     "blocked_claim_count": 176,
@@ -296,7 +310,7 @@
     "verified_certificate_count": 230
   },
   "status_certificate_replay_checks": 2990,
-  "suite_count": 21,
+  "suite_count": 22,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -638,6 +652,26 @@
       "validation_units": "355 profile checks and counterfactuals"
     },
     {
+      "evidence_class": "rank-salience counterfactual check",
+      "finding": "Diagnoses top-window counter-material visibility and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.",
+      "high_upstream_but_blocked": null,
+      "id": "ranking_visibility",
+      "label": "Ranking-visibility diagnostics",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "11/11 rank-order",
+      "scenario_count": 41,
+      "status_distribution": {
+        "counterfactual_front_window_counter_visible": 0,
+        "coverage_preserved": 11,
+        "downgraded": 11,
+        "front_window_counter_not_visible": 10,
+        "front_window_counter_visible": 31,
+        "rank_intervention_applied": 11
+      },
+      "validation_units": "41 high-status diagnostics including 11 rank-order counterfactuals"
+    },
+    {
       "evidence_class": "derivation-certificate check",
       "finding": "Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.",
       "high_upstream_but_blocked": null,
@@ -766,7 +800,7 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 62456,
+  "total_evaluation_rows": 62497,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
@@ -786,6 +820,8 @@
     "public_metadata_records": 120,
     "public_retrieval_records": 225,
     "public_system_records": 60,
+    "ranking_visibility_checks": 41,
+    "ranking_visibility_counterfactuals": 11,
     "raw_model_outputs": 10,
     "repair_frontier_evaluations": 2236,
     "source_bound_model_outputs": 10,
