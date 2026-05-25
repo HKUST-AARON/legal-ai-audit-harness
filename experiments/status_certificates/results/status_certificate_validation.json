@@ -16,16 +16,16 @@
   "failed_proof_obligation_count": 0,
   "failures": [],
   "missing_certificate_paths": [],
-  "passed_check_count": 5412,
-  "passed_proof_obligation_count": 3936,
-  "proof_obligation_count": 3936,
-  "replay_check_count": 5412,
+  "passed_check_count": 5658,
+  "passed_proof_obligation_count": 4182,
+  "proof_obligation_count": 4182,
+  "replay_check_count": 5658,
   "replay_rows": [
     {
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/administrative_guidance_conflict.json",
       "scenario_id": "administrative-guidance-conflict"
     },
@@ -33,7 +33,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/civil_law_statutory_interpretation.json",
       "scenario_id": "civil-law-statutory-interpretation"
     },
@@ -41,7 +41,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/court_authority_report.json",
       "scenario_id": "court-authority-report"
     },
@@ -49,7 +49,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/decision_support_ready.json",
       "scenario_id": "decision-support-ready"
     },
@@ -57,7 +57,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/grounded_output_summary.json",
       "scenario_id": "grounded-output-summary"
     },
@@ -65,7 +65,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/high_coverage_uncontestable_output.json",
       "scenario_id": "high-coverage-uncontestable-output"
     },
@@ -73,7 +73,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/odr_authorized_review.json",
       "scenario_id": "odr-authorized-review"
     },
@@ -81,7 +81,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/professional_research_support.json",
       "scenario_id": "professional-research-support"
     },
@@ -89,7 +89,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/suspended_authority_omission.json",
       "scenario_id": "suspended-authority-omission"
     },
@@ -97,7 +97,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "examples/scenarios/unverifiable_legal_output.json",
       "scenario_id": "unverifiable-legal-output"
     },
@@ -105,7 +105,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/real_cases/scenarios/canada.json",
       "scenario_id": "real-cases-canada"
     },
@@ -113,7 +113,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/real_cases/scenarios/germany.json",
       "scenario_id": "real-cases-germany"
     },
@@ -121,7 +121,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/real_cases/scenarios/hong_kong.json",
       "scenario_id": "real-cases-hong_kong"
     },
@@ -129,7 +129,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/real_cases/scenarios/mainland_china.json",
       "scenario_id": "real-cases-mainland_china"
     },
@@ -137,7 +137,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/real_cases/scenarios/united_kingdom.json",
       "scenario_id": "real-cases-united_kingdom"
     },
@@ -145,7 +145,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/real_cases/scenarios/united_states.json",
       "scenario_id": "real-cases-united_states"
     },
@@ -153,7 +153,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_system_outputs/scenarios/canada.json",
       "scenario_id": "public-system-output-canada"
     },
@@ -161,7 +161,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_system_outputs/scenarios/germany.json",
       "scenario_id": "public-system-output-germany"
     },
@@ -169,7 +169,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_system_outputs/scenarios/hong_kong.json",
       "scenario_id": "public-system-output-hong_kong"
     },
@@ -177,7 +177,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_system_outputs/scenarios/mainland_china.json",
       "scenario_id": "public-system-output-mainland_china"
     },
@@ -185,7 +185,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_system_outputs/scenarios/united_kingdom.json",
       "scenario_id": "public-system-output-united_kingdom"
     },
@@ -193,7 +193,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_system_outputs/scenarios/united_states.json",
       "scenario_id": "public-system-output-united_states"
     },
@@ -201,7 +201,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_public_outputs/scenarios/eu-official-gdpr-article15.json",
       "scenario_id": "issue-public-output-eu-official-gdpr-article15"
     },
@@ -209,7 +209,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_public_outputs/scenarios/uk-tna-fairchild-mesothelioma.json",
       "scenario_id": "issue-public-output-uk-tna-fairchild-mesothelioma"
     },
@@ -217,7 +217,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_public_outputs/scenarios/us-courtlistener-loper-bright.json",
       "scenario_id": "issue-public-output-us-courtlistener-loper-bright"
     },
@@ -225,7 +225,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q01.json",
       "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q01"
     },
@@ -233,7 +233,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q02.json",
       "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q02"
     },
@@ -241,7 +241,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q03.json",
       "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q03"
     },
@@ -249,7 +249,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/canada-vavilov-standard-of-review-q04.json",
       "scenario_id": "public-retrieval-canada-vavilov-standard-of-review-q04"
     },
@@ -257,7 +257,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q01.json",
       "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q01"
     },
@@ -265,7 +265,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q02.json",
       "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q02"
     },
@@ -273,7 +273,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q03.json",
       "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q03"
     },
@@ -281,7 +281,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/eu-gdpr-article15-access-rights-q04.json",
       "scenario_id": "public-retrieval-eu-gdpr-article15-access-rights-q04"
     },
@@ -289,7 +289,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q01.json",
       "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q01"
     },
@@ -297,7 +297,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q02.json",
       "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q02"
     },
@@ -305,7 +305,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q03.json",
       "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q03"
     },
@@ -313,7 +313,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/germany-right-to-be-forgotten-review-q04.json",
       "scenario_id": "public-retrieval-germany-right-to-be-forgotten-review-q04"
     },
@@ -321,7 +321,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q01.json",
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01"
     },
@@ -329,7 +329,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q02.json",
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02"
     },
@@ -337,7 +337,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q03.json",
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q03"
     },
@@ -345,7 +345,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q04.json",
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q04"
     },
@@ -353,7 +353,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/uk-mesothelioma-causation-after-fairchild-q06.json",
       "scenario_id": "public-retrieval-uk-mesothelioma-causation-after-fairchild-q06"
     },
@@ -361,7 +361,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q01.json",
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q01"
     },
@@ -369,7 +369,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q02.json",
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q02"
     },
@@ -377,7 +377,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q03.json",
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q03"
     },
@@ -385,7 +385,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q04.json",
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q04"
     },
@@ -393,7 +393,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/public_retrieval_benchmark/scenarios/us-agency-deference-after-loper-bright-q06.json",
       "scenario_id": "public-retrieval-us-agency-deference-after-loper-bright-q06"
     },
@@ -401,7 +401,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q05.json",
       "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q05"
     },
@@ -409,7 +409,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-canada-vavilov-standard-of-review-q06.json",
       "scenario_id": "holdout-public-retrieval-canada-vavilov-standard-of-review-q06"
     },
@@ -417,7 +417,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q05.json",
       "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q05"
     },
@@ -425,7 +425,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-eu-gdpr-article15-access-rights-q06.json",
       "scenario_id": "holdout-public-retrieval-eu-gdpr-article15-access-rights-q06"
     },
@@ -433,7 +433,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q05.json",
       "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q05"
     },
@@ -441,7 +441,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-germany-right-to-be-forgotten-review-q06.json",
       "scenario_id": "holdout-public-retrieval-germany-right-to-be-forgotten-review-q06"
     },
@@ -449,7 +449,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05.json",
       "scenario_id": "holdout-public-retrieval-uk-mesothelioma-causation-after-fairchild-q05"
     },
@@ -457,7 +457,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-public-retrieval-us-agency-deference-after-loper-bright-q05.json",
       "scenario_id": "holdout-public-retrieval-us-agency-deference-after-loper-bright-q05"
     },
@@ -465,7 +465,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-canada-vavilov-01.json",
       "scenario_id": "holdout-raw-canada-vavilov-01"
     },
@@ -473,7 +473,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-01.json",
       "scenario_id": "holdout-raw-eu-gdpr-01"
     },
@@ -481,7 +481,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-eu-gdpr-02.json",
       "scenario_id": "holdout-raw-eu-gdpr-02"
     },
@@ -489,7 +489,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-germany-rtbf-01.json",
       "scenario_id": "holdout-raw-germany-rtbf-01"
     },
@@ -497,7 +497,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-01.json",
       "scenario_id": "holdout-raw-uk-mesothelioma-01"
     },
@@ -505,7 +505,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-uk-mesothelioma-02.json",
       "scenario_id": "holdout-raw-uk-mesothelioma-02"
     },
@@ -513,7 +513,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-01.json",
       "scenario_id": "holdout-raw-us-deference-01"
     },
@@ -521,7 +521,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-raw-us-deference-02.json",
       "scenario_id": "holdout-raw-us-deference-02"
     },
@@ -529,7 +529,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-canada-vavilov-01.json",
       "scenario_id": "holdout-source-bound-canada-vavilov-01"
     },
@@ -537,7 +537,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-01.json",
       "scenario_id": "holdout-source-bound-eu-gdpr-01"
     },
@@ -545,7 +545,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-eu-gdpr-02.json",
       "scenario_id": "holdout-source-bound-eu-gdpr-02"
     },
@@ -553,7 +553,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-germany-rtbf-01.json",
       "scenario_id": "holdout-source-bound-germany-rtbf-01"
     },
@@ -561,7 +561,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-01.json",
       "scenario_id": "holdout-source-bound-uk-mesothelioma-01"
     },
@@ -569,7 +569,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-uk-mesothelioma-02.json",
       "scenario_id": "holdout-source-bound-uk-mesothelioma-02"
     },
@@ -577,7 +577,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-01.json",
       "scenario_id": "holdout-source-bound-us-deference-01"
     },
@@ -585,7 +585,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/holdout_validation/scenarios/holdout-source-bound-us-deference-02.json",
       "scenario_id": "holdout-source-bound-us-deference-02"
     },
@@ -593,7 +593,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_eu_01.json",
       "scenario_id": "codex55-eu-01"
     },
@@ -601,7 +601,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_eu_02.json",
       "scenario_id": "codex55-eu-02"
     },
@@ -609,7 +609,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_eu_03.json",
       "scenario_id": "codex55-eu-03"
     },
@@ -617,7 +617,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_eu_04.json",
       "scenario_id": "codex55-eu-04"
     },
@@ -625,7 +625,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_uk_01.json",
       "scenario_id": "codex55-uk-01"
     },
@@ -633,7 +633,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_uk_02.json",
       "scenario_id": "codex55-uk-02"
     },
@@ -641,7 +641,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_uk_03.json",
       "scenario_id": "codex55-uk-03"
     },
@@ -649,7 +649,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_us_01.json",
       "scenario_id": "codex55-us-01"
     },
@@ -657,7 +657,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_us_02.json",
       "scenario_id": "codex55-us-02"
     },
@@ -665,7 +665,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/ai_outputs/scenarios/codex55_us_03.json",
       "scenario_id": "codex55-us-03"
     },
@@ -673,7 +673,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-01.json",
       "scenario_id": "source-bound-codex55-eu-01"
     },
@@ -681,7 +681,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-02.json",
       "scenario_id": "source-bound-codex55-eu-02"
     },
@@ -689,7 +689,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-03.json",
       "scenario_id": "source-bound-codex55-eu-03"
     },
@@ -697,7 +697,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-eu-04.json",
       "scenario_id": "source-bound-codex55-eu-04"
     },
@@ -705,7 +705,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-01.json",
       "scenario_id": "source-bound-codex55-uk-01"
     },
@@ -713,7 +713,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-02.json",
       "scenario_id": "source-bound-codex55-uk-02"
     },
@@ -721,7 +721,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-uk-03.json",
       "scenario_id": "source-bound-codex55-uk-03"
     },
@@ -729,7 +729,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-01.json",
       "scenario_id": "source-bound-codex55-us-01"
     },
@@ -737,7 +737,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-02.json",
       "scenario_id": "source-bound-codex55-us-02"
     },
@@ -745,7 +745,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
       "scenario_id": "source-bound-codex55-us-03"
     },
@@ -753,7 +753,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--authorized-decision-support"
     },
@@ -761,7 +761,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--contestable-screening"
     },
@@ -769,7 +769,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--raw-unverified"
     },
@@ -777,7 +777,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability"
     },
@@ -785,7 +785,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-counter"
     },
@@ -793,7 +793,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-logging"
     },
@@ -801,7 +801,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-eu-01--unauthorized-external-action"
     },
@@ -809,7 +809,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--authorized-decision-support"
     },
@@ -817,7 +817,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--contestable-screening"
     },
@@ -825,7 +825,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--raw-unverified"
     },
@@ -833,7 +833,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability"
     },
@@ -841,7 +841,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-counter"
     },
@@ -849,7 +849,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-logging"
     },
@@ -857,7 +857,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-eu-02--unauthorized-external-action"
     },
@@ -865,7 +865,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--authorized-decision-support"
     },
@@ -873,7 +873,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--contestable-screening"
     },
@@ -881,7 +881,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--raw-unverified"
     },
@@ -889,7 +889,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability"
     },
@@ -897,7 +897,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-counter"
     },
@@ -905,7 +905,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-logging"
     },
@@ -913,7 +913,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-eu-03--unauthorized-external-action"
     },
@@ -921,7 +921,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--authorized-decision-support"
     },
@@ -929,7 +929,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--contestable-screening"
     },
@@ -937,7 +937,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--raw-unverified"
     },
@@ -945,7 +945,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability"
     },
@@ -953,7 +953,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-counter"
     },
@@ -961,7 +961,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-logging"
     },
@@ -969,7 +969,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-eu-04--unauthorized-external-action"
     },
@@ -977,7 +977,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--authorized-decision-support"
     },
@@ -985,7 +985,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--contestable-screening"
     },
@@ -993,7 +993,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--raw-unverified"
     },
@@ -1001,7 +1001,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability"
     },
@@ -1009,7 +1009,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-counter"
     },
@@ -1017,7 +1017,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-logging"
     },
@@ -1025,7 +1025,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-uk-01--unauthorized-external-action"
     },
@@ -1033,7 +1033,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--authorized-decision-support"
     },
@@ -1041,7 +1041,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--contestable-screening"
     },
@@ -1049,7 +1049,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--raw-unverified"
     },
@@ -1057,7 +1057,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability"
     },
@@ -1065,7 +1065,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-counter"
     },
@@ -1073,7 +1073,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-logging"
     },
@@ -1081,7 +1081,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-uk-02--unauthorized-external-action"
     },
@@ -1089,7 +1089,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--authorized-decision-support"
     },
@@ -1097,7 +1097,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--contestable-screening"
     },
@@ -1105,7 +1105,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--raw-unverified"
     },
@@ -1113,7 +1113,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability"
     },
@@ -1121,7 +1121,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-counter"
     },
@@ -1129,7 +1129,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-logging"
     },
@@ -1137,7 +1137,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-uk-03--unauthorized-external-action"
     },
@@ -1145,7 +1145,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-us-01--authorized-decision-support"
     },
@@ -1153,7 +1153,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-us-01--contestable-screening"
     },
@@ -1161,7 +1161,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-us-01--raw-unverified"
     },
@@ -1169,7 +1169,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability"
     },
@@ -1177,7 +1177,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-counter"
     },
@@ -1185,7 +1185,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-logging"
     },
@@ -1193,7 +1193,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-us-01--unauthorized-external-action"
     },
@@ -1201,7 +1201,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-us-02--authorized-decision-support"
     },
@@ -1209,7 +1209,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-us-02--contestable-screening"
     },
@@ -1217,7 +1217,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-us-02--raw-unverified"
     },
@@ -1225,7 +1225,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability"
     },
@@ -1233,7 +1233,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-counter"
     },
@@ -1241,7 +1241,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-logging"
     },
@@ -1249,7 +1249,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-us-02--unauthorized-external-action"
     },
@@ -1257,7 +1257,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--authorized-decision-support.json",
       "scenario_id": "evidence-ladder-codex55-us-03--authorized-decision-support"
     },
@@ -1265,7 +1265,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--contestable-screening.json",
       "scenario_id": "evidence-ladder-codex55-us-03--contestable-screening"
     },
@@ -1273,7 +1273,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--raw-unverified.json",
       "scenario_id": "evidence-ladder-codex55-us-03--raw-unverified"
     },
@@ -1281,7 +1281,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability"
     },
@@ -1289,7 +1289,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-counter.json",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-counter"
     },
@@ -1297,7 +1297,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-logging.json",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-logging"
     },
@@ -1305,7 +1305,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--unauthorized-external-action.json",
       "scenario_id": "evidence-ladder-codex55-us-03--unauthorized-external-action"
     },
@@ -1313,7 +1313,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-01--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-eu-01--contradictory-claim"
     },
@@ -1321,7 +1321,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-01--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-eu-01--counter-material-omission"
     },
@@ -1329,7 +1329,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-01--missing-output-link.json",
       "scenario_id": "source-bound-codex55-eu-01--missing-output-link"
     },
@@ -1337,7 +1337,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-01--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-eu-01--out-of-manifest-source"
     },
@@ -1345,7 +1345,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-01--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-eu-01--unsupported-claim"
     },
@@ -1353,7 +1353,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-01--wrong-locator.json",
       "scenario_id": "source-bound-codex55-eu-01--wrong-locator"
     },
@@ -1361,7 +1361,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-02--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-eu-02--contradictory-claim"
     },
@@ -1369,7 +1369,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-02--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-eu-02--counter-material-omission"
     },
@@ -1377,7 +1377,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-02--missing-output-link.json",
       "scenario_id": "source-bound-codex55-eu-02--missing-output-link"
     },
@@ -1385,7 +1385,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-02--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-eu-02--out-of-manifest-source"
     },
@@ -1393,7 +1393,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-02--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-eu-02--unsupported-claim"
     },
@@ -1401,7 +1401,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-02--wrong-locator.json",
       "scenario_id": "source-bound-codex55-eu-02--wrong-locator"
     },
@@ -1409,7 +1409,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-03--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-eu-03--contradictory-claim"
     },
@@ -1417,7 +1417,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-03--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-eu-03--counter-material-omission"
     },
@@ -1425,7 +1425,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-03--missing-output-link.json",
       "scenario_id": "source-bound-codex55-eu-03--missing-output-link"
     },
@@ -1433,7 +1433,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-03--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-eu-03--out-of-manifest-source"
     },
@@ -1441,7 +1441,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-03--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-eu-03--unsupported-claim"
     },
@@ -1449,7 +1449,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-03--wrong-locator.json",
       "scenario_id": "source-bound-codex55-eu-03--wrong-locator"
     },
@@ -1457,7 +1457,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-04--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-eu-04--contradictory-claim"
     },
@@ -1465,7 +1465,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-04--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-eu-04--counter-material-omission"
     },
@@ -1473,7 +1473,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-04--missing-output-link.json",
       "scenario_id": "source-bound-codex55-eu-04--missing-output-link"
     },
@@ -1481,7 +1481,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-04--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-eu-04--out-of-manifest-source"
     },
@@ -1489,7 +1489,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-04--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-eu-04--unsupported-claim"
     },
@@ -1497,7 +1497,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-eu-04--wrong-locator.json",
       "scenario_id": "source-bound-codex55-eu-04--wrong-locator"
     },
@@ -1505,7 +1505,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-01--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-uk-01--contradictory-claim"
     },
@@ -1513,7 +1513,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-01--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-uk-01--counter-material-omission"
     },
@@ -1521,7 +1521,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-01--missing-output-link.json",
       "scenario_id": "source-bound-codex55-uk-01--missing-output-link"
     },
@@ -1529,7 +1529,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-01--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-uk-01--out-of-manifest-source"
     },
@@ -1537,7 +1537,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-01--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-uk-01--unsupported-claim"
     },
@@ -1545,7 +1545,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-01--wrong-locator.json",
       "scenario_id": "source-bound-codex55-uk-01--wrong-locator"
     },
@@ -1553,7 +1553,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-02--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-uk-02--contradictory-claim"
     },
@@ -1561,7 +1561,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-02--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-uk-02--counter-material-omission"
     },
@@ -1569,7 +1569,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-02--missing-output-link.json",
       "scenario_id": "source-bound-codex55-uk-02--missing-output-link"
     },
@@ -1577,7 +1577,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-02--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-uk-02--out-of-manifest-source"
     },
@@ -1585,7 +1585,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-02--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-uk-02--unsupported-claim"
     },
@@ -1593,7 +1593,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-02--wrong-locator.json",
       "scenario_id": "source-bound-codex55-uk-02--wrong-locator"
     },
@@ -1601,7 +1601,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-03--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-uk-03--contradictory-claim"
     },
@@ -1609,7 +1609,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-03--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-uk-03--counter-material-omission"
     },
@@ -1617,7 +1617,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-03--missing-output-link.json",
       "scenario_id": "source-bound-codex55-uk-03--missing-output-link"
     },
@@ -1625,7 +1625,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-03--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-uk-03--out-of-manifest-source"
     },
@@ -1633,7 +1633,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-03--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-uk-03--unsupported-claim"
     },
@@ -1641,7 +1641,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-uk-03--wrong-locator.json",
       "scenario_id": "source-bound-codex55-uk-03--wrong-locator"
     },
@@ -1649,7 +1649,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-01--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-us-01--contradictory-claim"
     },
@@ -1657,7 +1657,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-01--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-us-01--counter-material-omission"
     },
@@ -1665,7 +1665,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-01--missing-output-link.json",
       "scenario_id": "source-bound-codex55-us-01--missing-output-link"
     },
@@ -1673,7 +1673,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-01--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-us-01--out-of-manifest-source"
     },
@@ -1681,7 +1681,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-01--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-us-01--unsupported-claim"
     },
@@ -1689,7 +1689,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-01--wrong-locator.json",
       "scenario_id": "source-bound-codex55-us-01--wrong-locator"
     },
@@ -1697,7 +1697,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-02--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-us-02--contradictory-claim"
     },
@@ -1705,7 +1705,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-02--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-us-02--counter-material-omission"
     },
@@ -1713,7 +1713,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-02--missing-output-link.json",
       "scenario_id": "source-bound-codex55-us-02--missing-output-link"
     },
@@ -1721,7 +1721,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-02--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-us-02--out-of-manifest-source"
     },
@@ -1729,7 +1729,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-02--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-us-02--unsupported-claim"
     },
@@ -1737,7 +1737,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-02--wrong-locator.json",
       "scenario_id": "source-bound-codex55-us-02--wrong-locator"
     },
@@ -1745,7 +1745,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-03--contradictory-claim.json",
       "scenario_id": "source-bound-codex55-us-03--contradictory-claim"
     },
@@ -1753,7 +1753,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-03--counter-material-omission.json",
       "scenario_id": "source-bound-codex55-us-03--counter-material-omission"
     },
@@ -1761,7 +1761,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-03--missing-output-link.json",
       "scenario_id": "source-bound-codex55-us-03--missing-output-link"
     },
@@ -1769,7 +1769,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-03--out-of-manifest-source.json",
       "scenario_id": "source-bound-codex55-us-03--out-of-manifest-source"
     },
@@ -1777,7 +1777,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-03--unsupported-claim.json",
       "scenario_id": "source-bound-codex55-us-03--unsupported-claim"
     },
@@ -1785,7 +1785,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/model_output_adversarial/scenarios/source-bound-codex55-us-03--wrong-locator.json",
       "scenario_id": "source-bound-codex55-us-03--wrong-locator"
     },
@@ -1793,7 +1793,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_gold_sets/scenarios/canada_vavilov_standard_of_review.json",
       "scenario_id": "canada-vavilov-standard-of-review"
     },
@@ -1801,7 +1801,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_gold_sets/scenarios/eu_gdpr_article15_access_rights.json",
       "scenario_id": "eu-gdpr-article15-access-rights"
     },
@@ -1809,7 +1809,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_gold_sets/scenarios/germany_right_to_be_forgotten_review.json",
       "scenario_id": "germany-right-to-be-forgotten-review"
     },
@@ -1817,7 +1817,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_gold_sets/scenarios/uk_mesothelioma_causation_after_fairchild.json",
       "scenario_id": "uk-mesothelioma-causation-after-fairchild"
     },
@@ -1825,7 +1825,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_gold_sets/scenarios/us_agency_deference_after_loper_bright.json",
       "scenario_id": "us-agency-deference-after-loper-bright"
     },
@@ -1833,7 +1833,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-counter-material-suppressed.json",
       "scenario_id": "canada-vavilov-standard-of-review-counter-material-suppressed"
     },
@@ -1841,7 +1841,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-decision-reason-without-adoption.json",
       "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption"
     },
@@ -1849,7 +1849,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-missing-high-authority.json",
       "scenario_id": "canada-vavilov-standard-of-review-missing-high-authority"
     },
@@ -1857,7 +1857,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/canada-vavilov-standard-of-review-unverified-source-tags.json",
       "scenario_id": "canada-vavilov-standard-of-review-unverified-source-tags"
     },
@@ -1865,7 +1865,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-counter-material-suppressed.json",
       "scenario_id": "eu-gdpr-article15-access-rights-counter-material-suppressed"
     },
@@ -1873,7 +1873,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-decision-reason-without-adoption.json",
       "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption"
     },
@@ -1881,7 +1881,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-missing-high-authority.json",
       "scenario_id": "eu-gdpr-article15-access-rights-missing-high-authority"
     },
@@ -1889,7 +1889,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/eu-gdpr-article15-access-rights-unverified-source-tags.json",
       "scenario_id": "eu-gdpr-article15-access-rights-unverified-source-tags"
     },
@@ -1897,7 +1897,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-counter-material-suppressed.json",
       "scenario_id": "germany-right-to-be-forgotten-review-counter-material-suppressed"
     },
@@ -1905,7 +1905,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-decision-reason-without-adoption.json",
       "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption"
     },
@@ -1913,7 +1913,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-missing-high-authority.json",
       "scenario_id": "germany-right-to-be-forgotten-review-missing-high-authority"
     },
@@ -1921,7 +1921,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/germany-right-to-be-forgotten-review-unverified-source-tags.json",
       "scenario_id": "germany-right-to-be-forgotten-review-unverified-source-tags"
     },
@@ -1929,7 +1929,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-counter-material-suppressed.json",
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-counter-material-suppressed"
     },
@@ -1937,7 +1937,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption.json",
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption"
     },
@@ -1945,7 +1945,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-missing-high-authority.json",
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority"
     },
@@ -1953,7 +1953,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/uk-mesothelioma-causation-after-fairchild-unverified-source-tags.json",
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-unverified-source-tags"
     },
@@ -1961,7 +1961,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-counter-material-suppressed.json",
       "scenario_id": "us-agency-deference-after-loper-bright-counter-material-suppressed"
     },
@@ -1969,7 +1969,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-decision-reason-without-adoption.json",
       "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
     },
@@ -1977,7 +1977,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-missing-high-authority.json",
       "scenario_id": "us-agency-deference-after-loper-bright-missing-high-authority"
     },
@@ -1985,7 +1985,7 @@
       "failed_check_count": 0,
       "failed_checks": [],
       "passed": true,
-      "passed_check_count": 22,
+      "passed_check_count": 23,
       "path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-unverified-source-tags.json",
       "scenario_id": "us-agency-deference-after-loper-bright-unverified-source-tags"
     }

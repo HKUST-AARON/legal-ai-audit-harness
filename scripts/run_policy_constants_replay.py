@@ -26,6 +26,7 @@ SCENARIO_DIRS = [
 CHECKS = (
     "scenario_hash",
     "policy",
+    "policy_body",
     "claimed_status",
     "jurisdiction_profile",
     "score_vector",
@@ -106,6 +107,7 @@ def _replay(path: Path, policy: dict, certificate: dict) -> dict:
     checks = {
         "scenario_hash": certificate["scenario_sha256"] == _scenario_hash(scenario),
         "policy": certificate["policy"] == replay["policy"],
+        "policy_body": certificate["policy_body"] == policy,
         "claimed_status": certificate["claimed_status"] == replay["claimed_status"],
         "jurisdiction_profile": certificate["jurisdiction_profile"] == replay["jurisdiction_profile"],
         "score_vector": certificate["score_vector"] == replay["score_vector"],
@@ -423,14 +425,7 @@ def _review_gate_flags(scenario: dict, policy: dict, target_rank: int) -> list[s
         flags.append("jurisdiction_assumption_gap")
     review_required = gate.get("attorney_review_required") is True
     review_incomplete = gate.get("review_status") not in {"completed", "not_required"}
-    protected_reliance = gate.get("reliance_gate") in {
-        "attorney_review",
-        "external_reliance",
-        "filing",
-        "sending",
-        "execution",
-        "authorized_adoption",
-    }
+    protected_reliance = gate.get("reliance_gate") in policy["review_gate"]["protected_reliance_gates"]
     if review_required and review_incomplete and (protected_reliance or target_rank >= policy["status_rank"]["decision_support_reason"]):
         flags.append("review_gate_failure")
     return flags

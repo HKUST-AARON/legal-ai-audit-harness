@@ -118,7 +118,7 @@ def _different_role(role: str) -> str:
 
 
 def _tamper_policy_body(item: dict) -> None:
-    item["policy"]["normative_threshold"] += 1
+    item["policy_body"]["thresholds"]["normative_material_screening_output"] += 1
 
 
 def _tamper_missing_gates(item: dict) -> None:

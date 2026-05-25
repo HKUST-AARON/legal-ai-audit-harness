@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from enum import Enum
+from pathlib import Path
 from typing import Any
 
 
+ROOT = Path(__file__).resolve().parents[1]
+POLICY_BODY = json.loads((ROOT / "policy" / "legal_output_policy.json").read_text(encoding="utf-8"))
 DIMENSIONS = ("S", "Q", "H", "K", "T", "L")
 RANK_SALIENCE_WINDOW = 3
 SOURCE_TAGS = {
@@ -479,14 +483,7 @@ def _review_gate_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:
         flags.append("jurisdiction_assumption_gap")
     review_required = gate.get("attorney_review_required") is True
     review_incomplete = gate.get("review_status") not in {"completed", "not_required"}
-    protected_reliance = gate.get("reliance_gate") in {
-        "attorney_review",
-        "external_reliance",
-        "filing",
-        "sending",
-        "execution",
-        "authorized_adoption",
-    }
+    protected_reliance = gate.get("reliance_gate") in POLICY_BODY["review_gate"]["protected_reliance_gates"]
     if review_required and review_incomplete and (protected_reliance or target_rank >= STATUS_RANK[Status.DECISION_SUPPORT_REASON.value]):
         flags.append("review_gate_failure")
     return flags

@@ -1332,7 +1332,7 @@ def _policy_constants_row(payload: dict) -> dict:
         "mean_upstream_recall": None,
         "high_upstream_but_blocked": None,
         "status_distribution": payload["status_distribution"],
-        "finding": "Recomputes score candidates, role caps, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.",
+        "finding": "Recomputes score candidates, role caps, protected reliance gates, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.",
     }
 
 

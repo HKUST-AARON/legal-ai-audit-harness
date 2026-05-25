@@ -32,6 +32,7 @@ CHECKS = (
     "scenario_hash",
     "policy_hash",
     "policy",
+    "policy_body",
     "claimed_status",
     "jurisdiction_profile",
     "score_vector",
@@ -162,12 +163,14 @@ def _certificate(path: Path) -> dict:
     result = evaluate_scenario(scenario)
     scores = result.scores
     score_candidate = _score_candidate(scenario, scores, result.total_score)
+    policy_body = _policy_body()
     certificate = {
         "scenario_id": scenario["id"],
         "path": str(path.relative_to(ROOT)),
         "scenario_sha256": _scenario_hash(scenario),
         "policy_sha256": _file_hash(POLICY_PATH),
         "policy": asdict(StatusPolicy()),
+        "policy_body": policy_body,
         "claimed_status": result.claimed_status,
         "jurisdiction_profile": scenario.get("jurisdiction_profile", "unspecified"),
         "score_vector": scores,
@@ -208,6 +211,7 @@ def _replay(certificate: dict) -> dict:
         "scenario_hash": certificate["scenario_sha256"] == _scenario_hash(scenario),
         "policy_hash": certificate["policy_sha256"] == _file_hash(POLICY_PATH),
         "policy": certificate["policy"] == asdict(StatusPolicy()),
+        "policy_body": certificate["policy_body"] == _policy_body(),
         "claimed_status": certificate["claimed_status"] == result.claimed_status,
         "jurisdiction_profile": certificate["jurisdiction_profile"] == scenario.get("jurisdiction_profile", "unspecified"),
         "score_vector": certificate["score_vector"] == result.scores,
@@ -307,6 +311,7 @@ def _proof_obligations(certificate: dict) -> list[dict]:
     obligations = {
         "scenario_hash_bound": len(certificate["scenario_sha256"]) == 64,
         "policy_hash_bound": len(certificate["policy_sha256"]) == 64,
+        "policy_body_bound": certificate["policy_body"] == _policy_body(),
         "score_vector_complete": set(score_vector) == set(DIMENSIONS) and all(value in (0, 1, 2) for value in score_vector.values()),
         "total_score_recomputable": certificate["total_score"] == sum(score_vector.values()),
         "score_candidate_ranked": score_candidate in rank,
@@ -338,6 +343,10 @@ def _scenario_hash(scenario: dict) -> str:
 
 def _file_hash(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _policy_body() -> dict:
+    return json.loads(POLICY_PATH.read_text(encoding="utf-8"))
 
 
 def _certificate_hash(certificate: dict) -> str:

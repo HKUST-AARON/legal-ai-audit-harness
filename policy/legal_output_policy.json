@@ -27,6 +27,9 @@
     "professional_reliance_role": "disclosed_assistance_tool",
     "default_role": "back_office_tool"
   },
+  "review_gate": {
+    "protected_reliance_gates": ["attorney_review", "external_reliance", "filing", "sending", "execution", "authorized_adoption"]
+  },
   "source_tags": [
     "tool_verified",
     "official_source",
