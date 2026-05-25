@@ -1,8 +1,8 @@
 {
-  "check_count": 677,
+  "check_count": 700,
   "checks": [
     {
-      "expected": "- 33 validation suites",
+      "expected": "- 34 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,12 +17,22 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 150,658 total evaluation rows",
+      "expected": "- 3,651,560 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
       "expected": "- 51,643/51,643 formal invariant checks passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 851/851 status-lattice high-status necessity checks and 851/851 gate-ablation drops passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -147,6 +157,11 @@
       "path": "README.md"
     },
     {
+      "expected": "233,280 high-status claim-attempt states, 1,632,960 status-lattice cover edges, 1,632,960 status-lattice substitute-rule predictions",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 336 gate-contrast witness pairs, 1,674 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,658 status-certificate replay checks, 4,182 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,428 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
@@ -163,6 +178,11 @@
     },
     {
       "expected": "| Metric separation analysis | 201 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Status-lattice exhaustion | 3500902 |",
       "passed": true,
       "path": "README.md"
     },
@@ -297,6 +317,11 @@
       "path": "README.md"
     },
     {
+      "expected": "python scripts/run_status_lattice_analysis.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "python scripts/run_repair_frontier_analysis.py",
       "passed": true,
       "path": "README.md"
@@ -348,6 +373,11 @@
     },
     {
       "expected": "Qualified-output gate ablations",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "Status-lattice exhaustion",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -447,6 +477,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "status-lattice layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "gate-contrast witness layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -528,6 +563,21 @@
     },
     {
       "expected": "336/336 gate-ablation evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "233,280 high-status claim-attempt states, 1,632,960 status-lattice cover edges, 1,632,960 status-lattice substitute-rule predictions",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "851/851 status-lattice high-status necessity checks",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "851/851 status-lattice gate-ablation drops",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -622,7 +672,17 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "status-lattice file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "baseline-comparison file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_status_lattice_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -737,7 +797,47 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "150,658 total evaluation rows",
+      "expected": "3,651,560 validation operations",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "finite-state characterization of high-status claim attempts",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "233,280 claim-attempt states",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "1,632,960 cover edges",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "1,632,960 substitute-rule predictions",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "851/851 high-status necessity checks",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "851/851 gate-ablation drops",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "best partial substitute still admitted 672 false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "full screening predicate admitted 0 false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -907,6 +1007,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Status-lattice exhaustion & 233,280 claim-attempt states / 1,632,960 edges & 851/851; 851/851",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Qualified-output gate ablations & 336 ablations & 336/336",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1037,12 +1142,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 33",
+      "expected": "Validation suites: 34",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
       "expected": "Scenario files: 246",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Status-lattice exhaustion: 233280 high-status claim-attempt states, 1632960 cover edges, 851/851 necessity checks and 851/851 gate-ablation drops",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Status-lattice exhaustion | finite status-lattice characterization | 233280 high-status claim-attempt states, 1632960 cover edges and 1632960 substitute-rule predictions | 3500902 | 851/851 necessity; 851/851 ablations",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1207,7 +1322,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 213)",
+      "expected": "abstract word count 150-250 (actual 192)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -3389,5 +3504,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 677
+  "passed_count": 700
 }

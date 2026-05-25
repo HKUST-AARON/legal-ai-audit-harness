@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 33
+Validation suites: 34
 Scenario files: 246
 Base embedded records/items: 679 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 492
@@ -13,6 +13,7 @@ Contestation challenge variants: 270/270 passed; valid challenges blocked 216/21
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
 Formal invariant checks: 51643/51643 passed
+Status-lattice exhaustion: 233280 high-status claim-attempt states, 1632960 cover edges, 851/851 necessity checks and 851/851 gate-ablation drops
 Metric separation evaluations: 201 upstream-metric scenario packets; high-recall blocked outputs 144/197
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Baseline rule comparisons: 2772 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0
@@ -28,7 +29,7 @@ Policy-constants replay checks: 4428/4428 passed over 246 packets
 Metamorphic policy tests: 1134/1134 passed over 246 packets
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 149979
+Derived robustness evaluations: 3650881
 Scenario-regression expectations passed: 246/246
 High-upstream-performance but procedurally blocked scenarios: 2028
 Blocked reason distribution: authority_omission: 869, contestation_failure: 55, counter_material_suppression: 945, invalid_authority: 1, jurisdiction_assumption_gap: 54, ranking_drift: 9, source_attribution_gap: 1023, summary_distortion: 1317, unauthorized_action: 10
@@ -55,6 +56,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
+| Status-lattice exhaustion | finite status-lattice characterization | 233280 high-status claim-attempt states, 1632960 cover edges and 1632960 substitute-rule predictions | 3500902 | 851/851 necessity; 851/851 ablations | n/a | n/a | n/a | best_partial_rule_false_positive: 672, decision_status_states: 11, full_predicate_false_positive: 0, high_status_states: 168 |
 | Metric separation analysis | retrieval/status non-equivalence check | 201 upstream-metric scenario packets | 201 | recall-threshold precision 0.27; reference gate FP 0 | n/a | n/a | n/a | high_recall_blocked_rate: 0.73, recall_point_biserial: 0.06, reference_gate_false_positive: 0 |
 | Baseline rule comparison | alternative-policy comparison | 2772 baseline predictions over 12 rules | 2772 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.59, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 336 ablations over 54 qualified packets | 336 | 336/336 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
@@ -91,6 +93,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Public source-text anchors:** Checks issue-manifest support terms against extracted public source text snapshots to reduce manifest-only source-support circularity.
 - **Model-output transcript anchors:** Checks that raw model-output scenario locators are anchored in the committed transcript sections.
 - **Formal invariant verification:** Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.
+- **Status-lattice exhaustion:** Exhausts the high-status claim-attempt lattice and shows that score, role, source and authority substitutes over-admit unless the full screening predicate is present.
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
 - **Baseline rule comparison:** Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.

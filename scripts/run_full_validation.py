@@ -153,6 +153,7 @@ def main() -> int:
     _run([sys.executable, "scripts/verify_model_output_transcripts.py"])
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
     _run([sys.executable, "scripts/verify_formal_invariants.py"])
+    _run([sys.executable, "scripts/run_status_lattice_analysis.py"])
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
     _run([sys.executable, "scripts/run_baseline_comparison_analysis.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
@@ -244,6 +245,12 @@ def main() -> int:
         )
     )
     rows.append(_formal_invariant_row(invariant_payload))
+    status_lattice_payload = json.loads(
+        (ROOT / "experiments" / "status_lattice" / "results" / "status_lattice_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_status_lattice_row(status_lattice_payload))
     metric_separation_payload = json.loads(
         (ROOT / "experiments" / "metric_separation" / "results" / "metric_separation_analysis.json").read_text(
             encoding="utf-8"
@@ -403,6 +410,12 @@ def main() -> int:
             "model_output_transcript_locators_verified": transcript_payload["locators_verified"],
             "formal_invariant_checks": invariant_payload["total_checks"],
             "formal_invariant_passed": invariant_payload["passed_checks"],
+            "status_lattice_states": status_lattice_payload["state_count"],
+            "status_lattice_cover_edges": status_lattice_payload["cover_edge_diagnostics"]["checks"],
+            "status_lattice_necessity_checks": status_lattice_payload["necessity"]["checks"],
+            "status_lattice_gate_ablation_checks": status_lattice_payload["gate_ablation"]["checks"],
+            "status_lattice_substitution_predictions": status_lattice_payload["state_count"]
+            * len(status_lattice_payload["substitution_rules"]),
             "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
             "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
             + metric_separation_payload["permutation"]["iterations"],
@@ -445,6 +458,12 @@ def main() -> int:
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
         "model_output_transcript_evaluations": transcript_payload["locator_count"],
         "formal_invariant_evaluations": invariant_payload["total_checks"],
+        "status_lattice_evaluations": status_lattice_payload["state_count"],
+        "status_lattice_cover_edges": status_lattice_payload["cover_edge_diagnostics"]["checks"],
+        "status_lattice_necessity_checks": status_lattice_payload["necessity"]["checks"],
+        "status_lattice_gate_ablation_checks": status_lattice_payload["gate_ablation"]["checks"],
+        "status_lattice_substitution_predictions": status_lattice_payload["state_count"]
+        * len(status_lattice_payload["substitution_rules"]),
         "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
         "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"],
@@ -470,6 +489,11 @@ def main() -> int:
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
         + invariant_payload["total_checks"]
+        + status_lattice_payload["state_count"]
+        + status_lattice_payload["cover_edge_diagnostics"]["checks"]
+        + status_lattice_payload["necessity"]["checks"]
+        + status_lattice_payload["gate_ablation"]["checks"]
+        + status_lattice_payload["state_count"] * len(status_lattice_payload["substitution_rules"])
         + metric_separation_payload["metric_scenario_count"]
         + metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"]
@@ -586,6 +610,19 @@ def main() -> int:
             "total_checks": invariant_payload["total_checks"],
             "passed_checks": invariant_payload["passed_checks"],
             "all_passed": invariant_payload["all_passed"],
+        },
+        "status_lattice": {
+            "state_count": status_lattice_payload["state_count"],
+            "score_vector_count": status_lattice_payload["score_vector_count"],
+            "role_count": status_lattice_payload["role_count"],
+            "gate_count": status_lattice_payload["gate_count"],
+            "high_status_count": status_lattice_payload["high_status_count"],
+            "decision_status_count": status_lattice_payload["decision_status_count"],
+            "cover_edge_diagnostics": status_lattice_payload["cover_edge_diagnostics"],
+            "necessity": status_lattice_payload["necessity"],
+            "gate_ablation": status_lattice_payload["gate_ablation"],
+            "substitution_rules": status_lattice_payload["substitution_rules"],
+            "substitution_checks": status_lattice_payload["substitution_checks"],
         },
         "metric_separation": {
             "metric_scenario_count": metric_separation_payload["metric_scenario_count"],
@@ -1068,6 +1105,33 @@ def _formal_invariant_row(payload: dict) -> dict:
     }
 
 
+def _status_lattice_row(payload: dict) -> dict:
+    best_partial = next(row for row in payload["substitution_rules"] if row["rule"] == "source_authority_counter_score")
+    full_rule = next(row for row in payload["substitution_rules"] if row["rule"] == "full_screening_predicate")
+    return {
+        "id": "status_lattice",
+        "label": "Status-lattice exhaustion",
+        "evidence_class": "finite status-lattice characterization",
+        "validation_units": f"{payload['state_count']} high-status claim-attempt states, {payload['cover_edge_diagnostics']['checks']} cover edges and {payload['state_count'] * len(payload['substitution_rules'])} substitute-rule predictions",
+        "scenario_count": payload["state_count"]
+        + payload["cover_edge_diagnostics"]["checks"]
+        + payload["necessity"]["checks"]
+        + payload["gate_ablation"]["checks"]
+        + payload["state_count"] * len(payload["substitution_rules"]),
+        "rule_pass": f"{payload['necessity']['passed']}/{payload['necessity']['checks']} necessity; {payload['gate_ablation']['passed']}/{payload['gate_ablation']['checks']} ablations",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "high_status_states": payload["high_status_count"],
+            "decision_status_states": payload["decision_status_count"],
+            "best_partial_rule_false_positive": best_partial["false_positive"],
+            "full_predicate_false_positive": full_rule["false_positive"],
+        },
+        "finding": "Exhausts the high-status claim-attempt lattice and shows that score, role, source and authority substitutes over-admit unless the full screening predicate is present.",
+    }
+
+
 def _metric_separation_row(payload: dict) -> dict:
     recall_test = next(row for row in payload["threshold_tests"] if row["label"] == "recall>=0.8")
     final_gate = payload["gate_cascade"][-1]
@@ -1365,6 +1429,7 @@ def _format_report(payload: dict) -> str:
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
+        f"Status-lattice exhaustion: {payload['status_lattice']['state_count']} high-status claim-attempt states, {payload['status_lattice']['cover_edge_diagnostics']['checks']} cover edges, {payload['status_lattice']['necessity']['passed']}/{payload['status_lattice']['necessity']['checks']} necessity checks and {payload['status_lattice']['gate_ablation']['passed']}/{payload['status_lattice']['gate_ablation']['checks']} gate-ablation drops",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
         f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; reference rule false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
