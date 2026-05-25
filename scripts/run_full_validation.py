@@ -252,6 +252,13 @@ def main() -> int:
         )
     )
     rows.append(_robustness_row(robustness_payload))
+    _run([sys.executable, "scripts/run_annotation_uncertainty_analysis.py"])
+    uncertainty_payload = json.loads(
+        (ROOT / "experiments" / "annotation_uncertainty" / "results" / "annotation_uncertainty.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_uncertainty_row(uncertainty_payload))
     blind_coding_payload = None
     blind_annotation_files = sorted((ROOT / "experiments" / "blind_coding" / "annotations").glob("coder_*.json"))
     if len(blind_annotation_files) >= 2:
@@ -271,6 +278,7 @@ def main() -> int:
     validation_units_payload.update(
         {
             "annotation_recodings": robustness_payload["recoded_evaluations"],
+            "annotation_uncertainty_evaluations": uncertainty_payload["evaluation_count"],
             "blind_coding_packets": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"],
             "threshold_sensitivity_evaluations": threshold_evaluations,
             "source_text_anchor_checks": source_text_payload["support_item_count"],
@@ -297,6 +305,7 @@ def main() -> int:
         "suite_count": len(rows),
         "scenario_files": sum(row["scenario_count"] for row in rows if "expected_passed" in row),
         "recoded_evaluations": robustness_payload["recoded_evaluations"],
+        "annotation_uncertainty_evaluations": uncertainty_payload["evaluation_count"],
         "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
         "threshold_sensitivity_evaluations": threshold_evaluations,
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
@@ -328,6 +337,7 @@ def main() -> int:
         + ranking_visibility_payload["rank_order_counterfactual_count"]
         + status_certificate_payload["replay_check_count"]
         + robustness_payload["recoded_evaluations"]
+        + uncertainty_payload["evaluation_count"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + threshold_evaluations,
         "validation_units": validation_units_payload,
@@ -344,6 +354,17 @@ def main() -> int:
             "scenario_count": robustness_payload["scenario_count"],
             "weighted_status_agreement_base_strict": robustness_payload["weighted_status_agreement_base_strict"],
             "weighted_status_agreement_base_lenient": robustness_payload["weighted_status_agreement_base_lenient"],
+        },
+        "annotation_uncertainty": {
+            "scenario_count": uncertainty_payload["scenario_count"],
+            "evaluation_count": uncertainty_payload["evaluation_count"],
+            "status_stability_rate": uncertainty_payload["status_stability_rate"],
+            "scenario_exact_stability_count": uncertainty_payload["scenario_exact_stability_count"],
+            "scenario_high_stability_count": uncertainty_payload["scenario_high_stability_count"],
+            "qualified_status_stability_rate": uncertainty_payload["qualified_status_stability_rate"],
+            "qualified_high_status_stability_rate": uncertainty_payload["qualified_high_status_stability_rate"],
+            "mean_status_rank_shift": uncertainty_payload["mean_status_rank_shift"],
+            "boundary_scenario_count": len(uncertainty_payload["boundary_scenarios"]),
         },
         "blind_coding": None
         if blind_coding_payload is None
@@ -582,6 +603,27 @@ def _robustness_row(payload: dict) -> dict:
     }
 
 
+def _uncertainty_row(payload: dict) -> dict:
+    return {
+        "id": "annotation_uncertainty",
+        "label": "Annotation uncertainty Monte Carlo",
+        "evidence_class": "score-noise robustness",
+        "validation_units": f"{payload['evaluation_count']} score-perturbed evaluations",
+        "scenario_count": payload["evaluation_count"],
+        "rule_pass": f"{payload['status_stability_rate']:.3f} sample stability; {payload['qualified_high_status_stability_rate']:.3f} qualified high-status stability",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "exact_stable_scenarios": payload["scenario_exact_stability_count"],
+            "high_status_stable_scenarios": payload["scenario_high_stability_count"],
+            "boundary_scenarios": len(payload["boundary_scenarios"]),
+            "mean_status_rank_shift": round(payload["mean_status_rank_shift"], 3),
+        },
+        "finding": "Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.",
+    }
+
+
 def _blind_coding_row(payload: dict) -> dict:
     first_pair = payload["pairwise_status"][0]
     base_exact = min(item["exact_status_agreement"] for item in payload["base_status_agreement"].values())
@@ -801,6 +843,7 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['issue_gold_sets']} mixed-authority source-screening packets, "
         f"{payload['validation_units']['issue_ablations']} issue ablations)",
         f"Strict/lenient recoded evaluations: {payload['recoded_evaluations']}",
+        f"Annotation-uncertainty perturbations: {payload['annotation_uncertainty_evaluations']}",
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
@@ -818,6 +861,7 @@ def _format_report(payload: dict) -> str:
         f"High-upstream-performance but procedurally blocked scenarios: {payload['high_upstream_but_blocked']}",
         "Blocked reason distribution: " + _format_distribution(payload["blocked_reason_distribution"]),
         f"Annotation robustness: {payload['annotation_robustness']['all_policy_status_stable']}/{payload['annotation_robustness']['scenario_count']} stable across base, strict and lenient coding policies",
+        f"Annotation uncertainty: {payload['annotation_uncertainty']['evaluation_count']} score perturbations; sample stability {payload['annotation_uncertainty']['status_stability_rate']:.3f}; qualified high-status stability {payload['annotation_uncertainty']['qualified_high_status_stability_rate']:.3f}; boundary scenarios {payload['annotation_uncertainty']['boundary_scenario_count']}",
         _blind_coding_summary(payload),
         "",
         "| Suite | Evidence role | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |",

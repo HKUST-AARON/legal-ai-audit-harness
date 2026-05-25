@@ -398,6 +398,27 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["passed_check_count"], 2990)
         self.assertFalse(payload["failures"])
 
+    def test_annotation_uncertainty_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_annotation_uncertainty_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Annotation Uncertainty Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "annotation_uncertainty" / "results" / "annotation_uncertainty.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["scenario_count"], 230)
+        self.assertEqual(payload["iterations_per_scenario"], 250)
+        self.assertEqual(payload["evaluation_count"], 57500)
+        self.assertGreater(payload["status_stability_rate"], 0.9)
+        self.assertGreater(payload["qualified_high_status_stability_rate"], 0.9)
+
     def test_claim_consistency_verification_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/verify_claim_consistency.py"],
@@ -706,7 +727,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 22)
+        self.assertEqual(report["suite_count"], 23)
         self.assertEqual(report["scenario_files"], 230)
         self.assertEqual(report["validation_units"]["total"], 609)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 225)
@@ -717,6 +738,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["issue_gold_sets"], 5)
         self.assertEqual(report["validation_units"]["issue_ablations"], 20)
         self.assertEqual(report["validation_units"]["annotation_recodings"], 460)
+        self.assertEqual(report["annotation_uncertainty_evaluations"], 57500)
+        self.assertEqual(report["validation_units"]["annotation_uncertainty_evaluations"], 57500)
         self.assertEqual(report["blind_coding_evaluations"], 460)
         self.assertEqual(report["validation_units"]["blind_coding_packets"], 230)
         self.assertEqual(report["threshold_sensitivity_evaluations"], 1150)
@@ -749,10 +772,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate_replay_checks"], 2990)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 2990)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 230)
-        self.assertEqual(report["total_evaluation_rows"], 65528)
+        self.assertEqual(report["total_evaluation_rows"], 123028)
         self.assertEqual(report["expected_passed"], 230)
         self.assertEqual(report["expected_total"], 230)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 230)
+        self.assertEqual(report["annotation_uncertainty"]["scenario_count"], 230)
+        self.assertEqual(report["annotation_uncertainty"]["evaluation_count"], 57500)
+        self.assertGreater(report["annotation_uncertainty"]["status_stability_rate"], 0.9)
+        self.assertGreater(report["annotation_uncertainty"]["qualified_high_status_stability_rate"], 0.9)
         self.assertEqual(report["blind_coding"]["packet_count"], 230)
         self.assertIn("base_status_agreement", report["blind_coding"])
         self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 230)

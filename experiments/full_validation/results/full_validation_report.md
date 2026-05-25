@@ -1,9 +1,10 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 22
+Validation suites: 23
 Scenario files: 230
 Base embedded records/items: 609 (10 stress scenarios, 120 public metadata records, 60 public-system records, 225 public retrieval records, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 460
+Annotation-uncertainty perturbations: 57500
 Score-blinded coding-pass evaluations: 460
 Full-threshold sensitivity evaluations: 1150
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
@@ -16,11 +17,12 @@ Repair frontier evaluations: 176/176 blocked claims repairable across 4418 count
 Jurisdiction-profile evaluations: 217/217 profile checks supported; 138/138 counterfactual mutations passed
 Ranking-visibility checks: 820 rank-window checks over 214 high-status claims; 70/70 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 167/201; drifted top-3 counter visible 0/70; median first counter rank 3.0
 Status certificate replay checks: 2990/2990 passed over 230 certificates
-Derived robustness evaluations: 64919
+Derived robustness evaluations: 122419
 Scenario-regression expectations passed: 230/230
 High-upstream-performance but procedurally blocked scenarios: 128
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 97, summary_distortion: 21, unauthorized_action: 10
 Annotation robustness: 218/230 stable across base, strict and lenient coding policies
+Annotation uncertainty: 57500 score perturbations; sample stability 0.936; qualified high-status stability 0.928; boundary scenarios 127
 Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement
 
 | Suite | Evidence role | Embedded records/items | Files/evals | Rule/stability | Mean score | Mean recall | Blocked high-upstream | Status distribution |
@@ -46,6 +48,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Ranking-visibility diagnostics | rank-salience counterfactual check | 820 rank-window checks over 214 high-status claims plus 70 rank-order counterfactuals | 890 | 70/70 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 70, downgraded: 70, front_window_counter_not_visible: 34, front_window_counter_visible: 167, mean_reciprocal_first_counter_rank: 0.43, median_first_counter_rank: 3.0, rank_intervention_applied: 70 |
 | Status certificate replay | derivation-certificate check | 2990 replay checks over 230 certificates | 2990 | 2990/2990 | n/a | n/a | n/a | cap_or_failure_transitions: 150, verified_certificates: 230 |
 | Annotation robustness recoding | coding robustness | 460 strict/lenient recoded evaluations | 230 | 218/230 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 0.98, base_vs_strict_weighted_agreement: 1.0 |
+| Annotation uncertainty Monte Carlo | score-noise robustness | 57500 score-perturbed evaluations | 57500 | 0.936 sample stability; 0.928 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 127, exact_stable_scenarios: 101, high_status_stable_scenarios: 175, mean_status_rank_shift: 0.082 |
 | Score-blinded dual coding | codebook reproducibility | 230 packets x 2 coding passes | 230 | 0.99 coder agreement; 0.95 min base agreement | n/a | n/a | n/a | coder_weighted_status_agreement: 0.99, min_base_weighted_status_agreement: 0.97, status_disagreements: 2 |
 
 ## Findings
@@ -71,6 +74,7 @@ Score-blinded coding: 230 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Ranking-visibility diagnostics:** Computes a rank-window visibility curve for counter-material salience and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.
 - **Status certificate replay:** Generates and replays machine-readable status certificates for every scenario so status allocation can be audited from scenario hash, score candidate, role cap, failure cap and final status.
 - **Annotation robustness recoding:** Tests whether status allocation survives strict and lenient recoding of the same evidence packets.
+- **Annotation uncertainty Monte Carlo:** Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.
 - **Score-blinded dual coding:** Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.
 
 ## Full-Threshold Sensitivity

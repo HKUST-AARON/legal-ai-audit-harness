@@ -23,10 +23,10 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 22 validation suites
+- 23 validation suites
 - 230 scenario files
 - 609 embedded records or output items
-- 65,528 total evaluation rows
+- 123,028 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 185 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
@@ -36,6 +36,7 @@ Expected aggregate output:
 - 820 rank-window visibility checks over 214 high-status claims
 - 70/70 rank-order visibility counterfactuals downgraded with coverage preserved
 - 2,990/2,990 status-certificate replay checks passed over 230 certificates
+- 57,500 annotation-uncertainty perturbations with 0.936 sample stability
 - 230/230 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
 - 50/50 raw model-output transcript locators verified
@@ -65,4 +66,4 @@ The expected manuscript build is 34 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status, not legal merits. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, repair-frontier, jurisdiction-profile, ranking-visibility, status-certificate, recoding and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks and coding uncertainty.
+The artifact evaluates legal-output procedural status, not legal merits. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, repair-frontier, jurisdiction-profile, ranking-visibility, status-certificate, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks and coding uncertainty.

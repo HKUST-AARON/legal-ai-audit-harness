@@ -1,8 +1,8 @@
 {
-  "check_count": 145,
+  "check_count": 160,
   "checks": [
     {
-      "expected": "- 22 validation suites",
+      "expected": "- 23 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 65,528 total evaluation rows",
+      "expected": "- 123,028 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -67,6 +67,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "- 57,500 annotation-uncertainty perturbations with 0.936 sample stability",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "- 230/230 scenario-regression expectations passed",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -102,6 +107,11 @@
       "path": "README.md"
     },
     {
+      "expected": "57,500 score-uncertainty perturbations",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "| Metric separation analysis | 185 |",
       "passed": true,
       "path": "README.md"
@@ -133,6 +143,11 @@
     },
     {
       "expected": "| Status certificate replay | 2990 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Annotation uncertainty Monte Carlo | 57500 |",
       "passed": true,
       "path": "README.md"
     },
@@ -192,6 +207,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Annotation uncertainty Monte Carlo",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "bootstrap/permutation robustness",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -218,6 +238,11 @@
     },
     {
       "expected": "status-certificate layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "annotation-uncertainty layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -257,6 +282,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "57,500 annotation-uncertainty perturbations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_gate_ablation_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -287,12 +317,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "51,643 formal invariant checks, 185 metric-separation evaluations, 2,000 metric resamples",
+      "expected": "2,000 metric bootstrap/permutation resamples",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "2,000 metric bootstrap/permutation resamples",
+      "expected": "57,500 annotation-uncertainty perturbations",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "0.936 sample-level status stability",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "high-status stability was 0.928",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -382,7 +422,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 22",
+      "expected": "Annotation uncertainty & 57,500 perturbations & 0.936 sample stability; 0.928 qualified high-status stability",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Validation suites: 23",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -422,6 +467,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Annotation uncertainty: 57500 score perturbations; sample stability 0.936; qualified high-status stability 0.928; boundary scenarios 127",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Metric separation evaluations: 185 upstream-metric scenario packets; high-recall blocked outputs 136/181",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -442,6 +492,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `65,528`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `2,236`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -502,6 +557,11 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `65,528`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `2,236`",
       "passed": true,
       "path": "README.md"
@@ -558,6 +618,11 @@
     },
     {
       "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `65,528`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -618,6 +683,11 @@
     },
     {
       "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `65,528`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -678,6 +748,11 @@
     },
     {
       "expected": "absence of stale claim `64,996`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `65,528`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -729,5 +804,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 145
+  "passed_count": 160
 }

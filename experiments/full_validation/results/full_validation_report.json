@@ -5,6 +5,18 @@
     "weighted_status_agreement_base_lenient": 0.9815246204514418,
     "weighted_status_agreement_base_strict": 0.9961178158494388
   },
+  "annotation_uncertainty": {
+    "boundary_scenario_count": 127,
+    "evaluation_count": 57500,
+    "mean_status_rank_shift": 0.0816,
+    "qualified_high_status_stability_rate": 0.9278260869565218,
+    "qualified_status_stability_rate": 0.8759130434782609,
+    "scenario_count": 230,
+    "scenario_exact_stability_count": 101,
+    "scenario_high_stability_count": 175,
+    "status_stability_rate": 0.9355130434782609
+  },
+  "annotation_uncertainty_evaluations": 57500,
   "blind_coding": {
     "base_status_agreement": {
       "coder_a": {
@@ -354,7 +366,7 @@
     "verified_certificate_count": 230
   },
   "status_certificate_replay_checks": 2990,
-  "suite_count": 22,
+  "suite_count": 23,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -754,6 +766,24 @@
       "validation_units": "460 strict/lenient recoded evaluations"
     },
     {
+      "evidence_class": "score-noise robustness",
+      "finding": "Perturbs all six audit scores under a fixed-seed Monte Carlo model to locate boundary cases and test whether status allocation is robust to plausible coding noise.",
+      "high_upstream_but_blocked": null,
+      "id": "annotation_uncertainty",
+      "label": "Annotation uncertainty Monte Carlo",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "0.936 sample stability; 0.928 qualified high-status stability",
+      "scenario_count": 57500,
+      "status_distribution": {
+        "boundary_scenarios": 127,
+        "exact_stable_scenarios": 101,
+        "high_status_stable_scenarios": 175,
+        "mean_status_rank_shift": 0.082
+      },
+      "validation_units": "57500 score-perturbed evaluations"
+    },
+    {
       "evidence_class": "codebook reproducibility",
       "finding": "Tests whether score-blinded coders agree with each other and how far their status assignments track the base harness allocation.",
       "high_upstream_but_blocked": null,
@@ -850,10 +880,11 @@
     "scenario_count": 230
   },
   "threshold_sensitivity_evaluations": 1150,
-  "total_evaluation_rows": 65528,
+  "total_evaluation_rows": 123028,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 460,
+    "annotation_uncertainty_evaluations": 57500,
     "blind_coding_packets": 230,
     "evidence_ladder_model_outputs": 70,
     "formal_invariant_checks": 51643,
