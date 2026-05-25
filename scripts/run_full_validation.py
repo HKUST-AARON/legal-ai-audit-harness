@@ -148,6 +148,7 @@ def main() -> int:
     _run([sys.executable, "scripts/build_model_output_adversarial.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_source_chain_attacks.py"])
+    _run([sys.executable, "scripts/build_contestation_challenges.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
     _run([sys.executable, "scripts/verify_model_output_transcripts.py"])
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
@@ -196,6 +197,29 @@ def main() -> int:
         )
     )
     rows.append(_source_chain_attack_row(source_chain_attack_payload))
+    _run(
+        [
+            sys.executable,
+            "-m",
+            "audit_harness.cli",
+            "experiment",
+            "experiments/contestation_challenges/scenarios",
+            "--out",
+            "experiments/contestation_challenges/results/contestation_challenge_experiment.md",
+            "--json-out",
+            "experiments/contestation_challenges/results/contestation_challenge_experiment.json",
+        ]
+    )
+    contestation_challenge_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "contestation_challenges"
+            / "results"
+            / "contestation_challenge_experiment.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_contestation_challenge_row(contestation_challenge_payload))
     source_text_payload = json.loads(
         (ROOT / "experiments" / "source_text_verification" / "results" / "source_text_anchor_verification.json").read_text(
             encoding="utf-8"
@@ -321,6 +345,8 @@ def main() -> int:
             "threshold_sensitivity_evaluations": threshold_evaluations,
             "source_chain_attack_variants": source_chain_attack_payload["summary"]["scenario_count"],
             "source_chain_attack_passed": source_chain_attack_payload["summary"]["expected_passed"],
+            "contestation_challenge_variants": contestation_challenge_payload["summary"]["scenario_count"],
+            "contestation_challenge_passed": contestation_challenge_payload["summary"]["expected_passed"],
             "source_text_anchor_checks": source_text_payload["support_item_count"],
             "source_text_anchor_verified": source_text_payload["support_items_verified"],
             "model_output_transcript_locator_checks": transcript_payload["locator_count"],
@@ -350,6 +376,7 @@ def main() -> int:
         "blind_coding_evaluations": 0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"],
         "threshold_sensitivity_evaluations": threshold_evaluations,
         "source_chain_attack_evaluations": source_chain_attack_payload["summary"]["scenario_count"],
+        "contestation_challenge_evaluations": contestation_challenge_payload["summary"]["scenario_count"],
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
         "model_output_transcript_evaluations": transcript_payload["locator_count"],
         "formal_invariant_evaluations": invariant_payload["total_checks"],
@@ -384,6 +411,7 @@ def main() -> int:
         + uncertainty_payload["evaluation_count"]
         + (0 if blind_coding_payload is None else blind_coding_payload["packet_count"] * blind_coding_payload["coder_count"])
         + source_chain_attack_payload["summary"]["scenario_count"]
+        + contestation_challenge_payload["summary"]["scenario_count"]
         + threshold_evaluations,
         "source_chain_attacks": {
             "scenario_count": source_chain_attack_payload["summary"]["scenario_count"],
@@ -391,6 +419,17 @@ def main() -> int:
             "high_upstream_but_blocked": source_chain_attack_payload["summary"]["high_upstream_but_blocked"],
             "blocked_reason_distribution": source_chain_attack_payload["summary"]["blocked_reason_distribution"],
             "status_distribution": _status_distribution(source_chain_attack_payload["results"]),
+        },
+        "contestation_challenges": {
+            "scenario_count": contestation_challenge_payload["summary"]["scenario_count"],
+            "expected_passed": contestation_challenge_payload["summary"]["expected_passed"],
+            "high_upstream_but_blocked": contestation_challenge_payload["summary"]["high_upstream_but_blocked"],
+            "blocked_reason_distribution": contestation_challenge_payload["summary"]["blocked_reason_distribution"],
+            "status_distribution": _status_distribution(contestation_challenge_payload["results"]),
+            "valid_challenges_blocked": _contestation_valid_blocked(contestation_challenge_payload["results"]),
+            "unsupported_controls_preserved": _contestation_unsupported_preserved(
+                contestation_challenge_payload["results"]
+            ),
         },
         "validation_units": validation_units_payload,
         "expected_passed": sum(row["expected_passed"] for row in rows if "expected_passed" in row),
@@ -647,12 +686,48 @@ def _source_chain_attack_row(payload: dict) -> dict:
     }
 
 
+def _contestation_challenge_row(payload: dict) -> dict:
+    summary = payload["summary"]
+    return {
+        "id": "contestation_challenges",
+        "label": "Dynamic contestation challenges",
+        "evidence_class": "whole-matrix challenge-response validation",
+        "validation_units": f"{summary['scenario_count']} challenge variants over qualified packets",
+        "scenario_count": summary["scenario_count"],
+        "rule_pass": f"{summary['expected_passed']}/{summary['scenario_count']}",
+        "mean_audit_score": summary["mean_audit_score"],
+        "mean_upstream_recall": summary["mean_upstream_recall"],
+        "high_upstream_but_blocked": summary["high_upstream_but_blocked"],
+        "blocked_reason_distribution": summary["blocked_reason_distribution"],
+        "status_distribution": _status_distribution(payload["results"]),
+        "finding": "Applies valid counter-material, source-verification, jurisdiction and contestability-channel challenges plus unsupported challenge controls across every qualified packet; valid challenges must block high status while unsupported challenges preserve it.",
+    }
+
+
 def _status_distribution(results: list[dict]) -> dict[str, int]:
     distribution: dict[str, int] = {}
     for result in results:
         status = result["allowed_status"]
         distribution[status] = distribution.get(status, 0) + 1
     return distribution
+
+
+def _contestation_valid_blocked(results: list[dict]) -> int:
+    return sum(
+        1
+        for result in results
+        if "unsupported-challenge-control" not in result["scenario_id"]
+        and STATUS_RANK[result["allowed_status"]] < STATUS_RANK["normative_material_screening_output"]
+    )
+
+
+def _contestation_unsupported_preserved(results: list[dict]) -> int:
+    return sum(
+        1
+        for result in results
+        if "unsupported-challenge-control" in result["scenario_id"]
+        and STATUS_RANK[result["allowed_status"]] >= STATUS_RANK["normative_material_screening_output"]
+    )
 
 
 def _suite_validation_units(suite: dict) -> str:
@@ -965,6 +1040,7 @@ def _format_report(payload: dict) -> str:
         f"Score-blinded coding-pass evaluations: {payload['blind_coding_evaluations']}",
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Source-chain attack variants: {payload['source_chain_attacks']['expected_passed']}/{payload['source_chain_attacks']['scenario_count']} passed; high-upstream attacked variants blocked {payload['source_chain_attacks']['high_upstream_but_blocked']}/{payload['source_chain_attacks']['scenario_count']}",
+        f"Contestation challenge variants: {payload['contestation_challenges']['expected_passed']}/{payload['contestation_challenges']['scenario_count']} passed; valid challenges blocked {payload['contestation_challenges']['valid_challenges_blocked']}/216; unsupported controls preserved {payload['contestation_challenges']['unsupported_controls_preserved']}/54",
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",

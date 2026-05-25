@@ -1,0 +1,275 @@
+{
+  "id": "holdout-source-bound-germany-rtbf-01--challenge-valid-counter-material-challenge",
+  "claimed_status": "normative_material_screening_output",
+  "system_role": "auditable_procedural_tool",
+  "jurisdiction_profile": "civil_law",
+  "deployment_context": "Out-of-sample source-bound repair packet scored after policy freeze.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Source-support validator checked each output link against the issue manifest, locator, hashed manifest source-support evidence and procedural source tag."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "The prompt, model capture, repair layer and output identifier are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "Authority coverage is recomputed against the issue-defined high-authority set."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "Counter/limiting material coverage is recomputed against the issue-defined counter-material set."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "A reviewer can inspect, challenge and supplement every source-supported output unit only if all links validate."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The repaired output is logged for audit, but no authorized decision-maker adopted it as a decision reason."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+    ],
+    "retrieved_high_authority": [
+      "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+    ],
+    "counter_or_limiting": [
+      "google-spain-c-131-12",
+      "charter-articles-7-8-11-16",
+      "party-submitted-counter-material-for-holdout-source-bound-germany-rtbf-01"
+    ],
+    "retrieved_counter_or_limiting": [
+      "google-spain-c-131-12",
+      "charter-articles-7-8-11-16"
+    ],
+    "invalid_or_superseded": [],
+    "retrieved": [
+      "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+      "google-spain-c-131-12",
+      "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+      "charter-articles-7-8-11-16"
+    ]
+  },
+  "counter_material_complete": true,
+  "upstream_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "evidence_packet": {
+    "source_collection": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+    "output_units": [
+      {
+        "id": "unit-01",
+        "claim": "Recht auf Vergessen I is relevant because it addresses recht and auf.",
+        "source_ids": [
+          "bverfg-right-to-be-forgotten-i-1-bvr-16-13"
+        ],
+        "locators": [
+          "BVerfG, 1 BvR 16/13, 6 November 2019"
+        ],
+        "output_rank": 1
+      },
+      {
+        "id": "unit-02",
+        "claim": "Google Spain SL and Google Inc. v Agencia Espanola de Proteccion de Datos is relevant because it addresses google and spain.",
+        "source_ids": [
+          "google-spain-c-131-12"
+        ],
+        "locators": [
+          "Case C-131/12"
+        ],
+        "output_rank": 2
+      },
+      {
+        "id": "unit-03",
+        "claim": "Recht auf Vergessen II is relevant because it addresses recht and auf.",
+        "source_ids": [
+          "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+        ],
+        "locators": [
+          "BVerfG, 1 BvR 276/17, 6 November 2019"
+        ],
+        "output_rank": 3
+      },
+      {
+        "id": "unit-04",
+        "claim": "EU Charter rights relevant to data protection, expression and business freedom is relevant because it addresses charter and article 7.",
+        "source_ids": [
+          "charter-articles-7-8-11-16"
+        ],
+        "locators": [
+          "Articles 7, 8, 11 and 16 CFR"
+        ],
+        "output_rank": 4
+      }
+    ],
+    "output_links": [
+      {
+        "unit_id": "unit-01",
+        "source_id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13",
+        "locator": "BVerfG, 1 BvR 16/13, 6 November 2019",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13-support-1",
+            "locator": "BVerfG, 1 BvR 16/13, 6 November 2019",
+            "matched_terms": [
+              "i"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "i"
+        ]
+      },
+      {
+        "unit_id": "unit-02",
+        "source_id": "google-spain-c-131-12",
+        "locator": "Case C-131/12",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "google-spain-c-131-12-support-1",
+            "locator": "Case C-131/12",
+            "matched_terms": [
+              "google",
+              "spain",
+              "and"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "and",
+          "google",
+          "spain"
+        ]
+      },
+      {
+        "unit_id": "unit-03",
+        "source_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17",
+        "locator": "BVerfG, 1 BvR 276/17, 6 November 2019",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17-support-1",
+            "locator": "BVerfG, 1 BvR 276/17, 6 November 2019",
+            "matched_terms": [
+              "ii"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "ii"
+        ]
+      },
+      {
+        "unit_id": "unit-04",
+        "source_id": "charter-articles-7-8-11-16",
+        "locator": "Articles 7, 8, 11 and 16 CFR",
+        "supports_claim": true,
+        "source_tag": "tool_verified",
+        "support_label": "supports",
+        "validated_source_support": [
+          {
+            "support_id": "charter-articles-7-8-11-16-support-1",
+            "locator": "Articles 7, 8, 11 and 16 CFR",
+            "matched_terms": [
+              "charter"
+            ]
+          }
+        ],
+        "validated_support_terms": [
+          "charter"
+        ]
+      }
+    ]
+  },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "german_constitutional_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "source_binding_validation": {
+    "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
+    "manifest_records": 5,
+    "output_links": 4,
+    "missing_source_ids": [],
+    "missing_output_links": [],
+    "unsupported_locators": [],
+    "unsupported_claims": [],
+    "unsupported_source_support": [],
+    "source_support_by_link": {
+      "unit-01::bverfg-right-to-be-forgotten-i-1-bvr-16-13": [
+        {
+          "support_id": "bverfg-right-to-be-forgotten-i-1-bvr-16-13-support-1",
+          "locator": "BVerfG, 1 BvR 16/13, 6 November 2019",
+          "matched_terms": [
+            "i"
+          ]
+        }
+      ],
+      "unit-02::google-spain-c-131-12": [
+        {
+          "support_id": "google-spain-c-131-12-support-1",
+          "locator": "Case C-131/12",
+          "matched_terms": [
+            "google",
+            "spain",
+            "and"
+          ]
+        }
+      ],
+      "unit-03::bverfg-right-to-be-forgotten-ii-1-bvr-276-17": [
+        {
+          "support_id": "bverfg-right-to-be-forgotten-ii-1-bvr-276-17-support-1",
+          "locator": "BVerfG, 1 BvR 276/17, 6 November 2019",
+          "matched_terms": [
+            "ii"
+          ]
+        }
+      ],
+      "unit-04::charter-articles-7-8-11-16": [
+        {
+          "support_id": "charter-articles-7-8-11-16-support-1",
+          "locator": "Articles 7, 8, 11 and 16 CFR",
+          "matched_terms": [
+            "charter"
+          ]
+        }
+      ]
+    },
+    "all_links_source_bound": true,
+    "high_authority_complete": true,
+    "counter_material_complete": true,
+    "claim_support_complete": true,
+    "source_support_complete": true,
+    "source_tag_assignment": "assigned_after_holdout_manifest_locator_issue_set_and_source_support_validation"
+  },
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "suspension",
+  "contestation_challenge": {
+    "challenge": "valid_counter_material_challenge",
+    "source": "holdout-source-bound-germany-rtbf-01",
+    "base_allowed_status": "normative_material_screening_output",
+    "base_disposition": "none",
+    "purpose": "dynamic contestability validation for party challenge response"
+  }
+}

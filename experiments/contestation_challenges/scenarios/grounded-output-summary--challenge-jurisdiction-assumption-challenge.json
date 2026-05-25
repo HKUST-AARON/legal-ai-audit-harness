@@ -1,0 +1,114 @@
+{
+  "id": "grounded-output-summary--challenge-jurisdiction-assumption-challenge",
+  "claimed_status": "normative_material_screening_output",
+  "jurisdiction_profile": "common_law",
+  "deployment_context": "Legal output layer that summarizes selected authorities while exposing provider-agnostic source locators and output-level evidence links.",
+  "scores": {
+    "S": {
+      "score": 2,
+      "evidence": "Every cited authority maps to source ID, version and paragraph locator."
+    },
+    "Q": {
+      "score": 2,
+      "evidence": "Input issue, filters, upstream run ID and evidence-packet version are recorded."
+    },
+    "H": {
+      "score": 2,
+      "evidence": "The generated summary labels binding, persuasive and overruled materials."
+    },
+    "K": {
+      "score": 2,
+      "evidence": "The output records the presented material set, ordering criteria and omitted-material checks."
+    },
+    "T": {
+      "score": 2,
+      "evidence": "Reviewers can inspect locators, challenge evidence links and add missing authorities."
+    },
+    "L": {
+      "score": 1,
+      "evidence": "The output and adoption action are logged, but final reasons are not structured."
+    }
+  },
+  "authority_sets": {
+    "high_authority": [
+      "binding-precedent-a"
+    ],
+    "retrieved_high_authority": [
+      "binding-precedent-a"
+    ],
+    "counter_or_limiting": [
+      "limiting-precedent-b"
+    ],
+    "retrieved_counter_or_limiting": [
+      "limiting-precedent-b"
+    ],
+    "invalid_or_superseded": [
+      "overruled-case-c"
+    ],
+    "retrieved": [
+      "binding-precedent-a",
+      "limiting-precedent-b"
+    ]
+  },
+  "evidence_packet": {
+    "output_links": [
+      {
+        "unit_id": "unit-1",
+        "source_id": "binding-precedent-a",
+        "locator": "para 12-15",
+        "supports_claim": true,
+        "source_tag": "tool_verified"
+      },
+      {
+        "unit_id": "unit-2",
+        "source_id": "limiting-precedent-b",
+        "locator": "para 8-10",
+        "supports_claim": true,
+        "source_tag": "tool_verified"
+      }
+    ],
+    "output_units": [
+      {
+        "id": "unit-1",
+        "source_ids": [
+          "binding-precedent-a"
+        ],
+        "locators": [
+          "para 12-15"
+        ]
+      },
+      {
+        "id": "unit-2",
+        "source_ids": [
+          "limiting-precedent-b"
+        ],
+        "locators": [
+          "para 8-10"
+        ]
+      }
+    ]
+  },
+  "upstream_metrics": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1": 0.9
+  },
+  "failure_flags": [],
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "downgrade",
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
+  "contestation_challenge": {
+    "challenge": "jurisdiction_assumption_challenge",
+    "source": "grounded-output-summary",
+    "base_allowed_status": "normative_material_screening_output",
+    "base_disposition": "none",
+    "purpose": "dynamic contestability validation for party challenge response"
+  }
+}

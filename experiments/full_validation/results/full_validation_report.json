@@ -155,13 +155,33 @@
   "blind_coding_evaluations": 444,
   "blocked_reason_distribution": {
     "authority_omission": 59,
-    "contestation_failure": 1,
-    "counter_material_suppression": 81,
+    "contestation_failure": 55,
+    "counter_material_suppression": 135,
     "invalid_authority": 1,
+    "jurisdiction_assumption_gap": 54,
     "ranking_drift": 9,
-    "source_attribution_gap": 159,
+    "source_attribution_gap": 213,
     "summary_distortion": 129,
     "unauthorized_action": 10
+  },
+  "contestation_challenge_evaluations": 270,
+  "contestation_challenges": {
+    "blocked_reason_distribution": {
+      "contestation_failure": 54,
+      "counter_material_suppression": 54,
+      "jurisdiction_assumption_gap": 54,
+      "source_attribution_gap": 54
+    },
+    "expected_passed": 270,
+    "high_upstream_but_blocked": 216,
+    "scenario_count": 270,
+    "status_distribution": {
+      "decision_support_reason": 12,
+      "normative_material_screening_output": 42,
+      "reference_information": 216
+    },
+    "unsupported_controls_preserved": 54,
+    "valid_challenges_blocked": 216
   },
   "expected_passed": 246,
   "expected_total": 246,
@@ -216,7 +236,7 @@
     "qualified_scenario_count": 54
   },
   "gate_ablation_evaluations": 336,
-  "high_upstream_but_blocked": 406,
+  "high_upstream_but_blocked": 622,
   "jurisdiction_profile": {
     "counterfactual_evaluation_count": 162,
     "generic_profile_preserved": 54,
@@ -456,7 +476,7 @@
     "verified_certificate_count": 246
   },
   "status_certificate_replay_checks": 3198,
-  "suite_count": 26,
+  "suite_count": 27,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -713,6 +733,29 @@
         "reference_information": 162
       },
       "validation_units": "270 attack variants over qualified packets"
+    },
+    {
+      "blocked_reason_distribution": {
+        "contestation_failure": 54,
+        "counter_material_suppression": 54,
+        "jurisdiction_assumption_gap": 54,
+        "source_attribution_gap": 54
+      },
+      "evidence_class": "whole-matrix challenge-response validation",
+      "finding": "Applies valid counter-material, source-verification, jurisdiction and contestability-channel challenges plus unsupported challenge controls across every qualified packet; valid challenges must block high status while unsupported challenges preserve it.",
+      "high_upstream_but_blocked": 216,
+      "id": "contestation_challenges",
+      "label": "Dynamic contestation challenges",
+      "mean_audit_score": 11.277777777777779,
+      "mean_upstream_recall": 0.9890740740740741,
+      "rule_pass": "270/270",
+      "scenario_count": 270,
+      "status_distribution": {
+        "decision_support_reason": 12,
+        "normative_material_screening_output": 42,
+        "reference_information": 216
+      },
+      "validation_units": "270 challenge variants over qualified packets"
     },
     {
       "evidence_class": "external source-grounding check",
@@ -1037,13 +1080,15 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 130674,
+  "total_evaluation_rows": 130944,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
     "annotation_uncertainty_evaluations": 61500,
     "baseline_comparison_predictions": 2772,
     "blind_coding_packets": 222,
+    "contestation_challenge_passed": 270,
+    "contestation_challenge_variants": 270,
     "evidence_ladder_model_outputs": 70,
     "formal_invariant_checks": 51643,
     "formal_invariant_passed": 51643,

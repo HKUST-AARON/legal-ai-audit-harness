@@ -8,7 +8,7 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
-from audit_harness.model import evaluate_scenario
+from audit_harness.model import STATUS_RANK, evaluate_scenario
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -781,7 +781,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 26)
+        self.assertEqual(report["suite_count"], 27)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -819,6 +819,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["source_chain_attack_evaluations"], 270)
         self.assertEqual(report["validation_units"]["source_chain_attack_variants"], 270)
         self.assertEqual(report["validation_units"]["source_chain_attack_passed"], 270)
+        self.assertEqual(report["contestation_challenge_evaluations"], 270)
+        self.assertEqual(report["validation_units"]["contestation_challenge_variants"], 270)
+        self.assertEqual(report["validation_units"]["contestation_challenge_passed"], 270)
         self.assertEqual(report["repair_frontier_evaluations"], 4474)
         self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 4474)
         self.assertEqual(report["jurisdiction_profile_evaluations"], 395)
@@ -832,7 +835,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
-        self.assertEqual(report["total_evaluation_rows"], 130674)
+        self.assertEqual(report["total_evaluation_rows"], 130944)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -845,8 +848,10 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 246)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
         self.assertEqual(report["blocked_reason_distribution"]["authority_omission"], 59)
-        self.assertEqual(report["blocked_reason_distribution"]["counter_material_suppression"], 81)
-        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 159)
+        self.assertEqual(report["blocked_reason_distribution"]["contestation_failure"], 55)
+        self.assertEqual(report["blocked_reason_distribution"]["counter_material_suppression"], 135)
+        self.assertEqual(report["blocked_reason_distribution"]["jurisdiction_assumption_gap"], 54)
+        self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 213)
         self.assertEqual(report["blocked_reason_distribution"]["summary_distortion"], 129)
         self.assertEqual(report["source_text_verification"]["support_items_verified"], 30)
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
@@ -870,6 +875,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["source_chain_attacks"]["high_upstream_but_blocked"], 270)
         self.assertEqual(report["source_chain_attacks"]["status_distribution"]["reference_information"], 162)
         self.assertEqual(report["source_chain_attacks"]["status_distribution"]["no_external_legal_effect"], 108)
+        self.assertEqual(report["contestation_challenges"]["scenario_count"], 270)
+        self.assertEqual(report["contestation_challenges"]["expected_passed"], 270)
+        self.assertEqual(report["contestation_challenges"]["high_upstream_but_blocked"], 216)
+        self.assertEqual(report["contestation_challenges"]["valid_challenges_blocked"], 216)
+        self.assertEqual(report["contestation_challenges"]["unsupported_controls_preserved"], 54)
+        self.assertEqual(report["contestation_challenges"]["status_distribution"]["reference_information"], 216)
+        self.assertEqual(report["contestation_challenges"]["status_distribution"]["normative_material_screening_output"], 42)
+        self.assertEqual(report["contestation_challenges"]["status_distribution"]["decision_support_reason"], 12)
         self.assertEqual(report["repair_frontier"]["blocked_claim_count"], 184)
         self.assertEqual(report["repair_frontier"]["repairable_count"], 184)
         self.assertEqual(report["jurisdiction_profile"]["profile_check_count"], 233)
@@ -926,6 +939,44 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["summary"]["high_upstream_but_blocked"], 270)
         statuses = {item["allowed_status"] for item in report["results"]}
         self.assertEqual(statuses, {"reference_information", "no_external_legal_effect"})
+
+    def test_contestation_challenges_run(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/build_contestation_challenges.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        completed = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "audit_harness.cli",
+                "experiment",
+                "experiments/contestation_challenges/scenarios",
+                "--out",
+                "experiments/contestation_challenges/results/contestation_challenge_experiment.md",
+                "--json-out",
+                "experiments/contestation_challenges/results/contestation_challenge_experiment.json",
+            ],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        report = json.loads((ROOT / "experiments" / "contestation_challenges" / "results" / "contestation_challenge_experiment.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["summary"]["scenario_count"], 270)
+        self.assertEqual(report["summary"]["expected_passed"], 270)
+        self.assertEqual(report["summary"]["high_upstream_but_blocked"], 216)
+        unsupported = [item for item in report["results"] if "unsupported-challenge-control" in item["scenario_id"]]
+        valid = [item for item in report["results"] if "unsupported-challenge-control" not in item["scenario_id"]]
+        self.assertEqual(len(unsupported), 54)
+        self.assertEqual(len(valid), 216)
+        self.assertTrue(all(STATUS_RANK[item["allowed_status"]] >= STATUS_RANK["normative_material_screening_output"] for item in unsupported))
+        self.assertTrue(all(item["allowed_status"] == "reference_information" for item in valid))
 
     def test_public_source_text_anchor_verification(self):
         completed = subprocess.run(
