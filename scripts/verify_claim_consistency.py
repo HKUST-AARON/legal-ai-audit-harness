@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -218,7 +219,14 @@ def _pdf_page_count(path: Path) -> int:
         match = re.search(r"Output written on .+ \((\d+) pages", log.read_text(encoding="utf-8", errors="ignore"))
         if match:
             return int(match.group(1))
-    text = path.read_bytes().decode("latin-1", errors="ignore")
+    data = path.read_bytes()
+    chunks = [data.decode("latin-1", errors="ignore")]
+    for match in re.finditer(rb"stream\r?\n(.*?)\r?\nendstream", data, re.S):
+        try:
+            chunks.append(zlib.decompress(match.group(1).strip()).decode("latin-1", errors="ignore"))
+        except zlib.error:
+            pass
+    text = "\n".join(chunks)
     return len(re.findall(r"/Type\s*/Page\b", text))
 
 
