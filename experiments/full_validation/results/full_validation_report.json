@@ -578,6 +578,70 @@
     "qualified_scenario_count": 54
   },
   "gate_ablation_evaluations": 336,
+  "gate_contrast_witness_evaluations": 336,
+  "gate_contrast_witnesses": {
+    "by_witness": {
+      "adoption_gate": {
+        "failed": 0,
+        "passed": 12,
+        "score_metric_role_preserved": 12,
+        "status_separated": 12,
+        "total": 12
+      },
+      "contestability_gate": {
+        "failed": 0,
+        "passed": 54,
+        "score_metric_role_preserved": 54,
+        "status_separated": 54,
+        "total": 54
+      },
+      "counter_material_gate": {
+        "failed": 0,
+        "passed": 54,
+        "score_metric_role_preserved": 54,
+        "status_separated": 54,
+        "total": 54
+      },
+      "evidence_packet_gate": {
+        "failed": 0,
+        "passed": 54,
+        "score_metric_role_preserved": 54,
+        "status_separated": 54,
+        "total": 54
+      },
+      "high_authority_gate": {
+        "failed": 0,
+        "passed": 54,
+        "score_metric_role_preserved": 54,
+        "status_separated": 54,
+        "total": 54
+      },
+      "jurisdiction_gate": {
+        "failed": 0,
+        "passed": 54,
+        "score_metric_role_preserved": 54,
+        "status_separated": 54,
+        "total": 54
+      },
+      "procedural_source_tag_gate": {
+        "failed": 0,
+        "passed": 54,
+        "score_metric_role_preserved": 54,
+        "status_separated": 54,
+        "total": 54
+      }
+    },
+    "failed_count": 0,
+    "passed_count": 336,
+    "qualified_scenario_count": 54,
+    "score_metric_role_preserved_count": 336,
+    "status_distribution": {
+      "normative_material_screening_output": 12,
+      "reference_information": 324
+    },
+    "status_separated_count": 336,
+    "witness_count": 336
+  },
   "high_upstream_but_blocked": 2028,
   "jurisdiction_profile": {
     "counterfactual_evaluation_count": 162,
@@ -926,7 +990,7 @@
   },
   "status_certificate_proof_obligations": 3936,
   "status_certificate_replay_checks": 5412,
-  "suite_count": 32,
+  "suite_count": 33,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1321,6 +1385,22 @@
       "validation_units": "336 ablations over 54 qualified packets"
     },
     {
+      "evidence_class": "non-substitution witness validation",
+      "finding": "Preserves each qualified packet's audit score vector, upstream metrics and system role while flipping one mandatory gate; every witness pair separates allowed procedural status, proving score-only and retrieval-metric-only substitutes cannot reproduce the protocol on the validation domain.",
+      "high_upstream_but_blocked": null,
+      "id": "gate_contrast_witnesses",
+      "label": "Gate-contrast witness pairs",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "336/336",
+      "scenario_count": 336,
+      "status_distribution": {
+        "normative_material_screening_output": 12,
+        "reference_information": 324
+      },
+      "validation_units": "336 witness pairs over 54 qualified packets"
+    },
+    {
       "evidence_class": "counterfactual repair-necessity check",
       "finding": "Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.",
       "high_upstream_but_blocked": null,
@@ -1640,7 +1720,7 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 149584,
+  "total_evaluation_rows": 149920,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
@@ -1655,6 +1735,8 @@
     "formal_invariant_checks": 51643,
     "formal_invariant_passed": 51643,
     "gate_ablation_evaluations": 336,
+    "gate_contrast_witnesses": 336,
+    "gate_contrast_witnesses_passed": 336,
     "holdout_records": 126,
     "issue_ablations": 20,
     "issue_gold_sets": 5,

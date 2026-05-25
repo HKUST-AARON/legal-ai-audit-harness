@@ -156,6 +156,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
     _run([sys.executable, "scripts/run_baseline_comparison_analysis.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
+    _run([sys.executable, "scripts/run_gate_contrast_witness_analysis.py"])
     _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
     _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
     _run([sys.executable, "scripts/run_ranking_visibility_analysis.py"])
@@ -261,6 +262,16 @@ def main() -> int:
         )
     )
     rows.append(_gate_ablation_row(gate_ablation_payload))
+    gate_contrast_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "gate_contrast_witnesses"
+            / "results"
+            / "gate_contrast_witness_analysis.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_gate_contrast_witness_row(gate_contrast_payload))
     repair_frontier_payload = json.loads(
         (ROOT / "experiments" / "repair_frontiers" / "results" / "repair_frontier_analysis.json").read_text(
             encoding="utf-8"
@@ -397,6 +408,8 @@ def main() -> int:
             + metric_separation_payload["permutation"]["iterations"],
             "baseline_comparison_predictions": baseline_comparison_payload["baseline_prediction_count"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
+            "gate_contrast_witnesses": gate_contrast_payload["witness_count"],
+            "gate_contrast_witnesses_passed": gate_contrast_payload["passed_count"],
             "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
             "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
             + jurisdiction_profile_payload["counterfactual_evaluation_count"],
@@ -437,6 +450,7 @@ def main() -> int:
         + metric_separation_payload["permutation"]["iterations"],
         "baseline_comparison_evaluations": baseline_comparison_payload["baseline_prediction_count"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
+        "gate_contrast_witness_evaluations": gate_contrast_payload["witness_count"],
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
         + jurisdiction_profile_payload["counterfactual_evaluation_count"],
@@ -461,6 +475,7 @@ def main() -> int:
         + metric_separation_payload["permutation"]["iterations"]
         + baseline_comparison_payload["baseline_prediction_count"]
         + gate_ablation_payload["ablation_count"]
+        + gate_contrast_payload["witness_count"]
         + repair_frontier_payload["counterfactual_evaluation_count"]
         + jurisdiction_profile_payload["profile_check_count"]
         + jurisdiction_profile_payload["counterfactual_evaluation_count"]
@@ -597,6 +612,16 @@ def main() -> int:
             "passed_count": gate_ablation_payload["passed_count"],
             "failed_count": gate_ablation_payload["failed_count"],
             "by_ablation": gate_ablation_payload["by_ablation"],
+        },
+        "gate_contrast_witnesses": {
+            "qualified_scenario_count": gate_contrast_payload["qualified_scenario_count"],
+            "witness_count": gate_contrast_payload["witness_count"],
+            "passed_count": gate_contrast_payload["passed_count"],
+            "failed_count": gate_contrast_payload["failed_count"],
+            "score_metric_role_preserved_count": gate_contrast_payload["score_metric_role_preserved_count"],
+            "status_separated_count": gate_contrast_payload["status_separated_count"],
+            "by_witness": gate_contrast_payload["by_witness"],
+            "status_distribution": gate_contrast_payload["status_distribution"],
         },
         "repair_frontier": {
             "blocked_claim_count": repair_frontier_payload["blocked_claim_count"],
@@ -1108,6 +1133,22 @@ def _gate_ablation_row(payload: dict) -> dict:
     }
 
 
+def _gate_contrast_witness_row(payload: dict) -> dict:
+    return {
+        "id": "gate_contrast_witnesses",
+        "label": "Gate-contrast witness pairs",
+        "evidence_class": "non-substitution witness validation",
+        "validation_units": f"{payload['witness_count']} witness pairs over {payload['qualified_scenario_count']} qualified packets",
+        "scenario_count": payload["witness_count"],
+        "rule_pass": f"{payload['passed_count']}/{payload['witness_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": payload["status_distribution"],
+        "finding": "Preserves each qualified packet's audit score vector, upstream metrics and system role while flipping one mandatory gate; every witness pair separates allowed procedural status, proving score-only and retrieval-metric-only substitutes cannot reproduce the protocol on the validation domain.",
+    }
+
+
 def _repair_frontier_row(payload: dict) -> dict:
     return {
         "id": "repair_frontier",
@@ -1328,6 +1369,7 @@ def _format_report(payload: dict) -> str:
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
         f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; reference rule false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
+        f"Gate-contrast witness pairs: {payload['gate_contrast_witnesses']['passed_count']}/{payload['gate_contrast_witnesses']['witness_count']} passed; score/metric/role preserved {payload['gate_contrast_witnesses']['score_metric_role_preserved_count']}/{payload['gate_contrast_witnesses']['witness_count']}; status separated {payload['gate_contrast_witnesses']['status_separated_count']}/{payload['gate_contrast_witnesses']['witness_count']}",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",
         f"Ranking-visibility checks: {payload['ranking_visibility']['window_check_count']} rank-window checks over {payload['ranking_visibility']['visibility_check_count']} high-status claims; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['front_window_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}; median first counter rank {payload['ranking_visibility']['median_first_counter_rank']:.1f}",

@@ -218,6 +218,15 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.allowed_status, "reference_information")
         self.assertEqual(result.disposition, "downgrade")
 
+    def test_review_gate_blocks_uncompleted_attorney_review(self):
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["review_gate"]["review_status"] = "pending"
+        scenario["review_gate"]["reliance_gate"] = "attorney_review"
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertIn("review_gate_failure", result.failure_flags)
+
     def test_unauthorized_irreversible_action_is_withdrawn(self):
         scenario = deepcopy(load("odr_authorized_review.json"))
         scenario["review_gate"]["irreversible_action"] = True
@@ -322,6 +331,44 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["qualified_scenario_count"], 54)
         self.assertEqual(payload["ablation_count"], 336)
         self.assertEqual(payload["passed_count"], 336)
+        self.assertFalse(payload["failures"])
+
+    def test_gate_contrast_witness_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_gate_contrast_witness_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Gate-Contrast Witness Analysis", completed.stdout)
+        payload = json.loads(
+            (
+                ROOT
+                / "experiments"
+                / "gate_contrast_witnesses"
+                / "results"
+                / "gate_contrast_witness_analysis.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.assertEqual(payload["qualified_scenario_count"], 54)
+        self.assertEqual(payload["witness_count"], 336)
+        self.assertEqual(payload["passed_count"], 336)
+        self.assertEqual(payload["score_metric_role_preserved_count"], 336)
+        self.assertEqual(payload["status_separated_count"], 336)
+        self.assertEqual(
+            {key: item["total"] for key, item in payload["by_witness"].items()},
+            {
+                "adoption_gate": 12,
+                "contestability_gate": 54,
+                "counter_material_gate": 54,
+                "evidence_packet_gate": 54,
+                "high_authority_gate": 54,
+                "jurisdiction_gate": 54,
+                "procedural_source_tag_gate": 54,
+            },
+        )
         self.assertFalse(payload["failures"])
 
     def test_repair_frontier_analysis_runs(self):
@@ -1069,7 +1116,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 32)
+        self.assertEqual(report["suite_count"], 33)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1104,6 +1151,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 2772)
         self.assertEqual(report["gate_ablation_evaluations"], 336)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 336)
+        self.assertEqual(report["gate_contrast_witness_evaluations"], 336)
+        self.assertEqual(report["validation_units"]["gate_contrast_witnesses"], 336)
+        self.assertEqual(report["validation_units"]["gate_contrast_witnesses_passed"], 336)
         self.assertEqual(report["source_chain_attack_evaluations"], 1674)
         self.assertEqual(report["validation_units"]["source_chain_attack_variants"], 1674)
         self.assertEqual(report["validation_units"]["source_chain_attack_passed"], 1674)
@@ -1141,7 +1191,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 149584)
+        self.assertEqual(report["total_evaluation_rows"], 149920)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -1186,6 +1236,16 @@ class AuditModelTest(unittest.TestCase):
         self.assertTrue(report["baseline_comparison"]["all_simplified_rules_have_errors"])
         self.assertEqual(report["gate_ablation"]["ablation_count"], 336)
         self.assertEqual(report["gate_ablation"]["passed_count"], 336)
+        self.assertEqual(report["gate_contrast_witnesses"]["qualified_scenario_count"], 54)
+        self.assertEqual(report["gate_contrast_witnesses"]["witness_count"], 336)
+        self.assertEqual(report["gate_contrast_witnesses"]["passed_count"], 336)
+        self.assertEqual(report["gate_contrast_witnesses"]["score_metric_role_preserved_count"], 336)
+        self.assertEqual(report["gate_contrast_witnesses"]["status_separated_count"], 336)
+        self.assertEqual(report["gate_contrast_witnesses"]["status_distribution"]["reference_information"], 324)
+        self.assertEqual(
+            report["gate_contrast_witnesses"]["status_distribution"]["normative_material_screening_output"],
+            12,
+        )
         self.assertEqual(report["source_chain_attacks"]["scenario_count"], 1674)
         self.assertEqual(report["source_chain_attacks"]["expected_passed"], 1674)
         self.assertEqual(report["source_chain_attacks"]["high_upstream_but_blocked"], 1674)

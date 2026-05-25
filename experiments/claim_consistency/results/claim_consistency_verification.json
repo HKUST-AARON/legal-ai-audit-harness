@@ -1,8 +1,8 @@
 {
-  "check_count": 638,
+  "check_count": 665,
   "checks": [
     {
-      "expected": "- 32 validation suites",
+      "expected": "- 33 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 149,584 total evaluation rows",
+      "expected": "- 149,920 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -43,6 +43,11 @@
     },
     {
       "expected": "- 336/336 gate-ablation evaluations passed",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- 336/336 gate-contrast witness pairs passed with 336/336 score/metric/role preservation and 336/336 status separation",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -142,7 +147,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 1,674 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,412 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 336 gate-contrast witness pairs, 1,674 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,412 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -177,6 +182,11 @@
       "path": "README.md"
     },
     {
+      "expected": "| Gate-contrast witness pairs | 336 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "| Qualified-output source-chain attacks | 1674 |",
       "passed": true,
       "path": "README.md"
@@ -203,6 +213,11 @@
     },
     {
       "expected": "python scripts/run_query_portfolio_frontier.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_gate_contrast_witness_analysis.py",
       "passed": true,
       "path": "README.md"
     },
@@ -342,6 +357,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Gate-contrast witness pairs",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Dynamic contestation challenges",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -427,6 +447,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "gate-contrast witness layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "source-chain attack layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -503,6 +528,11 @@
     },
     {
       "expected": "336/336 gate-ablation evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "336/336 gate-contrast witness pairs",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -607,6 +637,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "python scripts/run_gate_contrast_witness_analysis.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "python scripts/run_repair_frontier_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -667,6 +702,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "gate-contrast witness file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "contestation challenge file",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -697,7 +737,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "148,905 derived robustness checks",
+      "expected": "149,241 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -892,6 +932,21 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Gate-contrast witness pairs & 336 pairs & 336/336",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "All 336 pairs separated status",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "324 fell to reference information and 12 decision-support witnesses fell to normative screening",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Source-chain attacks & 1,674 variants & 1,674/1,674",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1022,7 +1077,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 32",
+      "expected": "Validation suites: 33",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1043,6 +1098,11 @@
     },
     {
       "expected": "Gate ablation evaluations: 336/336 passed over 54 qualified packets",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Gate-contrast witness pairs: 336/336 passed; score/metric/role preserved 336/336; status separated 336/336",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1187,7 +1247,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 246)",
+      "expected": "abstract word count 150-250 (actual 248)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1278,6 +1338,11 @@
     },
     {
       "expected": "absence of stale claim `29 validation suites`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `32 validation suites`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -1528,6 +1593,16 @@
     },
     {
       "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `148,905`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `149,584`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -1682,6 +1757,11 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `32 validation suites`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "README.md"
@@ -1928,6 +2008,16 @@
     },
     {
       "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `148,905`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `149,584`",
       "passed": true,
       "path": "README.md"
     },
@@ -2082,6 +2172,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `32 validation suites`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -2328,6 +2423,16 @@
     },
     {
       "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `148,905`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `149,584`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -2482,6 +2587,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `32 validation suites`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -2728,6 +2838,16 @@
     },
     {
       "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `148,905`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `149,584`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -2882,6 +3002,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `32 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `230 scenario files`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -3128,6 +3253,16 @@
     },
     {
       "expected": "absence of stale claim `147,501`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `148,905`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `149,584`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -3194,5 +3329,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 638
+  "passed_count": 665
 }

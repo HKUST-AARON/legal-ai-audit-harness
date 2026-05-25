@@ -479,7 +479,14 @@ def _review_gate_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:
         flags.append("jurisdiction_assumption_gap")
     review_required = gate.get("attorney_review_required") is True
     review_incomplete = gate.get("review_status") not in {"completed", "not_required"}
-    protected_reliance = gate.get("reliance_gate") in {"external_reliance", "filing", "sending", "execution", "authorized_adoption"}
+    protected_reliance = gate.get("reliance_gate") in {
+        "attorney_review",
+        "external_reliance",
+        "filing",
+        "sending",
+        "execution",
+        "authorized_adoption",
+    }
     if review_required and review_incomplete and (protected_reliance or target_rank >= STATUS_RANK[Status.DECISION_SUPPORT_REASON.value]):
         flags.append("review_gate_failure")
     return flags

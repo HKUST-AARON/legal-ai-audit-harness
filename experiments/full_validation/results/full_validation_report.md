@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 32
+Validation suites: 33
 Scenario files: 246
 Base embedded records/items: 679 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 492
@@ -17,6 +17,7 @@ Metric separation evaluations: 201 upstream-metric scenario packets; high-recall
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Baseline rule comparisons: 2772 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0
 Gate ablation evaluations: 336/336 passed over 54 qualified packets
+Gate-contrast witness pairs: 336/336 passed; score/metric/role preserved 336/336; status separated 336/336
 Repair frontier evaluations: 184/184 blocked claims repairable across 4474 counterfactual repairs
 Jurisdiction-profile evaluations: 233/233 profile checks supported; 162/162 counterfactual mutations passed
 Ranking-visibility checks: 884 rank-window checks over 230 high-status claims; 76/76 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 183/217; drifted top-3 counter visible 0/76; median first counter rank 3.0
@@ -27,7 +28,7 @@ Policy-constants replay checks: 4182/4182 passed over 246 packets
 Metamorphic policy tests: 1134/1134 passed over 246 packets
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 148905
+Derived robustness evaluations: 149241
 Scenario-regression expectations passed: 246/246
 High-upstream-performance but procedurally blocked scenarios: 2028
 Blocked reason distribution: authority_omission: 869, contestation_failure: 55, counter_material_suppression: 945, invalid_authority: 1, jurisdiction_assumption_gap: 54, ranking_drift: 9, source_attribution_gap: 1023, summary_distortion: 1317, unauthorized_action: 10
@@ -57,6 +58,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Metric separation analysis | retrieval/status non-equivalence check | 201 upstream-metric scenario packets | 201 | recall-threshold precision 0.27; reference gate FP 0 | n/a | n/a | n/a | high_recall_blocked_rate: 0.73, recall_point_biserial: 0.06, reference_gate_false_positive: 0 |
 | Baseline rule comparison | alternative-policy comparison | 2772 baseline predictions over 12 rules | 2772 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.59, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 336 ablations over 54 qualified packets | 336 | 336/336 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
+| Gate-contrast witness pairs | non-substitution witness validation | 336 witness pairs over 54 qualified packets | 336 | 336/336 | n/a | n/a | n/a | normative_material_screening_output: 12, reference_information: 324 |
 | Blocked-claim repair frontiers | counterfactual repair-necessity check | 4474 repair counterfactuals over 184 blocked claims | 4474 | 184/184 repairable | n/a | n/a | n/a | 1: 108, 2: 34, 3: 39, 4: 3 |
 | Jurisdiction-profile mutations | cross-profile gate check | 395 profile checks and counterfactuals | 395 | 233/233 profile checks; 162/162 mutations | n/a | n/a | n/a | generic_preserved: 54, mismatch_downgraded: 54, missing_downgraded: 54 |
 | Ranking-visibility diagnostics | rank-salience counterfactual check | 884 rank-window checks over 230 high-status claims plus 76 rank-order counterfactuals | 960 | 76/76 rank-order | n/a | n/a | n/a | counterfactual_front_window_counter_visible: 0, coverage_preserved: 76, downgraded: 76, front_window_counter_not_visible: 34, front_window_counter_visible: 183, mean_reciprocal_first_counter_rank: 0.43, median_first_counter_rank: 3.0, rank_intervention_applied: 76 |
@@ -92,6 +94,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
 - **Baseline rule comparison:** Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
+- **Gate-contrast witness pairs:** Preserves each qualified packet's audit score vector, upstream metrics and system role while flipping one mandatory gate; every witness pair separates allowed procedural status, proving score-only and retrieval-metric-only substitutes cannot reproduce the protocol on the validation domain.
 - **Blocked-claim repair frontiers:** Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.
 - **Jurisdiction-profile mutations:** Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.
 - **Ranking-visibility diagnostics:** Computes a rank-window visibility curve for counter-material salience and applies rank-order counterfactuals where the packet contains enough non-counter material to move counter-material below the visibility window.
