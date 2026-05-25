@@ -94,6 +94,26 @@ SUITES = [
         "finding": "Tests whether model-output variants can qualify after manifest, locator, issue-set, rank-salience and hashed source-support evidence validation.",
     },
     {
+        "id": "cross_engine_model_outputs",
+        "label": "Cross-engine raw model outputs",
+        "path": ROOT / "experiments" / "cross_engine_model_outputs" / "scenarios",
+        "out": ROOT / "experiments" / "cross_engine_model_outputs" / "results" / "cross_engine_model_output_experiment.md",
+        "json_out": ROOT / "experiments" / "cross_engine_model_outputs" / "results" / "cross_engine_model_output_experiment.json",
+        "unit_label": "cross-engine raw outputs",
+        "evidence_class": "identity-neutral model-output audit",
+        "finding": "Tests whether high-recall outputs from three model engines remain capped without source-bound legal-material chains.",
+    },
+    {
+        "id": "cross_engine_model_repairs",
+        "label": "Cross-engine source-supported repairs",
+        "path": ROOT / "experiments" / "cross_engine_model_repairs" / "scenarios",
+        "out": ROOT / "experiments" / "cross_engine_model_repairs" / "results" / "cross_engine_model_repair_experiment.md",
+        "json_out": ROOT / "experiments" / "cross_engine_model_repairs" / "results" / "cross_engine_model_repair_experiment.json",
+        "unit_label": "cross-engine source-supported outputs",
+        "evidence_class": "identity-neutral source-support intervention",
+        "finding": "Tests whether the same issue outputs qualify after source-support validation, regardless of model identity.",
+    },
+    {
         "id": "model_output_evidence_ladder",
         "label": "Model-output evidence ladder",
         "path": ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios",
@@ -146,11 +166,13 @@ def main() -> int:
     _run([sys.executable, "scripts/build_model_output_repairs.py"])
     _run([sys.executable, "scripts/build_model_output_evidence_ladder.py"])
     _run([sys.executable, "scripts/build_model_output_adversarial.py"])
+    _run([sys.executable, "scripts/build_cross_engine_model_outputs.py"])
     _run([sys.executable, "scripts/build_issue_ablations.py"])
     _run([sys.executable, "scripts/build_source_chain_attacks.py"])
     _run([sys.executable, "scripts/build_contestation_challenges.py"])
     _run([sys.executable, "scripts/build_blind_coding_packets.py"])
     _run([sys.executable, "scripts/verify_model_output_transcripts.py"])
+    _run([sys.executable, "scripts/verify_cross_engine_model_transcripts.py"])
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
     _run([sys.executable, "scripts/verify_formal_invariants.py"])
     _run([sys.executable, "scripts/run_status_lattice_analysis.py"])
@@ -239,6 +261,16 @@ def main() -> int:
         )
     )
     rows.append(_model_transcript_row(transcript_payload))
+    cross_engine_transcript_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "cross_engine_model_outputs"
+            / "results"
+            / "cross_engine_transcript_verification.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_cross_engine_transcript_row(cross_engine_transcript_payload))
     invariant_payload = json.loads(
         (ROOT / "experiments" / "formal_invariants" / "results" / "formal_invariant_verification.json").read_text(
             encoding="utf-8"
@@ -408,6 +440,9 @@ def main() -> int:
             "source_text_anchor_verified": source_text_payload["support_items_verified"],
             "model_output_transcript_locator_checks": transcript_payload["locator_count"],
             "model_output_transcript_locators_verified": transcript_payload["locators_verified"],
+            "cross_engine_transcript_locator_checks": cross_engine_transcript_payload["locator_count"],
+            "cross_engine_transcript_locators_verified": cross_engine_transcript_payload["locators_verified"],
+            "cross_engine_count": cross_engine_transcript_payload["engine_count"],
             "formal_invariant_checks": invariant_payload["total_checks"],
             "formal_invariant_passed": invariant_payload["passed_checks"],
             "status_lattice_states": status_lattice_payload["state_count"],
@@ -462,6 +497,7 @@ def main() -> int:
         "contestation_challenge_evaluations": contestation_challenge_payload["summary"]["scenario_count"],
         "source_text_anchor_evaluations": source_text_payload["support_item_count"],
         "model_output_transcript_evaluations": transcript_payload["locator_count"],
+        "cross_engine_transcript_evaluations": cross_engine_transcript_payload["locator_count"],
         "formal_invariant_evaluations": invariant_payload["total_checks"],
         "status_lattice_evaluations": status_lattice_payload["state_count"],
         "status_lattice_cover_edges": status_lattice_payload["cover_edge_diagnostics"]["checks"],
@@ -493,6 +529,7 @@ def main() -> int:
         "total_evaluation_rows": base_validation_units
         + source_text_payload["support_item_count"]
         + transcript_payload["locator_count"]
+        + cross_engine_transcript_payload["locator_count"]
         + invariant_payload["total_checks"]
         + status_lattice_payload["state_count"]
         + status_lattice_payload["cover_edge_diagnostics"]["checks"]
@@ -609,6 +646,16 @@ def main() -> int:
             "locator_count": transcript_payload["locator_count"],
             "locators_verified": transcript_payload["locators_verified"],
             "all_locators_verified": transcript_payload["all_locators_verified"],
+        },
+        "cross_engine_transcript_verification": {
+            "scenario_count": cross_engine_transcript_payload["scenario_count"],
+            "engine_count": cross_engine_transcript_payload["engine_count"],
+            "issue_count": cross_engine_transcript_payload["issue_count"],
+            "scenario_sections_verified": cross_engine_transcript_payload["scenario_sections_verified"],
+            "output_unit_count": cross_engine_transcript_payload["output_unit_count"],
+            "locator_count": cross_engine_transcript_payload["locator_count"],
+            "locators_verified": cross_engine_transcript_payload["locators_verified"],
+            "all_locators_verified": cross_engine_transcript_payload["all_locators_verified"],
         },
         "formal_invariant_verification": {
             "check_count": invariant_payload["check_count"],
@@ -807,6 +854,8 @@ def _validation_units() -> dict[str, int]:
         "holdout_records": _output_unit_count(ROOT / "experiments" / "holdout_validation" / "scenarios"),
         "raw_model_outputs": _scenario_count(ROOT / "experiments" / "ai_outputs" / "scenarios"),
         "source_bound_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_repairs" / "scenarios"),
+        "cross_engine_raw_outputs": _scenario_count(ROOT / "experiments" / "cross_engine_model_outputs" / "scenarios"),
+        "cross_engine_source_bound_outputs": _scenario_count(ROOT / "experiments" / "cross_engine_model_repairs" / "scenarios"),
         "evidence_ladder_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios"),
         "adversarial_model_outputs": _scenario_count(ROOT / "experiments" / "model_output_adversarial" / "scenarios"),
         "issue_public_records": _output_unit_count(ROOT / "experiments" / "issue_public_outputs" / "scenarios"),
@@ -1170,6 +1219,27 @@ def _model_transcript_row(payload: dict) -> dict:
     }
 
 
+def _cross_engine_transcript_row(payload: dict) -> dict:
+    return {
+        "id": "cross_engine_transcript_verification",
+        "label": "Cross-engine transcript anchors",
+        "evidence_class": "identity-neutral raw-output provenance check",
+        "validation_units": f"{payload['locator_count']} cross-engine transcript locator checks",
+        "scenario_count": payload["locator_count"],
+        "rule_pass": f"{payload['locators_verified']}/{payload['locator_count']} verified",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "engines": payload["engine_count"],
+            "issues": payload["issue_count"],
+            "scenario_sections_verified": payload["scenario_sections_verified"],
+            "all_locators_verified": payload["all_locators_verified"],
+        },
+        "finding": "Checks that cross-engine raw-output locators are anchored in committed transcripts across three model engines.",
+    }
+
+
 def _formal_invariant_row(payload: dict) -> dict:
     return {
         "id": "formal_invariant_verification",
@@ -1495,6 +1565,8 @@ def _format_report(payload: dict) -> str:
         f"{payload['validation_units']['holdout_records']} holdout records/items, "
         f"{payload['validation_units']['raw_model_outputs']} raw model outputs, "
         f"{payload['validation_units']['source_bound_model_outputs']} source-supported model-output variants, "
+        f"{payload['validation_units']['cross_engine_raw_outputs']} cross-engine raw outputs, "
+        f"{payload['validation_units']['cross_engine_source_bound_outputs']} cross-engine source-supported outputs, "
         f"{payload['validation_units']['evidence_ladder_model_outputs']} evidence-ladder model-output variants, "
         f"{payload['validation_units']['adversarial_model_outputs']} adversarial source-support variants, "
         f"{payload['validation_units']['issue_public_records']} issue-specific public output/source records, "
@@ -1506,9 +1578,10 @@ def _format_report(payload: dict) -> str:
         f"Full-threshold sensitivity evaluations: {payload['threshold_sensitivity_evaluations']}",
         f"Source-chain attack variants: {payload['source_chain_attacks']['expected_passed']}/{payload['source_chain_attacks']['scenario_count']} passed; high-upstream attacked variants blocked {payload['source_chain_attacks']['high_upstream_but_blocked']}/{payload['source_chain_attacks']['scenario_count']}",
         f"Source-chain attack dispositions: downgrade {payload['source_chain_attacks']['disposition_distribution'].get('downgrade', 0)}, suspension {payload['source_chain_attacks']['disposition_distribution'].get('suspension', 0)}, withdrawal {payload['source_chain_attacks']['disposition_distribution'].get('withdrawal', 0)}",
-        f"Contestation challenge variants: {payload['contestation_challenges']['expected_passed']}/{payload['contestation_challenges']['scenario_count']} passed; valid challenges blocked {payload['contestation_challenges']['valid_challenges_blocked']}/216; unsupported controls preserved {payload['contestation_challenges']['unsupported_controls_preserved']}/54",
+        f"Contestation challenge variants: {payload['contestation_challenges']['expected_passed']}/{payload['contestation_challenges']['scenario_count']} passed; valid challenges blocked {payload['contestation_challenges']['valid_challenges_blocked']}/{payload['contestation_challenges']['valid_challenges_blocked']}; unsupported controls preserved {payload['contestation_challenges']['unsupported_controls_preserved']}/{payload['contestation_challenges']['unsupported_controls_preserved']}",
         f"Public source-text anchor checks: {payload['source_text_verification']['support_items_verified']}/{payload['source_text_verification']['support_item_count']} verified across {payload['source_text_verification']['records_with_text_snapshot']} records with text snapshots",
         f"Model-output transcript locator checks: {payload['model_output_transcript_verification']['locators_verified']}/{payload['model_output_transcript_verification']['locator_count']} verified across {payload['model_output_transcript_verification']['scenario_sections_verified']} raw transcript sections",
+        f"Cross-engine transcript locator checks: {payload['cross_engine_transcript_verification']['locators_verified']}/{payload['cross_engine_transcript_verification']['locator_count']} verified across {payload['cross_engine_transcript_verification']['engine_count']} engines and {payload['cross_engine_transcript_verification']['issue_count']} issues",
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
         f"Status-lattice exhaustion: {payload['status_lattice']['state_count']} high-status claim-attempt states, {payload['status_lattice']['cover_edge_diagnostics']['checks']} cover edges, {payload['status_lattice']['necessity']['passed']}/{payload['status_lattice']['necessity']['checks']} necessity checks and {payload['status_lattice']['gate_ablation']['passed']}/{payload['status_lattice']['gate_ablation']['checks']} gate-ablation drops",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",

@@ -1,21 +1,21 @@
 # Blind Coding Study
 
-Packets: 222
+Packets: 240
 Coding passes: 2 (coder_a, coder_b)
 Status disagreements: 2
 Minimum dimension kappa: 0.93
 Minimum derived failure-flag exact agreement: 0.97
 Minimum derived missing-gate exact agreement: 0.98
-Base dimension minimum kappa: 0.37 (Q, exact 0.96)
-Base dimension minimum exact agreement: 0.86
-Base dimension minimum PABAK: 0.79
-Base dimension maximum mean absolute delta: 0.14
+Base dimension minimum kappa: 0.37 (Q, exact 0.97)
+Base dimension minimum exact agreement: 0.87
+Base dimension minimum PABAK: 0.81
+Base dimension maximum mean absolute delta: 0.13
 
 ## Pairwise Status Agreement
 
 | Left | Right | Exact status agreement | Weighted status agreement | Cohen's kappa | Quadratic weighted kappa |
 | --- | --- | ---: | ---: | ---: | ---: |
-| coder_a | coder_b | 0.99 | 0.99 | 0.99 | 0.96 |
+| coder_a | coder_b | 0.99 | 0.99 | 0.99 | 0.97 |
 
 ## Pairwise Dimension Agreement
 
@@ -23,7 +23,7 @@ Base dimension maximum mean absolute delta: 0.14
 | --- | --- | --- | ---: | ---: | ---: | ---: |
 | coder_a | coder_b | S | 1.00 | 1.00 | 1.00 | 1.00 |
 | coder_a | coder_b | Q | 1.00 | 1.00 | 1.00 | 1.00 |
-| coder_a | coder_b | H | 0.98 | 0.99 | 0.93 | 0.94 |
+| coder_a | coder_b | H | 0.98 | 0.99 | 0.93 | 0.95 |
 | coder_a | coder_b | K | 1.00 | 1.00 | 1.00 | 1.00 |
 | coder_a | coder_b | T | 1.00 | 1.00 | 1.00 | 1.00 |
 | coder_a | coder_b | L | 1.00 | 1.00 | 1.00 | 1.00 |
@@ -38,32 +38,32 @@ Base dimension maximum mean absolute delta: 0.14
 
 | Coder | Exact base agreement | Weighted base agreement | Cohen's kappa | Quadratic weighted kappa | Matches | Mismatches |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| coder_a | 0.96 | 0.98 | 0.94 | 0.93 | 213 | 9 |
-| coder_b | 0.95 | 0.97 | 0.92 | 0.90 | 211 | 11 |
+| coder_a | 0.96 | 0.98 | 0.94 | 0.94 | 231 | 9 |
+| coder_b | 0.95 | 0.98 | 0.93 | 0.90 | 229 | 11 |
 
 ## Base Dimension Calibration
 
 | Coder | Dimension | Exact | Cohen's kappa | PABAK | Mean absolute delta | Lower | Higher | Equal |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| coder_a | S | 0.95 | 0.89 | 0.92 | 0.05 | 12 | 0 | 210 |
-| coder_a | Q | 0.96 | 0.37 | 0.95 | 0.04 | 7 | 1 | 214 |
-| coder_a | H | 0.91 | 0.67 | 0.86 | 0.09 | 19 | 2 | 201 |
-| coder_a | K | 0.94 | 0.86 | 0.91 | 0.06 | 0 | 13 | 209 |
-| coder_a | T | 0.86 | 0.74 | 0.80 | 0.14 | 28 | 2 | 192 |
-| coder_a | L | 0.86 | 0.67 | 0.79 | 0.14 | 30 | 1 | 191 |
-| coder_b | S | 0.95 | 0.89 | 0.92 | 0.05 | 12 | 0 | 210 |
-| coder_b | Q | 0.96 | 0.37 | 0.95 | 0.04 | 7 | 1 | 214 |
-| coder_b | H | 0.93 | 0.75 | 0.89 | 0.07 | 15 | 1 | 206 |
-| coder_b | K | 0.94 | 0.86 | 0.91 | 0.06 | 0 | 13 | 209 |
-| coder_b | T | 0.86 | 0.74 | 0.80 | 0.14 | 28 | 2 | 192 |
-| coder_b | L | 0.86 | 0.67 | 0.79 | 0.14 | 30 | 1 | 191 |
+| coder_a | S | 0.95 | 0.90 | 0.92 | 0.05 | 12 | 0 | 228 |
+| coder_a | Q | 0.97 | 0.37 | 0.95 | 0.03 | 7 | 1 | 232 |
+| coder_a | H | 0.91 | 0.67 | 0.87 | 0.09 | 19 | 2 | 219 |
+| coder_a | K | 0.95 | 0.87 | 0.92 | 0.05 | 0 | 13 | 227 |
+| coder_a | T | 0.88 | 0.76 | 0.81 | 0.12 | 28 | 2 | 210 |
+| coder_a | L | 0.87 | 0.68 | 0.81 | 0.13 | 30 | 1 | 209 |
+| coder_b | S | 0.95 | 0.90 | 0.92 | 0.05 | 12 | 0 | 228 |
+| coder_b | Q | 0.97 | 0.37 | 0.95 | 0.03 | 7 | 1 | 232 |
+| coder_b | H | 0.93 | 0.75 | 0.90 | 0.07 | 15 | 1 | 224 |
+| coder_b | K | 0.95 | 0.87 | 0.92 | 0.05 | 0 | 13 | 227 |
+| coder_b | T | 0.88 | 0.76 | 0.81 | 0.12 | 28 | 2 | 210 |
+| coder_b | L | 0.87 | 0.68 | 0.81 | 0.13 | 30 | 1 | 209 |
 
 ## Mean Total Score
 
 | Coder | Mean total score |
 | --- | ---: |
-| coder_a | 9.34 |
-| coder_b | 9.35 |
+| coder_a | 9.39 |
+| coder_b | 9.40 |
 
 ## Status Disagreements
 
@@ -92,6 +92,15 @@ Base dimension maximum mean absolute delta: 0.14
 | codex55-us-02 | reference_information | reference_information | reference_information |
 | codex55-us-03 | reference_information | reference_information | reference_information |
 | court-authority-report | normative_material_screening_output | reference_information | reference_information |
+| cross-engine-codex-gpt54-mini-eu-gdpr-article15 | reference_information | reference_information | reference_information |
+| cross-engine-codex-gpt54-mini-uk-mesothelioma-causation | reference_information | reference_information | reference_information |
+| cross-engine-codex-gpt54-mini-us-agency-deference | reference_information | reference_information | reference_information |
+| cross-engine-codex-gpt55-eu-gdpr-article15 | reference_information | reference_information | reference_information |
+| cross-engine-codex-gpt55-uk-mesothelioma-causation | reference_information | reference_information | reference_information |
+| cross-engine-codex-gpt55-us-agency-deference | reference_information | reference_information | reference_information |
+| cross-engine-gemini-25-pro-eu-gdpr-article15 | reference_information | reference_information | reference_information |
+| cross-engine-gemini-25-pro-uk-mesothelioma-causation | reference_information | reference_information | reference_information |
+| cross-engine-gemini-25-pro-us-agency-deference | reference_information | reference_information | reference_information |
 | decision-support-ready | decision_support_reason | decision_support_reason | reference_information |
 | eu-gdpr-article15-access-rights-counter-material-suppressed | reference_information | reference_information | reference_information |
 | eu-gdpr-article15-access-rights-decision-reason-without-adoption | normative_material_screening_output | reference_information | reference_information |
@@ -284,6 +293,15 @@ Base dimension maximum mean absolute delta: 0.14
 | source-bound-codex55-us-03--unsupported-claim | no_external_legal_effect | no_external_legal_effect | no_external_legal_effect |
 | source-bound-codex55-us-03--wrong-locator | reference_information | reference_information | reference_information |
 | source-bound-codex55-us-03 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output |
 | suspended-authority-omission | reference_information | reference_information | reference_information |
 | uk-mesothelioma-causation-after-fairchild-counter-material-suppressed | reference_information | reference_information | reference_information |
 | uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption | normative_material_screening_output | reference_information | reference_information |

@@ -2,12 +2,12 @@
   "candidate_distribution": {
     "decision_support_reason": 12,
     "no_external_legal_effect": 1,
-    "normative_material_screening_output": 188,
+    "normative_material_screening_output": 206,
     "professional_support_output": 35,
     "reference_information": 10
   },
-  "cap_or_failure_transition_count": 158,
-  "certificate_count": 246,
+  "cap_or_failure_transition_count": 167,
+  "certificate_count": 264,
   "certificates_path": "experiments/status_certificates/results/status_certificates.jsonl",
   "duplicate_certificate_paths": [],
   "extra_certificate_paths": [],
@@ -16,10 +16,10 @@
   "failed_proof_obligation_count": 0,
   "failures": [],
   "missing_certificate_paths": [],
-  "passed_check_count": 5658,
-  "passed_proof_obligation_count": 4182,
-  "proof_obligation_count": 4182,
-  "replay_check_count": 5658,
+  "passed_check_count": 6072,
+  "passed_proof_obligation_count": 4488,
+  "proof_obligation_count": 4488,
+  "replay_check_count": 6072,
   "replay_rows": [
     {
       "failed_check_count": 0,
@@ -748,6 +748,150 @@
       "passed_check_count": 23,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
       "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "passed": true,
+      "passed_check_count": 23,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
     },
     {
       "failed_check_count": 0,
@@ -1993,9 +2137,9 @@
   "status_distribution": {
     "decision_support_reason": 12,
     "no_external_legal_effect": 32,
-    "normative_material_screening_output": 42,
+    "normative_material_screening_output": 51,
     "professional_support_output": 23,
-    "reference_information": 137
+    "reference_information": 146
   },
-  "verified_certificate_count": 246
+  "verified_certificate_count": 264
 }

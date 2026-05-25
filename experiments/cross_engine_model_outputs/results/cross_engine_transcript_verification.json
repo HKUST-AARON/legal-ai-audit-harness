@@ -1,0 +1,309 @@
+{
+  "all_locators_verified": true,
+  "engine_count": 3,
+  "issue_count": 3,
+  "locator_count": 36,
+  "locators_verified": 36,
+  "output_unit_count": 36,
+  "rows": [
+    {
+      "engine": "codex-gpt54-mini",
+      "issue": "eu-gdpr-article15",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "GDPR Article 15",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "C-154/21",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "C-487/21",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "GDPR Article 15(4)",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#codex-gpt54-mini--eu-gdpr-article15",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "section_found": true
+    },
+    {
+      "engine": "codex-gpt54-mini",
+      "issue": "uk-mesothelioma-causation",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Fairchild",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "Barker",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Compensation Act 2006 s.3",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Sienkiewicz",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#codex-gpt54-mini--uk-mesothelioma-causation",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "section_found": true
+    },
+    {
+      "engine": "codex-gpt54-mini",
+      "issue": "us-agency-deference",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Loper Bright",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "5 U.S.C. 706",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Skidmore",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Kisor",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#codex-gpt54-mini--us-agency-deference",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "section_found": true
+    },
+    {
+      "engine": "codex-gpt55",
+      "issue": "eu-gdpr-article15",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "GDPR Article 15",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "C-154/21",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "C-487/21",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "GDPR Article 15(4)",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#codex-gpt55--eu-gdpr-article15",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "section_found": true
+    },
+    {
+      "engine": "codex-gpt55",
+      "issue": "uk-mesothelioma-causation",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Fairchild",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "Barker",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Compensation Act 2006 s.3",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Sienkiewicz",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#codex-gpt55--uk-mesothelioma-causation",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "section_found": true
+    },
+    {
+      "engine": "codex-gpt55",
+      "issue": "us-agency-deference",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Loper Bright",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "5 U.S.C. 706",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Skidmore",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Kisor",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#codex-gpt55--us-agency-deference",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "section_found": true
+    },
+    {
+      "engine": "gemini-25-pro",
+      "issue": "eu-gdpr-article15",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "GDPR Article 15",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "C-154/21",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "C-487/21",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "GDPR Article 15(4)",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#gemini-25-pro--eu-gdpr-article15",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "section_found": true
+    },
+    {
+      "engine": "gemini-25-pro",
+      "issue": "uk-mesothelioma-causation",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Fairchild",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "Barker",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Compensation Act 2006 s.3",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Sienkiewicz",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#gemini-25-pro--uk-mesothelioma-causation",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "section_found": true
+    },
+    {
+      "engine": "gemini-25-pro",
+      "issue": "us-agency-deference",
+      "locator_count": 4,
+      "locator_rows": [
+        {
+          "locator": "Loper Bright",
+          "unit_id": "unit-1",
+          "verified": true
+        },
+        {
+          "locator": "5 U.S.C. 706",
+          "unit_id": "unit-2",
+          "verified": true
+        },
+        {
+          "locator": "Skidmore",
+          "unit_id": "unit-3",
+          "verified": true
+        },
+        {
+          "locator": "Kisor",
+          "unit_id": "unit-4",
+          "verified": true
+        }
+      ],
+      "locators_verified": 4,
+      "output_unit_count": 4,
+      "raw_file_anchor": "experiments/cross_engine_model_outputs/raw/cross_engine_authority_recommendations.md#gemini-25-pro--us-agency-deference",
+      "raw_file_anchor_matches": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "section_found": true
+    }
+  ],
+  "scenario_count": 9,
+  "scenario_sections_verified": 9
+}

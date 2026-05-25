@@ -1,10 +1,10 @@
 {
-  "all_policy_status_stable": 234,
-  "lenient_status_stable": 236,
-  "mean_score_delta_lenient": 0.8739837398373984,
-  "mean_score_delta_strict": 0.7642276422764228,
+  "all_policy_status_stable": 252,
+  "lenient_status_stable": 254,
+  "mean_score_delta_lenient": 0.8484848484848485,
+  "mean_score_delta_strict": 0.7462121212121212,
   "policy_count": 3,
-  "recoded_evaluations": 492,
+  "recoded_evaluations": 528,
   "rows": [
     {
       "base": {
@@ -2023,6 +2023,420 @@
       },
       "scenario_id": "source-bound-codex55-us-03",
       "source_path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "suspension",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 10
+      },
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json",
+      "strict": {
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
+        "total_score": 9
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "civil_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "strict": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 10
+      }
+    },
+    {
+      "base": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "jurisdiction_profile": "common_law",
+      "lenient": {
+        "allowed_status": "normative_material_screening_output",
+        "claim_supported": true,
+        "disposition": "none",
+        "total_score": 11
+      },
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
       "strict": {
         "allowed_status": "normative_material_screening_output",
         "claim_supported": true,
@@ -5665,8 +6079,8 @@
       }
     }
   ],
-  "scenario_count": 246,
-  "strict_status_stable": 244,
-  "weighted_status_agreement_base_lenient": 0.9828415986608077,
-  "weighted_status_agreement_base_strict": 0.9964134190613655
+  "scenario_count": 264,
+  "strict_status_stable": 262,
+  "weighted_status_agreement_base_lenient": 0.9840804660081769,
+  "weighted_status_agreement_base_strict": 0.9966881186255693
 }

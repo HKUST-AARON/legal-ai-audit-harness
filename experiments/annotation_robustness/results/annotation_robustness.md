@@ -1,12 +1,12 @@
 # Annotation Robustness Study
 
-Base scenarios: 246
-Strict/lenient recoded evaluations: 492
-Strict status stable: 244/246
-Lenient status stable: 236/246
-Stable under all coding policies: 234/246
-Mean score delta, strict: 0.76
-Mean score delta, lenient: 0.87
+Base scenarios: 264
+Strict/lenient recoded evaluations: 528
+Strict status stable: 262/264
+Lenient status stable: 254/264
+Stable under all coding policies: 252/264
+Mean score delta, strict: 0.75
+Mean score delta, lenient: 0.85
 Weighted status agreement, base vs strict: 1.00
 Weighted status agreement, base vs lenient: 0.98
 
@@ -102,6 +102,24 @@ Weighted status agreement, base vs lenient: 0.98
 | source-bound-codex55-us-01 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | source-bound-codex55-us-02 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | source-bound-codex55-us-03 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| cross-engine-codex-gpt54-mini-eu-gdpr-article15 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-codex-gpt54-mini-uk-mesothelioma-causation | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-codex-gpt54-mini-us-agency-deference | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-codex-gpt55-eu-gdpr-article15 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-codex-gpt55-uk-mesothelioma-causation | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-codex-gpt55-us-agency-deference | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-gemini-25-pro-eu-gdpr-article15 | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-gemini-25-pro-uk-mesothelioma-causation | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| cross-engine-gemini-25-pro-us-agency-deference | reference_information | reference_information | reference_information | 9 | 9 | 10 |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15 | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | evidence-ladder-codex55-eu-01--authorized-decision-support | decision_support_reason | decision_support_reason | decision_support_reason | 12 | 12 | 12 |
 | evidence-ladder-codex55-eu-01--contestable-screening | normative_material_screening_output | normative_material_screening_output | normative_material_screening_output | 11 | 10 | 11 |
 | evidence-ladder-codex55-eu-01--raw-unverified | reference_information | reference_information | reference_information | 9 | 9 | 10 |

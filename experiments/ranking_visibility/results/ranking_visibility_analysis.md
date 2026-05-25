@@ -1,22 +1,22 @@
 # Ranking Visibility Analysis
 
-Eligible high-status claims: 230
-Ranking-visibility diagnostics: 230 high-status claims and 884 rank-window checks
-First counter-material rank distribution: 1: 14, 2: 64, 3: 110, 4: 9
+Eligible high-status claims: 248
+Ranking-visibility diagnostics: 248 high-status claims and 956 rank-window checks
+First counter-material rank distribution: 1: 14, 2: 70, 3: 119, 4: 12
 Median first counter-material rank: 3.0; mean reciprocal rank: 0.43
-Baseline rank-drift caps: 9/230
-Rank-order counterfactuals: 76/76 downgraded with coverage preserved
-Counter-material visible in top 3: 183/217
-Counter-material outside top 3: 34/217
-Counterfactual top-window counter-material visible: 0/76
-Rank-order interventions applied: 76/230
+Baseline rank-drift caps: 12/248
+Rank-order counterfactuals: 85/85 downgraded with coverage preserved
+Counter-material visible in top 3: 198/235
+Counter-material outside top 3: 37/235
+Counterfactual top-window counter-material visible: 0/85
+Rank-order interventions applied: 85/248
 
 | Window | Eligible packets | Counter visible | Counter not visible | Visible ratio |
 | ---: | ---: | ---: | ---: | ---: |
-| 1 | 230 | 14 | 216 | 0.06 |
-| 2 | 223 | 78 | 145 | 0.35 |
-| 3 | 217 | 183 | 34 | 0.84 |
-| 4 | 214 | 189 | 25 | 0.88 |
+| 1 | 248 | 14 | 234 | 0.06 |
+| 2 | 241 | 84 | 157 | 0.35 |
+| 3 | 235 | 198 | 37 | 0.84 |
+| 4 | 232 | 207 | 25 | 0.89 |
 
 | Scenario | Suite | Base | Drifted | CAR preserved | Authority preserved | Top-window counter | Drifted top-window counter |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: |
@@ -95,6 +95,24 @@ Rank-order interventions applied: 76/230
 | source-bound-codex55-us-01 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | source-bound-codex55-us-02 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | source-bound-codex55-us-03 | model_output_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| cross-engine-codex-gpt54-mini-eu-gdpr-article15 | cross_engine_model_outputs | reference_information | n/a | n/a | n/a | False | False |
+| cross-engine-codex-gpt54-mini-uk-mesothelioma-causation | cross_engine_model_outputs | reference_information | reference_information | True | True | True | False |
+| cross-engine-codex-gpt54-mini-us-agency-deference | cross_engine_model_outputs | reference_information | n/a | n/a | n/a | True | True |
+| cross-engine-codex-gpt55-eu-gdpr-article15 | cross_engine_model_outputs | reference_information | n/a | n/a | n/a | False | False |
+| cross-engine-codex-gpt55-uk-mesothelioma-causation | cross_engine_model_outputs | reference_information | reference_information | True | True | True | False |
+| cross-engine-codex-gpt55-us-agency-deference | cross_engine_model_outputs | reference_information | n/a | n/a | n/a | True | True |
+| cross-engine-gemini-25-pro-eu-gdpr-article15 | cross_engine_model_outputs | reference_information | n/a | n/a | n/a | False | False |
+| cross-engine-gemini-25-pro-uk-mesothelioma-causation | cross_engine_model_outputs | reference_information | reference_information | True | True | True | False |
+| cross-engine-gemini-25-pro-us-agency-deference | cross_engine_model_outputs | reference_information | n/a | n/a | n/a | True | True |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15 | cross_engine_model_repairs | normative_material_screening_output | reference_information | True | True | True | False |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation | cross_engine_model_repairs | normative_material_screening_output | reference_information | True | True | True | False |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference | cross_engine_model_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15 | cross_engine_model_repairs | normative_material_screening_output | reference_information | True | True | True | False |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation | cross_engine_model_repairs | normative_material_screening_output | reference_information | True | True | True | False |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference | cross_engine_model_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15 | cross_engine_model_repairs | normative_material_screening_output | reference_information | True | True | True | False |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation | cross_engine_model_repairs | normative_material_screening_output | reference_information | True | True | True | False |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference | cross_engine_model_repairs | normative_material_screening_output | n/a | n/a | n/a | True | True |
 | evidence-ladder-codex55-eu-01--authorized-decision-support | model_output_evidence_ladder | decision_support_reason | reference_information | True | True | True | False |
 | evidence-ladder-codex55-eu-01--contestable-screening | model_output_evidence_ladder | normative_material_screening_output | reference_information | True | True | True | False |
 | evidence-ladder-codex55-eu-01--raw-unverified | model_output_evidence_ladder | reference_information | reference_information | True | True | True | False |

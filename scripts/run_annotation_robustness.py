@@ -21,6 +21,8 @@ SCENARIO_DIRS = [
     ROOT / "experiments" / "holdout_validation" / "scenarios",
     ROOT / "experiments" / "ai_outputs" / "scenarios",
     ROOT / "experiments" / "model_output_repairs" / "scenarios",
+    ROOT / "experiments" / "cross_engine_model_outputs" / "scenarios",
+    ROOT / "experiments" / "cross_engine_model_repairs" / "scenarios",
     ROOT / "experiments" / "model_output_evidence_ladder" / "scenarios",
     ROOT / "experiments" / "model_output_adversarial" / "scenarios",
     ROOT / "experiments" / "issue_public_outputs" / "scenarios",

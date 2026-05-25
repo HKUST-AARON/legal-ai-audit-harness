@@ -1,30 +1,30 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 234,
-    "scenario_count": 246,
-    "weighted_status_agreement_base_lenient": 0.9828415986608077,
-    "weighted_status_agreement_base_strict": 0.9964134190613655
+    "all_policy_status_stable": 252,
+    "scenario_count": 264,
+    "weighted_status_agreement_base_lenient": 0.9840804660081769,
+    "weighted_status_agreement_base_strict": 0.9966881186255693
   },
   "annotation_uncertainty": {
-    "boundary_scenario_count": 143,
-    "evaluation_count": 61500,
-    "mean_status_rank_shift": 0.08635772357723577,
-    "qualified_high_status_stability_rate": 0.9239259259259259,
-    "qualified_status_stability_rate": 0.8833333333333333,
-    "scenario_count": 246,
+    "boundary_scenario_count": 161,
+    "evaluation_count": 66000,
+    "mean_status_rank_shift": 0.09201515151515152,
+    "qualified_high_status_stability_rate": 0.916063492063492,
+    "qualified_status_stability_rate": 0.8801904761904762,
+    "scenario_count": 264,
     "scenario_exact_stability_count": 102,
-    "scenario_high_stability_count": 183,
-    "status_stability_rate": 0.9325853658536586
+    "scenario_high_stability_count": 193,
+    "status_stability_rate": 0.9300757575757576
   },
-  "annotation_uncertainty_evaluations": 61500,
+  "annotation_uncertainty_evaluations": 66000,
   "baseline_comparison": {
     "all_simplified_rules_have_errors": true,
     "baseline_count": 12,
-    "baseline_prediction_count": 2772,
+    "baseline_prediction_count": 2988,
     "best_simplified": {
-      "balanced_accuracy": 0.9010416666666667,
-      "denominator": 246,
-      "f1": 0.7397260273972603,
+      "balanced_accuracy": 0.9054726368159204,
+      "denominator": 264,
+      "f1": 0.7682926829268292,
       "false_negative": 0,
       "false_negative_examples": [],
       "false_positive": 38,
@@ -42,15 +42,15 @@
       ],
       "id": "source_score_review",
       "label": "Source-bound score candidate with review gate",
-      "precision": 0.5869565217391305,
+      "precision": 0.6237623762376238,
       "recall": 1.0,
-      "specificity": 0.8020833333333334,
-      "true_negative": 154,
-      "true_positive": 54
+      "specificity": 0.8109452736318408,
+      "true_negative": 163,
+      "true_positive": 63
     },
     "full_gate": {
       "balanced_accuracy": 1.0,
-      "denominator": 246,
+      "denominator": 264,
       "f1": 1.0,
       "false_negative": 0,
       "false_negative_examples": [],
@@ -61,13 +61,13 @@
       "precision": 1.0,
       "recall": 1.0,
       "specificity": 1.0,
-      "true_negative": 192,
-      "true_positive": 54
+      "true_negative": 201,
+      "true_positive": 63
     },
     "lowest_false_positive_simplified": {
-      "balanced_accuracy": 0.9010416666666667,
-      "denominator": 246,
-      "f1": 0.7397260273972603,
+      "balanced_accuracy": 0.9054726368159204,
+      "denominator": 264,
+      "f1": 0.7682926829268292,
       "false_negative": 0,
       "false_negative_examples": [],
       "false_positive": 38,
@@ -85,97 +85,97 @@
       ],
       "id": "source_score_review",
       "label": "Source-bound score candidate with review gate",
-      "precision": 0.5869565217391305,
+      "precision": 0.6237623762376238,
       "recall": 1.0,
-      "specificity": 0.8020833333333334,
-      "true_negative": 154,
-      "true_positive": 54
+      "specificity": 0.8109452736318408,
+      "true_negative": 163,
+      "true_positive": 63
     },
-    "qualified_count": 54,
-    "scenario_count": 246
+    "qualified_count": 63,
+    "scenario_count": 264
   },
-  "baseline_comparison_evaluations": 2772,
+  "baseline_comparison_evaluations": 2988,
   "blind_coding": {
-    "base_dimension_max_mean_absolute_delta": 0.13963963963963963,
-    "base_dimension_min_exact_agreement": 0.8603603603603603,
-    "base_dimension_min_kappa": 0.3737658674189008,
+    "base_dimension_max_mean_absolute_delta": 0.12916666666666668,
+    "base_dimension_min_exact_agreement": 0.8708333333333333,
+    "base_dimension_min_kappa": 0.3745928338762204,
     "base_dimension_min_kappa_coder": "coder_a",
     "base_dimension_min_kappa_dimension": "Q",
-    "base_dimension_min_kappa_exact_agreement": 0.963963963963964,
-    "base_dimension_min_pabak": 0.7905405405405406,
+    "base_dimension_min_kappa_exact_agreement": 0.9666666666666667,
+    "base_dimension_min_pabak": 0.8062499999999999,
     "base_status_agreement": {
       "coder_a": {
-        "cohen_kappa": 0.9359266266876182,
+        "cohen_kappa": 0.9409125724915199,
         "dimension_agreement": {
           "H": {
-            "coder_equal_count": 201,
+            "coder_equal_count": 219,
             "coder_higher_count": 2,
             "coder_lower_count": 19,
-            "cohen_kappa": 0.6664997496244366,
-            "exact_agreement": 0.9054054054054054,
-            "mean_absolute_delta": 0.0945945945945946,
-            "pabak": 0.8581081081081081,
-            "quadratic_weighted_kappa": 0.7403364152835024,
-            "weighted_agreement": 0.9527027027027027
+            "cohen_kappa": 0.6708248971327803,
+            "exact_agreement": 0.9125,
+            "mean_absolute_delta": 0.0875,
+            "pabak": 0.8687499999999999,
+            "quadratic_weighted_kappa": 0.7436940602115542,
+            "weighted_agreement": 0.95625
           },
           "K": {
-            "coder_equal_count": 209,
+            "coder_equal_count": 227,
             "coder_higher_count": 13,
             "coder_lower_count": 0,
-            "cohen_kappa": 0.86175512550297,
-            "exact_agreement": 0.9414414414414415,
-            "mean_absolute_delta": 0.05855855855855856,
-            "pabak": 0.9121621621621623,
-            "quadratic_weighted_kappa": 0.8989141856392294,
-            "weighted_agreement": 0.9707207207207207
+            "cohen_kappa": 0.8650869151604255,
+            "exact_agreement": 0.9458333333333333,
+            "mean_absolute_delta": 0.05416666666666667,
+            "pabak": 0.91875,
+            "quadratic_weighted_kappa": 0.9014653865588681,
+            "weighted_agreement": 0.9729166666666667
           },
           "L": {
-            "coder_equal_count": 191,
+            "coder_equal_count": 209,
             "coder_higher_count": 1,
             "coder_lower_count": 30,
-            "cohen_kappa": 0.66953181272509,
-            "exact_agreement": 0.8603603603603603,
-            "mean_absolute_delta": 0.13963963963963963,
-            "pabak": 0.7905405405405406,
-            "quadratic_weighted_kappa": 0.7135603096645301,
-            "weighted_agreement": 0.9301801801801802
+            "cohen_kappa": 0.6760569512779204,
+            "exact_agreement": 0.8708333333333333,
+            "mean_absolute_delta": 0.12916666666666668,
+            "pabak": 0.8062499999999999,
+            "quadratic_weighted_kappa": 0.7156832772852338,
+            "weighted_agreement": 0.9354166666666667
           },
           "Q": {
-            "coder_equal_count": 214,
+            "coder_equal_count": 232,
             "coder_higher_count": 1,
             "coder_lower_count": 7,
-            "cohen_kappa": 0.3737658674189008,
-            "exact_agreement": 0.963963963963964,
-            "mean_absolute_delta": 0.036036036036036036,
-            "pabak": 0.945945945945946,
-            "quadratic_weighted_kappa": 0.48847926267281105,
-            "weighted_agreement": 0.9819819819819819
+            "cohen_kappa": 0.3745928338762204,
+            "exact_agreement": 0.9666666666666667,
+            "mean_absolute_delta": 0.03333333333333333,
+            "pabak": 0.95,
+            "quadratic_weighted_kappa": 0.4893617021276595,
+            "weighted_agreement": 0.9833333333333333
           },
           "S": {
-            "coder_equal_count": 210,
+            "coder_equal_count": 228,
             "coder_higher_count": 0,
             "coder_lower_count": 12,
-            "cohen_kappa": 0.8906448832149747,
-            "exact_agreement": 0.9459459459459459,
-            "mean_absolute_delta": 0.05405405405405406,
-            "pabak": 0.9189189189189189,
-            "quadratic_weighted_kappa": 0.895668520404167,
-            "weighted_agreement": 0.972972972972973
+            "cohen_kappa": 0.8991102080851957,
+            "exact_agreement": 0.95,
+            "mean_absolute_delta": 0.05,
+            "pabak": 0.9249999999999998,
+            "quadratic_weighted_kappa": 0.9033557046979865,
+            "weighted_agreement": 0.975
           },
           "T": {
-            "coder_equal_count": 192,
+            "coder_equal_count": 210,
             "coder_higher_count": 2,
             "coder_lower_count": 28,
-            "cohen_kappa": 0.7419804741980475,
-            "exact_agreement": 0.8648648648648649,
-            "mean_absolute_delta": 0.13513513513513514,
-            "pabak": 0.7972972972972974,
-            "quadratic_weighted_kappa": 0.7842984842596192,
-            "weighted_agreement": 0.9324324324324325
+            "cohen_kappa": 0.7613365155131265,
+            "exact_agreement": 0.875,
+            "mean_absolute_delta": 0.125,
+            "pabak": 0.8125,
+            "quadratic_weighted_kappa": 0.7990286384190253,
+            "weighted_agreement": 0.9375
           }
         },
-        "exact_status_agreement": 0.9594594594594594,
-        "match_count": 213,
+        "exact_status_agreement": 0.9625,
+        "match_count": 231,
         "mismatch_count": 9,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -188,81 +188,81 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "quadratic_weighted_kappa": 0.9340320924955428,
-        "weighted_status_agreement": 0.9808558558558559
+        "quadratic_weighted_kappa": 0.9398468829748451,
+        "weighted_status_agreement": 0.9822916666666667
       },
       "coder_b": {
-        "cohen_kappa": 0.9211367673179394,
+        "cohen_kappa": 0.9273127753303967,
         "dimension_agreement": {
           "H": {
-            "coder_equal_count": 206,
+            "coder_equal_count": 224,
             "coder_higher_count": 1,
             "coder_lower_count": 15,
-            "cohen_kappa": 0.746719908727895,
-            "exact_agreement": 0.9279279279279279,
-            "mean_absolute_delta": 0.07207207207207207,
-            "pabak": 0.8918918918918919,
-            "quadratic_weighted_kappa": 0.7738155883851249,
-            "weighted_agreement": 0.963963963963964
+            "cohen_kappa": 0.7502276570833876,
+            "exact_agreement": 0.9333333333333333,
+            "mean_absolute_delta": 0.06666666666666667,
+            "pabak": 0.8999999999999999,
+            "quadratic_weighted_kappa": 0.7769516728624535,
+            "weighted_agreement": 0.9666666666666667
           },
           "K": {
-            "coder_equal_count": 209,
+            "coder_equal_count": 227,
             "coder_higher_count": 13,
             "coder_lower_count": 0,
-            "cohen_kappa": 0.86175512550297,
-            "exact_agreement": 0.9414414414414415,
-            "mean_absolute_delta": 0.05855855855855856,
-            "pabak": 0.9121621621621623,
-            "quadratic_weighted_kappa": 0.8989141856392294,
-            "weighted_agreement": 0.9707207207207207
+            "cohen_kappa": 0.8650869151604255,
+            "exact_agreement": 0.9458333333333333,
+            "mean_absolute_delta": 0.05416666666666667,
+            "pabak": 0.91875,
+            "quadratic_weighted_kappa": 0.9014653865588681,
+            "weighted_agreement": 0.9729166666666667
           },
           "L": {
-            "coder_equal_count": 191,
+            "coder_equal_count": 209,
             "coder_higher_count": 1,
             "coder_lower_count": 30,
-            "cohen_kappa": 0.66953181272509,
-            "exact_agreement": 0.8603603603603603,
-            "mean_absolute_delta": 0.13963963963963963,
-            "pabak": 0.7905405405405406,
-            "quadratic_weighted_kappa": 0.7135603096645301,
-            "weighted_agreement": 0.9301801801801802
+            "cohen_kappa": 0.6760569512779204,
+            "exact_agreement": 0.8708333333333333,
+            "mean_absolute_delta": 0.12916666666666668,
+            "pabak": 0.8062499999999999,
+            "quadratic_weighted_kappa": 0.7156832772852338,
+            "weighted_agreement": 0.9354166666666667
           },
           "Q": {
-            "coder_equal_count": 214,
+            "coder_equal_count": 232,
             "coder_higher_count": 1,
             "coder_lower_count": 7,
-            "cohen_kappa": 0.3737658674189008,
-            "exact_agreement": 0.963963963963964,
-            "mean_absolute_delta": 0.036036036036036036,
-            "pabak": 0.945945945945946,
-            "quadratic_weighted_kappa": 0.48847926267281105,
-            "weighted_agreement": 0.9819819819819819
+            "cohen_kappa": 0.3745928338762204,
+            "exact_agreement": 0.9666666666666667,
+            "mean_absolute_delta": 0.03333333333333333,
+            "pabak": 0.95,
+            "quadratic_weighted_kappa": 0.4893617021276595,
+            "weighted_agreement": 0.9833333333333333
           },
           "S": {
-            "coder_equal_count": 210,
+            "coder_equal_count": 228,
             "coder_higher_count": 0,
             "coder_lower_count": 12,
-            "cohen_kappa": 0.8906448832149747,
-            "exact_agreement": 0.9459459459459459,
-            "mean_absolute_delta": 0.05405405405405406,
-            "pabak": 0.9189189189189189,
-            "quadratic_weighted_kappa": 0.895668520404167,
-            "weighted_agreement": 0.972972972972973
+            "cohen_kappa": 0.8991102080851957,
+            "exact_agreement": 0.95,
+            "mean_absolute_delta": 0.05,
+            "pabak": 0.9249999999999998,
+            "quadratic_weighted_kappa": 0.9033557046979865,
+            "weighted_agreement": 0.975
           },
           "T": {
-            "coder_equal_count": 192,
+            "coder_equal_count": 210,
             "coder_higher_count": 2,
             "coder_lower_count": 28,
-            "cohen_kappa": 0.7419804741980475,
-            "exact_agreement": 0.8648648648648649,
-            "mean_absolute_delta": 0.13513513513513514,
-            "pabak": 0.7972972972972974,
-            "quadratic_weighted_kappa": 0.7842984842596192,
-            "weighted_agreement": 0.9324324324324325
+            "cohen_kappa": 0.7613365155131265,
+            "exact_agreement": 0.875,
+            "mean_absolute_delta": 0.125,
+            "pabak": 0.8125,
+            "quadratic_weighted_kappa": 0.7990286384190253,
+            "weighted_agreement": 0.9375
           }
         },
-        "exact_status_agreement": 0.9504504504504504,
-        "match_count": 211,
+        "exact_status_agreement": 0.9541666666666667,
+        "match_count": 229,
         "mismatch_count": 11,
         "mismatches": [
           "canada-vavilov-standard-of-review-decision-reason-without-adoption",
@@ -277,34 +277,34 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "quadratic_weighted_kappa": 0.8953585093994344,
-        "weighted_status_agreement": 0.9740990990990991
+        "quadratic_weighted_kappa": 0.9048951048951048,
+        "weighted_status_agreement": 0.9760416666666667
       }
     },
     "coder_count": 2,
     "dimension_min_kappa": {
-      "H": 0.929994954591322,
+      "H": 0.9311215704281941,
       "K": 1.0,
       "L": 1.0,
       "Q": 1.0,
       "S": 1.0,
       "T": 1.0
     },
-    "minimum_dimension_exact_agreement": 0.9774774774774775,
-    "minimum_dimension_kappa": 0.929994954591322,
-    "minimum_failure_flag_exact_agreement": 0.9684684684684685,
-    "minimum_failure_flag_jaccard": 0.9797297297297297,
-    "minimum_missing_gate_exact_agreement": 0.9819819819819819,
-    "minimum_missing_gate_jaccard": 0.990990990990991,
-    "packet_count": 222,
+    "minimum_dimension_exact_agreement": 0.9791666666666666,
+    "minimum_dimension_kappa": 0.9311215704281941,
+    "minimum_failure_flag_exact_agreement": 0.9708333333333333,
+    "minimum_failure_flag_jaccard": 0.98125,
+    "minimum_missing_gate_exact_agreement": 0.9833333333333333,
+    "minimum_missing_gate_jaccard": 0.9916666666666667,
+    "packet_count": 240,
     "pairwise_dimensions": [
       {
         "dimension_agreement": {
           "H": {
-            "cohen_kappa": 0.929994954591322,
-            "exact_agreement": 0.9774774774774775,
-            "quadratic_weighted_kappa": 0.9448693751862521,
-            "weighted_agreement": 0.9887387387387387
+            "cohen_kappa": 0.9311215704281941,
+            "exact_agreement": 0.9791666666666666,
+            "quadratic_weighted_kappa": 0.9457798662570034,
+            "weighted_agreement": 0.9895833333333334
           },
           "K": {
             "cohen_kappa": 1.0,
@@ -338,10 +338,10 @@
           }
         },
         "gate_agreement": {
-          "failure_flag_exact_agreement": 0.9684684684684685,
-          "failure_flag_mean_jaccard": 0.9797297297297297,
-          "missing_gate_exact_agreement": 0.9819819819819819,
-          "missing_gate_mean_jaccard": 0.990990990990991
+          "failure_flag_exact_agreement": 0.9708333333333333,
+          "failure_flag_mean_jaccard": 0.98125,
+          "missing_gate_exact_agreement": 0.9833333333333333,
+          "missing_gate_mean_jaccard": 0.9916666666666667
         },
         "left": "coder_a",
         "right": "coder_b"
@@ -349,55 +349,55 @@
     ],
     "pairwise_status": [
       {
-        "cohen_kappa": 0.9853126033741318,
-        "exact_status_agreement": 0.990990990990991,
+        "cohen_kappa": 0.9865145811091758,
+        "exact_status_agreement": 0.9916666666666667,
         "left": "coder_a",
-        "quadratic_weighted_kappa": 0.9614895339424078,
+        "quadratic_weighted_kappa": 0.9652509652509652,
         "right": "coder_b",
-        "weighted_status_agreement": 0.9932432432432432
+        "weighted_status_agreement": 0.99375
       }
     ],
     "status_disagreement_count": 2
   },
-  "blind_coding_evaluations": 444,
+  "blind_coding_evaluations": 480,
   "blocked_reason_distribution": {
-    "authority_omission": 869,
-    "contestation_failure": 55,
-    "counter_material_suppression": 945,
+    "authority_omission": 1013,
+    "contestation_failure": 64,
+    "counter_material_suppression": 1098,
     "invalid_authority": 1,
-    "jurisdiction_assumption_gap": 54,
-    "ranking_drift": 9,
-    "source_attribution_gap": 1023,
-    "summary_distortion": 1317,
+    "jurisdiction_assumption_gap": 63,
+    "ranking_drift": 12,
+    "source_attribution_gap": 1185,
+    "summary_distortion": 1533,
     "unauthorized_action": 10
   },
   "certificate_tamper": {
-    "base_certificate_count": 246,
+    "base_certificate_count": 264,
     "by_family": {
       "allowed_status_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "claim_supported_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "claimed_status_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "derivation_hash_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "disposition_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "duplicate_certificate_row": {
         "cases": 1,
@@ -405,9 +405,9 @@
         "rejected": 1
       },
       "expected_passed_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "extra_certificate_path": {
         "cases": 1,
@@ -415,24 +415,24 @@
         "rejected": 1
       },
       "failure_cap_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "failure_flags_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "jurisdiction_profile_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "metric_bundle_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "missing_certificate_row": {
         "cases": 1,
@@ -440,93 +440,104 @@
         "rejected": 1
       },
       "missing_gates_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "policy_body_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "policy_hash_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "proof_obligation_count_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "proof_obligation_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "role_cap_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "scenario_hash_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "scenario_id_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "score_candidate_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "score_vector_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "system_role_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       },
       "total_score_tamper": {
-        "cases": 246,
+        "cases": 264,
         "missed": 0,
-        "rejected": 246
+        "rejected": 264
       }
     },
     "missed_tamper_count": 0,
-    "rejected_count": 5415,
-    "tamper_case_count": 5415,
+    "rejected_count": 5811,
+    "tamper_case_count": 5811,
     "tamper_family_count": 25
   },
-  "certificate_tamper_evaluations": 5415,
-  "contestation_challenge_evaluations": 270,
+  "certificate_tamper_evaluations": 5811,
+  "contestation_challenge_evaluations": 315,
   "contestation_challenges": {
     "blocked_reason_distribution": {
-      "contestation_failure": 54,
-      "counter_material_suppression": 54,
-      "jurisdiction_assumption_gap": 54,
-      "source_attribution_gap": 54
+      "contestation_failure": 63,
+      "counter_material_suppression": 63,
+      "jurisdiction_assumption_gap": 63,
+      "source_attribution_gap": 63
     },
-    "expected_passed": 270,
-    "high_upstream_but_blocked": 216,
-    "scenario_count": 270,
+    "expected_passed": 315,
+    "high_upstream_but_blocked": 252,
+    "scenario_count": 315,
     "status_distribution": {
       "decision_support_reason": 12,
-      "normative_material_screening_output": 42,
-      "reference_information": 216
+      "normative_material_screening_output": 51,
+      "reference_information": 252
     },
-    "unsupported_controls_preserved": 54,
-    "valid_challenges_blocked": 216
+    "unsupported_controls_preserved": 63,
+    "valid_challenges_blocked": 252
   },
-  "expected_passed": 246,
-  "expected_total": 246,
+  "cross_engine_transcript_evaluations": 36,
+  "cross_engine_transcript_verification": {
+    "all_locators_verified": true,
+    "engine_count": 3,
+    "issue_count": 3,
+    "locator_count": 36,
+    "locators_verified": 36,
+    "output_unit_count": 36,
+    "scenario_count": 9,
+    "scenario_sections_verified": 9
+  },
+  "expected_passed": 264,
+  "expected_total": 264,
   "formal_invariant_evaluations": 51643,
   "formal_invariant_verification": {
     "all_passed": true,
@@ -535,12 +546,12 @@
     "total_checks": 51643
   },
   "gate_ablation": {
-    "ablation_count": 336,
+    "ablation_count": 390,
     "by_ablation": {
       "missing_counter_material": {
         "failed": 0,
-        "passed": 54,
-        "total": 54
+        "passed": 63,
+        "total": 63
       },
       "missing_decision_adoption": {
         "failed": 0,
@@ -549,36 +560,36 @@
       },
       "missing_evidence_packet": {
         "failed": 0,
-        "passed": 54,
-        "total": 54
+        "passed": 63,
+        "total": 63
       },
       "missing_high_authority": {
         "failed": 0,
-        "passed": 54,
-        "total": 54
+        "passed": 63,
+        "total": 63
       },
       "missing_review_gate": {
         "failed": 0,
-        "passed": 54,
-        "total": 54
+        "passed": 63,
+        "total": 63
       },
       "nonprocedural_source_tags": {
         "failed": 0,
-        "passed": 54,
-        "total": 54
+        "passed": 63,
+        "total": 63
       },
       "professional_role_cap": {
         "failed": 0,
-        "passed": 54,
-        "total": 54
+        "passed": 63,
+        "total": 63
       }
     },
     "failed_count": 0,
-    "passed_count": 336,
-    "qualified_scenario_count": 54
+    "passed_count": 390,
+    "qualified_scenario_count": 63
   },
-  "gate_ablation_evaluations": 336,
-  "gate_contrast_witness_evaluations": 336,
+  "gate_ablation_evaluations": 390,
+  "gate_contrast_witness_evaluations": 390,
   "gate_contrast_witnesses": {
     "by_witness": {
       "adoption_gate": {
@@ -590,138 +601,138 @@
       },
       "contestability_gate": {
         "failed": 0,
-        "passed": 54,
-        "score_metric_role_preserved": 54,
-        "status_separated": 54,
-        "total": 54
+        "passed": 63,
+        "score_metric_role_preserved": 63,
+        "status_separated": 63,
+        "total": 63
       },
       "counter_material_gate": {
         "failed": 0,
-        "passed": 54,
-        "score_metric_role_preserved": 54,
-        "status_separated": 54,
-        "total": 54
+        "passed": 63,
+        "score_metric_role_preserved": 63,
+        "status_separated": 63,
+        "total": 63
       },
       "evidence_packet_gate": {
         "failed": 0,
-        "passed": 54,
-        "score_metric_role_preserved": 54,
-        "status_separated": 54,
-        "total": 54
+        "passed": 63,
+        "score_metric_role_preserved": 63,
+        "status_separated": 63,
+        "total": 63
       },
       "high_authority_gate": {
         "failed": 0,
-        "passed": 54,
-        "score_metric_role_preserved": 54,
-        "status_separated": 54,
-        "total": 54
+        "passed": 63,
+        "score_metric_role_preserved": 63,
+        "status_separated": 63,
+        "total": 63
       },
       "jurisdiction_gate": {
         "failed": 0,
-        "passed": 54,
-        "score_metric_role_preserved": 54,
-        "status_separated": 54,
-        "total": 54
+        "passed": 63,
+        "score_metric_role_preserved": 63,
+        "status_separated": 63,
+        "total": 63
       },
       "procedural_source_tag_gate": {
         "failed": 0,
-        "passed": 54,
-        "score_metric_role_preserved": 54,
-        "status_separated": 54,
-        "total": 54
+        "passed": 63,
+        "score_metric_role_preserved": 63,
+        "status_separated": 63,
+        "total": 63
       }
     },
     "failed_count": 0,
-    "passed_count": 336,
-    "qualified_scenario_count": 54,
-    "score_metric_role_preserved_count": 336,
+    "passed_count": 390,
+    "qualified_scenario_count": 63,
+    "score_metric_role_preserved_count": 390,
     "status_distribution": {
       "normative_material_screening_output": 12,
-      "reference_information": 324
+      "reference_information": 378
     },
-    "status_separated_count": 336,
-    "witness_count": 336
+    "status_separated_count": 390,
+    "witness_count": 390
   },
-  "high_upstream_but_blocked": 2028,
+  "high_upstream_but_blocked": 2352,
   "jurisdiction_profile": {
-    "counterfactual_evaluation_count": 162,
-    "generic_profile_preserved": 54,
-    "mismatched_profile_downgraded": 54,
-    "missing_assumption_downgraded": 54,
-    "passed_count": 162,
-    "profile_check_count": 233,
-    "profile_supported_count": 233,
-    "qualified_status_count": 54
+    "counterfactual_evaluation_count": 189,
+    "generic_profile_preserved": 63,
+    "mismatched_profile_downgraded": 63,
+    "missing_assumption_downgraded": 63,
+    "passed_count": 189,
+    "profile_check_count": 251,
+    "profile_supported_count": 251,
+    "qualified_status_count": 63
   },
-  "jurisdiction_profile_evaluations": 395,
+  "jurisdiction_profile_evaluations": 440,
   "metamorphic_policy": {
     "by_relation": {
       "back_office_role_cap": {
-        "count": 246,
+        "count": 264,
         "examples": [],
         "failed": 0,
-        "passed": 246
+        "passed": 264
       },
       "benign_source_append_preserves_high_status": {
-        "count": 54,
+        "count": 63,
         "examples": [],
         "failed": 0,
-        "passed": 54
+        "passed": 63
       },
       "claim_escalation_nonpromotion": {
-        "count": 246,
+        "count": 264,
         "examples": [],
         "failed": 0,
-        "passed": 246
+        "passed": 264
       },
       "review_gate_removal_blocks_high_status": {
-        "count": 54,
+        "count": 63,
         "examples": [],
         "failed": 0,
-        "passed": 54
+        "passed": 63
       },
       "score_and_role_inflation_without_adoption": {
-        "count": 234,
+        "count": 252,
         "examples": [],
         "failed": 0,
-        "passed": 234
+        "passed": 252
       },
       "source_tag_deproceduralization_blocks_high_status": {
-        "count": 54,
+        "count": 63,
         "examples": [],
         "failed": 0,
-        "passed": 54
+        "passed": 63
       },
       "upstream_metric_inflation_invariance": {
-        "count": 246,
+        "count": 264,
         "examples": [],
         "failed": 0,
-        "passed": 246
+        "passed": 264
       }
     },
     "failed_count": 0,
-    "metamorphic_evaluation_count": 1134,
-    "passed_count": 1134,
-    "scenario_count": 246
+    "metamorphic_evaluation_count": 1233,
+    "passed_count": 1233,
+    "scenario_count": 264
   },
-  "metamorphic_policy_evaluations": 1134,
+  "metamorphic_policy_evaluations": 1233,
   "metric_separation": {
     "bootstrap": {
       "confidence_interval": {
         "high_recall_blocked_rate": {
-          "high": 0.7938144329896907,
-          "low": 0.6666666666666666,
-          "median": 0.7323232323232324
+          "high": 0.7735849056603774,
+          "low": 0.6527777777777778,
+          "median": 0.7110091743119266
         },
         "recall_point_biserial": {
-          "high": 0.1463274940911336,
-          "low": -0.06866250203719752,
-          "median": 0.05662073838148104
+          "high": 0.14308331693718443,
+          "low": -0.051428445442281735,
+          "median": 0.06746151487321372
         },
         "recall_threshold_precision": {
-          "high": 0.3333333333333333,
-          "low": 0.20603015075376885,
-          "median": 0.26666666666666666
+          "high": 0.3470319634703196,
+          "low": 0.22580645161290322,
+          "median": 0.2889908256880734
         }
       },
       "iterations": 1000,
@@ -730,43 +741,43 @@
     "gate_cascade": [
       {
         "false_negative": 0,
-        "false_positive": 144,
+        "false_positive": 153,
         "label": "recall>=0.8",
-        "precision": 0.26903553299492383,
+        "precision": 0.28837209302325584,
         "recall": 1.0,
-        "specificity": 0.02702702702702703,
+        "specificity": 0.025477707006369428,
         "true_negative": 4,
-        "true_positive": 53
+        "true_positive": 62
       },
       {
         "false_negative": 0,
-        "false_positive": 112,
+        "false_positive": 121,
         "label": "+ score candidate",
-        "precision": 0.3212121212121212,
+        "precision": 0.33879781420765026,
         "recall": 1.0,
-        "specificity": 0.24324324324324326,
+        "specificity": 0.22929936305732485,
         "true_negative": 36,
-        "true_positive": 53
+        "true_positive": 62
       },
       {
         "false_negative": 0,
         "false_positive": 28,
         "label": "+ source bound",
-        "precision": 0.654320987654321,
+        "precision": 0.6888888888888889,
         "recall": 1.0,
-        "specificity": 0.8108108108108109,
-        "true_negative": 120,
-        "true_positive": 53
+        "specificity": 0.821656050955414,
+        "true_negative": 129,
+        "true_positive": 62
       },
       {
         "false_negative": 0,
         "false_positive": 18,
         "label": "+ review role",
-        "precision": 0.7464788732394366,
+        "precision": 0.775,
         "recall": 1.0,
-        "specificity": 0.8783783783783784,
-        "true_negative": 130,
-        "true_positive": 53
+        "specificity": 0.8853503184713376,
+        "true_negative": 139,
+        "true_positive": 62
       },
       {
         "false_negative": 0,
@@ -775,42 +786,42 @@
         "precision": 1.0,
         "recall": 1.0,
         "specificity": 1.0,
-        "true_negative": 148,
-        "true_positive": 53
+        "true_negative": 157,
+        "true_positive": 62
       }
     ],
     "high_recall_blocked": {
-      "count": 144,
-      "denominator": 197,
+      "count": 153,
+      "denominator": 215,
       "failure_flags": {
         "authority_omission": 5,
         "contestation_failure": 1,
         "counter_material_suppression": 25,
         "invalid_authority": 1,
-        "ranking_drift": 9,
-        "source_attribution_gap": 105,
+        "ranking_drift": 12,
+        "source_attribution_gap": 114,
         "summary_distortion": 21,
         "unauthorized_action": 10
       },
-      "rate": 0.7309644670050761,
+      "rate": 0.7116279069767442,
       "status_distribution": {
         "no_external_legal_effect": 31,
         "professional_support_output": 10,
-        "reference_information": 103
+        "reference_information": 112
       }
     },
-    "metric_scenario_count": 201,
+    "metric_scenario_count": 219,
     "permutation": {
       "iterations": 1000,
       "metric": "recall_point_biserial",
-      "observed_abs": 0.055975602252872646,
+      "observed_abs": 0.06394455354760457,
       "seed": 10506,
-      "two_sided_p": 0.43356643356643354
+      "two_sided_p": 0.35364635364635366
     },
-    "qualified_count": 53,
-    "recall_point_biserial": 0.055975602252872646
+    "qualified_count": 62,
+    "recall_point_biserial": 0.06394455354760457
   },
-  "metric_separation_evaluations": 201,
+  "metric_separation_evaluations": 219,
   "metric_statistical_resamples": 2000,
   "model_output_transcript_evaluations": 50,
   "model_output_transcript_verification": {
@@ -822,22 +833,22 @@
     "scenario_sections_verified": 10
   },
   "policy_constants_replay": {
-    "cap_or_failure_transition_count": 158,
-    "check_count": 4428,
+    "cap_or_failure_transition_count": 167,
+    "check_count": 4752,
     "failed_check_count": 0,
-    "passed_check_count": 4428,
+    "passed_check_count": 4752,
     "policy_path": "policy/legal_output_policy.json",
-    "scenario_count": 246,
+    "scenario_count": 264,
     "status_distribution": {
       "decision_support_reason": 12,
       "no_external_legal_effect": 32,
-      "normative_material_screening_output": 42,
+      "normative_material_screening_output": 51,
       "professional_support_output": 23,
-      "reference_information": 137
+      "reference_information": 146
     },
-    "verified_scenario_count": 246
+    "verified_scenario_count": 264
   },
-  "policy_constants_replay_checks": 4428,
+  "policy_constants_replay_checks": 4752,
   "query_perturbation": {
     "authority_coverage_unstable_group_count": 3,
     "counter_recall_unstable_group_count": 0,
@@ -871,103 +882,103 @@
   "query_portfolio_evaluations": 320,
   "ranking_visibility": {
     "counterfactual_front_window_counter_visible": 0,
-    "coverage_preserved_count": 76,
-    "downgraded_count": 76,
-    "eligible_packet_count": 230,
+    "coverage_preserved_count": 85,
+    "downgraded_count": 85,
+    "eligible_packet_count": 248,
     "first_counter_rank_distribution": {
       "1": 14,
-      "2": 64,
-      "3": 110,
-      "4": 9
+      "2": 70,
+      "3": 119,
+      "4": 12
     },
-    "front_window_counter_not_visible": 34,
-    "front_window_counter_visible": 183,
-    "front_window_packet_count": 217,
-    "mean_reciprocal_first_counter_rank": 0.4310490693739425,
+    "front_window_counter_not_visible": 37,
+    "front_window_counter_visible": 198,
+    "front_window_packet_count": 235,
+    "mean_reciprocal_first_counter_rank": 0.42635658914728686,
     "median_first_counter_rank": 3.0,
-    "rank_intervention_applied_count": 76,
-    "rank_order_counterfactual_count": 76,
-    "rank_order_passed_count": 76,
-    "visibility_check_count": 230,
-    "window_check_count": 884,
+    "rank_intervention_applied_count": 85,
+    "rank_order_counterfactual_count": 85,
+    "rank_order_passed_count": 85,
+    "visibility_check_count": 248,
+    "window_check_count": 956,
     "window_sensitivity": [
       {
-        "counter_not_visible_count": 216,
+        "counter_not_visible_count": 234,
         "counter_visible_count": 14,
-        "eligible_packet_count": 230,
-        "visible_ratio": 0.06086956521739131,
+        "eligible_packet_count": 248,
+        "visible_ratio": 0.056451612903225805,
         "window_size": 1
       },
       {
-        "counter_not_visible_count": 145,
-        "counter_visible_count": 78,
-        "eligible_packet_count": 223,
-        "visible_ratio": 0.34977578475336324,
+        "counter_not_visible_count": 157,
+        "counter_visible_count": 84,
+        "eligible_packet_count": 241,
+        "visible_ratio": 0.34854771784232363,
         "window_size": 2
       },
       {
-        "counter_not_visible_count": 34,
-        "counter_visible_count": 183,
-        "eligible_packet_count": 217,
-        "visible_ratio": 0.8433179723502304,
+        "counter_not_visible_count": 37,
+        "counter_visible_count": 198,
+        "eligible_packet_count": 235,
+        "visible_ratio": 0.8425531914893617,
         "window_size": 3
       },
       {
         "counter_not_visible_count": 25,
-        "counter_visible_count": 189,
-        "eligible_packet_count": 214,
-        "visible_ratio": 0.883177570093458,
+        "counter_visible_count": 207,
+        "eligible_packet_count": 232,
+        "visible_ratio": 0.8922413793103449,
         "window_size": 4
       }
     ]
   },
-  "ranking_visibility_checks": 230,
-  "ranking_visibility_counterfactuals": 76,
-  "ranking_visibility_window_checks": 884,
-  "recoded_evaluations": 492,
+  "ranking_visibility_checks": 248,
+  "ranking_visibility_counterfactuals": 85,
+  "ranking_visibility_window_checks": 956,
+  "recoded_evaluations": 528,
   "repair_frontier": {
-    "blocked_claim_count": 184,
-    "counterfactual_evaluation_count": 4474,
+    "blocked_claim_count": 193,
+    "counterfactual_evaluation_count": 4831,
     "minimal_repair_gate_frequency": {
       "audit_vector_completion": 33,
       "authority_packet_completion": 65,
       "decision_adoption_completion": 15,
       "failure_flag_resolution": 3,
-      "rank_salience_completion": 37,
-      "review_contestability_completion": 20,
-      "role_cap_completion": 20,
-      "source_binding_completion": 154
+      "rank_salience_completion": 43,
+      "review_contestability_completion": 29,
+      "role_cap_completion": 29,
+      "source_binding_completion": 172
     },
     "minimal_repair_size_distribution": {
       "1": 108,
-      "2": 34,
-      "3": 39,
+      "2": 40,
+      "3": 42,
       "4": 3
     },
-    "repairable_count": 184,
+    "repairable_count": 193,
     "unrepairable_count": 0
   },
-  "repair_frontier_evaluations": 4474,
-  "scenario_files": 246,
-  "source_chain_attack_evaluations": 1674,
+  "repair_frontier_evaluations": 4831,
+  "scenario_files": 264,
+  "source_chain_attack_evaluations": 1953,
   "source_chain_attacks": {
     "blocked_reason_distribution": {
-      "authority_omission": 864,
-      "counter_material_suppression": 864,
-      "source_attribution_gap": 864,
-      "summary_distortion": 1296
+      "authority_omission": 1008,
+      "counter_material_suppression": 1008,
+      "source_attribution_gap": 1008,
+      "summary_distortion": 1512
     },
     "disposition_distribution": {
-      "downgrade": 54,
-      "suspension": 324,
-      "withdrawal": 1296
+      "downgrade": 63,
+      "suspension": 378,
+      "withdrawal": 1512
     },
-    "expected_passed": 1674,
-    "high_upstream_but_blocked": 1674,
-    "scenario_count": 1674,
+    "expected_passed": 1953,
+    "high_upstream_but_blocked": 1953,
+    "scenario_count": 1953,
     "status_distribution": {
-      "no_external_legal_effect": 1296,
-      "reference_information": 378
+      "no_external_legal_effect": 1512,
+      "reference_information": 441
     }
   },
   "source_text_anchor_evaluations": 30,
@@ -979,17 +990,17 @@
     "verified_ratio": 1.0
   },
   "status_certificate": {
-    "cap_or_failure_transition_count": 158,
-    "certificate_count": 246,
+    "cap_or_failure_transition_count": 167,
+    "certificate_count": 264,
     "failed_proof_obligation_count": 0,
-    "passed_check_count": 5658,
-    "passed_proof_obligation_count": 4182,
-    "proof_obligation_count": 4182,
-    "replay_check_count": 5658,
-    "verified_certificate_count": 246
+    "passed_check_count": 6072,
+    "passed_proof_obligation_count": 4488,
+    "proof_obligation_count": 4488,
+    "replay_check_count": 6072,
+    "verified_certificate_count": 264
   },
-  "status_certificate_proof_obligations": 4182,
-  "status_certificate_replay_checks": 5658,
+  "status_certificate_proof_obligations": 4488,
+  "status_certificate_replay_checks": 6072,
   "status_lattice": {
     "cover_edge_diagnostics": {
       "checks": 1632960,
@@ -1129,7 +1140,7 @@
   "status_lattice_substitution_predictions": 1632960,
   "substitute_theory_falsification": [
     {
-      "additional_evidence": "144/197 high-recall outputs were blocked below normative screening",
+      "additional_evidence": "153/215 high-recall outputs were blocked below normative screening",
       "falsified": true,
       "full_protocol_false_negative": 0,
       "full_protocol_false_positive": 0,
@@ -1137,8 +1148,8 @@
       "lattice_false_positive": null,
       "lattice_precision": null,
       "scenario_false_negative": 0,
-      "scenario_false_positive": 144,
-      "scenario_precision": 0.26903553299492383,
+      "scenario_false_positive": 153,
+      "scenario_precision": 0.28837209302325584,
       "scenario_recall": 1.0,
       "substitute": "Recall/F1/precision thresholds confer procedural status",
       "theory": "Performance sufficiency"
@@ -1153,7 +1164,7 @@
       "lattice_precision": 0.05,
       "scenario_false_negative": 0,
       "scenario_false_positive": 72,
-      "scenario_precision": 0.42857142857142855,
+      "scenario_precision": 0.4666666666666667,
       "scenario_recall": 1.0,
       "substitute": "Source-bound evidence alone confers procedural status",
       "theory": "Source-label sufficiency"
@@ -1168,7 +1179,7 @@
       "lattice_precision": 0.0168,
       "scenario_false_negative": 0,
       "scenario_false_positive": 149,
-      "scenario_precision": 0.2660098522167488,
+      "scenario_precision": 0.2971698113207547,
       "scenario_recall": 1.0,
       "substitute": "Review posture or role readiness confers procedural status",
       "theory": "Review-label sufficiency"
@@ -1182,14 +1193,14 @@
       "lattice_false_positive": 24792,
       "lattice_precision": 0.0067,
       "scenario_false_negative": 0,
-      "scenario_false_positive": 174,
-      "scenario_precision": 0.23684210526315788,
+      "scenario_false_positive": 183,
+      "scenario_precision": 0.25609756097560976,
       "scenario_recall": 1.0,
       "substitute": "Total audit score confers procedural status",
       "theory": "Score sufficiency"
     }
   ],
-  "suite_count": 34,
+  "suite_count": 37,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1342,6 +1353,41 @@
     },
     {
       "blocked_reason_distribution": {
+        "ranking_drift": 3,
+        "source_attribution_gap": 9
+      },
+      "evidence_class": "identity-neutral model-output audit",
+      "expected_passed": 9,
+      "finding": "Tests whether high-recall outputs from three model engines remain capped without source-bound legal-material chains.",
+      "high_upstream_but_blocked": 9,
+      "id": "cross_engine_model_outputs",
+      "label": "Cross-engine raw model outputs",
+      "mean_audit_score": 9,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 9,
+      "status_distribution": {
+        "reference_information": 9
+      },
+      "validation_units": "36 cross-engine raw outputs"
+    },
+    {
+      "blocked_reason_distribution": {},
+      "evidence_class": "identity-neutral source-support intervention",
+      "expected_passed": 9,
+      "finding": "Tests whether the same issue outputs qualify after source-support validation, regardless of model identity.",
+      "high_upstream_but_blocked": 0,
+      "id": "cross_engine_model_repairs",
+      "label": "Cross-engine source-supported repairs",
+      "mean_audit_score": 11,
+      "mean_upstream_recall": 1.0,
+      "scenario_count": 9,
+      "status_distribution": {
+        "normative_material_screening_output": 9
+      },
+      "validation_units": "36 cross-engine source-supported outputs"
+    },
+    {
+      "blocked_reason_distribution": {
         "counter_material_suppression": 10,
         "ranking_drift": 1,
         "source_attribution_gap": 20,
@@ -1427,48 +1473,48 @@
     },
     {
       "blocked_reason_distribution": {
-        "authority_omission": 864,
-        "counter_material_suppression": 864,
-        "source_attribution_gap": 864,
-        "summary_distortion": 1296
+        "authority_omission": 1008,
+        "counter_material_suppression": 1008,
+        "source_attribution_gap": 1008,
+        "summary_distortion": 1512
       },
       "evidence_class": "whole-matrix source-chain negative control",
       "finding": "Applies every nonempty combination of locator, output-source link, procedural source tag, high-authority recall and counter-material recall attacks across every qualified packet; all attacked variants must lose high status through downgrade, suspension or withdrawal despite high scores and high upstream recall.",
-      "high_upstream_but_blocked": 1674,
+      "high_upstream_but_blocked": 1953,
       "id": "source_chain_attacks",
       "label": "Qualified-output source-chain attacks",
-      "mean_audit_score": 11.277777777777779,
-      "mean_upstream_recall": 0.9890740740740741,
-      "rule_pass": "1674/1674",
-      "scenario_count": 1674,
+      "mean_audit_score": 11.238095238095237,
+      "mean_upstream_recall": 0.9906349206349206,
+      "rule_pass": "1953/1953",
+      "scenario_count": 1953,
       "status_distribution": {
-        "no_external_legal_effect": 1296,
-        "reference_information": 378
+        "no_external_legal_effect": 1512,
+        "reference_information": 441
       },
-      "validation_units": "1674 attack variants over qualified packets"
+      "validation_units": "1953 attack variants over qualified packets"
     },
     {
       "blocked_reason_distribution": {
-        "contestation_failure": 54,
-        "counter_material_suppression": 54,
-        "jurisdiction_assumption_gap": 54,
-        "source_attribution_gap": 54
+        "contestation_failure": 63,
+        "counter_material_suppression": 63,
+        "jurisdiction_assumption_gap": 63,
+        "source_attribution_gap": 63
       },
       "evidence_class": "whole-matrix challenge-response validation",
       "finding": "Applies valid counter-material, source-verification, jurisdiction and contestability-channel challenges plus unsupported challenge controls across every qualified packet; valid challenges must block high status while unsupported challenges preserve it.",
-      "high_upstream_but_blocked": 216,
+      "high_upstream_but_blocked": 252,
       "id": "contestation_challenges",
       "label": "Dynamic contestation challenges",
-      "mean_audit_score": 11.277777777777779,
-      "mean_upstream_recall": 0.9890740740740741,
-      "rule_pass": "270/270",
-      "scenario_count": 270,
+      "mean_audit_score": 11.238095238095237,
+      "mean_upstream_recall": 0.9906349206349206,
+      "rule_pass": "315/315",
+      "scenario_count": 315,
       "status_distribution": {
         "decision_support_reason": 12,
-        "normative_material_screening_output": 42,
-        "reference_information": 216
+        "normative_material_screening_output": 51,
+        "reference_information": 252
       },
-      "validation_units": "270 challenge variants over qualified packets"
+      "validation_units": "315 challenge variants over qualified packets"
     },
     {
       "evidence_class": "external source-grounding check",
@@ -1502,6 +1548,24 @@
         "scenario_sections_verified": 10
       },
       "validation_units": "50 raw transcript locator checks"
+    },
+    {
+      "evidence_class": "identity-neutral raw-output provenance check",
+      "finding": "Checks that cross-engine raw-output locators are anchored in committed transcripts across three model engines.",
+      "high_upstream_but_blocked": null,
+      "id": "cross_engine_transcript_verification",
+      "label": "Cross-engine transcript anchors",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "36/36 verified",
+      "scenario_count": 36,
+      "status_distribution": {
+        "all_locators_verified": true,
+        "engines": 3,
+        "issues": 3,
+        "scenario_sections_verified": 9
+      },
+      "validation_units": "36 cross-engine transcript locator checks"
     },
     {
       "evidence_class": "exhaustive model-property check",
@@ -1552,14 +1616,14 @@
       "label": "Metric separation analysis",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "recall-threshold precision 0.27; reference gate FP 0",
-      "scenario_count": 201,
+      "rule_pass": "recall-threshold precision 0.29; reference gate FP 0",
+      "scenario_count": 219,
       "status_distribution": {
-        "high_recall_blocked_rate": 0.73,
+        "high_recall_blocked_rate": 0.71,
         "recall_point_biserial": 0.06,
         "reference_gate_false_positive": 0
       },
-      "validation_units": "201 upstream-metric scenario packets"
+      "validation_units": "219 upstream-metric scenario packets"
     },
     {
       "evidence_class": "alternative-policy comparison",
@@ -1570,15 +1634,15 @@
       "mean_audit_score": null,
       "mean_upstream_recall": null,
       "rule_pass": "best simplified FP 38; reference rule FP 0",
-      "scenario_count": 2772,
+      "scenario_count": 2988,
       "status_distribution": {
-        "best_simplified_precision": 0.59,
+        "best_simplified_precision": 0.62,
         "best_simplified_recall": 1.0,
         "reference_rule_false_negative": 0,
         "reference_rule_false_positive": 0,
         "simplified_rules_with_errors": 1
       },
-      "validation_units": "2772 baseline predictions over 12 rules"
+      "validation_units": "2988 baseline predictions over 12 rules"
     },
     {
       "evidence_class": "counterfactual gate-necessity check",
@@ -1588,8 +1652,8 @@
       "label": "Qualified-output gate ablations",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "336/336",
-      "scenario_count": 336,
+      "rule_pass": "390/390",
+      "scenario_count": 390,
       "status_distribution": {
         "missing_counter_material": 0,
         "missing_decision_adoption": 0,
@@ -1599,7 +1663,7 @@
         "nonprocedural_source_tags": 0,
         "professional_role_cap": 0
       },
-      "validation_units": "336 ablations over 54 qualified packets"
+      "validation_units": "390 ablations over 63 qualified packets"
     },
     {
       "evidence_class": "non-substitution witness validation",
@@ -1609,13 +1673,13 @@
       "label": "Gate-contrast witness pairs",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "336/336",
-      "scenario_count": 336,
+      "rule_pass": "390/390",
+      "scenario_count": 390,
       "status_distribution": {
         "normative_material_screening_output": 12,
-        "reference_information": 324
+        "reference_information": 378
       },
-      "validation_units": "336 witness pairs over 54 qualified packets"
+      "validation_units": "390 witness pairs over 63 qualified packets"
     },
     {
       "evidence_class": "counterfactual repair-necessity check",
@@ -1625,15 +1689,15 @@
       "label": "Blocked-claim repair frontiers",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "184/184 repairable",
-      "scenario_count": 4474,
+      "rule_pass": "193/193 repairable",
+      "scenario_count": 4831,
       "status_distribution": {
         "1": 108,
-        "2": 34,
-        "3": 39,
+        "2": 40,
+        "3": 42,
         "4": 3
       },
-      "validation_units": "4474 repair counterfactuals over 184 blocked claims"
+      "validation_units": "4831 repair counterfactuals over 193 blocked claims"
     },
     {
       "evidence_class": "cross-profile gate check",
@@ -1643,14 +1707,14 @@
       "label": "Jurisdiction-profile mutations",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "233/233 profile checks; 162/162 mutations",
-      "scenario_count": 395,
+      "rule_pass": "251/251 profile checks; 189/189 mutations",
+      "scenario_count": 440,
       "status_distribution": {
-        "generic_preserved": 54,
-        "mismatch_downgraded": 54,
-        "missing_downgraded": 54
+        "generic_preserved": 63,
+        "mismatch_downgraded": 63,
+        "missing_downgraded": 63
       },
-      "validation_units": "395 profile checks and counterfactuals"
+      "validation_units": "440 profile checks and counterfactuals"
     },
     {
       "evidence_class": "rank-salience counterfactual check",
@@ -1660,19 +1724,19 @@
       "label": "Ranking-visibility diagnostics",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "76/76 rank-order",
-      "scenario_count": 960,
+      "rule_pass": "85/85 rank-order",
+      "scenario_count": 1041,
       "status_distribution": {
         "counterfactual_front_window_counter_visible": 0,
-        "coverage_preserved": 76,
-        "downgraded": 76,
-        "front_window_counter_not_visible": 34,
-        "front_window_counter_visible": 183,
+        "coverage_preserved": 85,
+        "downgraded": 85,
+        "front_window_counter_not_visible": 37,
+        "front_window_counter_visible": 198,
         "mean_reciprocal_first_counter_rank": 0.43,
         "median_first_counter_rank": 3.0,
-        "rank_intervention_applied": 76
+        "rank_intervention_applied": 85
       },
-      "validation_units": "884 rank-window checks over 230 high-status claims plus 76 rank-order counterfactuals"
+      "validation_units": "956 rank-window checks over 248 high-status claims plus 85 rank-order counterfactuals"
     },
     {
       "evidence_class": "proof-carrying certificate replay",
@@ -1682,15 +1746,15 @@
       "label": "Proof-carrying status certificates",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "5658/5658 checks; 4182/4182 obligations",
-      "scenario_count": 9840,
+      "rule_pass": "6072/6072 checks; 4488/4488 obligations",
+      "scenario_count": 10560,
       "status_distribution": {
-        "cap_or_failure_transitions": 158,
-        "proof_obligations": 4182,
-        "proof_obligations_passed": 4182,
-        "verified_certificates": 246
+        "cap_or_failure_transitions": 167,
+        "proof_obligations": 4488,
+        "proof_obligations_passed": 4488,
+        "verified_certificates": 264
       },
-      "validation_units": "5658 replay checks and 4182 proof obligations over 246 certificates"
+      "validation_units": "6072 replay checks and 4488 proof obligations over 264 certificates"
     },
     {
       "evidence_class": "proof-certificate negative-control validation",
@@ -1700,14 +1764,14 @@
       "label": "Certificate tamper-resistance",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "5415/5415 rejected",
-      "scenario_count": 5415,
+      "rule_pass": "5811/5811 rejected",
+      "scenario_count": 5811,
       "status_distribution": {
-        "base_certificates": 246,
+        "base_certificates": 264,
         "missed_tamper_cases": 0,
         "tamper_families": 25
       },
-      "validation_units": "5415 tamper cases across 25 families"
+      "validation_units": "5811 tamper cases across 25 families"
     },
     {
       "evidence_class": "second implementation check",
@@ -1717,16 +1781,16 @@
       "label": "Policy-constants replay",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "4428/4428",
-      "scenario_count": 4428,
+      "rule_pass": "4752/4752",
+      "scenario_count": 4752,
       "status_distribution": {
         "decision_support_reason": 12,
         "no_external_legal_effect": 32,
-        "normative_material_screening_output": 42,
+        "normative_material_screening_output": 51,
         "professional_support_output": 23,
-        "reference_information": 137
+        "reference_information": 146
       },
-      "validation_units": "4428 replay checks over 246 packets"
+      "validation_units": "4752 replay checks over 264 packets"
     },
     {
       "evidence_class": "expected-label-free policy-invariant validation",
@@ -1736,18 +1800,18 @@
       "label": "Metamorphic policy tests",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "1134/1134",
-      "scenario_count": 1134,
+      "rule_pass": "1233/1233",
+      "scenario_count": 1233,
       "status_distribution": {
-        "back_office_role_cap": 246,
-        "benign_source_append_preserves_high_status": 54,
-        "claim_escalation_nonpromotion": 246,
-        "review_gate_removal_blocks_high_status": 54,
-        "score_and_role_inflation_without_adoption": 234,
-        "source_tag_deproceduralization_blocks_high_status": 54,
-        "upstream_metric_inflation_invariance": 246
+        "back_office_role_cap": 264,
+        "benign_source_append_preserves_high_status": 63,
+        "claim_escalation_nonpromotion": 264,
+        "review_gate_removal_blocks_high_status": 63,
+        "score_and_role_inflation_without_adoption": 252,
+        "source_tag_deproceduralization_blocks_high_status": 63,
+        "upstream_metric_inflation_invariance": 264
       },
-      "validation_units": "1134 transformations over 246 packets"
+      "validation_units": "1233 transformations over 264 packets"
     },
     {
       "evidence_class": "public-retrieval query-sensitivity diagnostic",
@@ -1798,13 +1862,13 @@
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "234/246 stable across all policies",
-      "scenario_count": 246,
+      "rule_pass": "252/264 stable across all policies",
+      "scenario_count": 264,
       "status_distribution": {
         "base_vs_lenient_weighted_agreement": 0.98,
         "base_vs_strict_weighted_agreement": 1.0
       },
-      "validation_units": "492 strict/lenient recoded evaluations"
+      "validation_units": "528 strict/lenient recoded evaluations"
     },
     {
       "evidence_class": "score-noise robustness",
@@ -1814,15 +1878,15 @@
       "label": "Annotation uncertainty Monte Carlo",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.933 sample stability; 0.924 qualified high-status stability",
-      "scenario_count": 61500,
+      "rule_pass": "0.930 sample stability; 0.916 qualified high-status stability",
+      "scenario_count": 66000,
       "status_distribution": {
-        "boundary_scenarios": 143,
+        "boundary_scenarios": 161,
         "exact_stable_scenarios": 102,
-        "high_status_stable_scenarios": 183,
-        "mean_status_rank_shift": 0.086
+        "high_status_stable_scenarios": 193,
+        "mean_status_rank_shift": 0.092
       },
-      "validation_units": "61500 score-perturbed evaluations"
+      "validation_units": "66000 score-perturbed evaluations"
     },
     {
       "evidence_class": "codebook reproducibility",
@@ -1832,30 +1896,30 @@
       "label": "Score-blinded dual coding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.99 coder kappa; 0.37 weakest base-dimension kappa (Q); 0.86 min base-dimension exact; 0.14 max score drift",
-      "scenario_count": 222,
+      "rule_pass": "0.99 coder kappa; 0.37 weakest base-dimension kappa (Q); 0.87 min base-dimension exact; 0.13 max score drift",
+      "scenario_count": 240,
       "status_distribution": {
-        "base_dimension_max_mean_absolute_delta": 0.14,
-        "base_dimension_min_exact_agreement": 0.86,
+        "base_dimension_max_mean_absolute_delta": 0.13,
+        "base_dimension_min_exact_agreement": 0.87,
         "base_dimension_min_kappa": 0.37,
         "base_dimension_min_kappa_coder": "coder_a",
         "base_dimension_min_kappa_dimension": "Q",
-        "base_dimension_min_kappa_exact_agreement": 0.96,
-        "base_dimension_min_pabak": 0.79,
+        "base_dimension_min_kappa_exact_agreement": 0.97,
+        "base_dimension_min_pabak": 0.81,
         "coder_cohen_kappa": 0.99,
         "coder_exact_status_agreement": 0.99,
-        "coder_quadratic_weighted_kappa": 0.96,
+        "coder_quadratic_weighted_kappa": 0.97,
         "coder_weighted_status_agreement": 0.99,
-        "min_base_cohen_kappa": 0.92,
+        "min_base_cohen_kappa": 0.93,
         "min_base_exact_status_agreement": 0.95,
         "min_base_quadratic_weighted_kappa": 0.9,
-        "min_base_weighted_status_agreement": 0.97,
+        "min_base_weighted_status_agreement": 0.98,
         "minimum_dimension_kappa": 0.93,
         "minimum_failure_flag_exact_agreement": 0.97,
         "minimum_missing_gate_exact_agreement": 0.98,
         "status_disagreements": 2
       },
-      "validation_units": "222 packets x 2 coding passes"
+      "validation_units": "240 packets x 2 coding passes"
     }
   ],
   "threshold_sensitivity": {
@@ -1872,9 +1936,9 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 42,
+          "normative_material_screening_output": 51,
           "professional_support_output": 23,
-          "reference_information": 137
+          "reference_information": 146
         },
         "status_flips_from_default": 0
       },
@@ -1886,9 +1950,9 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 42,
+          "normative_material_screening_output": 51,
           "professional_support_output": 23,
-          "reference_information": 137
+          "reference_information": 146
         },
         "status_flips_from_default": 0
       },
@@ -1900,9 +1964,9 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 42,
+          "normative_material_screening_output": 51,
           "professional_support_output": 23,
-          "reference_information": 137
+          "reference_information": 146
         },
         "status_flips_from_default": 0
       },
@@ -1914,59 +1978,64 @@
         "status_distribution": {
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
-          "normative_material_screening_output": 40,
+          "normative_material_screening_output": 49,
           "professional_support_output": 25,
-          "reference_information": 137
+          "reference_information": 146
         },
         "status_flips_from_default": 2
       },
       {
         "decision_threshold": 13,
-        "demotions_from_default": 49,
+        "demotions_from_default": 58,
         "normative_threshold": 12,
         "promotions_from_default": 0,
         "status_distribution": {
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 17,
-          "professional_support_output": 60,
-          "reference_information": 137
+          "professional_support_output": 69,
+          "reference_information": 146
         },
-        "status_flips_from_default": 49
+        "status_flips_from_default": 58
       }
     ],
-    "scenario_count": 246
+    "scenario_count": 264
   },
-  "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 3651560,
+  "threshold_sensitivity_evaluations": 1320,
+  "total_evaluation_rows": 3658964,
   "validation_units": {
     "adversarial_model_outputs": 60,
-    "annotation_recodings": 492,
-    "annotation_uncertainty_evaluations": 61500,
-    "baseline_comparison_predictions": 2772,
-    "blind_coding_packets": 222,
-    "certificate_tamper_cases": 5415,
-    "certificate_tamper_rejected": 5415,
-    "contestation_challenge_passed": 270,
-    "contestation_challenge_variants": 270,
+    "annotation_recodings": 528,
+    "annotation_uncertainty_evaluations": 66000,
+    "baseline_comparison_predictions": 2988,
+    "blind_coding_packets": 240,
+    "certificate_tamper_cases": 5811,
+    "certificate_tamper_rejected": 5811,
+    "contestation_challenge_passed": 315,
+    "contestation_challenge_variants": 315,
+    "cross_engine_count": 3,
+    "cross_engine_raw_outputs": 9,
+    "cross_engine_source_bound_outputs": 9,
+    "cross_engine_transcript_locator_checks": 36,
+    "cross_engine_transcript_locators_verified": 36,
     "evidence_ladder_model_outputs": 70,
     "formal_invariant_checks": 51643,
     "formal_invariant_passed": 51643,
-    "gate_ablation_evaluations": 336,
-    "gate_contrast_witnesses": 336,
-    "gate_contrast_witnesses_passed": 336,
+    "gate_ablation_evaluations": 390,
+    "gate_contrast_witnesses": 390,
+    "gate_contrast_witnesses_passed": 390,
     "holdout_records": 126,
     "issue_ablations": 20,
     "issue_gold_sets": 5,
     "issue_public_records": 19,
-    "jurisdiction_profile_evaluations": 395,
-    "metamorphic_policy_evaluations": 1134,
-    "metamorphic_policy_passed": 1134,
-    "metric_separation_evaluations": 201,
+    "jurisdiction_profile_evaluations": 440,
+    "metamorphic_policy_evaluations": 1233,
+    "metamorphic_policy_passed": 1233,
+    "metric_separation_evaluations": 219,
     "metric_statistical_resamples": 2000,
     "model_output_transcript_locator_checks": 50,
     "model_output_transcript_locators_verified": 50,
-    "policy_constants_replay_checks": 4428,
-    "policy_constants_replay_passed": 4428,
+    "policy_constants_replay_checks": 4752,
+    "policy_constants_replay_passed": 4752,
     "public_metadata_records": 120,
     "public_retrieval_records": 169,
     "public_system_records": 60,
@@ -1974,27 +2043,27 @@
     "query_perturbation_variants": 30,
     "query_portfolio_evaluations": 320,
     "query_portfolios": 315,
-    "ranking_visibility_checks": 230,
-    "ranking_visibility_counterfactuals": 76,
-    "ranking_visibility_window_checks": 884,
+    "ranking_visibility_checks": 248,
+    "ranking_visibility_counterfactuals": 85,
+    "ranking_visibility_window_checks": 956,
     "raw_model_outputs": 10,
-    "repair_frontier_evaluations": 4474,
+    "repair_frontier_evaluations": 4831,
     "source_bound_model_outputs": 10,
-    "source_chain_attack_passed": 1674,
-    "source_chain_attack_variants": 1674,
+    "source_chain_attack_passed": 1953,
+    "source_chain_attack_variants": 1953,
     "source_text_anchor_checks": 30,
     "source_text_anchor_verified": 30,
-    "status_certificate_proof_obligations": 4182,
-    "status_certificate_proof_obligations_passed": 4182,
-    "status_certificate_replay_checks": 5658,
-    "status_certificates_verified": 246,
+    "status_certificate_proof_obligations": 4488,
+    "status_certificate_proof_obligations_passed": 4488,
+    "status_certificate_replay_checks": 6072,
+    "status_certificates_verified": 264,
     "status_lattice_cover_edges": 1632960,
     "status_lattice_gate_ablation_checks": 851,
     "status_lattice_necessity_checks": 851,
     "status_lattice_states": 233280,
     "status_lattice_substitution_predictions": 1632960,
     "stress_scenarios": 10,
-    "threshold_sensitivity_evaluations": 1230,
-    "total": 679
+    "threshold_sensitivity_evaluations": 1320,
+    "total": 697
   }
 }

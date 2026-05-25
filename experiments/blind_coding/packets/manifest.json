@@ -210,6 +210,96 @@
     "packet_path": "experiments/blind_coding/packets/source-bound-codex55-us-03.json"
   },
   {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-codex-gpt54-mini-us-agency-deference.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-codex-gpt55-eu-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-codex-gpt55-us-agency-deference",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-codex-gpt55-us-agency-deference.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "cross-engine-gemini-25-pro-us-agency-deference",
+    "packet_path": "experiments/blind_coding/packets/cross-engine-gemini-25-pro-us-agency-deference.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+  },
+  {
+    "claimed_status": "normative_material_screening_output",
+    "packet_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+    "packet_path": "experiments/blind_coding/packets/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+  },
+  {
     "claimed_status": "decision_support_reason",
     "packet_id": "evidence-ladder-codex55-eu-01--authorized-decision-support",
     "packet_path": "experiments/blind_coding/packets/evidence-ladder-codex55-eu-01--authorized-decision-support.json"

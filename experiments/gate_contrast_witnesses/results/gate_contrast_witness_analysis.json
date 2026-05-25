@@ -9,51 +9,51 @@
     },
     "contestability_gate": {
       "failed": 0,
-      "passed": 54,
-      "score_metric_role_preserved": 54,
-      "status_separated": 54,
-      "total": 54
+      "passed": 63,
+      "score_metric_role_preserved": 63,
+      "status_separated": 63,
+      "total": 63
     },
     "counter_material_gate": {
       "failed": 0,
-      "passed": 54,
-      "score_metric_role_preserved": 54,
-      "status_separated": 54,
-      "total": 54
+      "passed": 63,
+      "score_metric_role_preserved": 63,
+      "status_separated": 63,
+      "total": 63
     },
     "evidence_packet_gate": {
       "failed": 0,
-      "passed": 54,
-      "score_metric_role_preserved": 54,
-      "status_separated": 54,
-      "total": 54
+      "passed": 63,
+      "score_metric_role_preserved": 63,
+      "status_separated": 63,
+      "total": 63
     },
     "high_authority_gate": {
       "failed": 0,
-      "passed": 54,
-      "score_metric_role_preserved": 54,
-      "status_separated": 54,
-      "total": 54
+      "passed": 63,
+      "score_metric_role_preserved": 63,
+      "status_separated": 63,
+      "total": 63
     },
     "jurisdiction_gate": {
       "failed": 0,
-      "passed": 54,
-      "score_metric_role_preserved": 54,
-      "status_separated": 54,
-      "total": 54
+      "passed": 63,
+      "score_metric_role_preserved": 63,
+      "status_separated": 63,
+      "total": 63
     },
     "procedural_source_tag_gate": {
       "failed": 0,
-      "passed": 54,
-      "score_metric_role_preserved": 54,
-      "status_separated": 54,
-      "total": 54
+      "passed": 63,
+      "score_metric_role_preserved": 63,
+      "status_separated": 63,
+      "total": 63
     }
   },
   "failed_count": 0,
   "failures": [],
-  "passed_count": 336,
-  "qualified_scenario_count": 54,
+  "passed_count": 390,
+  "qualified_scenario_count": 63,
   "results": [
     {
       "base_role": "auditable_procedural_tool",
@@ -2673,6 +2673,978 @@
       "passed": true,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
       "scenario_id": "source-bound-codex55-us-03",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "contestability_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "evidence_packet_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "procedural_source_tag_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "authority_omission"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "high_authority_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "counter_material_suppression"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "counter_material_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "score_metric_role_preserved": true,
+      "status_separated": true,
+      "witness": "jurisdiction_gate",
+      "witness_role": "auditable_procedural_tool",
+      "witness_status": "reference_information"
+    },
+    {
+      "base_role": "auditable_procedural_tool",
+      "base_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_below": "normative_material_screening_output",
+      "failure_flags": [
+        "review_gate_failure"
+      ],
+      "missing_gates": [],
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
       "score_metric_role_preserved": true,
       "status_separated": true,
       "witness": "contestability_gate",
@@ -6080,11 +7052,11 @@
       "witness_status": "reference_information"
     }
   ],
-  "score_metric_role_preserved_count": 336,
+  "score_metric_role_preserved_count": 390,
   "status_distribution": {
     "normative_material_screening_output": 12,
-    "reference_information": 324
+    "reference_information": 378
   },
-  "status_separated_count": 336,
-  "witness_count": 336
+  "status_separated_count": 390,
+  "witness_count": 390
 }

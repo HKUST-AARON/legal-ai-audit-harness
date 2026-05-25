@@ -1,6 +1,6 @@
 # Artifact Replication Guide
 
-This repository is the companion artifact for the paper. It contains the audit harness, scenario packets, committed public snapshots, raw model-output transcript, validation scripts and generated Markdown/JSON reports.
+This repository is the companion artifact for the paper. It contains the audit harness, scenario packets, committed public snapshots, raw model-output transcripts, validation scripts and generated Markdown/JSON reports.
 
 ## Environment
 
@@ -23,36 +23,37 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 34 validation suites
-- 246 scenario files
-- 679 embedded records or output items
-- 3,651,560 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
+- 37 validation suites
+- 264 scenario files
+- 697 embedded records or output items
+- 3,658,964 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
 - 51,643/51,643 formal invariant checks passed
 - 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions
 - 851/851 status-lattice high-status necessity checks and 851/851 gate-ablation drops passed
-- 201 metric-separation evaluations
+- 219 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
-- 2,772 baseline-rule predictions across 12 alternative status rules
+- 2,988 baseline-rule predictions across 12 alternative status rules
 - a substitute-theory falsification summary for performance, source-label, review-label and score sufficiency, with 0 full-protocol false positives
-- 336/336 gate-ablation evaluations passed
-- 336/336 gate-contrast witness pairs passed with 336/336 score/metric/role preservation and 336/336 status separation
-- 1,674/1,674 source-chain attack variants passed
-- 270/270 contestation challenge variants passed
-- 1,134/1,134 metamorphic policy tests passed
-- 184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations
-- 233/233 jurisdiction-profile checks and 162/162 profile mutations passed
-- 884 rank-window visibility checks over 230 high-status claims
-- 76/76 rank-order visibility counterfactuals downgraded with coverage preserved
-- 5,658/5,658 status-certificate replay checks and 4,182/4,182 proof obligations passed over 246 proof-carrying certificates
-- 5,415/5,415 certificate tamper-resistance cases rejected across 25 families
-- 4,428/4,428 policy-constants replay checks passed
+- 390/390 gate-ablation evaluations passed
+- 390/390 gate-contrast witness pairs passed with 390/390 score/metric/role preservation and 390/390 status separation
+- 1,953/1,953 source-chain attack variants passed
+- 315/315 contestation challenge variants passed
+- 1,233/1,233 metamorphic policy tests passed
+- 193/193 blocked procedural claims repairable across 4,831 repair-frontier evaluations
+- 251/251 jurisdiction-profile checks and 189/189 profile mutations passed
+- 956 rank-window visibility checks over 248 high-status claims
+- 85/85 rank-order visibility counterfactuals downgraded with coverage preserved
+- 6,072/6,072 status-certificate replay checks and 4,488/4,488 proof obligations passed over 264 proof-carrying certificates
+- 5,811/5,811 certificate tamper-resistance cases rejected across 25 families
+- 4,752/4,752 policy-constants replay checks passed
 - 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups
 - 315 query portfolios plus 5 group frontier summaries across 5 issue groups; 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios
-- 61,500 annotation-uncertainty perturbations with 0.933 sample stability
-- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.86, minimum three-category PABAK 0.79 and maximum mean absolute score drift 0.14
-- 246/246 scenario-regression expectations passed
+- 66,000 annotation-uncertainty perturbations with 0.930 sample stability
+- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.87, minimum three-category PABAK 0.81 and maximum mean absolute score drift 0.13
+- 264/264 scenario-regression expectations passed
 - 30/30 public source-text anchors verified
 - 50/50 raw model-output transcript locators verified
+- 36/36 cross-engine transcript locators verified across 3 model engines and 3 issue families
 
 The aggregate reports are written to:
 
@@ -79,4 +80,4 @@ The expected manuscript build is 34 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.
+The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.

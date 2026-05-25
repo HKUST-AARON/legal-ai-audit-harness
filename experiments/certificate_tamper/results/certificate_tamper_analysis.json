@@ -1,30 +1,30 @@
 {
-  "base_certificate_count": 246,
+  "base_certificate_count": 264,
   "by_family": {
     "allowed_status_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "claim_supported_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "claimed_status_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "derivation_hash_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "disposition_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "duplicate_certificate_row": {
       "cases": 1,
@@ -32,9 +32,9 @@
       "rejected": 1
     },
     "expected_passed_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "extra_certificate_path": {
       "cases": 1,
@@ -42,24 +42,24 @@
       "rejected": 1
     },
     "failure_cap_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "failure_flags_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "jurisdiction_profile_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "metric_bundle_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "missing_certificate_row": {
       "cases": 1,
@@ -67,69 +67,69 @@
       "rejected": 1
     },
     "missing_gates_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "policy_body_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "policy_hash_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "proof_obligation_count_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "proof_obligation_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "role_cap_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "scenario_hash_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "scenario_id_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "score_candidate_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "score_vector_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "system_role_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     },
     "total_score_tamper": {
-      "cases": 246,
+      "cases": 264,
       "missed": 0,
-      "rejected": 246
+      "rejected": 264
     }
   },
   "certificates_path": "experiments/status_certificates/results/status_certificates.jsonl",
   "missed_tamper_count": 0,
-  "rejected_count": 5415,
+  "rejected_count": 5811,
   "rows": [
     {
       "duplicate_certificate_paths": [],
@@ -28067,6 +28067,5532 @@
       "missing_certificate_paths": [],
       "rejected": true,
       "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_id",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_id_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference-tampered"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "scenario_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "scenario_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_hash",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "policy_body",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "policy_body_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claimed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claimed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "jurisdiction_profile",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "jurisdiction_profile_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_vector",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_vector_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "total_score",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "total_score_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "score_candidate",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "score_candidate_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "system_role",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "system_role_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "role_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "role_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "missing_gates",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "missing_gates_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_flags",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_flags_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "failure_cap",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "failure_cap_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "disposition",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "disposition_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "allowed_status",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "allowed_status_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "claim_supported",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "claim_supported_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "expected_passed",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "expected_passed_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "metric_bundle",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "metric_bundle_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligations",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 1,
+      "family": "proof_obligation_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 2,
+      "failed_checks": [
+        "proof_obligation_count",
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "proof_obligation_count_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "duplicate_certificate_paths": [],
+      "extra_certificate_paths": [],
+      "failed_check_count": 1,
+      "failed_checks": [
+        "derivation_hash"
+      ],
+      "failed_proof_obligation_count": 0,
+      "family": "derivation_hash_tamper",
+      "missing_certificate_paths": [],
+      "rejected": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
     },
     {
       "duplicate_certificate_paths": [],
@@ -75699,6 +81225,6 @@
       "scenario_id": "__certificate_set__"
     }
   ],
-  "tamper_case_count": 5415,
+  "tamper_case_count": 5811,
   "tamper_family_count": 25
 }

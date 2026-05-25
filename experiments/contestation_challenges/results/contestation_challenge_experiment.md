@@ -1,19 +1,19 @@
 # Legal AI Audit Harness Experiment
 
-Scenarios: 270
-Scenario-regression expectations passed: 270/270
-Mean audit score: 11.28
+Scenarios: 315
+Scenario-regression expectations passed: 315/315
+Mean audit score: 11.24
 Mean upstream recall: 0.99
-High-upstream-performance but procedurally blocked scenarios: 216
-Blocked reason distribution: contestation_failure: 54, counter_material_suppression: 54, jurisdiction_assumption_gap: 54, source_attribution_gap: 54
+High-upstream-performance but procedurally blocked scenarios: 252
+Blocked reason distribution: contestation_failure: 63, counter_material_suppression: 63, jurisdiction_assumption_gap: 63, source_attribution_gap: 63
 
 ## Allowed Status Distribution
 
 | Status | Count |
 | --- | ---: |
 | decision_support_reason | 12 |
-| normative_material_screening_output | 42 |
-| reference_information | 216 |
+| normative_material_screening_output | 51 |
+| reference_information | 252 |
 
 ## Scenario Results
 
@@ -269,6 +269,51 @@ Blocked reason distribution: contestation_failure: 54, counter_material_suppress
 | source-bound-codex55-us-03--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
 | source-bound-codex55-us-03--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
 | source-bound-codex55-us-03--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.67 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15--challenge-contestability-channel-failure | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15--challenge-jurisdiction-assumption-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15--challenge-source-verification-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15--challenge-unsupported-challenge-control | civil_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15--challenge-valid-counter-material-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-codex-gpt54-mini-us-agency-deference--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.67 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15--challenge-contestability-channel-failure | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15--challenge-jurisdiction-assumption-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15--challenge-source-verification-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15--challenge-unsupported-challenge-control | civil_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-codex-gpt55-eu-gdpr-article15--challenge-valid-counter-material-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-codex-gpt55-us-agency-deference--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.67 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15--challenge-contestability-channel-failure | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15--challenge-jurisdiction-assumption-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15--challenge-source-verification-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15--challenge-unsupported-challenge-control | civil_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15--challenge-valid-counter-material-challenge | civil_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference--challenge-unsupported-challenge-control | common_law | normative_material_screening_output | normative_material_screening_output | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | none |
+| source-bound-cross-engine-gemini-25-pro-us-agency-deference--challenge-valid-counter-material-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 0.67 | 1.00 | 1.00 | 1.00 | 1.00 | suspension |
 | uk-mesothelioma-causation-after-fairchild--challenge-contestability-channel-failure | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
 | uk-mesothelioma-causation-after-fairchild--challenge-jurisdiction-assumption-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | downgrade |
 | uk-mesothelioma-causation-after-fairchild--challenge-source-verification-challenge | common_law | normative_material_screening_output | reference_information | 11 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.00 | downgrade |

@@ -51,6 +51,9 @@ def _checks(payload: dict) -> list[dict]:
     uncertainty = payload["annotation_uncertainty"]
     threshold_sensitivity = payload["threshold_sensitivity"]
     public_retrieval = next(row for row in payload["suites"] if row["id"] == "public_retrieval_benchmark")
+    cross_engine_raw = next(row for row in payload["suites"] if row["id"] == "cross_engine_model_outputs")
+    cross_engine_repairs = next(row for row in payload["suites"] if row["id"] == "cross_engine_model_repairs")
+    cross_engine_transcript = payload["cross_engine_transcript_verification"]
     blind = payload["blind_coding"]
     blind_pair = blind["pairwise_status"][0]
     blind_base = list(blind["base_status_agreement"].values())
@@ -190,6 +193,13 @@ def _checks(payload: dict) -> list[dict]:
         "source_total": units["source_text_anchor_checks"],
         "transcript_verified": units["model_output_transcript_locators_verified"],
         "transcript_total": units["model_output_transcript_locator_checks"],
+        "cross_engine_raw": cross_engine_raw["scenario_count"],
+        "cross_engine_raw_blocked": cross_engine_raw["high_upstream_but_blocked"],
+        "cross_engine_repairs": cross_engine_repairs["scenario_count"],
+        "cross_engine_transcript_verified": cross_engine_transcript["locators_verified"],
+        "cross_engine_transcript_total": cross_engine_transcript["locator_count"],
+        "cross_engine_count": cross_engine_transcript["engine_count"],
+        "cross_engine_issues": cross_engine_transcript["issue_count"],
         "metric_high_recall_blocked": metric["high_recall_blocked"]["count"],
         "metric_high_recall_total": metric["high_recall_blocked"]["denominator"],
         "pdf_pages": _pdf_page_count(ROOT / "manuscript" / "ai_law_case_recommendation_verifiability.pdf"),
@@ -224,6 +234,7 @@ def _checks(payload: dict) -> list[dict]:
         ("ARTIFACT.md", f"- {values['expected_passed']}/{values['expected_total']} scenario-regression expectations passed"),
         ("ARTIFACT.md", f"- {values['source_verified']}/{values['source_total']} public source-text anchors verified"),
         ("ARTIFACT.md", f"- {values['transcript_verified']}/{values['transcript_total']} raw model-output transcript locators verified"),
+        ("ARTIFACT.md", f"- {values['cross_engine_transcript_verified']}/{values['cross_engine_transcript_total']} cross-engine transcript locators verified across {values['cross_engine_count']} model engines and {values['cross_engine_issues']} issue families"),
         ("README.md", f"{values['scenario_files']} scenario files containing {values['embedded']} embedded records/items"),
         ("README.md", f"{_comma(values['formal'])} formal invariant checks"),
         ("README.md", f"{_comma(values['status_lattice_states'])} high-status claim-attempt states, {_comma(values['status_lattice_cover_edges'])} status-lattice cover edges, {_comma(values['status_lattice_substitution_predictions'])} status-lattice substitute-rule predictions"),
@@ -231,6 +242,9 @@ def _checks(payload: dict) -> list[dict]:
         ("README.md", f"{values['query_variants']} query-perturbation variants across {values['query_groups']} issue groups, {values['query_portfolios']} query portfolios plus {values['query_portfolio_groups']} group frontier summaries"),
         ("README.md", f"{_comma(values['uncertainty'])} score-uncertainty perturbations"),
         ("README.md", f"| Metric separation analysis | {values['metric']} |"),
+        ("README.md", f"| Cross-engine raw model outputs | {values['cross_engine_raw']} |"),
+        ("README.md", f"| Cross-engine source-supported repairs | {values['cross_engine_repairs']} |"),
+        ("README.md", f"| Cross-engine transcript anchors | {values['cross_engine_transcript_total']} |"),
         ("README.md", f"| Status-lattice exhaustion | {values['status_lattice_states'] + values['status_lattice_cover_edges'] + values['status_lattice_necessity'] + values['status_lattice_gate_ablation'] + values['status_lattice_substitution_predictions']} |"),
         ("README.md", f"| Metric statistical robustness | {values['metric_resamples']} |"),
         ("README.md", f"| Baseline rule comparison | {values['baseline_predictions']} |"),
@@ -287,6 +301,8 @@ def _checks(payload: dict) -> list[dict]:
         ("docs/paper_mapping.md", "Policy-constants replay"),
         ("docs/paper_mapping.md", "Annotation uncertainty Monte Carlo"),
         ("docs/paper_mapping.md", "Out-of-sample holdout validation"),
+        ("docs/paper_mapping.md", "Cross-engine raw model outputs"),
+        ("docs/paper_mapping.md", "Cross-engine source-supported repairs"),
         ("docs/paper_mapping.md", "bootstrap/permutation robustness"),
         ("docs/paper_mapping.md", "baseline-comparison layer"),
         ("docs/paper_mapping.md", "gate-ablation layer"),
@@ -308,6 +324,9 @@ def _checks(payload: dict) -> list[dict]:
         ("docs/paper_mapping.md", "base-dimension calibration"),
         ("docs/paper_mapping.md", "holdout layer"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['gate_passed']}/{values['gate']} gate-ablation evaluations"),
+        ("skills/legal-ai-audit-harness/SKILL.md", f"all {values['cross_engine_transcript_total']} cross-engine transcript locators"),
+        ("skills/legal-ai-audit-harness/SKILL.md", f"{values['cross_engine_raw']}/{values['cross_engine_raw']} cross-engine raw outputs capped"),
+        ("skills/legal-ai-audit-harness/SKILL.md", f"{values['cross_engine_repairs']}/{values['cross_engine_repairs']} cross-engine source-supported repairs qualified"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['status_lattice_states'])} high-status claim-attempt states, {_comma(values['status_lattice_cover_edges'])} status-lattice cover edges, {_comma(values['status_lattice_substitution_predictions'])} status-lattice substitute-rule predictions"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['status_lattice_necessity_passed']}/{values['status_lattice_necessity']} status-lattice high-status necessity checks"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['status_lattice_gate_ablation_passed']}/{values['status_lattice_gate_ablation']} status-lattice gate-ablation drops"),
@@ -434,7 +453,7 @@ def _checks(payload: dict) -> list[dict]:
         ("experiments/full_validation/results/full_validation_report.md", f"Source-chain attack variants: {values['source_chain_passed']}/{values['source_chain']} passed; high-upstream attacked variants blocked {values['source_chain_high_blocked']}/{values['source_chain']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Source-chain attack dispositions: downgrade {values['source_chain_downgrade']}, suspension {values['source_chain_suspension']}, withdrawal {values['source_chain_withdrawal']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Qualified-output source-chain attacks | whole-matrix source-chain negative control | {values['source_chain']} attack variants over qualified packets | {values['source_chain']} | {values['source_chain_passed']}/{values['source_chain']}"),
-        ("experiments/full_validation/results/full_validation_report.md", f"Contestation challenge variants: {values['contestation_passed']}/{values['contestation']} passed; valid challenges blocked {values['contestation_valid_blocked']}/216; unsupported controls preserved {values['contestation_unsupported_preserved']}/54"),
+        ("experiments/full_validation/results/full_validation_report.md", f"Contestation challenge variants: {values['contestation_passed']}/{values['contestation']} passed; valid challenges blocked {values['contestation_valid_blocked']}/{values['contestation_valid_blocked']}; unsupported controls preserved {values['contestation_unsupported_preserved']}/{values['contestation_unsupported_preserved']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Dynamic contestation challenges | whole-matrix challenge-response validation | {values['contestation']} challenge variants over qualified packets | {values['contestation']} | {values['contestation_passed']}/{values['contestation']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metamorphic policy tests: {values['metamorphic_passed']}/{values['metamorphic']} passed over {values['metamorphic_scenarios']} packets"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metamorphic policy tests | expected-label-free policy-invariant validation | {values['metamorphic']} transformations over {values['metamorphic_scenarios']} packets | {values['metamorphic']} | {values['metamorphic_passed']}/{values['metamorphic']}"),

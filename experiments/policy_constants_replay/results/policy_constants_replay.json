@@ -1,12 +1,12 @@
 {
-  "cap_or_failure_transition_count": 158,
-  "certificate_count": 246,
+  "cap_or_failure_transition_count": 167,
+  "certificate_count": 264,
   "certificate_path": "experiments/status_certificates/results/status_certificates.jsonl",
-  "check_count": 4428,
+  "check_count": 4752,
   "failed_check_count": 0,
   "failed_scenario_count": 0,
   "failures": [],
-  "passed_check_count": 4428,
+  "passed_check_count": 4752,
   "policy_path": "policy/legal_output_policy.json",
   "rows": [
     {
@@ -4038,6 +4038,801 @@
       },
       "role_cap": "normative_material_screening_output",
       "scenario_id": "source-bound-codex55-us-03",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "ranking_drift",
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "ranking_drift",
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "suspension",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "ranking_drift",
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "reference_information",
+      "claim_supported": false,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "downgrade",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": "reference_information",
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 0.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [
+        "system_role:disclosed_assistance_tool->max:professional_support_output"
+      ],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "professional_support_output",
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 1,
+        "T": 1
+      },
+      "system_role": "disclosed_assistance_tool",
+      "total_score": 9
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "score_candidate": "normative_material_screening_output",
+      "score_vector": {
+        "H": 2,
+        "K": 2,
+        "L": 1,
+        "Q": 2,
+        "S": 2,
+        "T": 2
+      },
+      "system_role": "auditable_procedural_tool",
+      "total_score": 11
+    },
+    {
+      "allowed_status": "normative_material_screening_output",
+      "claim_supported": true,
+      "claimed_status": "normative_material_screening_output",
+      "disposition": "none",
+      "expected_passed": true,
+      "failed_check_count": 0,
+      "failed_checks": [],
+      "failure_cap": null,
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "metric_bundle": {
+        "authority_coverage": 1.0,
+        "counter_authority_recall": 1.0,
+        "evidence_coverage": 1.0,
+        "evidence_fidelity": 1.0,
+        "invalid_authority_rate": 0.0,
+        "procedural_source_tag_coverage": 1.0,
+        "source_tag_coverage": 1.0
+      },
+      "missing_gates": [],
+      "passed": true,
+      "passed_check_count": 18,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "policy": {
+        "decision_threshold": 10,
+        "normative_threshold": 9
+      },
+      "role_cap": "normative_material_screening_output",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
       "score_candidate": "normative_material_screening_output",
       "score_vector": {
         "H": 2,
@@ -10919,20 +11714,20 @@
       "total_score": 10
     }
   ],
-  "scenario_count": 246,
+  "scenario_count": 264,
   "score_candidate_distribution": {
     "decision_support_reason": 12,
     "no_external_legal_effect": 1,
-    "normative_material_screening_output": 188,
+    "normative_material_screening_output": 206,
     "professional_support_output": 35,
     "reference_information": 10
   },
   "status_distribution": {
     "decision_support_reason": 12,
     "no_external_legal_effect": 32,
-    "normative_material_screening_output": 42,
+    "normative_material_screening_output": 51,
     "professional_support_output": 23,
-    "reference_information": 137
+    "reference_information": 146
   },
-  "verified_scenario_count": 246
+  "verified_scenario_count": 264
 }

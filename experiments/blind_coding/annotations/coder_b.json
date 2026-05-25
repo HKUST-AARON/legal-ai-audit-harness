@@ -285,6 +285,141 @@
       "notes": "High authorities are named, but a contrary authority and source tags are missing."
     },
     {
+      "packet_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
+      "packet_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "scores": {
+        "S": 1,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 1,
+        "L": 1
+      },
+      "failure_flags": [
+        "source_attribution_gap"
+      ],
+      "notes": "Raw model output names the issue authorities but uses verification-needed source tags, so model identity cannot confer screening status."
+    },
+    {
       "packet_id": "decision-support-ready",
       "scores": {
         "S": 1,
@@ -3046,6 +3181,123 @@
       },
       "failure_flags": [],
       "notes": "Adversarial source-support negative control: locator_mismatch."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
+    },
+    {
+      "packet_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "scores": {
+        "S": 2,
+        "Q": 2,
+        "H": 2,
+        "K": 2,
+        "T": 2,
+        "L": 1
+      },
+      "failure_flags": [],
+      "notes": "Source-support validation binds every output unit to the issue manifest, high-authority set, counter-material set and review gate."
     },
     {
       "packet_id": "suspended-authority-omission",

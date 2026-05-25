@@ -1,51 +1,51 @@
 {
   "by_relation": {
     "back_office_role_cap": {
-      "count": 246,
+      "count": 264,
       "examples": [],
       "failed": 0,
-      "passed": 246
+      "passed": 264
     },
     "benign_source_append_preserves_high_status": {
-      "count": 54,
+      "count": 63,
       "examples": [],
       "failed": 0,
-      "passed": 54
+      "passed": 63
     },
     "claim_escalation_nonpromotion": {
-      "count": 246,
+      "count": 264,
       "examples": [],
       "failed": 0,
-      "passed": 246
+      "passed": 264
     },
     "review_gate_removal_blocks_high_status": {
-      "count": 54,
+      "count": 63,
       "examples": [],
       "failed": 0,
-      "passed": 54
+      "passed": 63
     },
     "score_and_role_inflation_without_adoption": {
-      "count": 234,
+      "count": 252,
       "examples": [],
       "failed": 0,
-      "passed": 234
+      "passed": 252
     },
     "source_tag_deproceduralization_blocks_high_status": {
-      "count": 54,
+      "count": 63,
       "examples": [],
       "failed": 0,
-      "passed": 54
+      "passed": 63
     },
     "upstream_metric_inflation_invariance": {
-      "count": 246,
+      "count": 264,
       "examples": [],
       "failed": 0,
-      "passed": 246
+      "passed": 264
     }
   },
   "failed_count": 0,
-  "metamorphic_evaluation_count": 1134,
-  "passed_count": 1134,
+  "metamorphic_evaluation_count": 1233,
+  "passed_count": 1233,
   "rows": [
     {
       "base_status": "reference_information",
@@ -4386,6 +4386,996 @@
       "relation": "benign_source_append_preserves_high_status",
       "scenario_id": "source-bound-codex55-us-03",
       "source_path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "suspension",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "reference_information",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Raising only the claimed procedural status cannot raise the allowed status.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "claim_escalation_nonpromotion",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect upstream precision, recall and F1 cannot change procedural status by themselves.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "upstream_metric_inflation_invariance",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "A back-office role cap prevents external procedural status.",
+      "mutated_disposition": "none",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "back_office_role_cap",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Perfect scores and an authorized role cannot create a decision reason without adoption artefacts.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "score_and_role_inflation_without_adoption",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Replacing procedural source tags with verification-needed tags blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "source_tag_deproceduralization_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Removing the review and contestability gate blocks high status.",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "passed": true,
+      "relation": "review_gate_removal_blocks_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "description": "Adding a faithful procedurally tagged source unit at the end must not demote a qualified packet.",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "passed": true,
+      "relation": "benign_source_append_preserves_high_status",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference",
+      "source_path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json"
     },
     {
       "base_status": "decision_support_reason",
@@ -11388,5 +12378,5 @@
       "source_path": "experiments/issue_ablations/scenarios/us-agency-deference-after-loper-bright-unverified-source-tags.json"
     }
   ],
-  "scenario_count": 246
+  "scenario_count": 264
 }

@@ -1,8 +1,8 @@
 # Jurisdiction Profile Analysis
 
-High-status profile checks: 233/233 supported
-Qualified packets mutated: 54
-Counterfactual profile evaluations: 162/162 passed
-Generic profile substitutions preserved status: 54/54
-Missing assumptions downgraded status: 54/54
-Mismatched profiles downgraded status: 54/54
+High-status profile checks: 251/251 supported
+Qualified packets mutated: 63
+Counterfactual profile evaluations: 189/189 passed
+Generic profile substitutions preserved status: 63/63
+Missing assumptions downgraded status: 63/63
+Mismatched profiles downgraded status: 63/63

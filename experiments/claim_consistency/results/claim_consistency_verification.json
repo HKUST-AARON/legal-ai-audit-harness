@@ -1,23 +1,23 @@
 {
-  "check_count": 700,
+  "check_count": 709,
   "checks": [
     {
-      "expected": "- 34 validation suites",
+      "expected": "- 37 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 246 scenario files",
+      "expected": "- 264 scenario files",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 679 embedded records or output items",
+      "expected": "- 697 embedded records or output items",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 3,651,560 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
+      "expected": "- 3,658,964 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -37,7 +37,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 201 metric-separation evaluations",
+      "expected": "- 219 metric-separation evaluations",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -47,32 +47,32 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 2,772 baseline-rule predictions across 12 alternative status rules",
+      "expected": "- 2,988 baseline-rule predictions across 12 alternative status rules",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 336/336 gate-ablation evaluations passed",
+      "expected": "- 390/390 gate-ablation evaluations passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 336/336 gate-contrast witness pairs passed with 336/336 score/metric/role preservation and 336/336 status separation",
+      "expected": "- 390/390 gate-contrast witness pairs passed with 390/390 score/metric/role preservation and 390/390 status separation",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 1,674/1,674 source-chain attack variants passed",
+      "expected": "- 1,953/1,953 source-chain attack variants passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 270/270 contestation challenge variants passed",
+      "expected": "- 315/315 contestation challenge variants passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 1,134/1,134 metamorphic policy tests passed",
+      "expected": "- 1,233/1,233 metamorphic policy tests passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -87,52 +87,52 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations",
+      "expected": "- 193/193 blocked procedural claims repairable across 4,831 repair-frontier evaluations",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 233/233 jurisdiction-profile checks and 162/162 profile mutations passed",
+      "expected": "- 251/251 jurisdiction-profile checks and 189/189 profile mutations passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 884 rank-window visibility checks over 230 high-status claims",
+      "expected": "- 956 rank-window visibility checks over 248 high-status claims",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 76/76 rank-order visibility counterfactuals downgraded with coverage preserved",
+      "expected": "- 85/85 rank-order visibility counterfactuals downgraded with coverage preserved",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 5,658/5,658 status-certificate replay checks and 4,182/4,182 proof obligations passed over 246 proof-carrying certificates",
+      "expected": "- 6,072/6,072 status-certificate replay checks and 4,488/4,488 proof obligations passed over 264 proof-carrying certificates",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 5,415/5,415 certificate tamper-resistance cases rejected across 25 families",
+      "expected": "- 5,811/5,811 certificate tamper-resistance cases rejected across 25 families",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 4,428/4,428 policy-constants replay checks passed",
+      "expected": "- 4,752/4,752 policy-constants replay checks passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 61,500 annotation-uncertainty perturbations with 0.933 sample stability",
+      "expected": "- 66,000 annotation-uncertainty perturbations with 0.930 sample stability",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.86, minimum three-category PABAK 0.79 and maximum mean absolute score drift 0.14",
+      "expected": "- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.87, minimum three-category PABAK 0.81 and maximum mean absolute score drift 0.13",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 246/246 scenario-regression expectations passed",
+      "expected": "- 264/264 scenario-regression expectations passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -147,7 +147,12 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "246 scenario files containing 679 embedded records/items",
+      "expected": "- 36/36 cross-engine transcript locators verified across 3 model engines and 3 issue families",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "264 scenario files containing 697 embedded records/items",
       "passed": true,
       "path": "README.md"
     },
@@ -162,7 +167,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 336 gate-contrast witness pairs, 1,674 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 5,658 status-certificate replay checks, 4,182 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,428 policy-constants replay checks",
+      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 2,988 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,831 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -172,12 +177,27 @@
       "path": "README.md"
     },
     {
-      "expected": "61,500 score-uncertainty perturbations",
+      "expected": "66,000 score-uncertainty perturbations",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Metric separation analysis | 201 |",
+      "expected": "| Metric separation analysis | 219 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Cross-engine raw model outputs | 9 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Cross-engine source-supported repairs | 9 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Cross-engine transcript anchors | 36 |",
       "passed": true,
       "path": "README.md"
     },
@@ -192,32 +212,32 @@
       "path": "README.md"
     },
     {
-      "expected": "| Baseline rule comparison | 2772 |",
+      "expected": "| Baseline rule comparison | 2988 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Qualified-output gate ablations | 336 |",
+      "expected": "| Qualified-output gate ablations | 390 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Gate-contrast witness pairs | 336 |",
+      "expected": "| Gate-contrast witness pairs | 390 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Qualified-output source-chain attacks | 1674 |",
+      "expected": "| Qualified-output source-chain attacks | 1953 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Dynamic contestation challenges | 270 |",
+      "expected": "| Dynamic contestation challenges | 315 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Metamorphic policy tests | 1134 |",
+      "expected": "| Metamorphic policy tests | 1233 |",
       "passed": true,
       "path": "README.md"
     },
@@ -247,47 +267,47 @@
       "path": "README.md"
     },
     {
-      "expected": "| Blocked-claim repair frontiers | 4474 |",
+      "expected": "| Blocked-claim repair frontiers | 4831 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Jurisdiction-profile mutations | 395 |",
+      "expected": "| Jurisdiction-profile mutations | 440 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Ranking-visibility diagnostics | 884 |",
+      "expected": "| Ranking-visibility diagnostics | 956 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Proof-carrying status certificates | 9840 |",
+      "expected": "| Proof-carrying status certificates | 10560 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Certificate tamper-resistance | 5415 |",
+      "expected": "| Certificate tamper-resistance | 5811 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Policy-constants replay | 4428 |",
+      "expected": "| Policy-constants replay | 4752 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Annotation uncertainty Monte Carlo | 61500 |",
+      "expected": "| Annotation uncertainty Monte Carlo | 66000 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Score-blinded dual coding | 444 |",
+      "expected": "| Score-blinded dual coding | 480 |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "Current results are inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.86, minimum three-category PABAK 0.79 and maximum mean absolute score drift 0.14.",
+      "expected": "Current results are inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.87, minimum three-category PABAK 0.81 and maximum mean absolute score drift 0.13.",
       "passed": true,
       "path": "README.md"
     },
@@ -462,6 +482,16 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Cross-engine raw model outputs",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "Cross-engine source-supported repairs",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "bootstrap/permutation robustness",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -562,7 +592,22 @@
       "path": "docs/paper_mapping.md"
     },
     {
-      "expected": "336/336 gate-ablation evaluations",
+      "expected": "390/390 gate-ablation evaluations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "all 36 cross-engine transcript locators",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "9/9 cross-engine raw outputs capped",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "9/9 cross-engine source-supported repairs qualified",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -582,22 +627,22 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "336/336 gate-contrast witness pairs",
+      "expected": "390/390 gate-contrast witness pairs",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "1,674/1,674 source-chain attack variants",
+      "expected": "1,953/1,953 source-chain attack variants",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "270/270 contestation challenge variants",
+      "expected": "315/315 contestation challenge variants",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "1,134/1,134 metamorphic policy tests",
+      "expected": "1,233/1,233 metamorphic policy tests",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -617,52 +662,52 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "2,772 baseline-rule predictions across 12 alternative status rules",
+      "expected": "2,988 baseline-rule predictions across 12 alternative status rules",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations",
+      "expected": "193/193 blocked procedural claims repairable across 4,831 repair-frontier evaluations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "233/233 jurisdiction-profile checks, 162/162 profile mutations",
+      "expected": "251/251 jurisdiction-profile checks, 189/189 profile mutations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "884 rank-window visibility checks over 230 high-status claims",
+      "expected": "956 rank-window visibility checks over 248 high-status claims",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "76/76 rank-order counterfactuals",
+      "expected": "85/85 rank-order counterfactuals",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "246/246 proof-carrying status certificates verified, 5,658/5,658 replay checks, 4,182/4,182 proof obligations",
+      "expected": "264/264 proof-carrying status certificates verified, 6,072/6,072 replay checks, 4,488/4,488 proof obligations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "5,415/5,415 certificate tamper-resistance cases rejected across 25 families",
+      "expected": "5,811/5,811 certificate tamper-resistance cases rejected across 25 families",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "4,428/4,428 policy-constants replay checks",
+      "expected": "4,752/4,752 policy-constants replay checks",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "61,500 annotation-uncertainty perturbations",
+      "expected": "66,000 annotation-uncertainty perturbations",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "0.93 inter-coder minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.37 weakest base-dimension kappa on Q, 0.86 base-dimension minimum exact agreement, 0.79 minimum three-category PABAK, 0.14 maximum mean absolute score drift",
+      "expected": "0.93 inter-coder minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.37 weakest base-dimension kappa on Q, 0.87 base-dimension minimum exact agreement, 0.81 minimum three-category PABAK, 0.13 maximum mean absolute score drift",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -792,12 +837,12 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "246 scenario packets with 679 embedded records or outputs",
+      "expected": "264 scenario packets with 697 embedded records or outputs",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "3,651,560 validation operations",
+      "expected": "3,658,964 validation operations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -847,7 +892,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "2,772 predictions",
+      "expected": "2,988 predictions",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -862,27 +907,27 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "61,500 perturbations",
+      "expected": "66,000 perturbations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "0.933 sample-level status stability",
+      "expected": "0.930 sample-level status stability",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "0.924 high-status stability",
+      "expected": "0.916 high-status stability",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "5,658 checks / 4,182 obligations",
+      "expected": "6,072 checks / 4,488 obligations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "5,415 cases",
+      "expected": "5,811 cases",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -912,22 +957,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "246/246 certificates",
+      "expected": "264/264 certificates",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "54 packets that reached normative screening or decision-support status",
+      "expected": "63 packets that reached normative screening or decision-support status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "All 336 ablations fell below",
+      "expected": "All 390 ablations fell below",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Across 184 blocked claims",
+      "expected": "Across 193 blocked claims",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -972,32 +1017,32 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "233/233 profile checks",
+      "expected": "251/251 profile checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "162/162 profile mutations",
+      "expected": "189/189 profile mutations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "884 rank-window visibility checks",
+      "expected": "956 rank-window visibility checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "76 counterfactuals",
+      "expected": "85 counterfactuals",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "top-3 counter-material visibility was 183/217",
+      "expected": "top-3 counter-material visibility was 198/235",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "drifted top-3 counter-material visibility was 0/76",
+      "expected": "drifted top-3 counter-material visibility was 0/85",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1012,62 +1057,62 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Qualified-output gate ablations & 336 ablations & 336/336",
+      "expected": "Qualified-output gate ablations & 390 ablations & 390/390",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Gate-contrast witness pairs & 336 pairs & 336/336",
+      "expected": "Gate-contrast witness pairs & 390 pairs & 390/390",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "All 336 pairs separated status",
+      "expected": "All 390 pairs separated status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "324 fell to reference information and 12 decision-support witnesses fell to normative screening",
+      "expected": "378 fell to reference information and 12 decision-support witnesses fell to normative screening",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Source-chain attacks & 1,674 variants & 1,674/1,674",
+      "expected": "Source-chain attacks & 1,953 variants & 1,953/1,953",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "All 1,674 attacked variants lost high status",
+      "expected": "All 1,953 attacked variants lost high status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "54 were downgraded, 324 were suspended and 1,296 were withdrawn",
+      "expected": "63 were downgraded, 378 were suspended and 1,512 were withdrawn",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "378 were capped at reference information and 1,296 were withdrawn",
+      "expected": "441 were capped at reference information and 1,512 were withdrawn",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Dynamic contestation challenges & 270 variants & 270/270",
+      "expected": "Dynamic contestation challenges & 315 variants & 315/315",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "all 216 valid source, authority, jurisdiction and channel challenges blocked high status",
+      "expected": "all 252 valid source, authority, jurisdiction and channel challenges blocked high status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "all 54 unsupported controls preserved status",
+      "expected": "all 63 unsupported controls preserved status",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Metamorphic policy tests & 1,134 transformations & 1,134/1,134",
+      "expected": "Metamorphic policy tests & 1,233 transformations & 1,233/1,233",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1082,57 +1127,57 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "All 1,134 metamorphic tests passed",
+      "expected": "All 1,233 metamorphic tests passed",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Blocked-claim repair frontiers & 4,474 counterfactuals & 184/184",
+      "expected": "Blocked-claim repair frontiers & 4,831 counterfactuals & 193/193",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Jurisdiction-profile mutations & 395 checks & 162/162",
+      "expected": "Jurisdiction-profile mutations & 440 checks & 189/189",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Ranking-visibility diagnostics & 884 window checks / 76 counterfactuals & 76/76",
+      "expected": "Ranking-visibility diagnostics & 956 window checks / 85 counterfactuals & 85/85",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Proof-carrying status certificates & 5,658 checks / 4,182 obligations & 5,658/5,658; 4,182/4,182",
+      "expected": "Proof-carrying status certificates & 6,072 checks / 4,488 obligations & 6,072/6,072; 4,488/4,488",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Certificate tamper-resistance & 5,415 cases & 5,415/5,415",
+      "expected": "Certificate tamper-resistance & 5,811 cases & 5,811/5,811",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Policy-constants replay & 4,428 checks & 4,428/4,428",
+      "expected": "Policy-constants replay & 4,752 checks & 4,752/4,752",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Baseline rule comparison & 2,772 predictions & Best simplified false positives 38; reference rule false positives 0",
+      "expected": "Baseline rule comparison & 2,988 predictions & Best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Annotation uncertainty & 61,500 perturbations & 0.933 sample stability; 0.924 qualified high-status stability",
+      "expected": "Annotation uncertainty & 66,000 perturbations & 0.930 sample stability; 0.916 qualified high-status stability",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Score-blinded dual coding & 222 packets, 2 passes & 0.99 coder kappa; 0.93 min dimension kappa; 0.86 min base exact",
+      "expected": "Score-blinded dual coding & 240 packets, 2 passes & 0.99 coder kappa; 0.93 min dimension kappa; 0.87 min base exact",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Score-blinded dual coding of 222 non-holdout packets reached 0.99 inter-coder exact agreement, 0.99 Cohen's kappa and 0.96 quadratic weighted kappa",
+      "expected": "Score-blinded dual coding of 240 non-holdout packets reached 0.99 inter-coder exact agreement, 0.99 Cohen's kappa and 0.97 quadratic weighted kappa",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1142,12 +1187,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 34",
+      "expected": "Validation suites: 37",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Scenario files: 246",
+      "expected": "Scenario files: 264",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1167,52 +1212,52 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Baseline rule comparisons: 2772 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0",
+      "expected": "Baseline rule comparisons: 2988 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Gate ablation evaluations: 336/336 passed over 54 qualified packets",
+      "expected": "Gate ablation evaluations: 390/390 passed over 63 qualified packets",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Gate-contrast witness pairs: 336/336 passed; score/metric/role preserved 336/336; status separated 336/336",
+      "expected": "Gate-contrast witness pairs: 390/390 passed; score/metric/role preserved 390/390; status separated 390/390",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Source-chain attack variants: 1674/1674 passed; high-upstream attacked variants blocked 1674/1674",
+      "expected": "Source-chain attack variants: 1953/1953 passed; high-upstream attacked variants blocked 1953/1953",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Source-chain attack dispositions: downgrade 54, suspension 324, withdrawal 1296",
+      "expected": "Source-chain attack dispositions: downgrade 63, suspension 378, withdrawal 1512",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Qualified-output source-chain attacks | whole-matrix source-chain negative control | 1674 attack variants over qualified packets | 1674 | 1674/1674",
+      "expected": "Qualified-output source-chain attacks | whole-matrix source-chain negative control | 1953 attack variants over qualified packets | 1953 | 1953/1953",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Contestation challenge variants: 270/270 passed; valid challenges blocked 216/216; unsupported controls preserved 54/54",
+      "expected": "Contestation challenge variants: 315/315 passed; valid challenges blocked 252/252; unsupported controls preserved 63/63",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Dynamic contestation challenges | whole-matrix challenge-response validation | 270 challenge variants over qualified packets | 270 | 270/270",
+      "expected": "Dynamic contestation challenges | whole-matrix challenge-response validation | 315 challenge variants over qualified packets | 315 | 315/315",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Metamorphic policy tests: 1134/1134 passed over 246 packets",
+      "expected": "Metamorphic policy tests: 1233/1233 passed over 264 packets",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Metamorphic policy tests | expected-label-free policy-invariant validation | 1134 transformations over 246 packets | 1134 | 1134/1134",
+      "expected": "Metamorphic policy tests | expected-label-free policy-invariant validation | 1233 transformations over 264 packets | 1233 | 1233/1233",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1237,22 +1282,22 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Repair frontier evaluations: 184/184 blocked claims repairable across 4474 counterfactual repairs",
+      "expected": "Repair frontier evaluations: 193/193 blocked claims repairable across 4831 counterfactual repairs",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Jurisdiction-profile evaluations: 233/233 profile checks supported; 162/162 counterfactual mutations passed",
+      "expected": "Jurisdiction-profile evaluations: 251/251 profile checks supported; 189/189 counterfactual mutations passed",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Ranking-visibility checks: 884 rank-window checks over 230 high-status claims; 76/76 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 183/217; drifted top-3 counter visible 0/76; median first counter rank 3.0",
+      "expected": "Ranking-visibility checks: 956 rank-window checks over 248 high-status claims; 85/85 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 198/235; drifted top-3 counter visible 0/85; median first counter rank 3.0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Proof-carrying certificate replay checks: 5658/5658 passed over 246 certificates",
+      "expected": "Proof-carrying certificate replay checks: 6072/6072 passed over 264 certificates",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1262,57 +1307,57 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Status certificate proof obligations: 4182/4182 passed",
+      "expected": "Status certificate proof obligations: 4488/4488 passed",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Certificate tamper-resistance: 5415/5415 tamper cases rejected across 25 families",
+      "expected": "Certificate tamper-resistance: 5811/5811 tamper cases rejected across 25 families",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Policy-constants replay checks: 4428/4428 passed over 246 packets",
+      "expected": "Policy-constants replay checks: 4752/4752 passed over 264 packets",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Annotation uncertainty: 61500 score perturbations; sample stability 0.933; qualified high-status stability 0.924; boundary scenarios 143",
+      "expected": "Annotation uncertainty: 66000 score perturbations; sample stability 0.930; qualified high-status stability 0.916; boundary scenarios 161",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.93 minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.37 minimum base-dimension kappa (Q, 0.96 exact), 0.86 minimum base-dimension exact agreement, 0.79 minimum base-dimension PABAK, 0.14 maximum base-dimension mean absolute delta, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa",
+      "expected": "Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.97 coder-coder weighted kappa, 0.93 minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.37 minimum base-dimension kappa (Q, 0.97 exact), 0.87 minimum base-dimension exact agreement, 0.81 minimum base-dimension PABAK, 0.13 maximum base-dimension mean absolute delta, 0.95 minimum base-coder exact agreement, 0.98 minimum base-coder weighted agreement, 0.93 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Metric separation evaluations: 201 upstream-metric scenario packets; high-recall blocked outputs 144/197",
+      "expected": "Metric separation evaluations: 219 upstream-metric scenario packets; high-recall blocked outputs 153/215",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "8 & 10 & 0 & 0 & decision 12; screening 42; professional 23; reference 137; no effect 32",
+      "expected": "8 & 10 & 0 & 0 & decision 12; screening 51; professional 23; reference 146; no effect 32",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "9 & 10 & 0 & 0 & decision 12; screening 42; professional 23; reference 137; no effect 32",
+      "expected": "9 & 10 & 0 & 0 & decision 12; screening 51; professional 23; reference 146; no effect 32",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "10 & 11 & 0 & 0 & decision 12; screening 42; professional 23; reference 137; no effect 32",
+      "expected": "10 & 11 & 0 & 0 & decision 12; screening 51; professional 23; reference 146; no effect 32",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "11 & 12 & 2 & 2 & decision 12; screening 40; professional 25; reference 137; no effect 32",
+      "expected": "11 & 12 & 2 & 2 & decision 12; screening 49; professional 25; reference 146; no effect 32",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "12 & 13 & 49 & 49 & decision 0; screening 17; professional 60; reference 137; no effect 32",
+      "expected": "12 & 13 & 58 & 58 & decision 0; screening 17; professional 69; reference 146; no effect 32",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1322,7 +1367,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 207)",
+      "expected": "abstract word count 150-250 (actual 210)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -3504,5 +3549,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 700
+  "passed_count": 709
 }

@@ -1,10 +1,10 @@
 {
-  "counterfactual_evaluation_count": 162,
+  "counterfactual_evaluation_count": 189,
   "failed_count": 0,
   "failures": [],
-  "generic_profile_preserved": 54,
-  "mismatched_profile_downgraded": 54,
-  "missing_assumption_downgraded": 54,
+  "generic_profile_preserved": 63,
+  "mismatched_profile_downgraded": 63,
+  "missing_assumption_downgraded": 63,
   "mutations": [
     {
       "base_status": "normative_material_screening_output",
@@ -893,6 +893,339 @@
       "passed": true,
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
       "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "none",
+      "mutated_status": "normative_material_screening_output",
+      "mutation": "generic_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "missing_assumption",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "base_status": "normative_material_screening_output",
+      "failure_flags": [
+        "jurisdiction_assumption_gap"
+      ],
+      "jurisdiction_profile": "common_law",
+      "mutated_disposition": "downgrade",
+      "mutated_status": "reference_information",
+      "mutation": "mismatched_profile",
+      "passed": true,
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
     },
     {
       "base_status": "decision_support_reason",
@@ -2005,8 +2338,8 @@
       "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
     }
   ],
-  "passed_count": 162,
-  "profile_check_count": 233,
+  "passed_count": 189,
+  "profile_check_count": 251,
   "profile_checks": [
     {
       "jurisdiction_assumptions": [
@@ -2709,6 +3042,168 @@
       "path": "experiments/model_output_repairs/scenarios/source-bound-codex55-us-03.json",
       "profile_supported": true,
       "scenario_id": "source-bound-codex55-us-03"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-us-agency-deference.json",
+      "profile_supported": true,
+      "scenario_id": "cross-engine-gemini-25-pro-us-agency-deference"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-eu-gdpr-article15"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-uk-mesothelioma-causation"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt54-mini-us-agency-deference.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-eu-gdpr-article15.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-eu-gdpr-article15"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-uk-mesothelioma-causation"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-codex-gpt55-us-agency-deference.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-codex-gpt55-us-agency-deference"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "european_union_data_protection_law"
+      ],
+      "jurisdiction_profile": "civil_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-eu-gdpr-article15"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "england_and_wales_tort_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-uk-mesothelioma-causation"
+    },
+    {
+      "jurisdiction_assumptions": [
+        "united_states_federal_administrative_law"
+      ],
+      "jurisdiction_profile": "common_law",
+      "path": "experiments/cross_engine_model_repairs/scenarios/source-bound-cross-engine-gemini-25-pro-us-agency-deference.json",
+      "profile_supported": true,
+      "scenario_id": "source-bound-cross-engine-gemini-25-pro-us-agency-deference"
     },
     {
       "jurisdiction_assumptions": [
@@ -4136,7 +4631,7 @@
       "scenario_id": "us-agency-deference-after-loper-bright-unverified-source-tags"
     }
   ],
-  "profile_supported_count": 233,
-  "qualified_status_count": 54,
+  "profile_supported_count": 251,
+  "qualified_status_count": 63,
   "unsupported_profile_checks": []
 }
