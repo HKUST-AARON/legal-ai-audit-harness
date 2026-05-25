@@ -1,5 +1,5 @@
 {
-  "check_count": 805,
+  "check_count": 816,
   "checks": [
     {
       "expected": "- 38 validation suites",
@@ -52,7 +52,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives",
+      "expected": "- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives and 0 full-protocol false negatives",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -208,6 +208,16 @@
     },
     {
       "expected": "| Substitute-theory falsification | 6 theories |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "current full-protocol false positives and false negatives are 0",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "the full protocol records 0 false positives and 0 false negatives against those substitutes",
       "passed": true,
       "path": "README.md"
     },
@@ -717,7 +727,7 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "1,005 model-identity-sufficiency false positives with 0 full-protocol false positives",
+      "expected": "150 authority-material-sufficiency false positives, 2 authority-material-sufficiency false negatives and 1,005 model-identity-sufficiency false positives with 0 full-protocol false positives and 0 full-protocol false negatives",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1012,7 +1022,27 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "authority-material sufficiency produced 150 scenario false positives, two false negatives and 672 lattice false positives",
+      "expected": "Recall-threshold performance produced 153 scenario false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "source-label sufficiency produced 72 scenario false positives and 3,192 lattice false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "authority-material sufficiency produced 150 scenario false positives, 2 scenario false negatives and 672 lattice false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "review-label sufficiency produced 149 scenario false positives and 9,816 lattice false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "score sufficiency produced 183 scenario false positives and 24,792 lattice false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1482,12 +1512,37 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Authority-material sufficiency | 150 |",
+      "expected": "| Substitute theory | Scenario false positives | Scenario false negatives | Scenario precision | Scenario recall | Lattice false positives | Lattice false negatives | Full protocol false positives | Full protocol false negatives | Additional evidence |",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Model-identity sufficiency | 1005 | 0.24 | n/a | 0",
+      "expected": "Performance sufficiency | 153 | 0 | 0.29 | 1.00 | n/a | n/a | 0 | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Source-label sufficiency | 72 | 0 | 0.47 | 1.00 | 3192 | 0 | 0 | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Authority-material sufficiency | 150 | 2 | 0.29 | 0.97 | 672 | 0 | 0 | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Review-label sufficiency | 149 | 0 | 0.30 | 1.00 | 9816 | 0 | 0 | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Score sufficiency | 183 | 0 | 0.26 | 1.00 | 24792 | 0 | 0 | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Model-identity sufficiency | 1005 | 0 | 0.24 | 1.00 | n/a | n/a | 0 | 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -4029,5 +4084,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 805
+  "passed_count": 816
 }

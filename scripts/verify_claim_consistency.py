@@ -56,6 +56,14 @@ def _checks(payload: dict) -> list[dict]:
     cross_engine_repairs = next(row for row in payload["suites"] if row["id"] == "cross_engine_model_repairs")
     cross_engine_transcript = payload["cross_engine_transcript_verification"]
     substitute_rows = {row["id"]: row for row in payload["substitute_theory_falsification"]}
+    substitute_order = [
+        "performance_sufficiency",
+        "source_label_sufficiency",
+        "authority_material_sufficiency",
+        "review_label_sufficiency",
+        "score_sufficiency",
+        "model_identity_sufficiency",
+    ]
     blind = payload["blind_coding"]
     blind_pair = blind["pairwise_status"][0]
     blind_base = list(blind["base_status_agreement"].values())
@@ -212,11 +220,28 @@ def _checks(payload: dict) -> list[dict]:
         "metric_high_recall_total": metric["high_recall_blocked"]["denominator"],
         "substitute_theory_count": len(payload["substitute_theory_falsification"]),
         "authority_substitute_fp": substitute_rows["authority_material_sufficiency"]["scenario_false_positive"],
+        "authority_substitute_fn": substitute_rows["authority_material_sufficiency"]["scenario_false_negative"],
+        "authority_substitute_precision": substitute_rows["authority_material_sufficiency"]["scenario_precision"],
+        "authority_substitute_recall": substitute_rows["authority_material_sufficiency"]["scenario_recall"],
         "authority_substitute_lattice_fp": substitute_rows["authority_material_sufficiency"]["lattice_false_positive"],
+        "authority_substitute_lattice_fn": substitute_rows["authority_material_sufficiency"]["lattice_false_negative"],
         "identity_substitute_fp": substitute_rows["model_identity_sufficiency"]["scenario_false_positive"],
+        "identity_substitute_fn": substitute_rows["model_identity_sufficiency"]["scenario_false_negative"],
         "identity_substitute_precision": substitute_rows["model_identity_sufficiency"]["scenario_precision"],
+        "identity_substitute_recall": substitute_rows["model_identity_sufficiency"]["scenario_recall"],
+        "full_protocol_fp": substitute_rows["model_identity_sufficiency"]["full_protocol_false_positive"],
+        "full_protocol_fn": substitute_rows["model_identity_sufficiency"]["full_protocol_false_negative"],
         "pdf_pages": _pdf_page_count(ROOT / "manuscript" / "ai_law_case_recommendation_verifiability.pdf"),
     }
+    def substitute_row_text(row: dict) -> str:
+        lattice_fp = "n/a" if row["lattice_false_positive"] is None else str(row["lattice_false_positive"])
+        lattice_fn = "n/a" if row["lattice_false_negative"] is None else str(row["lattice_false_negative"])
+        return (
+            f"{row['theory']} | {row['scenario_false_positive']} | {row['scenario_false_negative']} | "
+            f"{row['scenario_precision']:.2f} | {row['scenario_recall']:.2f} | {lattice_fp} | {lattice_fn} | "
+            f"{row['full_protocol_false_positive']} | {row['full_protocol_false_negative']}"
+        )
+
     expectations = [
         ("ARTIFACT.md", f"- {values['suite_count']} validation suites"),
         ("ARTIFACT.md", f"- {values['scenario_files']} scenario files"),
@@ -228,7 +253,7 @@ def _checks(payload: dict) -> list[dict]:
         ("ARTIFACT.md", f"- {values['metric']} metric-separation evaluations"),
         ("ARTIFACT.md", f"- {_comma(values['metric_bootstrap'])} metric bootstrap resamples and {_comma(values['metric_permutation'])} metric permutation shuffles"),
         ("ARTIFACT.md", f"- {_comma(values['baseline_predictions'])} baseline-rule predictions across {values['baseline_count']} alternative status rules"),
-        ("ARTIFACT.md", "- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives"),
+        ("ARTIFACT.md", f"- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with {values['full_protocol_fp']} full-protocol false positives and {values['full_protocol_fn']} full-protocol false negatives"),
         ("ARTIFACT.md", f"- {values['gate_passed']}/{values['gate']} gate-ablation evaluations passed"),
         ("ARTIFACT.md", f"- {values['gate_contrast_passed']}/{values['gate_contrast']} gate-contrast witness pairs passed with {values['gate_contrast_preserved']}/{values['gate_contrast']} score/metric/role preservation and {values['gate_contrast_separated']}/{values['gate_contrast']} status separation"),
         ("ARTIFACT.md", f"- {_comma(values['source_chain_passed'])}/{_comma(values['source_chain'])} source-chain attack variants passed"),
@@ -260,6 +285,8 @@ def _checks(payload: dict) -> list[dict]:
         ("README.md", f"{values['query_variants']} query-perturbation variants across {values['query_groups']} issue groups, {values['query_portfolios']} query portfolios plus {values['query_portfolio_groups']} group frontier summaries"),
         ("README.md", f"{_comma(values['uncertainty'])} score-uncertainty perturbations"),
         ("README.md", f"| Substitute-theory falsification | {values['substitute_theory_count']} theories |"),
+        ("README.md", f"current full-protocol false positives and false negatives are {values['full_protocol_fp']}"),
+        ("README.md", f"the full protocol records {values['full_protocol_fp']} false positives and {values['full_protocol_fn']} false negatives against those substitutes"),
         ("README.md", "performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency"),
         ("README.md", f"| Metric separation analysis | {values['metric']} |"),
         ("README.md", f"| Cross-engine raw model outputs | {values['cross_engine_raw']} |"),
@@ -361,7 +388,7 @@ def _checks(payload: dict) -> list[dict]:
         ("skills/legal-ai-audit-harness/SKILL.md", f"{values['contestation_passed']}/{values['contestation']} contestation challenge variants"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['metamorphic_passed'])}/{_comma(values['metamorphic'])} metamorphic policy tests"),
         ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['identity_passed'])}/{_comma(values['identity_evaluations'])} model-identity substitutions with {values['identity_status_changed']} status changes and {values['identity_disposition_changed']} disposition changes"),
-        ("skills/legal-ai-audit-harness/SKILL.md", f"{_comma(values['identity_substitute_fp'])} model-identity-sufficiency false positives with 0 full-protocol false positives"),
+        ("skills/legal-ai-audit-harness/SKILL.md", f"{values['authority_substitute_fp']} authority-material-sufficiency false positives, {values['authority_substitute_fn']} authority-material-sufficiency false negatives and {_comma(values['identity_substitute_fp'])} model-identity-sufficiency false positives with {values['full_protocol_fp']} full-protocol false positives and {values['full_protocol_fn']} full-protocol false negatives"),
         ("skills/legal-ai-audit-harness/SKILL.md", "model-identity sufficiency falsification"),
         ("skills/legal-ai-audit-harness/SKILL.md", "python scripts/run_model_identity_invariance.py"),
         ("skills/legal-ai-audit-harness/SKILL.md", "model-identity invariance file"),
@@ -420,7 +447,11 @@ def _checks(payload: dict) -> list[dict]:
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['baseline_predictions'])} predictions"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Across {values['baseline_count']} simplified substitute rules"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"still produced {values['baseline_best_fp']} false positives"),
-        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"authority-material sufficiency produced {values['authority_substitute_fp']} scenario false positives, two false negatives and {values['authority_substitute_lattice_fp']} lattice false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"Recall-threshold performance produced {substitute_rows['performance_sufficiency']['scenario_false_positive']} scenario false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"source-label sufficiency produced {substitute_rows['source_label_sufficiency']['scenario_false_positive']} scenario false positives and {_comma(substitute_rows['source_label_sufficiency']['lattice_false_positive'])} lattice false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"authority-material sufficiency produced {values['authority_substitute_fp']} scenario false positives, {values['authority_substitute_fn']} scenario false negatives and {values['authority_substitute_lattice_fp']} lattice false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"review-label sufficiency produced {substitute_rows['review_label_sufficiency']['scenario_false_positive']} scenario false positives and {_comma(substitute_rows['review_label_sufficiency']['lattice_false_positive'])} lattice false positives"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", f"score sufficiency produced {substitute_rows['score_sufficiency']['scenario_false_positive']} scenario false positives and {_comma(substitute_rows['score_sufficiency']['lattice_false_positive'])} lattice false positives"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"model-identity sufficiency produced {_comma(values['identity_substitute_fp'])} identity-substitution false positives"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{_comma(values['uncertainty'])} perturbations"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", f"{values['uncertainty_stability']:.3f} sample-level status stability"),
@@ -514,9 +545,15 @@ def _checks(payload: dict) -> list[dict]:
         ("experiments/full_validation/results/full_validation_report.md", f"Annotation uncertainty: {values['uncertainty']} score perturbations; sample stability {values['uncertainty_stability']:.3f}; qualified high-status stability {values['uncertainty_qualified_high']:.3f}; boundary scenarios {values['uncertainty_boundary']}"),
         ("experiments/full_validation/results/full_validation_report.md", f"Score-blinded coding: {values['blind_packets']} packets, {values['blind_passes']} coding passes, {values['blind_exact']:.2f} coder-coder exact agreement, {values['blind_kappa']:.2f} coder-coder kappa, {values['blind_weighted_kappa']:.2f} coder-coder weighted kappa, {values['blind_min_dimension_kappa']:.2f} minimum dimension kappa, {values['blind_min_failure_flag_exact']:.2f} minimum derived failure-flag exact agreement, {values['blind_min_missing_gate_exact']:.2f} minimum derived missing-gate exact agreement, {values['blind_base_dimension_min_kappa']:.2f} minimum base-dimension kappa ({values['blind_base_dimension_min_kappa_dimension']}, {values['blind_base_dimension_min_kappa_exact']:.2f} exact), {values['blind_base_dimension_min_exact']:.2f} minimum base-dimension exact agreement, {values['blind_base_dimension_min_pabak']:.2f} minimum base-dimension PABAK, {values['blind_base_dimension_max_delta']:.2f} maximum base-dimension mean absolute delta, {values['blind_base_exact']:.2f} minimum base-coder exact agreement, {values['blind_base_weighted']:.2f} minimum base-coder weighted agreement, {values['blind_base_kappa']:.2f} minimum base-coder kappa, {values['blind_base_weighted_kappa']:.2f} minimum base-coder weighted kappa"),
         ("experiments/full_validation/results/full_validation_report.md", f"Metric separation evaluations: {values['metric']} upstream-metric scenario packets; high-recall blocked outputs {values['metric_high_recall_blocked']}/{values['metric_high_recall_total']}"),
-        ("experiments/full_validation/results/full_validation_report.md", f"Authority-material sufficiency | {values['authority_substitute_fp']} |"),
-        ("experiments/full_validation/results/full_validation_report.md", f"Model-identity sufficiency | {values['identity_substitute_fp']} | {values['identity_substitute_precision']:.2f} | n/a | 0"),
+        ("experiments/full_validation/results/full_validation_report.md", "| Substitute theory | Scenario false positives | Scenario false negatives | Scenario precision | Scenario recall | Lattice false positives | Lattice false negatives | Full protocol false positives | Full protocol false negatives | Additional evidence |"),
     ]
+    for substitute_id in substitute_order:
+        expectations.append(
+            (
+                "experiments/full_validation/results/full_validation_report.md",
+                substitute_row_text(substitute_rows[substitute_id]),
+            )
+        )
     for run in threshold_sensitivity["runs"]:
         expectations.append(
             (

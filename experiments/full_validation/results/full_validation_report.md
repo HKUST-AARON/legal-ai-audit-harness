@@ -82,14 +82,14 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 
 ## Substitute-Theory Falsification
 
-| Substitute theory | Scenario false positives | Scenario precision | Lattice false positives | Full protocol false positives | Additional evidence |
-| --- | ---: | ---: | ---: | ---: | --- |
-| Performance sufficiency | 153 | 0.29 | n/a | 0 | 153/215 high-recall outputs were blocked below normative screening |
-| Source-label sufficiency | 72 | 0.47 | 3192 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
-| Authority-material sufficiency | 150 | 0.29 | 672 | 0 | Authority and counter-material coverage without source-chain, role and contestability gates over-admit outputs |
-| Review-label sufficiency | 149 | 0.30 | 9816 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
-| Score sufficiency | 183 | 0.26 | 24792 | 0 | High total score cannot substitute for missing legal-material predicates |
-| Model-identity sufficiency | 1005 | 0.24 | n/a | 0 | 1005/1320 identity-labelled rows would be over-admitted; identity substitution produced 0 status changes |
+| Substitute theory | Scenario false positives | Scenario false negatives | Scenario precision | Scenario recall | Lattice false positives | Lattice false negatives | Full protocol false positives | Full protocol false negatives | Additional evidence |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Performance sufficiency | 153 | 0 | 0.29 | 1.00 | n/a | n/a | 0 | 0 | 153/215 high-recall outputs were blocked below normative screening |
+| Source-label sufficiency | 72 | 0 | 0.47 | 1.00 | 3192 | 0 | 0 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
+| Authority-material sufficiency | 150 | 2 | 0.29 | 0.97 | 672 | 0 | 0 | 0 | Authority and counter-material coverage without source-chain, role and contestability gates over-admit outputs |
+| Review-label sufficiency | 149 | 0 | 0.30 | 1.00 | 9816 | 0 | 0 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
+| Score sufficiency | 183 | 0 | 0.26 | 1.00 | 24792 | 0 | 0 | 0 | High total score cannot substitute for missing legal-material predicates |
+| Model-identity sufficiency | 1005 | 0 | 0.24 | 1.00 | n/a | n/a | 0 | 0 | 1005/1320 identity-labelled rows would be over-admitted; identity substitution produced 0 status changes |
 
 ## Findings
 

@@ -995,11 +995,17 @@ def _substitute_theory_results(
                 "scenario_precision": scenario_rule["precision"],
                 "scenario_recall": scenario_rule["recall"],
                 "lattice_false_positive": None if lattice_rule is None else lattice_rule["false_positive"],
+                "lattice_false_negative": None if lattice_rule is None else lattice_rule["false_negative"],
                 "lattice_precision": None if lattice_rule is None else lattice_rule["precision"],
+                "lattice_recall": None if lattice_rule is None else lattice_rule["recall"],
                 "full_protocol_false_positive": full_gate["false_positive"],
                 "full_protocol_false_negative": full_gate["false_negative"],
                 "falsified": scenario_rule["false_positive"] > 0
-                or (lattice_rule is not None and lattice_rule["false_positive"] > 0),
+                or scenario_rule["false_negative"] > 0
+                or (
+                    lattice_rule is not None
+                    and (lattice_rule["false_positive"] > 0 or lattice_rule["false_negative"] > 0)
+                ),
                 "additional_evidence": theory["additional_evidence"],
             }
         )
@@ -1735,21 +1741,26 @@ def _format_report(payload: dict) -> str:
             "",
             "## Substitute-Theory Falsification",
             "",
-            "| Substitute theory | Scenario false positives | Scenario precision | Lattice false positives | Full protocol false positives | Additional evidence |",
-            "| --- | ---: | ---: | ---: | ---: | --- |",
+            "| Substitute theory | Scenario false positives | Scenario false negatives | Scenario precision | Scenario recall | Lattice false positives | Lattice false negatives | Full protocol false positives | Full protocol false negatives | Additional evidence |",
+            "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
         ]
     )
     for row in payload["substitute_theory_falsification"]:
         lattice_fp = "n/a" if row["lattice_false_positive"] is None else str(row["lattice_false_positive"])
+        lattice_fn = "n/a" if row["lattice_false_negative"] is None else str(row["lattice_false_negative"])
         lines.append(
             "| "
             + " | ".join(
                 [
                     row["theory"],
                     str(row["scenario_false_positive"]),
+                    str(row["scenario_false_negative"]),
                     _metric(row["scenario_precision"]),
+                    _metric(row["scenario_recall"]),
                     lattice_fp,
+                    lattice_fn,
                     str(row["full_protocol_false_positive"]),
+                    str(row["full_protocol_false_negative"]),
                     row["additional_evidence"],
                 ]
             )
