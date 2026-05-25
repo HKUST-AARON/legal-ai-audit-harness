@@ -1,6 +1,16 @@
 {
-  "check_count": 1036,
+  "check_count": 1043,
   "checks": [
+    {
+      "expected": "From Case Retrieval to Normative Material Screening",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "A Proof-Carrying Audit Protocol for Legal AI Recommendation Systems",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
     {
       "expected": "- 44 validation suites",
       "passed": true,
@@ -2002,7 +2012,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 224)",
+      "expected": "abstract word count 150-250 (actual 223)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2642,6 +2652,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `Procedural Verifiability for Legal AI Outputs`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "README.md"
@@ -3277,6 +3292,11 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `Procedural Verifiability for Legal AI Outputs`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -3912,6 +3932,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `Procedural Verifiability for Legal AI Outputs`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -4547,6 +4572,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `Procedural Verifiability for Legal AI Outputs`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -5178,11 +5208,16 @@
     },
     {
       "expected": "absence of stale claim `14 families`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `Procedural Verifiability for Legal AI Outputs`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     }
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1036
+  "passed_count": 1043
 }

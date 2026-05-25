@@ -314,6 +314,8 @@ def _checks(payload: dict) -> list[dict]:
         )
 
     expectations = [
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "From Case Retrieval to Normative Material Screening"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "A Proof-Carrying Audit Protocol for Legal AI Recommendation Systems"),
         ("ARTIFACT.md", f"- {values['suite_count']} validation suites"),
         ("ARTIFACT.md", f"- {values['scenario_files']} scenario files"),
         ("ARTIFACT.md", f"- {values['embedded']} embedded records or output items"),
@@ -868,6 +870,7 @@ def _forbidden_checks() -> list[dict]:
         "2,709 certificate tamper-resistance",
         "2709/2709",
         "14 families",
+        "Procedural Verifiability for Legal AI Outputs",
     ]
     paths = [
         "ARTIFACT.md",
