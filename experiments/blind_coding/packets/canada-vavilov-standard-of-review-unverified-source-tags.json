@@ -131,6 +131,7 @@
   "packet_id": "canada-vavilov-standard-of-review-unverified-source-tags",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "committed-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

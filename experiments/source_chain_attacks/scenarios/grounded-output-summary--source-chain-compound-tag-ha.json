@@ -101,7 +101,8 @@
       "common_law"
     ],
     "irreversible_action": false,
-    "human_authorization": false
+    "human_authorization": false,
+    "contestability_channel": "committed-review-record"
   },
   "source_chain_attack": {
     "attack": "nonprocedural_source_tags+high_authority_omission",

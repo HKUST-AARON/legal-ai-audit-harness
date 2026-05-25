@@ -221,6 +221,7 @@
   "packet_id": "public-retrieval-us-agency-deference-after-loper-bright-q06",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "public-retrieval-source-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

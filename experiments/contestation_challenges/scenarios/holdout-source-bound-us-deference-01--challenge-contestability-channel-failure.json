@@ -204,6 +204,16 @@
       }
     ]
   },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "united_states_federal_administrative_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
   "source_binding_validation": {
     "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",
     "manifest_records": 5,

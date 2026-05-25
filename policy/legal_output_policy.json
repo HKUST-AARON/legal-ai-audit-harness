@@ -28,7 +28,8 @@
     "default_role": "back_office_tool"
   },
   "review_gate": {
-    "protected_reliance_gates": ["attorney_review", "external_reliance", "filing", "sending", "execution", "authorized_adoption"]
+    "protected_reliance_gates": ["attorney_review", "external_reliance", "filing", "sending", "execution", "authorized_adoption"],
+    "contestability_channel_required_for": ["normative_material_screening_output", "decision_support_reason"]
   },
   "source_tags": [
     "tool_verified",

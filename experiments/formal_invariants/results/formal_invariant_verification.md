@@ -1,6 +1,6 @@
 # Formal Invariant Verification
 
-Checks: 51643/51643
+Checks: 51644/51644
 All passed: True
 
 | Invariant | Checks | Passed | Failed |
@@ -10,6 +10,7 @@ All passed: True
 | evidence_packet_necessity | 4 | 4 | 0 |
 | authority_gate_necessity | 2 | 2 | 0 |
 | counter_material_gate_necessity | 4 | 4 | 0 |
+| contestability_channel_necessity | 1 | 1 | 0 |
 | decision_adoption_necessity | 654 | 654 | 0 |
 | role_cap_dominance | 3645 | 3645 | 0 |
 | failure_cap_absorption | 11 | 11 | 0 |

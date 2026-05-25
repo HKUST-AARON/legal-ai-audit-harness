@@ -243,6 +243,16 @@
       }
     ]
   },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "canadian_administrative_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
   "source_binding_validation": {
     "manifest": "experiments/issue_gold_sets/manifests/canada_vavilov_standard_of_review.json",
     "manifest_records": 5,

@@ -190,6 +190,7 @@ def _repaired_scenario(scenario: dict, issue: dict) -> dict:
         "review_status": "completed",
         "reliance_gate": "attorney_review",
         "jurisdiction_assumptions": [issue["assumption"]],
+        "contestability_channel": "cross-engine-source-bound-review-record",
         "irreversible_action": False,
         "human_authorization": False,
     }

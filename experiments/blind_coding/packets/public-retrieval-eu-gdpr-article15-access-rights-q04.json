@@ -47,6 +47,7 @@
   "packet_id": "public-retrieval-eu-gdpr-article15-access-rights-q04",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "public-retrieval-source-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

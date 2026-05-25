@@ -23,6 +23,7 @@
   "packet_id": "suspended-authority-omission",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "committed-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

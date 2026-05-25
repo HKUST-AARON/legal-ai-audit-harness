@@ -217,6 +217,7 @@
   "packet_id": "public-retrieval-germany-right-to-be-forgotten-review-q03",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "public-retrieval-source-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

@@ -1,6 +1,6 @@
 {
   "all_passed": true,
-  "check_count": 9,
+  "check_count": 10,
   "checks": [
     {
       "checks": 46656,
@@ -38,6 +38,13 @@
       "passed": 4
     },
     {
+      "checks": 1,
+      "failed": 0,
+      "failures": [],
+      "id": "contestability_channel_necessity",
+      "passed": 1
+    },
+    {
       "checks": 654,
       "failed": 0,
       "failures": [],
@@ -66,6 +73,6 @@
       "passed": 2
     }
   ],
-  "passed_checks": 51643,
-  "total_checks": 51643
+  "passed_checks": 51644,
+  "total_checks": 51644
 }

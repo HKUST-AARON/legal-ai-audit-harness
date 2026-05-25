@@ -1,17 +1,18 @@
 # Repair Frontier Analysis
 
 Blocked procedural claims: 193
-Counterfactual repair evaluations: 4831
+Counterfactual repair evaluations: 5097
 Repairable by declared gate families: 193/193
 
 ## Minimal Repair Size
 
 | Gate families required | Blocked claims |
 | ---: | ---: |
-| 1 | 108 |
-| 2 | 40 |
-| 3 | 42 |
+| 1 | 98 |
+| 2 | 50 |
+| 3 | 41 |
 | 4 | 3 |
+| 5 | 1 |
 
 ## Minimal Repair Gate Frequency
 
@@ -21,10 +22,9 @@ Repairable by declared gate families: 193/193
 | authority_packet_completion | 65 |
 | decision_adoption_completion | 15 |
 | failure_flag_resolution | 3 |
-| rank_salience_completion | 43 |
-| review_contestability_completion | 29 |
-| role_cap_completion | 29 |
-| source_binding_completion | 172 |
+| rank_salience_completion | 38 |
+| review_contestability_completion | 41 |
+| source_binding_completion | 143 |
 
 ## Target Status Distribution
 

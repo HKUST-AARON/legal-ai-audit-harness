@@ -202,6 +202,7 @@
     "jurisdiction_assumptions": [
       "united_states_federal_administrative_law"
     ],
+    "contestability_channel": "cross-engine-source-bound-review-record",
     "irreversible_action": false,
     "human_authorization": false
   },

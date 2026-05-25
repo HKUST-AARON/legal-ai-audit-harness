@@ -69,14 +69,26 @@
       {
         "id": "u1",
         "claim": "The adopted recommendation relies on the contract clause and mandatory law.",
-        "source_ids": ["contract-clause-a", "mandatory-law-b"],
-        "locators": ["contract-clause-a:text", "mandatory-law-b:rule"]
+        "source_ids": [
+          "contract-clause-a",
+          "mandatory-law-b"
+        ],
+        "locators": [
+          "contract-clause-a:text",
+          "mandatory-law-b:rule"
+        ]
       },
       {
         "id": "u2",
         "claim": "The decision record addresses the public-policy exception and contrary award.",
-        "source_ids": ["public-policy-exception-c", "contrary-award-d"],
-        "locators": ["public-policy-c:exception", "contrary-award-d:holding"]
+        "source_ids": [
+          "public-policy-exception-c",
+          "contrary-award-d"
+        ],
+        "locators": [
+          "public-policy-c:exception",
+          "contrary-award-d:holding"
+        ]
       }
     ],
     "output_links": [
@@ -128,6 +140,7 @@
     "irreversible_action": false,
     "human_authorization": true,
     "adoption_reasons_recorded": true,
-    "contestation_recorded": true
+    "contestation_recorded": true,
+    "contestability_channel": "committed-review-record"
   }
 }

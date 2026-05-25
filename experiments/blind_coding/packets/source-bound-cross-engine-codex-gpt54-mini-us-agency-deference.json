@@ -159,6 +159,7 @@
   "packet_id": "source-bound-cross-engine-codex-gpt54-mini-us-agency-deference",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "cross-engine-source-bound-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

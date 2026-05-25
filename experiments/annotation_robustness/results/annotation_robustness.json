@@ -1,6 +1,6 @@
 {
-  "all_policy_status_stable": 252,
-  "lenient_status_stable": 254,
+  "all_policy_status_stable": 262,
+  "lenient_status_stable": 264,
   "mean_score_delta_lenient": 0.8484848484848485,
   "mean_score_delta_strict": 0.7462121212121212,
   "policy_count": 3,
@@ -2515,24 +2515,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -2676,24 +2676,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -2837,24 +2837,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -2998,24 +2998,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "civil_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -3159,24 +3159,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "common_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -3320,24 +3320,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "common_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -3481,24 +3481,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "common_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -3642,24 +3642,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "common_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -3803,24 +3803,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "common_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -3964,24 +3964,24 @@
     },
     {
       "base": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       },
       "jurisdiction_profile": "common_law",
       "lenient": {
-        "allowed_status": "normative_material_screening_output",
-        "claim_supported": true,
-        "disposition": "none",
+        "allowed_status": "reference_information",
+        "claim_supported": false,
+        "disposition": "downgrade",
         "total_score": 10
       },
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json",
       "strict": {
-        "allowed_status": "professional_support_output",
+        "allowed_status": "reference_information",
         "claim_supported": false,
-        "disposition": "none",
+        "disposition": "downgrade",
         "total_score": 9
       }
     },
@@ -6081,6 +6081,6 @@
   ],
   "scenario_count": 264,
   "strict_status_stable": 262,
-  "weighted_status_agreement_base_lenient": 0.9840804660081769,
-  "weighted_status_agreement_base_strict": 0.9966881186255693
+  "weighted_status_agreement_base_lenient": 1.0,
+  "weighted_status_agreement_base_strict": 0.9966806231375656
 }

@@ -163,6 +163,7 @@
     "jurisdiction_assumptions": [
       "civil_law"
     ],
+    "contestability_channel": "issue-public-output-review-record",
     "irreversible_action": false,
     "human_authorization": false
   },

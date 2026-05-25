@@ -92,6 +92,7 @@
   "packet_id": "uk-mesothelioma-causation-after-fairchild-missing-high-authority",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "committed-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

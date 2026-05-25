@@ -234,6 +234,16 @@
       }
     ]
   },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "european_union_data_protection_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
   "source_binding_validation": {
     "manifest": "experiments/issue_gold_sets/manifests/eu_gdpr_article15_access_rights.json",
     "manifest_records": 7,

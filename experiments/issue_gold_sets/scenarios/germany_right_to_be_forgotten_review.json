@@ -73,26 +73,44 @@
       {
         "id": "unit-1",
         "claim": "Right to be Forgotten I is high authority for German fundamental-rights review where domestic law is not fully determined by EU law.",
-        "source_ids": ["bverfg-right-to-be-forgotten-i-1-bvr-16-13"],
-        "locators": ["1 BvR 16/13"]
+        "source_ids": [
+          "bverfg-right-to-be-forgotten-i-1-bvr-16-13"
+        ],
+        "locators": [
+          "1 BvR 16/13"
+        ]
       },
       {
         "id": "unit-2",
         "claim": "Right to be Forgotten II is high authority for applying Union fundamental rights in fully harmonized EU-law settings.",
-        "source_ids": ["bverfg-right-to-be-forgotten-ii-1-bvr-276-17"],
-        "locators": ["1 BvR 276/17"]
+        "source_ids": [
+          "bverfg-right-to-be-forgotten-ii-1-bvr-276-17"
+        ],
+        "locators": [
+          "1 BvR 276/17"
+        ]
       },
       {
         "id": "unit-4",
         "claim": "EU Charter and Basic Law materials are limiting materials because review depends on whether the relevant law is fully harmonized or open to domestic constitutional standards.",
-        "source_ids": ["charter-articles-7-8-11-16", "basic-law-personality-expression-balance"],
-        "locators": ["Articles 7, 8, 11 and 16 CFR", "Articles 1, 2 and 5 GG"]
+        "source_ids": [
+          "charter-articles-7-8-11-16",
+          "basic-law-personality-expression-balance"
+        ],
+        "locators": [
+          "Articles 7, 8, 11 and 16 CFR",
+          "Articles 1, 2 and 5 GG"
+        ]
       },
       {
         "id": "unit-3",
         "claim": "Google Spain is a Court of Justice authority that should be visible for EU right-to-be-forgotten analysis.",
-        "source_ids": ["google-spain-c-131-12"],
-        "locators": ["Case C-131/12"]
+        "source_ids": [
+          "google-spain-c-131-12"
+        ],
+        "locators": [
+          "Case C-131/12"
+        ]
       }
     ],
     "output_links": [
@@ -143,7 +161,8 @@
       "civil_law"
     ],
     "irreversible_action": false,
-    "human_authorization": false
+    "human_authorization": false,
+    "contestability_channel": "committed-review-record"
   },
   "failure_flags": [],
   "expected_allowed_status": "normative_material_screening_output",

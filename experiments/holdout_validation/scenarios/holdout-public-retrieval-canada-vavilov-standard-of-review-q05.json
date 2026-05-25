@@ -262,6 +262,7 @@
     "jurisdiction_assumptions": [
       "common_law"
     ],
+    "contestability_channel": "public-retrieval-source-record",
     "irreversible_action": false,
     "human_authorization": false
   }

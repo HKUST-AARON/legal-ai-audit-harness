@@ -1104,24 +1104,6 @@
       "upward_shifts": 0
     },
     {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 23,
-        "professional_support_output": 203,
-        "reference_information": 24
-      },
-      "downward_shifts": 24,
-      "high_status_stability_rate": 0.908,
-      "high_status_stable_samples": 227,
-      "mean_status_rank_shift": 0.188,
-      "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json",
-      "stable_samples": 203,
-      "status_stability_rate": 0.812,
-      "upward_shifts": 23
-    },
-    {
       "base_score": 10,
       "base_status": "reference_information",
       "distribution": {
@@ -1189,24 +1171,6 @@
       "stable_samples": 229,
       "status_stability_rate": 0.916,
       "upward_shifts": 0
-    },
-    {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 23,
-        "professional_support_output": 204,
-        "reference_information": 23
-      },
-      "downward_shifts": 23,
-      "high_status_stability_rate": 0.908,
-      "high_status_stable_samples": 227,
-      "mean_status_rank_shift": 0.184,
-      "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json",
-      "stable_samples": 204,
-      "status_stability_rate": 0.816,
-      "upward_shifts": 23
     },
     {
       "base_score": 10,
@@ -1278,24 +1242,6 @@
       "upward_shifts": 0
     },
     {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 17,
-        "professional_support_output": 211,
-        "reference_information": 22
-      },
-      "downward_shifts": 22,
-      "high_status_stability_rate": 0.932,
-      "high_status_stable_samples": 233,
-      "mean_status_rank_shift": 0.156,
-      "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json",
-      "stable_samples": 211,
-      "status_stability_rate": 0.844,
-      "upward_shifts": 17
-    },
-    {
       "base_score": 10,
       "base_status": "reference_information",
       "distribution": {
@@ -1362,24 +1308,6 @@
       "stable_samples": 225,
       "status_stability_rate": 0.9,
       "upward_shifts": 0
-    },
-    {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 17,
-        "professional_support_output": 210,
-        "reference_information": 23
-      },
-      "downward_shifts": 23,
-      "high_status_stability_rate": 0.932,
-      "high_status_stable_samples": 233,
-      "mean_status_rank_shift": 0.16,
-      "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json",
-      "stable_samples": 210,
-      "status_stability_rate": 0.84,
-      "upward_shifts": 17
     },
     {
       "base_score": 10,
@@ -1449,24 +1377,6 @@
       "stable_samples": 227,
       "status_stability_rate": 0.908,
       "upward_shifts": 0
-    },
-    {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 31,
-        "professional_support_output": 194,
-        "reference_information": 25
-      },
-      "downward_shifts": 25,
-      "high_status_stability_rate": 0.876,
-      "high_status_stable_samples": 219,
-      "mean_status_rank_shift": 0.224,
-      "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json",
-      "stable_samples": 194,
-      "status_stability_rate": 0.776,
-      "upward_shifts": 31
     },
     {
       "base_score": 10,
@@ -1540,24 +1450,6 @@
       "upward_shifts": 0
     },
     {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 16,
-        "professional_support_output": 215,
-        "reference_information": 19
-      },
-      "downward_shifts": 19,
-      "high_status_stability_rate": 0.936,
-      "high_status_stable_samples": 234,
-      "mean_status_rank_shift": 0.14,
-      "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json",
-      "stable_samples": 215,
-      "status_stability_rate": 0.86,
-      "upward_shifts": 16
-    },
-    {
       "base_score": 10,
       "base_status": "reference_information",
       "distribution": {
@@ -1626,24 +1518,6 @@
       "stable_samples": 228,
       "status_stability_rate": 0.912,
       "upward_shifts": 0
-    },
-    {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 29,
-        "professional_support_output": 197,
-        "reference_information": 24
-      },
-      "downward_shifts": 24,
-      "high_status_stability_rate": 0.884,
-      "high_status_stable_samples": 221,
-      "mean_status_rank_shift": 0.212,
-      "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json",
-      "stable_samples": 197,
-      "status_stability_rate": 0.788,
-      "upward_shifts": 29
     },
     {
       "base_score": 10,
@@ -1716,24 +1590,6 @@
       "upward_shifts": 0
     },
     {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 20,
-        "professional_support_output": 199,
-        "reference_information": 31
-      },
-      "downward_shifts": 31,
-      "high_status_stability_rate": 0.92,
-      "high_status_stable_samples": 230,
-      "mean_status_rank_shift": 0.204,
-      "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json",
-      "stable_samples": 199,
-      "status_stability_rate": 0.796,
-      "upward_shifts": 20
-    },
-    {
       "base_score": 10,
       "base_status": "reference_information",
       "distribution": {
@@ -1804,24 +1660,6 @@
       "upward_shifts": 0
     },
     {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 20,
-        "professional_support_output": 209,
-        "reference_information": 21
-      },
-      "downward_shifts": 21,
-      "high_status_stability_rate": 0.92,
-      "high_status_stable_samples": 230,
-      "mean_status_rank_shift": 0.164,
-      "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json",
-      "stable_samples": 209,
-      "status_stability_rate": 0.836,
-      "upward_shifts": 20
-    },
-    {
       "base_score": 10,
       "base_status": "reference_information",
       "distribution": {
@@ -1888,24 +1726,6 @@
       "stable_samples": 223,
       "status_stability_rate": 0.892,
       "upward_shifts": 0
-    },
-    {
-      "base_score": 9,
-      "base_status": "professional_support_output",
-      "distribution": {
-        "normative_material_screening_output": 26,
-        "professional_support_output": 200,
-        "reference_information": 24
-      },
-      "downward_shifts": 24,
-      "high_status_stability_rate": 0.896,
-      "high_status_stable_samples": 224,
-      "mean_status_rank_shift": 0.2,
-      "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
-      "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json",
-      "stable_samples": 200,
-      "status_stability_rate": 0.8,
-      "upward_shifts": 26
     },
     {
       "base_score": 10,
@@ -2798,7 +2618,7 @@
   ],
   "evaluation_count": 66000,
   "iterations_per_scenario": 250,
-  "mean_status_rank_shift": 0.09201515151515152,
+  "mean_status_rank_shift": 0.08507575757575758,
   "qualified_high_status_stability_rate": 0.916063492063492,
   "qualified_scenario_count": 63,
   "qualified_status_stability_rate": 0.8801904761904762,
@@ -4644,21 +4464,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 23,
-        "professional_support_output": 203,
-        "reference_information": 24
+        "reference_information": 250
       },
-      "downward_shifts": 24,
-      "high_status_stability_rate": 0.908,
-      "high_status_stable_samples": 227,
-      "mean_status_rank_shift": 0.188,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json",
-      "stable_samples": 203,
-      "status_stability_rate": 0.812,
-      "upward_shifts": 23
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -4763,21 +4581,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 23,
-        "professional_support_output": 204,
-        "reference_information": 23
+        "reference_information": 250
       },
-      "downward_shifts": 23,
-      "high_status_stability_rate": 0.908,
-      "high_status_stable_samples": 227,
-      "mean_status_rank_shift": 0.184,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json",
-      "stable_samples": 204,
-      "status_stability_rate": 0.816,
-      "upward_shifts": 23
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -4882,21 +4698,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 17,
-        "professional_support_output": 211,
-        "reference_information": 22
+        "reference_information": 250
       },
-      "downward_shifts": 22,
-      "high_status_stability_rate": 0.932,
-      "high_status_stable_samples": 233,
-      "mean_status_rank_shift": 0.156,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json",
-      "stable_samples": 211,
-      "status_stability_rate": 0.844,
-      "upward_shifts": 17
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5000,21 +4814,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 17,
-        "professional_support_output": 210,
-        "reference_information": 23
+        "reference_information": 250
       },
-      "downward_shifts": 23,
-      "high_status_stability_rate": 0.932,
-      "high_status_stable_samples": 233,
-      "mean_status_rank_shift": 0.16,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json",
-      "stable_samples": 210,
-      "status_stability_rate": 0.84,
-      "upward_shifts": 17
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5119,21 +4931,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 31,
-        "professional_support_output": 194,
-        "reference_information": 25
+        "reference_information": 250
       },
-      "downward_shifts": 25,
-      "high_status_stability_rate": 0.876,
-      "high_status_stable_samples": 219,
-      "mean_status_rank_shift": 0.224,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json",
-      "stable_samples": 194,
-      "status_stability_rate": 0.776,
-      "upward_shifts": 31
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5240,21 +5050,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 16,
-        "professional_support_output": 215,
-        "reference_information": 19
+        "reference_information": 250
       },
-      "downward_shifts": 19,
-      "high_status_stability_rate": 0.936,
-      "high_status_stable_samples": 234,
-      "mean_status_rank_shift": 0.14,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json",
-      "stable_samples": 215,
-      "status_stability_rate": 0.86,
-      "upward_shifts": 16
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5360,21 +5168,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 29,
-        "professional_support_output": 197,
-        "reference_information": 24
+        "reference_information": 250
       },
-      "downward_shifts": 24,
-      "high_status_stability_rate": 0.884,
-      "high_status_stable_samples": 221,
-      "mean_status_rank_shift": 0.212,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json",
-      "stable_samples": 197,
-      "status_stability_rate": 0.788,
-      "upward_shifts": 29
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5480,21 +5286,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 20,
-        "professional_support_output": 199,
-        "reference_information": 31
+        "reference_information": 250
       },
-      "downward_shifts": 31,
-      "high_status_stability_rate": 0.92,
-      "high_status_stable_samples": 230,
-      "mean_status_rank_shift": 0.204,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json",
-      "stable_samples": 199,
-      "status_stability_rate": 0.796,
-      "upward_shifts": 20
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5600,21 +5404,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 20,
-        "professional_support_output": 209,
-        "reference_information": 21
+        "reference_information": 250
       },
-      "downward_shifts": 21,
-      "high_status_stability_rate": 0.92,
-      "high_status_stable_samples": 230,
-      "mean_status_rank_shift": 0.164,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json",
-      "stable_samples": 209,
-      "status_stability_rate": 0.836,
-      "upward_shifts": 20
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -5718,21 +5520,19 @@
     },
     {
       "base_score": 9,
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "distribution": {
-        "normative_material_screening_output": 26,
-        "professional_support_output": 200,
-        "reference_information": 24
+        "reference_information": 250
       },
-      "downward_shifts": 24,
-      "high_status_stability_rate": 0.896,
-      "high_status_stable_samples": 224,
-      "mean_status_rank_shift": 0.2,
+      "downward_shifts": 0,
+      "high_status_stability_rate": 1.0,
+      "high_status_stable_samples": 250,
+      "mean_status_rank_shift": 0,
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json",
-      "stable_samples": 200,
-      "status_stability_rate": 0.8,
-      "upward_shifts": 26
+      "stable_samples": 250,
+      "status_stability_rate": 1.0,
+      "upward_shifts": 0
     },
     {
       "base_score": 11,
@@ -7249,9 +7049,9 @@
     }
   ],
   "scenario_count": 264,
-  "scenario_exact_stability_count": 102,
-  "scenario_high_stability_count": 193,
+  "scenario_exact_stability_count": 112,
+  "scenario_high_stability_count": 203,
   "seed": 10506,
   "shift_probability": 0.1,
-  "status_stability_rate": 0.9300757575757576
+  "status_stability_rate": 0.9370151515151515
 }

@@ -267,6 +267,7 @@ def _complete_review_contestability(scenario: dict, target: str) -> None:
     gate["review_status"] = "completed"
     gate["reliance_gate"] = "attorney_review"
     gate["jurisdiction_assumptions"] = gate.get("jurisdiction_assumptions") or [_repair_jurisdiction_profile(scenario)]
+    gate["contestability_channel"] = "repair-frontier-review-record"
     gate["irreversible_action"] = False
     gate["human_authorization"] = False
 
@@ -286,6 +287,7 @@ def _complete_decision_adoption(scenario: dict, target: str) -> None:
     gate["reliance_gate"] = "authorized_adoption"
     gate["human_authorization"] = True
     gate["jurisdiction_assumptions"] = gate.get("jurisdiction_assumptions") or [_repair_jurisdiction_profile(scenario)]
+    gate["contestability_channel"] = "repair-frontier-adoption-record"
     gate["adoption_reasons_recorded"] = True
     gate["contestation_recorded"] = True
     gate["irreversible_action"] = False

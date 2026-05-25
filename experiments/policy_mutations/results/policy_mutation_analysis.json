@@ -12744,6 +12744,7 @@
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12770,6 +12771,7 @@
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12796,6 +12798,7 @@
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12822,6 +12825,7 @@
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12848,6 +12852,7 @@
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12874,6 +12879,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12901,6 +12907,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12928,6 +12935,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12955,6 +12963,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -12982,6 +12991,7 @@
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
@@ -24867,6 +24877,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -24889,6 +24900,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -24911,6 +24923,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -24933,6 +24946,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -24955,6 +24969,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -24977,6 +24992,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25000,6 +25016,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25023,6 +25040,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25046,6 +25064,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25069,6 +25088,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25092,6 +25112,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25115,6 +25136,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25138,6 +25160,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25161,6 +25184,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25184,6 +25208,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25207,6 +25232,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25231,6 +25257,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25255,6 +25282,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25279,6 +25307,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25303,6 +25332,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -25327,6 +25357,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25349,6 +25380,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25371,6 +25403,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25393,6 +25426,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25415,6 +25449,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25437,6 +25472,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25460,6 +25496,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25483,6 +25520,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25506,6 +25544,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25529,6 +25568,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25552,6 +25592,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25574,6 +25615,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25596,6 +25638,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25618,6 +25661,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25640,6 +25684,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25662,6 +25707,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25685,6 +25731,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25708,6 +25755,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25731,6 +25779,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25754,6 +25803,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25777,6 +25827,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25799,6 +25850,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25821,6 +25873,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25843,6 +25896,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25865,6 +25919,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25887,6 +25942,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25910,6 +25966,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25933,6 +25990,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25956,6 +26014,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -25979,6 +26038,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26002,6 +26062,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26024,6 +26085,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26046,6 +26108,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26068,6 +26131,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26090,6 +26154,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26112,6 +26177,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26135,6 +26201,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26158,6 +26225,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26181,6 +26249,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26204,6 +26273,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26227,6 +26297,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26249,6 +26320,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26271,6 +26343,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26293,6 +26366,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26315,6 +26389,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26337,6 +26412,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26360,6 +26436,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26383,6 +26460,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26406,6 +26484,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26429,6 +26508,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26452,6 +26532,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26474,6 +26555,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26496,6 +26578,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26518,6 +26601,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26540,6 +26624,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26562,6 +26647,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26585,6 +26671,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26608,6 +26695,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26631,6 +26719,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26654,6 +26743,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26677,6 +26767,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26699,6 +26790,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26721,6 +26813,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26743,6 +26836,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26765,6 +26859,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26787,6 +26882,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26810,6 +26906,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26833,6 +26930,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26856,6 +26954,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26879,6 +26978,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26902,6 +27002,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26924,6 +27025,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26946,6 +27048,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26968,6 +27071,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -26990,6 +27094,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -27012,6 +27117,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -27035,6 +27141,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -27058,6 +27165,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -27081,6 +27189,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -27104,6 +27213,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -28977,6 +29087,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29000,6 +29111,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29023,6 +29135,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29046,6 +29159,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29069,6 +29183,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29092,6 +29207,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29116,6 +29232,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29140,6 +29257,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29164,6 +29282,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29188,6 +29307,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29212,6 +29332,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29234,6 +29355,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29256,6 +29378,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29278,6 +29401,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29300,6 +29424,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29322,6 +29447,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29345,6 +29471,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29368,6 +29495,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29391,6 +29519,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29414,6 +29543,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29437,6 +29567,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29459,6 +29590,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29481,6 +29613,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29503,6 +29636,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29525,6 +29659,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29547,6 +29682,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29570,6 +29706,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29593,6 +29730,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29616,6 +29754,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29639,6 +29778,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29662,6 +29802,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29685,6 +29826,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29708,6 +29850,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29731,6 +29874,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29754,6 +29898,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29777,6 +29922,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29801,6 +29947,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29825,6 +29972,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29849,6 +29997,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29873,6 +30022,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -29897,6 +30047,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29919,6 +30070,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29941,6 +30093,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29963,6 +30116,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -29985,6 +30139,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30007,6 +30162,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30030,6 +30186,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30053,6 +30210,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30076,6 +30234,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30099,6 +30258,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30122,6 +30282,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30144,6 +30305,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30166,6 +30328,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30188,6 +30351,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30210,6 +30374,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30232,6 +30397,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30255,6 +30421,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30278,6 +30445,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30301,6 +30469,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30324,6 +30493,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30347,6 +30517,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30370,6 +30541,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30393,6 +30565,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30416,6 +30589,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30439,6 +30613,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30462,6 +30637,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30486,6 +30662,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30510,6 +30687,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30534,6 +30712,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30558,6 +30737,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -30582,6 +30762,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30604,6 +30785,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30626,6 +30808,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30648,6 +30831,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30670,6 +30854,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30692,6 +30877,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30715,6 +30901,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30738,6 +30925,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30761,6 +30949,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30784,6 +30973,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30807,6 +30997,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30829,6 +31020,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30851,6 +31043,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30873,6 +31066,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30895,6 +31089,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30917,6 +31112,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30940,6 +31136,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30963,6 +31160,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -30986,6 +31184,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -31009,6 +31208,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33067,6 +33267,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33089,6 +33290,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33111,6 +33313,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33133,6 +33336,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33155,6 +33359,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33177,6 +33382,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33200,6 +33406,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33223,6 +33430,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33246,6 +33454,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33269,6 +33478,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -33288,10 +33498,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -33301,17 +33513,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -33321,17 +33535,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -33341,17 +33557,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -33361,17 +33579,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -33381,17 +33601,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -33402,17 +33624,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -33423,17 +33647,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -33444,17 +33670,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -33465,17 +33693,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -33486,9 +33716,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--source-bound-no-contestability.json"
     },
@@ -34512,6 +34742,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34535,6 +34766,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34558,6 +34790,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34581,6 +34814,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34604,6 +34838,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34627,6 +34862,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34651,6 +34887,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34675,6 +34912,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34699,6 +34937,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34723,6 +34962,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -34743,10 +34983,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -34756,17 +34998,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -34776,17 +35020,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -34796,17 +35042,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -34816,17 +35064,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -34836,17 +35086,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -34857,17 +35109,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -34878,17 +35132,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -34899,17 +35155,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -34920,17 +35178,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -34941,9 +35201,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--source-bound-no-contestability.json"
     },
@@ -35967,6 +36227,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -35989,6 +36250,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36011,6 +36273,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36033,6 +36296,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36055,6 +36319,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36077,6 +36342,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36100,6 +36366,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36123,6 +36390,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36146,6 +36414,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36169,6 +36438,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -36188,10 +36458,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -36201,17 +36473,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -36221,17 +36495,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -36241,17 +36517,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -36261,17 +36539,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -36281,17 +36561,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -36302,17 +36584,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -36323,17 +36607,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -36344,17 +36630,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -36365,17 +36653,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -36386,9 +36676,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--source-bound-no-contestability.json"
     },
@@ -37412,6 +37702,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37434,6 +37725,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37456,6 +37748,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37478,6 +37771,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37500,6 +37794,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37522,6 +37817,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37545,6 +37841,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37568,6 +37865,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37591,6 +37889,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37614,6 +37913,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -37633,10 +37933,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -37646,17 +37948,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -37666,17 +37970,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -37686,17 +37992,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -37706,17 +38014,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -37726,17 +38036,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -37747,17 +38059,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -37768,17 +38082,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -37789,17 +38105,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -37810,17 +38128,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -37831,9 +38151,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-eu-04--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--source-bound-no-contestability.json"
     },
@@ -38857,6 +39177,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -38879,6 +39200,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -38901,6 +39223,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -38923,6 +39246,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -38945,6 +39269,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -38967,6 +39292,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -38990,6 +39316,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -39013,6 +39340,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -39036,6 +39364,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -39059,6 +39388,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -39078,10 +39408,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -39091,17 +39423,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -39111,17 +39445,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -39131,17 +39467,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -39151,17 +39489,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -39171,17 +39511,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -39192,17 +39534,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -39213,17 +39557,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -39234,17 +39580,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -39255,17 +39603,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -39276,9 +39626,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--source-bound-no-contestability.json"
     },
@@ -40302,6 +40652,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40324,6 +40675,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40346,6 +40698,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40368,6 +40721,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40390,6 +40744,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40412,6 +40767,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40435,6 +40791,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40458,6 +40815,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40481,6 +40839,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40504,6 +40863,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -40523,10 +40883,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -40536,17 +40898,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -40556,17 +40920,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -40576,17 +40942,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -40596,17 +40964,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -40616,17 +40986,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -40637,17 +41009,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -40658,17 +41032,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -40679,17 +41055,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -40700,17 +41078,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -40721,9 +41101,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--source-bound-no-contestability.json"
     },
@@ -41747,6 +42127,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41769,6 +42150,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41791,6 +42173,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41813,6 +42196,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41835,6 +42219,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41857,6 +42242,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41880,6 +42266,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41903,6 +42290,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41926,6 +42314,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41949,6 +42338,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -41968,10 +42358,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -41981,17 +42373,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -42001,17 +42395,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -42021,17 +42417,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -42041,17 +42439,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -42061,17 +42461,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -42082,17 +42484,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -42103,17 +42507,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -42124,17 +42530,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -42145,17 +42553,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -42166,9 +42576,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-uk-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--source-bound-no-contestability.json"
     },
@@ -43192,6 +43602,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43214,6 +43625,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43236,6 +43648,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43258,6 +43671,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43280,6 +43694,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43302,6 +43717,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43325,6 +43741,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43348,6 +43765,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43371,6 +43789,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43394,6 +43813,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -43413,10 +43833,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -43426,17 +43848,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -43446,17 +43870,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -43466,17 +43892,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -43486,17 +43914,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -43506,17 +43936,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -43527,17 +43959,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -43548,17 +43982,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -43569,17 +44005,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -43590,17 +44028,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -43611,9 +44051,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-01--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--source-bound-no-contestability.json"
     },
@@ -44637,6 +45077,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44659,6 +45100,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44681,6 +45123,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44703,6 +45146,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44725,6 +45169,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44747,6 +45192,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44770,6 +45216,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44793,6 +45240,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44816,6 +45264,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44839,6 +45288,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -44858,10 +45308,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -44871,17 +45323,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -44891,17 +45345,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -44911,17 +45367,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -44931,17 +45389,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -44951,17 +45411,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -44972,17 +45434,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -44993,17 +45457,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -45014,17 +45480,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -45035,17 +45503,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -45056,9 +45526,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-02--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--source-bound-no-contestability.json"
     },
@@ -46082,6 +46552,7 @@
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46104,6 +46575,7 @@
       "classification_error": false,
       "description": "Policy treats source-bound evidence as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46126,6 +46598,7 @@
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46148,6 +46621,7 @@
       "classification_error": false,
       "description": "Policy treats review posture and role readiness as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46170,6 +46644,7 @@
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46192,6 +46667,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46215,6 +46691,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46238,6 +46715,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46261,6 +46739,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46284,6 +46763,7 @@
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "false_negative": false,
@@ -46303,10 +46783,12 @@
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--raw-unverified.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats recall at or above 0.8 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -46316,17 +46798,19 @@
       "mutant": "metric_recall_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats source-bound evidence as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -46336,17 +46820,19 @@
       "mutant": "source_binding_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats authority and counter-material coverage as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -46356,17 +46842,19 @@
       "mutant": "authority_material_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats review posture and role readiness as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -46376,17 +46864,19 @@
       "mutant": "review_label_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats total score at or above 9 as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "invalid_promotion": true,
       "kind": "status_conferring",
@@ -46396,17 +46886,19 @@
       "mutant": "total_score_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "frontier_general_model",
       "invalid_promotion": true,
@@ -46417,17 +46909,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "legal_vendor_model",
       "invalid_promotion": true,
@@ -46438,17 +46932,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "open_weight_model",
       "invalid_promotion": true,
@@ -46459,17 +46955,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "small_fast_model",
       "invalid_promotion": true,
@@ -46480,17 +46978,19 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },
     {
-      "base_status": "professional_support_output",
+      "base_status": "reference_information",
       "classification_error": true,
       "description": "Policy treats provider, model or engine identity as screening status.",
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "false_negative": false,
       "identity_profile": "undisclosed_agentic_model",
       "invalid_promotion": true,
@@ -46501,9 +47001,9 @@
       "mutant": "model_identity_confers_screening",
       "mutant_high": true,
       "mutant_status": "normative_material_screening_output",
-      "reference_disposition": "none",
+      "reference_disposition": "downgrade",
       "reference_high": false,
-      "reference_status": "professional_support_output",
+      "reference_status": "reference_information",
       "scenario_id": "evidence-ladder-codex55-us-03--source-bound-no-contestability",
       "source_path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--source-bound-no-contestability.json"
     },

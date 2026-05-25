@@ -192,6 +192,16 @@
       }
     ]
   },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "england_and_wales_tort_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
   "failure_flags": [],
   "expected_allowed_status": "reference_information",
   "expected_disposition": "downgrade",

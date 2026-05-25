@@ -67,6 +67,7 @@
       "administrative"
     ],
     "irreversible_action": false,
-    "human_authorization": false
+    "human_authorization": false,
+    "contestability_channel": "committed-review-record"
   }
 }

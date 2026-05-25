@@ -113,6 +113,7 @@
   "packet_id": "source-bound-codex55-eu-01--missing-output-link",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "source-bound-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

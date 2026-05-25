@@ -59,14 +59,24 @@
       {
         "id": "u1",
         "claim": "The output identifies the code article and special statute as high-authority materials.",
-        "source_ids": ["code-article-1", "special-statute-2"],
-        "locators": ["code-article-1:text", "special-statute-2:text"]
+        "source_ids": [
+          "code-article-1",
+          "special-statute-2"
+        ],
+        "locators": [
+          "code-article-1:text",
+          "special-statute-2:text"
+        ]
       },
       {
         "id": "u2",
         "claim": "The output surfaces one competing commentary as counter-material.",
-        "source_ids": ["competing-commentary-a"],
-        "locators": ["commentary-a:interpretation"]
+        "source_ids": [
+          "competing-commentary-a"
+        ],
+        "locators": [
+          "commentary-a:interpretation"
+        ]
       }
     ],
     "output_links": [
@@ -109,6 +119,7 @@
       "civil_law"
     ],
     "irreversible_action": false,
-    "human_authorization": false
+    "human_authorization": false,
+    "contestability_channel": "committed-review-record"
   }
 }

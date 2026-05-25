@@ -202,6 +202,7 @@
   "packet_id": "evidence-ladder-codex55-us-02--source-bound-no-logging",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "source-bound-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

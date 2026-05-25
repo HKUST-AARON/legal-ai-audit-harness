@@ -128,7 +128,8 @@
     "irreversible_action": false,
     "human_authorization": true,
     "adoption_reasons_recorded": true,
-    "contestation_recorded": true
+    "contestation_recorded": true,
+    "contestability_channel": "committed-review-record"
   },
   "source_chain_attack": {
     "attack": "source_id_mismatch+nonprocedural_source_tags+high_authority_omission",

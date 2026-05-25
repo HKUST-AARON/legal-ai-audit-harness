@@ -265,6 +265,7 @@ def issue_search_scenario(
             "review_status": "completed",
             "reliance_gate": "attorney_review",
             "jurisdiction_assumptions": [profile],
+            "contestability_channel": "issue-public-output-review-record",
             "irreversible_action": False,
             "human_authorization": False,
         },

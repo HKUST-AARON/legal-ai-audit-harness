@@ -121,6 +121,7 @@
   "packet_id": "source-bound-codex55-us-03--contradictory-claim",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "source-bound-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

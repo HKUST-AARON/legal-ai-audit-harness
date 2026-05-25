@@ -198,6 +198,16 @@
       }
     ]
   },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "england_and_wales_tort_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
   "source_binding_validation": {
     "manifest": "experiments/issue_gold_sets/manifests/uk_mesothelioma_causation_after_fairchild.json",
     "manifest_records": 8,

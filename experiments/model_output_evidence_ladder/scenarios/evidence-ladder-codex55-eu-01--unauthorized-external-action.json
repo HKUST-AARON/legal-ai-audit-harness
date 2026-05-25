@@ -236,6 +236,7 @@
     "jurisdiction_assumptions": [
       "european_union_data_protection_law"
     ],
+    "contestability_channel": "unauthorized-action-review-record",
     "irreversible_action": true,
     "human_authorization": false,
     "adoption_reasons_recorded": true,

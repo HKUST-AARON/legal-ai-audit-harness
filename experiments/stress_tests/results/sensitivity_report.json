@@ -296,6 +296,7 @@
           "expected_passed": true,
           "failure_flags": [
             "authority_omission",
+            "contestation_failure",
             "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
@@ -625,6 +626,7 @@
           "expected_passed": true,
           "failure_flags": [
             "authority_omission",
+            "contestation_failure",
             "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
@@ -954,6 +956,7 @@
           "expected_passed": true,
           "failure_flags": [
             "authority_omission",
+            "contestation_failure",
             "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"
@@ -1289,6 +1292,7 @@
           "expected_passed": true,
           "failure_flags": [
             "authority_omission",
+            "contestation_failure",
             "counter_material_suppression",
             "source_attribution_gap",
             "summary_distortion"

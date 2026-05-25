@@ -18,6 +18,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -51,6 +52,7 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "ranking_drift",
             "source_attribution_gap"
           ],
@@ -85,6 +87,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -118,6 +121,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -151,6 +155,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -184,6 +189,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -217,6 +223,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -250,6 +257,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -283,6 +291,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -316,6 +325,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -358,6 +368,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -391,6 +402,7 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "ranking_drift",
             "source_attribution_gap"
           ],
@@ -425,6 +437,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -458,6 +471,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -491,6 +505,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -524,6 +539,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -557,6 +573,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -590,6 +607,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -623,6 +641,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -656,6 +675,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -698,6 +718,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -731,6 +752,7 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "ranking_drift",
             "source_attribution_gap"
           ],
@@ -765,6 +787,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -798,6 +821,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -831,6 +855,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -864,6 +889,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -897,6 +923,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -930,6 +957,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -963,6 +991,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -996,6 +1025,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1038,6 +1068,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1071,6 +1102,7 @@
           "expected_disposition": "suspension",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "ranking_drift",
             "source_attribution_gap"
           ],
@@ -1105,6 +1137,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1138,6 +1171,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1171,6 +1205,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1204,6 +1239,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1237,6 +1273,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1270,6 +1307,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1303,6 +1341,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,
@@ -1336,6 +1375,7 @@
           "expected_disposition": "downgrade",
           "expected_passed": true,
           "failure_flags": [
+            "contestation_failure",
             "source_attribution_gap"
           ],
           "invalid_authority_rate": 0.0,

@@ -219,6 +219,7 @@ def _raw_scenario(spec: dict) -> dict:
             "review_status": "completed",
             "reliance_gate": "attorney_review",
             "jurisdiction_assumptions": spec["assumptions"],
+            "contestability_channel": "holdout-source-bound-review-record",
             "irreversible_action": False,
             "human_authorization": False,
         },

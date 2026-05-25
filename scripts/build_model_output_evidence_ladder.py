@@ -87,13 +87,14 @@ def source_bound_no_contestability(raw: dict) -> dict:
     scenario = repair(raw)
     scenario["scores"]["T"]["score"] = 0
     scenario["scores"]["T"]["evidence"] = "The evidence is source-bound, but affected parties cannot inspect or contest the output."
+    scenario.get("review_gate", {}).pop("contestability_channel", None)
     return with_step(
         scenario,
         raw,
         "source-bound-no-contestability",
         "Source-bound output lacks a contestation channel.",
-        "professional_support_output",
-        "none",
+        "reference_information",
+        "downgrade",
     )
 
 
@@ -134,6 +135,7 @@ def authorized_decision_support(raw: dict) -> dict:
         "review_status": "completed",
         "reliance_gate": "authorized_adoption",
         "jurisdiction_assumptions": raw.get("review_gate", {}).get("jurisdiction_assumptions", []),
+        "contestability_channel": "authorized-adoption-review-record",
         "irreversible_action": False,
         "human_authorization": True,
         "adoption_reasons_recorded": True,
@@ -160,6 +162,7 @@ def unauthorized_external_action(raw: dict) -> dict:
         "review_status": "completed",
         "reliance_gate": "authorized_adoption",
         "jurisdiction_assumptions": raw.get("review_gate", {}).get("jurisdiction_assumptions", []),
+        "contestability_channel": "unauthorized-action-review-record",
         "irreversible_action": True,
         "human_authorization": False,
         "adoption_reasons_recorded": True,

@@ -194,6 +194,7 @@
   "packet_id": "evidence-ladder-codex55-uk-02--contestable-screening",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "source-bound-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

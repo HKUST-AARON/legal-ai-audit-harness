@@ -481,6 +481,8 @@ def _review_gate_flags(scenario: dict[str, Any], target_rank: int) -> list[str]:
         flags.append("unauthorized_action")
     if target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and not _jurisdiction_assumptions_supported(scenario):
         flags.append("jurisdiction_assumption_gap")
+    if target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value] and not gate.get("contestability_channel"):
+        flags.append("contestation_failure")
     review_required = gate.get("attorney_review_required") is True
     review_incomplete = gate.get("review_status") not in {"completed", "not_required"}
     protected_reliance = gate.get("reliance_gate") in POLICY_BODY["review_gate"]["protected_reliance_gates"]

@@ -370,6 +370,7 @@ def build_scenario(issue: dict, query: str, slug: str, records: list[dict]) -> d
             "review_status": "completed",
             "reliance_gate": "attorney_review",
             "jurisdiction_assumptions": [issue["profile"]],
+            "contestability_channel": "public-retrieval-source-record",
             "irreversible_action": False,
             "human_authorization": False,
         },

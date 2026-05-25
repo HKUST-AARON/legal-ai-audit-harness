@@ -20,6 +20,7 @@ def main() -> int:
         _check_evidence_packet_necessity(),
         _check_authority_gate_necessity(),
         _check_counter_material_gate_necessity(),
+        _check_contestability_channel_necessity(),
         _check_decision_adoption_necessity(),
         _check_role_cap_dominance(),
         _check_failure_cap_absorption(),
@@ -147,6 +148,16 @@ def _check_counter_material_gate_necessity() -> dict:
         if STATUS_RANK[result.allowed_status] >= STATUS_RANK["normative_material_screening_output"]:
             failures.append({"case": label, "status": result.allowed_status, "flags": result.failure_flags})
     return _check("counter_material_gate_necessity", len(cases), failures)
+
+
+def _check_contestability_channel_necessity() -> dict:
+    scenario = _scenario((2, 2, 2, 2, 2, 2), "authorized_decision_support_tool")
+    scenario["review_gate"].pop("contestability_channel")
+    result = evaluate_scenario(scenario)
+    failures = []
+    if STATUS_RANK[result.allowed_status] >= STATUS_RANK["normative_material_screening_output"]:
+        failures.append({"status": result.allowed_status, "flags": result.failure_flags})
+    return _check("contestability_channel_necessity", 1, failures)
 
 
 def _check_decision_adoption_necessity() -> dict:
@@ -325,6 +336,7 @@ def _scenario(vector: tuple[int, ...], role: str, extra: dict | None = None) -> 
             "reliance_gate": "authorized_adoption",
             "human_authorization": True,
             "jurisdiction_assumptions": ["test jurisdiction"],
+            "contestability_channel": "formal-invariant-review-record",
             "adoption_reasons_recorded": True,
             "contestation_recorded": True,
         },

@@ -89,7 +89,7 @@ def _jurisdiction_assumption_challenge(scenario: dict) -> dict:
 
 def _contestability_channel_failure(scenario: dict) -> dict:
     challenged = _clone(scenario, "contestability-channel-failure", "reference_information", "downgrade")
-    challenged.pop("review_gate", None)
+    challenged.setdefault("review_gate", {}).pop("contestability_channel", None)
     return challenged
 
 

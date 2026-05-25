@@ -5,7 +5,7 @@ Scenario-regression expectations passed: 10/10
 Mean audit score: 9.00
 Mean upstream recall: 1.00
 High-upstream-performance but procedurally blocked scenarios: 10
-Blocked reason distribution: ranking_drift: 1, source_attribution_gap: 10
+Blocked reason distribution: contestation_failure: 10, ranking_drift: 1, source_attribution_gap: 10
 
 ## Allowed Status Distribution
 

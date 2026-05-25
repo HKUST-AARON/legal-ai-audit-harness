@@ -196,6 +196,16 @@
       }
     ]
   },
+  "review_gate": {
+    "attorney_review_required": true,
+    "review_status": "completed",
+    "reliance_gate": "attorney_review",
+    "jurisdiction_assumptions": [
+      "german_constitutional_law"
+    ],
+    "irreversible_action": false,
+    "human_authorization": false
+  },
   "source_binding_validation": {
     "manifest": "experiments/issue_gold_sets/manifests/germany_right_to_be_forgotten_review.json",
     "manifest_records": 5,

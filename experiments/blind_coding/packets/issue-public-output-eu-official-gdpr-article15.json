@@ -131,6 +131,7 @@
   "packet_id": "issue-public-output-eu-official-gdpr-article15",
   "review_gate": {
     "attorney_review_required": true,
+    "contestability_channel": "issue-public-output-review-record",
     "human_authorization": false,
     "irreversible_action": false,
     "jurisdiction_assumptions": [

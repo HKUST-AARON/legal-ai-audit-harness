@@ -217,6 +217,7 @@
     "jurisdiction_assumptions": [
       "united_states_federal_administrative_law"
     ],
+    "contestability_channel": "authorized-adoption-review-record",
     "irreversible_action": false,
     "human_authorization": true,
     "adoption_reasons_recorded": true,

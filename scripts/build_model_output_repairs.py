@@ -62,6 +62,7 @@ def repair(scenario: dict) -> dict:
         "review_status": "completed",
         "reliance_gate": "attorney_review",
         "jurisdiction_assumptions": scenario.get("review_gate", {}).get("jurisdiction_assumptions", []),
+        "contestability_channel": "source-bound-review-record",
         "irreversible_action": False,
         "human_authorization": False,
     }

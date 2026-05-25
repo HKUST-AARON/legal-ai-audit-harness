@@ -1,21 +1,21 @@
 {
   "blocked_claim_count": 193,
-  "counterfactual_evaluation_count": 4831,
+  "counterfactual_evaluation_count": 5097,
   "minimal_repair_gate_frequency": {
     "audit_vector_completion": 33,
     "authority_packet_completion": 65,
     "decision_adoption_completion": 15,
     "failure_flag_resolution": 3,
-    "rank_salience_completion": 43,
-    "review_contestability_completion": 29,
-    "role_cap_completion": 29,
-    "source_binding_completion": 172
+    "rank_salience_completion": 38,
+    "review_contestability_completion": 41,
+    "source_binding_completion": 143
   },
   "minimal_repair_size_distribution": {
-    "1": 108,
-    "2": 40,
-    "3": 42,
-    "4": 3
+    "1": 98,
+    "2": 50,
+    "3": 41,
+    "4": 3,
+    "5": 1
   },
   "repairable_count": 193,
   "results": [
@@ -54,9 +54,9 @@
         "contestation_failure",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 63,
+      "counterfactual_evaluations": 98,
       "full_repair_status": null,
-      "minimal_repair_size": 3,
+      "minimal_repair_size": 4,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
@@ -64,6 +64,7 @@
           "gates": [
             "audit_vector_completion",
             "source_binding_completion",
+            "review_contestability_completion",
             "failure_flag_resolution"
           ]
         }
@@ -104,13 +105,14 @@
       "base_disposition": "withdrawal",
       "base_failure_flags": [
         "authority_omission",
+        "contestation_failure",
         "counter_material_suppression",
         "source_attribution_gap",
         "summary_distortion"
       ],
-      "counterfactual_evaluations": 98,
+      "counterfactual_evaluations": 119,
       "full_repair_status": null,
-      "minimal_repair_size": 4,
+      "minimal_repair_size": 5,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
@@ -119,6 +121,7 @@
             "audit_vector_completion",
             "authority_packet_completion",
             "source_binding_completion",
+            "review_contestability_completion",
             "failure_flag_resolution"
           ]
         }
@@ -1147,6 +1150,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1159,14 +1163,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1179,6 +1175,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "suspension",
       "base_failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -1193,15 +1190,6 @@
             "source_binding_completion",
             "rank_salience_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "rank_salience_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1214,6 +1202,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1226,14 +1215,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1246,6 +1227,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1258,14 +1240,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1278,6 +1252,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1290,14 +1265,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1310,6 +1277,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1322,14 +1290,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1342,6 +1302,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1354,14 +1315,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1374,6 +1327,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1386,14 +1340,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1406,6 +1352,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1418,14 +1365,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1438,6 +1377,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1450,14 +1390,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1470,6 +1402,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "suspension",
       "base_failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -1484,15 +1417,6 @@
             "source_binding_completion",
             "rank_salience_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "rank_salience_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1505,6 +1429,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1517,14 +1442,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1537,6 +1454,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1549,14 +1467,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1569,6 +1479,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "suspension",
       "base_failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -1583,15 +1494,6 @@
             "source_binding_completion",
             "rank_salience_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "rank_salience_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1604,6 +1506,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1616,14 +1519,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1636,6 +1531,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1649,14 +1545,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-codex-gpt55-us-agency-deference.json",
@@ -1668,6 +1556,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "suspension",
       "base_failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -1683,15 +1572,6 @@
             "rank_salience_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "rank_salience_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/cross_engine_model_outputs/scenarios/cross-engine-gemini-25-pro-eu-gdpr-article15.json",
@@ -1703,6 +1583,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1715,14 +1596,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1735,6 +1608,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1747,14 +1621,6 @@
           "gates": [
             "source_binding_completion",
             "review_contestability_completion"
-          ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
           ]
         }
       ],
@@ -1767,6 +1633,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -1780,14 +1647,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-01--raw-unverified.json",
@@ -1796,18 +1655,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -1889,6 +1751,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "suspension",
       "base_failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -1904,15 +1767,6 @@
             "rank_salience_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "rank_salience_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-02--raw-unverified.json",
@@ -1921,18 +1775,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2014,6 +1871,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2027,14 +1885,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-03--raw-unverified.json",
@@ -2043,18 +1893,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2136,6 +1989,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2149,14 +2003,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-eu-04--raw-unverified.json",
@@ -2165,18 +2011,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2258,6 +2107,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2271,14 +2121,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-01--raw-unverified.json",
@@ -2287,18 +2129,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2380,6 +2225,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2393,14 +2239,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-02--raw-unverified.json",
@@ -2409,18 +2247,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2502,6 +2343,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2515,14 +2357,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-uk-03--raw-unverified.json",
@@ -2531,18 +2365,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2624,6 +2461,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2637,14 +2475,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-01--raw-unverified.json",
@@ -2653,18 +2483,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2746,6 +2579,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2759,14 +2593,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-02--raw-unverified.json",
@@ -2775,18 +2601,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],
@@ -2868,6 +2697,7 @@
       "base_allowed_status": "reference_information",
       "base_disposition": "downgrade",
       "base_failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "counterfactual_evaluations": 28,
@@ -2881,14 +2711,6 @@
             "source_binding_completion",
             "review_contestability_completion"
           ]
-        },
-        {
-          "allowed_status": "normative_material_screening_output",
-          "disposition": "none",
-          "gates": [
-            "source_binding_completion",
-            "role_cap_completion"
-          ]
         }
       ],
       "path": "experiments/model_output_evidence_ladder/scenarios/evidence-ladder-codex55-us-03--raw-unverified.json",
@@ -2897,18 +2719,21 @@
       "target_status": "normative_material_screening_output"
     },
     {
-      "base_allowed_status": "professional_support_output",
-      "base_disposition": "none",
-      "base_failure_flags": [],
-      "counterfactual_evaluations": 7,
+      "base_allowed_status": "reference_information",
+      "base_disposition": "downgrade",
+      "base_failure_flags": [
+        "contestation_failure"
+      ],
+      "counterfactual_evaluations": 28,
       "full_repair_status": null,
-      "minimal_repair_size": 1,
+      "minimal_repair_size": 2,
       "minimal_repairs": [
         {
           "allowed_status": "normative_material_screening_output",
           "disposition": "none",
           "gates": [
-            "audit_vector_completion"
+            "audit_vector_completion",
+            "review_contestability_completion"
           ]
         }
       ],

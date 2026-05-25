@@ -200,6 +200,7 @@
     "jurisdiction_assumptions": [
       "european_union_data_protection_law"
     ],
+    "contestability_channel": "cross-engine-source-bound-review-record",
     "irreversible_action": false,
     "human_authorization": false
   },

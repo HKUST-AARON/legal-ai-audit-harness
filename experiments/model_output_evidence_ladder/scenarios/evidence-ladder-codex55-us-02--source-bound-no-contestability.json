@@ -249,8 +249,8 @@
     "human_authorization": false
   },
   "failure_flags": [],
-  "expected_allowed_status": "professional_support_output",
-  "expected_disposition": "none",
+  "expected_allowed_status": "reference_information",
+  "expected_disposition": "downgrade",
   "system_role": "auditable_procedural_tool",
   "source_binding_validation": {
     "manifest": "experiments/issue_gold_sets/manifests/us_agency_deference_after_loper_bright.json",

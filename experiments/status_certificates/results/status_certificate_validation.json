@@ -6,7 +6,7 @@
     "professional_support_output": 35,
     "reference_information": 10
   },
-  "cap_or_failure_transition_count": 167,
+  "cap_or_failure_transition_count": 177,
   "certificate_count": 264,
   "certificates_path": "experiments/status_certificates/results/status_certificates.jsonl",
   "duplicate_certificate_paths": [],
@@ -2138,8 +2138,8 @@
     "decision_support_reason": 12,
     "no_external_legal_effect": 32,
     "normative_material_screening_output": 51,
-    "professional_support_output": 23,
-    "reference_information": 146
+    "professional_support_output": 13,
+    "reference_information": 156
   },
   "verified_certificate_count": 264
 }

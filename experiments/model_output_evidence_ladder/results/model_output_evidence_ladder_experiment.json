@@ -80,6 +80,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -105,18 +106,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -326,6 +329,7 @@
       "expected_disposition": "suspension",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "ranking_drift",
         "source_attribution_gap"
       ],
@@ -352,18 +356,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -573,6 +579,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -598,18 +605,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -819,6 +828,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -844,18 +854,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
       "missing_gates": [
@@ -1065,6 +1077,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -1090,18 +1103,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -1311,6 +1326,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -1336,18 +1352,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -1557,6 +1575,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -1582,18 +1601,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -1803,6 +1824,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -1828,18 +1850,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -2049,6 +2073,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -2074,18 +2099,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -2295,6 +2322,7 @@
       "expected_disposition": "downgrade",
       "expected_passed": true,
       "failure_flags": [
+        "contestation_failure",
         "source_attribution_gap"
       ],
       "invalid_authority_rate": 0.0,
@@ -2320,18 +2348,20 @@
       "upstream_recall": 1.0
     },
     {
-      "allowed_status": "professional_support_output",
+      "allowed_status": "reference_information",
       "authority_coverage": 1.0,
       "claim_supported": false,
       "claimed_status": "normative_material_screening_output",
       "counter_authority_recall": 1.0,
-      "disposition": "none",
+      "disposition": "downgrade",
       "evidence_coverage": 1.0,
       "evidence_fidelity": 1.0,
-      "expected_allowed_status": "professional_support_output",
-      "expected_disposition": "none",
+      "expected_allowed_status": "reference_information",
+      "expected_disposition": "downgrade",
       "expected_passed": true,
-      "failure_flags": [],
+      "failure_flags": [
+        "contestation_failure"
+      ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
       "missing_gates": [
@@ -2466,13 +2496,14 @@
   "scenario_path": "experiments/model_output_evidence_ladder/scenarios",
   "summary": {
     "blocked_reason_distribution": {
+      "contestation_failure": 20,
       "counter_material_suppression": 10,
       "ranking_drift": 1,
       "source_attribution_gap": 20,
       "unauthorized_action": 10
     },
     "expected_passed": 70,
-    "high_upstream_but_blocked": 40,
+    "high_upstream_but_blocked": 50,
     "mean_audit_score": 10.571428571428571,
     "mean_upstream_recall": 1.0,
     "scenario_count": 70

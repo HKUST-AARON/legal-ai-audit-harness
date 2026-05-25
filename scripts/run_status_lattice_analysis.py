@@ -85,6 +85,7 @@ def _scenario(key: tuple) -> dict:
             "reliance_gate": "authorized_adoption" if gate["adoption"] else "attorney_review",
             "human_authorization": gate["adoption"],
             "jurisdiction_assumptions": ["abstract_common_law"] if gate["review"] else [],
+            "contestability_channel": "status-lattice-review-record" if gate["review"] else None,
             "adoption_reasons_recorded": gate["adoption"],
             "contestation_recorded": gate["adoption"],
             "attorney_review_required": True,

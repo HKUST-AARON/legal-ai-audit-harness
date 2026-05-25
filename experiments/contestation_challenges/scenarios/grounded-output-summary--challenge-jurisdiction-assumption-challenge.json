@@ -102,7 +102,8 @@
     "reliance_gate": "attorney_review",
     "jurisdiction_assumptions": [],
     "irreversible_action": false,
-    "human_authorization": false
+    "human_authorization": false,
+    "contestability_channel": "committed-review-record"
   },
   "contestation_challenge": {
     "challenge": "jurisdiction_assumption_challenge",

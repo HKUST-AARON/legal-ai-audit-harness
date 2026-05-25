@@ -158,6 +158,7 @@
     "jurisdiction_assumptions": [
       "england_and_wales_tort_law"
     ],
+    "contestability_channel": "source-bound-review-record",
     "irreversible_action": false,
     "human_authorization": false
   },

@@ -227,6 +227,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(result.disposition, "downgrade")
         self.assertIn("review_gate_failure", result.failure_flags)
 
+    def test_high_status_requires_contestability_channel(self):
+        scenario = deepcopy(load("court_authority_report.json"))
+        scenario["review_gate"].pop("contestability_channel", None)
+        result = evaluate_scenario(scenario)
+        self.assertEqual(result.allowed_status, "reference_information")
+        self.assertEqual(result.disposition, "downgrade")
+        self.assertIn("contestation_failure", result.failure_flags)
+
     def test_unauthorized_irreversible_action_is_withdrawn(self):
         scenario = deepcopy(load("odr_authorized_review.json"))
         scenario["review_gate"]["irreversible_action"] = True
@@ -387,7 +395,7 @@ class AuditModelTest(unittest.TestCase):
             )
         )
         self.assertEqual(payload["blocked_claim_count"], 193)
-        self.assertEqual(payload["counterfactual_evaluation_count"], 4831)
+        self.assertEqual(payload["counterfactual_evaluation_count"], 5097)
         self.assertEqual(payload["repairable_count"], payload["blocked_claim_count"])
         self.assertFalse(payload["unrepairable"])
 
@@ -716,7 +724,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["check_count"], 4752)
         self.assertEqual(payload["passed_check_count"], 4752)
         self.assertEqual(payload["failed_check_count"], 0)
-        self.assertEqual(payload["cap_or_failure_transition_count"], 167)
+        self.assertEqual(payload["cap_or_failure_transition_count"], 177)
         self.assertEqual(payload["policy_path"], "policy/legal_output_policy.json")
         self.assertFalse(payload["failures"])
 
@@ -777,6 +785,29 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["evaluation_count"], 66000)
         self.assertGreater(payload["status_stability_rate"], 0.9)
         self.assertGreater(payload["qualified_high_status_stability_rate"], 0.9)
+
+    def test_review_provenance_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_review_provenance_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Review Provenance Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "review_provenance" / "results" / "review_provenance_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["scenario_count"], 264)
+        self.assertEqual(payload["evaluation_count"], 627)
+        self.assertEqual(payload["passed_count"], 627)
+        self.assertEqual(payload["placebo_blocked_count"], 402)
+        self.assertEqual(payload["high_status_provenance_blocked_count"], 189)
+        self.assertEqual(payload["decision_provenance_demoted_count"], 36)
+        self.assertEqual(payload["failed_count"], 0)
 
     def test_claim_consistency_verification_runs(self):
         completed = subprocess.run(
@@ -1019,11 +1050,10 @@ class AuditModelTest(unittest.TestCase):
                 "decision_support_reason": 10,
                 "no_external_legal_effect": 10,
                 "normative_material_screening_output": 10,
-                "professional_support_output": 10,
-                "reference_information": 30,
+                "reference_information": 40,
             },
         )
-        self.assertEqual(dispositions, {"downgrade": 9, "none": 40, "suspension": 11, "withdrawal": 10})
+        self.assertEqual(dispositions, {"downgrade": 19, "none": 30, "suspension": 11, "withdrawal": 10})
         self.assertEqual(
             steps,
             {
@@ -1117,7 +1147,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 39)
+        self.assertEqual(report["suite_count"], 40)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1142,7 +1172,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["threshold_sensitivity_evaluations"], 1320)
         self.assertEqual(report["source_text_anchor_evaluations"], 30)
         self.assertEqual(report["model_output_transcript_evaluations"], 50)
-        self.assertEqual(report["formal_invariant_evaluations"], 51643)
+        self.assertEqual(report["formal_invariant_evaluations"], 51644)
         self.assertEqual(report["status_lattice_evaluations"], 233280)
         self.assertEqual(report["status_lattice_cover_edges"], 1632960)
         self.assertEqual(report["status_lattice_necessity_checks"], 851)
@@ -1154,8 +1184,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["model_output_transcript_locators_verified"], 50)
         self.assertEqual(report["cross_engine_transcript_verification"]["locators_verified"], 36)
         self.assertTrue(report["cross_engine_transcript_verification"]["all_locators_verified"])
-        self.assertEqual(report["validation_units"]["formal_invariant_checks"], 51643)
-        self.assertEqual(report["validation_units"]["formal_invariant_passed"], 51643)
+        self.assertEqual(report["validation_units"]["formal_invariant_checks"], 51644)
+        self.assertEqual(report["validation_units"]["formal_invariant_passed"], 51644)
         self.assertEqual(report["validation_units"]["status_lattice_states"], 233280)
         self.assertEqual(report["validation_units"]["status_lattice_cover_edges"], 1632960)
         self.assertEqual(report["validation_units"]["status_lattice_necessity_checks"], 851)
@@ -1178,8 +1208,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["contestation_challenge_evaluations"], 315)
         self.assertEqual(report["validation_units"]["contestation_challenge_variants"], 315)
         self.assertEqual(report["validation_units"]["contestation_challenge_passed"], 315)
-        self.assertEqual(report["repair_frontier_evaluations"], 4831)
-        self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 4831)
+        self.assertEqual(report["repair_frontier_evaluations"], 5097)
+        self.assertEqual(report["validation_units"]["repair_frontier_evaluations"], 5097)
         self.assertEqual(report["jurisdiction_profile_evaluations"], 440)
         self.assertEqual(report["validation_units"]["jurisdiction_profile_evaluations"], 440)
         self.assertEqual(report["ranking_visibility_checks"], 248)
@@ -1206,6 +1236,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["policy_mutation_evaluations"], 3111)
         self.assertEqual(report["validation_units"]["policy_mutation_evaluations"], 3111)
         self.assertEqual(report["validation_units"]["policy_mutants_killed"], 15)
+        self.assertEqual(report["review_provenance_evaluations"], 627)
+        self.assertEqual(report["validation_units"]["review_provenance_evaluations"], 627)
+        self.assertEqual(report["validation_units"]["review_provenance_passed"], 627)
         self.assertEqual(report["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_passed"], 1320)
@@ -1215,7 +1248,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 3663659)
+        self.assertEqual(report["total_evaluation_rows"], 3664553)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1258,7 +1291,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["threshold_sensitivity"]["scenario_count"], 264)
         self.assertEqual(report["threshold_sensitivity"]["runs"][0]["status_flips_from_default"], 0)
         self.assertEqual(report["blocked_reason_distribution"]["authority_omission"], 1013)
-        self.assertEqual(report["blocked_reason_distribution"]["contestation_failure"], 64)
+        self.assertEqual(report["blocked_reason_distribution"]["contestation_failure"], 103)
         self.assertEqual(report["blocked_reason_distribution"]["counter_material_suppression"], 1098)
         self.assertEqual(report["blocked_reason_distribution"]["jurisdiction_assumption_gap"], 63)
         self.assertEqual(report["blocked_reason_distribution"]["source_attribution_gap"], 1185)
@@ -1267,7 +1300,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["source_text_verification"]["records_with_text_snapshot"], 30)
         self.assertEqual(report["model_output_transcript_verification"]["locators_verified"], 50)
         self.assertTrue(report["model_output_transcript_verification"]["all_locators_verified"])
-        self.assertEqual(report["formal_invariant_verification"]["passed_checks"], 51643)
+        self.assertEqual(report["formal_invariant_verification"]["passed_checks"], 51644)
         self.assertTrue(report["formal_invariant_verification"]["all_passed"])
         self.assertEqual(report["status_lattice"]["state_count"], 233280)
         self.assertEqual(report["status_lattice"]["score_vector_count"], 729)
@@ -1361,8 +1394,14 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["policy_constants_replay"]["check_count"], 4752)
         self.assertEqual(report["policy_constants_replay"]["passed_check_count"], 4752)
         self.assertEqual(report["policy_constants_replay"]["failed_check_count"], 0)
-        self.assertEqual(report["policy_constants_replay"]["cap_or_failure_transition_count"], 167)
+        self.assertEqual(report["policy_constants_replay"]["cap_or_failure_transition_count"], 177)
         self.assertEqual(report["policy_constants_replay"]["policy_path"], "policy/legal_output_policy.json")
+        self.assertEqual(report["review_provenance"]["scenario_count"], 264)
+        self.assertEqual(report["review_provenance"]["evaluation_count"], 627)
+        self.assertEqual(report["review_provenance"]["passed_count"], 627)
+        self.assertEqual(report["review_provenance"]["placebo_blocked_count"], 402)
+        self.assertEqual(report["review_provenance"]["high_status_provenance_blocked_count"], 189)
+        self.assertEqual(report["review_provenance"]["decision_provenance_demoted_count"], 36)
         self.assertEqual(report["metamorphic_policy"]["scenario_count"], 264)
         self.assertEqual(report["metamorphic_policy"]["metamorphic_evaluation_count"], 1233)
         self.assertEqual(report["metamorphic_policy"]["passed_count"], 1233)
@@ -1598,9 +1637,9 @@ class AuditModelTest(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
         report = json.loads((ROOT / "experiments" / "formal_invariants" / "results" / "formal_invariant_verification.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["check_count"], 9)
-        self.assertEqual(report["total_checks"], 51643)
-        self.assertEqual(report["passed_checks"], 51643)
+        self.assertEqual(report["check_count"], 10)
+        self.assertEqual(report["total_checks"], 51644)
+        self.assertEqual(report["passed_checks"], 51644)
         self.assertTrue(report["all_passed"])
         self.assertEqual({check["id"] for check in report["checks"]}, {
             "gated_monotonicity",
@@ -1608,6 +1647,7 @@ class AuditModelTest(unittest.TestCase):
             "evidence_packet_necessity",
             "authority_gate_necessity",
             "counter_material_gate_necessity",
+            "contestability_channel_necessity",
             "decision_adoption_necessity",
             "role_cap_dominance",
             "failure_cap_absorption",

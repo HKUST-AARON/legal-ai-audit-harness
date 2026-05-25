@@ -59,14 +59,26 @@
       {
         "id": "u1",
         "claim": "The recommendation identifies the consumer statute and platform rule as governing materials.",
-        "source_ids": ["consumer-statute-a", "platform-rule-b"],
-        "locators": ["consumer-statute-a:section", "platform-rule-b:term"]
+        "source_ids": [
+          "consumer-statute-a",
+          "platform-rule-b"
+        ],
+        "locators": [
+          "consumer-statute-a:section",
+          "platform-rule-b:term"
+        ]
       },
       {
         "id": "u2",
         "claim": "The recommendation presents the exception policy and appeal decision as review materials.",
-        "source_ids": ["exception-policy-c", "appeal-decision-d"],
-        "locators": ["exception-policy-c:exception", "appeal-decision-d:outcome"]
+        "source_ids": [
+          "exception-policy-c",
+          "appeal-decision-d"
+        ],
+        "locators": [
+          "exception-policy-c:exception",
+          "appeal-decision-d:outcome"
+        ]
       }
     ],
     "output_links": [
@@ -118,6 +130,7 @@
     "irreversible_action": false,
     "human_authorization": true,
     "adoption_reasons_recorded": true,
-    "contestation_recorded": true
+    "contestation_recorded": true,
+    "contestability_channel": "committed-review-record"
   }
 }

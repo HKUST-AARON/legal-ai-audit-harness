@@ -18,9 +18,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "canada-vavilov-standard-of-review--challenge-contestability-channel-failure",
       "scores": {
@@ -32,7 +30,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -193,9 +191,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "canada-vavilov-standard-of-review-decision-reason-without-adoption--challenge-contestability-channel-failure",
       "scores": {
@@ -207,7 +203,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 12,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -368,9 +364,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "civil-law-statutory-interpretation--challenge-contestability-channel-failure",
       "scores": {
@@ -382,7 +376,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 10,
       "upstream_f1": 0.84,
       "upstream_precision": 0.86,
@@ -543,9 +537,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "court-authority-report--challenge-contestability-channel-failure",
       "scores": {
@@ -557,7 +549,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 10,
       "upstream_f1": 0.85,
       "upstream_precision": 0.88,
@@ -718,9 +710,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "arbitral",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "decision-support-ready--challenge-contestability-channel-failure",
       "scores": {
@@ -732,7 +722,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "authorized_decision_support_tool",
       "total_score": 12,
       "upstream_f1": 0.94,
       "upstream_precision": 0.94,
@@ -893,9 +883,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "eu-gdpr-article15-access-rights--challenge-contestability-channel-failure",
       "scores": {
@@ -907,7 +895,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -1068,9 +1056,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "eu-gdpr-article15-access-rights-decision-reason-without-adoption--challenge-contestability-channel-failure",
       "scores": {
@@ -1082,7 +1068,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 12,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -4703,9 +4689,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "germany-right-to-be-forgotten-review--challenge-contestability-channel-failure",
       "scores": {
@@ -4717,7 +4701,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -4878,9 +4862,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "germany-right-to-be-forgotten-review-decision-reason-without-adoption--challenge-contestability-channel-failure",
       "scores": {
@@ -4892,7 +4874,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 12,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -5053,9 +5035,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "grounded-output-summary--challenge-contestability-channel-failure",
       "scores": {
@@ -5067,7 +5047,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 0.9,
       "upstream_precision": 0.9,
@@ -6612,9 +6592,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "civil_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "issue-public-output-eu-official-gdpr-article15--challenge-contestability-channel-failure",
       "scores": {
@@ -6626,7 +6604,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": null,
       "upstream_precision": null,
@@ -6787,9 +6765,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "odr",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "odr-authorized-review--challenge-contestability-channel-failure",
       "scores": {
@@ -6801,7 +6777,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "authorized_decision_support_tool",
       "total_score": 12,
       "upstream_f1": 0.89,
       "upstream_precision": 0.88,
@@ -10249,9 +10225,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild--challenge-contestability-channel-failure",
       "scores": {
@@ -10263,7 +10237,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -10424,9 +10398,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption--challenge-contestability-channel-failure",
       "scores": {
@@ -10438,7 +10410,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 12,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -10599,9 +10571,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "us-agency-deference-after-loper-bright--challenge-contestability-channel-failure",
       "scores": {
@@ -10613,7 +10583,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 11,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,
@@ -10774,9 +10744,7 @@
       ],
       "invalid_authority_rate": 0.0,
       "jurisdiction_profile": "common_law",
-      "missing_gates": [
-        "system_role:back_office_tool->max:reference_information"
-      ],
+      "missing_gates": [],
       "procedural_source_tag_coverage": 1.0,
       "scenario_id": "us-agency-deference-after-loper-bright-decision-reason-without-adoption--challenge-contestability-channel-failure",
       "scores": {
@@ -10788,7 +10756,7 @@
         "T": 2
       },
       "source_tag_coverage": 1.0,
-      "system_role": "back_office_tool",
+      "system_role": "auditable_procedural_tool",
       "total_score": 12,
       "upstream_f1": 1.0,
       "upstream_precision": 1.0,

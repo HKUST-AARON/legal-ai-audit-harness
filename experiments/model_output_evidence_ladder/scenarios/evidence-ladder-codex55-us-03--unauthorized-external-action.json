@@ -239,6 +239,7 @@
     "jurisdiction_assumptions": [
       "united_states_federal_administrative_law"
     ],
+    "contestability_channel": "unauthorized-action-review-record",
     "irreversible_action": true,
     "human_authorization": false,
     "adoption_reasons_recorded": true,

@@ -1,20 +1,20 @@
 {
   "annotation_robustness": {
-    "all_policy_status_stable": 252,
+    "all_policy_status_stable": 262,
     "scenario_count": 264,
-    "weighted_status_agreement_base_lenient": 0.9840804660081769,
-    "weighted_status_agreement_base_strict": 0.9966881186255693
+    "weighted_status_agreement_base_lenient": 1.0,
+    "weighted_status_agreement_base_strict": 0.9966806231375656
   },
   "annotation_uncertainty": {
-    "boundary_scenario_count": 161,
+    "boundary_scenario_count": 151,
     "evaluation_count": 66000,
-    "mean_status_rank_shift": 0.09201515151515152,
+    "mean_status_rank_shift": 0.08507575757575758,
     "qualified_high_status_stability_rate": 0.916063492063492,
     "qualified_status_stability_rate": 0.8801904761904762,
     "scenario_count": 264,
-    "scenario_exact_stability_count": 102,
-    "scenario_high_stability_count": 193,
-    "status_stability_rate": 0.9300757575757576
+    "scenario_exact_stability_count": 112,
+    "scenario_high_stability_count": 203,
+    "status_stability_rate": 0.9370151515151515
   },
   "annotation_uncertainty_evaluations": 66000,
   "baseline_comparison": {
@@ -105,7 +105,7 @@
     "base_dimension_min_pabak": 0.8062499999999999,
     "base_status_agreement": {
       "coder_a": {
-        "cohen_kappa": 0.9409125724915199,
+        "cohen_kappa": 0.9367422245651028,
         "dimension_agreement": {
           "H": {
             "coder_equal_count": 219,
@@ -188,11 +188,11 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "quadratic_weighted_kappa": 0.9398468829748451,
+        "quadratic_weighted_kappa": 0.9394699030907034,
         "weighted_status_agreement": 0.9822916666666667
       },
       "coder_b": {
-        "cohen_kappa": 0.9273127753303967,
+        "cohen_kappa": 0.9221009147241077,
         "dimension_agreement": {
           "H": {
             "coder_equal_count": 224,
@@ -277,7 +277,7 @@
           "uk-mesothelioma-causation-after-fairchild-decision-reason-without-adoption",
           "us-agency-deference-after-loper-bright-decision-reason-without-adoption"
         ],
-        "quadratic_weighted_kappa": 0.9048951048951048,
+        "quadratic_weighted_kappa": 0.9041953663118347,
         "weighted_status_agreement": 0.9760416666666667
       }
     },
@@ -349,10 +349,10 @@
     ],
     "pairwise_status": [
       {
-        "cohen_kappa": 0.9865145811091758,
+        "cohen_kappa": 0.9854958602767874,
         "exact_status_agreement": 0.9916666666666667,
         "left": "coder_a",
-        "quadratic_weighted_kappa": 0.9652509652509652,
+        "quadratic_weighted_kappa": 0.9648894668400521,
         "right": "coder_b",
         "weighted_status_agreement": 0.99375
       }
@@ -362,7 +362,7 @@
   "blind_coding_evaluations": 480,
   "blocked_reason_distribution": {
     "authority_omission": 1013,
-    "contestation_failure": 64,
+    "contestation_failure": 103,
     "counter_material_suppression": 1098,
     "invalid_authority": 1,
     "jurisdiction_assumption_gap": 63,
@@ -538,12 +538,12 @@
   },
   "expected_passed": 264,
   "expected_total": 264,
-  "formal_invariant_evaluations": 51643,
+  "formal_invariant_evaluations": 51644,
   "formal_invariant_verification": {
     "all_passed": true,
-    "check_count": 9,
-    "passed_checks": 51643,
-    "total_checks": 51643
+    "check_count": 10,
+    "passed_checks": 51644,
+    "total_checks": 51644
   },
   "gate_ablation": {
     "ablation_count": 390,
@@ -653,7 +653,7 @@
     "status_separated_count": 390,
     "witness_count": 390
   },
-  "high_upstream_but_blocked": 2352,
+  "high_upstream_but_blocked": 2362,
   "jurisdiction_profile": {
     "counterfactual_evaluation_count": 189,
     "generic_profile_preserved": 63,
@@ -795,7 +795,7 @@
       "denominator": 215,
       "failure_flags": {
         "authority_omission": 5,
-        "contestation_failure": 1,
+        "contestation_failure": 40,
         "counter_material_suppression": 25,
         "invalid_authority": 1,
         "ranking_drift": 12,
@@ -806,8 +806,7 @@
       "rate": 0.7116279069767442,
       "status_distribution": {
         "no_external_legal_effect": 31,
-        "professional_support_output": 10,
-        "reference_information": 112
+        "reference_information": 122
       }
     },
     "metric_scenario_count": 219,
@@ -917,7 +916,7 @@
     "scenario_sections_verified": 10
   },
   "policy_constants_replay": {
-    "cap_or_failure_transition_count": 167,
+    "cap_or_failure_transition_count": 177,
     "check_count": 4752,
     "failed_check_count": 0,
     "passed_check_count": 4752,
@@ -927,8 +926,8 @@
       "decision_support_reason": 12,
       "no_external_legal_effect": 32,
       "normative_material_screening_output": 51,
-      "professional_support_output": 23,
-      "reference_information": 146
+      "professional_support_output": 13,
+      "reference_information": 156
     },
     "verified_scenario_count": 264
   },
@@ -1592,27 +1591,101 @@
   "recoded_evaluations": 528,
   "repair_frontier": {
     "blocked_claim_count": 193,
-    "counterfactual_evaluation_count": 4831,
+    "counterfactual_evaluation_count": 5097,
     "minimal_repair_gate_frequency": {
       "audit_vector_completion": 33,
       "authority_packet_completion": 65,
       "decision_adoption_completion": 15,
       "failure_flag_resolution": 3,
-      "rank_salience_completion": 43,
-      "review_contestability_completion": 29,
-      "role_cap_completion": 29,
-      "source_binding_completion": 172
+      "rank_salience_completion": 38,
+      "review_contestability_completion": 41,
+      "source_binding_completion": 143
     },
     "minimal_repair_size_distribution": {
-      "1": 108,
-      "2": 40,
-      "3": 42,
-      "4": 3
+      "1": 98,
+      "2": 50,
+      "3": 41,
+      "4": 3,
+      "5": 1
     },
     "repairable_count": 193,
     "unrepairable_count": 0
   },
-  "repair_frontier_evaluations": 4831,
+  "repair_frontier_evaluations": 5097,
+  "review_provenance": {
+    "by_relation": {
+      "adoption_reasons_required_for_decision_status": {
+        "count": 12,
+        "examples": [],
+        "failed": 0,
+        "kind": "decision_provenance",
+        "passed": 12
+      },
+      "authorized_adoption_label_cannot_supply_material_chain": {
+        "count": 201,
+        "examples": [],
+        "failed": 0,
+        "kind": "review_placebo",
+        "passed": 201
+      },
+      "completed_review_label_cannot_supply_material_chain": {
+        "count": 201,
+        "examples": [],
+        "failed": 0,
+        "kind": "review_placebo",
+        "passed": 201
+      },
+      "completed_review_required_for_high_status": {
+        "count": 63,
+        "examples": [],
+        "failed": 0,
+        "kind": "high_status_provenance",
+        "passed": 63
+      },
+      "contestability_channel_required_for_high_status": {
+        "count": 63,
+        "examples": [],
+        "failed": 0,
+        "kind": "high_status_provenance",
+        "passed": 63
+      },
+      "contestation_record_required_for_decision_status": {
+        "count": 12,
+        "examples": [],
+        "failed": 0,
+        "kind": "decision_provenance",
+        "passed": 12
+      },
+      "human_authorization_required_for_decision_status": {
+        "count": 12,
+        "examples": [],
+        "failed": 0,
+        "kind": "decision_provenance",
+        "passed": 12
+      },
+      "jurisdiction_assumption_required_for_high_status": {
+        "count": 63,
+        "examples": [],
+        "failed": 0,
+        "kind": "high_status_provenance",
+        "passed": 63
+      }
+    },
+    "decision_provenance_check_count": 36,
+    "decision_provenance_demoted_count": 36,
+    "decision_scenario_count": 12,
+    "evaluation_count": 627,
+    "failed_count": 0,
+    "high_status_provenance_blocked_count": 189,
+    "high_status_provenance_check_count": 189,
+    "non_high_scenario_count": 201,
+    "passed_count": 627,
+    "placebo_blocked_count": 402,
+    "placebo_evaluation_count": 402,
+    "qualified_scenario_count": 63,
+    "scenario_count": 264
+  },
+  "review_provenance_evaluations": 627,
   "scenario_files": 264,
   "source_chain_attack_evaluations": 1953,
   "source_chain_attacks": {
@@ -1644,7 +1717,7 @@
     "verified_ratio": 1.0
   },
   "status_certificate": {
-    "cap_or_failure_transition_count": 167,
+    "cap_or_failure_transition_count": 177,
     "certificate_count": 264,
     "failed_proof_obligation_count": 0,
     "passed_check_count": 6072,
@@ -1896,7 +1969,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 39,
+  "suite_count": 40,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -2014,6 +2087,7 @@
     },
     {
       "blocked_reason_distribution": {
+        "contestation_failure": 10,
         "ranking_drift": 1,
         "source_attribution_gap": 10
       },
@@ -2049,6 +2123,7 @@
     },
     {
       "blocked_reason_distribution": {
+        "contestation_failure": 9,
         "ranking_drift": 3,
         "source_attribution_gap": 9
       },
@@ -2084,6 +2159,7 @@
     },
     {
       "blocked_reason_distribution": {
+        "contestation_failure": 20,
         "counter_material_suppression": 10,
         "ranking_drift": 1,
         "source_attribution_gap": 20,
@@ -2092,7 +2168,7 @@
       "evidence_class": "controlled model-output intervention",
       "expected_passed": 70,
       "finding": "Tests model-output variants across raw, source-bound, counter-material, rank-salience, contestability, logging, authorized-adoption and unauthorized-action conditions.",
-      "high_upstream_but_blocked": 40,
+      "high_upstream_but_blocked": 50,
       "id": "model_output_evidence_ladder",
       "label": "Model-output evidence ladder",
       "mean_audit_score": 10.571428571428571,
@@ -2102,8 +2178,7 @@
         "decision_support_reason": 10,
         "no_external_legal_effect": 10,
         "normative_material_screening_output": 10,
-        "professional_support_output": 10,
-        "reference_information": 30
+        "reference_information": 40
       },
       "validation_units": "70 evidence-ladder model-output variants"
     },
@@ -2271,10 +2346,11 @@
       "label": "Formal invariant verification",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "51643/51643 passed",
-      "scenario_count": 51643,
+      "rule_pass": "51644/51644 passed",
+      "scenario_count": 51644,
       "status_distribution": {
         "authority_gate_necessity": 0,
+        "contestability_channel_necessity": 0,
         "counter_material_gate_necessity": 0,
         "decision_adoption_necessity": 0,
         "evidence_packet_necessity": 0,
@@ -2284,7 +2360,7 @@
         "metric_non_equivalence": 0,
         "role_cap_dominance": 0
       },
-      "validation_units": "51643 generated audit-policy states"
+      "validation_units": "51644 generated audit-policy states"
     },
     {
       "evidence_class": "finite status-lattice characterization",
@@ -2386,14 +2462,15 @@
       "mean_audit_score": null,
       "mean_upstream_recall": null,
       "rule_pass": "193/193 repairable",
-      "scenario_count": 4831,
+      "scenario_count": 5097,
       "status_distribution": {
-        "1": 108,
-        "2": 40,
-        "3": 42,
-        "4": 3
+        "1": 98,
+        "2": 50,
+        "3": 41,
+        "4": 3,
+        "5": 1
       },
-      "validation_units": "4831 repair counterfactuals over 193 blocked claims"
+      "validation_units": "5097 repair counterfactuals over 193 blocked claims"
     },
     {
       "evidence_class": "cross-profile gate check",
@@ -2445,7 +2522,7 @@
       "rule_pass": "6072/6072 checks; 4488/4488 obligations",
       "scenario_count": 10560,
       "status_distribution": {
-        "cap_or_failure_transitions": 167,
+        "cap_or_failure_transitions": 177,
         "proof_obligations": 4488,
         "proof_obligations_passed": 4488,
         "verified_certificates": 264
@@ -2483,8 +2560,8 @@
         "decision_support_reason": 12,
         "no_external_legal_effect": 32,
         "normative_material_screening_output": 51,
-        "professional_support_output": 23,
-        "reference_information": 146
+        "professional_support_output": 13,
+        "reference_information": 156
       },
       "validation_units": "4752 replay checks over 264 packets"
     },
@@ -2525,6 +2602,23 @@
         "invalid_promotions": 2264
       },
       "validation_units": "3111 mutation evaluations over 15 policy mutants"
+    },
+    {
+      "evidence_class": "human-review and adoption-record falsification",
+      "finding": "Adds review and adoption labels to incomplete packets and removes review, contestability, jurisdiction, authorization, adoption-reason or contestation-record fields from qualified packets; status follows provenance records only when the legal-material chain is complete.",
+      "high_upstream_but_blocked": null,
+      "id": "review_provenance",
+      "label": "Review-provenance analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "627/627",
+      "scenario_count": 627,
+      "status_distribution": {
+        "decision_provenance_defects_demoted": 36,
+        "high_status_provenance_defects_blocked": 189,
+        "review_adoption_placebos_blocked": 402
+      },
+      "validation_units": "627 provenance evaluations over 264 packets"
     },
     {
       "evidence_class": "identity-substitution invariance check",
@@ -2592,10 +2686,10 @@
       "label": "Annotation robustness recoding",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "252/264 stable across all policies",
+      "rule_pass": "262/264 stable across all policies",
       "scenario_count": 264,
       "status_distribution": {
-        "base_vs_lenient_weighted_agreement": 0.98,
+        "base_vs_lenient_weighted_agreement": 1.0,
         "base_vs_strict_weighted_agreement": 1.0
       },
       "validation_units": "528 strict/lenient recoded evaluations"
@@ -2608,13 +2702,13 @@
       "label": "Annotation uncertainty Monte Carlo",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "0.930 sample stability; 0.916 qualified high-status stability",
+      "rule_pass": "0.937 sample stability; 0.916 qualified high-status stability",
       "scenario_count": 66000,
       "status_distribution": {
-        "boundary_scenarios": 161,
-        "exact_stable_scenarios": 102,
-        "high_status_stable_scenarios": 193,
-        "mean_status_rank_shift": 0.092
+        "boundary_scenarios": 151,
+        "exact_stable_scenarios": 112,
+        "high_status_stable_scenarios": 203,
+        "mean_status_rank_shift": 0.085
       },
       "validation_units": "66000 score-perturbed evaluations"
     },
@@ -2638,9 +2732,9 @@
         "base_dimension_min_pabak": 0.81,
         "coder_cohen_kappa": 0.99,
         "coder_exact_status_agreement": 0.99,
-        "coder_quadratic_weighted_kappa": 0.97,
+        "coder_quadratic_weighted_kappa": 0.96,
         "coder_weighted_status_agreement": 0.99,
-        "min_base_cohen_kappa": 0.93,
+        "min_base_cohen_kappa": 0.92,
         "min_base_exact_status_agreement": 0.95,
         "min_base_quadratic_weighted_kappa": 0.9,
         "min_base_weighted_status_agreement": 0.98,
@@ -2667,8 +2761,8 @@
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 51,
-          "professional_support_output": 23,
-          "reference_information": 146
+          "professional_support_output": 13,
+          "reference_information": 156
         },
         "status_flips_from_default": 0
       },
@@ -2681,8 +2775,8 @@
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 51,
-          "professional_support_output": 23,
-          "reference_information": 146
+          "professional_support_output": 13,
+          "reference_information": 156
         },
         "status_flips_from_default": 0
       },
@@ -2695,8 +2789,8 @@
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 51,
-          "professional_support_output": 23,
-          "reference_information": 146
+          "professional_support_output": 13,
+          "reference_information": 156
         },
         "status_flips_from_default": 0
       },
@@ -2709,8 +2803,8 @@
           "decision_support_reason": 12,
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 49,
-          "professional_support_output": 25,
-          "reference_information": 146
+          "professional_support_output": 15,
+          "reference_information": 156
         },
         "status_flips_from_default": 2
       },
@@ -2722,8 +2816,8 @@
         "status_distribution": {
           "no_external_legal_effect": 32,
           "normative_material_screening_output": 17,
-          "professional_support_output": 69,
-          "reference_information": 146
+          "professional_support_output": 59,
+          "reference_information": 156
         },
         "status_flips_from_default": 58
       }
@@ -2731,7 +2825,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 3663659,
+  "total_evaluation_rows": 3664553,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -2748,8 +2842,8 @@
     "cross_engine_transcript_locator_checks": 36,
     "cross_engine_transcript_locators_verified": 36,
     "evidence_ladder_model_outputs": 70,
-    "formal_invariant_checks": 51643,
-    "formal_invariant_passed": 51643,
+    "formal_invariant_checks": 51644,
+    "formal_invariant_passed": 51644,
     "gate_ablation_evaluations": 390,
     "gate_contrast_witnesses": 390,
     "gate_contrast_witnesses_passed": 390,
@@ -2781,7 +2875,9 @@
     "ranking_visibility_counterfactuals": 85,
     "ranking_visibility_window_checks": 956,
     "raw_model_outputs": 10,
-    "repair_frontier_evaluations": 4831,
+    "repair_frontier_evaluations": 5097,
+    "review_provenance_evaluations": 627,
+    "review_provenance_passed": 627,
     "source_bound_model_outputs": 10,
     "source_chain_attack_passed": 1953,
     "source_chain_attack_variants": 1953,

@@ -241,6 +241,7 @@
     "jurisdiction_assumptions": [
       "european_union_data_protection_law"
     ],
+    "contestability_channel": "holdout-source-bound-review-record",
     "irreversible_action": false,
     "human_authorization": false
   },

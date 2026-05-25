@@ -195,6 +195,7 @@
   "review_gate": {
     "adoption_reasons_recorded": true,
     "attorney_review_required": true,
+    "contestability_channel": "authorized-adoption-review-record",
     "contestation_recorded": true,
     "human_authorization": true,
     "irreversible_action": false,
