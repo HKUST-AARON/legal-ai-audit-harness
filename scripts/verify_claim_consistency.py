@@ -316,6 +316,11 @@ def _checks(payload: dict) -> list[dict]:
     expectations = [
         ("manuscript/ai_law_case_recommendation_verifiability.tex", "From Case Retrieval to Normative Material Screening"),
         ("manuscript/ai_law_case_recommendation_verifiability.tex", "A Proof-Carrying Audit Protocol for Legal AI Recommendation Systems"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "The evaluation is not a retrieval leaderboard"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "VQ1 & The status function is decorative or under-specified"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "VQ2 & The rule works only on constructed examples"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "VQ3 & A simpler rule explains the results"),
+        ("manuscript/ai_law_case_recommendation_verifiability.tex", "VQ4 & Results are brittle to coding, architecture, contestation or certificate manipulation"),
         ("ARTIFACT.md", f"- {values['suite_count']} validation suites"),
         ("ARTIFACT.md", f"- {values['scenario_files']} scenario files"),
         ("ARTIFACT.md", f"- {values['embedded']} embedded records or output items"),

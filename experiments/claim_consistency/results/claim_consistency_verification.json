@@ -1,5 +1,5 @@
 {
-  "check_count": 1043,
+  "check_count": 1048,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -8,6 +8,31 @@
     },
     {
       "expected": "A Proof-Carrying Audit Protocol for Legal AI Recommendation Systems",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "The evaluation is not a retrieval leaderboard",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "VQ1 & The status function is decorative or under-specified",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "VQ2 & The rule works only on constructed examples",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "VQ3 & A simpler rule explains the results",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "VQ4 & Results are brittle to coding, architecture, contestation or certificate manipulation",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2007,7 +2032,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 36 pages",
+      "expected": "The expected manuscript build is 37 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -5219,5 +5244,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1043
+  "passed_count": 1048
 }

@@ -398,6 +398,27 @@ The rules above are implemented as an executable audit harness and proof-carryin
 
 The harness implements the mapping in Section 4 directly. Each scenario declares a claimed status, role evidence, audit vector, jurisdiction profile, upstream metrics and evidence packet. Authority sets, review gates and counter-material declarations are mandatory for screening and decision-support claims; missing fields trigger caps. The runner computes status without reading the expected outcome and emits metrics, dispositions and proof certificates.
 
+\subsection{Evaluation design}
+
+The evaluation is not a retrieval leaderboard. It is a falsification design for a procedural-status predicate. The matrix asks four validation questions. First, can the protocol allocate status correctly when the legal-material chain is controlled? Second, does the rule survive public outputs, raw model outputs, source-supported repairs and withheld packets? Third, can simpler substitute theories reproduce the allocation? Fourth, is the allocation stable under policy variation, architecture and model labels, challenge events, certificate replay, tampering and coding uncertainty? This organization separates validation units from generated operations, so the scale of the matrix supports the claim rather than replacing it.
+
+\begin{table}[htbp]
+\centering
+\caption{Evaluation design}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{2.0cm}p{3.2cm}YY}
+\toprule
+Question & Target threat & Evidence layers & Required result \\
+\midrule
+VQ1 & The status function is decorative or under-specified. & Stress scenarios, formal invariants, status-lattice exhaustion, policy-constants replay and proof-carrying certificates. & Gates, role caps, failure caps and proof obligations reproduce the stated status rule. \\
+VQ2 & The rule works only on constructed examples. & Public metadata, public-system outputs, endpoint-matched public retrieval, issue-specific public packets, holdouts, raw model outputs and source-supported repairs. & Public and model outputs are classified by visible artefacts, not by fluency, provider or raw retrieval success. \\
+VQ3 & A simpler rule explains the results. & Metric separation, baseline comparison, issue-family holdout, policy-family robustness, gate-contrast witnesses and policy mutation. & Retrieval metrics, total score, source labels, authority coverage, review labels and model identity fail to reproduce the full allocation. \\
+VQ4 & Results are brittle to coding, architecture, contestation or certificate manipulation. & Source-chain attacks, contestation challenges, workflow portability, model-identity invariance, claim-anchor analysis, review-provenance analysis, certificate tamper-resistance, recoding, uncertainty and blind coding. & High status survives only when the legal-material chain remains reconstructable, challengeable, replayable and source-anchored. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 The complete evaluation matrix adjudicates one rule: procedural status follows the legal-material chain. It contains 264 scenario packets with 697 embedded records or outputs and 7,913,121 validation operations across public-output, model-output, cross-engine, architecture-portability, identity-substitution, issue-family holdout, policy-family robustness, invariant, status-lattice, adversarial, ablation, mutation, review-provenance, claim-anchor, replay, certificate, query, ranking and coding-robustness layers. Public-output and holdout layers test real upstream outputs. Model-output and repair layers test whether the same fluent authority recommendations change status when source support, counter-material salience and adoption gates change. Cross-engine, workflow-portability and model-identity layers test the sharper claim: holding the legal-material chain fixed, runtime architecture and provider identity add no procedural status. Metric, baseline, issue-family, policy-family, invariant, lattice, review-provenance and identity-substitution layers test six rival theories--performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency. Attack, challenge, claim-anchor, replay, mutation and tamper layers test whether any broken link destroys qualification.
 
 \begin{table}[htbp]
