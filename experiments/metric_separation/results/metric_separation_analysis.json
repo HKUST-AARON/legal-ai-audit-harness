@@ -7,9 +7,9 @@
         "median": 0.7110091743119266
       },
       "recall_point_biserial": {
-        "high": 0.14308331693718376,
-        "low": -0.05142844544228193,
-        "median": 0.06746151487321407
+        "high": 0.14308331693718443,
+        "low": -0.051428445442281735,
+        "median": 0.06746151487321372
       },
       "recall_threshold_precision": {
         "high": 0.3470319634703196,
@@ -95,14 +95,14 @@
   "permutation": {
     "iterations": 1000,
     "metric": "recall_point_biserial",
-    "observed_abs": 0.06394455354760482,
+    "observed_abs": 0.06394455354760457,
     "seed": 10506,
     "two_sided_p": 0.35364635364635366
   },
   "point_biserial": {
-    "f1": 0.13649082369341053,
-    "precision": 0.15065852232831123,
-    "recall": 0.06394455354760482
+    "f1": 0.13649082369341067,
+    "precision": 0.15065852232831103,
+    "recall": 0.06394455354760457
   },
   "qualified_count": 62,
   "scenario_count": 264,

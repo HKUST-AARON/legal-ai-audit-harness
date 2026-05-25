@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 46
+Validation suites: 47
 Scenario files: 264
 Base embedded records/items: 697 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 9 cross-engine raw outputs, 9 cross-engine source-supported outputs, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 528
@@ -19,6 +19,7 @@ Metric separation evaluations: 219 upstream-metric scenario packets; high-recall
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
 Baseline rule comparisons: 3252 predictions across 13 rules; best simplified false positives 38; reference rule false positives 0
 Issue-family generalization: 3014 holdout predictions over 5 issue families; full protocol FP/FN 0/0; best trained simplified FP 38; best trained simplified rule erred in 5/5 folds
+Multi-axis holdout generalization: 19235 holdout predictions and 91333 training predictions across 34 folds on 6 axes; full protocol FP/FN 0/0; best trained simplified FP 510; best trained simplified rule erred in 17/34 folds
 Policy-family robustness: 42192 evaluations over 12 variants; high-status promotions 0; simplified-rule errors 12/12 variants; best simplified FP 449; full protocol FP/FN 0/0
 Gate ablation evaluations: 390/390 passed over 63 qualified packets
 Gate-contrast witness pairs: 390/390 passed; score/metric/role preserved 390/390; status separated 390/390
@@ -39,7 +40,7 @@ Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
 Construct operationalization coverage: 40/40 checks passed across 10 core constructs and 31 evidence layers
 Threat-model coverage: 32/32 checks passed across 8 validity threats and 30 evidence layers
-Derived robustness evaluations: 7912496
+Derived robustness evaluations: 8023064
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2362
 Blocked reason distribution: authority_omission: 1013, contestation_failure: 103, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1186, summary_distortion: 1533, unauthorized_action: 10
@@ -73,6 +74,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Metric separation analysis | retrieval/status non-equivalence check | 219 upstream-metric scenario packets | 219 | recall-threshold precision 0.29; reference gate FP 0 | n/a | n/a | n/a | high_recall_blocked_rate: 0.71, recall_point_biserial: 0.06, reference_gate_false_positive: 0 |
 | Baseline rule comparison | alternative-policy comparison | 3252 baseline predictions over 13 rules | 3252 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.62, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
 | Issue-family leave-one-out generalization | cross-issue substitute-rule holdout | 3014 holdout baseline predictions over 5 issue families | 3014 | full protocol FP/FN 0/0; best trained simplified FP 38 | n/a | n/a | n/a | best_trained_rule_holdout_false_positive: 38, folds_with_best_trained_rule_error: 5, issue_families: 5, lowest_fp_rule_holdout_false_positive: 38, qualified_packets: 58, scenario_packets: 242 |
+| Multi-axis holdout generalization | cross-stratum external-validity test | 19235 holdout predictions and 91333 training predictions across 34 folds on 6 axes | 110568 | full protocol FP/FN 0/0; best simplified FP/FN 510/0 | n/a | n/a | n/a | axes: 6, best_rule_error_folds: 17, folds: 34, lowest_fp_rule_error_folds: 19 |
 | Policy-family robustness | policy-variant robustness | 42192 evaluations over 12 policy variants | 42192 | 0 high-status promotions; 12/12 variants with simplified-rule errors; best simplified FP 449 | n/a | n/a | n/a | baseline_predictions: 39024, full_protocol_false_negative_total: 0, full_protocol_false_positive_total: 0, high_status_demotions: 42, status_evaluations: 3168, variants: 12 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 390 ablations over 63 qualified packets | 390 | 390/390 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
 | Gate-contrast witness pairs | non-substitution witness validation | 390 witness pairs over 63 qualified packets | 390 | 390/390 | n/a | n/a | n/a | normative_material_screening_output: 12, reference_information: 378 |
@@ -133,6 +135,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
 - **Baseline rule comparison:** Compares recall, F1, total-score, source-bound, authority-material and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.
 - **Issue-family leave-one-out generalization:** Holds out each issue family, selects simplified substitute rules on the remaining issue families, and verifies that trained simplified rules still over-admit holdout packets while the full protocol records zero holdout false positives and false negatives.
+- **Multi-axis holdout generalization:** Repeats trained-substitute holdout tests across issue family, suite, system role, jurisdiction profile, claimed status and output-origin axes; shortcut rules fail out of stratum while the full protocol remains error-free.
 - **Policy-family robustness:** Varies thresholds, rank window, procedural source tags, role caps and failure severity; no policy variant promotes a below-screening packet to high status, while simplified substitutes fail in every variant.
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
 - **Gate-contrast witness pairs:** Preserves each qualified packet's audit score vector, upstream metrics and system role while flipping one mandatory gate; every witness pair separates allowed procedural status, proving score-only and retrieval-metric-only substitutes cannot reproduce the protocol on the validation domain.
