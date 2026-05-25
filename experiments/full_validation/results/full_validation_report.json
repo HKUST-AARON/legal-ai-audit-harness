@@ -17,6 +17,84 @@
     "status_stability_rate": 0.9325853658536586
   },
   "annotation_uncertainty_evaluations": 61500,
+  "baseline_comparison": {
+    "all_simplified_rules_have_errors": true,
+    "baseline_count": 12,
+    "baseline_prediction_count": 2772,
+    "best_simplified": {
+      "balanced_accuracy": 0.9010416666666667,
+      "denominator": 246,
+      "f1": 0.7397260273972603,
+      "false_negative": 0,
+      "false_negative_examples": [],
+      "false_positive": 38,
+      "false_positive_examples": [
+        "public-retrieval-canada-vavilov-standard-of-review-q01",
+        "public-retrieval-canada-vavilov-standard-of-review-q02",
+        "public-retrieval-canada-vavilov-standard-of-review-q03",
+        "public-retrieval-canada-vavilov-standard-of-review-q04",
+        "public-retrieval-eu-gdpr-article15-access-rights-q01",
+        "public-retrieval-eu-gdpr-article15-access-rights-q02",
+        "public-retrieval-eu-gdpr-article15-access-rights-q03",
+        "public-retrieval-eu-gdpr-article15-access-rights-q04",
+        "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
+        "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02"
+      ],
+      "id": "source_score_review",
+      "label": "Source-bound score candidate with review gate",
+      "precision": 0.5869565217391305,
+      "recall": 1.0,
+      "specificity": 0.8020833333333334,
+      "true_negative": 154,
+      "true_positive": 54
+    },
+    "full_gate": {
+      "balanced_accuracy": 1.0,
+      "denominator": 246,
+      "f1": 1.0,
+      "false_negative": 0,
+      "false_negative_examples": [],
+      "false_positive": 0,
+      "false_positive_examples": [],
+      "id": "full_audit_gate",
+      "label": "Full audit gate function",
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "true_negative": 192,
+      "true_positive": 54
+    },
+    "lowest_false_positive_simplified": {
+      "balanced_accuracy": 0.9010416666666667,
+      "denominator": 246,
+      "f1": 0.7397260273972603,
+      "false_negative": 0,
+      "false_negative_examples": [],
+      "false_positive": 38,
+      "false_positive_examples": [
+        "public-retrieval-canada-vavilov-standard-of-review-q01",
+        "public-retrieval-canada-vavilov-standard-of-review-q02",
+        "public-retrieval-canada-vavilov-standard-of-review-q03",
+        "public-retrieval-canada-vavilov-standard-of-review-q04",
+        "public-retrieval-eu-gdpr-article15-access-rights-q01",
+        "public-retrieval-eu-gdpr-article15-access-rights-q02",
+        "public-retrieval-eu-gdpr-article15-access-rights-q03",
+        "public-retrieval-eu-gdpr-article15-access-rights-q04",
+        "public-retrieval-uk-mesothelioma-causation-after-fairchild-q01",
+        "public-retrieval-uk-mesothelioma-causation-after-fairchild-q02"
+      ],
+      "id": "source_score_review",
+      "label": "Source-bound score candidate with review gate",
+      "precision": 0.5869565217391305,
+      "recall": 1.0,
+      "specificity": 0.8020833333333334,
+      "true_negative": 154,
+      "true_positive": 54
+    },
+    "qualified_count": 54,
+    "scenario_count": 246
+  },
+  "baseline_comparison_evaluations": 2772,
   "blind_coding": {
     "base_status_agreement": {
       "coder_a": {
@@ -366,7 +444,7 @@
     "verified_certificate_count": 246
   },
   "status_certificate_replay_checks": 3198,
-  "suite_count": 24,
+  "suite_count": 25,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -676,6 +754,25 @@
       "validation_units": "201 upstream-metric scenario packets"
     },
     {
+      "evidence_class": "alternative-policy comparison",
+      "finding": "Compares the full audit gate against recall, F1, total-score, source-bound and review-gate substitutes, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
+      "high_upstream_but_blocked": null,
+      "id": "baseline_comparison",
+      "label": "Baseline rule comparison",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "best simplified FP 38; full gate FP 0",
+      "scenario_count": 2772,
+      "status_distribution": {
+        "best_simplified_precision": 0.59,
+        "best_simplified_recall": 1.0,
+        "full_gate_precision": 1.0,
+        "full_gate_specificity": 1.0,
+        "simplified_rules_with_errors": 1
+      },
+      "validation_units": "2772 baseline predictions over 12 rules"
+    },
+    {
       "evidence_class": "counterfactual gate-necessity check",
       "finding": "Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.",
       "high_upstream_but_blocked": null,
@@ -900,11 +997,12 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 127632,
+  "total_evaluation_rows": 130404,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
     "annotation_uncertainty_evaluations": 61500,
+    "baseline_comparison_predictions": 2772,
     "blind_coding_packets": 222,
     "evidence_ladder_model_outputs": 70,
     "formal_invariant_checks": 51643,

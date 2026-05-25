@@ -152,6 +152,7 @@ def main() -> int:
     _run([sys.executable, "scripts/verify_source_text_anchors.py"])
     _run([sys.executable, "scripts/verify_formal_invariants.py"])
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
+    _run([sys.executable, "scripts/run_baseline_comparison_analysis.py"])
     _run([sys.executable, "scripts/run_gate_ablation_analysis.py"])
     _run([sys.executable, "scripts/run_repair_frontier_analysis.py"])
     _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
@@ -199,6 +200,12 @@ def main() -> int:
         )
     )
     rows.append(_metric_separation_row(metric_separation_payload))
+    baseline_comparison_payload = json.loads(
+        (ROOT / "experiments" / "baseline_comparisons" / "results" / "baseline_comparison_analysis.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    rows.append(_baseline_comparison_row(baseline_comparison_payload))
     gate_ablation_payload = json.loads(
         (ROOT / "experiments" / "gate_ablations" / "results" / "gate_ablation_analysis.json").read_text(
             encoding="utf-8"
@@ -301,6 +308,7 @@ def main() -> int:
             "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
             "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
             + metric_separation_payload["permutation"]["iterations"],
+            "baseline_comparison_predictions": baseline_comparison_payload["baseline_prediction_count"],
             "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
             "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
             "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
@@ -325,6 +333,7 @@ def main() -> int:
         "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
         "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"],
+        "baseline_comparison_evaluations": baseline_comparison_payload["baseline_prediction_count"],
         "gate_ablation_evaluations": gate_ablation_payload["ablation_count"],
         "repair_frontier_evaluations": repair_frontier_payload["counterfactual_evaluation_count"],
         "jurisdiction_profile_evaluations": jurisdiction_profile_payload["profile_check_count"]
@@ -340,6 +349,7 @@ def main() -> int:
         + metric_separation_payload["metric_scenario_count"]
         + metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"]
+        + baseline_comparison_payload["baseline_prediction_count"]
         + gate_ablation_payload["ablation_count"]
         + repair_frontier_payload["counterfactual_evaluation_count"]
         + jurisdiction_profile_payload["profile_check_count"]
@@ -416,6 +426,16 @@ def main() -> int:
             "gate_cascade": metric_separation_payload["gate_cascade"],
             "bootstrap": metric_separation_payload["bootstrap"],
             "permutation": metric_separation_payload["permutation"],
+        },
+        "baseline_comparison": {
+            "baseline_count": baseline_comparison_payload["baseline_count"],
+            "baseline_prediction_count": baseline_comparison_payload["baseline_prediction_count"],
+            "scenario_count": baseline_comparison_payload["scenario_count"],
+            "qualified_count": baseline_comparison_payload["qualified_count"],
+            "best_simplified": baseline_comparison_payload["best_simplified"],
+            "lowest_false_positive_simplified": baseline_comparison_payload["lowest_false_positive_simplified"],
+            "all_simplified_rules_have_errors": baseline_comparison_payload["all_simplified_rules_have_errors"],
+            "full_gate": baseline_comparison_payload["full_gate"],
         },
         "gate_ablation": {
             "qualified_scenario_count": gate_ablation_payload["qualified_scenario_count"],
@@ -736,6 +756,30 @@ def _metric_separation_row(payload: dict) -> dict:
     }
 
 
+def _baseline_comparison_row(payload: dict) -> dict:
+    best = payload["best_simplified"]
+    full = payload["full_gate"]
+    return {
+        "id": "baseline_comparison",
+        "label": "Baseline rule comparison",
+        "evidence_class": "alternative-policy comparison",
+        "validation_units": f"{payload['baseline_prediction_count']} baseline predictions over {payload['baseline_count']} rules",
+        "scenario_count": payload["baseline_prediction_count"],
+        "rule_pass": f"best simplified FP {best['false_positive']}; full gate FP {full['false_positive']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "simplified_rules_with_errors": int(payload["all_simplified_rules_have_errors"]),
+            "best_simplified_precision": round(best["precision"], 2),
+            "best_simplified_recall": round(best["recall"], 2),
+            "full_gate_precision": round(full["precision"], 2),
+            "full_gate_specificity": round(full["specificity"], 2),
+        },
+        "finding": "Compares the full audit gate against recall, F1, total-score, source-bound and review-gate substitutes, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
+    }
+
+
 def _gate_ablation_row(payload: dict) -> dict:
     return {
         "id": "gate_ablation",
@@ -864,6 +908,7 @@ def _format_report(payload: dict) -> str:
         f"Formal invariant checks: {payload['formal_invariant_verification']['passed_checks']}/{payload['formal_invariant_verification']['total_checks']} passed",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
+        f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; full gate false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
         f"Gate ablation evaluations: {payload['gate_ablation']['passed_count']}/{payload['gate_ablation']['ablation_count']} passed over {payload['gate_ablation']['qualified_scenario_count']} qualified packets",
         f"Repair frontier evaluations: {payload['repair_frontier']['repairable_count']}/{payload['repair_frontier']['blocked_claim_count']} blocked claims repairable across {payload['repair_frontier']['counterfactual_evaluation_count']} counterfactual repairs",
         f"Jurisdiction-profile evaluations: {payload['jurisdiction_profile']['profile_supported_count']}/{payload['jurisdiction_profile']['profile_check_count']} profile checks supported; {payload['jurisdiction_profile']['passed_count']}/{payload['jurisdiction_profile']['counterfactual_evaluation_count']} counterfactual mutations passed",

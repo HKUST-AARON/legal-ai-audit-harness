@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 24
+Validation suites: 25
 Scenario files: 246
 Base embedded records/items: 679 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 492
@@ -12,12 +12,13 @@ Model-output transcript locator checks: 50/50 verified across 10 raw transcript 
 Formal invariant checks: 51643/51643 passed
 Metric separation evaluations: 201 upstream-metric scenario packets; high-recall blocked outputs 144/197
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
+Baseline rule comparisons: 2772 predictions across 12 rules; best simplified false positives 38; full gate false positives 0
 Gate ablation evaluations: 336/336 passed over 54 qualified packets
 Repair frontier evaluations: 184/184 blocked claims repairable across 4474 counterfactual repairs
 Jurisdiction-profile evaluations: 233/233 profile checks supported; 162/162 counterfactual mutations passed
 Ranking-visibility checks: 884 rank-window checks over 230 high-status claims; 76/76 rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible 183/217; drifted top-3 counter visible 0/76; median first counter rank 3.0
 Status certificate replay checks: 3198/3198 passed over 246 certificates
-Derived robustness evaluations: 126953
+Derived robustness evaluations: 129725
 Scenario-regression expectations passed: 246/246
 High-upstream-performance but procedurally blocked scenarios: 136
 Blocked reason distribution: authority_omission: 5, contestation_failure: 1, counter_material_suppression: 27, invalid_authority: 1, ranking_drift: 9, source_attribution_gap: 105, summary_distortion: 21, unauthorized_action: 10
@@ -43,6 +44,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
 | Metric separation analysis | retrieval/status non-equivalence check | 201 upstream-metric scenario packets | 201 | recall-threshold precision 0.27; full gate precision 1.00 | n/a | n/a | n/a | full_gate_specificity: 1.0, high_recall_blocked_rate: 0.73, recall_point_biserial: 0.06 |
+| Baseline rule comparison | alternative-policy comparison | 2772 baseline predictions over 12 rules | 2772 | best simplified FP 38; full gate FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.59, best_simplified_recall: 1.0, full_gate_precision: 1.0, full_gate_specificity: 1.0, simplified_rules_with_errors: 1 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 336 ablations over 54 qualified packets | 336 | 336/336 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
 | Blocked-claim repair frontiers | counterfactual repair-necessity check | 4474 repair counterfactuals over 184 blocked claims | 4474 | 184/184 repairable | n/a | n/a | n/a | 1: 108, 2: 34, 3: 39, 4: 3 |
 | Jurisdiction-profile mutations | cross-profile gate check | 395 profile checks and counterfactuals | 395 | 233/233 profile checks; 162/162 mutations | n/a | n/a | n/a | generic_preserved: 54, mismatch_downgraded: 54, missing_downgraded: 54 |
@@ -70,6 +72,7 @@ Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Model-output transcript anchors:** Checks that raw model-output scenario locators are anchored in the committed transcript sections.
 - **Formal invariant verification:** Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
+- **Baseline rule comparison:** Compares the full audit gate against recall, F1, total-score, source-bound and review-gate substitutes, showing that every simplified rule either over-admits or misses procedurally qualified packets.
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
 - **Blocked-claim repair frontiers:** Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.
 - **Jurisdiction-profile mutations:** Tests that high-status outputs preserve status under valid generic profile assumptions but downgrade when jurisdiction assumptions are absent or profile-mismatched.

@@ -280,6 +280,29 @@ class AuditModelTest(unittest.TestCase):
         self.assertGreater(payload["permutation"]["two_sided_p"], 0.05)
         self.assertEqual(payload["gate_cascade"][-1]["false_positive"], 0)
 
+    def test_baseline_comparison_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_baseline_comparison_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Baseline Rule Comparison", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "baseline_comparisons" / "results" / "baseline_comparison_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["scenario_count"], 246)
+        self.assertEqual(payload["baseline_count"], 12)
+        self.assertEqual(payload["baseline_prediction_count"], 2772)
+        self.assertTrue(payload["all_simplified_rules_have_errors"])
+        self.assertEqual(payload["full_gate"]["false_positive"], 0)
+        self.assertEqual(payload["full_gate"]["false_negative"], 0)
+        self.assertGreaterEqual(payload["best_simplified"]["false_positive"], 38)
+
     def test_gate_ablation_analysis_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/run_gate_ablation_analysis.py"],
@@ -758,7 +781,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 24)
+        self.assertEqual(report["suite_count"], 25)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -789,6 +812,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["metric_separation_evaluations"], 201)
         self.assertEqual(report["metric_statistical_resamples"], 2000)
         self.assertEqual(report["validation_units"]["metric_statistical_resamples"], 2000)
+        self.assertEqual(report["baseline_comparison_evaluations"], 2772)
+        self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 2772)
         self.assertEqual(report["gate_ablation_evaluations"], 336)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 336)
         self.assertEqual(report["repair_frontier_evaluations"], 4474)
@@ -804,7 +829,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificate_replay_checks"], 3198)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
-        self.assertEqual(report["total_evaluation_rows"], 127632)
+        self.assertEqual(report["total_evaluation_rows"], 130404)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -828,6 +853,11 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metric_separation"]["bootstrap"]["iterations"], 1000)
         self.assertEqual(report["metric_separation"]["permutation"]["iterations"], 1000)
         self.assertEqual(report["metric_separation"]["high_recall_blocked"]["count"], 144)
+        self.assertEqual(report["baseline_comparison"]["baseline_count"], 12)
+        self.assertEqual(report["baseline_comparison"]["baseline_prediction_count"], 2772)
+        self.assertEqual(report["baseline_comparison"]["best_simplified"]["false_positive"], 38)
+        self.assertEqual(report["baseline_comparison"]["full_gate"]["false_positive"], 0)
+        self.assertTrue(report["baseline_comparison"]["all_simplified_rules_have_errors"])
         self.assertEqual(report["gate_ablation"]["ablation_count"], 336)
         self.assertEqual(report["gate_ablation"]["passed_count"], 336)
         self.assertEqual(report["repair_frontier"]["blocked_claim_count"], 184)

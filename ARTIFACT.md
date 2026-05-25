@@ -23,13 +23,14 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 24 validation suites
+- 25 validation suites
 - 246 scenario files
 - 679 embedded records or output items
-- 127,632 total evaluation rows
+- 130,404 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
+- 2,772 baseline-rule predictions across 12 alternative status rules
 - 336/336 gate-ablation evaluations passed
 - 184/184 blocked procedural claims repairable across 4,474 repair-frontier evaluations
 - 233/233 jurisdiction-profile checks and 162/162 profile mutations passed
