@@ -580,6 +580,64 @@ class AuditModelTest(unittest.TestCase):
                 text=True,
             )
 
+    def test_certificate_tamper_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_certificate_tamper_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Certificate Tamper-Resistance Analysis", completed.stdout)
+        payload = json.loads(
+            (ROOT / "experiments" / "certificate_tamper" / "results" / "certificate_tamper_analysis.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload["base_certificate_count"], 246)
+        expected_families = {
+            "allowed_status_tamper",
+            "claim_supported_tamper",
+            "claimed_status_tamper",
+            "derivation_hash_tamper",
+            "disposition_tamper",
+            "duplicate_certificate_row",
+            "expected_passed_tamper",
+            "extra_certificate_path",
+            "failure_cap_tamper",
+            "failure_flags_tamper",
+            "jurisdiction_profile_tamper",
+            "metric_bundle_tamper",
+            "missing_certificate_row",
+            "missing_gates_tamper",
+            "policy_body_tamper",
+            "policy_hash_tamper",
+            "proof_obligation_count_tamper",
+            "proof_obligation_tamper",
+            "role_cap_tamper",
+            "scenario_hash_tamper",
+            "scenario_id_tamper",
+            "score_candidate_tamper",
+            "score_vector_tamper",
+            "system_role_tamper",
+            "total_score_tamper",
+        }
+        self.assertEqual(set(payload["by_family"]), expected_families)
+        self.assertEqual(payload["tamper_family_count"], 25)
+        self.assertEqual(payload["tamper_case_count"], 5415)
+        self.assertEqual(payload["rejected_count"], 5415)
+        self.assertEqual(payload["missed_tamper_count"], 0)
+        self.assertTrue(all(row["missed"] == 0 for row in payload["by_family"].values()))
+        set_rows = [
+            row
+            for row in payload["rows"]
+            if row["family"] in {"missing_certificate_row", "duplicate_certificate_row", "extra_certificate_path"}
+        ]
+        self.assertEqual(len(set_rows), 3)
+        self.assertTrue(all(row["failed_check_count"] > 0 for row in set_rows))
+        self.assertTrue(all(row["failed_checks"] for row in set_rows))
+
     def test_policy_constants_replay_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/run_status_certificate_validation.py"],
@@ -1006,7 +1064,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 31)
+        self.assertEqual(report["suite_count"], 32)
         self.assertEqual(report["scenario_files"], 246)
         self.assertEqual(report["validation_units"]["total"], 679)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1063,6 +1121,9 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["status_certificate_proof_obligations"], 3936)
         self.assertEqual(report["validation_units"]["status_certificate_proof_obligations_passed"], 3936)
         self.assertEqual(report["validation_units"]["status_certificates_verified"], 246)
+        self.assertEqual(report["certificate_tamper_evaluations"], 5415)
+        self.assertEqual(report["validation_units"]["certificate_tamper_cases"], 5415)
+        self.assertEqual(report["validation_units"]["certificate_tamper_rejected"], 5415)
         self.assertEqual(report["policy_constants_replay_checks"], 4182)
         self.assertEqual(report["validation_units"]["policy_constants_replay_checks"], 4182)
         self.assertEqual(report["validation_units"]["policy_constants_replay_passed"], 4182)
@@ -1075,7 +1136,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 141535)
+        self.assertEqual(report["total_evaluation_rows"], 146950)
         self.assertEqual(report["expected_passed"], 246)
         self.assertEqual(report["expected_total"], 246)
         self.assertEqual(report["annotation_robustness"]["scenario_count"], 246)
@@ -1160,6 +1221,11 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["status_certificate"]["passed_check_count"], 4182)
         self.assertEqual(report["status_certificate"]["proof_obligation_count"], 3936)
         self.assertEqual(report["status_certificate"]["passed_proof_obligation_count"], 3936)
+        self.assertEqual(report["certificate_tamper"]["base_certificate_count"], 246)
+        self.assertEqual(report["certificate_tamper"]["tamper_family_count"], 25)
+        self.assertEqual(report["certificate_tamper"]["tamper_case_count"], 5415)
+        self.assertEqual(report["certificate_tamper"]["rejected_count"], 5415)
+        self.assertEqual(report["certificate_tamper"]["missed_tamper_count"], 0)
         self.assertEqual(report["policy_constants_replay"]["scenario_count"], 246)
         self.assertEqual(report["policy_constants_replay"]["verified_scenario_count"], 246)
         self.assertEqual(report["policy_constants_replay"]["check_count"], 4182)

@@ -1,8 +1,8 @@
 {
-  "check_count": 538,
+  "check_count": 578,
   "checks": [
     {
-      "expected": "- 31 validation suites",
+      "expected": "- 32 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 141,535 total evaluation rows",
+      "expected": "- 146,950 total evaluation rows",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -97,6 +97,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "- 5,415/5,415 certificate tamper-resistance cases rejected across 25 families",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "- 4,182/4,182 policy-constants replay checks passed",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -137,7 +142,7 @@
       "path": "README.md"
     },
     {
-      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 4,182 status-certificate replay checks, 3,936 certificate proof obligations and 4,182 policy-constants replay checks",
+      "expected": "201 metric-separation evaluations, 2,000 metric statistical resamples, 2,772 baseline-rule predictions, 336 gate-ablation evaluations, 270 source-chain attack variants, 270 contestation challenge variants, 1,134 metamorphic policy tests, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,474 repair-frontier evaluations, 395 jurisdiction-profile checks, 884 rank-window visibility checks, 76 rank-order counterfactuals, 4,182 status-certificate replay checks, 3,936 certificate proof obligations, 5,415 certificate tamper-resistance cases and 4,182 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -227,6 +232,11 @@
       "path": "README.md"
     },
     {
+      "expected": "| Certificate tamper-resistance | 5415 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "| Policy-constants replay | 4182 |",
       "passed": true,
       "path": "README.md"
@@ -288,6 +298,11 @@
     },
     {
       "expected": "python scripts/run_status_certificate_validation.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_certificate_tamper_analysis.py",
       "passed": true,
       "path": "README.md"
     },
@@ -377,6 +392,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "Certificate tamper-resistance",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Policy-constants replay",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -448,6 +468,11 @@
     },
     {
       "expected": "status-certificate layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "certificate tamper-resistance layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -542,6 +567,11 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "5,415/5,415 certificate tamper-resistance cases rejected across 25 families",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "4,182/4,182 policy-constants replay checks",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -593,6 +623,11 @@
     },
     {
       "expected": "python scripts/run_status_certificate_validation.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_certificate_tamper_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -662,7 +697,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "140,856 derived robustness checks",
+      "expected": "146,271 derived robustness checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -708,6 +743,11 @@
     },
     {
       "expected": "3,936 certificate proof obligations",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "5,415 certificate tamper-resistance cases",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -927,6 +967,11 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Certificate tamper-resistance & 5,415 cases & 5,415/5,415",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Policy-constants replay & 4,182 checks & 4,182/4,182",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -977,7 +1022,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 31",
+      "expected": "Validation suites: 32",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1087,6 +1132,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Certificate tamper-resistance: 5415/5415 tamper cases rejected across 25 families",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Policy-constants replay checks: 4182/4182 passed over 246 packets",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -1132,12 +1182,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 35 pages",
+      "expected": "The expected manuscript build is 36 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 243)",
+      "expected": "abstract word count 150-250 (actual 249)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1452,6 +1502,36 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `144,244`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `143,565`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709/2,709`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709 certificate tamper-resistance`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `2709/2709`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `14 families`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "README.md"
@@ -1762,6 +1842,36 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `144,244`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `143,565`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709/2,709`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709 certificate tamper-resistance`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `2709/2709`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `14 families`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -2072,6 +2182,36 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `144,244`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `143,565`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709/2,709`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709 certificate tamper-resistance`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `2709/2709`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `14 families`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -2382,6 +2522,36 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `144,244`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `143,565`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709/2,709`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `2,709 certificate tamper-resistance`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `2709/2709`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `14 families`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `62,497`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -2688,11 +2858,41 @@
     },
     {
       "expected": "absence of stale claim `full gate FP`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `144,244`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `143,565`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `2,709/2,709`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `2,709 certificate tamper-resistance`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `2709/2709`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `14 families`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     }
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 538
+  "passed_count": 578
 }

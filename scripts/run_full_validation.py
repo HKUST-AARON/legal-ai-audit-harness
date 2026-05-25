@@ -160,6 +160,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_jurisdiction_profile_analysis.py"])
     _run([sys.executable, "scripts/run_ranking_visibility_analysis.py"])
     _run([sys.executable, "scripts/run_status_certificate_validation.py"])
+    _run([sys.executable, "scripts/run_certificate_tamper_analysis.py"])
     _run([sys.executable, "scripts/run_policy_constants_replay.py"])
     _run([sys.executable, "scripts/run_metamorphic_policy_tests.py"])
     _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
@@ -284,6 +285,16 @@ def main() -> int:
         )
     )
     rows.append(_status_certificate_row(status_certificate_payload))
+    certificate_tamper_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "certificate_tamper"
+            / "results"
+            / "certificate_tamper_analysis.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_certificate_tamper_row(certificate_tamper_payload))
     policy_constants_payload = json.loads(
         (ROOT / "experiments" / "policy_constants_replay" / "results" / "policy_constants_replay.json").read_text(
             encoding="utf-8"
@@ -396,6 +407,8 @@ def main() -> int:
             "status_certificate_proof_obligations": status_certificate_payload["proof_obligation_count"],
             "status_certificate_proof_obligations_passed": status_certificate_payload["passed_proof_obligation_count"],
             "status_certificates_verified": status_certificate_payload["verified_certificate_count"],
+            "certificate_tamper_cases": certificate_tamper_payload["tamper_case_count"],
+            "certificate_tamper_rejected": certificate_tamper_payload["rejected_count"],
             "policy_constants_replay_checks": policy_constants_payload["check_count"],
             "policy_constants_replay_passed": policy_constants_payload["passed_check_count"],
             "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
@@ -432,6 +445,7 @@ def main() -> int:
         "ranking_visibility_counterfactuals": ranking_visibility_payload["rank_order_counterfactual_count"],
         "status_certificate_replay_checks": status_certificate_payload["replay_check_count"],
         "status_certificate_proof_obligations": status_certificate_payload["proof_obligation_count"],
+        "certificate_tamper_evaluations": certificate_tamper_payload["tamper_case_count"],
         "policy_constants_replay_checks": policy_constants_payload["check_count"],
         "metamorphic_policy_evaluations": metamorphic_payload["metamorphic_evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
@@ -454,6 +468,7 @@ def main() -> int:
         + ranking_visibility_payload["rank_order_counterfactual_count"]
         + status_certificate_payload["replay_check_count"]
         + status_certificate_payload["proof_obligation_count"]
+        + certificate_tamper_payload["tamper_case_count"]
         + policy_constants_payload["check_count"]
         + metamorphic_payload["metamorphic_evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
@@ -630,6 +645,14 @@ def main() -> int:
             "passed_proof_obligation_count": status_certificate_payload["passed_proof_obligation_count"],
             "failed_proof_obligation_count": status_certificate_payload["failed_proof_obligation_count"],
             "cap_or_failure_transition_count": status_certificate_payload["cap_or_failure_transition_count"],
+        },
+        "certificate_tamper": {
+            "base_certificate_count": certificate_tamper_payload["base_certificate_count"],
+            "tamper_family_count": certificate_tamper_payload["tamper_family_count"],
+            "tamper_case_count": certificate_tamper_payload["tamper_case_count"],
+            "rejected_count": certificate_tamper_payload["rejected_count"],
+            "missed_tamper_count": certificate_tamper_payload["missed_tamper_count"],
+            "by_family": certificate_tamper_payload["by_family"],
         },
         "policy_constants_replay": {
             "scenario_count": policy_constants_payload["scenario_count"],
@@ -1168,6 +1191,26 @@ def _status_certificate_row(payload: dict) -> dict:
     }
 
 
+def _certificate_tamper_row(payload: dict) -> dict:
+    return {
+        "id": "certificate_tamper",
+        "label": "Certificate tamper-resistance",
+        "evidence_class": "proof-certificate negative-control validation",
+        "validation_units": f"{payload['tamper_case_count']} tamper cases across {payload['tamper_family_count']} families",
+        "scenario_count": payload["tamper_case_count"],
+        "rule_pass": f"{payload['rejected_count']}/{payload['tamper_case_count']} rejected",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "base_certificates": payload["base_certificate_count"],
+            "tamper_families": payload["tamper_family_count"],
+            "missed_tamper_cases": payload["missed_tamper_count"],
+        },
+        "finding": "Mutates certificate identities, hashes, policy bodies, scores, roles, gates, status fields, caps, metric bundles, proof obligations and certificate-set structure; every tampered proof object must be rejected.",
+    }
+
+
 def _metamorphic_policy_row(payload: dict) -> dict:
     return {
         "id": "metamorphic_policy",
@@ -1290,6 +1333,7 @@ def _format_report(payload: dict) -> str:
         f"Ranking-visibility checks: {payload['ranking_visibility']['window_check_count']} rank-window checks over {payload['ranking_visibility']['visibility_check_count']} high-status claims; {payload['ranking_visibility']['rank_order_passed_count']}/{payload['ranking_visibility']['rank_order_counterfactual_count']} rank-order counterfactuals downgraded with coverage preserved; top-3 counter visible {payload['ranking_visibility']['front_window_counter_visible']}/{payload['ranking_visibility']['front_window_packet_count']}; drifted top-3 counter visible {payload['ranking_visibility']['counterfactual_front_window_counter_visible']}/{payload['ranking_visibility']['rank_order_counterfactual_count']}; median first counter rank {payload['ranking_visibility']['median_first_counter_rank']:.1f}",
         f"Proof-carrying certificate replay checks: {payload['status_certificate']['passed_check_count']}/{payload['status_certificate']['replay_check_count']} passed over {payload['status_certificate']['certificate_count']} certificates",
         f"Status certificate proof obligations: {payload['status_certificate']['passed_proof_obligation_count']}/{payload['status_certificate']['proof_obligation_count']} passed",
+        f"Certificate tamper-resistance: {payload['certificate_tamper']['rejected_count']}/{payload['certificate_tamper']['tamper_case_count']} tamper cases rejected across {payload['certificate_tamper']['tamper_family_count']} families",
         f"Policy-constants replay checks: {payload['policy_constants_replay']['passed_check_count']}/{payload['policy_constants_replay']['check_count']} passed over {payload['policy_constants_replay']['scenario_count']} packets",
         f"Metamorphic policy tests: {payload['metamorphic_policy']['passed_count']}/{payload['metamorphic_policy']['metamorphic_evaluation_count']} passed over {payload['metamorphic_policy']['scenario_count']} packets",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",

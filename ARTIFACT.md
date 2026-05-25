@@ -23,10 +23,10 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 31 validation suites
+- 32 validation suites
 - 246 scenario files
 - 679 embedded records or output items
-- 141,535 total evaluation rows
+- 146,950 total evaluation rows
 - 51,643/51,643 formal invariant checks passed
 - 201 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
@@ -40,6 +40,7 @@ Expected aggregate output:
 - 884 rank-window visibility checks over 230 high-status claims
 - 76/76 rank-order visibility counterfactuals downgraded with coverage preserved
 - 4,182/4,182 status-certificate replay checks and 3,936/3,936 proof obligations passed over 246 proof-carrying certificates
+- 5,415/5,415 certificate tamper-resistance cases rejected across 25 families
 - 4,182/4,182 policy-constants replay checks passed
 - 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups
 - 315 query portfolios plus 5 group frontier summaries across 5 issue groups; 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios
@@ -70,8 +71,8 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 35 pages in the current local format.
+The expected manuscript build is 36 pages in the current local format.
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks and coding uncertainty.
+The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, model-output, source-anchor, adversarial, invariant, metric-separation, gate-ablation, source-chain attack, contestation challenge, policy-constants replay, metamorphic policy, query-perturbation, query-portfolio, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, upstream metric thresholds, procedural-gate removal, source-chain falsification, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, query reformulation, query expansion, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.

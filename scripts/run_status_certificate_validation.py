@@ -78,9 +78,11 @@ def _load_certificates() -> list[dict]:
 
 
 def _validate_certificates(certificates: list[dict]) -> dict:
-    replay_rows = [_replay(certificate) for certificate in certificates]
     path_failures = _path_set_failures(certificates)
+    expected_paths = {str(path.relative_to(ROOT)) for path in _scenario_paths()}
+    replay_rows = [_replay(certificate) for certificate in certificates if certificate["path"] in expected_paths]
     failures = [row for row in replay_rows if not row["passed"]] + path_failures
+    path_failed_check_count = sum(row["failed_check_count"] for row in path_failures)
     proof_obligation_count = sum(item["proof_obligation_count"] for item in certificates)
     passed_proof_obligation_count = sum(
         sum(1 for obligation in item["proof_obligations"] if obligation["passed"])
@@ -88,9 +90,9 @@ def _validate_certificates(certificates: list[dict]) -> dict:
     )
     payload = {
         "certificate_count": len(certificates),
-        "replay_check_count": len(certificates) * len(CHECKS),
+        "replay_check_count": len(replay_rows) * len(CHECKS) + path_failed_check_count,
         "passed_check_count": sum(row["passed_check_count"] for row in replay_rows),
-        "failed_check_count": sum(row["failed_check_count"] for row in replay_rows),
+        "failed_check_count": sum(row["failed_check_count"] for row in replay_rows) + path_failed_check_count,
         "proof_obligation_count": proof_obligation_count,
         "passed_proof_obligation_count": passed_proof_obligation_count,
         "failed_proof_obligation_count": proof_obligation_count - passed_proof_obligation_count,
@@ -223,7 +225,8 @@ def _replay(certificate: dict) -> dict:
             obligation["passed"] for obligation in certificate["proof_obligations"]
         ),
         "proof_obligation_count": certificate["proof_obligation_count"] == replay_certificate["proof_obligation_count"],
-        "derivation_hash": certificate["derivation_sha256"] == replay_certificate["derivation_sha256"],
+        "derivation_hash": certificate["derivation_sha256"] == replay_certificate["derivation_sha256"]
+        and certificate["derivation_sha256"] == _certificate_hash(certificate),
     }
     return {
         "scenario_id": certificate["scenario_id"],

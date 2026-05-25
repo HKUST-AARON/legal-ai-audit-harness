@@ -371,6 +371,141 @@
     "summary_distortion": 129,
     "unauthorized_action": 10
   },
+  "certificate_tamper": {
+    "base_certificate_count": 246,
+    "by_family": {
+      "allowed_status_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "claim_supported_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "claimed_status_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "derivation_hash_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "disposition_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "duplicate_certificate_row": {
+        "cases": 1,
+        "missed": 0,
+        "rejected": 1
+      },
+      "expected_passed_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "extra_certificate_path": {
+        "cases": 1,
+        "missed": 0,
+        "rejected": 1
+      },
+      "failure_cap_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "failure_flags_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "jurisdiction_profile_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "metric_bundle_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "missing_certificate_row": {
+        "cases": 1,
+        "missed": 0,
+        "rejected": 1
+      },
+      "missing_gates_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "policy_body_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "policy_hash_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "proof_obligation_count_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "proof_obligation_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "role_cap_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "scenario_hash_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "scenario_id_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "score_candidate_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "score_vector_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "system_role_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      },
+      "total_score_tamper": {
+        "cases": 246,
+        "missed": 0,
+        "rejected": 246
+      }
+    },
+    "missed_tamper_count": 0,
+    "rejected_count": 5415,
+    "tamper_case_count": 5415,
+    "tamper_family_count": 25
+  },
+  "certificate_tamper_evaluations": 5415,
   "contestation_challenge_evaluations": 270,
   "contestation_challenges": {
     "blocked_reason_distribution": {
@@ -791,7 +926,7 @@
   },
   "status_certificate_proof_obligations": 3936,
   "status_certificate_replay_checks": 4182,
-  "suite_count": 31,
+  "suite_count": 32,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -1261,6 +1396,23 @@
       "validation_units": "4182 replay checks and 3936 proof obligations over 246 certificates"
     },
     {
+      "evidence_class": "proof-certificate negative-control validation",
+      "finding": "Mutates certificate identities, hashes, policy bodies, scores, roles, gates, status fields, caps, metric bundles, proof obligations and certificate-set structure; every tampered proof object must be rejected.",
+      "high_upstream_but_blocked": null,
+      "id": "certificate_tamper",
+      "label": "Certificate tamper-resistance",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "5415/5415 rejected",
+      "scenario_count": 5415,
+      "status_distribution": {
+        "base_certificates": 246,
+        "missed_tamper_cases": 0,
+        "tamper_families": 25
+      },
+      "validation_units": "5415 tamper cases across 25 families"
+    },
+    {
       "evidence_class": "second implementation check",
       "finding": "Recomputes score candidates, role caps, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model.",
       "high_upstream_but_blocked": null,
@@ -1488,13 +1640,15 @@
     "scenario_count": 246
   },
   "threshold_sensitivity_evaluations": 1230,
-  "total_evaluation_rows": 141535,
+  "total_evaluation_rows": 146950,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 492,
     "annotation_uncertainty_evaluations": 61500,
     "baseline_comparison_predictions": 2772,
     "blind_coding_packets": 222,
+    "certificate_tamper_cases": 5415,
+    "certificate_tamper_rejected": 5415,
     "contestation_challenge_passed": 270,
     "contestation_challenge_variants": 270,
     "evidence_ladder_model_outputs": 70,
