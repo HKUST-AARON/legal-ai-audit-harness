@@ -42,7 +42,8 @@ def main() -> int:
     rows = []
     for packet in packets:
         packet_rows = []
-        base_status = _base_allowed_status(packet)
+        base = _source_scenario(packet["packet_id"])
+        base_status = evaluate_scenario(base).allowed_status
         for coder in coders:
             annotation = coder["annotations"].get(packet["packet_id"])
             if annotation is None:
@@ -57,9 +58,17 @@ def main() -> int:
                     "allowed_status": result.allowed_status,
                     "disposition": result.disposition,
                     "missing_gates": result.missing_gates,
+                    "failure_flags": result.failure_flags,
                 }
             )
-        rows.append({"packet_id": packet["packet_id"], "base_allowed_status": base_status, "annotations": packet_rows})
+        rows.append(
+            {
+                "packet_id": packet["packet_id"],
+                "base_allowed_status": base_status,
+                "base_scores": _score_values(base),
+                "annotations": packet_rows,
+            }
+        )
     payload = _payload(rows, coders)
     (RESULTS / "blind_coding_study.json").write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
     (RESULTS / "blind_coding_study.md").write_text(_format_report(payload) + "\n", encoding="utf-8")
@@ -82,11 +91,6 @@ def _load_coder(path: Path) -> dict:
     payload = json.loads(path.read_text(encoding="utf-8"))
     annotations = {item["packet_id"]: item for item in payload["annotations"]}
     return {"coder_id": payload["coder_id"], "annotations": annotations}
-
-
-def _base_allowed_status(packet: dict) -> str:
-    scenario = _source_scenario(packet["packet_id"])
-    return evaluate_scenario(scenario).allowed_status
 
 
 def _source_scenario(packet_id: str) -> dict:
@@ -146,6 +150,7 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
                     "left": left,
                     "right": right,
                     "dimension_agreement": _dimension_agreement(rows, left, right),
+                    "gate_agreement": _gate_agreement(rows, left, right),
                 }
             )
     high_disagreement = [
@@ -167,16 +172,36 @@ def _payload(rows: list[dict], coders: list[dict]) -> dict:
             "weighted_status_agreement": _weighted_agreement(base_statuses, coder_statuses),
             "cohen_kappa": _cohen_kappa(base_statuses, coder_statuses),
             "quadratic_weighted_kappa": _quadratic_weighted_kappa(base_statuses, coder_statuses),
+            "dimension_agreement": _base_dimension_agreement(rows, coder_id),
             "match_count": len(rows) - len(mismatches),
             "mismatch_count": len(mismatches),
             "mismatches": mismatches,
         }
+    dimension_min_kappa = {
+        dimension: min(
+            item["dimension_agreement"][dimension]["cohen_kappa"]
+            for item in pairwise_dimensions
+        )
+        for dimension in DIMENSIONS
+    }
+    gate_agreements = [item["gate_agreement"] for item in pairwise_dimensions]
     return {
         "packet_count": len(rows),
         "coder_count": len(coders),
         "coder_ids": coder_ids,
         "pairwise_status": pairwise_status,
         "pairwise_dimensions": pairwise_dimensions,
+        "dimension_min_kappa": dimension_min_kappa,
+        "minimum_dimension_kappa": min(dimension_min_kappa.values()),
+        "minimum_dimension_exact_agreement": min(
+            item["dimension_agreement"][dimension]["exact_agreement"]
+            for item in pairwise_dimensions
+            for dimension in DIMENSIONS
+        ),
+        "minimum_failure_flag_exact_agreement": min(item["failure_flag_exact_agreement"] for item in gate_agreements),
+        "minimum_failure_flag_jaccard": min(item["failure_flag_mean_jaccard"] for item in gate_agreements),
+        "minimum_missing_gate_exact_agreement": min(item["missing_gate_exact_agreement"] for item in gate_agreements),
+        "minimum_missing_gate_jaccard": min(item["missing_gate_mean_jaccard"] for item in gate_agreements),
         "base_status_agreement": base_status_agreement,
         "status_disagreements": high_disagreement,
         "status_disagreement_count": len(high_disagreement),
@@ -198,15 +223,71 @@ def _exact_agreement(left: list[str], right: list[str]) -> float:
 def _dimension_agreement(rows: list[dict], left: str, right: str) -> dict[str, float]:
     agreement = {}
     for dimension in DIMENSIONS:
-        matches = 0
-        total = 0
+        left_values = []
+        right_values = []
         for row in rows:
             left_scores = next(annotation for annotation in row["annotations"] if annotation["coder_id"] == left)["scores"]
             right_scores = next(annotation for annotation in row["annotations"] if annotation["coder_id"] == right)["scores"]
-            matches += left_scores[dimension] == right_scores[dimension]
-            total += 1
-        agreement[dimension] = matches / total
+            left_values.append(left_scores[dimension])
+            right_values.append(right_scores[dimension])
+        agreement[dimension] = {
+            "exact_agreement": _exact_agreement(left_values, right_values),
+            "weighted_agreement": _score_weighted_agreement(left_values, right_values),
+            "cohen_kappa": _nominal_kappa(left_values, right_values, [0, 1, 2]),
+            "quadratic_weighted_kappa": _ordinal_kappa(left_values, right_values, {0: 0, 1: 1, 2: 2}),
+        }
     return agreement
+
+
+def _base_dimension_agreement(rows: list[dict], coder_id: str) -> dict[str, dict[str, float]]:
+    agreement = {}
+    for dimension in DIMENSIONS:
+        base_values = [row["base_scores"][dimension] for row in rows]
+        coder_values = [
+            next(annotation for annotation in row["annotations"] if annotation["coder_id"] == coder_id)["scores"][dimension]
+            for row in rows
+        ]
+        agreement[dimension] = {
+            "exact_agreement": _exact_agreement(base_values, coder_values),
+            "weighted_agreement": _score_weighted_agreement(base_values, coder_values),
+            "cohen_kappa": _nominal_kappa(base_values, coder_values, [0, 1, 2]),
+            "quadratic_weighted_kappa": _ordinal_kappa(base_values, coder_values, {0: 0, 1: 1, 2: 2}),
+        }
+    return agreement
+
+
+def _gate_agreement(rows: list[dict], left: str, right: str) -> dict[str, float]:
+    failure_exact = []
+    failure_jaccard = []
+    missing_exact = []
+    missing_jaccard = []
+    for row in rows:
+        left_row = next(annotation for annotation in row["annotations"] if annotation["coder_id"] == left)
+        right_row = next(annotation for annotation in row["annotations"] if annotation["coder_id"] == right)
+        left_flags = set(left_row["failure_flags"])
+        right_flags = set(right_row["failure_flags"])
+        left_gates = set(left_row["missing_gates"])
+        right_gates = set(right_row["missing_gates"])
+        failure_exact.append(left_flags == right_flags)
+        failure_jaccard.append(_jaccard(left_flags, right_flags))
+        missing_exact.append(left_gates == right_gates)
+        missing_jaccard.append(_jaccard(left_gates, right_gates))
+    return {
+        "failure_flag_exact_agreement": mean(failure_exact),
+        "failure_flag_mean_jaccard": mean(failure_jaccard),
+        "missing_gate_exact_agreement": mean(missing_exact),
+        "missing_gate_mean_jaccard": mean(missing_jaccard),
+    }
+
+
+def _score_values(scenario: dict) -> dict[str, int]:
+    return {dimension: scenario["scores"][dimension]["score"] for dimension in DIMENSIONS}
+
+
+def _jaccard(left: set[str], right: set[str]) -> float:
+    if not left and not right:
+        return 1.0
+    return len(left & right) / len(left | right)
 
 
 def _weighted_agreement(left: list[str], right: list[str]) -> float:
@@ -222,7 +303,20 @@ def _weighted_agreement(left: list[str], right: list[str]) -> float:
 
 
 def _cohen_kappa(left: list[str], right: list[str]) -> float:
-    labels = sorted(STATUS_RANK, key=STATUS_RANK.get)
+    return _nominal_kappa(left, right, sorted(STATUS_RANK, key=STATUS_RANK.get))
+
+
+def _quadratic_weighted_kappa(left: list[str], right: list[str]) -> float:
+    return _ordinal_kappa(left, right, STATUS_RANK)
+
+
+def _score_weighted_agreement(left: list[int], right: list[int]) -> float:
+    if not left:
+        return 1.0
+    return 1 - mean(abs(a - b) / 2 for a, b in zip(left, right))
+
+
+def _nominal_kappa(left: list, right: list, labels: list) -> float:
     total = len(left)
     if total == 0:
         return 1.0
@@ -235,17 +329,17 @@ def _cohen_kappa(left: list[str], right: list[str]) -> float:
     return (observed - expected) / (1 - expected)
 
 
-def _quadratic_weighted_kappa(left: list[str], right: list[str]) -> float:
-    labels = sorted(STATUS_RANK, key=STATUS_RANK.get)
+def _ordinal_kappa(left: list, right: list, rank_map: dict) -> float:
+    labels = sorted(rank_map, key=rank_map.get)
     total = len(left)
     if total == 0:
         return 1.0
-    max_rank = max(STATUS_RANK.values())
+    max_rank = max(rank_map.values())
     observed_disagreement = 0.0
     expected_disagreement = 0.0
     for a in labels:
         for b in labels:
-            weight = ((STATUS_RANK[a] - STATUS_RANK[b]) / max_rank) ** 2
+            weight = ((rank_map[a] - rank_map[b]) / max_rank) ** 2
             observed_disagreement += weight * sum(x == a and y == b for x, y in zip(left, right)) / total
             expected_disagreement += weight * (left.count(a) / total) * (right.count(b) / total)
     if expected_disagreement == 0.0:
@@ -260,6 +354,9 @@ def _format_report(payload: dict) -> str:
         f"Packets: {payload['packet_count']}",
         f"Coding passes: {payload['coder_count']} ({', '.join(payload['coder_ids'])})",
         f"Status disagreements: {payload['status_disagreement_count']}",
+        f"Minimum dimension kappa: {payload['minimum_dimension_kappa']:.2f}",
+        f"Minimum derived failure-flag exact agreement: {payload['minimum_failure_flag_exact_agreement']:.2f}",
+        f"Minimum derived missing-gate exact agreement: {payload['minimum_missing_gate_exact_agreement']:.2f}",
         "",
         "## Pairwise Status Agreement",
         "",
@@ -269,6 +366,35 @@ def _format_report(payload: dict) -> str:
     for item in payload["pairwise_status"]:
         lines.append(
             f"| {item['left']} | {item['right']} | {item['exact_status_agreement']:.2f} | {item['weighted_status_agreement']:.2f} | {item['cohen_kappa']:.2f} | {item['quadratic_weighted_kappa']:.2f} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Pairwise Dimension Agreement",
+            "",
+            "| Left | Right | Dimension | Exact | Weighted | Cohen's kappa | Quadratic weighted kappa |",
+            "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for item in payload["pairwise_dimensions"]:
+        for dimension in DIMENSIONS:
+            stats = item["dimension_agreement"][dimension]
+            lines.append(
+                f"| {item['left']} | {item['right']} | {dimension} | {stats['exact_agreement']:.2f} | {stats['weighted_agreement']:.2f} | {stats['cohen_kappa']:.2f} | {stats['quadratic_weighted_kappa']:.2f} |"
+            )
+    lines.extend(
+        [
+            "",
+            "## Pairwise Gate Agreement",
+            "",
+            "| Left | Right | Failure-flag exact | Failure-flag Jaccard | Missing-gate exact | Missing-gate Jaccard |",
+            "| --- | --- | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for item in payload["pairwise_dimensions"]:
+        stats = item["gate_agreement"]
+        lines.append(
+            f"| {item['left']} | {item['right']} | {stats['failure_flag_exact_agreement']:.2f} | {stats['failure_flag_mean_jaccard']:.2f} | {stats['missing_gate_exact_agreement']:.2f} | {stats['missing_gate_mean_jaccard']:.2f} |"
         )
     lines.extend(
         [

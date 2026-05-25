@@ -514,6 +514,14 @@ def main() -> int:
             "coder_count": blind_coding_payload["coder_count"],
             "status_disagreement_count": blind_coding_payload["status_disagreement_count"],
             "pairwise_status": blind_coding_payload["pairwise_status"],
+            "pairwise_dimensions": blind_coding_payload["pairwise_dimensions"],
+            "dimension_min_kappa": blind_coding_payload["dimension_min_kappa"],
+            "minimum_dimension_kappa": blind_coding_payload["minimum_dimension_kappa"],
+            "minimum_dimension_exact_agreement": blind_coding_payload["minimum_dimension_exact_agreement"],
+            "minimum_failure_flag_exact_agreement": blind_coding_payload["minimum_failure_flag_exact_agreement"],
+            "minimum_failure_flag_jaccard": blind_coding_payload["minimum_failure_flag_jaccard"],
+            "minimum_missing_gate_exact_agreement": blind_coding_payload["minimum_missing_gate_exact_agreement"],
+            "minimum_missing_gate_jaccard": blind_coding_payload["minimum_missing_gate_jaccard"],
             "base_status_agreement": blind_coding_payload["base_status_agreement"],
         },
         "threshold_sensitivity": threshold_sensitivity,
@@ -917,6 +925,9 @@ def _blind_coding_row(payload: dict) -> dict:
             "coder_weighted_status_agreement": round(first_pair["weighted_status_agreement"], 2),
             "coder_cohen_kappa": round(first_pair["cohen_kappa"], 2),
             "coder_quadratic_weighted_kappa": round(first_pair["quadratic_weighted_kappa"], 2),
+            "minimum_dimension_kappa": round(payload["minimum_dimension_kappa"], 2),
+            "minimum_failure_flag_exact_agreement": round(payload["minimum_failure_flag_exact_agreement"], 2),
+            "minimum_missing_gate_exact_agreement": round(payload["minimum_missing_gate_exact_agreement"], 2),
             "min_base_exact_status_agreement": round(base_exact, 2),
             "min_base_weighted_status_agreement": round(base_weighted, 2),
             "min_base_cohen_kappa": round(base_kappa, 2),
@@ -1334,6 +1345,9 @@ def _blind_coding_summary(payload: dict) -> str:
         f"{first_pair['exact_status_agreement']:.2f} coder-coder exact agreement, "
         f"{first_pair['cohen_kappa']:.2f} coder-coder kappa, "
         f"{first_pair['quadratic_weighted_kappa']:.2f} coder-coder weighted kappa, "
+        f"{payload['blind_coding']['minimum_dimension_kappa']:.2f} minimum dimension kappa, "
+        f"{payload['blind_coding']['minimum_failure_flag_exact_agreement']:.2f} minimum derived failure-flag exact agreement, "
+        f"{payload['blind_coding']['minimum_missing_gate_exact_agreement']:.2f} minimum derived missing-gate exact agreement, "
         f"{base_exact:.2f} minimum base-coder exact agreement, "
         f"{base_weighted:.2f} minimum base-coder weighted agreement, "
         f"{base_kappa:.2f} minimum base-coder kappa, "

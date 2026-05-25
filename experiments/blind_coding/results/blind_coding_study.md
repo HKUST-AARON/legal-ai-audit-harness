@@ -3,12 +3,32 @@
 Packets: 222
 Coding passes: 2 (coder_a, coder_b)
 Status disagreements: 2
+Minimum dimension kappa: 0.93
+Minimum derived failure-flag exact agreement: 0.97
+Minimum derived missing-gate exact agreement: 0.98
 
 ## Pairwise Status Agreement
 
 | Left | Right | Exact status agreement | Weighted status agreement | Cohen's kappa | Quadratic weighted kappa |
 | --- | --- | ---: | ---: | ---: | ---: |
 | coder_a | coder_b | 0.99 | 0.99 | 0.99 | 0.96 |
+
+## Pairwise Dimension Agreement
+
+| Left | Right | Dimension | Exact | Weighted | Cohen's kappa | Quadratic weighted kappa |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| coder_a | coder_b | S | 1.00 | 1.00 | 1.00 | 1.00 |
+| coder_a | coder_b | Q | 1.00 | 1.00 | 1.00 | 1.00 |
+| coder_a | coder_b | H | 0.98 | 0.99 | 0.93 | 0.94 |
+| coder_a | coder_b | K | 1.00 | 1.00 | 1.00 | 1.00 |
+| coder_a | coder_b | T | 1.00 | 1.00 | 1.00 | 1.00 |
+| coder_a | coder_b | L | 1.00 | 1.00 | 1.00 | 1.00 |
+
+## Pairwise Gate Agreement
+
+| Left | Right | Failure-flag exact | Failure-flag Jaccard | Missing-gate exact | Missing-gate Jaccard |
+| --- | --- | ---: | ---: | ---: | ---: |
+| coder_a | coder_b | 0.97 | 0.98 | 0.98 | 0.99 |
 
 ## Base Status Agreement
 

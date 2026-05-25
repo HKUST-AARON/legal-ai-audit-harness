@@ -1,5 +1,5 @@
 {
-  "check_count": 522,
+  "check_count": 529,
   "checks": [
     {
       "expected": "- 31 validation suites",
@@ -103,6 +103,11 @@
     },
     {
       "expected": "- 61,500 annotation-uncertainty perturbations with 0.933 sample stability",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "- score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97 and minimum derived missing-gate exact agreement 0.98",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -228,6 +233,16 @@
     },
     {
       "expected": "| Annotation uncertainty Monte Carlo | 61500 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Score-blinded dual coding | 444 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "Current results are inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97 and minimum derived missing-gate exact agreement 0.98.",
       "passed": true,
       "path": "README.md"
     },
@@ -432,6 +447,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "inter-coder dimension-level, and post-evaluation failure-flag and missing-gate agreement",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "holdout layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -508,6 +528,11 @@
     },
     {
       "expected": "61,500 annotation-uncertainty perturbations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "0.93 inter-coder minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -892,7 +917,17 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Score-blinded dual coding & 222 packets, 2 passes & 0.99 coder kappa; 0.92 min base kappa",
+      "expected": "Score-blinded dual coding & 222 packets, 2 passes & 0.99 coder kappa; 0.93 min dimension kappa",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "weakest dimension was authority hierarchy (H), with minimum dimension kappa 0.93",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Derived failure-flag exact agreement was 0.97 and derived missing-gate exact agreement was 0.98",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1017,7 +1052,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa",
+      "expected": "Score-blinded coding: 222 packets, 2 coding passes, 0.99 coder-coder exact agreement, 0.99 coder-coder kappa, 0.96 coder-coder weighted kappa, 0.93 minimum dimension kappa, 0.97 minimum derived failure-flag exact agreement, 0.98 minimum derived missing-gate exact agreement, 0.95 minimum base-coder exact agreement, 0.97 minimum base-coder weighted agreement, 0.92 minimum base-coder kappa, 0.90 minimum base-coder weighted kappa",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2614,5 +2649,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 522
+  "passed_count": 529
 }
