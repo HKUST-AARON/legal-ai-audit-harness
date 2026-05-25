@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 41
+Validation suites: 42
 Scenario files: 264
 Base embedded records/items: 697 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 9 cross-engine raw outputs, 9 cross-engine source-supported outputs, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 528
@@ -31,10 +31,11 @@ Metamorphic policy tests: 1233/1233 passed over 264 packets
 Policy mutation analysis: 15/15 mutants killed across 3111 evaluations; invalid promotions 2264; false negatives 2
 Review-provenance analysis: 627/627 passed; review/adoption placebos blocked 402/402; high-status provenance defects blocked 189/189; decision provenance defects demoted 36/36
 Claim-anchor analysis: 1080/1080 passed over 250 output units and 290 output links; claim-text removals blocked 250/250; link-to-claim removals blocked 290/290; support-attestation removals withdrawn 290/290; locator removals withdrawn 250/250
+Workflow portability analysis: 2904/2904 passed; architecture invariance 1320/1320; entitlement caps 1056/1056; decision dependency 264/264; unaccountable external bars 264/264
 Model-identity invariance: 1320/1320 identity substitutions passed over 264 packets and 5 identity profiles; status changes 0; disposition changes 0
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 7864314
+Derived robustness evaluations: 7867218
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2362
 Blocked reason distribution: authority_omission: 1013, contestation_failure: 103, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1186, summary_distortion: 1533, unauthorized_action: 10
@@ -79,6 +80,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Policy mutation analysis | policy-mutant killing | 3111 mutation evaluations over 15 policy mutants | 3111 | 15/15 killed | n/a | n/a | n/a | classification_errors: 2266, false_negatives: 2, invalid_promotions: 2264 |
 | Review-provenance analysis | human-review and adoption-record falsification | 627 provenance evaluations over 264 packets | 627 | 627/627 | n/a | n/a | n/a | decision_provenance_defects_demoted: 36, high_status_provenance_defects_blocked: 189, review_adoption_placebos_blocked: 402 |
 | Claim-anchor analysis | claim-level source-anchor falsification | 1080 claim-anchor mutations over 250 units and 290 links | 1080 | 1080/1080 | n/a | n/a | n/a | claim_text_absence_blocked: 250, link_unit_binding_absence_blocked: 290, locator_absence_withdrawn: 250, support_attestation_absence_withdrawn: 290 |
+| Workflow portability analysis | architecture and deployment-role portability | 2904 workflow mutations over 264 packets, 5 architecture profiles and 4 entitlement profiles | 2904 | 2904/2904 | n/a | n/a | n/a | architecture_invariance: 1320, decision_dependency: 264, entitlement_caps: 1056, unaccountable_external_bar: 264 |
 | Model-identity invariance | identity-substitution invariance check | 1320 identity mutations over 264 packets and 5 model identities | 1320 | 1320/1320 | n/a | n/a | n/a | disposition_changes: 0, identity_profiles: 5, status_changes: 0 |
 | Query-perturbation stability | public-retrieval query-sensitivity diagnostic | 30 query variants across 5 issue groups | 30 | 5/5 status-stable groups | n/a | n/a | 2 | authority_unstable_groups: 3, counter_recall_unstable_groups: 0, mean_record_overlap: 0.39, min_record_overlap: 0.0, record_set_unstable_groups: 4, top_result_unstable_groups: 4 |
 | Query-portfolio frontier | public-retrieval query-expansion frontier | 315 query portfolios plus 5 group frontier summaries | 320 | 0/315 portfolios qualified | n/a | n/a | n/a | full_counter_material_portfolios: 0, full_high_authority_portfolios: 56, full_screening_material_portfolios: 0, groups_counter_repaired: 0, groups_high_repaired: 1, max_authority_coverage: 1.0, max_counter_recall: 0.0 |
@@ -134,6 +136,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Policy mutation analysis:** Applies gate-removal and status-conferring policy mutants across committed packets; every mutant is killed because removing a required gate, ignoring a cap, or treating metrics, source labels, review labels, total score or model identity as status produces a wrong allocation.
 - **Review-provenance analysis:** Adds review and adoption labels to incomplete packets and removes review, contestability, jurisdiction, authorization, adoption-reason or contestation-record fields from qualified packets; status follows provenance records only when the legal-material chain is complete.
 - **Claim-anchor analysis:** Removes material proposition text, link-to-claim bindings, support attestations and locators from every qualified packet; high status survives only when each material output unit remains bound to a specific source anchor.
+- **Workflow portability analysis:** Runtime architecture labels do not change status; deployment entitlement profiles obey role caps, decision support depends on a screening-capable chain, and unaccountable external disposition is barred.
 - **Model-identity invariance:** Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.
 - **Query-perturbation stability:** Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.
 - **Query-portfolio frontier:** Enumerates all non-empty query portfolios over issue-equivalent public retrieval variants to test whether frozen query expansion recovers high-authority and counter-material coverage.

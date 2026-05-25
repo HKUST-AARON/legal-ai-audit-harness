@@ -850,6 +850,40 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(payload["locator_absence_withdrawn_count"], 250)
         self.assertEqual(payload["failed_count"], 0)
 
+    def test_workflow_portability_analysis_runs(self):
+        completed = subprocess.run(
+            [sys.executable, "scripts/run_workflow_portability_analysis.py"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr + completed.stdout)
+        self.assertIn("Workflow Portability Analysis", completed.stdout)
+        payload = json.loads(
+            (
+                ROOT
+                / "experiments"
+                / "workflow_portability"
+                / "results"
+                / "workflow_portability_analysis.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.assertEqual(payload["scenario_count"], 264)
+        self.assertEqual(payload["architecture_profile_count"], 5)
+        self.assertEqual(payload["entitlement_profile_count"], 4)
+        self.assertEqual(payload["architecture_invariance_evaluation_count"], 1320)
+        self.assertEqual(payload["architecture_invariance_passed_count"], 1320)
+        self.assertEqual(payload["entitlement_profile_evaluation_count"], 1056)
+        self.assertEqual(payload["entitlement_profile_passed_count"], 1056)
+        self.assertEqual(payload["decision_dependency_check_count"], 264)
+        self.assertEqual(payload["decision_dependency_passed_count"], 264)
+        self.assertEqual(payload["unaccountable_bar_evaluation_count"], 264)
+        self.assertEqual(payload["unaccountable_bar_passed_count"], 264)
+        self.assertEqual(payload["evaluation_count"], 2904)
+        self.assertEqual(payload["passed_count"], 2904)
+        self.assertEqual(payload["failed_count"], 0)
+
     def test_claim_consistency_verification_runs(self):
         completed = subprocess.run(
             [sys.executable, "scripts/verify_claim_consistency.py"],
@@ -1188,7 +1222,7 @@ class AuditModelTest(unittest.TestCase):
 
     def test_full_validation_report_shape(self):
         report = json.loads((ROOT / "experiments" / "full_validation" / "results" / "full_validation_report.json").read_text(encoding="utf-8"))
-        self.assertEqual(report["suite_count"], 41)
+        self.assertEqual(report["suite_count"], 42)
         self.assertEqual(report["scenario_files"], 264)
         self.assertEqual(report["validation_units"]["total"], 697)
         self.assertEqual(report["validation_units"]["public_retrieval_records"], 169)
@@ -1285,6 +1319,13 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["claim_anchor_passed"], 1080)
         self.assertEqual(report["validation_units"]["claim_anchor_output_units"], 250)
         self.assertEqual(report["validation_units"]["claim_anchor_output_links"], 290)
+        self.assertEqual(report["workflow_portability_evaluations"], 2904)
+        self.assertEqual(report["validation_units"]["workflow_portability_evaluations"], 2904)
+        self.assertEqual(report["validation_units"]["workflow_portability_passed"], 2904)
+        self.assertEqual(report["validation_units"]["workflow_architecture_invariance_evaluations"], 1320)
+        self.assertEqual(report["validation_units"]["workflow_entitlement_cap_checks"], 1056)
+        self.assertEqual(report["validation_units"]["workflow_decision_dependency_checks"], 264)
+        self.assertEqual(report["validation_units"]["workflow_unaccountable_bar_checks"], 264)
         self.assertEqual(report["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_evaluations"], 1320)
         self.assertEqual(report["validation_units"]["model_identity_invariance_passed"], 1320)
@@ -1294,7 +1335,7 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 7865011)
+        self.assertEqual(report["total_evaluation_rows"], 7867915)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
@@ -1359,6 +1400,22 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["claim_anchor"]["link_unit_binding_absence_blocked_count"], 290)
         self.assertEqual(report["claim_anchor"]["support_attestation_absence_withdrawn_count"], 290)
         self.assertEqual(report["claim_anchor"]["locator_absence_withdrawn_count"], 250)
+        self.assertEqual(report["workflow_portability"]["scenario_count"], 264)
+        self.assertEqual(report["workflow_portability"]["architecture_profile_count"], 5)
+        self.assertEqual(report["workflow_portability"]["entitlement_profile_count"], 4)
+        self.assertEqual(report["workflow_portability"]["architecture_invariance_evaluation_count"], 1320)
+        self.assertEqual(report["workflow_portability"]["architecture_invariance_passed_count"], 1320)
+        self.assertEqual(report["workflow_portability"]["entitlement_profile_evaluation_count"], 1056)
+        self.assertEqual(report["workflow_portability"]["entitlement_profile_passed_count"], 1056)
+        self.assertEqual(report["workflow_portability"]["decision_dependency_check_count"], 264)
+        self.assertEqual(report["workflow_portability"]["decision_dependency_passed_count"], 264)
+        self.assertEqual(report["workflow_portability"]["unaccountable_bar_evaluation_count"], 264)
+        self.assertEqual(report["workflow_portability"]["unaccountable_bar_passed_count"], 264)
+        self.assertEqual(report["workflow_portability"]["evaluation_count"], 2904)
+        self.assertEqual(report["workflow_portability"]["passed_count"], 2904)
+        self.assertEqual(report["workflow_portability"]["failed_count"], 0)
+        self.assertEqual(len(report["workflow_portability"]["architecture_profiles"]), 5)
+        self.assertEqual(len(report["workflow_portability"]["entitlement_profiles"]), 4)
         self.assertEqual(report["status_lattice"]["state_count"], 466560)
         self.assertEqual(report["status_lattice"]["score_vector_count"], 729)
         self.assertEqual(report["status_lattice"]["role_count"], 5)

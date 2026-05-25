@@ -2000,7 +2000,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 41,
+  "suite_count": 42,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -2671,6 +2671,24 @@
       "validation_units": "1080 claim-anchor mutations over 250 units and 290 links"
     },
     {
+      "evidence_class": "architecture and deployment-role portability",
+      "finding": "Runtime architecture labels do not change status; deployment entitlement profiles obey role caps, decision support depends on a screening-capable chain, and unaccountable external disposition is barred.",
+      "high_upstream_but_blocked": null,
+      "id": "workflow_portability",
+      "label": "Workflow portability analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "2904/2904",
+      "scenario_count": 2904,
+      "status_distribution": {
+        "architecture_invariance": 1320,
+        "decision_dependency": 264,
+        "entitlement_caps": 1056,
+        "unaccountable_external_bar": 264
+      },
+      "validation_units": "2904 workflow mutations over 264 packets, 5 architecture profiles and 4 entitlement profiles"
+    },
+    {
       "evidence_class": "identity-substitution invariance check",
       "finding": "Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.",
       "high_upstream_but_blocked": null,
@@ -2875,7 +2893,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 7865011,
+  "total_evaluation_rows": 7867915,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -2948,6 +2966,91 @@
     "status_lattice_substitution_predictions": 3732480,
     "stress_scenarios": 10,
     "threshold_sensitivity_evaluations": 1320,
-    "total": 697
-  }
+    "total": 697,
+    "workflow_architecture_invariance_evaluations": 1320,
+    "workflow_decision_dependency_checks": 264,
+    "workflow_entitlement_cap_checks": 1056,
+    "workflow_portability_evaluations": 2904,
+    "workflow_portability_passed": 2904,
+    "workflow_unaccountable_bar_checks": 264
+  },
+  "workflow_portability": {
+    "architecture_invariance_evaluation_count": 1320,
+    "architecture_invariance_passed_count": 1320,
+    "architecture_profile_count": 5,
+    "architecture_profiles": [
+      "public_search_interface",
+      "retrieval_augmented_generation",
+      "agentic_research_workflow",
+      "commercial_legal_database",
+      "manual_review_packet"
+    ],
+    "by_architecture_profile": {
+      "agentic_research_workflow": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "commercial_legal_database": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "manual_review_packet": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "public_search_interface": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "retrieval_augmented_generation": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      }
+    },
+    "by_entitlement_profile": {
+      "authorized_decision": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "internal_reference": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "procedural_screening": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      },
+      "professional_assistance": {
+        "count": 264,
+        "failed": 0,
+        "passed": 264
+      }
+    },
+    "decision_dependency_check_count": 264,
+    "decision_dependency_passed_count": 264,
+    "entitlement_profile_count": 4,
+    "entitlement_profile_evaluation_count": 1056,
+    "entitlement_profile_passed_count": 1056,
+    "entitlement_profiles": [
+      "internal_reference",
+      "professional_assistance",
+      "procedural_screening",
+      "authorized_decision"
+    ],
+    "evaluation_count": 2904,
+    "failed_count": 0,
+    "passed_count": 2904,
+    "scenario_count": 264,
+    "unaccountable_bar_evaluation_count": 264,
+    "unaccountable_bar_passed_count": 264
+  },
+  "workflow_portability_evaluations": 2904
 }

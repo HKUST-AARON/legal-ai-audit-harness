@@ -190,6 +190,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_policy_mutation_analysis.py"])
     _run([sys.executable, "scripts/run_review_provenance_analysis.py"])
     _run([sys.executable, "scripts/run_claim_anchor_analysis.py"])
+    _run([sys.executable, "scripts/run_workflow_portability_analysis.py"])
     _run([sys.executable, "scripts/run_model_identity_invariance.py"])
     _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
     _run([sys.executable, "scripts/run_query_portfolio_frontier.py"])
@@ -379,6 +380,16 @@ def main() -> int:
         )
     )
     rows.append(_claim_anchor_row(claim_anchor_payload))
+    workflow_portability_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "workflow_portability"
+            / "results"
+            / "workflow_portability_analysis.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_workflow_portability_row(workflow_portability_payload))
     model_identity_payload = json.loads(
         (
             ROOT
@@ -514,6 +525,14 @@ def main() -> int:
             "claim_anchor_passed": claim_anchor_payload["passed_count"],
             "claim_anchor_output_units": claim_anchor_payload["output_unit_count"],
             "claim_anchor_output_links": claim_anchor_payload["output_link_count"],
+            "workflow_portability_evaluations": workflow_portability_payload["evaluation_count"],
+            "workflow_portability_passed": workflow_portability_payload["passed_count"],
+            "workflow_architecture_invariance_evaluations": workflow_portability_payload[
+                "architecture_invariance_evaluation_count"
+            ],
+            "workflow_entitlement_cap_checks": workflow_portability_payload["entitlement_profile_evaluation_count"],
+            "workflow_decision_dependency_checks": workflow_portability_payload["decision_dependency_check_count"],
+            "workflow_unaccountable_bar_checks": workflow_portability_payload["unaccountable_bar_evaluation_count"],
             "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
             "model_identity_invariance_passed": model_identity_payload["passed_count"],
             "query_perturbation_variants": query_perturbation_payload["query_variant_count"],
@@ -568,6 +587,7 @@ def main() -> int:
         "policy_mutation_evaluations": policy_mutation_payload["evaluation_count"],
         "review_provenance_evaluations": review_provenance_payload["evaluation_count"],
         "claim_anchor_evaluations": claim_anchor_payload["evaluation_count"],
+        "workflow_portability_evaluations": workflow_portability_payload["evaluation_count"],
         "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"],
@@ -602,6 +622,7 @@ def main() -> int:
         + policy_mutation_payload["evaluation_count"]
         + review_provenance_payload["evaluation_count"]
         + claim_anchor_payload["evaluation_count"]
+        + workflow_portability_payload["evaluation_count"]
         + model_identity_payload["evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
         + query_perturbation_payload["issue_group_count"]
@@ -886,6 +907,32 @@ def main() -> int:
             ],
             "locator_absence_withdrawn_count": claim_anchor_payload["locator_absence_withdrawn_count"],
             "locator_absence_evaluation_count": claim_anchor_payload["locator_absence_evaluation_count"],
+        },
+        "workflow_portability": {
+            "scenario_count": workflow_portability_payload["scenario_count"],
+            "architecture_profile_count": workflow_portability_payload["architecture_profile_count"],
+            "entitlement_profile_count": workflow_portability_payload["entitlement_profile_count"],
+            "architecture_invariance_evaluation_count": workflow_portability_payload[
+                "architecture_invariance_evaluation_count"
+            ],
+            "architecture_invariance_passed_count": workflow_portability_payload[
+                "architecture_invariance_passed_count"
+            ],
+            "entitlement_profile_evaluation_count": workflow_portability_payload[
+                "entitlement_profile_evaluation_count"
+            ],
+            "entitlement_profile_passed_count": workflow_portability_payload["entitlement_profile_passed_count"],
+            "decision_dependency_check_count": workflow_portability_payload["decision_dependency_check_count"],
+            "decision_dependency_passed_count": workflow_portability_payload["decision_dependency_passed_count"],
+            "unaccountable_bar_evaluation_count": workflow_portability_payload["unaccountable_bar_evaluation_count"],
+            "unaccountable_bar_passed_count": workflow_portability_payload["unaccountable_bar_passed_count"],
+            "evaluation_count": workflow_portability_payload["evaluation_count"],
+            "passed_count": workflow_portability_payload["passed_count"],
+            "failed_count": workflow_portability_payload["failed_count"],
+            "architecture_profiles": workflow_portability_payload["architecture_profiles"],
+            "entitlement_profiles": workflow_portability_payload["entitlement_profiles"],
+            "by_architecture_profile": workflow_portability_payload["by_architecture_profile"],
+            "by_entitlement_profile": workflow_portability_payload["by_entitlement_profile"],
         },
         "model_identity_invariance": {
             "scenario_count": model_identity_payload["scenario_count"],
@@ -1725,6 +1772,31 @@ def _claim_anchor_row(payload: dict) -> dict:
     }
 
 
+def _workflow_portability_row(payload: dict) -> dict:
+    return {
+        "id": "workflow_portability",
+        "label": "Workflow portability analysis",
+        "evidence_class": "architecture and deployment-role portability",
+        "validation_units": (
+            f"{payload['evaluation_count']} workflow mutations over {payload['scenario_count']} packets, "
+            f"{payload['architecture_profile_count']} architecture profiles and "
+            f"{payload['entitlement_profile_count']} entitlement profiles"
+        ),
+        "scenario_count": payload["evaluation_count"],
+        "rule_pass": f"{payload['passed_count']}/{payload['evaluation_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "architecture_invariance": payload["architecture_invariance_passed_count"],
+            "entitlement_caps": payload["entitlement_profile_passed_count"],
+            "decision_dependency": payload["decision_dependency_passed_count"],
+            "unaccountable_external_bar": payload["unaccountable_bar_passed_count"],
+        },
+        "finding": "Runtime architecture labels do not change status; deployment entitlement profiles obey role caps, decision support depends on a screening-capable chain, and unaccountable external disposition is barred.",
+    }
+
+
 def _model_identity_invariance_row(payload: dict) -> dict:
     return {
         "id": "model_identity_invariance",
@@ -1859,6 +1931,7 @@ def _format_report(payload: dict) -> str:
         f"Policy mutation analysis: {payload['policy_mutations']['killed_mutant_count']}/{payload['policy_mutations']['mutant_count']} mutants killed across {payload['policy_mutations']['evaluation_count']} evaluations; invalid promotions {payload['policy_mutations']['invalid_promotion_count']}; false negatives {payload['policy_mutations']['false_negative_count']}",
         f"Review-provenance analysis: {payload['review_provenance']['passed_count']}/{payload['review_provenance']['evaluation_count']} passed; review/adoption placebos blocked {payload['review_provenance']['placebo_blocked_count']}/{payload['review_provenance']['placebo_evaluation_count']}; high-status provenance defects blocked {payload['review_provenance']['high_status_provenance_blocked_count']}/{payload['review_provenance']['high_status_provenance_check_count']}; decision provenance defects demoted {payload['review_provenance']['decision_provenance_demoted_count']}/{payload['review_provenance']['decision_provenance_check_count']}",
         f"Claim-anchor analysis: {payload['claim_anchor']['passed_count']}/{payload['claim_anchor']['evaluation_count']} passed over {payload['claim_anchor']['output_unit_count']} output units and {payload['claim_anchor']['output_link_count']} output links; claim-text removals blocked {payload['claim_anchor']['claim_text_absence_blocked_count']}/{payload['claim_anchor']['claim_text_absence_evaluation_count']}; link-to-claim removals blocked {payload['claim_anchor']['link_unit_binding_absence_blocked_count']}/{payload['claim_anchor']['link_unit_binding_absence_evaluation_count']}; support-attestation removals withdrawn {payload['claim_anchor']['support_attestation_absence_withdrawn_count']}/{payload['claim_anchor']['support_attestation_absence_evaluation_count']}; locator removals withdrawn {payload['claim_anchor']['locator_absence_withdrawn_count']}/{payload['claim_anchor']['locator_absence_evaluation_count']}",
+        f"Workflow portability analysis: {payload['workflow_portability']['passed_count']}/{payload['workflow_portability']['evaluation_count']} passed; architecture invariance {payload['workflow_portability']['architecture_invariance_passed_count']}/{payload['workflow_portability']['architecture_invariance_evaluation_count']}; entitlement caps {payload['workflow_portability']['entitlement_profile_passed_count']}/{payload['workflow_portability']['entitlement_profile_evaluation_count']}; decision dependency {payload['workflow_portability']['decision_dependency_passed_count']}/{payload['workflow_portability']['decision_dependency_check_count']}; unaccountable external bars {payload['workflow_portability']['unaccountable_bar_passed_count']}/{payload['workflow_portability']['unaccountable_bar_evaluation_count']}",
         f"Model-identity invariance: {payload['model_identity_invariance']['passed_count']}/{payload['model_identity_invariance']['evaluation_count']} identity substitutions passed over {payload['model_identity_invariance']['scenario_count']} packets and {payload['model_identity_invariance']['identity_profile_count']} identity profiles; status changes {payload['model_identity_invariance']['status_changed_count']}; disposition changes {payload['model_identity_invariance']['disposition_changed_count']}",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",
         f"Query-portfolio frontier: {payload['query_portfolio']['portfolio_count']} portfolios plus {payload['query_portfolio']['issue_group_count']} group summaries across {payload['query_portfolio']['issue_group_count']} issue groups; qualified portfolios {payload['query_portfolio']['qualified_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full high-authority portfolios {payload['query_portfolio']['full_high_authority_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}; full counter-material portfolios {payload['query_portfolio']['full_counter_material_portfolio_count']}/{payload['query_portfolio']['portfolio_count']}",
