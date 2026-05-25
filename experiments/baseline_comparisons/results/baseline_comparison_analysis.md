@@ -2,8 +2,8 @@
 
 Scenario packets: 264
 Qualified packets under the full audit model: 63
-Baseline rules: 12
-Baseline predictions: 2988
+Baseline rules: 13
+Baseline predictions: 3252
 Simplified rules with at least one reproduction error: True
 Target label: protocol-defined reference allocation.
 
@@ -19,6 +19,7 @@ Lowest-false-positive simplified rule: Source-bound score candidate with review 
 | All dimensions present and total >= 9 | 264 | 0.29 | 1.00 | 0.23 | 0.45 | 155 | 0 |
 | Source-bound output evidence | 264 | 0.47 | 1.00 | 0.64 | 0.64 | 72 | 0 |
 | Review gate and role ready | 264 | 0.30 | 1.00 | 0.26 | 0.46 | 149 | 0 |
+| High-authority and counter-material coverage | 264 | 0.29 | 0.97 | 0.25 | 0.45 | 150 | 2 |
 | Source-bound evidence plus recall >= 0.8 | 219 | 0.56 | 1.00 | 0.69 | 0.72 | 48 | 0 |
 | Source-bound score candidate with counter-material | 264 | 0.56 | 0.97 | 0.76 | 0.71 | 48 | 2 |
 | Source-bound score candidate with review gate | 264 | 0.62 | 1.00 | 0.81 | 0.77 | 38 | 0 |

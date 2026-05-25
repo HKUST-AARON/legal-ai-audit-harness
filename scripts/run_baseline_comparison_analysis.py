@@ -65,6 +65,7 @@ def _scenario_rows() -> list[dict]:
                     "precision": metrics.get("precision"),
                     "recall": metrics.get("recall"),
                     "f1": metrics.get("f1"),
+                    "authority_complete": result.authority_coverage == 1.0,
                     "source_bound": result.evidence_fidelity == 1.0
                     and result.evidence_coverage == 1.0
                     and result.procedural_source_tag_coverage == 1.0,
@@ -100,6 +101,12 @@ def _baseline_rows(scenarios: list[dict]) -> list[dict]:
         ),
         ("source_bound_only", "Source-bound output evidence", "all", lambda row: row["source_bound"]),
         ("review_ready_only", "Review gate and role ready", "all", lambda row: row["review_ready"]),
+        (
+            "authority_material_only",
+            "High-authority and counter-material coverage",
+            "all",
+            lambda row: row["authority_complete"] and row["counter_complete"],
+        ),
         (
             "source_and_recall",
             "Source-bound evidence plus recall >= 0.8",

@@ -1,4 +1,4 @@
 # Claim Consistency Verification
 
-Checks: 760/760
+Checks: 805/805
 All passed: True

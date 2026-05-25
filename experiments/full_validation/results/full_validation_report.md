@@ -17,7 +17,7 @@ Formal invariant checks: 51643/51643 passed
 Status-lattice exhaustion: 233280 high-status claim-attempt states, 1632960 cover edges, 851/851 necessity checks and 851/851 gate-ablation drops
 Metric separation evaluations: 219 upstream-metric scenario packets; high-recall blocked outputs 153/215
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
-Baseline rule comparisons: 2988 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0
+Baseline rule comparisons: 3252 predictions across 13 rules; best simplified false positives 38; reference rule false positives 0
 Gate ablation evaluations: 390/390 passed over 63 qualified packets
 Gate-contrast witness pairs: 390/390 passed; score/metric/role preserved 390/390; status separated 390/390
 Repair frontier evaluations: 193/193 blocked claims repairable across 4831 counterfactual repairs
@@ -31,7 +31,7 @@ Metamorphic policy tests: 1233/1233 passed over 264 packets
 Model-identity invariance: 1320/1320 identity substitutions passed over 264 packets and 5 identity profiles; status changes 0; disposition changes 0
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Derived robustness evaluations: 3659587
+Derived robustness evaluations: 3659851
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2352
 Blocked reason distribution: authority_omission: 1013, contestation_failure: 64, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1185, summary_distortion: 1533, unauthorized_action: 10
@@ -63,7 +63,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Formal invariant verification | exhaustive model-property check | 51643 generated audit-policy states | 51643 | 51643/51643 passed | n/a | n/a | n/a | authority_gate_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
 | Status-lattice exhaustion | finite status-lattice characterization | 233280 high-status claim-attempt states, 1632960 cover edges and 1632960 substitute-rule predictions | 3500902 | 851/851 necessity; 851/851 ablations | n/a | n/a | n/a | best_partial_rule_false_positive: 672, decision_status_states: 11, full_predicate_false_positive: 0, high_status_states: 168 |
 | Metric separation analysis | retrieval/status non-equivalence check | 219 upstream-metric scenario packets | 219 | recall-threshold precision 0.29; reference gate FP 0 | n/a | n/a | n/a | high_recall_blocked_rate: 0.71, recall_point_biserial: 0.06, reference_gate_false_positive: 0 |
-| Baseline rule comparison | alternative-policy comparison | 2988 baseline predictions over 12 rules | 2988 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.62, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
+| Baseline rule comparison | alternative-policy comparison | 3252 baseline predictions over 13 rules | 3252 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.62, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
 | Qualified-output gate ablations | counterfactual gate-necessity check | 390 ablations over 63 qualified packets | 390 | 390/390 | n/a | n/a | n/a | missing_counter_material: 0, missing_decision_adoption: 0, missing_evidence_packet: 0, missing_high_authority: 0, missing_review_gate: 0, nonprocedural_source_tags: 0, professional_role_cap: 0 |
 | Gate-contrast witness pairs | non-substitution witness validation | 390 witness pairs over 63 qualified packets | 390 | 390/390 | n/a | n/a | n/a | normative_material_screening_output: 12, reference_information: 378 |
 | Blocked-claim repair frontiers | counterfactual repair-necessity check | 4831 repair counterfactuals over 193 blocked claims | 4831 | 193/193 repairable | n/a | n/a | n/a | 1: 108, 2: 40, 3: 42, 4: 3 |
@@ -86,6 +86,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | --- | ---: | ---: | ---: | ---: | --- |
 | Performance sufficiency | 153 | 0.29 | n/a | 0 | 153/215 high-recall outputs were blocked below normative screening |
 | Source-label sufficiency | 72 | 0.47 | 3192 | 0 | Source links without authority, counter-material and contestability gates over-admit outputs |
+| Authority-material sufficiency | 150 | 0.29 | 672 | 0 | Authority and counter-material coverage without source-chain, role and contestability gates over-admit outputs |
 | Review-label sufficiency | 149 | 0.30 | 9816 | 0 | Review labels without source-chain and failure-cap gates over-admit outputs |
 | Score sufficiency | 183 | 0.26 | 24792 | 0 | High total score cannot substitute for missing legal-material predicates |
 | Model-identity sufficiency | 1005 | 0.24 | n/a | 0 | 1005/1320 identity-labelled rows would be over-admitted; identity substitution produced 0 status changes |
@@ -114,7 +115,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Formal invariant verification:** Exhaustively tests monotonicity, evidence-packet necessity, authority-set necessity, counter-material necessity, adoption necessity, role caps, failure caps and metric non-equivalence.
 - **Status-lattice exhaustion:** Exhausts the high-status claim-attempt lattice and shows that score, role, source and authority substitutes over-admit unless the full screening predicate is present.
 - **Metric separation analysis:** Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.
-- **Baseline rule comparison:** Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.
+- **Baseline rule comparison:** Compares recall, F1, total-score, source-bound, authority-material and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.
 - **Qualified-output gate ablations:** Removes evidence, source-tag, authority, counter-material, review, role-cap and adoption gates from qualified packets and verifies that status falls below the corresponding procedural level.
 - **Gate-contrast witness pairs:** Preserves each qualified packet's audit score vector, upstream metrics and system role while flipping one mandatory gate; every witness pair separates allowed procedural status, proving score-only and retrieval-metric-only substitutes cannot reproduce the protocol on the validation domain.
 - **Blocked-claim repair frontiers:** Computes the minimal artefact-gate families needed to upgrade each blocked normative-screening or decision-support claim.

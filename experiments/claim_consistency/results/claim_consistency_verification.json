@@ -1,5 +1,5 @@
 {
-  "check_count": 760,
+  "check_count": 805,
   "checks": [
     {
       "expected": "- 38 validation suites",
@@ -17,7 +17,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 3,660,284 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
+      "expected": "- 3,660,548 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -47,12 +47,12 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 2,988 baseline-rule predictions across 12 alternative status rules",
+      "expected": "- 3,252 baseline-rule predictions across 13 alternative status rules",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- a substitute-theory falsification summary for performance, source-label, review-label, score and model-identity sufficiency, with 0 full-protocol false positives",
+      "expected": "- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -187,7 +187,7 @@
       "path": "README.md"
     },
     {
-      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 2,988 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,831 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
+      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 4,831 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -207,12 +207,12 @@
       "path": "README.md"
     },
     {
-      "expected": "| Substitute-theory falsification | 5 theories |",
+      "expected": "| Substitute-theory falsification | 6 theories |",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "performance sufficiency, source-label sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
+      "expected": "performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
       "passed": true,
       "path": "README.md"
     },
@@ -247,7 +247,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Baseline rule comparison | 2988 |",
+      "expected": "| Baseline rule comparison | 3252 |",
       "passed": true,
       "path": "README.md"
     },
@@ -502,6 +502,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "authority-material sufficiency",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Blocked-claim repair frontiers",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -747,7 +752,17 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "2,988 baseline-rule predictions across 12 alternative status rules",
+      "expected": "3,252 baseline-rule predictions across 13 alternative status rules",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "150 authority-material-sufficiency false positives",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "authority-material sufficiency falsification",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -927,12 +942,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "3,660,284 validation operations",
+      "expected": "3,660,548 validation operations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "five substitute theories: performance sufficiency, source-label sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
+      "expected": "six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -982,17 +997,22 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "2,988 predictions",
+      "expected": "3,252 predictions",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Across 12 simplified substitute rules",
+      "expected": "Across 13 simplified substitute rules",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "still produced 38 false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "authority-material sufficiency produced 150 scenario false positives, two false negatives and 672 lattice false positives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1277,7 +1297,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Baseline rule comparison & 2,988 predictions & Best simplified false positives 38; reference rule false positives 0",
+      "expected": "Baseline rule comparison & 3,252 predictions & Best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1327,7 +1347,7 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Baseline rule comparisons: 2988 predictions across 12 rules; best simplified false positives 38; reference rule false positives 0",
+      "expected": "Baseline rule comparisons: 3252 predictions across 13 rules; best simplified false positives 38; reference rule false positives 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -1462,6 +1482,11 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Authority-material sufficiency | 150 |",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Model-identity sufficiency | 1005 | 0.24 | n/a | 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -1492,7 +1517,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 34 pages",
+      "expected": "The expected manuscript build is 35 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -1612,12 +1637,52 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `5 theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `five substitute theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `five rival theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `four substitute theories`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
       "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `2,988`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `2988`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `12 alternative status rules`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `12 simplified substitute rules`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `3,660,284`",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -2072,12 +2137,52 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `5 theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `five substitute theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `five rival theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `four substitute theories`",
       "passed": true,
       "path": "README.md"
     },
     {
       "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `2,988`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `2988`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `12 alternative status rules`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `12 simplified substitute rules`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `3,660,284`",
       "passed": true,
       "path": "README.md"
     },
@@ -2532,12 +2637,52 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `5 theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `five substitute theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `five rival theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `four substitute theories`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
     {
       "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `2,988`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `2988`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `12 alternative status rules`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `12 simplified substitute rules`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `3,660,284`",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -2992,12 +3137,52 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `5 theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `five substitute theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `five rival theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `four substitute theories`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
       "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `2,988`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `2988`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `12 alternative status rules`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `12 simplified substitute rules`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `3,660,284`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -3452,12 +3637,52 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "absence of stale claim `5 theories`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `five substitute theories`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `five rival theories`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "absence of stale claim `four substitute theories`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "absence of stale claim `four rival theories`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `2,988`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `2988`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `12 alternative status rules`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `12 simplified substitute rules`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `3,660,284`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -3804,5 +4029,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 760
+  "passed_count": 805
 }

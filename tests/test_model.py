@@ -306,8 +306,8 @@ class AuditModelTest(unittest.TestCase):
             )
         )
         self.assertEqual(payload["scenario_count"], 264)
-        self.assertEqual(payload["baseline_count"], 12)
-        self.assertEqual(payload["baseline_prediction_count"], 2988)
+        self.assertEqual(payload["baseline_count"], 13)
+        self.assertEqual(payload["baseline_prediction_count"], 3252)
         self.assertTrue(payload["all_simplified_rules_have_errors"])
         self.assertEqual(payload["full_gate"]["false_positive"], 0)
         self.assertEqual(payload["full_gate"]["false_negative"], 0)
@@ -1165,8 +1165,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["validation_units"]["metric_separation_evaluations"], 219)
         self.assertEqual(report["metric_statistical_resamples"], 2000)
         self.assertEqual(report["validation_units"]["metric_statistical_resamples"], 2000)
-        self.assertEqual(report["baseline_comparison_evaluations"], 2988)
-        self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 2988)
+        self.assertEqual(report["baseline_comparison_evaluations"], 3252)
+        self.assertEqual(report["validation_units"]["baseline_comparison_predictions"], 3252)
         self.assertEqual(report["gate_ablation_evaluations"], 390)
         self.assertEqual(report["validation_units"]["gate_ablation_evaluations"], 390)
         self.assertEqual(report["gate_contrast_witness_evaluations"], 390)
@@ -1212,17 +1212,20 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolio_evaluations"], 320)
         self.assertEqual(report["validation_units"]["query_portfolios"], 315)
-        self.assertEqual(report["total_evaluation_rows"], 3660284)
+        self.assertEqual(report["total_evaluation_rows"], 3660548)
         substitute_rows = {row["id"]: row for row in report["substitute_theory_falsification"]}
         self.assertEqual(set(substitute_rows), {
             "performance_sufficiency",
             "source_label_sufficiency",
+            "authority_material_sufficiency",
             "review_label_sufficiency",
             "score_sufficiency",
             "model_identity_sufficiency",
         })
         self.assertEqual(substitute_rows["performance_sufficiency"]["scenario_false_positive"], 153)
         self.assertEqual(substitute_rows["source_label_sufficiency"]["scenario_false_positive"], 72)
+        self.assertEqual(substitute_rows["authority_material_sufficiency"]["scenario_false_positive"], 150)
+        self.assertEqual(substitute_rows["authority_material_sufficiency"]["lattice_false_positive"], 672)
         self.assertEqual(substitute_rows["review_label_sufficiency"]["scenario_false_positive"], 149)
         self.assertEqual(substitute_rows["score_sufficiency"]["scenario_false_positive"], 183)
         self.assertEqual(substitute_rows["model_identity_sufficiency"]["scenario_false_positive"], 1005)
@@ -1288,8 +1291,8 @@ class AuditModelTest(unittest.TestCase):
         self.assertEqual(report["metric_separation"]["bootstrap"]["iterations"], 1000)
         self.assertEqual(report["metric_separation"]["permutation"]["iterations"], 1000)
         self.assertEqual(report["metric_separation"]["high_recall_blocked"]["count"], 153)
-        self.assertEqual(report["baseline_comparison"]["baseline_count"], 12)
-        self.assertEqual(report["baseline_comparison"]["baseline_prediction_count"], 2988)
+        self.assertEqual(report["baseline_comparison"]["baseline_count"], 13)
+        self.assertEqual(report["baseline_comparison"]["baseline_prediction_count"], 3252)
         self.assertEqual(report["baseline_comparison"]["best_simplified"]["false_positive"], 38)
         self.assertEqual(report["baseline_comparison"]["full_gate"]["false_positive"], 0)
         self.assertTrue(report["baseline_comparison"]["all_simplified_rules_have_errors"])

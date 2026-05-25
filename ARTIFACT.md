@@ -26,14 +26,14 @@ Expected aggregate output:
 - 38 validation suites
 - 264 scenario files
 - 697 embedded records or output items
-- 3,660,284 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
+- 3,660,548 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
 - 51,643/51,643 formal invariant checks passed
 - 233,280 high-status claim-attempt states, 1,632,960 cover edges and 1,632,960 substitute-rule predictions
 - 851/851 status-lattice high-status necessity checks and 851/851 gate-ablation drops passed
 - 219 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
-- 2,988 baseline-rule predictions across 12 alternative status rules
-- a substitute-theory falsification summary for performance, source-label, review-label, score and model-identity sufficiency, with 0 full-protocol false positives
+- 3,252 baseline-rule predictions across 13 alternative status rules
+- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives
 - 390/390 gate-ablation evaluations passed
 - 390/390 gate-contrast witness pairs passed with 390/390 score/metric/role preservation and 390/390 status separation
 - 1,953/1,953 source-chain attack variants passed
@@ -77,7 +77,7 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 34 pages in the current local format.
+The expected manuscript build is 35 pages in the current local format.
 
 ## Interpretation
 

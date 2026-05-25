@@ -945,6 +945,14 @@ def _substitute_theory_results(
             "additional_evidence": "Source links without authority, counter-material and contestability gates over-admit outputs",
         },
         {
+            "id": "authority_material_sufficiency",
+            "theory": "Authority-material sufficiency",
+            "substitute": "High-authority and counter-material coverage confer procedural status",
+            "scenario_rule": _baseline_by_id(baseline_payload, "authority_material_only"),
+            "lattice_rule": _lattice_rule(lattice_payload, "source_authority_counter_score"),
+            "additional_evidence": "Authority and counter-material coverage without source-chain, role and contestability gates over-admit outputs",
+        },
+        {
             "id": "review_label_sufficiency",
             "theory": "Review-label sufficiency",
             "substitute": "Review posture or role readiness confers procedural status",
@@ -1396,7 +1404,7 @@ def _baseline_comparison_row(payload: dict) -> dict:
             "reference_rule_false_positive": full["false_positive"],
             "reference_rule_false_negative": full["false_negative"],
         },
-        "finding": "Compares recall, F1, total-score, source-bound and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
+        "finding": "Compares recall, F1, total-score, source-bound, authority-material and review-gate substitutes against the protocol-defined reference allocation, showing that every simplified rule either over-admits or misses procedurally qualified packets.",
     }
 
 
