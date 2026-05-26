@@ -480,7 +480,7 @@ Status-lattice exhaustion & 466,560 claim-attempt states / 3,499,200 edges & 101
 
 \begin{table}[htbp]
 \centering
-\caption{Full evaluation matrix: diagnostics and robustness}
+\caption{Full evaluation matrix: diagnostics and robustness I}
 \tiny
 \renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
@@ -497,6 +497,19 @@ Qualified-output gate ablations & 390 ablations & 390/390 & Removes procedural g
 Gate-contrast witness pairs & 390 pairs & 390/390 & Preserves audit scores, upstream retrieval metrics and system role while changing one mandatory predicate; every witness separates procedural status. \\
 Source-chain attacks & 1,953 variants & 1,953/1,953 & Applies every nonempty combination of five source-chain attacks across qualified packets; all variants lose high status through downgrade, suspension or withdrawal despite high audit scores and high upstream recall. \\
 Dynamic contestation challenges & 315 variants & 315/315 & Valid challenges block high status in 252/252 cases; unsupported challenge controls preserve high status in 63/63 cases. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Full evaluation matrix: diagnostics and robustness II}
+\tiny
+\renewcommand{\arraystretch}{0.92}
+\begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
+\toprule
+Layer & Units & Rule pass & What it checks \\
+\midrule
 Metamorphic policy tests & 1,233 transformations & 1,233/1,233 & Claim escalation, metric inflation, role-cap demotion, source-tag mutation, review-gate removal, score-and-role inflation without adoption, and benign-source augmentation satisfy the expected status-function relations. \\
 Policy mutation analysis & 3,111 evaluations & 15/15 killed & Gate-removal and status-conferring policy mutants are killed when they remove required gates, ignore caps, or treat metrics, source binding, authority coverage, review labels, total score or model identity as status-conferring. \\
 Review-provenance analysis & 627 evaluations & 627/627 & Review/adoption labels cannot supply a missing legal-material chain; missing contestability channel, incomplete review, missing jurisdiction assumptions, missing authorization, missing adoption reasons and missing contestation record demote high-status claims. \\
@@ -513,6 +526,19 @@ Ranking-visibility diagnostics & 956 window checks / 85 counterfactuals & 85/85 
 Proof-carrying status certificates & 6,072 checks / 4,488 obligations & 6,072/6,072; 4,488/4,488 & Replays proof-carrying status certificates for all 264 packets from scenario identity, scenario hash, policy hash, policy body, jurisdiction profile, score gate, role cap, missing gates, failure cap, metrics, claim support, proof obligations and derivation hash. \\
 Certificate tamper-resistance & 5,811 cases & 5,811/5,811 & Mutates certificate identities, hashes, policy bodies, scores, roles, gates, status fields, caps, metric bundles, proof obligations and certificate-set structure. \\
 Policy-constants replay & 4,752 checks & 4,752/4,752 & Recomputes score candidates, role caps, protected reliance gates, missing gates, failure caps, metrics and final status in a separate script parameterized by JSON policy constants without importing the harness model. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Full evaluation matrix: coding and sensitivity}
+\tiny
+\renewcommand{\arraystretch}{0.92}
+\begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
+\toprule
+Layer & Units & Rule pass & What it checks \\
+\midrule
 Mixed-authority public source-screening packets & 5 & 5/5 & Source-bound statute, case and source packets can qualify as normative screening. \\
 Issue ablations & 20 & 20/20 & High-authority omissions, counter-material suppression, unverified source tags and missing adoption gates trigger caps. \\
 Annotation robustness & 528 recodings & 262/264 stable & Strict and lenient recoding policies test status stability across all packets. \\
