@@ -13,6 +13,10 @@ EVIDENCE_LAYERS = {
         "path": "experiments/metric_separation/results/metric_separation_analysis.json",
         "roles": ["construct", "substitute"],
     },
+    "ranked_retrieval_metrics": {
+        "path": "experiments/ranked_retrieval_metrics/results/ranked_retrieval_metric_analysis.json",
+        "roles": ["construct", "ranking", "substitute"],
+    },
     "baseline_comparison": {
         "path": "experiments/baseline_comparisons/results/baseline_comparison_analysis.json",
         "roles": ["construct", "substitute"],
@@ -139,7 +143,13 @@ THREATS = [
     {
         "id": "construct_status_not_retrieval",
         "label": "Construct validity: procedural status is not retrieval success",
-        "layers": ["metric_separation", "baseline_comparison", "status_lattice", "gate_contrast_witnesses"],
+        "layers": [
+            "metric_separation",
+            "ranked_retrieval_metrics",
+            "baseline_comparison",
+            "status_lattice",
+            "gate_contrast_witnesses",
+        ],
     },
     {
         "id": "expected_label_circularity",

@@ -177,6 +177,7 @@ def main() -> int:
     _run([sys.executable, "scripts/verify_formal_invariants.py"])
     _run([sys.executable, "scripts/run_status_lattice_analysis.py"])
     _run([sys.executable, "scripts/run_metric_separation_analysis.py"])
+    _run([sys.executable, "scripts/run_ranked_retrieval_metric_analysis.py"])
     _run([sys.executable, "scripts/run_baseline_comparison_analysis.py"])
     _run([sys.executable, "scripts/run_issue_family_generalization.py"])
     _run([sys.executable, "scripts/run_policy_family_robustness.py"])
@@ -298,6 +299,16 @@ def main() -> int:
         )
     )
     rows.append(_metric_separation_row(metric_separation_payload))
+    ranked_retrieval_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "ranked_retrieval_metrics"
+            / "results"
+            / "ranked_retrieval_metric_analysis.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_ranked_retrieval_metric_row(ranked_retrieval_payload))
     baseline_comparison_payload = json.loads(
         (ROOT / "experiments" / "baseline_comparisons" / "results" / "baseline_comparison_analysis.json").read_text(
             encoding="utf-8"
@@ -563,6 +574,9 @@ def main() -> int:
             "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
             "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
             + metric_separation_payload["permutation"]["iterations"],
+            "ranked_retrieval_metric_predictions": ranked_retrieval_payload["prediction_count"],
+            "ranked_retrieval_metric_resamples": ranked_retrieval_payload["bootstrap"]["iterations"]
+            + ranked_retrieval_payload["permutation"]["iterations"],
             "baseline_comparison_predictions": baseline_comparison_payload["baseline_prediction_count"],
             "issue_family_generalization_predictions": issue_family_payload["holdout_prediction_count"],
             "multiaxis_generalization_holdout_predictions": multiaxis_payload["holdout_prediction_count"],
@@ -626,6 +640,7 @@ def main() -> int:
     )
     substitute_theory_payload = _substitute_theory_results(
         metric_separation_payload,
+        ranked_retrieval_payload,
         baseline_comparison_payload,
         status_lattice_payload,
         model_identity_payload,
@@ -652,6 +667,9 @@ def main() -> int:
         "metric_separation_evaluations": metric_separation_payload["metric_scenario_count"],
         "metric_statistical_resamples": metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"],
+        "ranked_retrieval_metric_evaluations": ranked_retrieval_payload["prediction_count"]
+        + ranked_retrieval_payload["bootstrap"]["iterations"]
+        + ranked_retrieval_payload["permutation"]["iterations"],
         "baseline_comparison_evaluations": baseline_comparison_payload["baseline_prediction_count"],
         "issue_family_generalization_evaluations": issue_family_payload["holdout_prediction_count"],
         "multiaxis_generalization_evaluations": multiaxis_payload["holdout_prediction_count"]
@@ -695,6 +713,9 @@ def main() -> int:
         + metric_separation_payload["metric_scenario_count"]
         + metric_separation_payload["bootstrap"]["iterations"]
         + metric_separation_payload["permutation"]["iterations"]
+        + ranked_retrieval_payload["prediction_count"]
+        + ranked_retrieval_payload["bootstrap"]["iterations"]
+        + ranked_retrieval_payload["permutation"]["iterations"]
         + baseline_comparison_payload["baseline_prediction_count"]
         + issue_family_payload["holdout_prediction_count"]
         + multiaxis_payload["holdout_prediction_count"]
@@ -852,6 +873,16 @@ def main() -> int:
             "gate_cascade": metric_separation_payload["gate_cascade"],
             "bootstrap": metric_separation_payload["bootstrap"],
             "permutation": metric_separation_payload["permutation"],
+        },
+        "ranked_retrieval_metrics": {
+            "ranked_scenario_count": ranked_retrieval_payload["ranked_scenario_count"],
+            "metric_count": ranked_retrieval_payload["metric_count"],
+            "prediction_count": ranked_retrieval_payload["prediction_count"],
+            "qualified_count": ranked_retrieval_payload["qualified_count"],
+            "best_threshold_rule": ranked_retrieval_payload["best_threshold_rule"],
+            "ndcg_at_10_blocked": ranked_retrieval_payload["high_metric_blocked"]["ndcg_at_10"],
+            "bootstrap": ranked_retrieval_payload["bootstrap"],
+            "permutation": ranked_retrieval_payload["permutation"],
         },
         "baseline_comparison": {
             "baseline_count": baseline_comparison_payload["baseline_count"],
@@ -1262,6 +1293,7 @@ def _lattice_rule(payload: dict, rule_id: str) -> dict:
 
 def _substitute_theory_results(
     metric_payload: dict,
+    ranked_payload: dict,
     baseline_payload: dict,
     lattice_payload: dict,
     model_identity_payload: dict,
@@ -1276,6 +1308,18 @@ def _substitute_theory_results(
             "scenario_rule": _baseline_by_id(baseline_payload, "recall_threshold"),
             "lattice_rule": None,
             "additional_evidence": f"{metric_payload['high_recall_blocked']['count']}/{metric_payload['high_recall_blocked']['denominator']} high-recall outputs were blocked below normative screening",
+        },
+        {
+            "id": "ranked_metric_sufficiency",
+            "theory": "Ranked-retrieval metric sufficiency",
+            "substitute": "nDCG, MRR, MAP or Recall@k thresholds confer procedural status",
+            "scenario_rule": ranked_payload["best_threshold_rule"],
+            "lattice_rule": None,
+            "additional_evidence": (
+                f"{ranked_payload['high_metric_blocked']['ndcg_at_10']['count']}/"
+                f"{ranked_payload['high_metric_blocked']['ndcg_at_10']['denominator']} "
+                "high-nDCG@10 outputs were blocked below normative screening"
+            ),
         },
         {
             "id": "source_label_sufficiency",
@@ -1728,6 +1772,33 @@ def _metric_separation_row(payload: dict) -> dict:
             "reference_gate_false_positive": final_gate["false_positive"],
         },
         "finding": "Quantifies that upstream precision, recall and F1 are weak predictors of procedural qualification, while audit gates remove high-recall false positives.",
+    }
+
+
+def _ranked_retrieval_metric_row(payload: dict) -> dict:
+    best = payload["best_threshold_rule"]
+    blocked = payload["high_metric_blocked"]["ndcg_at_10"]
+    evaluations = payload["prediction_count"] + payload["bootstrap"]["iterations"] + payload["permutation"]["iterations"]
+    return {
+        "id": "ranked_retrieval_metrics",
+        "label": "Ranked-retrieval metric analysis",
+        "evidence_class": "legal-IR metric/status non-equivalence check",
+        "validation_units": (
+            f"{payload['prediction_count']} threshold predictions over "
+            f"{payload['ranked_scenario_count']} ranked packets and {payload['metric_count']} metrics"
+        ),
+        "scenario_count": evaluations,
+        "rule_pass": f"best metric FP/FN {best['false_positive']}/{best['false_negative']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "high_ndcg_at_10_blocked": blocked["count"],
+            "high_ndcg_at_10_total": blocked["denominator"],
+            "best_metric_false_positive": best["false_positive"],
+            "best_metric_false_negative": best["false_negative"],
+        },
+        "finding": "Computes legal-IR ranking metrics over known authority sets and shows that nDCG, MRR, MAP and Recall@k thresholds over-admit procedurally unqualified outputs.",
     }
 
 
@@ -2280,6 +2351,7 @@ def _format_report(payload: dict) -> str:
         f"Status-lattice exhaustion: {payload['status_lattice']['state_count']} high-status claim-attempt states, {payload['status_lattice']['cover_edge_diagnostics']['checks']} cover edges, {payload['status_lattice']['necessity']['passed']}/{payload['status_lattice']['necessity']['checks']} necessity checks and {payload['status_lattice']['gate_ablation']['passed']}/{payload['status_lattice']['gate_ablation']['checks']} gate-ablation drops",
         f"Metric separation evaluations: {payload['metric_separation']['metric_scenario_count']} upstream-metric scenario packets; high-recall blocked outputs {payload['metric_separation']['high_recall_blocked']['count']}/{payload['metric_separation']['high_recall_blocked']['denominator']}",
         f"Metric statistical resamples: {payload['metric_separation']['bootstrap']['iterations']} bootstrap resamples and {payload['metric_separation']['permutation']['iterations']} permutation shuffles",
+        f"Ranked-retrieval metric analysis: {payload['ranked_retrieval_metrics']['prediction_count']} threshold predictions over {payload['ranked_retrieval_metrics']['ranked_scenario_count']} ranked packets and {payload['ranked_retrieval_metrics']['metric_count']} legal-IR metrics; best single-metric FP/FN {payload['ranked_retrieval_metrics']['best_threshold_rule']['false_positive']}/{payload['ranked_retrieval_metrics']['best_threshold_rule']['false_negative']}; high-nDCG@10 blocked {payload['ranked_retrieval_metrics']['ndcg_at_10_blocked']['count']}/{payload['ranked_retrieval_metrics']['ndcg_at_10_blocked']['denominator']}",
         f"Baseline rule comparisons: {payload['baseline_comparison']['baseline_prediction_count']} predictions across {payload['baseline_comparison']['baseline_count']} rules; best simplified false positives {payload['baseline_comparison']['best_simplified']['false_positive']}; reference rule false positives {payload['baseline_comparison']['full_gate']['false_positive']}",
         f"Issue-family generalization: {payload['issue_family_generalization']['holdout_prediction_count']} holdout predictions over {payload['issue_family_generalization']['issue_family_count']} issue families; full protocol FP/FN {payload['issue_family_generalization']['full_protocol_holdout_false_positive']}/{payload['issue_family_generalization']['full_protocol_holdout_false_negative']}; best trained simplified FP {payload['issue_family_generalization']['best_trained_rule_holdout_false_positive']}; best trained simplified rule erred in {payload['issue_family_generalization']['folds_with_best_trained_rule_error']}/{payload['issue_family_generalization']['issue_family_count']} folds",
         f"Multi-axis holdout generalization: {payload['multiaxis_generalization']['holdout_prediction_count']} holdout predictions and {payload['multiaxis_generalization']['training_prediction_count']} training predictions across {payload['multiaxis_generalization']['fold_count']} folds on {payload['multiaxis_generalization']['axis_count']} axes; full protocol FP/FN {payload['multiaxis_generalization']['full_protocol_holdout_false_positive']}/{payload['multiaxis_generalization']['full_protocol_holdout_false_negative']}; best trained simplified FP {payload['multiaxis_generalization']['best_trained_rule_holdout_false_positive']}; best trained simplified rule erred in {payload['multiaxis_generalization']['folds_with_best_trained_rule_error']}/{payload['multiaxis_generalization']['fold_count']} folds",

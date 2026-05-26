@@ -674,6 +674,24 @@
         },
         {
           "construct_id": "substitute_theory_separation",
+          "layer_id": "ranked_retrieval_metrics",
+          "missing_fields": [],
+          "parse_error": null,
+          "passed": true,
+          "path": "experiments/ranked_retrieval_metrics/results/ranked_retrieval_metric_analysis.json",
+          "required": [
+            "ranked_scenario_count",
+            "best_threshold_rule",
+            "high_metric_blocked"
+          ],
+          "roles": [
+            "metric",
+            "ranking",
+            "substitute"
+          ]
+        },
+        {
+          "construct_id": "substitute_theory_separation",
           "layer_id": "baseline_comparison",
           "missing_fields": [],
           "parse_error": null,
@@ -723,6 +741,7 @@
       ],
       "evidence_layers": [
         "metric_separation",
+        "ranked_retrieval_metrics",
         "baseline_comparison",
         "issue_family_generalization",
         "policy_family_robustness"
@@ -730,16 +749,17 @@
       "failed_checks": 0,
       "id": "substitute_theory_separation",
       "label": "Substitute-theory separation",
-      "layer_count": 4,
+      "layer_count": 5,
       "passed": true,
-      "passed_checks": 4,
-      "role_count": 7,
+      "passed_checks": 5,
+      "role_count": 8,
       "roles": [
         "baseline",
         "generalization",
         "holdout",
         "metric",
         "policy",
+        "ranking",
         "robustness",
         "substitute"
       ]
@@ -925,13 +945,13 @@
       ]
     }
   ],
-  "coverage_check_count": 41,
-  "evidence_layer_count": 32,
+  "coverage_check_count": 42,
+  "evidence_layer_count": 33,
   "failed_check_count": 0,
   "failed_construct_count": 0,
   "failures": [],
   "minimum_layers_per_construct": 4,
   "minimum_roles_per_construct": 3,
-  "passed_check_count": 41,
+  "passed_check_count": 42,
   "passed_construct_count": 10
 }

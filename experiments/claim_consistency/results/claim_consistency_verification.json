@@ -1,5 +1,5 @@
 {
-  "check_count": 1194,
+  "check_count": 1242,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -67,7 +67,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "41/41 construct-operationalization checks",
+      "expected": "42/42 construct-operationalization checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -77,12 +77,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "33/33 threat-model coverage checks",
+      "expected": "34/34 threat-model coverage checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "- 48 validation suites",
+      "expected": "- 49 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -97,7 +97,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 8,023,954 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
+      "expected": "- 8,027,762 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -127,6 +127,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "- 1,806 ranked-retrieval metric threshold predictions and 2,000 ranked-metric resamples, with best single-metric FP/FN 135/2 and 160/223 high-nDCG@10 outputs blocked below normative screening",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "- 3,252 baseline-rule predictions across 13 alternative status rules",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -147,7 +152,7 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives and 0 full-protocol false negatives",
+      "expected": "- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score, model-identity and ranked-retrieval metric sufficiency, with 0 full-protocol false positives and 0 full-protocol false negatives",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -212,12 +217,12 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 41/41 construct-operationalization checks passed across 10 core constructs and 32 evidence layers",
+      "expected": "- 42/42 construct-operationalization checks passed across 10 core constructs and 33 evidence layers",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 33/33 threat-model coverage checks passed across 8 validity threats and 31 evidence layers",
+      "expected": "- 34/34 threat-model coverage checks passed across 8 validity threats and 32 evidence layers",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -322,7 +327,7 @@
       "path": "README.md"
     },
     {
-      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 3,014 issue-family holdout predictions, 110,568 multi-axis generalization predictions, 42,192 policy-family robustness evaluations, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 189 temporal source-validity mutations, 2,904 workflow-portability checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 41 construct-operationalization checks across 10 core constructs, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
+      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 1,806 ranked-retrieval metric predictions, 2,000 ranked-metric resamples, 3,252 baseline-rule predictions, 3,014 issue-family holdout predictions, 110,568 multi-axis generalization predictions, 42,192 policy-family robustness evaluations, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 189 temporal source-validity mutations, 2,904 workflow-portability checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 42 construct-operationalization checks across 10 core constructs, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -337,12 +342,12 @@
       "path": "README.md"
     },
     {
-      "expected": "41 checks across 10 core paper constructs",
+      "expected": "42 checks across 10 core paper constructs",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Construct-operationalization coverage | 41 |",
+      "expected": "| Construct-operationalization coverage | 42 |",
       "passed": true,
       "path": "README.md"
     },
@@ -352,7 +357,7 @@
       "path": "README.md"
     },
     {
-      "expected": "33 threat-model coverage checks across 8 validity threats",
+      "expected": "34 threat-model coverage checks across 8 validity threats",
       "passed": true,
       "path": "README.md"
     },
@@ -362,7 +367,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Substitute-theory falsification | 6 theories |",
+      "expected": "| Substitute-theory falsification | 7 theories |",
       "passed": true,
       "path": "README.md"
     },
@@ -377,12 +382,22 @@
       "path": "README.md"
     },
     {
-      "expected": "performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
+      "expected": "performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency, model-identity sufficiency and ranked-retrieval metric sufficiency",
       "passed": true,
       "path": "README.md"
     },
     {
       "expected": "| Metric separation analysis | 219 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "| Ranked-retrieval metric analysis | 3806 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_ranked_retrieval_metric_analysis.py",
       "passed": true,
       "path": "README.md"
     },
@@ -547,7 +562,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Threat-model coverage | 33 |",
+      "expected": "| Threat-model coverage | 34 |",
       "passed": true,
       "path": "README.md"
     },
@@ -742,6 +757,16 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "ranked-retrieval metrics over 258 ranked packets",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "160/223 high-nDCG@10 outputs were blocked",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "Query-perturbation stability",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -762,7 +787,7 @@
       "path": "docs/paper_mapping.md"
     },
     {
-      "expected": "passes 41/41 construct coverage checks",
+      "expected": "passes 42/42 construct coverage checks",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -1142,7 +1167,7 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
-      "expected": "150 authority-material-sufficiency false positives, 2 authority-material-sufficiency false negatives and 1,005 model-identity-sufficiency false positives with 0 full-protocol false positives and 0 full-protocol false negatives",
+      "expected": "150 authority-material-sufficiency false positives, 2 authority-material-sufficiency false negatives, 1,005 model-identity-sufficiency false positives and 135 ranked-metric-sufficiency false positives with 0 full-protocol false positives and 0 full-protocol false negatives",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1173,6 +1198,16 @@
     },
     {
       "expected": "1,000 metric bootstrap resamples, 1,000 metric permutation shuffles",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "1,806 ranked-retrieval metric predictions and 2,000 ranked-metric resamples",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_ranked_retrieval_metric_analysis.py",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1412,12 +1447,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "8,023,954 validation operations",
+      "expected": "8,027,762 validation operations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency",
+      "expected": "seven substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency, model-identity sufficiency and ranked-retrieval metric sufficiency",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1463,6 +1498,21 @@
     },
     {
       "expected": "2,000 resamples",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "1,806 threshold predictions over 258 ranked packets",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "160/223 high-nDCG@10 outputs were blocked below normative screening",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "best single ranked-metric rule produced 135 false positives and 2 false negatives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1528,6 +1578,11 @@
     },
     {
       "expected": "model-identity sufficiency produced 1,005 identity-substitution false positives",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "ranked-retrieval metric sufficiency produced 135 scenario false positives and 2 scenario false negatives",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1892,7 +1947,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Construct-operationalization coverage & 10 constructs / 41 checks & 41/41",
+      "expected": "Construct-operationalization coverage & 10 constructs / 42 checks & 42/42",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1907,7 +1962,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Threat-model coverage & 8 threats / 33 checks & 33/33",
+      "expected": "Threat-model coverage & 8 threats / 34 checks & 34/34",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2002,7 +2057,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 48",
+      "expected": "Validation suites: 49",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2023,6 +2078,11 @@
     },
     {
       "expected": "Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Ranked-retrieval metric analysis: 1806 threshold predictions over 258 ranked packets and 7 legal-IR metrics; best single-metric FP/FN 135/2; high-nDCG@10 blocked 160/223",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2187,22 +2247,22 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Construct operationalization coverage: 41/41 checks passed across 10 core constructs and 32 evidence layers",
+      "expected": "Construct operationalization coverage: 42/42 checks passed across 10 core constructs and 33 evidence layers",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Construct operationalization coverage | paper-construct coverage map | 41 evidence-layer coverage checks across 10 core constructs | 41 | 41/41",
+      "expected": "Construct operationalization coverage | paper-construct coverage map | 42 evidence-layer coverage checks across 10 core constructs | 42 | 42/42",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Threat-model coverage: 33/33 checks passed across 8 validity threats and 31 evidence layers",
+      "expected": "Threat-model coverage: 34/34 checks passed across 8 validity threats and 32 evidence layers",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Threat-model coverage analysis | validity-threat coverage map | 33 evidence-layer coverage checks across 8 validity threats | 33 | 33/33",
+      "expected": "Threat-model coverage analysis | validity-threat coverage map | 34 evidence-layer coverage checks across 8 validity threats | 34 | 34/34",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2293,6 +2353,11 @@
     },
     {
       "expected": "Model-identity sufficiency | 1005 | 0 | 0.24 | 1.00 | n/a | n/a | 0 | 0",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Ranked-retrieval metric sufficiency | 135 | 2 | 0.31 | 0.97 | n/a | n/a | 0 | 0",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2542,6 +2607,41 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `48 validation suites`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,954`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8023954`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `41/41 construct-operationalization`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `33/33 threat-model`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `31 evidence layers`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `8,023,761`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -3257,6 +3357,41 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `48 validation suites`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,954`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8023954`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `41/41 construct-operationalization`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `33/33 threat-model`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `31 evidence layers`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `8,023,761`",
       "passed": true,
       "path": "README.md"
@@ -3972,6 +4107,41 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `48 validation suites`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,954`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8023954`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `41/41 construct-operationalization`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `33/33 threat-model`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `31 evidence layers`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `8,023,761`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -4687,6 +4857,41 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `48 validation suites`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,954`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8023954`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `41/41 construct-operationalization`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `33/33 threat-model`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `31 evidence layers`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `8,023,761`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -5398,6 +5603,41 @@
     },
     {
       "expected": "absence of stale claim `47 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `48 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8,023,954`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8023954`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `41/41 construct-operationalization`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `33/33 threat-model`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `31 evidence layers`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `six substitute theories: performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -5974,5 +6214,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1194
+  "passed_count": 1242
 }

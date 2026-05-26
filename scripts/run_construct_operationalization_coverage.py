@@ -109,6 +109,11 @@ EVIDENCE_LAYERS = {
         "roles": ["metric", "substitute"],
         "required": [["metric_scenario_count"], ["high_recall_blocked"]],
     },
+    "ranked_retrieval_metrics": {
+        "path": "experiments/ranked_retrieval_metrics/results/ranked_retrieval_metric_analysis.json",
+        "roles": ["metric", "ranking", "substitute"],
+        "required": [["ranked_scenario_count"], ["best_threshold_rule"], ["high_metric_blocked"]],
+    },
     "baseline_comparison": {
         "path": "experiments/baseline_comparisons/results/baseline_comparison_analysis.json",
         "roles": ["baseline", "substitute"],
@@ -231,7 +236,13 @@ CONSTRUCTS = [
     {
         "id": "substitute_theory_separation",
         "label": "Substitute-theory separation",
-        "layers": ["metric_separation", "baseline_comparison", "issue_family_generalization", "policy_family_robustness"],
+        "layers": [
+            "metric_separation",
+            "ranked_retrieval_metrics",
+            "baseline_comparison",
+            "issue_family_generalization",
+            "policy_family_robustness",
+        ],
     },
     {
         "id": "architecture_identity_portability",

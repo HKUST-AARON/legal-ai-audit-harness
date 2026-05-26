@@ -1199,6 +1199,24 @@
           },
           {
             "construct_id": "substitute_theory_separation",
+            "layer_id": "ranked_retrieval_metrics",
+            "missing_fields": [],
+            "parse_error": null,
+            "passed": true,
+            "path": "experiments/ranked_retrieval_metrics/results/ranked_retrieval_metric_analysis.json",
+            "required": [
+              "ranked_scenario_count",
+              "best_threshold_rule",
+              "high_metric_blocked"
+            ],
+            "roles": [
+              "metric",
+              "ranking",
+              "substitute"
+            ]
+          },
+          {
+            "construct_id": "substitute_theory_separation",
             "layer_id": "baseline_comparison",
             "missing_fields": [],
             "parse_error": null,
@@ -1248,6 +1266,7 @@
         ],
         "evidence_layers": [
           "metric_separation",
+          "ranked_retrieval_metrics",
           "baseline_comparison",
           "issue_family_generalization",
           "policy_family_robustness"
@@ -1255,16 +1274,17 @@
         "failed_checks": 0,
         "id": "substitute_theory_separation",
         "label": "Substitute-theory separation",
-        "layer_count": 4,
+        "layer_count": 5,
         "passed": true,
-        "passed_checks": 4,
-        "role_count": 7,
+        "passed_checks": 5,
+        "role_count": 8,
         "roles": [
           "baseline",
           "generalization",
           "holdout",
           "metric",
           "policy",
+          "ranking",
           "robustness",
           "substitute"
         ]
@@ -1450,16 +1470,16 @@
         ]
       }
     ],
-    "coverage_check_count": 41,
-    "evidence_layer_count": 32,
+    "coverage_check_count": 42,
+    "evidence_layer_count": 33,
     "failed_check_count": 0,
     "failed_construct_count": 0,
     "minimum_layers_per_construct": 4,
     "minimum_roles_per_construct": 3,
-    "passed_check_count": 41,
+    "passed_check_count": 42,
     "passed_construct_count": 10
   },
-  "construct_operationalization_evaluations": 41,
+  "construct_operationalization_evaluations": 42,
   "contestation_challenge_evaluations": 315,
   "contestation_challenges": {
     "blocked_reason_distribution": {
@@ -5807,6 +5827,73 @@
     "query_variant_count": 30
   },
   "query_portfolio_evaluations": 320,
+  "ranked_retrieval_metric_evaluations": 3806,
+  "ranked_retrieval_metrics": {
+    "best_threshold_rule": {
+      "false_negative": 2,
+      "false_positive": 135,
+      "label": "recall_at_5>=0.8",
+      "precision": 0.3112244897959184,
+      "recall": 0.9682539682539683,
+      "specificity": 0.3076923076923077,
+      "true_negative": 60,
+      "true_positive": 61
+    },
+    "bootstrap": {
+      "confidence_interval": {
+        "ndcg_at_10_blocked_rate": {
+          "high": 0.7737556561085973,
+          "low": 0.6550218340611353,
+          "median": 0.7181818181818181
+        },
+        "ndcg_at_10_point_biserial": {
+          "high": 0.2566891713072611,
+          "low": 0.17154743638762282,
+          "median": 0.21282172318487222
+        },
+        "ndcg_at_10_threshold_precision": {
+          "high": 0.34497816593886466,
+          "low": 0.22580645161290322,
+          "median": 0.2818181818181818
+        }
+      },
+      "iterations": 1000,
+      "seed": 20526
+    },
+    "metric_count": 7,
+    "ndcg_at_10_blocked": {
+      "count": 160,
+      "denominator": 223,
+      "failure_flags": {
+        "authority_omission": 7,
+        "contestation_failure": 40,
+        "counter_material_suppression": 26,
+        "invalid_authority": 1,
+        "ranking_drift": 11,
+        "source_attribution_gap": 112,
+        "summary_distortion": 21,
+        "unauthorized_action": 10
+      },
+      "invalid_treatment_hits": 0,
+      "metric": "ndcg_at_10",
+      "rate": 0.7174887892376681,
+      "status_distribution": {
+        "no_external_legal_effect": 31,
+        "professional_support_output": 8,
+        "reference_information": 121
+      }
+    },
+    "permutation": {
+      "iterations": 1000,
+      "metric": "ndcg_at_10_point_biserial",
+      "observed_abs": 0.21275799056070516,
+      "seed": 20526,
+      "two_sided_p": 0.000999000999000999
+    },
+    "prediction_count": 1806,
+    "qualified_count": 63,
+    "ranked_scenario_count": 258
+  },
   "ranking_visibility": {
     "counterfactual_front_window_counter_visible": 0,
     "coverage_preserved_count": 85,
@@ -6172,6 +6259,23 @@
       "theory": "Performance sufficiency"
     },
     {
+      "additional_evidence": "160/223 high-nDCG@10 outputs were blocked below normative screening",
+      "falsified": true,
+      "full_protocol_false_negative": 0,
+      "full_protocol_false_positive": 0,
+      "id": "ranked_metric_sufficiency",
+      "lattice_false_negative": null,
+      "lattice_false_positive": null,
+      "lattice_precision": null,
+      "lattice_recall": null,
+      "scenario_false_negative": 2,
+      "scenario_false_positive": 135,
+      "scenario_precision": 0.3112244897959184,
+      "scenario_recall": 0.9682539682539683,
+      "substitute": "nDCG, MRR, MAP or Recall@k thresholds confer procedural status",
+      "theory": "Ranked-retrieval metric sufficiency"
+    },
+    {
       "additional_evidence": "Source links without authority, counter-material and contestability gates over-admit outputs",
       "falsified": true,
       "full_protocol_false_negative": 0,
@@ -6257,7 +6361,7 @@
       "theory": "Model-identity sufficiency"
     }
   ],
-  "suite_count": 48,
+  "suite_count": 49,
   "suites": [
     {
       "blocked_reason_distribution": {
@@ -6685,6 +6789,24 @@
         "reference_gate_false_positive": 0
       },
       "validation_units": "219 upstream-metric scenario packets"
+    },
+    {
+      "evidence_class": "legal-IR metric/status non-equivalence check",
+      "finding": "Computes legal-IR ranking metrics over known authority sets and shows that nDCG, MRR, MAP and Recall@k thresholds over-admit procedurally unqualified outputs.",
+      "high_upstream_but_blocked": null,
+      "id": "ranked_retrieval_metrics",
+      "label": "Ranked-retrieval metric analysis",
+      "mean_audit_score": null,
+      "mean_upstream_recall": null,
+      "rule_pass": "best metric FP/FN 135/2",
+      "scenario_count": 3806,
+      "status_distribution": {
+        "best_metric_false_negative": 2,
+        "best_metric_false_positive": 135,
+        "high_ndcg_at_10_blocked": 160,
+        "high_ndcg_at_10_total": 223
+      },
+      "validation_units": "1806 threshold predictions over 258 ranked packets and 7 metrics"
     },
     {
       "evidence_class": "alternative-policy comparison",
@@ -7153,14 +7275,14 @@
       "label": "Construct operationalization coverage",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "41/41",
-      "scenario_count": 41,
+      "rule_pass": "42/42",
+      "scenario_count": 42,
       "status_distribution": {
-        "evidence_layers": 32,
+        "evidence_layers": 33,
         "failed_constructs": 0,
         "passed_constructs": 10
       },
-      "validation_units": "41 evidence-layer coverage checks across 10 core constructs"
+      "validation_units": "42 evidence-layer coverage checks across 10 core constructs"
     },
     {
       "evidence_class": "validity-threat coverage map",
@@ -7170,14 +7292,14 @@
       "label": "Threat-model coverage analysis",
       "mean_audit_score": null,
       "mean_upstream_recall": null,
-      "rule_pass": "33/33",
-      "scenario_count": 33,
+      "rule_pass": "34/34",
+      "scenario_count": 34,
       "status_distribution": {
-        "evidence_layers": 31,
+        "evidence_layers": 32,
         "failed_threats": 0,
         "passed_threats": 8
       },
-      "validation_units": "33 evidence-layer coverage checks across 8 validity threats"
+      "validation_units": "34 evidence-layer coverage checks across 8 validity threats"
     }
   ],
   "temporal_validity": {
@@ -7195,12 +7317,12 @@
   "temporal_validity_evaluations": 189,
   "threat_model_coverage": {
     "all_passed": true,
-    "coverage_check_count": 33,
-    "evidence_layer_count": 31,
+    "coverage_check_count": 34,
+    "evidence_layer_count": 32,
     "failed_check_count": 0,
     "minimum_layers_per_threat": 4,
     "minimum_roles_per_threat": 3,
-    "passed_check_count": 33,
+    "passed_check_count": 34,
     "passed_threat_count": 8,
     "threat_count": 8,
     "threats": [
@@ -7212,6 +7334,17 @@
             "path": "experiments/metric_separation/results/metric_separation_analysis.json",
             "roles": [
               "construct",
+              "substitute"
+            ],
+            "threat_id": "construct_status_not_retrieval"
+          },
+          {
+            "layer_id": "ranked_retrieval_metrics",
+            "passed": true,
+            "path": "experiments/ranked_retrieval_metrics/results/ranked_retrieval_metric_analysis.json",
+            "roles": [
+              "construct",
+              "ranking",
               "substitute"
             ],
             "threat_id": "construct_status_not_retrieval"
@@ -7249,6 +7382,7 @@
         ],
         "evidence_layers": [
           "metric_separation",
+          "ranked_retrieval_metrics",
           "baseline_comparison",
           "status_lattice",
           "gate_contrast_witnesses"
@@ -7256,14 +7390,15 @@
         "failed_checks": 0,
         "id": "construct_status_not_retrieval",
         "label": "Construct validity: procedural status is not retrieval success",
-        "layer_count": 4,
+        "layer_count": 5,
         "passed": true,
-        "passed_checks": 4,
-        "role_count": 4,
+        "passed_checks": 5,
+        "role_count": 5,
         "roles": [
           "construct",
           "formal",
           "negative_control",
+          "ranking",
           "substitute"
         ]
       },
@@ -7738,7 +7873,7 @@
       }
     ]
   },
-  "threat_model_coverage_evaluations": 33,
+  "threat_model_coverage_evaluations": 34,
   "threshold_sensitivity": {
     "default_policy": {
       "decision_threshold": 10,
@@ -7818,7 +7953,7 @@
     "scenario_count": 264
   },
   "threshold_sensitivity_evaluations": 1320,
-  "total_evaluation_rows": 8023954,
+  "total_evaluation_rows": 8027762,
   "validation_units": {
     "adversarial_model_outputs": 60,
     "annotation_recodings": 528,
@@ -7831,8 +7966,8 @@
     "claim_anchor_output_links": 290,
     "claim_anchor_output_units": 250,
     "claim_anchor_passed": 1080,
-    "construct_operationalization_checks": 41,
-    "construct_operationalization_passed": 41,
+    "construct_operationalization_checks": 42,
+    "construct_operationalization_passed": 42,
     "constructs": 10,
     "contestation_challenge_passed": 315,
     "contestation_challenge_variants": 315,
@@ -7878,6 +8013,8 @@
     "query_perturbation_variants": 30,
     "query_portfolio_evaluations": 320,
     "query_portfolios": 315,
+    "ranked_retrieval_metric_predictions": 1806,
+    "ranked_retrieval_metric_resamples": 2000,
     "ranking_visibility_checks": 248,
     "ranking_visibility_counterfactuals": 85,
     "ranking_visibility_window_checks": 956,
@@ -7902,8 +8039,8 @@
     "stress_scenarios": 10,
     "temporal_validity_evaluations": 189,
     "temporal_validity_passed": 189,
-    "threat_model_coverage_checks": 33,
-    "threat_model_coverage_passed": 33,
+    "threat_model_coverage_checks": 34,
+    "threat_model_coverage_passed": 34,
     "threshold_sensitivity_evaluations": 1320,
     "total": 697,
     "validity_threats": 8,

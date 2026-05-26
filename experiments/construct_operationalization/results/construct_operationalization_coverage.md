@@ -1,8 +1,8 @@
 # Construct Operationalization Coverage
 
 Core constructs: 10
-Evidence layers: 32
-Coverage checks: 41/41 passed
+Evidence layers: 33
+Coverage checks: 42/42 passed
 Minimum layers per construct: 4
 Minimum evidence roles per construct: 3
 
@@ -15,6 +15,6 @@ Minimum evidence roles per construct: 3
 | Authority hierarchy and issue sets | 4 | 8 | 4/4 |
 | Counter-material and rank salience | 4 | 8 | 4/4 |
 | Contestability and adoption record | 4 | 8 | 4/4 |
-| Substitute-theory separation | 4 | 7 | 4/4 |
+| Substitute-theory separation | 5 | 8 | 5/5 |
 | Architecture and identity portability | 4 | 7 | 4/4 |
 | Replication and tamper resistance | 4 | 6 | 4/4 |

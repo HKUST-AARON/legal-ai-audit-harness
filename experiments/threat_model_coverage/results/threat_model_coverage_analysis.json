@@ -1,13 +1,13 @@
 {
   "all_passed": true,
-  "coverage_check_count": 33,
-  "evidence_layer_count": 31,
+  "coverage_check_count": 34,
+  "evidence_layer_count": 32,
   "failed_check_count": 0,
   "failed_threat_count": 0,
   "failures": [],
   "minimum_layers_per_threat": 4,
   "minimum_roles_per_threat": 3,
-  "passed_check_count": 33,
+  "passed_check_count": 34,
   "passed_threat_count": 8,
   "threat_count": 8,
   "threats": [
@@ -19,6 +19,17 @@
           "path": "experiments/metric_separation/results/metric_separation_analysis.json",
           "roles": [
             "construct",
+            "substitute"
+          ],
+          "threat_id": "construct_status_not_retrieval"
+        },
+        {
+          "layer_id": "ranked_retrieval_metrics",
+          "passed": true,
+          "path": "experiments/ranked_retrieval_metrics/results/ranked_retrieval_metric_analysis.json",
+          "roles": [
+            "construct",
+            "ranking",
             "substitute"
           ],
           "threat_id": "construct_status_not_retrieval"
@@ -56,6 +67,7 @@
       ],
       "evidence_layers": [
         "metric_separation",
+        "ranked_retrieval_metrics",
         "baseline_comparison",
         "status_lattice",
         "gate_contrast_witnesses"
@@ -63,14 +75,15 @@
       "failed_checks": 0,
       "id": "construct_status_not_retrieval",
       "label": "Construct validity: procedural status is not retrieval success",
-      "layer_count": 4,
+      "layer_count": 5,
       "passed": true,
-      "passed_checks": 4,
-      "role_count": 4,
+      "passed_checks": 5,
+      "role_count": 5,
       "roles": [
         "construct",
         "formal",
         "negative_control",
+        "ranking",
         "substitute"
       ]
     },

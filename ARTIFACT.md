@@ -23,20 +23,21 @@ python scripts/verify_claim_consistency.py
 
 Expected aggregate output:
 
-- 48 validation suites
+- 49 validation suites
 - 264 scenario files
 - 697 embedded records or output items
-- 8,023,954 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
+- 8,027,762 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately
 - 51,648/51,648 formal invariant checks passed
 - 466,560 high-status claim-attempt states, 3,499,200 cover edges and 3,732,480 substitute-rule predictions
 - 1019/1019 status-lattice high-status necessity checks and 1019/1019 gate-ablation drops passed
 - 219 metric-separation evaluations
 - 1,000 metric bootstrap resamples and 1,000 metric permutation shuffles
+- 1,806 ranked-retrieval metric threshold predictions and 2,000 ranked-metric resamples, with best single-metric FP/FN 135/2 and 160/223 high-nDCG@10 outputs blocked below normative screening
 - 3,252 baseline-rule predictions across 13 alternative status rules
 - 3,014 issue-family holdout predictions across 5 leave-one-out issue families, with 0 full-protocol holdout false positives, 0 full-protocol holdout false negatives and 38 best-trained simplified-rule holdout false positives
 - 110,568 multi-axis generalization predictions across 34 holdout folds on 6 axes, with 0 full-protocol holdout false positives, 0 full-protocol holdout false negatives and 510 best-trained simplified-rule holdout false positives
 - 42,192 policy-family robustness evaluations across 12 policy variants, with 0 high-status promotions and 449 best-simplified-rule false positives
-- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score and model-identity sufficiency, with 0 full-protocol false positives and 0 full-protocol false negatives
+- a substitute-theory falsification summary for performance, source-label, authority-material, review-label, score, model-identity and ranked-retrieval metric sufficiency, with 0 full-protocol false positives and 0 full-protocol false negatives
 - 390/390 gate-ablation evaluations passed
 - 390/390 gate-contrast witness pairs passed with 390/390 score/metric/role preservation and 390/390 status separation
 - 1,953/1,953 source-chain attack variants passed
@@ -57,8 +58,8 @@ Expected aggregate output:
 - 1,320/1,320 model-identity substitutions passed with 0 status changes and 0 disposition changes
 - 30 query-perturbation variants across 5 issue groups; 5/5 status-stable groups, 3/5 authority-coverage unstable groups and 4/5 record-set unstable groups
 - 315 query portfolios plus 5 group frontier summaries across 5 issue groups; 0/315 qualified, 56/315 full high-authority portfolios and 0/315 full counter-material portfolios
-- 41/41 construct-operationalization checks passed across 10 core constructs and 32 evidence layers
-- 33/33 threat-model coverage checks passed across 8 validity threats and 31 evidence layers
+- 42/42 construct-operationalization checks passed across 10 core constructs and 33 evidence layers
+- 34/34 threat-model coverage checks passed across 8 validity threats and 32 evidence layers
 - 66,000 annotation-uncertainty perturbations with 0.937 sample stability
 - score-blinded coding inter-coder minimum dimension kappa 0.93, minimum derived failure-flag exact agreement 0.97, minimum derived missing-gate exact agreement 0.98, weakest base-dimension kappa 0.37 on Q, base-dimension minimum exact agreement 0.87, minimum three-category PABAK 0.81 and maximum mean absolute score drift 0.13
 - 264/264 scenario-regression expectations passed
@@ -95,4 +96,4 @@ The double-anonymous manuscript is `manuscript/ai_law_case_recommendation_verifi
 
 ## Interpretation
 
-The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, claim-anchored, temporally current, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, issue-family generalization, multi-axis holdout generalization, policy-family robustness, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, temporal source-validity, policy-constants replay, metamorphic policy, policy-mutation, review-provenance, claim-anchor, workflow portability, model-identity invariance, query-perturbation, query-portfolio, construct-operationalization coverage, threat-model coverage, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, cross-issue and cross-stratum holdout testing, policy-threshold and gate-configuration variation, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, temporal source staleness, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, killed gate-removal and status-conferring policy mutants, review/adoption label falsification without a contestability-channel record, claim-level source-anchor falsification, architecture and deployment-role portability, identity-label substitution under a fixed legal-material chain, query reformulation, query expansion, construct-to-evidence coverage, validity-threat coverage, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.
+The artifact evaluates legal-output procedural status. It tests whether outputs can be source-bound, claim-anchored, temporally current, reconstructed, contested, status-qualified, downgraded or withdrawn under the paper's audit protocol. Scenario-regression expectations check rule conformance and artifact integrity; public retrieval, raw model-output, cross-engine model-output, source-anchor, adversarial, invariant, status-lattice, metric-separation, ranked-retrieval metric, issue-family generalization, multi-axis holdout generalization, policy-family robustness, gate-ablation, gate-contrast witness, source-chain attack, contestation challenge, temporal source-validity, policy-constants replay, metamorphic policy, policy-mutation, review-provenance, claim-anchor, workflow portability, model-identity invariance, query-perturbation, query-portfolio, construct-operationalization coverage, threat-model coverage, repair-frontier, jurisdiction-profile, ranking-visibility, proof-carrying status certificates, certificate tamper-resistance, recoding, score-uncertainty and sensitivity layers test whether status allocation survives realistic upstream outputs, source-support interventions, high-status claim-attempt state exhaustion, upstream metric thresholds, ranked legal-IR metric thresholds, cross-issue and cross-stratum holdout testing, policy-threshold and gate-configuration variation, procedural-gate removal, score/metric/role-preserving gate contrast, source-chain falsification, temporal source staleness, dynamic contestation, second-implementation replay from JSON policy constants, expected-label-free policy transformations, killed gate-removal and status-conferring policy mutants, review/adoption label falsification without a contestability-channel record, claim-level source-anchor falsification, architecture and deployment-role portability, identity-label substitution under a fixed legal-material chain, query reformulation, query expansion, construct-to-evidence coverage, validity-threat coverage, repair-path diagnosis, profile mismatch, ranking drift, replayed derivation checks, tampered proof objects and coding uncertainty.
