@@ -421,48 +421,30 @@ VQ4 & Results are brittle to coding, architecture, contestation or certificate m
 \end{tabularx}
 \end{table}
 
-The complete evaluation matrix adjudicates one rule: procedural status follows the legal-material chain. It contains 264 scenario packets with 697 embedded records or outputs and 8,023,761 validation operations across public-output, model-output, cross-engine, architecture-portability, identity-substitution, issue-family holdout, multi-axis holdout, policy-family robustness, invariant, status-lattice, adversarial, ablation, mutation, review-provenance, claim-anchor, replay, certificate, query, ranking, construct-operationalization coverage, threat-model coverage and coding-robustness layers. Public-output and holdout layers test real upstream outputs. Model-output and repair layers test whether the same fluent authority recommendations change status when source support, counter-material salience and adoption gates change. Cross-engine, workflow-portability and model-identity layers test the sharper claim: holding the legal-material chain fixed, runtime architecture and provider identity add no procedural status. Metric, baseline, issue-family, multi-axis, policy-family, invariant, lattice, review-provenance and identity-substitution layers test six rival theories--performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency. Attack, challenge, claim-anchor, replay, mutation and tamper layers test whether any broken link destroys qualification.
+The complete evaluation matrix adjudicates one rule: procedural status follows the legal-material chain. It contains 264 scenario packets with 697 embedded records or outputs and 8,023,761 validation operations across public-output, model-output, cross-engine, architecture-portability, identity-substitution, issue-family holdout, multi-axis holdout, policy-family robustness, invariant, status-lattice, adversarial, ablation, mutation, review-provenance, claim-anchor, replay, certificate, query, ranking, construct-operationalization coverage, threat-model coverage and coding-robustness layers. The main text should be read as an evidence architecture rather than as a catalogue of runs. Public-output and holdout layers test whether visible legal records can be procedurally classified. Model-output and repair layers test whether fluent authority recommendations change status when source support, counter-material salience and adoption gates change. Cross-engine, workflow-portability and model-identity layers test whether runtime architecture and provider identity add status once the legal-material chain is fixed. Metric, baseline, holdout, policy-family, invariant and lattice layers test six rival theories--performance sufficiency, source-label sufficiency, authority-material sufficiency, review-label sufficiency, score sufficiency and model-identity sufficiency. Attack, challenge, claim-anchor, replay, mutation and tamper layers test whether any broken link destroys qualification.
 
 \begin{table}[htbp]
 \centering
-\caption{Claim-to-evidence map}
-\tiny
-\renewcommand{\arraystretch}{0.92}
+\caption{Evidence architecture for reading the validation matrix}
+\small
+\renewcommand{\arraystretch}{1.08}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}YY}
 \toprule
-Claim & Evidence layer & What would falsify the claim \\
+Claim & Main evidence layer & What would falsify the claim \\
 \midrule
-The protocol is executable & Stress scenarios, issue ablations and unit tests & Gates, caps or downgrade rules produce the wrong status. \\
-Public outputs are auditable without model access & Metadata, public-system outputs and endpoint-matched retrieval & Visible records cannot be frozen, source-tagged or reconstructed. \\
-Retrieval success is not procedural qualification & Public retrieval and raw GPT-5.5 outputs & High authority coverage alone upgrades the output to screening. \\
-Authority-material coverage is not procedural qualification & Baseline comparison and status-lattice substitution & High-authority and counter-material coverage reproduce the full screening allocation. \\
-Retrieval metrics are not procedural status & Metric separation analysis & Precision, recall or F1 thresholds predict screening qualification with high precision. \\
-Substitute-rule failure generalizes across issue families & Issue-family leave-one-out generalization & A substitute rule selected on the remaining issue families reproduces the full protocol on a held-out issue family. \\
-Substitute-rule failure generalizes across strata & Multi-axis holdout generalization & A substitute rule selected outside a held-out issue, suite, role, profile, status or origin stratum reproduces the full protocol inside that stratum. \\
-Policy choices do not drive the core result & Policy-family robustness & Admissible threshold, salience, source-tag, role-cap and failure-severity variants promote below-screening packets or let simplified substitutes reproduce the protocol. \\
-Model identity is not procedural status & Cross-engine outputs and model-identity invariance & Provider, model or engine labels change status while the legal-material chain is unchanged. \\
+The protocol is executable & Formal invariant verification, status-lattice exhaustion and policy-constants replay & Gates, caps or downgrade rules cannot reproduce the stated status function. \\
+Retrieval success is not procedural qualification & Public retrieval, raw model-output audit, metric separation and baseline comparison & High authority coverage, recall, F1 or total score upgrades an output without the legal-material chain. \\
+Policy choices do not drive the core result & Policy-family robustness & Admissible threshold, salience, source-tag, role-cap or failure-severity variants promote below-screening packets or let simplified substitutes reproduce the protocol. \\
 Status is architecture-portable and deployment-role bounded & Workflow portability analysis & Runtime architecture labels change status, entitlement profiles exceed role caps, decision status appears without a screening-capable chain, or unaccountable external use survives. \\
-Source-supported repair can upgrade an output & Repaired model outputs, evidence ladder and mixed-authority issue packets & Validated source, locator, counter-material and tag evidence still fails to qualify. \\
-The validator rejects brittle repairs & Sixty adversarial repair variants & Locator, source, claim, link or counter-material attacks pass as screening. \\
-Manifest support is externally anchorable & Public source-text anchor verification & Manifest support terms cannot be located in public source snapshots. \\
-Raw model-output coding is transcript-anchored & Model-output transcript verification & Scenario locators cannot be found in the committed raw transcript. \\
-Formal status properties are executable & Formal invariant verification & Scores alone can buy screening status without authority-set, evidence-packet, counter-material, review-gate, role-cap or adoption conditions. \\
-Partial predicates over-admit status & Status-lattice exhaustion & Score, role, source or authority-only predicates reproduce the full high-status allocation. \\
-Qualified outputs depend on their gates & Gate ablation analysis & Removing procedural gates from qualified packets leaves status unchanged. \\
-Blocked outputs have repair frontiers & Repair-frontier analysis & Blocked high-status claims cannot be mapped to minimal source, authority, contestability, role or adoption repairs. \\
-Rank salience is independently status-relevant & Ranking-visibility diagnostics & Coverage-preserving rank-order drift leaves high procedural status unchanged. \\
-Query formulation is audit-relevant & Query-perturbation stability & Issue-equivalent query variants never change authority coverage, record sets or top-result identity. \\
-Query expansion leaves counter-material protocol necessary & Query-portfolio frontier & Multi-query public retrieval portfolios recover high authority and counter-material sufficiently for screening. \\
-Status allocation is replayable & Status-certificate replay & Scenario identity, scenario hash, policy body, jurisdiction profile, gates, metrics, claim support, proof obligations or derivation hash cannot be reproduced. \\
-Status allocation is tamper-resistant & Certificate tamper-resistance & A changed certificate field, proof obligation or certificate-set membership survives replay. \\
-Status allocation is separately replayable & Policy-constants replay & A second implementation parameterized by JSON policy constants disagrees with the emitted status certificates. \\
-The policy is not arbitrary & Policy mutation analysis & Gate-removal or status-conferring mutants survive the committed scenario matrix. \\
-Review and adoption labels are not enough & Review-provenance analysis & Completed-review or authorized-adoption labels upgrade incomplete legal-material chains, or missing contestability/adoption records leave high status intact. \\
-Core constructs are operationalized & Construct-operationalization coverage & A core construct lacks at least four committed evidence layers or three evidence roles. \\
-Validity threats are explicitly covered & Threat-model coverage & A validity threat depends on a single evidence family or lacks an independent role. \\
+Model identity is not procedural status & Cross-engine outputs and model-identity invariance & Provider, model or engine labels change status while the legal-material chain is unchanged. \\
+Qualified outputs depend on their gates & Gate ablation, gate-contrast witnesses, source-chain attacks and claim-anchor analysis & Removing source, authority, counter-material, review, contestability, jurisdiction or adoption predicates leaves high status intact. \\
+Status allocation is replayable and tamper-resistant & Status-certificate replay, certificate tamper-resistance and policy-constants replay & A certificate, policy replay or proof obligation cannot be reproduced, or a tampered field survives replay. \\
+Core constructs and validity threats are covered & Construct-operationalization coverage and threat-model coverage & A construct or validity threat lacks independent committed evidence layers and evidence roles. \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+The full claim-by-claim map is preserved in the generated validation report. This table is the reviewer roadmap for interpreting it in the manuscript; the following two tables report the underlying layer counts and headline results.
 
 The target variable is procedural allocation. A positive packet is one that the full protocol qualifies for normative screening or decision support after applying score gates, evidence-packet gates, role caps and failure caps. The generated report emits a substitute-theory falsification table. Recall-threshold performance produced 153 scenario false positives; source-label sufficiency produced 72 scenario false positives and 6,552 lattice false positives; authority-material sufficiency produced 150 scenario false positives, 2 scenario false negatives and 672 lattice false positives; review-label sufficiency produced 149 scenario false positives and 19,800 lattice false positives; score sufficiency produced 183 scenario false positives and 49,752 lattice false positives; model-identity sufficiency produced 1,005 identity-substitution false positives. The full protocol produced zero false positives and zero false negatives in the same comparison.
 
