@@ -86,7 +86,7 @@ pdflatex ai_law_case_recommendation_verifiability.tex
 pdflatex ai_law_case_recommendation_verifiability.tex
 ```
 
-The expected manuscript build is 40 pages in the current local format.
+The expected manuscript build is 41 pages in the current local format.
 
 ## Interpretation
 
