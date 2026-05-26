@@ -2242,7 +2242,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 39 pages",
+      "expected": "The expected manuscript build is 40 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
