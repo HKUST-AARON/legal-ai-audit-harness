@@ -1010,6 +1010,25 @@ def _submission_hygiene_checks() -> list[dict]:
     bib_keys = set(re.findall(r"\\bibitem(?:\[[^\]]*\])?\{([^}]*)\}", text))
     undefined = sorted(cite_keys - bib_keys)
     unused = sorted(bib_keys - cite_keys)
+    table_blocks = re.findall(r"\\begin\{table\}(?:\[[^\]]*\])?.*?\\end\{table\}", text, flags=re.DOTALL)
+    table_labels = []
+    unlabeled_tables = []
+    for index, block in enumerate(table_blocks, start=1):
+        has_caption = bool(re.search(r"\\caption\{", block))
+        label_match = re.search(r"\\label\{(tab:[^}]+)\}", block)
+        if has_caption and label_match:
+            table_labels.append(label_match.group(1))
+        else:
+            unlabeled_tables.append(index)
+    missing_table_refs = []
+    table_ref_positions = []
+    for label in table_labels:
+        match = re.search(r"\\ref\{" + re.escape(label) + r"\}", text)
+        if match:
+            table_ref_positions.append(match.start())
+        else:
+            missing_table_refs.append(label)
+    table_refs_in_order = table_ref_positions == sorted(table_ref_positions)
 
     title_page_text = title_page_path.read_text(encoding="utf-8") if title_page_path.exists() else ""
     required_declarations = [
@@ -1047,6 +1066,16 @@ def _submission_hygiene_checks() -> list[dict]:
             "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
             "expected": "no uncited bibliography entries",
             "passed": not unused,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": f"all manuscript tables have captions and tab labels ({len(table_labels)}/{len(table_blocks)})",
+            "passed": bool(table_blocks) and not unlabeled_tables and len(table_labels) == len(set(table_labels)),
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": "all manuscript table labels are cited in table order",
+            "passed": not missing_table_refs and table_refs_in_order,
         },
         {
             "path": "submission/title_page_and_declarations.md",

@@ -106,11 +106,12 @@ The classification uses four criteria: whether the output is exposed outside the
 
 \subsection{System-role dimension}
 
-The system-role dimension determines how far an output may travel procedurally. In the executable protocol, $R(o)$ is a role cap: back-office use, disclosed assistance, auditable procedural use and authorized decision support permit different maximum statuses. The same ranked case list may therefore be private reference, professional support, court-facing screening, or a decision reason depending on the role and adoption path.
+The system-role dimension determines how far an output may travel procedurally. In the executable protocol, $R(o)$ is a role cap: back-office use, disclosed assistance, auditable procedural use and authorized decision support permit different maximum statuses. The same ranked case list may therefore be private reference, professional support, court-facing screening, or a decision reason depending on the role and adoption path. Table~\ref{tab:output-status-role} summarizes the role question and audit artefact attached to each output class.
 
 \begin{table}[htbp]
 \centering
 \caption{Output status and procedural role}
+\label{tab:output-status-role}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.7cm}YYY}
 \toprule
@@ -139,7 +140,7 @@ Here $E(o)$ denotes output effect, $R(o)$ denotes system role, and $\mathcal{A}(
 \mathcal{A}(o)=(S,Q,H,K,T,L).
 \]
 
-The six components are source and corpus verifiability ($S$), query and version traceability ($Q$), authority-hierarchy representation ($H$), ranking and counter-material verifiability ($K$), contestability support ($T$), and adoption logging with audit responsibility ($L$). Each component is scored on a three-point ordinal scale: 0 means absent, 1 means partially available, and 2 means procedurally reviewable. The model is a status-allocation protocol: it determines the highest procedural status that the output may claim given the audit evidence available.
+The six components are source and corpus verifiability ($S$), query and version traceability ($Q$), authority-hierarchy representation ($H$), ranking and counter-material verifiability ($K$), contestability support ($T$), and adoption logging with audit responsibility ($L$). Each component is scored on a three-point ordinal scale: 0 means absent, 1 means partially available, and 2 means procedurally reviewable. Table~\ref{tab:audit-dimensions} defines the scoring dimensions. The model is a status-allocation protocol: it determines the highest procedural status that the output may claim given the audit evidence available.
 
 \subsection{Formal definitions and invariants}
 
@@ -193,6 +194,7 @@ Three consequences follow. \textit{Separation}: perfect authority coverage with 
 \begin{table}[htbp]
 \centering
 \caption{Audit dimensions for case recommendation outputs}
+\label{tab:audit-dimensions}
 \renewcommand{\arraystretch}{1.15}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.5cm}p{2.3cm}YY}
 \toprule
@@ -212,11 +214,12 @@ The protocol evaluates the legal-output evidence packet rather than model parame
 
 \subsection{Status thresholds}
 
-The audit vector determines the maximum status available to an output. A high aggregate score does not compensate for failure of a necessary gate. The model therefore uses both minimum gates and total-score bands.
+The audit vector determines the maximum status available to an output. A high aggregate score does not compensate for failure of a necessary gate. The model therefore uses both minimum gates and total-score bands. Table~\ref{tab:status-allocation-rules} states the default allocation rules.
 
 \begin{table}[htbp]
 \centering
 \caption{Status allocation rules}
+\label{tab:status-allocation-rules}
 \renewcommand{\arraystretch}{1.15}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{3cm}YY}
 \toprule
@@ -246,13 +249,14 @@ p_0, & \text{otherwise.}
 
 Second, apply system-role and failure caps. A disclosed assistance tool cannot exceed professional support even if the audit vector would otherwise satisfy normative screening; an auditable procedural tool cannot become a decision-support reason without authorized adoption. Withdrawal-level failures, such as unreconstructable sources, materially false generated summaries or irreversible external action without human authorization, set $PS(o)$ to no external legal effect. Suspension or downgrade flags, such as high-authority omission, invalid-authority recommendation, counter-material suppression, missing source-attribution tags, absent jurisdiction assumptions, review-gate failure, ranking drift or contestation failure, cap the output at reference status until the missing artefact is restored. Thus $g$ combines the gate function $g_0$ with role and failure caps. If $K=0$, the output cannot be treated as normative material screening because the ranking and counter-material treatment cannot be reviewed. If $T<2$, $L<2$ or $B_D(o)=0$, the output cannot be a decision-support reason, even if retrieval accuracy is high. If the system purports to trigger an external disposition without legal authorization, review, contestability or accountability, the output has no external legal effect.
 
-Operationally, an evaluator applies the model in six steps: identify the candidate procedural status claimed for the output; freeze the relevant issue, query, source collection, workflow version and output identifier; score each component of $\mathcal{A}(o)$ using the audit artefacts in Table 2; apply the necessary gates in Table 3; assign the highest available status or record the missing gate; and repeat the audit after material corpus, workflow or interface changes. This makes the framework usable as a deployment checklist, post-use audit and benchmark extension.
+Operationally, an evaluator applies the model in six steps: identify the candidate procedural status claimed for the output; freeze the relevant issue, query, source collection, workflow version and output identifier; score each component of $\mathcal{A}(o)$ using the audit artefacts in Table~\ref{tab:audit-dimensions}; apply the necessary gates in Table~\ref{tab:status-allocation-rules}; assign the highest available status or record the missing gate; and repeat the audit after material corpus, workflow or interface changes. This makes the framework usable as a deployment checklist, post-use audit and benchmark extension.
 
-The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means absent, 1 means incomplete or internal, and 2 means reviewable by the relevant professional or procedural actor. The default $\tau_N=9$ permits one limited weakness while still requiring every gate; decision-support status requires $T=L=2$ because external reasons require both contestation and adoption records. The full validation suite re-evaluates all 264 packets under thresholds 8--12. Thresholds 8--10 produced identical status allocations; stricter thresholds generated demotions, and no promotions occurred.
+The thresholds use non-substitutable gates. The 0--2 scale is ordinal: 0 means absent, 1 means incomplete or internal, and 2 means reviewable by the relevant professional or procedural actor. The default $\tau_N=9$ permits one limited weakness while still requiring every gate; decision-support status requires $T=L=2$ because external reasons require both contestation and adoption records. The full validation suite re-evaluates all 264 packets under thresholds 8--12. Thresholds 8--10 produced identical status allocations; stricter thresholds generated demotions, and no promotions occurred. Table~\ref{tab:threshold-sensitivity} reports the full-packet sensitivity results.
 
 \begin{table}[htbp]
 \centering
 \caption{Full-packet sensitivity of status allocation to threshold policy}
+\label{tab:threshold-sensitivity}
 \scriptsize
 \renewcommand{\arraystretch}{1.1}
 \begin{tabularx}{\textwidth}{rrrrY}
@@ -270,11 +274,12 @@ $\tau_N$ & $\tau_D$ & Flips & Demotions & Status distribution \\
 
 \subsection{Jurisdictional parameterization}
 
-The audit dimensions are stable, but the materials satisfying $H$ and $K$ are local. For each setting $j$, evaluators instantiate authority hierarchy as $H_j$ and counter-material handling as $K_j$ before scoring. A high-status output must also carry jurisdiction assumptions that support the declared profile; an otherwise complete packet is downgraded when the profile is absent or mismatched.
+The audit dimensions are stable, but the materials satisfying $H$ and $K$ are local. For each setting $j$, evaluators instantiate authority hierarchy as $H_j$ and counter-material handling as $K_j$ before scoring. A high-status output must also carry jurisdiction assumptions that support the declared profile; an otherwise complete packet is downgraded when the profile is absent or mismatched. Table~\ref{tab:jurisdictional-profiles} gives the profile mapping.
 
 \begin{table}[htbp]
 \centering
 \caption{Jurisdictional profiles for $H_j$ and $K_j$}
+\label{tab:jurisdictional-profiles}
 \renewcommand{\arraystretch}{1.15}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.6cm}YY}
 \toprule
@@ -299,11 +304,12 @@ AI-based case recommendation can be produced by many upstream architectures, but
 
 The evaluation protocol should therefore separate upstream performance metrics from procedural checks. Precision, recall, F1, MRR and related metrics may help evaluate an upstream retrieval or recommendation component. Procedural evaluation asks whether the output has preserved the legal hierarchy of authorities, displayed counter-materials, distinguished binding and persuasive materials, recorded update status, and produced a contestable adoption trail. These are evaluation requirements for procedural status.
 
-The procedural metrics can be stated directly. \textit{Authority coverage} asks whether known high-authority materials for the issue appear in the output set. \textit{Counter-authority recall} asks whether legally relevant contrary or limiting materials are surfaced. \textit{Hierarchy accuracy} asks whether the output correctly labels binding, precedential, persuasive, overruled or superseded materials. \textit{Version traceability} asks whether the source collection and upstream run state that produced the output can be reconstructed. \textit{Procedural-source coverage} asks whether source links are bound to official, tool-verified or otherwise procedurally usable source tags rather than just named. \textit{Adoption-log completeness} asks whether later human use of the output is observable. These metrics convert upstream benchmark results into procedural-use evidence.
+The procedural metrics can be stated directly. \textit{Authority coverage} asks whether known high-authority materials for the issue appear in the output set. \textit{Counter-authority recall} asks whether legally relevant contrary or limiting materials are surfaced. \textit{Hierarchy accuracy} asks whether the output correctly labels binding, precedential, persuasive, overruled or superseded materials. \textit{Version traceability} asks whether the source collection and upstream run state that produced the output can be reconstructed. \textit{Procedural-source coverage} asks whether source links are bound to official, tool-verified or otherwise procedurally usable source tags rather than just named. \textit{Adoption-log completeness} asks whether later human use of the output is observable. These metrics convert upstream benchmark results into procedural-use evidence. Table~\ref{tab:decision-matrix} turns these distinctions into output-qualification cases.
 
 \begin{table}[htbp]
 \centering
 \caption{Decision matrix for legal AI output qualification}
+\label{tab:decision-matrix}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{3.1cm}YYY}
 \toprule
@@ -378,11 +384,12 @@ The minimum adoption-log schema is: output identifier, time, user role, issue, f
 
 \section{Downgrade and Withdrawal Conditions}
 
-Procedural status is dynamic. Corpus changes, workflow updates, ranking drift, source-attribution gaps, review-gate failures or contestation failures can trigger failure caps after an output or system was initially approved. Table 5 operationalizes those caps: warnings correct isolated defects, downgrades cap status until a missing artefact is restored, suspensions block external use for an issue class, and withdrawals remove external use when the legal-material chain cannot be reconstructed or an irreversible action lacks human authorization.
+Procedural status is dynamic. Corpus changes, workflow updates, ranking drift, source-attribution gaps, review-gate failures or contestation failures can trigger failure caps after an output or system was initially approved. Table~\ref{tab:downgrade-severity} operationalizes those caps: warnings correct isolated defects, downgrades cap status until a missing artefact is restored, suspensions block external use for an issue class, and withdrawals remove external use when the legal-material chain cannot be reconstructed or an irreversible action lacks human authorization.
 
 \begin{table}[htbp]
 \centering
 \caption{Downgrade severity levels}
+\label{tab:downgrade-severity}
 \renewcommand{\arraystretch}{1.15}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.8cm}YY}
 \toprule
@@ -404,11 +411,12 @@ The harness implements the mapping in Section 4 directly. Each scenario declares
 
 \subsection{Evaluation design}
 
-The evaluation is not a retrieval leaderboard. It is a falsification design for a procedural-status predicate. The matrix asks four validation questions. First, can the protocol allocate status correctly when the legal-material chain is controlled? Second, does the rule survive public outputs, raw model outputs, source-supported repairs and withheld packets? Third, can simpler substitute theories reproduce the allocation? Fourth, is the allocation stable under policy variation, architecture and model labels, challenge events, certificate replay, tampering and coding uncertainty? This organization separates validation units from generated operations, so the scale of the matrix supports the claim rather than replacing it.
+The evaluation is not a retrieval leaderboard. It is a falsification design for a procedural-status predicate. The matrix asks four validation questions. First, can the protocol allocate status correctly when the legal-material chain is controlled? Second, does the rule survive public outputs, raw model outputs, source-supported repairs and withheld packets? Third, can simpler substitute theories reproduce the allocation? Fourth, is the allocation stable under policy variation, architecture and model labels, challenge events, certificate replay, tampering and coding uncertainty? Table~\ref{tab:evaluation-design} summarizes the validation questions. This organization separates validation units from generated operations, so the scale of the matrix supports the claim rather than replacing it.
 
 \begin{table}[htbp]
 \centering
 \caption{Evaluation design}
+\label{tab:evaluation-design}
 \small
 \renewcommand{\arraystretch}{1.12}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.0cm}p{3.2cm}YY}
@@ -428,6 +436,7 @@ The complete evaluation matrix adjudicates one rule: procedural status follows t
 \begin{table}[htbp]
 \centering
 \caption{Evidence architecture for reading the validation matrix}
+\label{tab:evidence-architecture}
 \small
 \renewcommand{\arraystretch}{1.08}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm}YY}
@@ -446,13 +455,14 @@ Core constructs and validity threats are covered & Construct-operationalization 
 \end{tabularx}
 \end{table}
 
-The full claim-by-claim map is preserved in the generated validation report. This table is the reviewer roadmap for interpreting it in the manuscript; the following two tables report the underlying layer counts and headline results.
+The full claim-by-claim map is preserved in the generated validation report. Table~\ref{tab:evidence-architecture} is the reviewer roadmap for interpreting it in the manuscript; Tables~\ref{tab:full-evaluation-matrix}, \ref{tab:diagnostics-robustness-i}, \ref{tab:diagnostics-robustness-ii} and \ref{tab:coding-sensitivity} report the underlying layer counts and headline results.
 
 The target variable is procedural allocation. A positive packet is one that the full protocol qualifies for normative screening or decision support after applying score gates, evidence-packet gates, role caps and failure caps. The generated report emits a substitute-theory falsification table. Recall-threshold performance produced 153 scenario false positives; source-label sufficiency produced 72 scenario false positives and 6,552 lattice false positives; authority-material sufficiency produced 150 scenario false positives, 2 scenario false negatives and 672 lattice false positives; review-label sufficiency produced 149 scenario false positives and 19,800 lattice false positives; score sufficiency produced 183 scenario false positives and 49,752 lattice false positives; model-identity sufficiency produced 1,005 identity-substitution false positives. The full protocol produced zero false positives and zero false negatives in the same comparison.
 
 \begin{table}[htbp]
 \centering
 \caption{Full evaluation matrix}
+\label{tab:full-evaluation-matrix}
 \scriptsize
 \renewcommand{\arraystretch}{1.0}
 \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
@@ -483,6 +493,7 @@ Status-lattice exhaustion & 466,560 claim-attempt states / 3,499,200 edges & 101
 \begin{table}[htbp]
 \centering
 \caption{Full evaluation matrix: diagnostics and robustness I}
+\label{tab:diagnostics-robustness-i}
 \tiny
 \renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
@@ -506,6 +517,7 @@ Dynamic contestation challenges & 315 variants & 315/315 & Valid challenges bloc
 \begin{table}[htbp]
 \centering
 \caption{Full evaluation matrix: diagnostics and robustness II}
+\label{tab:diagnostics-robustness-ii}
 \tiny
 \renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
@@ -535,6 +547,7 @@ Policy-constants replay & 4,752 checks & 4,752/4,752 & Recomputes score candidat
 \begin{table}[htbp]
 \centering
 \caption{Full evaluation matrix: coding and sensitivity}
+\label{tab:coding-sensitivity}
 \tiny
 \renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{1.35cm}>{\raggedright\arraybackslash}p{2.2cm}Y}
@@ -585,7 +598,7 @@ The harness was also run on ten raw legal-authority recommendations generated by
 
 It cannot. In the coded raw-output packets, all ten outputs identified the expected high-authority and limiting materials in the issue families, producing mean upstream recall of 1.00 and counter-authority recall of 1.00. Yet every claimed normative-screening output was downgraded to reference information because the citations were marked as requiring verification rather than bound to official sources, corpus manifests, pinpoint locators and a contestation pathway. Their source-tag coverage was 1.00, but procedural-source coverage was 0.00.
 
-The repair intervention applies the opposite condition to the same authority sets. A validator checks each output-source link against an issue manifest, locator, hashed source-support excerpt, contradiction pattern, procedural source tag and issue-set coverage; a rank-salience repair moves retrieved limiting material into the review window. Transcript and public source-text verifiers anchored all 50 raw-output locators and all 30 public support items. All ten repaired variants qualified as normative material screening and none became decision-support reasons. This paired result is the paper's rule in executable form: authority coverage is not procedural status, but validator-backed source support and visible counter-material can make authority coverage procedurally screenable.
+The repair intervention applies the opposite condition to the same authority sets. A validator checks each output-source link against an issue manifest, locator, hashed source-support excerpt, contradiction pattern, procedural source tag and issue-set coverage; a rank-salience repair moves retrieved limiting material into the review window. Transcript and public source-text verifiers anchored all 50 raw-output locators and all 30 public support items. All ten repaired variants qualified as normative material screening and none became decision-support reasons. This paired result is the paper's rule in executable form: authority coverage is not procedural status, but validator-backed source support and visible counter-material can make authority coverage procedurally screenable. Table~\ref{tab:raw-model-output-pilot} reports the raw-output issue-family summary.
 
 The cross-engine layer generalizes the same contrast. The same authority-recommendation prompt and issue families were run across Codex GPT-5.5, Codex GPT-5.4-mini and Gemini 2.5 Pro. All nine raw outputs reached perfect issue-set recall and all nine remained reference information because their legal-material chains were not source-bound. The source-supported repair layer then held the issue families constant and supplied manifest-backed source links, locators, procedural source tags, counter-material salience and completed review gates. All nine repaired outputs qualified as normative material screening.
 
@@ -600,6 +613,7 @@ The same ten outputs were also converted into sixty adversarial repair variants.
 \begin{table}[htbp]
 \centering
 \caption{Raw model-output pilot}
+\label{tab:raw-model-output-pilot}
 \small
 \renewcommand{\arraystretch}{1.1}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{2.8cm}p{1.2cm}p{1.6cm}p{1.7cm}p{1.0cm}Y}
@@ -613,11 +627,12 @@ EU GDPR Article 15 access rights & 4 & 9 & 1.00 & 0.00 & Reference information \
 \end{tabularx}
 \end{table}
 
-To test mixed-authority normative material screening itself, the harness includes five public source-screening packets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, EU GDPR Article 15 access-right interpretation, Canadian administrative-law standard of review after \textit{Vavilov}, and German/EU fundamental-rights review after the \textit{Right to be Forgotten} decisions. Each packet defines high-authority materials, limiting or counter-materials, invalidated or historical treatments, source tags and output-to-source links at the level of individual output units. These mixed statute/case/source construct tests ask whether a source-bound, issue-defined authority packet can obtain screening status under the protocol. All five qualified as normative material screening, while decision-support status remained reserved for authorized institutional adoption.
+To test mixed-authority normative material screening itself, the harness includes five public source-screening packets: U.S. administrative law after \textit{Loper Bright}, English-law mesothelioma causation after \textit{Fairchild}, EU GDPR Article 15 access-right interpretation, Canadian administrative-law standard of review after \textit{Vavilov}, and German/EU fundamental-rights review after the \textit{Right to be Forgotten} decisions. Each packet defines high-authority materials, limiting or counter-materials, invalidated or historical treatments, source tags and output-to-source links at the level of individual output units. These mixed statute/case/source construct tests ask whether a source-bound, issue-defined authority packet can obtain screening status under the protocol. All five qualified as normative material screening, while decision-support status remained reserved for authorized institutional adoption. Table~\ref{tab:mixed-authority-source-screening} reports the five packets.
 
 \begin{table}[htbp]
 \centering
 \caption{Mixed-authority public source-screening packets}
+\label{tab:mixed-authority-source-screening}
 \scriptsize
 \renewcommand{\arraystretch}{1.1}
 \begin{tabularx}{\textwidth}{>{\bfseries}Yp{1.8cm}p{2.3cm}p{2.0cm}p{1.8cm}}
@@ -683,11 +698,12 @@ The validation matrix also includes a threat-model coverage pass rather than tre
 
 The model-output evidence ladder shows how the protocol treats one concrete case-recommendation task. The raw output \texttt{codex55-us-03} answered how legal research should treat \textit{Skidmore} and \textit{Kisor} after \textit{Loper Bright}. It named \textit{Loper Bright}, APA section 706, \textit{Skidmore}, \textit{Chevron} and \textit{Kisor}; the committed scenario records upstream precision 0.95, recall 1.00 and F1 0.97. On ordinary retrieval terms, this looks strong. Under the status protocol, the raw answer remains reference information because the citations are not yet procedurally source-bound, the review gate is pending and no contestability channel is recorded.
 
-The same visible answer qualifies differently when the legal-material chain changes. Once each output unit is linked to issue-manifest sources, locators, hashed support evidence and procedural source tags, and once review and contestability are completed, the output becomes normative material screening. If an authorized adopter then records human authorization, adoption reasons and a contestation record, the same source-bound chain may become a decision-support reason. If, however, the same chain is pushed into an irreversible external action without human authorization under an unaccountable external-disposition role, the output is withdrawn to no external legal effect. The answer's semantic content is not what moves it across statuses; the procedural record does.
+The same visible answer qualifies differently when the legal-material chain changes. Once each output unit is linked to issue-manifest sources, locators, hashed support evidence and procedural source tags, and once review and contestability are completed, the output becomes normative material screening. If an authorized adopter then records human authorization, adoption reasons and a contestation record, the same source-bound chain may become a decision-support reason. If, however, the same chain is pushed into an irreversible external action without human authorization under an unaccountable external-disposition role, the output is withdrawn to no external legal effect. The answer's semantic content is not what moves it across statuses; the procedural record does. Table~\ref{tab:loper-bright-evidence-ladder} summarizes the four status variants.
 
 \begin{table}[htbp]
 \centering
 \caption{Worked evidence ladder for \textit{Loper Bright} output \texttt{codex55-us-03}}
+\label{tab:loper-bright-evidence-ladder}
 \small
 \renewcommand{\arraystretch}{1.12}
 \begin{tabularx}{\textwidth}{>{\bfseries}p{3.1cm}p{3.6cm}p{3.0cm}Y}
