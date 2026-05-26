@@ -1040,6 +1040,22 @@ def _submission_hygiene_checks() -> list[dict]:
         else:
             missing_table_refs.append(label)
     table_refs_in_order = table_ref_positions == sorted(table_ref_positions)
+    required_acronym_expansions = [
+        ("AI", "artificial intelligence (AI)"),
+        ("ODR", "online dispute resolution (ODR)"),
+        ("CAR", "counter-authority recall (CAR)"),
+        ("EF", "structural evidence fidelity as EF"),
+        ("EC", "evidence coverage as EC"),
+        ("STC", "source-tag coverage as STC"),
+        ("PSC", "procedural-source coverage as PSC"),
+        ("FP", "false positives (FP)"),
+        ("FN", "false negatives (FN)"),
+        ("GDPR", "General Data Protection Regulation (GDPR)"),
+        ("RAG", "retrieval-augmented generation (RAG)"),
+    ]
+    missing_acronym_expansions = [
+        abbreviation for abbreviation, expansion in required_acronym_expansions if expansion not in text
+    ]
 
     title_page_text = title_page_path.read_text(encoding="utf-8") if title_page_path.exists() else ""
     required_declarations = [
@@ -1097,6 +1113,11 @@ def _submission_hygiene_checks() -> list[dict]:
             "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
             "expected": "all manuscript table labels are cited in table order",
             "passed": not missing_table_refs and table_refs_in_order,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": f"main-text acronym expansions present (missing {missing_acronym_expansions})",
+            "passed": not missing_acronym_expansions,
         },
         {
             "path": "submission/title_page_and_declarations.md",

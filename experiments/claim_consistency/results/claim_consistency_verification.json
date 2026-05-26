@@ -1,5 +1,5 @@
 {
-  "check_count": 1137,
+  "check_count": 1138,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -2242,7 +2242,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 42 pages",
+      "expected": "The expected manuscript build is 41 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -2293,6 +2293,11 @@
     },
     {
       "expected": "all manuscript table labels are cited in table order",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "main-text acronym expansions present (missing [])",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -5689,5 +5694,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1137
+  "passed_count": 1138
 }
