@@ -1003,6 +1003,17 @@ def _submission_hygiene_checks() -> list[dict]:
     keywords = []
     if keyword_match:
         keywords = [part.strip() for part in keyword_match.group(1).split(";") if part.strip()]
+    abstract_match = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", text, re.DOTALL)
+    abstract = abstract_match.group(1) if abstract_match else ""
+    abstract_plain = re.sub(r"\\textit\{([^}]*)\}", r"\1", abstract)
+    abstract_plain = re.sub(r"\\[a-zA-Z]+(?:\[[^\]]*\])?(?:\{[^}]*\})?", " ", abstract_plain)
+    abstract_plain = abstract_plain.replace("{", " ").replace("}", " ")
+    defined_abstract_abbreviations = set(re.findall(r"\(([A-Z][A-Z0-9]{1,}|[A-Z][0-9])\)", abstract_plain))
+    abstract_abbreviations = sorted(
+        set(re.findall(r"\b(?:[A-Z]{2,}[A-Z0-9]*|[A-Z][0-9])\b", abstract_plain))
+        - defined_abstract_abbreviations
+    )
+    abstract_references = re.findall(r"\\(?:cite|ref)[a-zA-Z*]*\{", abstract)
 
     cite_keys = set()
     for match in re.finditer(r"\\cite[a-zA-Z*]*\{([^}]*)\}", text):
@@ -1046,6 +1057,16 @@ def _submission_hygiene_checks() -> list[dict]:
             "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
             "expected": f"keyword count 4-6 (actual {len(keywords)})",
             "passed": 4 <= len(keywords) <= 6,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": "abstract contains no citation or cross-reference commands",
+            "passed": not abstract_references,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": f"abstract abbreviations defined (undefined {abstract_abbreviations})",
+            "passed": not abstract_abbreviations,
         },
         {
             "path": "manuscript/ai_law_case_recommendation_verifiability.tex",

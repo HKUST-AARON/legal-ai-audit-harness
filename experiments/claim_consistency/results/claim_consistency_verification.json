@@ -1,5 +1,5 @@
 {
-  "check_count": 1135,
+  "check_count": 1137,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -2247,12 +2247,22 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 231)",
+      "expected": "abstract word count 150-250 (actual 236)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
       "expected": "keyword count 4-6 (actual 6)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "abstract contains no citation or cross-reference commands",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "abstract abbreviations defined (undefined [])",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -5679,5 +5689,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1135
+  "passed_count": 1137
 }
