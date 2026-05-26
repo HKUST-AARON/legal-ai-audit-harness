@@ -149,7 +149,7 @@ For external procedural statuses, numeric scores are never enough. The harness f
 
 ## Artifact Replication
 
-For the submission artifact and one-command replication checklist, see [`ARTIFACT.md`](ARTIFACT.md). The primary deterministic command is:
+For the submission artifact and one-command replication checklist, see [`ARTIFACT.md`](ARTIFACT.md). The non-anonymous title-page and declarations template is [`submission/title_page_and_declarations.md`](submission/title_page_and_declarations.md). The primary deterministic command is:
 
 ```bash
 python scripts/run_full_validation.py
@@ -468,5 +468,6 @@ experiments/real_cases/            public metadata snapshots, manifests and outp
 experiments/public_system_outputs/ ordered public output snapshots and pilot outputs
 tests/                  unit tests
 docs/paper_mapping.md   mapping from the paper framework to code
+submission/             title-page and declarations template for the non-anonymous submission package
 .github/workflows/      CI test harness
 ```

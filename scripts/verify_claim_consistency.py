@@ -812,6 +812,7 @@ def _checks(payload: dict) -> list[dict]:
             "passed": 150 <= abstract_count <= 250,
         }
     )
+    checks.extend(_submission_hygiene_checks())
     checks.extend(_forbidden_checks())
     return checks
 
@@ -991,6 +992,78 @@ def _abstract_word_count() -> int:
     abstract = re.sub(r"\\textit\{([^}]*)\}", r"\1", match.group(1))
     abstract = re.sub(r"\\[a-zA-Z]+(?:\[[^\]]*\])?(?:\{[^}]*\})?", " ", abstract)
     return len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", abstract))
+
+
+def _submission_hygiene_checks() -> list[dict]:
+    manuscript_path = ROOT / "manuscript" / "ai_law_case_recommendation_verifiability.tex"
+    text = manuscript_path.read_text(encoding="utf-8")
+    title_page_path = ROOT / "submission" / "title_page_and_declarations.md"
+
+    keyword_match = re.search(r"\\textbf\{Keywords:\}(.*)", text)
+    keywords = []
+    if keyword_match:
+        keywords = [part.strip() for part in keyword_match.group(1).split(";") if part.strip()]
+
+    cite_keys = set()
+    for match in re.finditer(r"\\cite[a-zA-Z*]*\{([^}]*)\}", text):
+        cite_keys.update(key.strip() for key in match.group(1).split(",") if key.strip())
+    bib_keys = set(re.findall(r"\\bibitem(?:\[[^\]]*\])?\{([^}]*)\}", text))
+    undefined = sorted(cite_keys - bib_keys)
+    unused = sorted(bib_keys - cite_keys)
+
+    title_page_text = title_page_path.read_text(encoding="utf-8") if title_page_path.exists() else ""
+    required_declarations = [
+        "Funding",
+        "Competing Interests",
+        "Ethics Approval",
+        "Consent to Participate",
+        "Consent for Publication",
+        "Data, Materials and Code Availability",
+        "Author Contributions",
+    ]
+
+    return [
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": f"keyword count 4-6 (actual {len(keywords)})",
+            "passed": 4 <= len(keywords) <= 6,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": "anonymous manuscript author field",
+            "passed": r"\author{}" in text and not re.search(r"\b\S+@\S+\.\S+\b", text),
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": "Data and Code Availability section with replication command",
+            "passed": "Data and Code Availability" in text and "python scripts/run_full_validation.py" in text,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": "no undefined citation keys",
+            "passed": not undefined,
+        },
+        {
+            "path": "manuscript/ai_law_case_recommendation_verifiability.tex",
+            "expected": "no uncited bibliography entries",
+            "passed": not unused,
+        },
+        {
+            "path": "submission/title_page_and_declarations.md",
+            "expected": "separate title page and declarations template",
+            "passed": title_page_path.exists() and "Do not include it in the double-anonymous reviewer manuscript." in title_page_text,
+        },
+        {
+            "path": "submission/title_page_and_declarations.md",
+            "expected": "required declaration headings present",
+            "passed": title_page_path.exists() and all(heading in title_page_text for heading in required_declarations),
+        },
+        {
+            "path": "ARTIFACT.md",
+            "expected": "submission package checklist references title page and declarations",
+            "passed": "submission/title_page_and_declarations.md" in (ROOT / "ARTIFACT.md").read_text(encoding="utf-8"),
+        },
+    ]
 
 
 def _pdf_page_count(path: Path) -> int | None:

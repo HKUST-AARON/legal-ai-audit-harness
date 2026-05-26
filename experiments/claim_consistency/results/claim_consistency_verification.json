@@ -1,5 +1,5 @@
 {
-  "check_count": 1125,
+  "check_count": 1133,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -2250,6 +2250,46 @@
       "expected": "abstract word count 150-250 (actual 231)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "keyword count 4-6 (actual 6)",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "anonymous manuscript author field",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "Data and Code Availability section with replication command",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "no undefined citation keys",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "no uncited bibliography entries",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "separate title page and declarations template",
+      "passed": true,
+      "path": "submission/title_page_and_declarations.md"
+    },
+    {
+      "expected": "required declaration headings present",
+      "passed": true,
+      "path": "submission/title_page_and_declarations.md"
+    },
+    {
+      "expected": "submission package checklist references title page and declarations",
+      "passed": true,
+      "path": "ARTIFACT.md"
     },
     {
       "expected": "absence of stale claim `62,497`",
@@ -5629,5 +5669,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1125
+  "passed_count": 1133
 }
