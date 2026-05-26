@@ -66,11 +66,11 @@
       "passed": 3645
     },
     {
-      "checks": 11,
+      "checks": 13,
       "failed": 0,
       "failures": [],
       "id": "failure_cap_absorption",
-      "passed": 11
+      "passed": 13
     },
     {
       "checks": 2,
@@ -80,6 +80,6 @@
       "passed": 2
     }
   ],
-  "passed_checks": 51646,
-  "total_checks": 51646
+  "passed_checks": 51648,
+  "total_checks": 51648
 }

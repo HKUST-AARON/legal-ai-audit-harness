@@ -1,13 +1,13 @@
 {
   "all_passed": true,
-  "coverage_check_count": 32,
-  "evidence_layer_count": 30,
+  "coverage_check_count": 33,
+  "evidence_layer_count": 31,
   "failed_check_count": 0,
   "failed_threat_count": 0,
   "failures": [],
   "minimum_layers_per_threat": 4,
   "minimum_roles_per_threat": 3,
-  "passed_check_count": 32,
+  "passed_check_count": 33,
   "passed_threat_count": 8,
   "threat_count": 8,
   "threats": [
@@ -162,6 +162,16 @@
           "threat_id": "source_chain_validity"
         },
         {
+          "layer_id": "temporal_validity",
+          "passed": true,
+          "path": "experiments/temporal_validity/results/temporal_validity_analysis.json",
+          "roles": [
+            "source_chain",
+            "temporal"
+          ],
+          "threat_id": "source_chain_validity"
+        },
+        {
           "layer_id": "source_text_verification",
           "passed": true,
           "path": "experiments/source_text_verification/results/source_text_anchor_verification.json",
@@ -185,23 +195,25 @@
       "evidence_layers": [
         "source_chain_attacks",
         "claim_anchor",
+        "temporal_validity",
         "source_text_verification",
         "model_output_adversarial"
       ],
       "failed_checks": 0,
       "id": "source_chain_validity",
       "label": "Source-chain validity: citations and locators are not decorative",
-      "layer_count": 4,
+      "layer_count": 5,
       "passed": true,
-      "passed_checks": 4,
-      "role_count": 6,
+      "passed_checks": 5,
+      "role_count": 7,
       "roles": [
         "anchor",
         "claim_level",
         "external_source",
         "model_output",
         "negative_control",
-        "source_chain"
+        "source_chain",
+        "temporal"
       ]
     },
     {

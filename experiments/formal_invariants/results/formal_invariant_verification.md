@@ -1,6 +1,6 @@
 # Formal Invariant Verification
 
-Checks: 51646/51646
+Checks: 51648/51648
 All passed: True
 
 | Invariant | Checks | Passed | Failed |
@@ -14,5 +14,5 @@ All passed: True
 | contestability_channel_necessity | 1 | 1 | 0 |
 | decision_adoption_necessity | 654 | 654 | 0 |
 | role_cap_dominance | 3645 | 3645 | 0 |
-| failure_cap_absorption | 11 | 11 | 0 |
+| failure_cap_absorption | 13 | 13 | 0 |
 | metric_non_equivalence | 2 | 2 | 0 |

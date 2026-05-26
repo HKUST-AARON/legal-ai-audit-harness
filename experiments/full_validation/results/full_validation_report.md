@@ -1,6 +1,6 @@
 # Full Legal AI Audit Harness Validation
 
-Validation suites: 47
+Validation suites: 48
 Scenario files: 264
 Base embedded records/items: 697 (10 stress scenarios, 120 public metadata records, 60 public-system records, 169 public retrieval records, 126 holdout records/items, 10 raw model outputs, 10 source-supported model-output variants, 9 cross-engine raw outputs, 9 cross-engine source-supported outputs, 70 evidence-ladder model-output variants, 60 adversarial source-support variants, 19 issue-specific public output/source records, 5 mixed-authority source-screening packets, 20 issue ablations)
 Strict/lenient recoded evaluations: 528
@@ -13,7 +13,7 @@ Contestation challenge variants: 315/315 passed; valid challenges blocked 252/25
 Public source-text anchor checks: 30/30 verified across 30 records with text snapshots
 Model-output transcript locator checks: 50/50 verified across 10 raw transcript sections
 Cross-engine transcript locator checks: 36/36 verified across 3 engines and 3 issues
-Formal invariant checks: 51646/51646 passed
+Formal invariant checks: 51648/51648 passed
 Status-lattice exhaustion: 466560 high-status claim-attempt states, 3499200 cover edges, 1019/1019 necessity checks and 1019/1019 gate-ablation drops
 Metric separation evaluations: 219 upstream-metric scenario packets; high-recall blocked outputs 153/215
 Metric statistical resamples: 1000 bootstrap resamples and 1000 permutation shuffles
@@ -34,13 +34,14 @@ Metamorphic policy tests: 1233/1233 passed over 264 packets
 Policy mutation analysis: 15/15 mutants killed across 3111 evaluations; invalid promotions 2264; false negatives 2
 Review-provenance analysis: 627/627 passed; review/adoption placebos blocked 402/402; high-status provenance defects blocked 189/189; decision provenance defects demoted 36/36
 Claim-anchor analysis: 1080/1080 passed over 250 output units and 290 output links; claim-text removals blocked 250/250; link-to-claim removals blocked 290/290; support-attestation removals withdrawn 290/290; locator removals withdrawn 250/250
+Temporal source-validity checks: 189/189 passed; stale source snapshots blocked 63/63; authority-status drift blocked 63/63; refreshed controls preserved 63/63
 Workflow portability analysis: 2904/2904 passed; architecture invariance 1320/1320; entitlement caps 1056/1056; decision dependency 264/264; unaccountable external bars 264/264
 Model-identity invariance: 1320/1320 identity substitutions passed over 264 packets and 5 identity profiles; status changes 0; disposition changes 0
 Query-perturbation diagnostics: 30 query variants across 5 issue groups; status-stable groups 5/5; authority-coverage unstable groups 3/5; record-set unstable groups 4/5; mean record overlap 0.39
 Query-portfolio frontier: 315 portfolios plus 5 group summaries across 5 issue groups; qualified portfolios 0/315; full high-authority portfolios 56/315; full counter-material portfolios 0/315
-Construct operationalization coverage: 40/40 checks passed across 10 core constructs and 31 evidence layers
-Threat-model coverage: 32/32 checks passed across 8 validity threats and 30 evidence layers
-Derived robustness evaluations: 8023064
+Construct operationalization coverage: 41/41 checks passed across 10 core constructs and 32 evidence layers
+Threat-model coverage: 33/33 checks passed across 8 validity threats and 31 evidence layers
+Derived robustness evaluations: 8023257
 Scenario-regression expectations passed: 264/264
 High-upstream-performance but procedurally blocked scenarios: 2362
 Blocked reason distribution: authority_omission: 1013, contestation_failure: 103, counter_material_suppression: 1098, invalid_authority: 1, jurisdiction_assumption_gap: 63, ranking_drift: 12, source_attribution_gap: 1186, summary_distortion: 1533, unauthorized_action: 10
@@ -69,7 +70,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Public source-text anchors | external source-grounding check | 30 public source-support anchor checks | 30 | 30/30 verified | n/a | n/a | n/a | records_with_text_snapshot: 30, verified_ratio: 1.0 |
 | Model-output transcript anchors | raw-output provenance check | 50 raw transcript locator checks | 50 | 50/50 verified | n/a | n/a | n/a | all_locators_verified: True, output_units: 40, scenario_sections_verified: 10 |
 | Cross-engine transcript anchors | identity-neutral raw-output provenance check | 36 cross-engine transcript locator checks | 36 | 36/36 verified | n/a | n/a | n/a | all_locators_verified: True, engines: 3, issues: 3, scenario_sections_verified: 9 |
-| Formal invariant verification | exhaustive model-property check | 51646 generated audit-policy states | 51646 | 51646/51646 passed | n/a | n/a | n/a | authority_gate_necessity: 0, claim_anchor_necessity: 0, contestability_channel_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
+| Formal invariant verification | exhaustive model-property check | 51648 generated audit-policy states | 51648 | 51648/51648 passed | n/a | n/a | n/a | authority_gate_necessity: 0, claim_anchor_necessity: 0, contestability_channel_necessity: 0, counter_material_gate_necessity: 0, decision_adoption_necessity: 0, evidence_packet_necessity: 0, failure_cap_absorption: 0, gate_non_substitutability: 0, gated_monotonicity: 0, metric_non_equivalence: 0, role_cap_dominance: 0 |
 | Status-lattice exhaustion | finite status-lattice characterization | 466560 high-status claim-attempt states, 3499200 cover edges and 3732480 substitute-rule predictions | 7700278 | 1019/1019 necessity; 1019/1019 ablations | n/a | n/a | n/a | best_partial_rule_false_positive: 672, decision_status_states: 11, full_predicate_false_positive: 0, high_status_states: 168 |
 | Metric separation analysis | retrieval/status non-equivalence check | 219 upstream-metric scenario packets | 219 | recall-threshold precision 0.29; reference gate FP 0 | n/a | n/a | n/a | high_recall_blocked_rate: 0.71, recall_point_biserial: 0.06, reference_gate_false_positive: 0 |
 | Baseline rule comparison | alternative-policy comparison | 3252 baseline predictions over 13 rules | 3252 | best simplified FP 38; reference rule FP 0 | n/a | n/a | n/a | best_simplified_precision: 0.62, best_simplified_recall: 1.0, reference_rule_false_negative: 0, reference_rule_false_positive: 0, simplified_rules_with_errors: 1 |
@@ -88,6 +89,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Policy mutation analysis | policy-mutant killing | 3111 mutation evaluations over 15 policy mutants | 3111 | 15/15 killed | n/a | n/a | n/a | classification_errors: 2266, false_negatives: 2, invalid_promotions: 2264 |
 | Review-provenance analysis | human-review and adoption-record falsification | 627 provenance evaluations over 264 packets | 627 | 627/627 | n/a | n/a | n/a | decision_provenance_defects_demoted: 36, high_status_provenance_defects_blocked: 189, review_adoption_placebos_blocked: 402 |
 | Claim-anchor analysis | claim-level source-anchor falsification | 1080 claim-anchor mutations over 250 units and 290 links | 1080 | 1080/1080 | n/a | n/a | n/a | claim_text_absence_blocked: 250, link_unit_binding_absence_blocked: 290, locator_absence_withdrawn: 250, support_attestation_absence_withdrawn: 290 |
+| Temporal source-validity analysis | source-freshness and authority-drift validation | 189 temporal mutations over 63 qualified packets | 189 | 189/189 | n/a | n/a | n/a | authority_status_drift_blocked: 63, refreshed_temporal_controls_preserved: 63, stale_source_snapshots_blocked: 63 |
 | Workflow portability analysis | architecture and deployment-role portability | 2904 workflow mutations over 264 packets, 5 architecture profiles and 4 entitlement profiles | 2904 | 2904/2904 | n/a | n/a | n/a | architecture_invariance: 1320, decision_dependency: 264, entitlement_caps: 1056, unaccountable_external_bar: 264 |
 | Model-identity invariance | identity-substitution invariance check | 1320 identity mutations over 264 packets and 5 model identities | 1320 | 1320/1320 | n/a | n/a | n/a | disposition_changes: 0, identity_profiles: 5, status_changes: 0 |
 | Query-perturbation stability | public-retrieval query-sensitivity diagnostic | 30 query variants across 5 issue groups | 30 | 5/5 status-stable groups | n/a | n/a | 2 | authority_unstable_groups: 3, counter_recall_unstable_groups: 0, mean_record_overlap: 0.39, min_record_overlap: 0.0, record_set_unstable_groups: 4, top_result_unstable_groups: 4 |
@@ -95,8 +97,8 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 | Annotation robustness recoding | coding robustness | 528 strict/lenient recoded evaluations | 264 | 262/264 stable across all policies | n/a | n/a | n/a | base_vs_lenient_weighted_agreement: 1.0, base_vs_strict_weighted_agreement: 1.0 |
 | Annotation uncertainty Monte Carlo | score-noise robustness | 66000 score-perturbed evaluations | 66000 | 0.937 sample stability; 0.916 qualified high-status stability | n/a | n/a | n/a | boundary_scenarios: 151, exact_stable_scenarios: 112, high_status_stable_scenarios: 203, mean_status_rank_shift: 0.085 |
 | Score-blinded dual coding | codebook reproducibility | 240 packets x 2 coding passes | 240 | 0.99 coder kappa; 0.37 weakest base-dimension kappa (Q); 0.87 min base-dimension exact; 0.13 max score drift | n/a | n/a | n/a | base_dimension_max_mean_absolute_delta: 0.13, base_dimension_min_exact_agreement: 0.87, base_dimension_min_kappa: 0.37, base_dimension_min_kappa_coder: coder_a, base_dimension_min_kappa_dimension: Q, base_dimension_min_kappa_exact_agreement: 0.97, base_dimension_min_pabak: 0.81, coder_cohen_kappa: 0.99, coder_exact_status_agreement: 0.99, coder_quadratic_weighted_kappa: 0.96, coder_weighted_status_agreement: 0.99, min_base_cohen_kappa: 0.92, min_base_exact_status_agreement: 0.95, min_base_quadratic_weighted_kappa: 0.9, min_base_weighted_status_agreement: 0.98, minimum_dimension_kappa: 0.93, minimum_failure_flag_exact_agreement: 0.97, minimum_missing_gate_exact_agreement: 0.98, status_disagreements: 2 |
-| Construct operationalization coverage | paper-construct coverage map | 40 evidence-layer coverage checks across 10 core constructs | 40 | 40/40 | n/a | n/a | n/a | evidence_layers: 31, failed_constructs: 0, passed_constructs: 10 |
-| Threat-model coverage analysis | validity-threat coverage map | 32 evidence-layer coverage checks across 8 validity threats | 32 | 32/32 | n/a | n/a | n/a | evidence_layers: 30, failed_threats: 0, passed_threats: 8 |
+| Construct operationalization coverage | paper-construct coverage map | 41 evidence-layer coverage checks across 10 core constructs | 41 | 41/41 | n/a | n/a | n/a | evidence_layers: 32, failed_constructs: 0, passed_constructs: 10 |
+| Threat-model coverage analysis | validity-threat coverage map | 33 evidence-layer coverage checks across 8 validity threats | 33 | 33/33 | n/a | n/a | n/a | evidence_layers: 31, failed_threats: 0, passed_threats: 8 |
 
 ## Substitute-Theory Falsification
 
@@ -149,6 +151,7 @@ Score-blinded coding: 240 packets, 2 coding passes, 0.99 coder-coder exact agree
 - **Policy mutation analysis:** Applies gate-removal and status-conferring policy mutants across committed packets; every mutant is killed because removing a required gate, ignoring a cap, or treating metrics, source labels, review labels, total score or model identity as status produces a wrong allocation.
 - **Review-provenance analysis:** Adds review and adoption labels to incomplete packets and removes review, contestability, jurisdiction, authorization, adoption-reason or contestation-record fields from qualified packets; status follows provenance records only when the legal-material chain is complete.
 - **Claim-anchor analysis:** Removes material proposition text, link-to-claim bindings, support attestations and locators from every qualified packet; high status survives only when each material output unit remains bound to a specific source anchor.
+- **Temporal source-validity analysis:** Mutates qualified packets with stale source snapshots and post-snapshot authority-status changes; high status must fall, while refreshed temporal metadata preserves base status.
 - **Workflow portability analysis:** Runtime architecture labels do not change status; deployment entitlement profiles obey role caps, decision support depends on a screening-capable chain, and unaccountable external disposition is barred.
 - **Model-identity invariance:** Substitutes frontier, legal-specialist, open-weight, small-model and undisclosed-agentic identity labels across every packet; procedural status remains unchanged because model identity is not a status-conferring property.
 - **Query-perturbation stability:** Compares issue-equivalent public-search query variants and holdout variants, showing whether authority coverage, counter-material recall, top-result identity and retrieved-record sets remain stable under query reformulation.

@@ -75,6 +75,8 @@ FLAG_DISPOSITIONS = {
     "counter_material_suppression": "suspension",
     "invalid_authority": "suspension",
     "ranking_drift": "suspension",
+    "source_collection_staleness": "suspension",
+    "temporal_authority_drift": "suspension",
     "source_attribution_gap": "downgrade",
     "jurisdiction_assumption_gap": "downgrade",
     "review_gate_failure": "downgrade",
@@ -375,6 +377,7 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
     external_screening_claimed = target_rank >= STATUS_RANK[Status.NORMATIVE_MATERIAL_SCREENING_OUTPUT.value]
     if external_screening_claimed:
         flags.extend(_required_external_evidence_flags(scenario))
+        flags.extend(_temporal_validity_flags(scenario))
     if scenario.get("authority_sets"):
         if metrics["authority_coverage"] is not None and metrics["authority_coverage"] < 1:
             flags.append("authority_omission")
@@ -401,6 +404,23 @@ def _derived_failure_flags(scenario: dict[str, Any], metrics: dict[str, float | 
             flags.append("ranking_drift")
     flags.extend(_source_binding_validation_flags(scenario, target_rank))
     flags.extend(_review_gate_flags(scenario, target_rank))
+    return flags
+
+
+def _temporal_validity_flags(scenario: dict[str, Any]) -> list[str]:
+    packet = scenario.get("evidence_packet", {})
+    temporal = packet.get("temporal_validity", {}) if isinstance(packet, dict) else {}
+    if not isinstance(temporal, dict):
+        return []
+    flags: list[str] = []
+    if (
+        temporal.get("source_collection_current") is False
+        or temporal.get("snapshot_stale") is True
+        or temporal.get("update_checked") is False
+    ):
+        flags.append("source_collection_staleness")
+    if temporal.get("authority_status_changed") is True or temporal.get("invalidated_after_snapshot") is True:
+        flags.append("temporal_authority_drift")
     return flags
 
 

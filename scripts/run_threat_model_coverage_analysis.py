@@ -49,6 +49,10 @@ EVIDENCE_LAYERS = {
         "path": "experiments/claim_anchor_analysis/results/claim_anchor_analysis.json",
         "roles": ["source_chain", "claim_level"],
     },
+    "temporal_validity": {
+        "path": "experiments/temporal_validity/results/temporal_validity_analysis.json",
+        "roles": ["source_chain", "temporal"],
+    },
     "source_text_verification": {
         "path": "experiments/source_text_verification/results/source_text_anchor_verification.json",
         "roles": ["external_source", "anchor"],
@@ -145,7 +149,13 @@ THREATS = [
     {
         "id": "source_chain_validity",
         "label": "Source-chain validity: citations and locators are not decorative",
-        "layers": ["source_chain_attacks", "claim_anchor", "source_text_verification", "model_output_adversarial"],
+        "layers": [
+            "source_chain_attacks",
+            "claim_anchor",
+            "temporal_validity",
+            "source_text_verification",
+            "model_output_adversarial",
+        ],
     },
     {
         "id": "external_public_outputs",

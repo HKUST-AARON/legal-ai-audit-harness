@@ -1,8 +1,8 @@
 # Threat-Model Coverage Analysis
 
 Validity threats: 8
-Evidence layers: 30
-Coverage checks: 32/32 passed
+Evidence layers: 31
+Coverage checks: 33/33 passed
 Minimum layers per threat: 4
 Minimum evidence roles per threat: 3
 
@@ -10,7 +10,7 @@ Minimum evidence roles per threat: 3
 | --- | ---: | ---: | ---: |
 | Construct validity: procedural status is not retrieval success | 4 | 4 | 4/4 |
 | Internal validity: status is not authored expected-label bias | 4 | 6 | 4/4 |
-| Source-chain validity: citations and locators are not decorative | 4 | 6 | 4/4 |
+| Source-chain validity: citations and locators are not decorative | 5 | 7 | 5/5 |
 | External validity: the rule is not limited to constructed examples | 4 | 4 | 4/4 |
 | Architecture validity: provider identity does not confer status | 4 | 7 | 4/4 |
 | Policy validity: thresholds and gate settings do not drive the core result | 4 | 7 | 4/4 |

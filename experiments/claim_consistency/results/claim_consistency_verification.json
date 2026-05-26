@@ -1,5 +1,5 @@
 {
-  "check_count": 1138,
+  "check_count": 1194,
   "checks": [
     {
       "expected": "From Case Retrieval to Normative Material Screening",
@@ -67,7 +67,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "40/40 construct-operationalization checks",
+      "expected": "41/41 construct-operationalization checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -77,12 +77,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "32/32 threat-model coverage checks",
+      "expected": "33/33 threat-model coverage checks",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "- 47 validation suites",
+      "expected": "- 48 validation suites",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -97,12 +97,12 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 8,023,761 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
+      "expected": "- 8,023,954 validation operations, with scenario rows, generated counterfactuals, finite-state edges, substitute-rule predictions and replay checks reported separately",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 51,646/51,646 formal invariant checks passed",
+      "expected": "- 51,648/51,648 formal invariant checks passed",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -192,6 +192,11 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "- 189/189 temporal source-validity mutations passed: 63/63 stale source snapshots blocked, 63/63 authority-status drift cases blocked and 63/63 refreshed controls preserved",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "- 2,904/2,904 workflow-portability checks passed: 1,320/1,320 architecture invariance checks, 1,056/1,056 entitlement-cap checks, 264/264 decision-dependency checks and 264/264 unaccountable external bars",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -207,12 +212,12 @@
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 40/40 construct-operationalization checks passed across 10 core constructs and 31 evidence layers",
+      "expected": "- 41/41 construct-operationalization checks passed across 10 core constructs and 32 evidence layers",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "- 32/32 threat-model coverage checks passed across 8 validity threats and 30 evidence layers",
+      "expected": "- 33/33 threat-model coverage checks passed across 8 validity threats and 31 evidence layers",
       "passed": true,
       "path": "ARTIFACT.md"
     },
@@ -307,7 +312,7 @@
       "path": "README.md"
     },
     {
-      "expected": "51,646 formal invariant checks",
+      "expected": "51,648 formal invariant checks",
       "passed": true,
       "path": "README.md"
     },
@@ -317,7 +322,7 @@
       "path": "README.md"
     },
     {
-      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 3,014 issue-family holdout predictions, 110,568 multi-axis generalization predictions, 42,192 policy-family robustness evaluations, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 2,904 workflow-portability checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 40 construct-operationalization checks across 10 core constructs, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
+      "expected": "219 metric-separation evaluations, 2,000 metric statistical resamples, 3,252 baseline-rule predictions, 3,014 issue-family holdout predictions, 110,568 multi-axis generalization predictions, 42,192 policy-family robustness evaluations, 390 gate-ablation evaluations, 390 gate-contrast witness pairs, 1,953 source-chain attack variants, 315 contestation challenge variants, 1,233 metamorphic policy tests, 3,111 policy-mutation evaluations, 627 review-provenance checks, 1,080 claim-anchor mutations, 189 temporal source-validity mutations, 2,904 workflow-portability checks, 1,320 model-identity substitutions, 30 query-perturbation variants across 5 issue groups, 315 query portfolios plus 5 group frontier summaries, 41 construct-operationalization checks across 10 core constructs, 5,097 repair-frontier evaluations, 440 jurisdiction-profile checks, 956 rank-window visibility checks, 85 rank-order counterfactuals, 6,072 status-certificate replay checks, 4,488 certificate proof obligations, 5,811 certificate tamper-resistance cases and 4,752 policy-constants replay checks",
       "passed": true,
       "path": "README.md"
     },
@@ -332,12 +337,12 @@
       "path": "README.md"
     },
     {
-      "expected": "40 checks across 10 core paper constructs",
+      "expected": "41 checks across 10 core paper constructs",
       "passed": true,
       "path": "README.md"
     },
     {
-      "expected": "| Construct-operationalization coverage | 40 |",
+      "expected": "| Construct-operationalization coverage | 41 |",
       "passed": true,
       "path": "README.md"
     },
@@ -347,7 +352,7 @@
       "path": "README.md"
     },
     {
-      "expected": "32 threat-model coverage checks across 8 validity threats",
+      "expected": "33 threat-model coverage checks across 8 validity threats",
       "passed": true,
       "path": "README.md"
     },
@@ -487,6 +492,21 @@
       "path": "README.md"
     },
     {
+      "expected": "| Temporal source-validity analysis | 189 |",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "189 temporal source-validity mutations",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "python scripts/run_temporal_validity_analysis.py",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "| Workflow portability analysis | 2904 |",
       "passed": true,
       "path": "README.md"
@@ -527,7 +547,7 @@
       "path": "README.md"
     },
     {
-      "expected": "| Threat-model coverage | 32 |",
+      "expected": "| Threat-model coverage | 33 |",
       "passed": true,
       "path": "README.md"
     },
@@ -742,7 +762,7 @@
       "path": "docs/paper_mapping.md"
     },
     {
-      "expected": "passes 40/40 construct coverage checks",
+      "expected": "passes 41/41 construct coverage checks",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -818,6 +838,11 @@
     },
     {
       "expected": "Claim-anchor analysis",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "Temporal source-validity analysis",
       "passed": true,
       "path": "docs/paper_mapping.md"
     },
@@ -962,6 +987,11 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "temporal source-validity layer",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "workflow-portability layer",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -1073,6 +1103,21 @@
     },
     {
       "expected": "claim-anchor file",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "189/189 temporal source-validity mutations",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "python scripts/run_temporal_validity_analysis.py",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "temporal source-validity file",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
@@ -1367,7 +1412,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "8,023,761 validation operations",
+      "expected": "8,023,954 validation operations",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1742,6 +1787,31 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
+      "expected": "Temporal source-validity analysis & 189 mutations & 189/189",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "The temporal source-validity layer ran 189 mutations",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "63/63 stale source snapshots",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "63/63 authority-status drift",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "63/63 refreshed temporal controls",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
       "expected": "Workflow portability analysis & 2,904 mutations & 2,904/2,904",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
@@ -1822,7 +1892,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Construct-operationalization coverage & 10 constructs / 40 checks & 40/40",
+      "expected": "Construct-operationalization coverage & 10 constructs / 41 checks & 41/41",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1837,7 +1907,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Threat-model coverage & 8 threats / 32 checks & 32/32",
+      "expected": "Threat-model coverage & 8 threats / 33 checks & 33/33",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -1932,7 +2002,7 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "Validation suites: 47",
+      "expected": "Validation suites: 48",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2067,6 +2137,16 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
+      "expected": "Temporal source-validity checks: 189/189 passed; stale source snapshots blocked 63/63; authority-status drift blocked 63/63; refreshed controls preserved 63/63",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
+      "expected": "Temporal source-validity analysis | source-freshness and authority-drift validation | 189 temporal mutations over 63 qualified packets | 189 | 189/189",
+      "passed": true,
+      "path": "experiments/full_validation/results/full_validation_report.md"
+    },
+    {
       "expected": "Workflow portability analysis: 2904/2904 passed; architecture invariance 1320/1320; entitlement caps 1056/1056; decision dependency 264/264; unaccountable external bars 264/264",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
@@ -2107,22 +2187,22 @@
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Construct operationalization coverage: 40/40 checks passed across 10 core constructs and 31 evidence layers",
+      "expected": "Construct operationalization coverage: 41/41 checks passed across 10 core constructs and 32 evidence layers",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Construct operationalization coverage | paper-construct coverage map | 40 evidence-layer coverage checks across 10 core constructs | 40 | 40/40",
+      "expected": "Construct operationalization coverage | paper-construct coverage map | 41 evidence-layer coverage checks across 10 core constructs | 41 | 41/41",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Threat-model coverage: 32/32 checks passed across 8 validity threats and 30 evidence layers",
+      "expected": "Threat-model coverage: 33/33 checks passed across 8 validity threats and 31 evidence layers",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
     {
-      "expected": "Threat-model coverage analysis | validity-threat coverage map | 32 evidence-layer coverage checks across 8 validity threats | 32 | 32/32",
+      "expected": "Threat-model coverage analysis | validity-threat coverage map | 33 evidence-layer coverage checks across 8 validity threats | 33 | 33/33",
       "passed": true,
       "path": "experiments/full_validation/results/full_validation_report.md"
     },
@@ -2242,12 +2322,12 @@
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
     {
-      "expected": "The expected manuscript build is 41 pages",
+      "expected": "The expected manuscript build is 42 pages",
       "passed": true,
       "path": "ARTIFACT.md"
     },
     {
-      "expected": "abstract word count 150-250 (actual 236)",
+      "expected": "abstract word count 150-250 (actual 242)",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -2457,6 +2537,46 @@
       "path": "ARTIFACT.md"
     },
     {
+      "expected": "absence of stale claim `47 validation suites`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,761`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8023761`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,064`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `8023064`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `40/40 construct-operationalization`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `32/32 threat-model`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
+      "expected": "absence of stale claim `30 committed evidence layers`",
+      "passed": true,
+      "path": "ARTIFACT.md"
+    },
+    {
       "expected": "absence of stale claim `7,913,193`",
       "passed": true,
       "path": "ARTIFACT.md"
@@ -3132,6 +3252,46 @@
       "path": "README.md"
     },
     {
+      "expected": "absence of stale claim `47 validation suites`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,761`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8023761`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,064`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `8023064`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `40/40 construct-operationalization`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `32/32 threat-model`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
+      "expected": "absence of stale claim `30 committed evidence layers`",
+      "passed": true,
+      "path": "README.md"
+    },
+    {
       "expected": "absence of stale claim `7,913,193`",
       "passed": true,
       "path": "README.md"
@@ -3807,6 +3967,46 @@
       "path": "docs/paper_mapping.md"
     },
     {
+      "expected": "absence of stale claim `47 validation suites`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,761`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8023761`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,064`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `8023064`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `40/40 construct-operationalization`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `32/32 threat-model`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
+      "expected": "absence of stale claim `30 committed evidence layers`",
+      "passed": true,
+      "path": "docs/paper_mapping.md"
+    },
+    {
       "expected": "absence of stale claim `7,913,193`",
       "passed": true,
       "path": "docs/paper_mapping.md"
@@ -4482,6 +4682,46 @@
       "path": "skills/legal-ai-audit-harness/SKILL.md"
     },
     {
+      "expected": "absence of stale claim `47 validation suites`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,761`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8023761`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8,023,064`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `8023064`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `40/40 construct-operationalization`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `32/32 threat-model`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
+      "expected": "absence of stale claim `30 committed evidence layers`",
+      "passed": true,
+      "path": "skills/legal-ai-audit-harness/SKILL.md"
+    },
+    {
       "expected": "absence of stale claim `7,913,193`",
       "passed": true,
       "path": "skills/legal-ai-audit-harness/SKILL.md"
@@ -5153,6 +5393,46 @@
     },
     {
       "expected": "absence of stale claim `46 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `47 validation suites`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8,023,761`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8023761`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8,023,064`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `8023064`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `40/40 construct-operationalization`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `32/32 threat-model`",
+      "passed": true,
+      "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
+    },
+    {
+      "expected": "absence of stale claim `30 committed evidence layers`",
       "passed": true,
       "path": "manuscript/ai_law_case_recommendation_verifiability.tex"
     },
@@ -5694,5 +5974,5 @@
   ],
   "failed_count": 0,
   "failures": [],
-  "passed_count": 1138
+  "passed_count": 1194
 }

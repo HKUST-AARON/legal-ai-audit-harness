@@ -293,6 +293,22 @@
         },
         {
           "construct_id": "evidence_packet_source_chain",
+          "layer_id": "temporal_validity",
+          "missing_fields": [],
+          "parse_error": null,
+          "passed": true,
+          "path": "experiments/temporal_validity/results/temporal_validity_analysis.json",
+          "required": [
+            "evaluation_count",
+            "passed_count"
+          ],
+          "roles": [
+            "temporal",
+            "source_chain"
+          ]
+        },
+        {
+          "construct_id": "evidence_packet_source_chain",
           "layer_id": "source_chain_attacks",
           "missing_fields": [],
           "parse_error": null,
@@ -342,6 +358,7 @@
       ],
       "evidence_layers": [
         "claim_anchor",
+        "temporal_validity",
         "source_chain_attacks",
         "source_text_verification",
         "model_output_adversarial"
@@ -349,17 +366,18 @@
       "failed_checks": 0,
       "id": "evidence_packet_source_chain",
       "label": "Output evidence packet and source chain",
-      "layer_count": 4,
+      "layer_count": 5,
       "passed": true,
-      "passed_checks": 4,
-      "role_count": 6,
+      "passed_checks": 5,
+      "role_count": 7,
       "roles": [
         "anchor",
         "claim_level",
         "external_source",
         "model_output",
         "negative_control",
-        "source_chain"
+        "source_chain",
+        "temporal"
       ]
     },
     {
@@ -907,13 +925,13 @@
       ]
     }
   ],
-  "coverage_check_count": 40,
-  "evidence_layer_count": 31,
+  "coverage_check_count": 41,
+  "evidence_layer_count": 32,
   "failed_check_count": 0,
   "failed_construct_count": 0,
   "failures": [],
   "minimum_layers_per_construct": 4,
   "minimum_roles_per_construct": 3,
-  "passed_check_count": 40,
+  "passed_check_count": 41,
   "passed_construct_count": 10
 }

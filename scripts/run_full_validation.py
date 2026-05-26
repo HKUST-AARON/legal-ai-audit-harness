@@ -193,6 +193,7 @@ def main() -> int:
     _run([sys.executable, "scripts/run_policy_mutation_analysis.py"])
     _run([sys.executable, "scripts/run_review_provenance_analysis.py"])
     _run([sys.executable, "scripts/run_claim_anchor_analysis.py"])
+    _run([sys.executable, "scripts/run_temporal_validity_analysis.py"])
     _run([sys.executable, "scripts/run_workflow_portability_analysis.py"])
     _run([sys.executable, "scripts/run_model_identity_invariance.py"])
     _run([sys.executable, "scripts/run_query_perturbation_analysis.py"])
@@ -413,6 +414,16 @@ def main() -> int:
         )
     )
     rows.append(_claim_anchor_row(claim_anchor_payload))
+    temporal_validity_payload = json.loads(
+        (
+            ROOT
+            / "experiments"
+            / "temporal_validity"
+            / "results"
+            / "temporal_validity_analysis.json"
+        ).read_text(encoding="utf-8")
+    )
+    rows.append(_temporal_validity_row(temporal_validity_payload))
     workflow_portability_payload = json.loads(
         (
             ROOT
@@ -588,6 +599,8 @@ def main() -> int:
             "claim_anchor_passed": claim_anchor_payload["passed_count"],
             "claim_anchor_output_units": claim_anchor_payload["output_unit_count"],
             "claim_anchor_output_links": claim_anchor_payload["output_link_count"],
+            "temporal_validity_evaluations": temporal_validity_payload["evaluation_count"],
+            "temporal_validity_passed": temporal_validity_payload["passed_count"],
             "workflow_portability_evaluations": workflow_portability_payload["evaluation_count"],
             "workflow_portability_passed": workflow_portability_payload["passed_count"],
             "workflow_architecture_invariance_evaluations": workflow_portability_payload[
@@ -660,6 +673,7 @@ def main() -> int:
         "policy_mutation_evaluations": policy_mutation_payload["evaluation_count"],
         "review_provenance_evaluations": review_provenance_payload["evaluation_count"],
         "claim_anchor_evaluations": claim_anchor_payload["evaluation_count"],
+        "temporal_validity_evaluations": temporal_validity_payload["evaluation_count"],
         "workflow_portability_evaluations": workflow_portability_payload["evaluation_count"],
         "model_identity_invariance_evaluations": model_identity_payload["evaluation_count"],
         "query_perturbation_evaluations": query_perturbation_payload["query_variant_count"]
@@ -701,6 +715,7 @@ def main() -> int:
         + policy_mutation_payload["evaluation_count"]
         + review_provenance_payload["evaluation_count"]
         + claim_anchor_payload["evaluation_count"]
+        + temporal_validity_payload["evaluation_count"]
         + workflow_portability_payload["evaluation_count"]
         + model_identity_payload["evaluation_count"]
         + query_perturbation_payload["query_variant_count"]
@@ -1061,6 +1076,20 @@ def main() -> int:
             ],
             "locator_absence_withdrawn_count": claim_anchor_payload["locator_absence_withdrawn_count"],
             "locator_absence_evaluation_count": claim_anchor_payload["locator_absence_evaluation_count"],
+        },
+        "temporal_validity": {
+            "qualified_scenario_count": temporal_validity_payload["qualified_scenario_count"],
+            "evaluation_count": temporal_validity_payload["evaluation_count"],
+            "passed_count": temporal_validity_payload["passed_count"],
+            "failed_count": temporal_validity_payload["failed_count"],
+            "stale_snapshot_blocked_count": temporal_validity_payload["stale_snapshot_blocked_count"],
+            "stale_snapshot_evaluation_count": temporal_validity_payload["stale_snapshot_evaluation_count"],
+            "authority_drift_blocked_count": temporal_validity_payload["authority_drift_blocked_count"],
+            "authority_drift_evaluation_count": temporal_validity_payload["authority_drift_evaluation_count"],
+            "refreshed_control_preserved_count": temporal_validity_payload["refreshed_control_preserved_count"],
+            "refreshed_control_evaluation_count": temporal_validity_payload[
+                "refreshed_control_evaluation_count"
+            ],
         },
         "workflow_portability": {
             "scenario_count": workflow_portability_payload["scenario_count"],
@@ -2037,6 +2066,29 @@ def _claim_anchor_row(payload: dict) -> dict:
     }
 
 
+def _temporal_validity_row(payload: dict) -> dict:
+    return {
+        "id": "temporal_validity",
+        "label": "Temporal source-validity analysis",
+        "evidence_class": "source-freshness and authority-drift validation",
+        "validation_units": (
+            f"{payload['evaluation_count']} temporal mutations over "
+            f"{payload['qualified_scenario_count']} qualified packets"
+        ),
+        "scenario_count": payload["evaluation_count"],
+        "rule_pass": f"{payload['passed_count']}/{payload['evaluation_count']}",
+        "mean_audit_score": None,
+        "mean_upstream_recall": None,
+        "high_upstream_but_blocked": None,
+        "status_distribution": {
+            "stale_source_snapshots_blocked": payload["stale_snapshot_blocked_count"],
+            "authority_status_drift_blocked": payload["authority_drift_blocked_count"],
+            "refreshed_temporal_controls_preserved": payload["refreshed_control_preserved_count"],
+        },
+        "finding": "Mutates qualified packets with stale source snapshots and post-snapshot authority-status changes; high status must fall, while refreshed temporal metadata preserves base status.",
+    }
+
+
 def _workflow_portability_row(payload: dict) -> dict:
     return {
         "id": "workflow_portability",
@@ -2245,6 +2297,7 @@ def _format_report(payload: dict) -> str:
         f"Policy mutation analysis: {payload['policy_mutations']['killed_mutant_count']}/{payload['policy_mutations']['mutant_count']} mutants killed across {payload['policy_mutations']['evaluation_count']} evaluations; invalid promotions {payload['policy_mutations']['invalid_promotion_count']}; false negatives {payload['policy_mutations']['false_negative_count']}",
         f"Review-provenance analysis: {payload['review_provenance']['passed_count']}/{payload['review_provenance']['evaluation_count']} passed; review/adoption placebos blocked {payload['review_provenance']['placebo_blocked_count']}/{payload['review_provenance']['placebo_evaluation_count']}; high-status provenance defects blocked {payload['review_provenance']['high_status_provenance_blocked_count']}/{payload['review_provenance']['high_status_provenance_check_count']}; decision provenance defects demoted {payload['review_provenance']['decision_provenance_demoted_count']}/{payload['review_provenance']['decision_provenance_check_count']}",
         f"Claim-anchor analysis: {payload['claim_anchor']['passed_count']}/{payload['claim_anchor']['evaluation_count']} passed over {payload['claim_anchor']['output_unit_count']} output units and {payload['claim_anchor']['output_link_count']} output links; claim-text removals blocked {payload['claim_anchor']['claim_text_absence_blocked_count']}/{payload['claim_anchor']['claim_text_absence_evaluation_count']}; link-to-claim removals blocked {payload['claim_anchor']['link_unit_binding_absence_blocked_count']}/{payload['claim_anchor']['link_unit_binding_absence_evaluation_count']}; support-attestation removals withdrawn {payload['claim_anchor']['support_attestation_absence_withdrawn_count']}/{payload['claim_anchor']['support_attestation_absence_evaluation_count']}; locator removals withdrawn {payload['claim_anchor']['locator_absence_withdrawn_count']}/{payload['claim_anchor']['locator_absence_evaluation_count']}",
+        f"Temporal source-validity checks: {payload['temporal_validity']['passed_count']}/{payload['temporal_validity']['evaluation_count']} passed; stale source snapshots blocked {payload['temporal_validity']['stale_snapshot_blocked_count']}/{payload['temporal_validity']['stale_snapshot_evaluation_count']}; authority-status drift blocked {payload['temporal_validity']['authority_drift_blocked_count']}/{payload['temporal_validity']['authority_drift_evaluation_count']}; refreshed controls preserved {payload['temporal_validity']['refreshed_control_preserved_count']}/{payload['temporal_validity']['refreshed_control_evaluation_count']}",
         f"Workflow portability analysis: {payload['workflow_portability']['passed_count']}/{payload['workflow_portability']['evaluation_count']} passed; architecture invariance {payload['workflow_portability']['architecture_invariance_passed_count']}/{payload['workflow_portability']['architecture_invariance_evaluation_count']}; entitlement caps {payload['workflow_portability']['entitlement_profile_passed_count']}/{payload['workflow_portability']['entitlement_profile_evaluation_count']}; decision dependency {payload['workflow_portability']['decision_dependency_passed_count']}/{payload['workflow_portability']['decision_dependency_check_count']}; unaccountable external bars {payload['workflow_portability']['unaccountable_bar_passed_count']}/{payload['workflow_portability']['unaccountable_bar_evaluation_count']}",
         f"Model-identity invariance: {payload['model_identity_invariance']['passed_count']}/{payload['model_identity_invariance']['evaluation_count']} identity substitutions passed over {payload['model_identity_invariance']['scenario_count']} packets and {payload['model_identity_invariance']['identity_profile_count']} identity profiles; status changes {payload['model_identity_invariance']['status_changed_count']}; disposition changes {payload['model_identity_invariance']['disposition_changed_count']}",
         f"Query-perturbation diagnostics: {payload['query_perturbation']['query_variant_count']} query variants across {payload['query_perturbation']['issue_group_count']} issue groups; status-stable groups {payload['query_perturbation']['status_stable_group_count']}/{payload['query_perturbation']['issue_group_count']}; authority-coverage unstable groups {payload['query_perturbation']['authority_coverage_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; record-set unstable groups {payload['query_perturbation']['record_set_unstable_group_count']}/{payload['query_perturbation']['issue_group_count']}; mean record overlap {payload['query_perturbation']['mean_pairwise_record_overlap']:.2f}",

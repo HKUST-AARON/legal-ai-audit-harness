@@ -49,6 +49,11 @@ EVIDENCE_LAYERS = {
         "roles": ["claim_level", "source_chain"],
         "required": [["evaluation_count"], ["passed_count"]],
     },
+    "temporal_validity": {
+        "path": "experiments/temporal_validity/results/temporal_validity_analysis.json",
+        "roles": ["temporal", "source_chain"],
+        "required": [["evaluation_count"], ["passed_count"]],
+    },
     "source_text_verification": {
         "path": "experiments/source_text_verification/results/source_text_anchor_verification.json",
         "roles": ["external_source", "anchor"],
@@ -200,7 +205,13 @@ CONSTRUCTS = [
     {
         "id": "evidence_packet_source_chain",
         "label": "Output evidence packet and source chain",
-        "layers": ["claim_anchor", "source_chain_attacks", "source_text_verification", "model_output_adversarial"],
+        "layers": [
+            "claim_anchor",
+            "temporal_validity",
+            "source_chain_attacks",
+            "source_text_verification",
+            "model_output_adversarial",
+        ],
     },
     {
         "id": "authority_hierarchy_issue_sets",
